@@ -440,26 +440,61 @@
       background: linear-gradient(90deg, transparent, var(--violet-600), transparent);
     }
 
+    .contact-form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex; flex-direction: column; gap: 14px;
+      text-align: left;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--teal-500);
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--slate-500);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
     .cta-btn {
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 15px 36px;
       background: linear-gradient(135deg, var(--teal-700), var(--blue-600));
       color: white;
-      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 12px;
       font-weight: 600; font-size: 15px;
+      cursor: pointer;
       transition: all 0.3s;
       box-shadow: 0 4px 20px rgba(13,148,136,0.25);
-      border: 1px solid rgba(255,255,255,0.08);
+      font-family: inherit;
     }
 
     .cta-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 32px rgba(13,148,136,0.4);
     }
-
-    .cta-btn svg { transition: transform 0.3s; }
-    .cta-btn:hover svg { transform: translateX(3px); }
 
     /* ── FOOTER ── */
     footer {
@@ -500,33 +535,7 @@
   <header>
     <div class="header-inner">
       <a href="#" class="logo-group">
-        <svg width="34" height="34" viewBox="0 0 140 140">
-          <defs>
-            <linearGradient id="ng1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#14B8A6"/><stop offset="100%" stop-color="#0D9488"/></linearGradient>
-            <linearGradient id="ng2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0EA5E9"/><stop offset="100%" stop-color="#0284C7"/></linearGradient>
-            <linearGradient id="ng3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#2563EB"/></linearGradient>
-            <linearGradient id="ng4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#6D28D9"/></linearGradient>
-            <linearGradient id="ngh" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0891B2"/><stop offset="100%" stop-color="#0E7490"/></linearGradient>
-          </defs>
-          <g transform="translate(2, 70)">
-            <path d="M 0,0 C 20,0 30,-8 50,-36" stroke="#0D9488" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <path d="M 0,0 C 20,0 30,8 50,36" stroke="#0D9488" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <path d="M 50,-36 C 65,-42 75,-50 95,-66" stroke="#0891B2" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M 50,-36 C 65,-32 75,-22 95,-12" stroke="#0EA5E9" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M 50,36 C 65,32 75,22 95,12" stroke="#2563EB" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M 50,36 C 65,42 75,50 95,66" stroke="#3B82F6" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <circle cx="95" cy="-66" r="11" fill="url(#ng1)"/>
-            <circle cx="95" cy="-12" r="11" fill="url(#ng2)"/>
-            <circle cx="95" cy="12" r="11" fill="url(#ng3)"/>
-            <circle cx="95" cy="66" r="11" fill="url(#ng4)"/>
-            <circle cx="50" cy="-36" r="6" fill="url(#ngh)"/>
-            <circle cx="50" cy="36" r="6" fill="#1D4ED8"/>
-          </g>
-        </svg>
-        <div class="logo-text">
-          <span class="name">phyla</span>
-          <span class="sub">TECHNOLOGIES</span>
-        </div>
+        <img src="phyla_technologies_logo_dark.svg" alt="Phyla Technologies" height="48">
       </a>
       <nav>
         <a href="#services">Services</a>
@@ -679,10 +688,12 @@
   <section class="cta" id="contact">
     <h2 class="section-title">Let's Build Something</h2>
     <p class="section-sub">Have a genomics pipeline that needs ML? A dataset that needs a dashboard? We'd love to hear about it.</p>
-    <a href="mailto:ian.miller@northsky.software" class="cta-btn">
-      Get in Touch
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-    </a>
+    <form class="contact-form" action="https://formspree.io/f/xqeyrbbp" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+      <button type="submit" class="cta-btn">Send Message</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
