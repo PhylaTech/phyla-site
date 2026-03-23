@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 290" width="880" height="290">
+  <defs>
+    <linearGradient id="nodeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284C7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGradInput" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F766E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGradHidden" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891B2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0E7490;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Neural net / phylogenetic hybrid mark -->
+  <g transform="translate(20, 130)">
+
+    <!-- === CONNECTIONS (drawn first, behind nodes) === -->
+
+    <!-- Input layer to hidden layer connections -->
+    <!-- Input node 1 (top) to hidden nodes -->
+    <path d="M 12,-40 C 35,-40 40,-52 58,-55" stroke="#0D9488" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 12,-40 C 35,-38 40,-22 58,-18" stroke="#0D9488" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 12,-40 C 35,-32 40,10 58,18" stroke="#0D9488" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.25"/>
+
+    <!-- Input node 2 (middle) to hidden nodes -->
+    <path d="M 12,0 C 35,-8 40,-48 58,-55" stroke="#0891B2" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <path d="M 12,0 C 35,-2 40,-14 58,-18" stroke="#0891B2" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 12,0 C 35,2 40,14 58,18" stroke="#0891B2" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 12,0 C 35,8 40,48 58,55" stroke="#0891B2" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+
+    <!-- Input node 3 (bottom) to hidden nodes -->
+    <path d="M 12,40 C 35,32 40,-10 58,-18" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.25"/>
+    <path d="M 12,40 C 35,38 40,22 58,18" stroke="#2563EB" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 12,40 C 35,40 40,52 58,55" stroke="#2563EB" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Hidden layer to output layer connections -->
+    <!-- Hidden node 1 (top) to outputs -->
+    <path d="M 70,-55 C 90,-56 100,-62 118,-68" stroke="#0EA5E9" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 70,-55 C 90,-48 100,-30 118,-20" stroke="#0EA5E9" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+    <path d="M 70,-55 C 90,-40 100,6 118,20" stroke="#0EA5E9" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.2"/>
+
+    <!-- Hidden node 2 (upper-mid) to outputs -->
+    <path d="M 70,-18 C 90,-24 100,-56 118,-68" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+    <path d="M 70,-18 C 90,-18 100,-20 118,-20" stroke="#3B82F6" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 70,-18 C 90,-10 100,12 118,20" stroke="#3B82F6" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 70,-18 C 90,0 100,50 118,68" stroke="#3B82F6" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.2"/>
+
+    <!-- Hidden node 3 (lower-mid) to outputs -->
+    <path d="M 70,18 C 90,10 100,-12 118,-20" stroke="#6D28D9" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 70,18 C 90,18 100,20 118,20" stroke="#6D28D9" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 70,18 C 90,24 100,56 118,68" stroke="#6D28D9" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+
+    <!-- Hidden node 4 (bottom) to outputs -->
+    <path d="M 70,55 C 90,40 100,-6 118,-20" stroke="#8B5CF6" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.2"/>
+    <path d="M 70,55 C 90,48 100,30 118,20" stroke="#8B5CF6" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+    <path d="M 70,55 C 90,56 100,62 118,68" stroke="#8B5CF6" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- === NODES === -->
+
+    <!-- Input layer (3 nodes — the three co-founders) -->
+    <circle cx="8" cy="-40" r="10" fill="url(#nodeGradInput)"/>
+    <circle cx="8" cy="0" r="10" fill="url(#nodeGradInput)"/>
+    <circle cx="8" cy="40" r="10" fill="url(#nodeGradInput)"/>
+
+    <!-- Hidden layer (4 nodes — four disciplines) -->
+    <circle cx="64" cy="-55" r="8" fill="url(#nodeGradHidden)"/>
+    <circle cx="64" cy="-18" r="8" fill="url(#nodeGradHidden)"/>
+    <circle cx="64" cy="18" r="8" fill="url(#nodeGradHidden)"/>
+    <circle cx="64" cy="55" r="8" fill="url(#nodeGradHidden)"/>
+
+    <!-- Output layer (3 nodes — services delivered) -->
+    <circle cx="122" cy="-68" r="11" fill="url(#nodeGrad1)"/>
+    <circle cx="122" cy="-20" r="11" fill="url(#nodeGrad3)"/>
+    <circle cx="122" cy="20" r="11" fill="url(#nodeGrad2)"/>
+    <circle cx="122" cy="68" r="11" fill="url(#nodeGrad4)"/>
+
+    <!-- Subtle inner glow on output nodes -->
+    <circle cx="121" cy="-69" r="4" fill="white" opacity="0.2"/>
+    <circle cx="121" cy="-21" r="4" fill="white" opacity="0.2"/>
+    <circle cx="121" cy="19" r="4" fill="white" opacity="0.2"/>
+    <circle cx="121" cy="67" r="4" fill="white" opacity="0.2"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="180" y="138" font-family="'Inter', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="115" font-weight="700" letter-spacing="-3" fill="#0F172A">
+    phyla
+  </text>
+
+  <!-- Subname -->
+  <text x="184" y="202" font-family="'Inter', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="34" font-weight="400" letter-spacing="10.5" fill="#64748B">
+    TECHNOLOGIES
+  </text>
+</svg>
