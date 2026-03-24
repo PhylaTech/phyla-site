@@ -188,7 +188,7 @@
     .tree-nav {
       position: relative;
       width: 680px;
-      height: 410px;
+      height: 520px;
       transform-origin: top left;
     }
 
@@ -203,10 +203,41 @@
 
     .tree-nav svg.connections path { transition: opacity 0.5s, stroke-width 0.5s; }
 
+    .pulse {
+      stroke-dasharray: 30 500;
+      stroke-dashoffset: 530;
+      opacity: 0;
+      filter: url(#glow);
+      animation: pulse-travel 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-travel {
+      0% { stroke-dashoffset: 530; opacity: 0; }
+      5% { opacity: 0.9; }
+      60% { opacity: 0.9; }
+      80% { stroke-dashoffset: -30; opacity: 0; }
+      100% { stroke-dashoffset: -30; opacity: 0; }
+    }
+
+    /* Root to hidden: fire first */
+    .pulse-r1 { animation-delay: 0s; }
+    .pulse-r2 { animation-delay: 0.3s; }
+    .pulse-r3 { animation-delay: 0.15s; }
+
+    /* Hidden to leaves: fire after root pulses arrive (~1.2s) */
+    .pulse-h1a { animation-delay: 1.2s; }
+    .pulse-h1b { animation-delay: 1.4s; }
+    .pulse-h2a { animation-delay: 1.5s; }
+    .pulse-h2b { animation-delay: 1.3s; }
+    .pulse-h2c { animation-delay: 1.6s; }
+    .pulse-h2d { animation-delay: 1.7s; }
+    .pulse-h3a { animation-delay: 1.35s; }
+    .pulse-h3b { animation-delay: 1.55s; }
+
     /* Root node */
     .tree-root {
       position: absolute;
-      top: 145px; left: 10px;
+      top: 200px; left: 10px;
       width: 80px; height: 80px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--teal-900), var(--teal-600));
@@ -225,18 +256,29 @@
       transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
+    .h-node { animation: float 7s ease-in-out infinite; }
+    .h1 { animation-delay: 0.5s; }
+    .h2 { animation-delay: 1.5s; }
+    .h3 { animation-delay: 2.5s; }
     .h-node:hover { transform: scale(1.3); }
 
-    .h1 { top: 58px;  left: 235px; background: linear-gradient(135deg, var(--teal-600), var(--cyan-600)); }
-    .h2 { top: 165px; left: 255px; background: linear-gradient(135deg, var(--cyan-600), var(--blue-600)); }
-    .h3 { top: 270px; left: 235px; background: linear-gradient(135deg, var(--blue-600), var(--violet-600)); }
+    .h1 { top: 100px; left: 235px; background: linear-gradient(135deg, var(--teal-600), var(--cyan-600)); }
+    .h2 { top: 230px; left: 255px; background: linear-gradient(135deg, var(--cyan-600), var(--blue-600)); }
+    .h3 { top: 360px; left: 235px; background: linear-gradient(135deg, var(--blue-600), var(--violet-600)); }
 
     /* Leaf (output) nodes */
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(4px, -6px); }
+      50% { transform: translate(-3px, 4px); }
+      75% { transform: translate(5px, 2px); }
+    }
+
     .leaf {
       position: absolute;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      width: 130px; height: 130px;
+      width: 110px; height: 110px;
       border-radius: 50%;
       text-decoration: none;
       color: white;
@@ -258,34 +300,38 @@
     .leaf span { letter-spacing: 0.01em; }
 
     .leaf-1 {
-      top: 0px; left: 490px;
+      top: 10px; left: 500px;
       background: linear-gradient(145deg, rgba(20,184,166,0.85), rgba(15,118,110,0.95));
       backdrop-filter: blur(8px);
       box-shadow: 0 8px 32px rgba(13,148,136,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+      animation: float 8s ease-in-out infinite;
     }
     .leaf-1:hover { box-shadow: 0 12px 48px rgba(13,148,136,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
 
     .leaf-2 {
-      top: 110px; left: 530px;
+      top: 140px; left: 540px;
       background: linear-gradient(145deg, rgba(14,165,233,0.85), rgba(8,145,178,0.95));
       backdrop-filter: blur(8px);
       box-shadow: 0 8px 32px rgba(14,165,233,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+      animation: float 9s ease-in-out 1s infinite;
     }
     .leaf-2:hover { box-shadow: 0 12px 48px rgba(14,165,233,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
 
     .leaf-3 {
-      top: 220px; left: 530px;
+      top: 270px; left: 540px;
       background: linear-gradient(145deg, rgba(59,130,246,0.85), rgba(37,99,235,0.95));
       backdrop-filter: blur(8px);
       box-shadow: 0 8px 32px rgba(37,99,235,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+      animation: float 10s ease-in-out 2s infinite;
     }
     .leaf-3:hover { box-shadow: 0 12px 48px rgba(37,99,235,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
 
     .leaf-4 {
-      top: 280px; left: 460px;
+      top: 400px; left: 500px;
       background: linear-gradient(145deg, rgba(139,92,246,0.85), rgba(124,58,237,0.95));
       backdrop-filter: blur(8px);
       box-shadow: 0 8px 32px rgba(139,92,246,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+      animation: float 8.5s ease-in-out 3s infinite;
     }
     .leaf-4:hover { box-shadow: 0 12px 48px rgba(139,92,246,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
 
@@ -554,23 +600,40 @@
 
     <div class="tree-wrapper">
     <div class="tree-nav" id="tree">
-      <svg class="connections" viewBox="0 0 680 410">
+      <svg class="connections" viewBox="0 0 680 520">
         <!-- Root to hidden -->
-        <path d="M 50,195 C 120,175 170,95 249,72" stroke="url(#cg1)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
-        <path d="M 50,195 C 130,192 190,185 269,179" stroke="url(#cg2)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
-        <path d="M 50,195 C 120,220 170,265 249,284" stroke="url(#cg3)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
+        <path d="M 50,240 C 120,200 170,140 249,114" stroke="url(#cg1)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
+        <path d="M 50,240 C 130,240 190,245 269,244" stroke="url(#cg2)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
+        <path d="M 50,240 C 120,270 170,345 249,374" stroke="url(#cg3)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
         <!-- H1 to leaves -->
-        <path d="M 263,72 C 360,55 440,40 555,65" stroke="#14B8A6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 263,72 C 360,95 440,140 595,175" stroke="#0EA5E9" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.18"/>
+        <path d="M 263,114 C 360,90 440,60 555,65" stroke="#14B8A6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+        <path d="M 263,114 C 360,130 440,170 595,195" stroke="#0EA5E9" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.18"/>
         <!-- H2 to leaves -->
-        <path d="M 269,179 C 360,140 440,80 555,65" stroke="#0D9488" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.15"/>
-        <path d="M 269,179 C 360,178 440,175 595,175" stroke="#0891B2" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 269,179 C 360,200 440,260 595,285" stroke="#3B82F6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 269,179 C 360,215 440,315 525,345" stroke="#7C3AED" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.15"/>
+        <path d="M 269,244 C 360,190 440,100 555,65" stroke="#0D9488" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.15"/>
+        <path d="M 269,244 C 360,240 440,200 595,195" stroke="#0891B2" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+        <path d="M 269,244 C 360,260 440,310 595,325" stroke="#3B82F6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+        <path d="M 269,244 C 360,280 440,410 555,455" stroke="#7C3AED" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.15"/>
         <!-- H3 to leaves -->
-        <path d="M 249,284 C 360,278 440,283 595,285" stroke="#2563EB" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.18"/>
-        <path d="M 249,284 C 360,305 440,335 525,345" stroke="#8B5CF6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+        <path d="M 249,374 C 360,360 440,330 595,325" stroke="#2563EB" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.18"/>
+        <path d="M 249,374 C 360,400 440,440 555,455" stroke="#8B5CF6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+        <!-- Pulse overlays: root to hidden -->
+        <path class="pulse pulse-r1" d="M 50,240 C 120,200 170,140 249,114" stroke="#5EEAD4" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-r2" d="M 50,240 C 130,240 190,245 269,244" stroke="#7DD3FC" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-r3" d="M 50,240 C 120,270 170,345 249,374" stroke="#A78BFA" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Pulse overlays: hidden to leaves -->
+        <path class="pulse pulse-h1a" d="M 263,114 C 360,90 440,60 555,65" stroke="#5EEAD4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h1b" d="M 263,114 C 360,130 440,170 595,195" stroke="#7DD3FC" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h2a" d="M 269,244 C 360,190 440,100 555,65" stroke="#5EEAD4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h2b" d="M 269,244 C 360,240 440,200 595,195" stroke="#7DD3FC" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h2c" d="M 269,244 C 360,260 440,310 595,325" stroke="#93C5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h2d" d="M 269,244 C 360,280 440,410 555,455" stroke="#C4B5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h3a" d="M 249,374 C 360,360 440,330 595,325" stroke="#93C5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="pulse pulse-h3b" d="M 249,374 C 360,400 440,440 555,455" stroke="#C4B5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
         <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
           <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0891B2"/></linearGradient>
           <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#2563EB"/></linearGradient>
           <linearGradient id="cg3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
@@ -739,7 +802,7 @@
       const treeWidth = 680;
       const scale = Math.min(1, wrapperWidth / treeWidth);
       treeNav.style.transform = `scale(${scale})`;
-      wrapper.style.height = (410 * scale) + 'px';
+      wrapper.style.height = (520 * scale) + 'px';
     }
     scaleTree();
     window.addEventListener('resize', scaleTree);
