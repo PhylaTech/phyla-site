@@ -204,19 +204,19 @@
     .tree-nav svg.connections path { transition: opacity 0.5s, stroke-width 0.5s; }
 
     .pulse {
-      stroke-dasharray: 30 500;
+      stroke-dasharray: 10 520;
       stroke-dashoffset: 530;
       opacity: 0;
-      filter: url(#glow);
+      filter: url(#pulseBlur);
       animation: pulse-travel 3s ease-in-out infinite;
     }
 
     @keyframes pulse-travel {
       0% { stroke-dashoffset: 530; opacity: 0; }
-      5% { opacity: 0.9; }
-      60% { opacity: 0.9; }
-      80% { stroke-dashoffset: -30; opacity: 0; }
-      100% { stroke-dashoffset: -30; opacity: 0; }
+      3% { opacity: 0.8; }
+      55% { opacity: 0.8; }
+      75% { stroke-dashoffset: -10; opacity: 0; }
+      100% { stroke-dashoffset: -10; opacity: 0; }
     }
 
     /* Root to hidden: fire first */
@@ -687,6 +687,11 @@
           <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="4" result="blur"/>
             <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="pulseBlur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="softBlur"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="sharpBlur"/>
+            <feMerge><feMergeNode in="softBlur"/><feMergeNode in="sharpBlur"/></feMerge>
           </filter>
           <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0891B2"/></linearGradient>
           <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#2563EB"/></linearGradient>
