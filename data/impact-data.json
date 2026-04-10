@@ -1,0 +1,4379 @@
+{
+  "generated_at": "2026-04-10T16:28:03.386181+00:00",
+  "summary": {
+    "total_citations": 2357,
+    "countries_reached": 76,
+    "citing_institutions": 3263,
+    "disciplines_impacted": 22,
+    "total_publications": 26
+  },
+  "publications": [
+    {
+      "id": "W3091839106",
+      "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
+      "journal": "Cell Systems",
+      "year": 2020,
+      "cited_by_count": 639,
+      "field": "Medicine",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1016/j.cels.2020.10.003",
+      "type": "core"
+    },
+    {
+      "id": "W4225258284",
+      "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
+      "journal": "Nature Methods",
+      "year": 2022,
+      "cited_by_count": 375,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1038/s41592-022-01431-4",
+      "type": "core"
+    },
+    {
+      "id": "W4386607677",
+      "title": "Artificial intelligence for natural product drug discovery",
+      "journal": "Nature Reviews Drug Discovery",
+      "year": 2023,
+      "cited_by_count": 346,
+      "field": "Computer Science",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1038/s41573-023-00774-7",
+      "type": "core"
+    },
+    {
+      "id": "W2808840038",
+      "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
+      "journal": "Nature Communications",
+      "year": 2018,
+      "cited_by_count": 130,
+      "field": "Agricultural and Biological Sciences",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s41467-018-04955-6",
+      "type": "core"
+    },
+    {
+      "id": "W4281483346",
+      "title": "Defining mitochondrial protein functions through deep multiomic profiling",
+      "journal": "Nature",
+      "year": 2022,
+      "cited_by_count": 115,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s41586-022-04765-3",
+      "type": "core"
+    },
+    {
+      "id": "W2949629831",
+      "title": "Autometa: automated extraction of microbial genomes from individual shotgun metagenomes",
+      "journal": "Nucleic Acids Research",
+      "year": 2019,
+      "cited_by_count": 103,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller",
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1093/nar/gkz148",
+      "type": "core"
+    },
+    {
+      "id": "W2972433884",
+      "title": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
+      "journal": "Journal of Chemical Information and Modeling",
+      "year": 2019,
+      "cited_by_count": 91,
+      "field": "Computer Science",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1021/acs.jcim.9b00236",
+      "type": "core"
+    },
+    {
+      "id": "W2989537165",
+      "title": "Real-time health monitoring through urine metabolomics",
+      "journal": "npj Digital Medicine",
+      "year": 2019,
+      "cited_by_count": 81,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s41746-019-0185-y",
+      "type": "core"
+    },
+    {
+      "id": "W3006681944",
+      "title": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
+      "journal": "mBio",
+      "year": 2020,
+      "cited_by_count": 74,
+      "field": "Agricultural and Biological Sciences",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1128/mbio.02430-19",
+      "type": "core"
+    },
+    {
+      "id": "W3087677418",
+      "title": "A large-scale genome\u2013lipid association map guides lipid identification",
+      "journal": "Nature Metabolism",
+      "year": 2020,
+      "cited_by_count": 56,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s42255-020-00278-3",
+      "type": "core"
+    },
+    {
+      "id": "W2513652105",
+      "title": "Lack of Overt Genome Reduction in the Bryostatin-Producing Bryozoan Symbiont \u201cCandidatus Endobugula sertula\u201d",
+      "journal": "Applied and Environmental Microbiology",
+      "year": 2016,
+      "cited_by_count": 55,
+      "field": "Medicine",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1128/aem.01800-16",
+      "type": "core"
+    },
+    {
+      "id": "W2769473564",
+      "title": "Increased Biosynthetic Gene Dosage in a Genome-Reduced Defensive Bacterial Symbiont",
+      "journal": "mSystems",
+      "year": 2017,
+      "cited_by_count": 50,
+      "field": "Agricultural and Biological Sciences",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1128/msystems.00096-17",
+      "type": "core"
+    },
+    {
+      "id": "W4319825888",
+      "title": "Genetic mapping of microbial and host traits reveals production of immunomodulatory lipids by Akkermansia muciniphila in the murine gut",
+      "journal": "Nature Microbiology",
+      "year": 2023,
+      "cited_by_count": 46,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s41564-023-01326-w",
+      "type": "core"
+    },
+    {
+      "id": "W2527369287",
+      "title": "Single sample resolution of rare microbial dark matter in a marine invertebrate metagenome",
+      "journal": "Scientific Reports",
+      "year": 2016,
+      "cited_by_count": 37,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/srep34362",
+      "type": "core"
+    },
+    {
+      "id": "W3092255275",
+      "title": "Argonaut: A Web Platform for Collaborative Multi-omic Data Visualization and Exploration",
+      "journal": "Patterns",
+      "year": 2020,
+      "cited_by_count": 37,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1016/j.patter.2020.100122",
+      "type": "core"
+    },
+    {
+      "id": "W2344158103",
+      "title": "Spatial and Temporal Profiling of Griseofulvin Production in Xylaria cubensis Using Mass Spectrometry Mapping",
+      "journal": "Frontiers in Microbiology",
+      "year": 2016,
+      "cited_by_count": 36,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.3389/fmicb.2016.00544",
+      "type": "core"
+    },
+    {
+      "id": "W2621511283",
+      "title": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
+      "journal": "Marine Drugs",
+      "year": 2017,
+      "cited_by_count": 23,
+      "field": "Medicine",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.3390/md15060165",
+      "type": "core"
+    },
+    {
+      "id": "W3116953854",
+      "title": "Conserved bacterial genomes from two geographically isolated peritidal stromatolite formations shed light on potential functional guilds",
+      "journal": "Environmental Microbiology Reports",
+      "year": 2020,
+      "cited_by_count": 20,
+      "field": "Environmental Science",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1111/1758-2229.12916",
+      "type": "core"
+    },
+    {
+      "id": "W2741464576",
+      "title": "In situ mass spectrometry monitoring of fungal cultures led to the identification of four peptaibols with a rare threonine residue",
+      "journal": "Phytochemistry",
+      "year": 2017,
+      "cited_by_count": 17,
+      "field": "Medicine",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1016/j.phytochem.2017.07.004",
+      "type": "core"
+    },
+    {
+      "id": "W2946278827",
+      "title": "Omics Technologies to Understand Activation of a Biosynthetic Gene Cluster in <i>Micromonospora</i> sp. WMMB235: Deciphering Keyicin Biosynthesis",
+      "journal": "ACS Chemical Biology",
+      "year": 2019,
+      "cited_by_count": 13,
+      "field": "Medicine",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1021/acschembio.9b00223",
+      "type": "core"
+    },
+    {
+      "id": "W2620568344",
+      "title": "CHARACTERIZATION AND ISOLATION OF PEPTIDE METABOLITES OF AN ANTIFUNGAL BACTERIAL ISOLATE IDENTIFIED AS BACILLUS AMYLOLIQUEFACIENS SUBSPECIES PLANTARUM STRAIN FZB42",
+      "journal": "Journal of Microbiology Biotechnology and Food Sciences",
+      "year": 2017,
+      "cited_by_count": 6,
+      "field": "Agricultural and Biological Sciences",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.15414/jmbfs.2017.6.6.1309-1313",
+      "type": "core"
+    },
+    {
+      "id": "W4402702522",
+      "title": "Deep Learning Predicts Non-Normal Peptide FAIMS Mobility Distributions Directly from Sequence",
+      "journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "year": 2024,
+      "cited_by_count": 3,
+      "field": "Chemistry",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1101/2024.09.11.612538",
+      "type": "core"
+    },
+    {
+      "id": "W4386446289",
+      "title": "Autometa 2: A versatile tool for recovering genomes from highly-complex metagenomic communities",
+      "journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "year": 2023,
+      "cited_by_count": 3,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1101/2023.09.01.555939",
+      "type": "core"
+    },
+    {
+      "id": "W4386203568",
+      "title": "Automappa: An interactive interface for metagenome-derived genome bins",
+      "journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "year": 2023,
+      "cited_by_count": 1,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1101/2023.08.25.554826",
+      "type": "core"
+    },
+    {
+      "id": "W4380538648",
+      "title": "Elevated Expression of <i>srp</i> RiPPs Across Bacterial Phyla in Marine Sponges",
+      "journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "year": 2023,
+      "cited_by_count": 0,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller",
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1101/2023.06.09.544420",
+      "type": "core"
+    },
+    {
+      "id": "W4408826952",
+      "title": "Single-Dose Pharmacokinetics of Grapiprant in Rhesus Macaques (Macaca mulatta)",
+      "journal": "Journal of the American Association for Laboratory Animal Science",
+      "year": 2025,
+      "cited_by_count": 0,
+      "field": "Medicine",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.30802/aalas-jaalas-24-156",
+      "type": "core"
+    }
+  ],
+  "geographic": [
+    {
+      "country": "United States",
+      "country_code": "US",
+      "lat": 39.8,
+      "lon": -98.5,
+      "citations": 930,
+      "institutions": 652
+    },
+    {
+      "country": "China",
+      "country_code": "CN",
+      "lat": 35.9,
+      "lon": 104.2,
+      "citations": 482,
+      "institutions": 577
+    },
+    {
+      "country": "Germany",
+      "country_code": "DE",
+      "lat": 51.2,
+      "lon": 10.4,
+      "citations": 276,
+      "institutions": 172
+    },
+    {
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "lat": 55.4,
+      "lon": -3.4,
+      "citations": 192,
+      "institutions": 155
+    },
+    {
+      "country": "Canada",
+      "country_code": "CA",
+      "lat": 56.1,
+      "lon": -106.3,
+      "citations": 137,
+      "institutions": 88
+    },
+    {
+      "country": "France",
+      "country_code": "FR",
+      "lat": 46.2,
+      "lon": 2.2,
+      "citations": 115,
+      "institutions": 174
+    },
+    {
+      "country": "India",
+      "country_code": "IN",
+      "lat": 20.6,
+      "lon": 78.9,
+      "citations": 111,
+      "institutions": 138
+    },
+    {
+      "country": "Switzerland",
+      "country_code": "CH",
+      "lat": 46.8,
+      "lon": 8.2,
+      "citations": 93,
+      "institutions": 41
+    },
+    {
+      "country": "Australia",
+      "country_code": "AU",
+      "lat": -25.3,
+      "lon": 133.8,
+      "citations": 91,
+      "institutions": 88
+    },
+    {
+      "country": "Netherlands",
+      "country_code": "NL",
+      "lat": 52.1,
+      "lon": 5.3,
+      "citations": 87,
+      "institutions": 41
+    },
+    {
+      "country": "Brazil",
+      "country_code": "BR",
+      "lat": -14.2,
+      "lon": -51.9,
+      "citations": 81,
+      "institutions": 66
+    },
+    {
+      "country": "Spain",
+      "country_code": "ES",
+      "lat": 40.5,
+      "lon": -3.7,
+      "citations": 74,
+      "institutions": 124
+    },
+    {
+      "country": "Denmark",
+      "country_code": "DK",
+      "lat": 56.3,
+      "lon": 9.5,
+      "citations": 68,
+      "institutions": 19
+    },
+    {
+      "country": "Italy",
+      "country_code": "IT",
+      "lat": 41.9,
+      "lon": 12.6,
+      "citations": 66,
+      "institutions": 85
+    },
+    {
+      "country": "Japan",
+      "country_code": "JP",
+      "lat": 36.2,
+      "lon": 138.3,
+      "citations": 59,
+      "institutions": 69
+    },
+    {
+      "country": "South Korea",
+      "country_code": "KR",
+      "lat": 35.9,
+      "lon": 127.8,
+      "citations": 58,
+      "institutions": 51
+    },
+    {
+      "country": "Russia",
+      "country_code": "RU",
+      "lat": 61.5,
+      "lon": 105.3,
+      "citations": 42,
+      "institutions": 30
+    },
+    {
+      "country": "Sweden",
+      "country_code": "SE",
+      "lat": 60.1,
+      "lon": 18.6,
+      "citations": 39,
+      "institutions": 15
+    },
+    {
+      "country": "Poland",
+      "country_code": "PL",
+      "lat": 51.9,
+      "lon": 19.1,
+      "citations": 38,
+      "institutions": 30
+    },
+    {
+      "country": "Austria",
+      "country_code": "AT",
+      "lat": 47.5,
+      "lon": 14.6,
+      "citations": 36,
+      "institutions": 20
+    },
+    {
+      "country": "South Africa",
+      "country_code": "ZA",
+      "lat": -30.6,
+      "lon": 22.9,
+      "citations": 33,
+      "institutions": 22
+    },
+    {
+      "country": "New Zealand",
+      "country_code": "NZ",
+      "lat": -40.9,
+      "lon": 174.9,
+      "citations": 28,
+      "institutions": 9
+    },
+    {
+      "country": "Belgium",
+      "country_code": "BE",
+      "lat": 50.5,
+      "lon": 4.5,
+      "citations": 27,
+      "institutions": 26
+    },
+    {
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "lat": 23.9,
+      "lon": 45.1,
+      "citations": 25,
+      "institutions": 16
+    },
+    {
+      "country": "Finland",
+      "country_code": "FI",
+      "lat": 61.9,
+      "lon": 25.7,
+      "citations": 25,
+      "institutions": 15
+    },
+    {
+      "country": "Portugal",
+      "country_code": "PT",
+      "lat": 39.4,
+      "lon": -8.2,
+      "citations": 24,
+      "institutions": 15
+    },
+    {
+      "country": "Czech Republic",
+      "country_code": "CZ",
+      "lat": 49.8,
+      "lon": 15.5,
+      "citations": 23,
+      "institutions": 17
+    },
+    {
+      "country": "Singapore",
+      "country_code": "SG",
+      "lat": 1.4,
+      "lon": 103.8,
+      "citations": 22,
+      "institutions": 13
+    },
+    {
+      "country": "Mexico",
+      "country_code": "MX",
+      "lat": 23.6,
+      "lon": -102.6,
+      "citations": 22,
+      "institutions": 11
+    },
+    {
+      "country": "Egypt",
+      "country_code": "EG",
+      "lat": 26.8,
+      "lon": 30.8,
+      "citations": 21,
+      "institutions": 21
+    },
+    {
+      "country": "Norway",
+      "country_code": "NO",
+      "lat": 60.5,
+      "lon": 8.5,
+      "citations": 21,
+      "institutions": 17
+    },
+    {
+      "country": "Iran",
+      "country_code": "IR",
+      "lat": 32.4,
+      "lon": 53.7,
+      "citations": 20,
+      "institutions": 31
+    },
+    {
+      "country": "Israel",
+      "country_code": "IL",
+      "lat": 31.0,
+      "lon": 34.8,
+      "citations": 20,
+      "institutions": 14
+    },
+    {
+      "country": "Ireland",
+      "country_code": "IE",
+      "lat": 53.1,
+      "lon": -7.7,
+      "citations": 19,
+      "institutions": 18
+    },
+    {
+      "country": "Greece",
+      "country_code": "GR",
+      "lat": 39.1,
+      "lon": 21.8,
+      "citations": 19,
+      "institutions": 21
+    },
+    {
+      "country": "Taiwan",
+      "country_code": "TW",
+      "lat": 23.7,
+      "lon": 121.0,
+      "citations": 19,
+      "institutions": 30
+    },
+    {
+      "country": "Qatar",
+      "country_code": "QA",
+      "lat": 25.4,
+      "lon": 51.2,
+      "citations": 16,
+      "institutions": 7
+    },
+    {
+      "country": "Turkey",
+      "country_code": "TR",
+      "lat": 39.0,
+      "lon": 35.2,
+      "citations": 14,
+      "institutions": 21
+    },
+    {
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "lat": 23.4,
+      "lon": 53.8,
+      "citations": 13,
+      "institutions": 13
+    },
+    {
+      "country": "Hungary",
+      "country_code": "HU",
+      "lat": 47.2,
+      "lon": 19.5,
+      "citations": 12,
+      "institutions": 15
+    },
+    {
+      "country": "Chile",
+      "country_code": "CL",
+      "lat": -35.7,
+      "lon": -71.5,
+      "citations": 12,
+      "institutions": 9
+    },
+    {
+      "country": "Luxembourg",
+      "country_code": "LU",
+      "lat": 49.8,
+      "lon": 6.1,
+      "citations": 12,
+      "institutions": 2
+    },
+    {
+      "country": "Pakistan",
+      "country_code": "PK",
+      "lat": 30.4,
+      "lon": 69.3,
+      "citations": 11,
+      "institutions": 12
+    },
+    {
+      "country": "Malaysia",
+      "country_code": "MY",
+      "lat": 4.2,
+      "lon": 101.9,
+      "citations": 10,
+      "institutions": 11
+    },
+    {
+      "country": "Bangladesh",
+      "country_code": "BD",
+      "lat": 23.7,
+      "lon": 90.4,
+      "citations": 8,
+      "institutions": 8
+    },
+    {
+      "country": "Romania",
+      "country_code": "RO",
+      "lat": 45.9,
+      "lon": 24.9,
+      "citations": 8,
+      "institutions": 8
+    },
+    {
+      "country": "Indonesia",
+      "country_code": "ID",
+      "lat": -0.8,
+      "lon": 113.9,
+      "citations": 7,
+      "institutions": 8
+    },
+    {
+      "country": "Thailand",
+      "country_code": "TH",
+      "lat": 15.9,
+      "lon": 100.9,
+      "citations": 7,
+      "institutions": 7
+    },
+    {
+      "country": "Colombia",
+      "country_code": "CO",
+      "lat": 4.6,
+      "lon": -74.1,
+      "citations": 6,
+      "institutions": 7
+    },
+    {
+      "country": "Slovenia",
+      "country_code": "SI",
+      "lat": 46.2,
+      "lon": 14.8,
+      "citations": 6,
+      "institutions": 2
+    },
+    {
+      "country": "Vietnam",
+      "country_code": "VN",
+      "lat": 14.1,
+      "lon": 108.3,
+      "citations": 6,
+      "institutions": 8
+    },
+    {
+      "country": "Bulgaria",
+      "country_code": "BG",
+      "lat": 42.7,
+      "lon": 25.5,
+      "citations": 5,
+      "institutions": 6
+    },
+    {
+      "country": "Philippines",
+      "country_code": "PH",
+      "lat": 12.9,
+      "lon": 121.8,
+      "citations": 5,
+      "institutions": 6
+    },
+    {
+      "country": "Peru",
+      "country_code": "PE",
+      "lat": -9.2,
+      "lon": -75.0,
+      "citations": 5,
+      "institutions": 4
+    },
+    {
+      "country": "Kenya",
+      "country_code": "KE",
+      "lat": -0.0,
+      "lon": 37.9,
+      "citations": 5,
+      "institutions": 4
+    },
+    {
+      "country": "Argentina",
+      "country_code": "AR",
+      "lat": -38.4,
+      "lon": -63.6,
+      "citations": 4,
+      "institutions": 7
+    },
+    {
+      "country": "Ukraine",
+      "country_code": "UA",
+      "lat": 48.4,
+      "lon": 31.2,
+      "citations": 4,
+      "institutions": 4
+    },
+    {
+      "country": "Cyprus",
+      "country_code": "CY",
+      "lat": 35.1,
+      "lon": 33.4,
+      "citations": 4,
+      "institutions": 4
+    },
+    {
+      "country": "Sri Lanka",
+      "country_code": "LK",
+      "lat": 7.9,
+      "lon": 80.8,
+      "citations": 4,
+      "institutions": 3
+    },
+    {
+      "country": "Slovakia",
+      "country_code": "SK",
+      "lat": 48.7,
+      "lon": 19.7,
+      "citations": 3,
+      "institutions": 3
+    },
+    {
+      "country": "Ecuador",
+      "country_code": "EC",
+      "lat": -1.8,
+      "lon": -78.2,
+      "citations": 3,
+      "institutions": 7
+    },
+    {
+      "country": "Iraq",
+      "country_code": "IQ",
+      "lat": 33.2,
+      "lon": 43.7,
+      "citations": 3,
+      "institutions": 8
+    },
+    {
+      "country": "Cameroon",
+      "country_code": "CM",
+      "lat": 7.4,
+      "lon": 12.3,
+      "citations": 3,
+      "institutions": 3
+    },
+    {
+      "country": "Croatia",
+      "country_code": "HR",
+      "lat": 45.1,
+      "lon": 15.2,
+      "citations": 2,
+      "institutions": 2
+    },
+    {
+      "country": "Serbia",
+      "country_code": "RS",
+      "lat": 44.0,
+      "lon": 21.0,
+      "citations": 2,
+      "institutions": 2
+    },
+    {
+      "country": "Lithuania",
+      "country_code": "LT",
+      "lat": 55.2,
+      "lon": 23.9,
+      "citations": 2,
+      "institutions": 1
+    },
+    {
+      "country": "Uganda",
+      "country_code": "UG",
+      "lat": 1.4,
+      "lon": 32.3,
+      "citations": 2,
+      "institutions": 2
+    },
+    {
+      "country": "Estonia",
+      "country_code": "EE",
+      "lat": 58.6,
+      "lon": 25.0,
+      "citations": 2,
+      "institutions": 2
+    },
+    {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 2,
+      "institutions": 8
+    },
+    {
+      "country": "Nigeria",
+      "country_code": "NG",
+      "lat": 9.1,
+      "lon": 8.7,
+      "citations": 2,
+      "institutions": 4
+    },
+    {
+      "country": "Venezuela",
+      "country_code": "VE",
+      "lat": 6.4,
+      "lon": -66.6,
+      "citations": 1,
+      "institutions": 1
+    },
+    {
+      "country": "Malta",
+      "country_code": "MT",
+      "lat": 35.9,
+      "lon": 14.4,
+      "citations": 1,
+      "institutions": 2
+    },
+    {
+      "country": "Iceland",
+      "country_code": "IS",
+      "lat": 64.9,
+      "lon": -19.0,
+      "citations": 1,
+      "institutions": 1
+    },
+    {
+      "country": "Belarus",
+      "country_code": "BY",
+      "lat": 53.7,
+      "lon": 27.9,
+      "citations": 1,
+      "institutions": 1
+    },
+    {
+      "country": "Tunisia",
+      "country_code": "TN",
+      "lat": 34.0,
+      "lon": 9.5,
+      "citations": 1,
+      "institutions": 2
+    },
+    {
+      "country": "Ethiopia",
+      "country_code": "ET",
+      "lat": 9.1,
+      "lon": 40.5,
+      "citations": 1,
+      "institutions": 1
+    }
+  ],
+  "institutions_geo": [
+    {
+      "name": "University of Wisconsin\u2013Madison",
+      "lat": 43.07305,
+      "lon": -89.40123,
+      "country_code": "US",
+      "citations": 218
+    },
+    {
+      "name": "Morgridge Institute for Research",
+      "lat": 43.073360443115234,
+      "lon": -89.40813446044922,
+      "country_code": "US",
+      "citations": 58
+    },
+    {
+      "name": "Chinese Academy of Sciences",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 52
+    },
+    {
+      "name": "Centre National de la Recherche Scientifique",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 49
+    },
+    {
+      "name": "Johannes Gutenberg University Mainz",
+      "lat": 49.98419,
+      "lon": 8.2791,
+      "country_code": "DE",
+      "citations": 46
+    },
+    {
+      "name": "Harvard University",
+      "lat": 42.3751,
+      "lon": -71.10561,
+      "country_code": "US",
+      "citations": 40
+    },
+    {
+      "name": "ETH Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
+      "citations": 39
+    },
+    {
+      "name": "Friedrich Schiller University Jena",
+      "lat": 50.92878,
+      "lon": 11.5899,
+      "country_code": "DE",
+      "citations": 39
+    },
+    {
+      "name": "University of California San Diego",
+      "lat": 32.71571,
+      "lon": -117.16472,
+      "country_code": "US",
+      "citations": 38
+    },
+    {
+      "name": "Washington University in St. Louis",
+      "lat": 38.62727,
+      "lon": -90.19789,
+      "country_code": "US",
+      "citations": 37
+    },
+    {
+      "name": "University of Copenhagen",
+      "lat": 55.67594,
+      "lon": 12.56553,
+      "country_code": "DK",
+      "citations": 37
+    },
+    {
+      "name": "Quantitative BioSciences",
+      "lat": 32.9898681640625,
+      "lon": -117.25956726074219,
+      "country_code": "US",
+      "citations": 36
+    },
+    {
+      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 35
+    },
+    {
+      "name": "Cornell University",
+      "lat": 42.44063,
+      "lon": -76.49661,
+      "country_code": "US",
+      "citations": 34
+    },
+    {
+      "name": "Leibniz-Institut f\u00fcr Naturstoff-Forschung und Infektionsbiologie e. V. - Hans-Kn\u00f6ll-Institut (HKI)",
+      "lat": 50.92878,
+      "lon": 11.5899,
+      "country_code": "DE",
+      "citations": 34
+    },
+    {
+      "name": "Stanford University",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
+      "citations": 33
+    },
+    {
+      "name": "University of Chinese Academy of Sciences",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 31
+    },
+    {
+      "name": "Universidade de S\u00e3o Paulo",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
+      "citations": 30
+    },
+    {
+      "name": "Sun Yat-sen University",
+      "lat": 23.11667,
+      "lon": 113.25,
+      "country_code": "CN",
+      "citations": 29
+    },
+    {
+      "name": "Lawrence Berkeley National Laboratory",
+      "lat": 37.87158966064453,
+      "lon": -122.27275085449219,
+      "country_code": "US",
+      "citations": 29
+    },
+    {
+      "name": "Inserm",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 28
+    },
+    {
+      "name": "Fudan University",
+      "lat": 31.222219467163086,
+      "lon": 121.45806121826172,
+      "country_code": "CN",
+      "citations": 28
+    },
+    {
+      "name": "Max Planck Institute for Chemical Ecology",
+      "lat": 50.92877960205078,
+      "lon": 11.589900016784668,
+      "country_code": "DE",
+      "citations": 28
+    },
+    {
+      "name": "National Cancer Institute",
+      "lat": 38.98067092895508,
+      "lon": -77.10025787353516,
+      "country_code": "US",
+      "citations": 27
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "lat": 34.05223,
+      "lon": -118.24368,
+      "country_code": "US",
+      "citations": 27
+    },
+    {
+      "name": "University of Utah",
+      "lat": 40.76078,
+      "lon": -111.89105,
+      "country_code": "US",
+      "citations": 27
+    },
+    {
+      "name": "University of T\u00fcbingen",
+      "lat": 48.52265930175781,
+      "lon": 9.052220344543457,
+      "country_code": "DE",
+      "citations": 27
+    },
+    {
+      "name": "Joint Genome Institute",
+      "lat": 37.87158966064453,
+      "lon": -122.27275085449219,
+      "country_code": "US",
+      "citations": 27
+    },
+    {
+      "name": "University of Freiburg",
+      "lat": 47.99589920043945,
+      "lon": 7.852220058441162,
+      "country_code": "DE",
+      "citations": 26
+    },
+    {
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 25
+    },
+    {
+      "name": "Zhejiang University",
+      "lat": 30.29365,
+      "lon": 120.16142,
+      "country_code": "CN",
+      "citations": 25
+    },
+    {
+      "name": "University of Hong Kong",
+      "lat": 22.26861,
+      "lon": 114.12924,
+      "country_code": "HK",
+      "citations": 25
+    },
+    {
+      "name": "University of Cambridge",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
+      "citations": 23
+    },
+    {
+      "name": "Peking University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 23
+    },
+    {
+      "name": "Charit\u00e9 - Universit\u00e4tsmedizin Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 22
+    },
+    {
+      "name": "University of Florida",
+      "lat": 29.65163,
+      "lon": -82.32483,
+      "country_code": "US",
+      "citations": 22
+    },
+    {
+      "name": "Wageningen University & Research",
+      "lat": 51.97,
+      "lon": 5.66667,
+      "country_code": "NL",
+      "citations": 22
+    },
+    {
+      "name": "University of North Carolina at Greensboro",
+      "lat": 36.07263946533203,
+      "lon": -79.79197692871094,
+      "country_code": "US",
+      "citations": 21
+    },
+    {
+      "name": "University College London",
+      "lat": 51.50853,
+      "lon": -0.12574,
+      "country_code": "GB",
+      "citations": 20
+    },
+    {
+      "name": "Broad Institute",
+      "lat": 42.3751,
+      "lon": -71.10561,
+      "country_code": "US",
+      "citations": 20
+    },
+    {
+      "name": "University of British Columbia",
+      "lat": 49.24966,
+      "lon": -123.11934,
+      "country_code": "CA",
+      "citations": 20
+    },
+    {
+      "name": "University of Southern California",
+      "lat": 34.05223,
+      "lon": -118.24368,
+      "country_code": "US",
+      "citations": 20
+    },
+    {
+      "name": "Technical University of Denmark",
+      "lat": 55.77043914794922,
+      "lon": 12.503780364990234,
+      "country_code": "DK",
+      "citations": 20
+    },
+    {
+      "name": "Max Planck Institute for Evolutionary Biology",
+      "lat": 54.16202,
+      "lon": 10.42765,
+      "country_code": "DE",
+      "citations": 20
+    },
+    {
+      "name": "The University of Melbourne",
+      "lat": -37.814,
+      "lon": 144.96332,
+      "country_code": "AU",
+      "citations": 19
+    },
+    {
+      "name": "University of California, Berkeley",
+      "lat": 37.87159,
+      "lon": -122.27275,
+      "country_code": "US",
+      "citations": 19
+    },
+    {
+      "name": "Berlin Institute of Health at Charit\u00e9 - Universit\u00e4tsmedizin Berlin",
+      "lat": 52.52436828613281,
+      "lon": 13.410530090332031,
+      "country_code": "DE",
+      "citations": 18
+    },
+    {
+      "name": "University of Washington",
+      "lat": 47.60621,
+      "lon": -122.33207,
+      "country_code": "US",
+      "citations": 18
+    },
+    {
+      "name": "Huazhong University of Science and Technology",
+      "lat": 30.58333,
+      "lon": 114.26667,
+      "country_code": "CN",
+      "citations": 18
+    },
+    {
+      "name": "Shanghai Jiao Tong University",
+      "lat": 31.222219467163086,
+      "lon": 121.45806121826172,
+      "country_code": "CN",
+      "citations": 18
+    },
+    {
+      "name": "University of Vienna",
+      "lat": 48.20849,
+      "lon": 16.37208,
+      "country_code": "AT",
+      "citations": 18
+    },
+    {
+      "name": "University of Illinois Chicago",
+      "lat": 41.85003,
+      "lon": -87.65005,
+      "country_code": "US",
+      "citations": 17
+    },
+    {
+      "name": "China Pharmaceutical University",
+      "lat": 32.061668395996094,
+      "lon": 118.77777862548828,
+      "country_code": "CN",
+      "citations": 17
+    },
+    {
+      "name": "National Institutes of Health",
+      "lat": 38.98067,
+      "lon": -77.10026,
+      "country_code": "US",
+      "citations": 17
+    },
+    {
+      "name": "Universit\u00e9 Paris Cit\u00e9",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 17
+    },
+    {
+      "name": "St Petersburg University",
+      "lat": 59.94200134277344,
+      "lon": 30.298999786376953,
+      "country_code": "RU",
+      "citations": 17
+    },
+    {
+      "name": "Shandong University",
+      "lat": 36.66833,
+      "lon": 116.99722,
+      "country_code": "CN",
+      "citations": 16
+    },
+    {
+      "name": "Albany Medical Center Hospital",
+      "lat": 42.65258,
+      "lon": -73.75623,
+      "country_code": "US",
+      "citations": 16
+    },
+    {
+      "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
+      "lat": 46.516,
+      "lon": 6.63282,
+      "country_code": "CH",
+      "citations": 16
+    },
+    {
+      "name": "Sichuan University",
+      "lat": 30.66667,
+      "lon": 104.06667,
+      "country_code": "CN",
+      "citations": 16
+    },
+    {
+      "name": "Georgia Institute of Technology",
+      "lat": 33.749,
+      "lon": -84.38798,
+      "country_code": "US",
+      "citations": 16
+    },
+    {
+      "name": "Victoria University of Wellington",
+      "lat": -41.28664,
+      "lon": 174.77557,
+      "country_code": "NZ",
+      "citations": 16
+    },
+    {
+      "name": "University of Wisconsin\u2013La Crosse",
+      "lat": 43.815574645996094,
+      "lon": -91.2335205078125,
+      "country_code": "US",
+      "citations": 16
+    },
+    {
+      "name": "Jackson Laboratory",
+      "lat": 44.38758,
+      "lon": -68.2039,
+      "country_code": "US",
+      "citations": 16
+    },
+    {
+      "name": "University of Chicago",
+      "lat": 41.85003,
+      "lon": -87.65005,
+      "country_code": "US",
+      "citations": 15
+    },
+    {
+      "name": "Helmholtz Zentrum M\u00fcnchen",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
+      "citations": 15
+    },
+    {
+      "name": "University of Oxford",
+      "lat": 51.75222,
+      "lon": -1.25596,
+      "country_code": "GB",
+      "citations": 15
+    },
+    {
+      "name": "The University of Sydney",
+      "lat": -33.86785,
+      "lon": 151.20732,
+      "country_code": "AU",
+      "citations": 15
+    },
+    {
+      "name": "Technical University of Munich",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
+      "citations": 15
+    },
+    {
+      "name": "University of Pennsylvania",
+      "lat": 39.95238,
+      "lon": -75.16362,
+      "country_code": "US",
+      "citations": 15
+    },
+    {
+      "name": "Oregon State University",
+      "lat": 44.56457,
+      "lon": -123.26204,
+      "country_code": "US",
+      "citations": 15
+    },
+    {
+      "name": "Freie Universit\u00e4t Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 14
+    },
+    {
+      "name": "Imperial College London",
+      "lat": 51.50853,
+      "lon": -0.12574,
+      "country_code": "GB",
+      "citations": 14
+    },
+    {
+      "name": "Novo Nordisk Foundation",
+      "lat": 55.67594,
+      "lon": 12.56553,
+      "country_code": "DK",
+      "citations": 14
+    },
+    {
+      "name": "Guangzhou Medical University",
+      "lat": 23.13623809814453,
+      "lon": 113.25353240966797,
+      "country_code": "CN",
+      "citations": 14
+    },
+    {
+      "name": "Duke University",
+      "lat": 35.99403,
+      "lon": -78.89862,
+      "country_code": "US",
+      "citations": 14
+    },
+    {
+      "name": "University of Helsinki",
+      "lat": 60.16952,
+      "lon": 24.93545,
+      "country_code": "FI",
+      "citations": 14
+    },
+    {
+      "name": "Weill Cornell Medicine",
+      "lat": 40.71427,
+      "lon": -74.00597,
+      "country_code": "US",
+      "citations": 14
+    },
+    {
+      "name": "Helmholtz Centre for Infection Research",
+      "lat": 52.26594,
+      "lon": 10.52673,
+      "country_code": "DE",
+      "citations": 14
+    },
+    {
+      "name": "Pennsylvania State University",
+      "lat": 40.79339,
+      "lon": -77.86,
+      "country_code": "US",
+      "citations": 14
+    },
+    {
+      "name": "Universit\u00e9 Paris-Saclay",
+      "lat": 48.68333,
+      "lon": 2.13333,
+      "country_code": "FR",
+      "citations": 14
+    },
+    {
+      "name": "Tsinghua University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 14
+    },
+    {
+      "name": "Northwestern University",
+      "lat": 42.04114,
+      "lon": -87.69006,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Yale University",
+      "lat": 41.30815,
+      "lon": -72.92816,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "University of Edinburgh",
+      "lat": 55.95206,
+      "lon": -3.19648,
+      "country_code": "GB",
+      "citations": 13
+    },
+    {
+      "name": "Cleveland Clinic",
+      "lat": 41.4995,
+      "lon": -81.69541,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "University of California, San Francisco",
+      "lat": 37.77493,
+      "lon": -122.41942,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "University of Minnesota",
+      "lat": 44.97997,
+      "lon": -93.26384,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "University of Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
+      "citations": 13
+    },
+    {
+      "name": "Howard Hughes Medical Institute",
+      "lat": 39.00287,
+      "lon": -77.07115,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "University of Michigan",
+      "lat": 42.27756,
+      "lon": -83.74088,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Center for Cancer Research",
+      "lat": 39.0040283203125,
+      "lon": -77.10096740722656,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Sorbonne Universit\u00e9",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 13
+    },
+    {
+      "name": "University of Illinois Urbana-Champaign",
+      "lat": 40.11059,
+      "lon": -88.20727,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Maurice Wilkins Centre",
+      "lat": -36.84852981567383,
+      "lon": 174.76348876953125,
+      "country_code": "NZ",
+      "citations": 13
+    },
+    {
+      "name": "Icahn School of Medicine at Mount Sinai",
+      "lat": 40.71427,
+      "lon": -74.00597,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
+      "name": "Vanderbilt University",
+      "lat": 36.16589,
+      "lon": -86.78444,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
+      "name": "German Center for Infection Research",
+      "lat": 52.26594,
+      "lon": 10.52673,
+      "country_code": "DE",
+      "citations": 12
+    },
+    {
+      "name": "Karolinska Institutet",
+      "lat": 59.32938003540039,
+      "lon": 18.068710327148438,
+      "country_code": "SE",
+      "citations": 12
+    },
+    {
+      "name": "Amsterdam University Medical Centers",
+      "lat": 52.37403,
+      "lon": 4.88969,
+      "country_code": "NL",
+      "citations": 12
+    },
+    {
+      "name": "Utrecht University",
+      "lat": 52.09083,
+      "lon": 5.12222,
+      "country_code": "NL",
+      "citations": 12
+    },
+    {
+      "name": "Johns Hopkins University",
+      "lat": 39.29038,
+      "lon": -76.61219,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
+      "name": "Assistance Publique \u2013 H\u00f4pitaux de Paris",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 12
+    },
+    {
+      "name": "Indiana University Bloomington",
+      "lat": 39.16533,
+      "lon": -86.52639,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
+      "name": "Universidad Nacional Aut\u00f3noma de M\u00e9xico",
+      "lat": 19.42847,
+      "lon": -99.12766,
+      "country_code": "MX",
+      "citations": 12
+    },
+    {
+      "name": "Institut de Biologia Evolutiva",
+      "lat": 41.38879,
+      "lon": 2.15899,
+      "country_code": "ES",
+      "citations": 12
+    },
+    {
+      "name": "Goethe University Frankfurt",
+      "lat": 50.11552,
+      "lon": 8.68417,
+      "country_code": "DE",
+      "citations": 12
+    },
+    {
+      "name": "Humboldt-Universit\u00e4t zu Berlin",
+      "lat": 52.52436828613281,
+      "lon": 13.410530090332031,
+      "country_code": "DE",
+      "citations": 11
+    },
+    {
+      "name": "University of Calgary",
+      "lat": 51.05011,
+      "lon": -114.08529,
+      "country_code": "CA",
+      "citations": 11
+    },
+    {
+      "name": "Chan Zuckerberg Initiative (United States)",
+      "lat": 37.48522,
+      "lon": -122.23635,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "Case Western Reserve University",
+      "lat": 41.4995,
+      "lon": -81.69541,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "National University of Singapore",
+      "lat": 1.28967,
+      "lon": 103.85007,
+      "country_code": "SG",
+      "citations": 11
+    },
+    {
+      "name": "University of Amsterdam",
+      "lat": 52.37403,
+      "lon": 4.88969,
+      "country_code": "NL",
+      "citations": 11
+    },
+    {
+      "name": "University of Toronto",
+      "lat": 43.70643,
+      "lon": -79.39864,
+      "country_code": "CA",
+      "citations": 11
+    },
+    {
+      "name": "Baylor College of Medicine",
+      "lat": 29.76328,
+      "lon": -95.36327,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "European Bioinformatics Institute",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
+      "citations": 11
+    },
+    {
+      "name": "UNSW Sydney",
+      "lat": -33.86785,
+      "lon": 151.20732,
+      "country_code": "AU",
+      "citations": 11
+    },
+    {
+      "name": "Newcastle University",
+      "lat": 54.97328,
+      "lon": -1.61396,
+      "country_code": "GB",
+      "citations": 11
+    },
+    {
+      "name": "Massachusetts Institute of Technology",
+      "lat": 42.3751,
+      "lon": -71.10561,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "Guangzhou University of Chinese Medicine",
+      "lat": 23.116670608520508,
+      "lon": 113.25,
+      "country_code": "CN",
+      "citations": 11
+    },
+    {
+      "name": "Saarland University",
+      "lat": 49.23262,
+      "lon": 7.00982,
+      "country_code": "DE",
+      "citations": 11
+    },
+    {
+      "name": "Helmholtz Institute for Pharmaceutical Research Saarland",
+      "lat": 49.25752639770508,
+      "lon": 7.041704177856445,
+      "country_code": "DE",
+      "citations": 11
+    },
+    {
+      "name": "Instituto de Salud Carlos III",
+      "lat": 40.416500091552734,
+      "lon": -3.7025599479675293,
+      "country_code": "ES",
+      "citations": 11
+    },
+    {
+      "name": "Seoul National University",
+      "lat": 37.566,
+      "lon": 126.9784,
+      "country_code": "KR",
+      "citations": 11
+    },
+    {
+      "name": "University of North Carolina at Chapel Hill",
+      "lat": 35.9132,
+      "lon": -79.05584,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "University of California, Irvine",
+      "lat": 33.66946,
+      "lon": -117.82311,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
+      "name": "King's College London",
+      "lat": 51.50853,
+      "lon": -0.12574,
+      "country_code": "GB",
+      "citations": 10
+    },
+    {
+      "name": "McGill University",
+      "lat": 45.50884,
+      "lon": -73.58781,
+      "country_code": "CA",
+      "citations": 10
+    },
+    {
+      "name": "Hospital das Cl\u00ednicas da Faculdade de Medicina da Universidade de S\u00e3o Paulo",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
+      "citations": 10
+    },
+    {
+      "name": "Science for Life Laboratory",
+      "lat": 59.32938003540039,
+      "lon": 18.068710327148438,
+      "country_code": "SE",
+      "citations": 10
+    },
+    {
+      "name": "Medical University of Vienna",
+      "lat": 48.20849,
+      "lon": 16.37208,
+      "country_code": "AT",
+      "citations": 10
+    },
+    {
+      "name": "Union Hospital",
+      "lat": 22.360681533813477,
+      "lon": 114.17512512207031,
+      "country_code": "CN",
+      "citations": 10
+    },
+    {
+      "name": "Heidelberg University",
+      "lat": 49.40768,
+      "lon": 8.69079,
+      "country_code": "DE",
+      "citations": 10
+    },
+    {
+      "name": "Universidade Estadual Paulista (Unesp)",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
+      "citations": 10
+    },
+    {
+      "name": "Leiden University",
+      "lat": 52.158329010009766,
+      "lon": 4.493060111999512,
+      "country_code": "NL",
+      "citations": 10
+    },
+    {
+      "name": "Stanford Medicine",
+      "lat": 37.424110412597656,
+      "lon": -122.16607666015625,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
+      "name": "Second Affiliated Hospital of Zhejiang University",
+      "lat": 30.25167465209961,
+      "lon": 120.17648315429688,
+      "country_code": "CN",
+      "citations": 10
+    },
+    {
+      "name": "The University of Tokyo",
+      "lat": 35.68949890136719,
+      "lon": 139.69171142578125,
+      "country_code": "JP",
+      "citations": 10
+    },
+    {
+      "name": "University of Maryland, College Park",
+      "lat": 38.98067,
+      "lon": -76.93692,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
+      "name": "Institut Pasteur",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 10
+    },
+    {
+      "name": "University of California, Merced",
+      "lat": 37.30215835571289,
+      "lon": -120.48297119140625,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
+      "name": "Max Planck Institute for Marine Microbiology",
+      "lat": 53.11038589477539,
+      "lon": 8.84748363494873,
+      "country_code": "DE",
+      "citations": 10
+    },
+    {
+      "name": "Xiamen University",
+      "lat": 24.47978973388672,
+      "lon": 118.08187103271484,
+      "country_code": "CN",
+      "citations": 10
+    },
+    {
+      "name": "Board of the Swiss Federal Institutes of Technology",
+      "lat": 47.366668701171875,
+      "lon": 8.550000190734863,
+      "country_code": "CH",
+      "citations": 10
+    },
+    {
+      "name": "The University of Texas Southwestern Medical Center",
+      "lat": 32.78306,
+      "lon": -96.80667,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
+      "name": "Rhodes University",
+      "lat": -33.30421829223633,
+      "lon": 26.532760620117188,
+      "country_code": "ZA",
+      "citations": 10
+    },
+    {
+      "name": "Russian Academy of Sciences",
+      "lat": 55.75222,
+      "lon": 37.61556,
+      "country_code": "RU",
+      "citations": 10
+    },
+    {
+      "name": "Cleveland Clinic Lerner College of Medicine",
+      "lat": 41.4995,
+      "lon": -81.69541,
+      "country_code": "US",
+      "citations": 9
+    },
+    {
+      "name": "Brigham and Women's Hospital",
+      "lat": 42.358428955078125,
+      "lon": -71.05976867675781,
+      "country_code": "US",
+      "citations": 9
+    },
+    {
+      "name": "The University of Queensland",
+      "lat": -27.46794,
+      "lon": 153.02809,
+      "country_code": "AU",
+      "citations": 9
+    }
+  ],
+  "disciplines": [
+    {
+      "name": "Biochemistry, Genetics and Molecular Biology",
+      "count": 855,
+      "color": "#14B8A6"
+    },
+    {
+      "name": "Medicine",
+      "count": 646,
+      "color": "#0891B2"
+    },
+    {
+      "name": "Agricultural and Biological Sciences",
+      "count": 216,
+      "color": "#0EA5E9"
+    },
+    {
+      "name": "Computer Science",
+      "count": 174,
+      "color": "#3B82F6"
+    },
+    {
+      "name": "Environmental Science",
+      "count": 126,
+      "color": "#8B5CF6"
+    },
+    {
+      "name": "Chemistry",
+      "count": 71,
+      "color": "#A78BFA"
+    },
+    {
+      "name": "Immunology and Microbiology",
+      "count": 63,
+      "color": "#2DD4BF"
+    },
+    {
+      "name": "Engineering",
+      "count": 29,
+      "color": "#06B6D4"
+    },
+    {
+      "name": "Materials Science",
+      "count": 18,
+      "color": "#60A5FA"
+    },
+    {
+      "name": "Neuroscience",
+      "count": 17,
+      "color": "#7C3AED"
+    },
+    {
+      "name": "Pharmacology, Toxicology and Pharmaceutics",
+      "count": 13,
+      "color": "#34D399"
+    },
+    {
+      "name": "Other Disciplines",
+      "count": 47,
+      "includes": [
+        "Nursing (10)",
+        "Earth and Planetary Sciences (6)",
+        "Mathematics (5)",
+        "Psychology (5)",
+        "Decision Sciences (5)",
+        "Social Sciences (4)",
+        "Energy (4)",
+        "Dentistry (3)",
+        "Chemical Engineering (3)",
+        "Health Professions (1)",
+        "Veterinary (1)"
+      ],
+      "color": "#94A3B8"
+    }
+  ],
+  "citation_network": {
+    "nodes": [
+      {
+        "id": "W3091839106",
+        "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
+        "field": "Medicine",
+        "type": "core",
+        "citations": 639,
+        "year": 2020
+      },
+      {
+        "id": "W4225258284",
+        "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 375,
+        "year": 2022
+      },
+      {
+        "id": "W4386607677",
+        "label": "Artificial intelligence for natural product drug discovery",
+        "field": "Computer Science",
+        "type": "core",
+        "citations": 346,
+        "year": 2023
+      },
+      {
+        "id": "W2808840038",
+        "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
+        "field": "Agricultural and Biological Sciences",
+        "type": "core",
+        "citations": 130,
+        "year": 2018
+      },
+      {
+        "id": "W4281483346",
+        "label": "Defining mitochondrial protein functions through deep multiomic profiling",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 115,
+        "year": 2022
+      },
+      {
+        "id": "W2949629831",
+        "label": "Autometa: automated extraction of microbial genomes from individual shotgun metagenomes",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 103,
+        "year": 2019
+      },
+      {
+        "id": "W2972433884",
+        "label": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
+        "field": "Computer Science",
+        "type": "core",
+        "citations": 91,
+        "year": 2019
+      },
+      {
+        "id": "W2989537165",
+        "label": "Real-time health monitoring through urine metabolomics",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 81,
+        "year": 2019
+      },
+      {
+        "id": "W3006681944",
+        "label": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
+        "field": "Agricultural and Biological Sciences",
+        "type": "core",
+        "citations": 74,
+        "year": 2020
+      },
+      {
+        "id": "W3087677418",
+        "label": "A large-scale genome\u2013lipid association map guides lipid identification",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 56,
+        "year": 2020
+      },
+      {
+        "id": "W2513652105",
+        "label": "Lack of Overt Genome Reduction in the Bryostatin-Producing Bryozoan Symbiont \u201cCandidatus Endobugula sertula\u201d",
+        "field": "Medicine",
+        "type": "core",
+        "citations": 55,
+        "year": 2016
+      },
+      {
+        "id": "W2769473564",
+        "label": "Increased Biosynthetic Gene Dosage in a Genome-Reduced Defensive Bacterial Symbiont",
+        "field": "Agricultural and Biological Sciences",
+        "type": "core",
+        "citations": 50,
+        "year": 2017
+      },
+      {
+        "id": "W4319825888",
+        "label": "Genetic mapping of microbial and host traits reveals production of immunomodulatory lipids by Akkermansia muciniphila in the murine gut",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 46,
+        "year": 2023
+      },
+      {
+        "id": "W2527369287",
+        "label": "Single sample resolution of rare microbial dark matter in a marine invertebrate metagenome",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 37,
+        "year": 2016
+      },
+      {
+        "id": "W3092255275",
+        "label": "Argonaut: A Web Platform for Collaborative Multi-omic Data Visualization and Exploration",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 37,
+        "year": 2020
+      },
+      {
+        "id": "W2344158103",
+        "label": "Spatial and Temporal Profiling of Griseofulvin Production in Xylaria cubensis Using Mass Spectrometry Mapping",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 36,
+        "year": 2016
+      },
+      {
+        "id": "W2621511283",
+        "label": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
+        "field": "Medicine",
+        "type": "core",
+        "citations": 23,
+        "year": 2017
+      },
+      {
+        "id": "W3116953854",
+        "label": "Conserved bacterial genomes from two geographically isolated peritidal stromatolite formations shed light on potential functional guilds",
+        "field": "Environmental Science",
+        "type": "core",
+        "citations": 20,
+        "year": 2020
+      },
+      {
+        "id": "W2741464576",
+        "label": "In situ mass spectrometry monitoring of fungal cultures led to the identification of four peptaibols with a rare threonine residue",
+        "field": "Medicine",
+        "type": "core",
+        "citations": 17,
+        "year": 2017
+      },
+      {
+        "id": "W2946278827",
+        "label": "Omics Technologies to Understand Activation of a Biosynthetic Gene Cluster in <i>Micromonospora</i> sp. WMMB235: Deciphering Keyicin Biosynthesis",
+        "field": "Medicine",
+        "type": "core",
+        "citations": 13,
+        "year": 2019
+      },
+      {
+        "id": "W2620568344",
+        "label": "CHARACTERIZATION AND ISOLATION OF PEPTIDE METABOLITES OF AN ANTIFUNGAL BACTERIAL ISOLATE IDENTIFIED AS BACILLUS AMYLOLIQUEFACIENS SUBSPECIES PLANTARUM STRAIN FZB42",
+        "field": "Agricultural and Biological Sciences",
+        "type": "core",
+        "citations": 6,
+        "year": 2017
+      },
+      {
+        "id": "W4402702522",
+        "label": "Deep Learning Predicts Non-Normal Peptide FAIMS Mobility Distributions Directly from Sequence",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 3,
+        "year": 2024
+      },
+      {
+        "id": "W4386446289",
+        "label": "Autometa 2: A versatile tool for recovering genomes from highly-complex metagenomic communities",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 3,
+        "year": 2023
+      },
+      {
+        "id": "W4386203568",
+        "label": "Automappa: An interactive interface for metagenome-derived genome bins",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 1,
+        "year": 2023
+      },
+      {
+        "id": "W4380538648",
+        "label": "Elevated Expression of <i>srp</i> RiPPs Across Bacterial Phyla in Marine Sponges",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 0,
+        "year": 2023
+      },
+      {
+        "id": "W4408826952",
+        "label": "Single-Dose Pharmacokinetics of Grapiprant in Rhesus Macaques (Macaca mulatta)",
+        "field": "Medicine",
+        "type": "core",
+        "citations": 0,
+        "year": 2025
+      },
+      {
+        "id": "W3139601120",
+        "label": "Using machine learning approaches for multi-omics data analysis: A review",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 827,
+        "year": 2021
+      },
+      {
+        "id": "W3138817412",
+        "label": "Ultra-fast proteomics with Scanning SWATH",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 318,
+        "year": 2021
+      },
+      {
+        "id": "W4280576708",
+        "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 305,
+        "year": 2022
+      },
+      {
+        "id": "W4225586016",
+        "label": "Long-term perturbation of the peripheral immune system months after SARS-CoV-2 infection",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 274,
+        "year": 2022
+      },
+      {
+        "id": "W3213276455",
+        "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 264,
+        "year": 2021
+      },
+      {
+        "id": "W3173003579",
+        "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 227,
+        "year": 2021
+      },
+      {
+        "id": "W3156257761",
+        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 226,
+        "year": 2021
+      },
+      {
+        "id": "W3171623624",
+        "label": "A time-resolved proteomic and prognostic map of COVID-19",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 213,
+        "year": 2021
+      },
+      {
+        "id": "W4283726298",
+        "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 362,
+        "year": 2022
+      },
+      {
+        "id": "W4309109636",
+        "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 306,
+        "year": 2022
+      },
+      {
+        "id": "W4387012793",
+        "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 250,
+        "year": 2023
+      },
+      {
+        "id": "W3217463608",
+        "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 215,
+        "year": 2021
+      },
+      {
+        "id": "W4310157184",
+        "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 174,
+        "year": 2022
+      },
+      {
+        "id": "W4311305969",
+        "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 129,
+        "year": 2022
+      },
+      {
+        "id": "W4308792295",
+        "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 112,
+        "year": 2022
+      },
+      {
+        "id": "W4400220867",
+        "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 90,
+        "year": 2024
+      },
+      {
+        "id": "W4392349824",
+        "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 859,
+        "year": 2024
+      },
+      {
+        "id": "W4406633314",
+        "label": "Artificial intelligence in drug development",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 271,
+        "year": 2025
+      },
+      {
+        "id": "W4396951587",
+        "label": "A guide to artificial intelligence for cancer researchers",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 167,
+        "year": 2024
+      },
+      {
+        "id": "W4400831251",
+        "label": "Machine learning in preclinical drug discovery",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 154,
+        "year": 2024
+      },
+      {
+        "id": "W4391116946",
+        "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 87,
+        "year": 2024
+      },
+      {
+        "id": "W4392948486",
+        "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 86,
+        "year": 2024
+      },
+      {
+        "id": "W4402465580",
+        "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 61,
+        "year": 2024
+      },
+      {
+        "id": "W4406533301",
+        "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 58,
+        "year": 2025
+      },
+      {
+        "id": "W2994786999",
+        "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 328,
+        "year": 2019
+      },
+      {
+        "id": "W2958017797",
+        "label": "<i>Burkholderia</i> as a Source of Natural Products",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 136,
+        "year": 2019
+      },
+      {
+        "id": "W3168295480",
+        "label": "A Bacterial Symbiont Protects Honey Bees from Fungal Disease",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 107,
+        "year": 2021
+      },
+      {
+        "id": "W3204202235",
+        "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 96,
+        "year": 2021
+      },
+      {
+        "id": "W2980266162",
+        "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 91,
+        "year": 2019
+      },
+      {
+        "id": "W3011843199",
+        "label": "Relevance of microbial symbiosis to insect behavior",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 91,
+        "year": 2020
+      },
+      {
+        "id": "W4386391260",
+        "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 79,
+        "year": 2023
+      },
+      {
+        "id": "W4398231688",
+        "label": "Mitochondria at the crossroads of health and disease",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 348,
+        "year": 2024
+      },
+      {
+        "id": "W4308634875",
+        "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 122,
+        "year": 2022
+      },
+      {
+        "id": "W4317903160",
+        "label": "Coenzyme Q biochemistry and biosynthesis",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 102,
+        "year": 2023
+      },
+      {
+        "id": "W4293804759",
+        "label": "Determinants, maintenance, and function of organellar pH",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 99,
+        "year": 2022
+      },
+      {
+        "id": "W4386053919",
+        "label": "Mitochondrial heterogeneity in diseases",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 73,
+        "year": 2023
+      },
+      {
+        "id": "W4396858058",
+        "label": "Instrumentation at the Leading Edge of Proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 67,
+        "year": 2024
+      },
+      {
+        "id": "W4396578574",
+        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 66,
+        "year": 2024
+      },
+      {
+        "id": "W4387930856",
+        "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 57,
+        "year": 2023
+      },
+      {
+        "id": "W3045315617",
+        "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 292,
+        "year": 2020
+      },
+      {
+        "id": "W2956967628",
+        "label": "Non-photosynthetic predators are sister to red algae",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 161,
+        "year": 2019
+      },
+      {
+        "id": "W3204900280",
+        "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 128,
+        "year": 2021
+      },
+      {
+        "id": "W4281391087",
+        "label": "Ancient plant-like terpene biosynthesis in corals",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 106,
+        "year": 2022
+      },
+      {
+        "id": "W3046109898",
+        "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 103,
+        "year": 2020
+      },
+      {
+        "id": "W3087156149",
+        "label": "Artificial intelligence in COVID-19 drug repurposing",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 630,
+        "year": 2020
+      },
+      {
+        "id": "W4385027818",
+        "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
+        "field": "Materials Science",
+        "type": "citing",
+        "citations": 443,
+        "year": 2023
+      },
+      {
+        "id": "W4382516982",
+        "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 409,
+        "year": 2023
+      },
+      {
+        "id": "W4297179162",
+        "label": "Deep learning methods for molecular representation and property prediction",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 246,
+        "year": 2022
+      },
+      {
+        "id": "W3210813272",
+        "label": "Artificial intelligence in drug discovery: applications and techniques",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 184,
+        "year": 2021
+      },
+      {
+        "id": "W3012320348",
+        "label": "Virtual screening web servers: designing chemical probes and drug candidates in the cyberspace",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 125,
+        "year": 2020
+      },
+      {
+        "id": "W2887381903",
+        "label": "Toxic Colors: The Use of Deep Learning for Predicting Toxicity of Compounds Merely from Their Graphic Images",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 122,
+        "year": 2018
+      },
+      {
+        "id": "W4296162381",
+        "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 121,
+        "year": 2022
+      },
+      {
+        "id": "W4376104934",
+        "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
+        "field": "Engineering",
+        "type": "citing",
+        "citations": 140,
+        "year": 2023
+      },
+      {
+        "id": "W4317498917",
+        "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 98,
+        "year": 2023
+      },
+      {
+        "id": "W3114702865",
+        "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 83,
+        "year": 2020
+      },
+      {
+        "id": "W4361297378",
+        "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
+        "field": "Engineering",
+        "type": "citing",
+        "citations": 66,
+        "year": 2023
+      },
+      {
+        "id": "W4405185870",
+        "label": "Decoding aging clocks: New insights from metabolomics",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 53,
+        "year": 2024
+      },
+      {
+        "id": "W4361279451",
+        "label": "A scoping review of neurodegenerative manifestations in explainable digital phenotyping",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 48,
+        "year": 2023
+      },
+      {
+        "id": "W4285189591",
+        "label": "Volatile Organic Compounds Analysis as a Potential Novel Screening Tool for Breast Cancer: A Systematic Review",
+        "field": "Engineering",
+        "type": "citing",
+        "citations": 46,
+        "year": 2022
+      },
+      {
+        "id": "W3212385379",
+        "label": "Horizontal gene transfer and adaptive evolution in bacteria",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 790,
+        "year": 2021
+      },
+      {
+        "id": "W3136772542",
+        "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 325,
+        "year": 2021
+      },
+      {
+        "id": "W3037349235",
+        "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 207,
+        "year": 2020
+      },
+      {
+        "id": "W3187316511",
+        "label": "Genetic innovations in animal\u2013microbe symbioses",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 151,
+        "year": 2021
+      },
+      {
+        "id": "W3109850286",
+        "label": "Insects\u2019 potential: Understanding the functional role of their gut microbiome",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 80,
+        "year": 2020
+      },
+      {
+        "id": "W3190897300",
+        "label": "Commensal inter-bacterial interactions shaping the microbiota",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 76,
+        "year": 2021
+      },
+      {
+        "id": "W4285404902",
+        "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 164,
+        "year": 2022
+      },
+      {
+        "id": "W3200831264",
+        "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 123,
+        "year": 2021
+      },
+      {
+        "id": "W3135655850",
+        "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 121,
+        "year": 2021
+      },
+      {
+        "id": "W4306353218",
+        "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 51,
+        "year": 2022
+      },
+      {
+        "id": "W4323977918",
+        "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 44,
+        "year": 2023
+      },
+      {
+        "id": "W3133486136",
+        "label": "Multi-Omic Single-Shot Technology for Integrated Proteome and Lipidome Analysis",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 38,
+        "year": 2021
+      },
+      {
+        "id": "W4391431108",
+        "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 36,
+        "year": 2024
+      },
+      {
+        "id": "W2913553075",
+        "label": "Engineering microbial consortia by division of labor",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 296,
+        "year": 2019
+      },
+      {
+        "id": "W4245579397",
+        "label": "Natural Products as a Foundation for Drug Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 134,
+        "year": 2019
+      },
+      {
+        "id": "W2762475403",
+        "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 106,
+        "year": 2017
+      },
+      {
+        "id": "W2782169385",
+        "label": "Accessing chemical diversity from the uncultivated symbionts of small marine animals",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 101,
+        "year": 2018
+      },
+      {
+        "id": "W2910293385",
+        "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 100,
+        "year": 2019
+      },
+      {
+        "id": "W2893448478",
+        "label": "Emerging evolutionary paradigms in antibiotic discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 95,
+        "year": 2018
+      },
+      {
+        "id": "W2787455282",
+        "label": "Parallel lives of symbionts and hosts: chemical mutualism in marine animals",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 76,
+        "year": 2018
+      },
+      {
+        "id": "W4210987854",
+        "label": "Marine natural products",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 498,
+        "year": 2019
+      },
+      {
+        "id": "W2994671073",
+        "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 160,
+        "year": 2019
+      },
+      {
+        "id": "W2950608592",
+        "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 115,
+        "year": 2019
+      },
+      {
+        "id": "W3016261123",
+        "label": "A multiproducer microbiome generates chemical diversity in the marine sponge <i>Mycale hentscheli</i>",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 96,
+        "year": 2020
+      },
+      {
+        "id": "W2932304820",
+        "label": "Localized production of defence chemicals by intracellular symbionts of Haliclona sponges",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 85,
+        "year": 2019
+      },
+      {
+        "id": "W4403428745",
+        "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 131,
+        "year": 2024
+      },
+      {
+        "id": "W4381189797",
+        "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 123,
+        "year": 2023
+      },
+      {
+        "id": "W4390743444",
+        "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 96,
+        "year": 2024
+      },
+      {
+        "id": "W4382344666",
+        "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 82,
+        "year": 2023
+      },
+      {
+        "id": "W4396905162",
+        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 54,
+        "year": 2024
+      },
+      {
+        "id": "W4324013663",
+        "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 49,
+        "year": 2023
+      },
+      {
+        "id": "W4402906567",
+        "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 49,
+        "year": 2024
+      },
+      {
+        "id": "W4394753092",
+        "label": "A lipidome landscape of aging in mice",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 48,
+        "year": 2024
+      },
+      {
+        "id": "W2599417231",
+        "label": "metaSPAdes: a new versatile metagenomic assembler",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 4699,
+        "year": 2017
+      },
+      {
+        "id": "W3011678041",
+        "label": "Accurate and complete genomes from metagenomes",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 394,
+        "year": 2020
+      },
+      {
+        "id": "W4224235198",
+        "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 134,
+        "year": 2022
+      },
+      {
+        "id": "W2883293209",
+        "label": "Microbial-derived products as potential new antimicrobials",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 79,
+        "year": 2018
+      },
+      {
+        "id": "W4223918790",
+        "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 113,
+        "year": 2022
+      },
+      {
+        "id": "W4364374133",
+        "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 92,
+        "year": 2023
+      },
+      {
+        "id": "W4361191134",
+        "label": "Discovery of a Potent and Selective Targeted NSD2 Degrader for the Reduction of H3K36me2",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 59,
+        "year": 2023
+      },
+      {
+        "id": "W4296339139",
+        "label": "A Comprehensive State-of-the-Art Survey on Data Visualization Tools: Research Developments, Challenges and Future Domain Specific Visualization Framework",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 44,
+        "year": 2022
+      },
+      {
+        "id": "W4313454093",
+        "label": "Rapid Multi-Omics Sample Preparation for Mass Spectrometry",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 35,
+        "year": 2023
+      },
+      {
+        "id": "W4401758043",
+        "label": "RNA sequestration in P-bodies sustains myeloid leukaemia",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 31,
+        "year": 2024
+      },
+      {
+        "id": "W4404125075",
+        "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 20,
+        "year": 2024
+      },
+      {
+        "id": "W2804765831",
+        "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 217,
+        "year": 2018
+      },
+      {
+        "id": "W4210666862",
+        "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 180,
+        "year": 2022
+      },
+      {
+        "id": "W2810988848",
+        "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 148,
+        "year": 2018
+      },
+      {
+        "id": "W2800780732",
+        "label": "Microbial interactions trigger the production of antibiotics",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 123,
+        "year": 2018
+      },
+      {
+        "id": "W4210938022",
+        "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 107,
+        "year": 2022
+      },
+      {
+        "id": "W2557793660",
+        "label": "Secondary metabolites of endophytic Xylaria species with potential applications in medicine and agriculture",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 89,
+        "year": 2016
+      },
+      {
+        "id": "W2917182714",
+        "label": "Mapping the Fungal Battlefield: Using in situ Chemistry and Deletion Mutants to Monitor Interspecific Chemical Interactions Between Fungi",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 45,
+        "year": 2019
+      },
+      {
+        "id": "W3010680088",
+        "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 37,
+        "year": 2020
+      },
+      {
+        "id": "W2911831763",
+        "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 346,
+        "year": 2019
+      },
+      {
+        "id": "W2768056310",
+        "label": "Coculture of Marine Invertebrate-Associated Bacteria and Interdisciplinary Technologies Enable Biosynthesis and Discovery of a New Antibiotic, Keyicin",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 122,
+        "year": 2017
+      },
+      {
+        "id": "W3195990715",
+        "label": "The confluence of big data and evolutionary genome mining for the discovery of natural products",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 87,
+        "year": 2021
+      },
+      {
+        "id": "W3133838327",
+        "label": "Evolution of combinatorial diversity in trans-acyltransferase polyketide synthase assembly lines across bacteria",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 53,
+        "year": 2021
+      },
+      {
+        "id": "W4319814567",
+        "label": "Trait biases in microbial reference genomes",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 29,
+        "year": 2023
+      },
+      {
+        "id": "W4383821487",
+        "label": "Expanding Antarctic biogeography: microbial ecology of Antarctic island soils",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 14,
+        "year": 2023
+      },
+      {
+        "id": "W4220864345",
+        "label": "Bacterial community structure and metabolic potential in microbialite\u2010forming mats from South Australian saline lakes",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 13,
+        "year": 2022
+      },
+      {
+        "id": "W4220719728",
+        "label": "Genomic and Functional Variation of the Chlorophyll d-Producing Cyanobacterium Acaryochloris marina",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 13,
+        "year": 2022
+      },
+      {
+        "id": "W4311313198",
+        "label": "Niche formation and metabolic interactions result in stable diversity in a spatially structured cyanobacterial community",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 11,
+        "year": 2022
+      },
+      {
+        "id": "W4399157511",
+        "label": "Uncovering novel bacterial and archaeal diversity: genomic insights from metagenome-assembled genomes in Cuatro Cienegas, Coahuila",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 10,
+        "year": 2024
+      },
+      {
+        "id": "W3209300026",
+        "label": "Genome-centric metagenomics reveals insights into the evolution and metabolism of a new free-living group in Rhizobiales",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 10,
+        "year": 2021
+      },
+      {
+        "id": "W4387614536",
+        "label": "Cyanobacteriochromes from Gloeobacterales Provide New Insight into the Diversification of Cyanobacterial Photoreceptors",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 9,
+        "year": 2023
+      },
+      {
+        "id": "W4281785935",
+        "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 48,
+        "year": 2022
+      },
+      {
+        "id": "W2757788011",
+        "label": "Prealamethicin F50 and related peptaibols from Trichoderma arundinaceum: validation of their authenticity via in situ chemical analysis",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 33,
+        "year": 2017
+      },
+      {
+        "id": "W2945132149",
+        "label": "Droplet probe: coupling chromatography to the <i>in situ</i> evaluation of the chemistry of nature",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 33,
+        "year": 2019
+      },
+      {
+        "id": "W3195523593",
+        "label": "Fungal Guttation, a Source of Bioactive Compounds, and Its Ecological Role\u2014A Review",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 31,
+        "year": 2021
+      },
+      {
+        "id": "W2894151357",
+        "label": "Media studies to enhance the production of verticillins facilitated by in situ chemical analysis",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 25,
+        "year": 2018
+      },
+      {
+        "id": "W2895801338",
+        "label": "Non-destructive chemical analysis of a Garcinia mangostana L. (Mangosteen) herbarium voucher specimen",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 22,
+        "year": 2018
+      },
+      {
+        "id": "W2890068670",
+        "label": "Calothrixamides A and B from the Cultured Cyanobacterium <i>Calothrix</i> sp. UIC 10520",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 16,
+        "year": 2018
+      },
+      {
+        "id": "W3119952098",
+        "label": "Natural products in drug discovery: advances and opportunities",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 4744,
+        "year": 2021
+      },
+      {
+        "id": "W4304098556",
+        "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 103,
+        "year": 2022
+      },
+      {
+        "id": "W4313454582",
+        "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 34,
+        "year": 2022
+      },
+      {
+        "id": "W3116478593",
+        "label": "Label\u2010free proteomic dissection on <i>dptP</i> \u2010deletion mutant uncovers <i>dptP</i> involvement in strain growth and daptomycin tolerance of <i>Streptomyces roseosporus</i>",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 18,
+        "year": 2020
+      },
+      {
+        "id": "W3214451869",
+        "label": "Synthetic Biology Advanced Natural Product Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 15,
+        "year": 2021
+      },
+      {
+        "id": "W3087184317",
+        "label": "Pathway Engineering of Anthracyclines: Blazing Trails in Natural Product Glycodiversification",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 14,
+        "year": 2020
+      },
+      {
+        "id": "W4411466233",
+        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 12,
+        "year": 2025
+      },
+      {
+        "id": "W4413683243",
+        "label": "Bacterial Cellulose Production in Co-Culture Systems: Opportunities, Challenges, and Future Directions",
+        "field": "Materials Science",
+        "type": "citing",
+        "citations": 7,
+        "year": 2025
+      },
+      {
+        "id": "W2896401771",
+        "label": "Identification of Soil Bacterial Isolates Suppressing Different Phytophthora spp. and Promoting Plant Growth",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 99,
+        "year": 2018
+      },
+      {
+        "id": "W3163883686",
+        "label": "Biological control of Fusarium wilt caused by Fusarium equiseti in Vicia faba with broad spectrum antifungal plant-associated Bacillus spp.",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 39,
+        "year": 2021
+      },
+      {
+        "id": "W4200242881",
+        "label": "Antifungal Metabolites as Food Bio-Preservative: Innovation, Outlook, and Challenges",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 28,
+        "year": 2021
+      },
+      {
+        "id": "W4224314801",
+        "label": "Antibiotic Activity Altered by Competitive Interactions Between Two Coral Reef\u2013Associated Bacteria",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 10,
+        "year": 2022
+      },
+      {
+        "id": "W4211011356",
+        "label": "Discovery of Bioactive Natural Products from Bacillus Species: Chemistry, Biosynthesis and Biological Activities",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 5,
+        "year": 2022
+      },
+      {
+        "id": "W4414309246",
+        "label": "Metabolomics of Trichoderma spirale by Mass Spectrometry Data Dereplication",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 0,
+        "year": 2025
+      },
+      {
+        "id": "W4407927404",
+        "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 32,
+        "year": 2025
+      },
+      {
+        "id": "W4409376572",
+        "label": "Peptide Property Prediction for Mass Spectrometry Using AI: An Introduction to State of the Art Models",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 4,
+        "year": 2025
+      },
+      {
+        "id": "W7128630417",
+        "label": "Qualitative and quantitative analysis of multiple biomarkers in simulated human exhalation using DC-DCGAN and MKT-MTC",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 0,
+        "year": 2026
+      },
+      {
+        "id": "W4411012216",
+        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 2,
+        "year": 2025
+      },
+      {
+        "id": "W4414553450",
+        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 1,
+        "year": 2025
+      },
+      {
+        "id": "W4416437326",
+        "label": "Advancement in rhizospheric microbial diversity analysis: an updated perspective",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 0,
+        "year": 2025
+      }
+    ],
+    "links": [
+      {
+        "source": "W3091839106",
+        "target": "W3139601120",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W3138817412",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W4280576708",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W4225586016",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W3213276455",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W3173003579",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W3156257761",
+        "strength": 0.5
+      },
+      {
+        "source": "W3091839106",
+        "target": "W3171623624",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4283726298",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4309109636",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4387012793",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W3217463608",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4310157184",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4311305969",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4308792295",
+        "strength": 0.5
+      },
+      {
+        "source": "W4225258284",
+        "target": "W4400220867",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4392349824",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4406633314",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4396951587",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4400831251",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4391116946",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4392948486",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4402465580",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386607677",
+        "target": "W4406533301",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2994786999",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2958017797",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3168295480",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3204202235",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2980266162",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3011843199",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W4386391260",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4398231688",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4308634875",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4317903160",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4293804759",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4386053919",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4396858058",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4396578574",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
+        "target": "W4387930856",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W4386607677",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3045315617",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W2956967628",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W2808840038",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3204900280",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W4281391087",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3046109898",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3006681944",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W3087156149",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W4385027818",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W4382516982",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W4297179162",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W3210813272",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W3012320348",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W2887381903",
+        "strength": 0.5
+      },
+      {
+        "source": "W2972433884",
+        "target": "W4296162381",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W4376104934",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W4317498917",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W3114702865",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W2989537165",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W4361297378",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W4405185870",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W4361279451",
+        "strength": 0.5
+      },
+      {
+        "source": "W2989537165",
+        "target": "W4285189591",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3212385379",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3136772542",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3037349235",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3187316511",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3204202235",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3109850286",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3190897300",
+        "strength": 0.5
+      },
+      {
+        "source": "W3006681944",
+        "target": "W3006681944",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W4285404902",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W3200831264",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W3135655850",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W4306353218",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W4319825888",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W4323977918",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W3133486136",
+        "strength": 0.5
+      },
+      {
+        "source": "W3087677418",
+        "target": "W4391431108",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2913553075",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W4245579397",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2762475403",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2782169385",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2910293385",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2893448478",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2787455282",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W4210987854",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W2994671073",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W2808840038",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W2950608592",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W3016261123",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W2932304820",
+        "strength": 0.5
+      },
+      {
+        "source": "W2769473564",
+        "target": "W2787455282",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4403428745",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4381189797",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4390743444",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4382344666",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4396905162",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4324013663",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4402906567",
+        "strength": 0.5
+      },
+      {
+        "source": "W4319825888",
+        "target": "W4394753092",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W2599417231",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W3011678041",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W4224235198",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W2883293209",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W3006681944",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W2513652105",
+        "strength": 0.5
+      },
+      {
+        "source": "W2527369287",
+        "target": "W2769473564",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4223918790",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4364374133",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4396858058",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4361191134",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4296339139",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4313454093",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4401758043",
+        "strength": 0.5
+      },
+      {
+        "source": "W3092255275",
+        "target": "W4404125075",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W2804765831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W4210666862",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W2810988848",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W2800780732",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W4210938022",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W2557793660",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W2917182714",
+        "strength": 0.5
+      },
+      {
+        "source": "W2344158103",
+        "target": "W3010680088",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2911831763",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2808840038",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2768056310",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2893448478",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W3195990715",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W3006681944",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W3133838327",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4319814567",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4383821487",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4220864345",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4220719728",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4311313198",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4399157511",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W3209300026",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
+        "target": "W4387614536",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W2800780732",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W4281785935",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W2757788011",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W2945132149",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W3195523593",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W2894151357",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W2895801338",
+        "strength": 0.5
+      },
+      {
+        "source": "W2741464576",
+        "target": "W2890068670",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W3119952098",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W4304098556",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W4313454582",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W3116478593",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W3214451869",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W3087184317",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W4411466233",
+        "strength": 0.5
+      },
+      {
+        "source": "W2946278827",
+        "target": "W4413683243",
+        "strength": 0.5
+      },
+      {
+        "source": "W2620568344",
+        "target": "W2896401771",
+        "strength": 0.5
+      },
+      {
+        "source": "W2620568344",
+        "target": "W3163883686",
+        "strength": 0.5
+      },
+      {
+        "source": "W2620568344",
+        "target": "W4200242881",
+        "strength": 0.5
+      },
+      {
+        "source": "W2620568344",
+        "target": "W4224314801",
+        "strength": 0.5
+      },
+      {
+        "source": "W2620568344",
+        "target": "W4211011356",
+        "strength": 0.5
+      },
+      {
+        "source": "W2620568344",
+        "target": "W4414309246",
+        "strength": 0.5
+      },
+      {
+        "source": "W4402702522",
+        "target": "W4407927404",
+        "strength": 0.5
+      },
+      {
+        "source": "W4402702522",
+        "target": "W4409376572",
+        "strength": 0.5
+      },
+      {
+        "source": "W4402702522",
+        "target": "W7128630417",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386446289",
+        "target": "W4411012216",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386446289",
+        "target": "W4414553450",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386446289",
+        "target": "W4416437326",
+        "strength": 0.5
+      },
+      {
+        "source": "W4386203568",
+        "target": "W4386446289",
+        "strength": 0.5
+      }
+    ]
+  },
+  "field_colors": {
+    "Agricultural and Biological Sciences": "#14B8A6",
+    "Biochemistry, Genetics and Molecular Biology": "#0891B2",
+    "Chemistry": "#0EA5E9",
+    "Computer Science": "#3B82F6",
+    "Engineering": "#8B5CF6",
+    "Environmental Science": "#A78BFA",
+    "Immunology and Microbiology": "#2DD4BF",
+    "Materials Science": "#06B6D4",
+    "Medicine": "#60A5FA"
+  }
+}

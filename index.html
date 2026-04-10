@@ -4,6 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phyla Technologies — MLOps for Biotech</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Phyla Technologies builds and operates machine learning infrastructure for biotech — from genomics pipelines to production model deployment.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Phyla Technologies — MLOps for Life Sciences">
+  <meta property="og:description" content="We build and operate machine learning infrastructure for biotech companies — from genomics pipelines to production model deployment.">
+  <meta property="og:url" content="https://phylatech.com">
+  <meta property="og:site_name" content="Phyla Technologies">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phyla Technologies — MLOps for Life Sciences">
+  <meta name="twitter:description" content="We build and operate machine learning infrastructure for biotech companies — from genomics pipelines to production model deployment.">
+
+  <!-- Page transitions -->
+  <meta name="view-transition" content="same-origin">
+  <style>
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root) { animation: fade-out 0.25s ease-in; }
+    ::view-transition-new(root) { animation: fade-in 0.3s ease-out; }
+    @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -470,6 +495,74 @@
       font-size: 13.5px; color: var(--slate-400); line-height: 1.7;
     }
 
+    /* ── IMPACT BANNER ── */
+    .impact-banner {
+      position: relative;
+      padding: 60px 40px;
+    }
+
+    .impact-banner::before {
+      content: '';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 200px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--teal-700), transparent);
+    }
+
+    .impact-banner-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding: 32px 36px;
+      border-radius: 16px;
+      background: rgba(13,148,136,0.06);
+      border: 1px solid rgba(13,148,136,0.15);
+    }
+
+    .impact-banner-text h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .impact-banner-text p {
+      font-size: 14px;
+      color: var(--slate-400);
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    .impact-banner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, var(--teal-700), var(--blue-600));
+      color: white;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(13,148,136,0.2);
+    }
+
+    .impact-banner-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(13,148,136,0.35);
+    }
+
+    @media (max-width: 768px) {
+      .impact-banner-inner { flex-direction: column; text-align: center; padding: 24px 20px; }
+      .impact-banner-text p { max-width: 100%; }
+    }
+
     /* ── TEAM ── */
     .team {
       position: relative;
@@ -623,6 +716,7 @@
       .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
       .team-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
       .header-inner { padding: 14px 20px; }
+      nav { flex-wrap: wrap; justify-content: center; }
       nav a { padding: 6px 10px; font-size: 12px; }
       .section-title { font-size: 30px; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
@@ -639,6 +733,7 @@
       </a>
       <nav>
         <a href="#services">Services</a>
+        <a href="impact.html">Impact</a>
         <a href="#team">Team</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
@@ -775,6 +870,20 @@
         <h3>Infrastructure &amp; DevOps</h3>
         <p>Cloud infrastructure, CI/CD, containerization, and monitoring. Computational workloads running reliably at scale.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- IMPACT CTA -->
+  <section class="impact-banner">
+    <div class="impact-banner-inner">
+      <div class="impact-banner-text">
+        <h2>Research That Travels</h2>
+        <p>Our work is cited across 76 countries and 22 disciplines — from drug discovery to computational biology. See the network effect in action.</p>
+      </div>
+      <a href="impact.html" class="impact-banner-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Explore Impact
+      </a>
     </div>
   </section>
 
