@@ -700,6 +700,12 @@
 
     footer a:hover { color: #fff; }
 
+    .footer-updated {
+      font-size: 11px;
+      color: var(--slate-600);
+      font-variant-numeric: tabular-nums;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .impact-hero h1 { font-size: 44px; letter-spacing: -2px; }
@@ -924,6 +930,7 @@
   <!-- FOOTER -->
   <footer>
     <span>&copy; 2026 Phyla Technologies</span>
+    <span class="footer-updated" id="lastUpdated"></span>
     <div>
       <a href="https://www.linkedin.com/company/phylatech" target="_blank">LinkedIn</a>
       <a href="https://github.com/orgs/phylatech" target="_blank">GitHub</a>
@@ -978,6 +985,13 @@
 
     // Animate counters once data is loaded
     animateCounters();
+
+    // Show last updated timestamp in footer
+    if (DATA.generated_at) {
+      const d = new Date(DATA.generated_at);
+      document.getElementById('lastUpdated').textContent =
+        'Citation data updated ' + d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
 
     // ═══════════════════════════════════════════
     //  CITATION NETWORK (D3.js)

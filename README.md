@@ -23,6 +23,16 @@ python3 scripts/fetch_impact_data.py
 
 This re-queries OpenAlex for the latest citation counts, citing institutions, geographic reach, and discipline data. Takes ~5 minutes due to API pagination. No dependencies beyond Python 3 standard library.
 
+### Automated daily refresh
+
+A GitHub Actions workflow (`.github/workflows/refresh-impact-data.yml`) runs the data pipeline daily at ~6:07 AM UTC. If citation counts or new citing works have changed, it auto-commits the updated `data/impact-data.json`.
+
+- **Schedule:** Daily cron
+- **Manual trigger:** Go to Actions > "Refresh Impact Data" > Run workflow
+- **No-op on no changes:** If the data hasn't changed, no commit is created
+
+The impact page footer displays "Citation data updated [date]" based on the `generated_at` timestamp in the JSON, so visitors can see how fresh the data is.
+
 ### Adding a new researcher
 
 1. Find their [ORCID](https://orcid.org) (e.g., `0000-0001-5084-9035`)
