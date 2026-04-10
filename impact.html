@@ -944,14 +944,13 @@
         .on('zoom', (event) => g.attr('transform', event.transform));
       svg.call(zoom);
 
-      const padding = 40;
       const simulation = d3.forceSimulation(data.nodes)
         .force('link', d3.forceLink(data.links).id(d => d.id).distance(60).strength(d => d.strength * 0.3))
-        .force('charge', d3.forceManyBody().strength(-80))
+        .force('charge', d3.forceManyBody().strength(-60))
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('collision', d3.forceCollide().radius(d => d.type === 'core' ? 20 : 10))
-        .force('boundX', d3.forceX(width / 2).strength(0.05))
-        .force('boundY', d3.forceY(height / 2).strength(0.05));
+        .force('collision', d3.forceCollide().radius(d => d.type === 'core' ? 18 : 8))
+        .force('boundX', d3.forceX(width / 2).strength(0.07))
+        .force('boundY', d3.forceY(height / 2).strength(0.07));
 
       const link = g.append('g')
         .selectAll('line')
@@ -1031,11 +1030,6 @@
       });
 
       simulation.on('tick', () => {
-        // Clamp nodes within canvas bounds
-        data.nodes.forEach(d => {
-          d.x = Math.max(padding, Math.min(width - padding, d.x));
-          d.y = Math.max(padding, Math.min(height - padding, d.y));
-        });
         link
           .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
           .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
