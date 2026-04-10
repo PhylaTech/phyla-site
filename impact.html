@@ -185,6 +185,38 @@
       margin-bottom: 0;
     }
 
+    /* ── SECTION NAV ── */
+    .section-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 40px 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--slate-400);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.25s;
+    }
+
+    .section-nav-btn:hover {
+      background: rgba(13,148,136,0.12);
+      border-color: rgba(13,148,136,0.25);
+      color: var(--teal-400);
+      transform: translateY(-1px);
+    }
+
     /* ── METRICS STRIP ── */
     .metrics-strip {
       position: relative;
@@ -603,6 +635,8 @@
     @media (max-width: 768px) {
       .impact-hero h1 { font-size: 34px; letter-spacing: -1.5px; }
       .impact-hero .tagline { font-size: 15px; max-width: 400px; }
+      .section-nav { gap: 8px; padding: 0 20px 10px; }
+      .section-nav-btn { padding: 8px 14px; font-size: 12px; }
       .metrics-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
       .metric-value { font-size: 32px; }
       .header-inner { padding: 14px 20px; }
@@ -646,10 +680,26 @@
   <!-- HERO -->
   <section class="impact-hero">
     <h1>
-      <span class="gradient-text">Impact</span> &amp; Influence
+      <span class="gradient-text">Impact</span> &amp; <span class="gradient-text">Influence</span>
     </h1>
     <p class="tagline">Explore how our work propagates through global research and applied domains — from citation networks to cross-disciplinary influence.</p>
   </section>
+
+  <!-- SECTION NAV -->
+  <nav class="section-nav">
+    <a href="#geography" class="section-nav-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Global Reach
+    </a>
+    <a href="#network" class="section-nav-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.5 7.5L11 16M17.5 7.5L13 16M7 6h10"/></svg>
+      Citation Network
+    </a>
+    <a href="#disciplines" class="section-nav-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="6" width="4" height="15" rx="1"/><rect x="17" y="2" width="4" height="19" rx="1"/></svg>
+      Disciplines
+    </a>
+  </nav>
 
   <!-- KEY METRICS -->
   <section class="metrics-strip">
@@ -673,6 +723,16 @@
     </div>
   </section>
 
+  <!-- GEOGRAPHIC REACH -->
+  <section class="geo-section" id="geography">
+    <h2 class="section-title">Global Reach</h2>
+    <p class="section-sub">Our work is cited by researchers worldwide, spanning six continents.</p>
+
+    <div class="map-container" id="mapViz">
+      <div class="map-tooltip" id="mapTooltip"></div>
+    </div>
+  </section>
+
   <!-- CITATION NETWORK -->
   <section class="citation-network" id="network">
     <h2 class="section-title">Citation Network</h2>
@@ -689,16 +749,6 @@
     </div>
 
     <div class="network-legend" id="networkLegend"></div>
-  </section>
-
-  <!-- GEOGRAPHIC REACH -->
-  <section class="geo-section" id="geography">
-    <h2 class="section-title">Global Reach</h2>
-    <p class="section-sub">Our work is cited by researchers worldwide, spanning six continents.</p>
-
-    <div class="map-container" id="mapViz">
-      <div class="map-tooltip" id="mapTooltip"></div>
-    </div>
   </section>
 
   <!-- DISCIPLINARY INFLUENCE -->
@@ -819,7 +869,7 @@
     }
 
     // Animate counters once data is loaded (small delay for visual effect)
-    requestAnimationFrame(() => animateCounters());
+    setTimeout(animateCounters, 100);
 
     // ═══════════════════════════════════════════
     //  CITATION NETWORK (D3.js)
@@ -829,8 +879,9 @@
       const container = document.getElementById('networkViz');
       const tooltip = document.getElementById('netTooltip');
       const data = networkData;
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+      let width = container.offsetWidth || container.parentElement.offsetWidth || 1120;
+      let height = container.offsetHeight || 560;
+      if (width < 100) { width = 1120; height = 560; }
 
       const svg = d3.select('#networkViz')
         .append('svg')
@@ -844,27 +895,30 @@
         .on('zoom', (event) => g.attr('transform', event.transform));
       svg.call(zoom);
 
+      const padding = 40;
       const simulation = d3.forceSimulation(data.nodes)
-        .force('link', d3.forceLink(data.links).id(d => d.id).distance(80).strength(d => d.strength * 0.3))
-        .force('charge', d3.forceManyBody().strength(-120))
+        .force('link', d3.forceLink(data.links).id(d => d.id).distance(60).strength(d => d.strength * 0.3))
+        .force('charge', d3.forceManyBody().strength(-80))
         .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('collision', d3.forceCollide().radius(d => d.type === 'core' ? 22 : 12));
+        .force('collision', d3.forceCollide().radius(d => d.type === 'core' ? 20 : 10))
+        .force('boundX', d3.forceX(width / 2).strength(0.05))
+        .force('boundY', d3.forceY(height / 2).strength(0.05));
 
       const link = g.append('g')
         .selectAll('line')
         .data(data.links)
         .join('line')
-        .attr('stroke', 'rgba(255,255,255,0.06)')
-        .attr('stroke-width', d => d.strength * 1.5);
+        .attr('stroke', 'rgba(255,255,255,0.15)')
+        .attr('stroke-width', d => d.strength * 1.8 + 0.3);
 
       const node = g.append('g')
         .selectAll('circle')
         .data(data.nodes)
         .join('circle')
-        .attr('r', d => d.type === 'core' ? 14 : 5 + Math.sqrt(d.citations) * 0.7)
+        .attr('r', d => d.type === 'core' ? 12 : 4 + Math.sqrt(d.citations) * 0.5)
         .attr('fill', d => FIELDS[d.field] || '#64748B')
         .attr('fill-opacity', d => d.type === 'core' ? 0.9 : 0.55)
-        .attr('stroke', d => d.type === 'core' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.08)')
+        .attr('stroke', d => d.type === 'core' ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.1)')
         .attr('stroke-width', d => d.type === 'core' ? 2 : 0.5)
         .style('cursor', 'pointer')
         .call(d3.drag()
@@ -913,7 +967,7 @@
         });
         link.attr('stroke', l =>
           (l.source.id === d.id || l.target.id === d.id)
-            ? 'rgba(255,255,255,0.25)' : 'rgba(255,255,255,0.02)'
+            ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.04)'
         );
       })
       .on('mousemove', (event) => {
@@ -924,10 +978,15 @@
       .on('mouseleave', () => {
         tooltip.style.opacity = '0';
         node.attr('fill-opacity', d => d.type === 'core' ? 0.9 : 0.55);
-        link.attr('stroke', 'rgba(255,255,255,0.06)');
+        link.attr('stroke', 'rgba(255,255,255,0.15)');
       });
 
       simulation.on('tick', () => {
+        // Clamp nodes within canvas bounds
+        data.nodes.forEach(d => {
+          d.x = Math.max(padding, Math.min(width - padding, d.x));
+          d.y = Math.max(padding, Math.min(height - padding, d.y));
+        });
         link
           .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
           .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
@@ -998,8 +1057,11 @@
     (async function buildMap() {
       const container = document.getElementById('mapViz');
       const tooltip = document.getElementById('mapTooltip');
-      const width = container.clientWidth;
-      const height = container.clientHeight;
+      const instData = DATA.institutions_geo || [];
+      // Use parent section width as containers may not be laid out yet
+      let width = container.offsetWidth || container.parentElement.offsetWidth || 1120;
+      let height = container.offsetHeight || 480;
+      if (width < 100) { width = 1120; height = 480; }
 
       const svg = d3.select('#mapViz')
         .append('svg')
@@ -1015,7 +1077,6 @@
       try {
         const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
         const countries = topojson.feature(world, world.objects.countries);
-
         svg.append('g')
           .selectAll('path')
           .data(countries.features)
@@ -1025,7 +1086,6 @@
           .attr('stroke', 'rgba(255,255,255,0.08)')
           .attr('stroke-width', 0.5);
       } catch (e) {
-        // Fallback: draw a simple equirectangular outline
         svg.append('rect')
           .attr('x', width * 0.05).attr('y', height * 0.1)
           .attr('width', width * 0.9).attr('height', height * 0.8)
@@ -1034,72 +1094,77 @@
           .attr('stroke', 'rgba(255,255,255,0.06)');
       }
 
-      const maxCitations = d3.max(geoData, d => d.citations);
-      const rScale = d3.scaleSqrt().domain([1, maxCitations]).range([3, 22]);
+      const maxCitations = d3.max(instData, d => d.citations) || 1;
+      const rScale = d3.scaleSqrt().domain([1, maxCitations]).range([2, 14]);
 
-      // Pulse rings
+      // Lines from Madison, WI to each institution
+      const madisonCoord = projection([-89.4, 43.07]);
+      const lineG = svg.append('g');
+      instData.forEach(d => {
+        const [x, y] = projection([d.lon, d.lat]);
+        if (x && y && madisonCoord) {
+          const dist = Math.sqrt((x - madisonCoord[0]) ** 2 + (y - madisonCoord[1]) ** 2);
+          if (dist > 20) {
+            lineG.append('line')
+              .attr('x1', madisonCoord[0]).attr('y1', madisonCoord[1])
+              .attr('x2', x).attr('y2', y)
+              .attr('stroke', 'rgba(20,184,166,0.15)')
+              .attr('stroke-width', 0.6)
+              .attr('stroke-dasharray', '3,4');
+          }
+        }
+      });
+
+      // Pulse rings on top institutions
       const pulseG = svg.append('g');
-      geoData.forEach(d => {
+      instData.filter(d => d.citations >= 10).forEach((d, i) => {
         const [x, y] = projection([d.lon, d.lat]);
         if (x && y) {
+          const r = rScale(d.citations);
           const circle = pulseG.append('circle')
             .attr('cx', x).attr('cy', y)
-            .attr('r', rScale(d.citations))
+            .attr('r', r)
             .attr('fill', 'none')
-            .attr('stroke', 'rgba(20,184,166,0.3)')
+            .attr('stroke', 'rgba(20,184,166,0.35)')
             .attr('stroke-width', 1);
           circle.append('animate')
             .attr('attributeName', 'r')
-            .attr('from', rScale(d.citations))
-            .attr('to', rScale(d.citations) + 12)
-            .attr('dur', '3s')
+            .attr('from', r)
+            .attr('to', r + 8)
+            .attr('dur', '2.5s')
+            .attr('begin', (i * 0.3 % 2.5) + 's')
             .attr('repeatCount', 'indefinite');
           circle.append('animate')
             .attr('attributeName', 'opacity')
-            .attr('from', '0.5')
+            .attr('from', '0.6')
             .attr('to', '0')
-            .attr('dur', '3s')
+            .attr('dur', '2.5s')
+            .attr('begin', (i * 0.3 % 2.5) + 's')
             .attr('repeatCount', 'indefinite');
         }
       });
 
-      // Lines from Madison, WI to each location
-      const madisonCoord = projection([-89.4, 43.07]);
-      const lineG = svg.append('g');
-      geoData.forEach(d => {
-        if (d.country === 'United States') return;
-        const [x, y] = projection([d.lon, d.lat]);
-        if (x && y && madisonCoord) {
-          lineG.append('line')
-            .attr('x1', madisonCoord[0]).attr('y1', madisonCoord[1])
-            .attr('x2', x).attr('y2', y)
-            .attr('stroke', 'rgba(20,184,166,0.08)')
-            .attr('stroke-width', 0.5)
-            .attr('stroke-dasharray', '3,4');
-        }
-      });
-
-      // Dots
+      // Institution dots
       const dotsG = svg.append('g');
-      geoData.forEach(d => {
+      instData.forEach(d => {
         const [x, y] = projection([d.lon, d.lat]);
         if (x && y) {
           dotsG.append('circle')
             .attr('cx', x).attr('cy', y)
             .attr('r', rScale(d.citations))
-            .attr('fill', 'rgba(20,184,166,0.5)')
-            .attr('stroke', 'rgba(20,184,166,0.8)')
-            .attr('stroke-width', 1)
+            .attr('fill', 'rgba(20,184,166,0.55)')
+            .attr('stroke', 'rgba(20,184,166,0.9)')
+            .attr('stroke-width', 0.8)
             .style('cursor', 'pointer')
             .on('mouseenter', (event) => {
               tooltip.style.opacity = '1';
               tooltip.textContent = '';
               const strong = document.createElement('strong');
               strong.style.color = '#fff';
-              strong.textContent = d.country;
+              strong.textContent = d.name;
               tooltip.appendChild(strong);
               tooltip.appendChild(document.createElement('br'));
-              tooltip.appendChild(document.createTextNode(d.citations + ' citations \u00B7 ' + d.institutions + ' institutions'));
+              tooltip.appendChild(document.createTextNode(d.citations + ' citing works'));
               const rect = container.getBoundingClientRect();
               tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
               tooltip.style.top = (event.clientY - rect.top - 10) + 'px';

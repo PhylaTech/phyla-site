@@ -221,6 +221,7 @@ def fetch_citing_works(work_id):
 def process_citing_works(citing_works):
     """Extract institutions, countries, and fields from citing works."""
     institutions = set()
+    institution_data = defaultdict(lambda: {"citations": 0, "country_code": None})
     country_citations = defaultdict(int)
     country_institutions = defaultdict(set)
     field_counts = defaultdict(int)
@@ -228,12 +229,21 @@ def process_citing_works(citing_works):
     for cw in citing_works:
         # Extract institutions and countries
         seen_countries_this_work = set()
+        seen_insts_this_work = set()
         for authorship in cw.get("authorships", []):
             for inst in authorship.get("institutions", []):
                 inst_name = inst.get("display_name")
                 cc = inst.get("country_code")
+                ror = inst.get("ror")
                 if inst_name:
                     institutions.add(inst_name)
+                    if inst_name not in seen_insts_this_work:
+                        seen_insts_this_work.add(inst_name)
+                        institution_data[inst_name]["citations"] += 1
+                        if cc:
+                            institution_data[inst_name]["country_code"] = cc
+                        if ror:
+                            institution_data[inst_name]["ror"] = ror
                 if cc and cc not in seen_countries_this_work:
                     seen_countries_this_work.add(cc)
                     country_citations[cc] += 1
@@ -247,7 +257,7 @@ def process_citing_works(citing_works):
             if field:
                 field_counts[field] += 1
 
-    return institutions, country_citations, country_institutions, field_counts
+    return institutions, institution_data, country_citations, country_institutions, field_counts
 
 
 def build_citation_network(publications, max_citing_per_pub=8):
@@ -341,6 +351,7 @@ def main():
     # Step 2: Fetch citing works for geographic/institutional/discipline data
     print("\nFetching citing works for aggregate metrics...")
     all_institutions = set()
+    all_institution_data = defaultdict(lambda: {"citations": 0, "country_code": None})
     total_country_citations = defaultdict(int)
     total_country_institutions = defaultdict(set)
     total_field_counts = defaultdict(int)
@@ -355,8 +366,14 @@ def main():
         print(f"  [{i+1}/{len(publications)}] {title_short}... ({cited_by} citations)")
 
         citing = fetch_citing_works(wid)
-        insts, cc, ci, fc = process_citing_works(citing)
+        insts, inst_data, cc, ci, fc = process_citing_works(citing)
         all_institutions.update(insts)
+        for name, data in inst_data.items():
+            all_institution_data[name]["citations"] += data["citations"]
+            if data.get("country_code"):
+                all_institution_data[name]["country_code"] = data["country_code"]
+            if data.get("ror"):
+                all_institution_data[name]["ror"] = data["ror"]
         for k, v in cc.items():
             total_country_citations[k] += v
         for k, v in ci.items():
@@ -364,6 +381,57 @@ def main():
         for k, v in fc.items():
             total_field_counts[k] += v
         time.sleep(0.15)
+
+    # Step 2b: Fetch geo coordinates for top institutions from OpenAlex
+    print("\nFetching institution coordinates...")
+    top_institutions = sorted(
+        all_institution_data.items(), key=lambda x: x[1]["citations"], reverse=True
+    )[:150]  # top 150 by citation count
+    institutions_geo = []
+    for inst_name, inst_info in top_institutions:
+        ror = inst_info.get("ror")
+        if not ror:
+            # Fall back to country centroid if no ROR
+            cc = inst_info.get("country_code")
+            if cc and cc in COUNTRY_COORDS:
+                lat, lon = COUNTRY_COORDS[cc]
+                institutions_geo.append({
+                    "name": inst_name,
+                    "lat": lat + (hash(inst_name) % 500 - 250) / 100,
+                    "lon": lon + (hash(inst_name) % 500 - 250) / 100,
+                    "country_code": cc,
+                    "citations": inst_info["citations"],
+                })
+            continue
+        try:
+            data = api_get(f"/institutions/ror:{ror.split('/')[-1]}",
+                           {"select": "id,display_name,geo,country_code"})
+            if data and data.get("geo"):
+                geo = data["geo"]
+                lat = geo.get("latitude")
+                lon = geo.get("longitude")
+                if lat is not None and lon is not None:
+                    institutions_geo.append({
+                        "name": inst_name,
+                        "lat": lat,
+                        "lon": lon,
+                        "country_code": data.get("country_code",
+                                                  inst_info.get("country_code")),
+                        "citations": inst_info["citations"],
+                    })
+        except Exception:
+            # Fall back to country centroid
+            cc = inst_info.get("country_code")
+            if cc and cc in COUNTRY_COORDS:
+                lat, lon = COUNTRY_COORDS[cc]
+                institutions_geo.append({
+                    "name": inst_name,
+                    "lat": lat + (hash(inst_name) % 500 - 250) / 100,
+                    "lon": lon + (hash(inst_name) % 500 - 250) / 100,
+                    "country_code": cc,
+                    "citations": inst_info["citations"],
+                })
+        time.sleep(0.05)
 
     # Step 3: Build citation network
     print("\nBuilding citation network...")
@@ -389,14 +457,25 @@ def main():
             "institutions": len(total_country_institutions.get(cc, set())),
         })
 
-    # Discipline data
+    # Discipline data (aggregate small fields into "Other")
+    AGGREGATE_THRESHOLD = 5
     disciplines = []
+    other_count = 0
     sorted_fields = sorted(total_field_counts.items(), key=lambda x: x[1], reverse=True)
     for i, (field, count) in enumerate(sorted_fields):
+        if count < AGGREGATE_THRESHOLD:
+            other_count += count
+        else:
+            disciplines.append({
+                "name": field,
+                "count": count,
+                "color": DISCIPLINE_COLORS[i % len(DISCIPLINE_COLORS)],
+            })
+    if other_count > 0:
         disciplines.append({
-            "name": field,
-            "count": count,
-            "color": DISCIPLINE_COLORS[i % len(DISCIPLINE_COLORS)],
+            "name": "Other Disciplines",
+            "count": other_count,
+            "color": "#94A3B8",
         })
 
     # Publication list
@@ -443,6 +522,7 @@ def main():
         },
         "publications": pub_list,
         "geographic": geographic,
+        "institutions_geo": institutions_geo,
         "disciplines": disciplines,
         "citation_network": network,
         "field_colors": field_colors,
