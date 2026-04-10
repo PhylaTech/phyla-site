@@ -694,7 +694,7 @@
   <!-- GEOGRAPHIC REACH -->
   <section class="geo-section" id="geography">
     <h2 class="section-title">Global Reach</h2>
-    <p class="section-sub">Our work is cited by researchers across 42 countries, spanning six continents.</p>
+    <p class="section-sub">Our work is cited by researchers worldwide, spanning six continents.</p>
 
     <div class="map-container" id="mapViz">
       <div class="map-tooltip" id="mapTooltip"></div>
@@ -772,192 +772,29 @@
 
   <script>
     // ═══════════════════════════════════════════
-    //  DATA
+    //  LOAD DATA & INITIALIZE
     // ═══════════════════════════════════════════
 
-    const FIELDS = {
-      'Metabolomics': '#14B8A6',
-      'Bioinformatics': '#0891B2',
-      'Machine Learning': '#0EA5E9',
-      'Proteomics': '#3B82F6',
-      'Drug Discovery': '#8B5CF6',
-      'Genomics': '#A78BFA',
-      'Analytical Chemistry': '#2DD4BF',
-      'Systems Biology': '#06B6D4',
-      'Clinical Research': '#60A5FA',
-      'Computational Biology': '#7C3AED',
-      'Environmental Science': '#34D399',
-      'Food Science': '#F59E0B'
-    };
+    (async function init() {
+      const resp = await fetch('data/impact-data.json');
+      const DATA = await resp.json();
 
-    const disciplineData = [
-      { name: 'Metabolomics', count: 412, color: FIELDS['Metabolomics'] },
-      { name: 'Bioinformatics', count: 326, color: FIELDS['Bioinformatics'] },
-      { name: 'Machine Learning', count: 289, color: FIELDS['Machine Learning'] },
-      { name: 'Proteomics', count: 234, color: FIELDS['Proteomics'] },
-      { name: 'Drug Discovery', count: 178, color: FIELDS['Drug Discovery'] },
-      { name: 'Genomics', count: 145, color: FIELDS['Genomics'] },
-      { name: 'Analytical Chemistry', count: 98, color: FIELDS['Analytical Chemistry'] },
-      { name: 'Systems Biology', count: 72, color: FIELDS['Systems Biology'] },
-      { name: 'Clinical Research', count: 48, color: FIELDS['Clinical Research'] },
-      { name: 'Computational Biology', count: 31, color: FIELDS['Computational Biology'] },
-      { name: 'Environmental Science', count: 9, color: FIELDS['Environmental Science'] },
-      { name: 'Food Science', count: 5, color: FIELDS['Food Science'] }
-    ];
+      const FIELDS = DATA.field_colors || {};
+      const disciplineData = DATA.disciplines || [];
+      const geoData = DATA.geographic || [];
+      const networkData = DATA.citation_network || { nodes: [], links: [] };
+      const summary = DATA.summary || {};
 
-    const geoData = [
-      { name: 'United States', lat: 39.8, lon: -98.5, citations: 584, institutions: 47 },
-      { name: 'Germany', lat: 51.2, lon: 10.4, citations: 198, institutions: 18 },
-      { name: 'United Kingdom', lat: 55.4, lon: -3.4, citations: 167, institutions: 14 },
-      { name: 'China', lat: 35.9, lon: 104.2, citations: 143, institutions: 22 },
-      { name: 'Switzerland', lat: 46.8, lon: 8.2, citations: 112, institutions: 8 },
-      { name: 'Canada', lat: 56.1, lon: -106.3, citations: 98, institutions: 9 },
-      { name: 'Japan', lat: 36.2, lon: 138.3, citations: 76, institutions: 7 },
-      { name: 'Australia', lat: -25.3, lon: 133.8, citations: 62, institutions: 6 },
-      { name: 'Netherlands', lat: 52.1, lon: 5.3, citations: 58, institutions: 5 },
-      { name: 'France', lat: 46.2, lon: 2.2, citations: 47, institutions: 6 },
-      { name: 'Sweden', lat: 60.1, lon: 18.6, citations: 38, institutions: 4 },
-      { name: 'South Korea', lat: 35.9, lon: 127.8, citations: 34, institutions: 3 },
-      { name: 'India', lat: 20.6, lon: 78.9, citations: 31, institutions: 5 },
-      { name: 'Brazil', lat: -14.2, lon: -51.9, citations: 24, institutions: 3 },
-      { name: 'Denmark', lat: 56.3, lon: 9.5, citations: 22, institutions: 2 },
-      { name: 'Italy', lat: 41.9, lon: 12.6, citations: 19, institutions: 3 },
-      { name: 'Spain', lat: 40.5, lon: -3.7, citations: 16, institutions: 2 },
-      { name: 'Belgium', lat: 50.5, lon: 4.5, citations: 14, institutions: 2 },
-      { name: 'Austria', lat: 47.5, lon: 14.6, citations: 12, institutions: 1 },
-      { name: 'Finland', lat: 61.9, lon: 25.7, citations: 11, institutions: 1 },
-      { name: 'Norway', lat: 60.5, lon: 8.5, citations: 9, institutions: 1 },
-      { name: 'Singapore', lat: 1.4, lon: 103.8, citations: 8, institutions: 2 },
-      { name: 'Israel', lat: 31.0, lon: 34.8, citations: 7, institutions: 1 },
-      { name: 'New Zealand', lat: -40.9, lon: 174.9, citations: 6, institutions: 1 },
-      { name: 'Taiwan', lat: 23.7, lon: 121.0, citations: 5, institutions: 1 },
-      { name: 'South Africa', lat: -30.6, lon: 22.9, citations: 5, institutions: 1 },
-      { name: 'Poland', lat: 51.9, lon: 19.1, citations: 4, institutions: 1 },
-      { name: 'Czech Republic', lat: 49.8, lon: 15.5, citations: 3, institutions: 1 },
-      { name: 'Portugal', lat: 39.4, lon: -8.2, citations: 3, institutions: 1 },
-      { name: 'Mexico', lat: 23.6, lon: -102.6, citations: 2, institutions: 1 },
-    ];
-
-    // Seeded PRNG (mulberry32) for deterministic visualizations
-    function mulberry32(a) {
-      return function() {
-        a |= 0; a = a + 0x6D2B79F5 | 0;
-        var t = Math.imul(a ^ a >>> 15, 1 | a);
-        t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-        return ((t ^ t >>> 14) >>> 0) / 4294967296;
-      };
-    }
-    const seededRandom = mulberry32(42);
-
-    function generateNetworkData() {
-      const coreLabels = [
-        'Spectral prediction for metabolite ID via GNNs',
-        'Deep learning for MS/MS interpretation',
-        'Automated metabolomics pipeline framework',
-        'ML-guided compound annotation',
-        'Multi-omics integration platform',
-        'Scalable proteomics data processing',
-        'Cloud-native bioinformatics workflows',
-        'Transfer learning for small-molecule properties',
+      // Update metric cards with real data
+      const metricTargets = [
+        summary.total_citations,
+        summary.countries_reached,
+        summary.citing_institutions,
+        summary.disciplines_impacted,
       ];
-
-      const citingLabels = [
-        'Application in clinical metabolomics',
-        'Extension to lipidomics data',
-        'Benchmark of spectral methods',
-        'Drug metabolism prediction',
-        'Gut microbiome metabolomics',
-        'Environmental metabolomics analysis',
-        'Cancer biomarker discovery',
-        'Protein-ligand interaction prediction',
-        'NMR-MS data fusion',
-        'Agricultural metabolomics study',
-        'Comparative proteomics analysis',
-        'Novel GNN architecture for chemistry',
-        'Federated learning in biomedicine',
-        'Automated structure elucidation',
-        'Point-of-care diagnostics ML',
-        'Antibiotic resistance prediction',
-        'Plant metabolomics profiling',
-        'Single-cell metabolomics',
-        'Exposure science metabolomics',
-        'Forensic chemistry analysis',
-        'Metabolic flux analysis ML',
-        'Multi-modal biomarker integration',
-        'Pharmacokinetic modeling',
-        'Food authenticity testing',
-        'Marine natural products analysis',
-        'Host-pathogen metabolomics',
-        'Wearable biosensor data analysis',
-        'Astrobiology mass spec methods',
-        'Soil microbiome characterization',
-        'Newborn screening optimization',
-        'Synthetic biology metabolite prediction',
-        'Veterinary diagnostics platform',
-      ];
-
-      const fieldNames = Object.keys(FIELDS);
-      const nodes = [];
-      const links = [];
-
-      coreLabels.forEach((label, i) => {
-        nodes.push({
-          id: `core-${i}`,
-          label: label,
-          field: fieldNames[i % 7],
-          type: 'core',
-          citations: 30 + Math.floor(seededRandom() * 200),
-          year: 2020 + Math.floor(seededRandom() * 5),
-          group: i
-        });
+      document.querySelectorAll('.metric-value[data-target]').forEach((el, i) => {
+        if (metricTargets[i] != null) el.dataset.target = metricTargets[i];
       });
-
-      citingLabels.forEach((label, i) => {
-        const field = fieldNames[Math.floor(seededRandom() * fieldNames.length)];
-        nodes.push({
-          id: `cite-${i}`,
-          label: label,
-          field: field,
-          type: 'citing',
-          citations: Math.floor(seededRandom() * 60),
-          year: 2021 + Math.floor(seededRandom() * 5),
-          group: Math.floor(seededRandom() * coreLabels.length)
-        });
-      });
-
-      citingLabels.forEach((_, i) => {
-        const sourceCore = Math.floor(seededRandom() * coreLabels.length);
-        links.push({
-          source: `core-${sourceCore}`,
-          target: `cite-${i}`,
-          strength: 0.3 + seededRandom() * 0.7
-        });
-        if (seededRandom() > 0.6) {
-          const otherCore = Math.floor(seededRandom() * coreLabels.length);
-          if (otherCore !== sourceCore) {
-            links.push({
-              source: `core-${otherCore}`,
-              target: `cite-${i}`,
-              strength: 0.1 + seededRandom() * 0.3
-            });
-          }
-        }
-      });
-
-      for (let i = 0; i < 8; i++) {
-        const a = Math.floor(seededRandom() * citingLabels.length);
-        let b = Math.floor(seededRandom() * citingLabels.length);
-        if (a !== b) {
-          links.push({
-            source: `cite-${a}`,
-            target: `cite-${b}`,
-            strength: 0.1 + seededRandom() * 0.2
-          });
-        }
-      }
-
-      return { nodes, links };
-    }
 
     // ═══════════════════════════════════════════
     //  ANIMATED COUNTERS
@@ -981,16 +818,8 @@
       });
     }
 
-    const metricsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounters();
-          metricsObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    metricsObserver.observe(document.querySelector('.metrics-strip'));
+    // Animate counters once data is loaded (small delay for visual effect)
+    requestAnimationFrame(() => animateCounters());
 
     // ═══════════════════════════════════════════
     //  CITATION NETWORK (D3.js)
@@ -999,7 +828,7 @@
     (function buildNetwork() {
       const container = document.getElementById('networkViz');
       const tooltip = document.getElementById('netTooltip');
-      const data = generateNetworkData();
+      const data = networkData;
       const width = container.clientWidth;
       const height = container.clientHeight;
 
@@ -1238,7 +1067,7 @@
       const madisonCoord = projection([-89.4, 43.07]);
       const lineG = svg.append('g');
       geoData.forEach(d => {
-        if (d.name === 'United States') return;
+        if (d.country === 'United States') return;
         const [x, y] = projection([d.lon, d.lat]);
         if (x && y && madisonCoord) {
           lineG.append('line')
@@ -1267,7 +1096,7 @@
               tooltip.textContent = '';
               const strong = document.createElement('strong');
               strong.style.color = '#fff';
-              strong.textContent = d.name;
+              strong.textContent = d.country;
               tooltip.appendChild(strong);
               tooltip.appendChild(document.createElement('br'));
               tooltip.appendChild(document.createTextNode(d.citations + ' citations \u00B7 ' + d.institutions + ' institutions'));
@@ -1343,6 +1172,8 @@
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease, background 0.35s, border-color 0.35s, box-shadow 0.35s';
       fadeObserver.observe(el);
     });
+
+    })(); // end async init()
   </script>
 </body>
 </html>
