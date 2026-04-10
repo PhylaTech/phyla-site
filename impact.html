@@ -18,6 +18,17 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Impact & Influence — Phyla Technologies">
   <meta name="twitter:description" content="Our work is cited across 76 countries and 22 disciplines. Explore our citation network, global reach, and interdisciplinary influence.">
+
+  <!-- Page transitions -->
+  <meta name="view-transition" content="same-origin">
+  <style>
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root) { animation: fade-out 0.25s ease-in; }
+    ::view-transition-new(root) { animation: fade-in 0.3s ease-out; }
+    @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -841,8 +852,8 @@
         </div>
       </div>
       <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(14,165,233,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        <div class="bridge-icon" style="background: rgba(52,211,153,0.12);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5-.5 6c-1.3 2.3-3.5 3.5-5.5 4.5"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </div>
         <h3>Natural Products &times; Drug Discovery</h3>
         <p>Connecting microbial chemistry with therapeutic pipelines — learning drug functions from molecular structure, identifying bioactive compounds, and mapping biosynthetic potential.</p>
@@ -878,7 +889,7 @@
       </div>
       <div class="bridge-card">
         <div class="bridge-icon" style="background: rgba(6,182,212,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18M3 12a9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9 9 9 0 0 0-9 9z"/><path d="M3.6 9h16.8M3.6 15h16.8"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"><path d="M8 2l1.88 1.88M14.12 3.88L16 2M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v2M6 13H2M22 13h-4"/></svg>
         </div>
         <h3>Microbial Ecology &times; Genomics</h3>
         <p>Resolving microbial dark matter across environments — from marine invertebrate symbionts to peritidal stromatolite communities and host-microbiome interactions.</p>
@@ -890,7 +901,7 @@
       </div>
       <div class="bridge-card">
         <div class="bridge-icon" style="background: rgba(234,179,8,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="1.5" stroke-linecap="round"><path d="M12 8V4H8"/><path d="M2 12a10 10 0 0 1 10-10"/><path d="M12 16v4h4"/><path d="M22 12a10 10 0 0 1-10 10"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L17.2 7v6L12 16 6.8 13V7z"/><path d="M12 4v6l5.2 3M12 10L6.8 13"/><circle cx="12" cy="4" r="1.2" fill="#EAB308"/><circle cx="17.2" cy="7" r="1.2" fill="#EAB308"/><circle cx="17.2" cy="13" r="1.2" fill="#EAB308"/><circle cx="12" cy="16" r="1.2" fill="#EAB308"/><circle cx="6.8" cy="13" r="1.2" fill="#EAB308"/><circle cx="6.8" cy="7" r="1.2" fill="#EAB308"/></svg>
         </div>
         <h3>Chemistry &times; Analytical Intelligence</h3>
         <p>Advancing how molecular data is captured and interpreted — mass spectrometry imaging, FAIMS mobility prediction, and in situ chemical profiling of biological systems.</p>
