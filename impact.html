@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impact &amp; Influence — Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="description" content="Explore Phyla Technologies' research impact — citation networks, global reach across 42 countries, and interdisciplinary influence spanning metabolomics, ML, and life sciences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -171,6 +172,13 @@
 
     .impact-hero h1 .gradient-text {
       background: linear-gradient(135deg, var(--teal-400) 0%, var(--sky-500) 50%, var(--violet-500) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .impact-hero h1 .gradient-text-alt {
+      background: linear-gradient(135deg, var(--violet-500) 0%, var(--sky-500) 50%, var(--teal-400) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -495,6 +503,49 @@
       font-variant-numeric: tabular-nums;
     }
 
+    .disc-info-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--slate-400);
+      font-size: 10px;
+      font-style: italic;
+      font-weight: 600;
+      cursor: help;
+      position: relative;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+
+    .disc-info-icon:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+    .disc-info-tip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      right: -8px;
+      width: 260px;
+      padding: 10px 14px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      color: var(--slate-300);
+      line-height: 1.6;
+      backdrop-filter: blur(12px);
+      z-index: 20;
+      white-space: normal;
+    }
+
+    .disc-info-icon:hover .disc-info-tip { display: block; }
+
     /* ── BRIDGING / INTERDISCIPLINARY ── */
     .bridging-section {
       position: relative;
@@ -680,7 +731,7 @@
   <!-- HERO -->
   <section class="impact-hero">
     <h1>
-      <span class="gradient-text">Impact</span> &amp; <span class="gradient-text">Influence</span>
+      <span class="gradient-text">Impact</span> &amp; <span class="gradient-text-alt">Influence</span>
     </h1>
     <p class="tagline">Explore how our work propagates through global research and applied domains — from citation networks to cross-disciplinary influence.</p>
   </section>
@@ -854,22 +905,20 @@
       document.querySelectorAll('.metric-value[data-target]').forEach(el => {
         const target = parseInt(el.dataset.target);
         const duration = 2000;
-        const start = performance.now();
-
-        function update(now) {
-          const elapsed = now - start;
+        const start = Date.now();
+        const tick = () => {
+          const elapsed = Date.now() - start;
           const progress = Math.min(elapsed / duration, 1);
           const eased = 1 - Math.pow(1 - progress, 3);
-          const current = Math.floor(eased * target);
-          el.textContent = current.toLocaleString();
-          if (progress < 1) requestAnimationFrame(update);
-        }
-        requestAnimationFrame(update);
+          el.textContent = Math.floor(eased * target).toLocaleString();
+          if (progress < 1) setTimeout(tick, 16);
+        };
+        tick();
       });
     }
 
-    // Animate counters once data is loaded (small delay for visual effect)
-    setTimeout(animateCounters, 100);
+    // Animate counters once data is loaded
+    animateCounters();
 
     // ═══════════════════════════════════════════
     //  CITATION NETWORK (D3.js)
@@ -879,9 +928,9 @@
       const container = document.getElementById('networkViz');
       const tooltip = document.getElementById('netTooltip');
       const data = networkData;
-      let width = container.offsetWidth || container.parentElement.offsetWidth || 1120;
-      let height = container.offsetHeight || 560;
-      if (width < 100) { width = 1120; height = 560; }
+      // Use a fixed simulation space for consistent layout regardless of container size
+      const width = 900;
+      const height = 700;
 
       const svg = d3.select('#networkViz')
         .append('svg')
@@ -938,7 +987,7 @@
         title.className = 'tt-title';
         title.textContent = d.label;
         tooltip.appendChild(title);
-        [['Field', d.field], ['Year', d.year], ['Citations', d.citations], ['Type', d.type === 'core' ? 'Phyla Publication' : 'Citing Work']].forEach(([k, v]) => {
+        [['Field', d.field], ['Year', d.year], ['Citations', d.citations], ['Type', d.type === 'core' ? 'Phyla Tech Publication' : 'Citing Work']].forEach(([k, v]) => {
           const row = document.createElement('div');
           row.className = 'tt-field';
           row.textContent = k + ': ';
@@ -1097,20 +1146,26 @@
       const maxCitations = d3.max(instData, d => d.citations) || 1;
       const rScale = d3.scaleSqrt().domain([1, maxCitations]).range([2, 14]);
 
-      // Lines from Madison, WI to each institution
+      // Lines from Madison, WI to each institution (with flowing pulse)
       const madisonCoord = projection([-89.4, 43.07]);
       const lineG = svg.append('g');
-      instData.forEach(d => {
+      instData.forEach((d, i) => {
         const [x, y] = projection([d.lon, d.lat]);
         if (x && y && madisonCoord) {
           const dist = Math.sqrt((x - madisonCoord[0]) ** 2 + (y - madisonCoord[1]) ** 2);
           if (dist > 20) {
-            lineG.append('line')
+            const line = lineG.append('line')
               .attr('x1', madisonCoord[0]).attr('y1', madisonCoord[1])
               .attr('x2', x).attr('y2', y)
-              .attr('stroke', 'rgba(20,184,166,0.15)')
-              .attr('stroke-width', 0.6)
-              .attr('stroke-dasharray', '3,4');
+              .attr('stroke', 'rgba(20,184,166,0.18)')
+              .attr('stroke-width', 0.7)
+              .attr('stroke-dasharray', '4,6');
+            line.append('animate')
+              .attr('attributeName', 'stroke-dashoffset')
+              .attr('from', '0')
+              .attr('to', '-20')
+              .attr('dur', (2 + (i % 3)) + 's')
+              .attr('repeatCount', 'indefinite');
           }
         }
       });
@@ -1192,13 +1247,38 @@
         row.className = 'disc-row';
         const pct = (d.count / maxCount * 100).toFixed(1);
 
-        row.innerHTML = `
-          <div class="disc-label">${d.name}</div>
-          <div class="disc-bar-bg">
-            <div class="disc-bar-fill" data-width="${pct}%" style="background: linear-gradient(90deg, ${d.color}cc, ${d.color}66);"></div>
-          </div>
-          <div class="disc-count">${d.count}</div>
-        `;
+        const label = document.createElement('div');
+        label.className = 'disc-label';
+        label.textContent = d.name;
+
+        // Add info icon for "Other Disciplines"
+        if (d.includes && d.includes.length > 0) {
+          const info = document.createElement('span');
+          info.className = 'disc-info-icon';
+          info.textContent = 'i';
+          const tip = document.createElement('span');
+          tip.className = 'disc-info-tip';
+          tip.textContent = d.includes.join(', ');
+          info.appendChild(tip);
+          label.appendChild(document.createTextNode(' '));
+          label.appendChild(info);
+        }
+
+        const barBg = document.createElement('div');
+        barBg.className = 'disc-bar-bg';
+        const barFill = document.createElement('div');
+        barFill.className = 'disc-bar-fill';
+        barFill.dataset.width = pct + '%';
+        barFill.style.background = 'linear-gradient(90deg, ' + d.color + 'cc, ' + d.color + '66)';
+        barBg.appendChild(barFill);
+
+        const count = document.createElement('div');
+        count.className = 'disc-count';
+        count.textContent = d.count;
+
+        row.appendChild(label);
+        row.appendChild(barBg);
+        row.appendChild(count);
         chart.appendChild(row);
       });
 

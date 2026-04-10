@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T15:56:52.428354+00:00",
+  "generated_at": "2026-04-10T16:28:03.386181+00:00",
   "summary": {
     "total_citations": 2357,
     "countries_reached": 76,
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 481,
+      "citations": 482,
       "institutions": 577
     },
     {
@@ -395,7 +395,7 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 114,
+      "citations": 115,
       "institutions": 174
     },
     {
@@ -475,7 +475,7 @@
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 57,
+      "citations": 58,
       "institutions": 51
     },
     {
@@ -1353,6 +1353,13 @@
       "citations": 17
     },
     {
+      "name": "Shandong University",
+      "lat": 36.66833,
+      "lon": 116.99722,
+      "country_code": "CN",
+      "citations": 16
+    },
+    {
       "name": "Albany Medical Center Hospital",
       "lat": 42.65258,
       "lon": -73.75623,
@@ -1406,13 +1413,6 @@
       "lat": 41.85003,
       "lon": -87.65005,
       "country_code": "US",
-      "citations": 15
-    },
-    {
-      "name": "Shandong University",
-      "lat": 36.66833,
-      "lon": 116.99722,
-      "country_code": "CN",
       "citations": 15
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 173,
+      "count": 174,
       "color": "#3B82F6"
     },
     {
@@ -2068,33 +2068,21 @@
       "color": "#34D399"
     },
     {
-      "name": "Nursing",
-      "count": 10,
-      "color": "#F59E0B"
-    },
-    {
-      "name": "Earth and Planetary Sciences",
-      "count": 6,
-      "color": "#EC4899"
-    },
-    {
-      "name": "Mathematics",
-      "count": 5,
-      "color": "#EF4444"
-    },
-    {
-      "name": "Psychology",
-      "count": 5,
-      "color": "#6366F1"
-    },
-    {
-      "name": "Decision Sciences",
-      "count": 5,
-      "color": "#14B8A6"
-    },
-    {
       "name": "Other Disciplines",
-      "count": 16,
+      "count": 47,
+      "includes": [
+        "Nursing (10)",
+        "Earth and Planetary Sciences (6)",
+        "Mathematics (5)",
+        "Psychology (5)",
+        "Decision Sciences (5)",
+        "Social Sciences (4)",
+        "Energy (4)",
+        "Dentistry (3)",
+        "Chemical Engineering (3)",
+        "Health Professions (1)",
+        "Veterinary (1)"
+      ],
       "color": "#94A3B8"
     }
   ],
@@ -2561,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 345,
+        "citations": 348,
         "year": 2024
       },
       {
@@ -2593,7 +2581,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 72,
+        "citations": 73,
         "year": 2023
       },
       {
@@ -2681,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 408,
+        "citations": 409,
         "year": 2023
       },
       {
@@ -3161,7 +3149,7 @@
         "label": "Microbial interactions trigger the production of antibiotics",
         "field": "Medicine",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2018
       },
       {
@@ -3353,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4743,
+        "citations": 4744,
         "year": 2021
       },
       {
@@ -3489,7 +3477,7 @@
         "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 1,
+        "citations": 2,
         "year": 2025
       },
       {

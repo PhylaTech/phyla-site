@@ -458,13 +458,15 @@ def main():
         })
 
     # Discipline data (aggregate small fields into "Other")
-    AGGREGATE_THRESHOLD = 5
+    AGGREGATE_THRESHOLD = 10
     disciplines = []
     other_count = 0
+    other_names = []
     sorted_fields = sorted(total_field_counts.items(), key=lambda x: x[1], reverse=True)
     for i, (field, count) in enumerate(sorted_fields):
-        if count < AGGREGATE_THRESHOLD:
+        if count <= AGGREGATE_THRESHOLD:
             other_count += count
+            other_names.append(f"{field} ({count})")
         else:
             disciplines.append({
                 "name": field,
@@ -475,6 +477,7 @@ def main():
         disciplines.append({
             "name": "Other Disciplines",
             "count": other_count,
+            "includes": other_names,
             "color": "#94A3B8",
         })
 
