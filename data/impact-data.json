@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T16:28:03.386181+00:00",
+  "generated_at": "2026-04-11T07:13:47.030906+00:00",
   "summary": {
     "total_citations": 2357,
     "countries_reached": 76,
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 482,
+      "citations": 481,
       "institutions": 577
     },
     {
@@ -395,7 +395,7 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 115,
+      "citations": 114,
       "institutions": 174
     },
     {
@@ -475,7 +475,7 @@
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 58,
+      "citations": 57,
       "institutions": 51
     },
     {
@@ -1353,13 +1353,6 @@
       "citations": 17
     },
     {
-      "name": "Shandong University",
-      "lat": 36.66833,
-      "lon": 116.99722,
-      "country_code": "CN",
-      "citations": 16
-    },
-    {
       "name": "Albany Medical Center Hospital",
       "lat": 42.65258,
       "lon": -73.75623,
@@ -1413,6 +1406,13 @@
       "lat": 41.85003,
       "lon": -87.65005,
       "country_code": "US",
+      "citations": 15
+    },
+    {
+      "name": "Shandong University",
+      "lat": 36.66833,
+      "lon": 116.99722,
+      "country_code": "CN",
       "citations": 15
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 174,
+      "count": 173,
       "color": "#3B82F6"
     },
     {
@@ -2381,7 +2381,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 250,
+        "citations": 253,
         "year": 2023
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 859,
+        "citations": 864,
         "year": 2024
       },
       {
@@ -2477,7 +2477,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 61,
+        "citations": 63,
         "year": 2024
       },
       {
@@ -2565,7 +2565,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2023
       },
       {
@@ -2717,7 +2717,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 140,
+        "citations": 141,
         "year": 2023
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 790,
+        "citations": 793,
         "year": 2021
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4699,
+        "citations": 4702,
         "year": 2017
       },
       {
@@ -3157,7 +3157,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2022
       },
       {
@@ -3189,7 +3189,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 346,
+        "citations": 347,
         "year": 2019
       },
       {
@@ -3349,7 +3349,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 103,
+        "citations": 104,
         "year": 2022
       },
       {
