@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T07:13:47.030906+00:00",
+  "generated_at": "2026-04-12T07:26:27.000318+00:00",
   "summary": {
     "total_citations": 2357,
     "countries_reached": 76,
@@ -355,7 +355,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 930,
+      "citations": 931,
       "institutions": 652
     },
     {
@@ -372,7 +372,7 @@
       "lat": 51.2,
       "lon": 10.4,
       "citations": 276,
-      "institutions": 172
+      "institutions": 171
     },
     {
       "country": "United Kingdom",
@@ -404,7 +404,7 @@
       "lat": 20.6,
       "lon": 78.9,
       "citations": 111,
-      "institutions": 138
+      "institutions": 139
     },
     {
       "country": "Switzerland",
@@ -1297,16 +1297,16 @@
       "citations": 18
     },
     {
-      "name": "Huazhong University of Science and Technology",
-      "lat": 30.58333,
-      "lon": 114.26667,
+      "name": "Shanghai Jiao Tong University",
+      "lat": 31.222219467163086,
+      "lon": 121.45806121826172,
       "country_code": "CN",
       "citations": 18
     },
     {
-      "name": "Shanghai Jiao Tong University",
-      "lat": 31.222219467163086,
-      "lon": 121.45806121826172,
+      "name": "Huazhong University of Science and Technology",
+      "lat": 30.58333,
+      "lon": 114.26667,
       "country_code": "CN",
       "citations": 18
     },
@@ -1437,6 +1437,13 @@
       "citations": 15
     },
     {
+      "name": "Duke University",
+      "lat": 35.99403,
+      "lon": -78.89862,
+      "country_code": "US",
+      "citations": 15
+    },
+    {
       "name": "Technical University of Munich",
       "lat": 48.13743,
       "lon": 11.57549,
@@ -1486,17 +1493,17 @@
       "citations": 14
     },
     {
-      "name": "Duke University",
-      "lat": 35.99403,
-      "lon": -78.89862,
-      "country_code": "US",
-      "citations": 14
-    },
-    {
       "name": "University of Helsinki",
       "lat": 60.16952,
       "lon": 24.93545,
       "country_code": "FI",
+      "citations": 14
+    },
+    {
+      "name": "University of Michigan",
+      "lat": 42.27756,
+      "lon": -83.74088,
+      "country_code": "US",
       "citations": 14
     },
     {
@@ -1587,13 +1594,6 @@
       "name": "Howard Hughes Medical Institute",
       "lat": 39.00287,
       "lon": -77.07115,
-      "country_code": "US",
-      "citations": 13
-    },
-    {
-      "name": "University of Michigan",
-      "lat": 42.27756,
-      "lon": -83.74088,
       "country_code": "US",
       "citations": 13
     },
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 305,
+        "citations": 306,
         "year": 2022
       },
       {
@@ -2365,7 +2365,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 362,
+        "citations": 364,
         "year": 2022
       },
       {
@@ -2397,7 +2397,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 174,
+        "citations": 175,
         "year": 2022
       },
       {
@@ -2421,7 +2421,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 90,
+        "citations": 91,
         "year": 2024
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 864,
+        "citations": 867,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 271,
+        "citations": 273,
         "year": 2025
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2025
       },
       {
@@ -2501,7 +2501,7 @@
         "label": "<i>Burkholderia</i> as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 136,
+        "citations": 137,
         "year": 2019
       },
       {
@@ -2653,7 +2653,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 630,
+        "citations": 631,
         "year": 2020
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 443,
+        "citations": 444,
         "year": 2023
       },
       {
@@ -2677,7 +2677,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 246,
+        "citations": 247,
         "year": 2022
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 793,
+        "citations": 794,
         "year": 2021
       },
       {
@@ -3013,7 +3013,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 49,
+        "citations": 50,
         "year": 2023
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4702,
+        "citations": 4703,
         "year": 2017
       },
       {
@@ -3141,7 +3141,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 148,
+        "citations": 149,
         "year": 2018
       },
       {
@@ -3157,7 +3157,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 108,
+        "citations": 109,
         "year": 2022
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4744,
+        "citations": 4750,
         "year": 2021
       },
       {
@@ -3389,7 +3389,7 @@
         "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
         "field": "Medicine",
         "type": "citing",
-        "citations": 12,
+        "citations": 13,
         "year": 2025
       },
       {
