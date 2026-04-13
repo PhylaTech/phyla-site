@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-12T07:26:27.000318+00:00",
+  "generated_at": "2026-04-13T08:19:20.991606+00:00",
   "summary": {
-    "total_citations": 2357,
+    "total_citations": 2359,
     "countries_reached": 76,
-    "citing_institutions": 3263,
+    "citing_institutions": 3264,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 375,
+      "cited_by_count": 377,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -355,15 +355,15 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 931,
-      "institutions": 652
+      "citations": 933,
+      "institutions": 653
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 481,
+      "citations": 482,
       "institutions": 577
     },
     {
@@ -371,7 +371,7 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 276,
+      "citations": 277,
       "institutions": 171
     },
     {
@@ -847,6 +847,14 @@
       "institutions": 8
     },
     {
+      "country": "Uganda",
+      "country_code": "UG",
+      "lat": 1.4,
+      "lon": 32.3,
+      "citations": 3,
+      "institutions": 2
+    },
+    {
       "country": "Cameroon",
       "country_code": "CM",
       "lat": 7.4,
@@ -877,14 +885,6 @@
       "lon": 23.9,
       "citations": 2,
       "institutions": 1
-    },
-    {
-      "country": "Uganda",
-      "country_code": "UG",
-      "lat": 1.4,
-      "lon": 32.3,
-      "citations": 2,
-      "institutions": 2
     },
     {
       "country": "Estonia",
@@ -1042,7 +1042,7 @@
       "lat": 32.9898681640625,
       "lon": -117.25956726074219,
       "country_code": "US",
-      "citations": 36
+      "citations": 37
     },
     {
       "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
@@ -1185,17 +1185,17 @@
       "citations": 25
     },
     {
-      "name": "University of Cambridge",
-      "lat": 52.2,
-      "lon": 0.11667,
-      "country_code": "GB",
-      "citations": 23
-    },
-    {
       "name": "Peking University",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
+      "citations": 24
+    },
+    {
+      "name": "University of Cambridge",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
       "citations": 23
     },
     {
@@ -1472,6 +1472,13 @@
       "citations": 14
     },
     {
+      "name": "Northwestern University",
+      "lat": 42.04114,
+      "lon": -87.69006,
+      "country_code": "US",
+      "citations": 14
+    },
+    {
       "name": "Imperial College London",
       "lat": 51.50853,
       "lon": -0.12574,
@@ -1540,13 +1547,6 @@
       "lon": 116.39723,
       "country_code": "CN",
       "citations": 14
-    },
-    {
-      "name": "Northwestern University",
-      "lat": 42.04114,
-      "lon": -87.69006,
-      "country_code": "US",
-      "citations": 13
     },
     {
       "name": "Yale University",
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 855,
+      "count": 857,
       "color": "#14B8A6"
     },
     {
@@ -2101,7 +2101,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 375,
+        "citations": 377,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 867,
+        "citations": 869,
         "year": 2024
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 59,
+        "citations": 60,
         "year": 2025
       },
       {
@@ -2493,7 +2493,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 328,
+        "citations": 330,
         "year": 2019
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 348,
+        "citations": 349,
         "year": 2024
       },
       {
@@ -2645,7 +2645,7 @@
         "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 103,
+        "citations": 104,
         "year": 2020
       },
       {
@@ -2677,7 +2677,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 247,
+        "citations": 248,
         "year": 2022
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 794,
+        "citations": 795,
         "year": 2021
       },
       {
@@ -2917,7 +2917,7 @@
         "label": "Emerging evolutionary paradigms in antibiotic discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2018
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4703,
+        "citations": 4704,
         "year": 2017
       },
       {
@@ -3117,7 +3117,7 @@
         "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 20,
+        "citations": 21,
         "year": 2024
       },
       {
@@ -3349,7 +3349,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2022
       },
       {
