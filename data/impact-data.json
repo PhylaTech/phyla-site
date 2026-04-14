@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T08:19:20.991606+00:00",
+  "generated_at": "2026-04-14T08:01:04.443002+00:00",
   "summary": {
     "total_citations": 2359,
     "countries_reached": 76,
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 482,
+      "citations": 483,
       "institutions": 577
     },
     {
@@ -372,7 +372,7 @@
       "lat": 51.2,
       "lon": 10.4,
       "citations": 277,
-      "institutions": 171
+      "institutions": 169
     },
     {
       "country": "United Kingdom",
@@ -411,7 +411,7 @@
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
-      "citations": 93,
+      "citations": 92,
       "institutions": 41
     },
     {
@@ -427,7 +427,7 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 87,
+      "citations": 88,
       "institutions": 41
     },
     {
@@ -451,8 +451,8 @@
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
-      "citations": 68,
-      "institutions": 19
+      "citations": 69,
+      "institutions": 20
     },
     {
       "country": "Italy",
@@ -492,7 +492,7 @@
       "lat": 60.1,
       "lon": 18.6,
       "citations": 39,
-      "institutions": 15
+      "institutions": 16
     },
     {
       "country": "Poland",
@@ -1003,13 +1003,6 @@
       "citations": 40
     },
     {
-      "name": "ETH Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 39
-    },
-    {
       "name": "Friedrich Schiller University Jena",
       "lat": 50.92878,
       "lon": 11.5899,
@@ -1024,17 +1017,24 @@
       "citations": 38
     },
     {
-      "name": "Washington University in St. Louis",
-      "lat": 38.62727,
-      "lon": -90.19789,
-      "country_code": "US",
-      "citations": 37
+      "name": "ETH Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
+      "citations": 38
     },
     {
       "name": "University of Copenhagen",
       "lat": 55.67594,
       "lon": 12.56553,
       "country_code": "DK",
+      "citations": 38
+    },
+    {
+      "name": "Washington University in St. Louis",
+      "lat": 38.62727,
+      "lon": -90.19789,
+      "country_code": "US",
       "citations": 37
     },
     {
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 306,
+        "citations": 307,
         "year": 2022
       },
       {
@@ -2397,7 +2397,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 175,
+        "citations": 176,
         "year": 2022
       },
       {
@@ -2589,7 +2589,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 67,
+        "citations": 68,
         "year": 2024
       },
       {
@@ -2629,7 +2629,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 128,
+        "citations": 129,
         "year": 2021
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 444,
+        "citations": 445,
         "year": 2023
       },
       {
@@ -2749,7 +2749,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 53,
+        "citations": 54,
         "year": 2024
       },
       {
@@ -2989,7 +2989,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2024
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4704,
+        "citations": 4706,
         "year": 2017
       },
       {
@@ -3093,7 +3093,7 @@
         "label": "A Comprehensive State-of-the-Art Survey on Data Visualization Tools: Research Developments, Challenges and Future Domain Specific Visualization Framework",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 44,
+        "citations": 45,
         "year": 2022
       },
       {
