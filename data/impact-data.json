@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-14T08:01:04.443002+00:00",
+  "generated_at": "2026-04-15T08:01:40.054797+00:00",
   "summary": {
-    "total_citations": 2359,
+    "total_citations": 2360,
     "countries_reached": 76,
-    "citing_institutions": 3264,
+    "citing_institutions": 3266,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -131,7 +131,7 @@
       "title": "A large-scale genome\u2013lipid association map guides lipid identification",
       "journal": "Nature Metabolism",
       "year": 2020,
-      "cited_by_count": 56,
+      "cited_by_count": 57,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 933,
-      "institutions": 653
+      "citations": 935,
+      "institutions": 654
     },
     {
       "country": "China",
@@ -443,8 +443,8 @@
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 74,
-      "institutions": 124
+      "citations": 75,
+      "institutions": 125
     },
     {
       "country": "Denmark",
@@ -965,7 +965,7 @@
       "lat": 43.07305,
       "lon": -89.40123,
       "country_code": "US",
-      "citations": 218
+      "citations": 219
     },
     {
       "name": "Morgridge Institute for Research",
@@ -1570,6 +1570,13 @@
       "citations": 13
     },
     {
+      "name": "Vanderbilt University",
+      "lat": 36.16589,
+      "lon": -86.78444,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
       "name": "University of California, San Francisco",
       "lat": 37.77493,
       "lon": -122.41942,
@@ -1633,9 +1640,9 @@
       "citations": 12
     },
     {
-      "name": "Vanderbilt University",
-      "lat": 36.16589,
-      "lon": -86.78444,
+      "name": "Case Western Reserve University",
+      "lat": 41.4995,
+      "lon": -81.69541,
       "country_code": "US",
       "citations": 12
     },
@@ -1727,13 +1734,6 @@
       "name": "Chan Zuckerberg Initiative (United States)",
       "lat": 37.48522,
       "lon": -122.23635,
-      "country_code": "US",
-      "citations": 11
-    },
-    {
-      "name": "Case Western Reserve University",
-      "lat": 41.4995,
-      "lon": -81.69541,
       "country_code": "US",
       "citations": 11
     },
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 646,
+      "count": 647,
       "color": "#0891B2"
     },
     {
@@ -2165,7 +2165,7 @@
         "label": "A large-scale genome\u2013lipid association map guides lipid identification",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 56,
+        "citations": 57,
         "year": 2020
       },
       {
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 307,
+        "citations": 308,
         "year": 2022
       },
       {
@@ -2333,7 +2333,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 264,
+        "citations": 265,
         "year": 2021
       },
       {
@@ -2373,7 +2373,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 306,
+        "citations": 307,
         "year": 2022
       },
       {
@@ -2381,7 +2381,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 253,
+        "citations": 255,
         "year": 2023
       },
       {
@@ -2389,7 +2389,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 215,
+        "citations": 216,
         "year": 2021
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 869,
+        "citations": 871,
         "year": 2024
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 60,
+        "citations": 61,
         "year": 2025
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 349,
+        "citations": 350,
         "year": 2024
       },
       {
@@ -2629,7 +2629,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2021
       },
       {
@@ -2669,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 409,
+        "citations": 411,
         "year": 2023
       },
       {
@@ -2741,7 +2741,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 66,
+        "citations": 67,
         "year": 2023
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 795,
+        "citations": 797,
         "year": 2021
       },
       {
@@ -2845,7 +2845,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 51,
+        "citations": 52,
         "year": 2022
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 131,
+        "citations": 133,
         "year": 2024
       },
       {
@@ -2981,7 +2981,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2023
       },
       {
@@ -2997,7 +2997,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 82,
+        "citations": 83,
         "year": 2023
       },
       {
@@ -3017,6 +3017,14 @@
         "year": 2023
       },
       {
+        "id": "W4394753092",
+        "label": "A lipidome landscape of aging in mice",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 49,
+        "year": 2024
+      },
+      {
         "id": "W4402906567",
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
@@ -3025,19 +3033,11 @@
         "year": 2024
       },
       {
-        "id": "W4394753092",
-        "label": "A lipidome landscape of aging in mice",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 48,
-        "year": 2024
-      },
-      {
         "id": "W2599417231",
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4706,
+        "citations": 4708,
         "year": 2017
       },
       {
@@ -3101,7 +3101,7 @@
         "label": "Rapid Multi-Omics Sample Preparation for Mass Spectrometry",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 35,
+        "citations": 37,
         "year": 2023
       },
       {
@@ -3117,7 +3117,7 @@
         "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 21,
+        "citations": 22,
         "year": 2024
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4750,
+        "citations": 4754,
         "year": 2021
       },
       {
@@ -3349,7 +3349,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 105,
+        "citations": 106,
         "year": 2022
       },
       {
@@ -4010,12 +4010,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4394753092",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4394753092",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
