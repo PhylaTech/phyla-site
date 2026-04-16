@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-15T08:01:40.054797+00:00",
+  "generated_at": "2026-04-16T08:01:52.922689+00:00",
   "summary": {
-    "total_citations": 2360,
+    "total_citations": 2362,
     "countries_reached": 76,
-    "citing_institutions": 3266,
+    "citing_institutions": 3267,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 377,
+      "cited_by_count": 378,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 346,
+      "cited_by_count": 347,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -407,20 +407,20 @@
       "institutions": 139
     },
     {
+      "country": "Australia",
+      "country_code": "AU",
+      "lat": -25.3,
+      "lon": 133.8,
+      "citations": 92,
+      "institutions": 88
+    },
+    {
       "country": "Switzerland",
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
       "citations": 92,
       "institutions": 41
-    },
-    {
-      "country": "Australia",
-      "country_code": "AU",
-      "lat": -25.3,
-      "lon": 133.8,
-      "citations": 91,
-      "institutions": 88
     },
     {
       "country": "Netherlands",
@@ -475,8 +475,8 @@
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 57,
-      "institutions": 51
+      "citations": 58,
+      "institutions": 52
     },
     {
       "country": "Russia",
@@ -1360,6 +1360,13 @@
       "citations": 16
     },
     {
+      "name": "The University of Sydney",
+      "lat": -33.86785,
+      "lon": 151.20732,
+      "country_code": "AU",
+      "citations": 16
+    },
+    {
       "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
       "lat": 46.516,
       "lon": 6.63282,
@@ -1427,13 +1434,6 @@
       "lat": 51.75222,
       "lon": -1.25596,
       "country_code": "GB",
-      "citations": 15
-    },
-    {
-      "name": "The University of Sydney",
-      "lat": -33.86785,
-      "lon": 151.20732,
-      "country_code": "AU",
       "citations": 15
     },
     {
@@ -1907,8 +1907,8 @@
     },
     {
       "name": "Stanford Medicine",
-      "lat": 37.424110412597656,
-      "lon": -122.16607666015625,
+      "lat": 37.42411,
+      "lon": -122.16608,
       "country_code": "US",
       "citations": 10
     },
@@ -2014,12 +2014,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 857,
+      "count": 858,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 647,
+      "count": 648,
       "color": "#0891B2"
     },
     {
@@ -2101,7 +2101,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 377,
+        "citations": 378,
         "year": 2022
       },
       {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 346,
+        "citations": 347,
         "year": 2023
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 827,
+        "citations": 828,
         "year": 2021
       },
       {
@@ -2365,7 +2365,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 364,
+        "citations": 366,
         "year": 2022
       },
       {
@@ -2373,7 +2373,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 307,
+        "citations": 308,
         "year": 2022
       },
       {
@@ -2421,7 +2421,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 91,
+        "citations": 93,
         "year": 2024
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 871,
+        "citations": 875,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 273,
+        "citations": 274,
         "year": 2025
       },
       {
@@ -2445,7 +2445,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 167,
+        "citations": 168,
         "year": 2024
       },
       {
@@ -2453,7 +2453,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 154,
+        "citations": 155,
         "year": 2024
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 61,
+        "citations": 62,
         "year": 2025
       },
       {
@@ -2525,7 +2525,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2019
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 350,
+        "citations": 352,
         "year": 2024
       },
       {
@@ -2573,7 +2573,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 99,
+        "citations": 100,
         "year": 2022
       },
       {
@@ -2645,7 +2645,7 @@
         "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2020
       },
       {
@@ -2653,7 +2653,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 631,
+        "citations": 632,
         "year": 2020
       },
       {
@@ -2741,7 +2741,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 67,
+        "citations": 68,
         "year": 2023
       },
       {
@@ -2749,7 +2749,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 54,
+        "citations": 55,
         "year": 2024
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 797,
+        "citations": 798,
         "year": 2021
       },
       {
@@ -2829,7 +2829,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2021
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 133,
+        "citations": 135,
         "year": 2024
       },
       {
@@ -3017,17 +3017,17 @@
         "year": 2023
       },
       {
-        "id": "W4394753092",
-        "label": "A lipidome landscape of aging in mice",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 49,
-        "year": 2024
-      },
-      {
         "id": "W4402906567",
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 50,
+        "year": 2024
+      },
+      {
+        "id": "W4394753092",
+        "label": "A lipidome landscape of aging in mice",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 49,
         "year": 2024
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4708,
+        "citations": 4709,
         "year": 2017
       },
       {
@@ -3077,7 +3077,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 92,
+        "citations": 93,
         "year": 2023
       },
       {
@@ -3141,7 +3141,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 149,
+        "citations": 150,
         "year": 2018
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4754,
+        "citations": 4756,
         "year": 2021
       },
       {
@@ -4010,12 +4010,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4394753092",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4394753092",
         "strength": 0.5
       },
       {
