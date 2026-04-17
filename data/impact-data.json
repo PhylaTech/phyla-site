@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-16T08:01:52.922689+00:00",
+  "generated_at": "2026-04-17T08:02:25.132419+00:00",
   "summary": {
-    "total_citations": 2362,
+    "total_citations": 2365,
     "countries_reached": 76,
-    "citing_institutions": 3267,
+    "citing_institutions": 3276,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 639,
+      "cited_by_count": 640,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 347,
+      "cited_by_count": 349,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 935,
-      "institutions": 654
+      "citations": 936,
+      "institutions": 658
     },
     {
       "country": "China",
@@ -364,7 +364,7 @@
       "lat": 35.9,
       "lon": 104.2,
       "citations": 483,
-      "institutions": 577
+      "institutions": 579
     },
     {
       "country": "Germany",
@@ -387,8 +387,8 @@
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 137,
-      "institutions": 88
+      "citations": 138,
+      "institutions": 89
     },
     {
       "country": "France",
@@ -435,7 +435,7 @@
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 81,
+      "citations": 82,
       "institutions": 66
     },
     {
@@ -476,7 +476,7 @@
       "lat": 35.9,
       "lon": 127.8,
       "citations": 58,
-      "institutions": 52
+      "institutions": 51
     },
     {
       "country": "Russia",
@@ -612,7 +612,7 @@
       "lat": 31.0,
       "lon": 34.8,
       "citations": 20,
-      "institutions": 14
+      "institutions": 15
     },
     {
       "country": "Ireland",
@@ -759,6 +759,14 @@
       "institutions": 8
     },
     {
+      "country": "Argentina",
+      "country_code": "AR",
+      "lat": -38.4,
+      "lon": -63.6,
+      "citations": 5,
+      "institutions": 8
+    },
+    {
       "country": "Bulgaria",
       "country_code": "BG",
       "lat": 42.7,
@@ -789,14 +797,6 @@
       "lon": 37.9,
       "citations": 5,
       "institutions": 4
-    },
-    {
-      "country": "Argentina",
-      "country_code": "AR",
-      "lat": -38.4,
-      "lon": -63.6,
-      "citations": 4,
-      "institutions": 7
     },
     {
       "country": "Ukraine",
@@ -839,6 +839,14 @@
       "institutions": 7
     },
     {
+      "country": "Serbia",
+      "country_code": "RS",
+      "lat": 44.0,
+      "lon": 21.0,
+      "citations": 3,
+      "institutions": 3
+    },
+    {
       "country": "Iraq",
       "country_code": "IQ",
       "lat": 33.2,
@@ -867,14 +875,6 @@
       "country_code": "HR",
       "lat": 45.1,
       "lon": 15.2,
-      "citations": 2,
-      "institutions": 2
-    },
-    {
-      "country": "Serbia",
-      "country_code": "RS",
-      "lat": 44.0,
-      "lon": 21.0,
       "citations": 2,
       "institutions": 2
     },
@@ -1269,6 +1269,13 @@
       "citations": 20
     },
     {
+      "name": "University of Washington",
+      "lat": 47.60621,
+      "lon": -122.33207,
+      "country_code": "US",
+      "citations": 19
+    },
+    {
       "name": "The University of Melbourne",
       "lat": -37.814,
       "lon": 144.96332,
@@ -1287,13 +1294,6 @@
       "lat": 52.52436828613281,
       "lon": 13.410530090332031,
       "country_code": "DE",
-      "citations": 18
-    },
-    {
-      "name": "University of Washington",
-      "lat": 47.60621,
-      "lon": -122.33207,
-      "country_code": "US",
       "citations": 18
     },
     {
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 648,
+      "count": 649,
       "color": "#0891B2"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 173,
+      "count": 175,
       "color": "#3B82F6"
     },
     {
@@ -2093,7 +2093,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 639,
+        "citations": 640,
         "year": 2020
       },
       {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 347,
+        "citations": 349,
         "year": 2023
       },
       {
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 308,
+        "citations": 309,
         "year": 2022
       },
       {
@@ -2325,7 +2325,7 @@
         "label": "Long-term perturbation of the peripheral immune system months after SARS-CoV-2 infection",
         "field": "Medicine",
         "type": "citing",
-        "citations": 274,
+        "citations": 275,
         "year": 2022
       },
       {
@@ -2381,7 +2381,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 255,
+        "citations": 256,
         "year": 2023
       },
       {
@@ -2389,7 +2389,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 216,
+        "citations": 217,
         "year": 2021
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 875,
+        "citations": 879,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 274,
+        "citations": 276,
         "year": 2025
       },
       {
@@ -2445,7 +2445,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 168,
+        "citations": 169,
         "year": 2024
       },
       {
@@ -2461,7 +2461,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 87,
+        "citations": 88,
         "year": 2024
       },
       {
@@ -2477,7 +2477,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 63,
+        "citations": 64,
         "year": 2024
       },
       {
@@ -2509,7 +2509,7 @@
         "label": "A Bacterial Symbiont Protects Honey Bees from Fungal Disease",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2021
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 352,
+        "citations": 353,
         "year": 2024
       },
       {
@@ -2573,7 +2573,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2022
       },
       {
@@ -2621,7 +2621,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 161,
+        "citations": 162,
         "year": 2019
       },
       {
@@ -2629,7 +2629,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2021
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 445,
+        "citations": 446,
         "year": 2023
       },
       {
@@ -2677,7 +2677,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 248,
+        "citations": 249,
         "year": 2022
       },
       {
@@ -2709,7 +2709,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 121,
+        "citations": 122,
         "year": 2022
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 798,
+        "citations": 799,
         "year": 2021
       },
       {
@@ -2829,7 +2829,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2021
       },
       {
@@ -2845,7 +2845,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 52,
+        "citations": 53,
         "year": 2022
       },
       {
@@ -2909,7 +2909,7 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2019
       },
       {
@@ -2997,7 +2997,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 83,
+        "citations": 84,
         "year": 2023
       },
       {
@@ -3013,8 +3013,16 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2023
+      },
+      {
+        "id": "W4394753092",
+        "label": "A lipidome landscape of aging in mice",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 50,
+        "year": 2024
       },
       {
         "id": "W4402906567",
@@ -3025,19 +3033,11 @@
         "year": 2024
       },
       {
-        "id": "W4394753092",
-        "label": "A lipidome landscape of aging in mice",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 49,
-        "year": 2024
-      },
-      {
         "id": "W2599417231",
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4709,
+        "citations": 4710,
         "year": 2017
       },
       {
@@ -3125,7 +3125,7 @@
         "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 217,
+        "citations": 218,
         "year": 2018
       },
       {
@@ -3133,7 +3133,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 180,
+        "citations": 181,
         "year": 2022
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4756,
+        "citations": 4763,
         "year": 2021
       },
       {
@@ -3715,12 +3715,12 @@
       },
       {
         "source": "W2949629831",
-        "target": "W2808840038",
+        "target": "W3204900280",
         "strength": 0.5
       },
       {
         "source": "W2949629831",
-        "target": "W3204900280",
+        "target": "W2808840038",
         "strength": 0.5
       },
       {
@@ -4010,12 +4010,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4394753092",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4394753092",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
