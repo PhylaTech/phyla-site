@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-17T08:02:25.132419+00:00",
+  "generated_at": "2026-04-18T07:22:15.194475+00:00",
   "summary": {
-    "total_citations": 2365,
+    "total_citations": 2366,
     "countries_reached": 76,
-    "citing_institutions": 3276,
+    "citing_institutions": 3280,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -170,7 +170,7 @@
       "title": "Genetic mapping of microbial and host traits reveals production of immunomodulatory lipids by Akkermansia muciniphila in the murine gut",
       "journal": "Nature Microbiology",
       "year": 2023,
-      "cited_by_count": 46,
+      "cited_by_count": 47,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -407,20 +407,20 @@
       "institutions": 139
     },
     {
+      "country": "Switzerland",
+      "country_code": "CH",
+      "lat": 46.8,
+      "lon": 8.2,
+      "citations": 93,
+      "institutions": 42
+    },
+    {
       "country": "Australia",
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
       "citations": 92,
       "institutions": 88
-    },
-    {
-      "country": "Switzerland",
-      "country_code": "CH",
-      "lat": 46.8,
-      "lon": 8.2,
-      "citations": 92,
-      "institutions": 41
     },
     {
       "country": "Netherlands",
@@ -444,7 +444,7 @@
       "lat": 40.5,
       "lon": -3.7,
       "citations": 75,
-      "institutions": 125
+      "institutions": 126
     },
     {
       "country": "Denmark",
@@ -871,6 +871,14 @@
       "institutions": 3
     },
     {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 3,
+      "institutions": 10
+    },
+    {
       "country": "Croatia",
       "country_code": "HR",
       "lat": 45.1,
@@ -893,14 +901,6 @@
       "lon": 25.0,
       "citations": 2,
       "institutions": 2
-    },
-    {
-      "country": "Morocco",
-      "country_code": "MA",
-      "lat": 31.8,
-      "lon": -7.1,
-      "citations": 2,
-      "institutions": 8
     },
     {
       "country": "Nigeria",
@@ -1234,6 +1234,13 @@
       "citations": 20
     },
     {
+      "name": "The University of Melbourne",
+      "lat": -37.814,
+      "lon": 144.96332,
+      "country_code": "AU",
+      "citations": 20
+    },
+    {
       "name": "Broad Institute",
       "lat": 42.3751,
       "lon": -71.10561,
@@ -1273,13 +1280,6 @@
       "lat": 47.60621,
       "lon": -122.33207,
       "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "The University of Melbourne",
-      "lat": -37.814,
-      "lon": 144.96332,
-      "country_code": "AU",
       "citations": 19
     },
     {
@@ -1486,6 +1486,13 @@
       "citations": 14
     },
     {
+      "name": "University of Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
+      "citations": 14
+    },
+    {
       "name": "Novo Nordisk Foundation",
       "lat": 55.67594,
       "lon": 12.56553,
@@ -1588,13 +1595,6 @@
       "lat": 44.97997,
       "lon": -93.26384,
       "country_code": "US",
-      "citations": 13
-    },
-    {
-      "name": "University of Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
       "citations": 13
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 858,
+      "count": 859,
       "color": "#14B8A6"
     },
     {
@@ -2189,7 +2189,7 @@
         "label": "Genetic mapping of microbial and host traits reveals production of immunomodulatory lipids by Akkermansia muciniphila in the murine gut",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 46,
+        "citations": 47,
         "year": 2023
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 828,
+        "citations": 829,
         "year": 2021
       },
       {
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 309,
+        "citations": 310,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 879,
+        "citations": 884,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 276,
+        "citations": 280,
         "year": 2025
       },
       {
@@ -2477,7 +2477,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 64,
+        "citations": 65,
         "year": 2024
       },
       {
@@ -2557,7 +2557,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2022
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 446,
+        "citations": 448,
         "year": 2023
       },
       {
@@ -2669,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 411,
+        "citations": 412,
         "year": 2023
       },
       {
@@ -2685,7 +2685,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 184,
+        "citations": 185,
         "year": 2021
       },
       {
@@ -2781,7 +2781,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 325,
+        "citations": 326,
         "year": 2021
       },
       {
@@ -2813,7 +2813,7 @@
         "label": "Commensal inter-bacterial interactions shaping the microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 76,
+        "citations": 77,
         "year": 2021
       },
       {
@@ -2869,7 +2869,7 @@
         "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 36,
+        "citations": 37,
         "year": 2024
       },
       {
@@ -3077,7 +3077,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 93,
+        "citations": 94,
         "year": 2023
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4763,
+        "citations": 4768,
         "year": 2021
       },
       {
@@ -3453,7 +3453,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 32,
+        "citations": 33,
         "year": 2025
       },
       {
