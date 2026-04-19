@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-18T07:22:15.194475+00:00",
+  "generated_at": "2026-04-19T07:42:24.761359+00:00",
   "summary": {
-    "total_citations": 2366,
+    "total_citations": 2367,
     "countries_reached": 76,
     "citing_institutions": 3280,
     "disciplines_impacted": 22,
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 349,
+      "cited_by_count": 350,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -1332,17 +1332,17 @@
       "citations": 17
     },
     {
-      "name": "National Institutes of Health",
-      "lat": 38.98067,
-      "lon": -77.10026,
-      "country_code": "US",
-      "citations": 17
-    },
-    {
       "name": "Universit\u00e9 Paris Cit\u00e9",
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
+      "citations": 17
+    },
+    {
+      "name": "National Institutes of Health",
+      "lat": 38.98067,
+      "lon": -77.10026,
+      "country_code": "US",
       "citations": 17
     },
     {
@@ -1605,17 +1605,17 @@
       "citations": 13
     },
     {
-      "name": "Center for Cancer Research",
-      "lat": 39.0040283203125,
-      "lon": -77.10096740722656,
-      "country_code": "US",
-      "citations": 13
-    },
-    {
       "name": "Sorbonne Universit\u00e9",
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
+      "citations": 13
+    },
+    {
+      "name": "Center for Cancer Research",
+      "lat": 39.0040283203125,
+      "lon": -77.10096740722656,
+      "country_code": "US",
       "citations": 13
     },
     {
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 649,
+      "count": 650,
       "color": "#0891B2"
     },
     {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 349,
+        "citations": 350,
         "year": 2023
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 829,
+        "citations": 830,
         "year": 2021
       },
       {
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 310,
+        "citations": 311,
         "year": 2022
       },
       {
@@ -2397,7 +2397,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 176,
+        "citations": 177,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 884,
+        "citations": 885,
         "year": 2024
       },
       {
@@ -2445,7 +2445,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 169,
+        "citations": 170,
         "year": 2024
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2025
       },
       {
@@ -2493,7 +2493,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 330,
+        "citations": 331,
         "year": 2019
       },
       {
@@ -2605,7 +2605,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 57,
+        "citations": 58,
         "year": 2023
       },
       {
@@ -2629,7 +2629,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2021
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 448,
+        "citations": 449,
         "year": 2023
       },
       {
@@ -2669,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 412,
+        "citations": 413,
         "year": 2023
       },
       {
@@ -2685,7 +2685,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 185,
+        "citations": 186,
         "year": 2021
       },
       {
@@ -2697,20 +2697,20 @@
         "year": 2020
       },
       {
+        "id": "W4296162381",
+        "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 123,
+        "year": 2022
+      },
+      {
         "id": "W2887381903",
         "label": "Toxic Colors: The Use of Deep Learning for Predicting Toxicity of Compounds Merely from Their Graphic Images",
         "field": "Computer Science",
         "type": "citing",
         "citations": 122,
         "year": 2018
-      },
-      {
-        "id": "W4296162381",
-        "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
-        "field": "Computer Science",
-        "type": "citing",
-        "citations": 122,
-        "year": 2022
       },
       {
         "id": "W4376104934",
@@ -2741,7 +2741,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 68,
+        "citations": 70,
         "year": 2023
       },
       {
@@ -2813,7 +2813,7 @@
         "label": "Commensal inter-bacterial interactions shaping the microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 77,
+        "citations": 78,
         "year": 2021
       },
       {
@@ -2821,7 +2821,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 164,
+        "citations": 165,
         "year": 2022
       },
       {
@@ -2829,7 +2829,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 125,
+        "citations": 126,
         "year": 2021
       },
       {
@@ -2877,7 +2877,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 296,
+        "citations": 297,
         "year": 2019
       },
       {
@@ -2885,7 +2885,7 @@
         "label": "Natural Products as a Foundation for Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 134,
+        "citations": 135,
         "year": 2019
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 135,
+        "citations": 136,
         "year": 2024
       },
       {
@@ -3021,7 +3021,7 @@
         "label": "A lipidome landscape of aging in mice",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2024
       },
       {
@@ -3029,7 +3029,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2024
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4710,
+        "citations": 4711,
         "year": 2017
       },
       {
@@ -3109,7 +3109,7 @@
         "label": "RNA sequestration in P-bodies sustains myeloid leukaemia",
         "field": "Medicine",
         "type": "citing",
-        "citations": 31,
+        "citations": 32,
         "year": 2024
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4768,
+        "citations": 4770,
         "year": 2021
       },
       {
@@ -3357,7 +3357,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 34,
+        "citations": 35,
         "year": 2022
       },
       {
@@ -3770,12 +3770,12 @@
       },
       {
         "source": "W2972433884",
-        "target": "W2887381903",
+        "target": "W4296162381",
         "strength": 0.5
       },
       {
         "source": "W2972433884",
-        "target": "W4296162381",
+        "target": "W2887381903",
         "strength": 0.5
       },
       {
