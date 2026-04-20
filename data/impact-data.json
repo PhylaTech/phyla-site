@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-19T07:42:24.761359+00:00",
+  "generated_at": "2026-04-20T08:24:19.451088+00:00",
   "summary": {
-    "total_citations": 2367,
+    "total_citations": 2368,
     "countries_reached": 76,
-    "citing_institutions": 3280,
+    "citing_institutions": 3281,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 350,
+      "cited_by_count": 351,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -475,7 +475,7 @@
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 58,
+      "citations": 59,
       "institutions": 51
     },
     {
@@ -515,7 +515,7 @@
       "country_code": "ZA",
       "lat": -30.6,
       "lon": 22.9,
-      "citations": 33,
+      "citations": 34,
       "institutions": 22
     },
     {
@@ -823,6 +823,14 @@
       "institutions": 3
     },
     {
+      "country": "Uganda",
+      "country_code": "UG",
+      "lat": 1.4,
+      "lon": 32.3,
+      "citations": 4,
+      "institutions": 3
+    },
+    {
       "country": "Slovakia",
       "country_code": "SK",
       "lat": 48.7,
@@ -853,14 +861,6 @@
       "lon": 43.7,
       "citations": 3,
       "institutions": 8
-    },
-    {
-      "country": "Uganda",
-      "country_code": "UG",
-      "lat": 1.4,
-      "lon": 32.3,
-      "citations": 3,
-      "institutions": 2
     },
     {
       "country": "Cameroon",
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 650,
+      "count": 651,
       "color": "#0891B2"
     },
     {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 350,
+        "citations": 351,
         "year": 2023
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 830,
+        "citations": 834,
         "year": 2021
       },
       {
@@ -2333,7 +2333,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 265,
+        "citations": 266,
         "year": 2021
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 885,
+        "citations": 888,
         "year": 2024
       },
       {
@@ -2629,7 +2629,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 132,
+        "citations": 133,
         "year": 2021
       },
       {
@@ -2653,7 +2653,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 632,
+        "citations": 633,
         "year": 2020
       },
       {
@@ -2677,7 +2677,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 249,
+        "citations": 250,
         "year": 2022
       },
       {
@@ -2717,7 +2717,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 141,
+        "citations": 142,
         "year": 2023
       },
       {
@@ -2797,7 +2797,7 @@
         "label": "Genetic innovations in animal\u2013microbe symbioses",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 151,
+        "citations": 152,
         "year": 2021
       },
       {
@@ -2821,7 +2821,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 165,
+        "citations": 166,
         "year": 2022
       },
       {
@@ -2877,7 +2877,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 297,
+        "citations": 298,
         "year": 2019
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4711,
+        "citations": 4716,
         "year": 2017
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4770,
+        "citations": 4773,
         "year": 2021
       },
       {
@@ -3453,7 +3453,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 33,
+        "citations": 34,
         "year": 2025
       },
       {
