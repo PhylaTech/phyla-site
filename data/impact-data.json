@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-21T08:06:24.296488+00:00",
+  "generated_at": "2026-04-22T08:02:32.606489+00:00",
   "summary": {
-    "total_citations": 2368,
+    "total_citations": 2369,
     "countries_reached": 76,
-    "citing_institutions": 3281,
+    "citing_institutions": 3287,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 351,
+      "cited_by_count": 352,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -356,7 +356,7 @@
       "lat": 39.8,
       "lon": -98.5,
       "citations": 936,
-      "institutions": 658
+      "institutions": 659
     },
     {
       "country": "China",
@@ -364,7 +364,7 @@
       "lat": 35.9,
       "lon": 104.2,
       "citations": 483,
-      "institutions": 579
+      "institutions": 580
     },
     {
       "country": "Germany",
@@ -379,8 +379,8 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 192,
-      "institutions": 155
+      "citations": 193,
+      "institutions": 157
     },
     {
       "country": "Canada",
@@ -388,7 +388,7 @@
       "lat": 56.1,
       "lon": -106.3,
       "citations": 138,
-      "institutions": 89
+      "institutions": 90
     },
     {
       "country": "France",
@@ -404,7 +404,7 @@
       "lat": 20.6,
       "lon": 78.9,
       "citations": 111,
-      "institutions": 139
+      "institutions": 140
     },
     {
       "country": "Switzerland",
@@ -483,7 +483,7 @@
       "country_code": "RU",
       "lat": 61.5,
       "lon": 105.3,
-      "citations": 42,
+      "citations": 43,
       "institutions": 30
     },
     {
@@ -1003,18 +1003,18 @@
       "citations": 40
     },
     {
+      "name": "University of California San Diego",
+      "lat": 32.71571,
+      "lon": -117.16472,
+      "country_code": "US",
+      "citations": 39
+    },
+    {
       "name": "Friedrich Schiller University Jena",
       "lat": 50.92878,
       "lon": 11.5899,
       "country_code": "DE",
       "citations": 39
-    },
-    {
-      "name": "University of California San Diego",
-      "lat": 32.71571,
-      "lon": -117.16472,
-      "country_code": "US",
-      "citations": 38
     },
     {
       "name": "ETH Zurich",
@@ -1220,6 +1220,13 @@
       "citations": 22
     },
     {
+      "name": "The University of Melbourne",
+      "lat": -37.814,
+      "lon": 144.96332,
+      "country_code": "AU",
+      "citations": 21
+    },
+    {
       "name": "University of North Carolina at Greensboro",
       "lat": 36.07263946533203,
       "lon": -79.79197692871094,
@@ -1231,13 +1238,6 @@
       "lat": 51.50853,
       "lon": -0.12574,
       "country_code": "GB",
-      "citations": 20
-    },
-    {
-      "name": "The University of Melbourne",
-      "lat": -37.814,
-      "lon": 144.96332,
-      "country_code": "AU",
       "citations": 20
     },
     {
@@ -1486,6 +1486,13 @@
       "citations": 14
     },
     {
+      "name": "Cleveland Clinic",
+      "lat": 41.4995,
+      "lon": -81.69541,
+      "country_code": "US",
+      "citations": 14
+    },
+    {
       "name": "University of Zurich",
       "lat": 47.36667,
       "lon": 8.55,
@@ -1521,13 +1528,6 @@
       "citations": 14
     },
     {
-      "name": "Weill Cornell Medicine",
-      "lat": 40.71427,
-      "lon": -74.00597,
-      "country_code": "US",
-      "citations": 14
-    },
-    {
       "name": "Helmholtz Centre for Infection Research",
       "lat": 52.26594,
       "lon": 10.52673,
@@ -1538,6 +1538,13 @@
       "name": "Pennsylvania State University",
       "lat": 40.79339,
       "lon": -77.86,
+      "country_code": "US",
+      "citations": 14
+    },
+    {
+      "name": "Weill Cornell Medicine",
+      "lat": 40.71427,
+      "lon": -74.00597,
       "country_code": "US",
       "citations": 14
     },
@@ -1567,13 +1574,6 @@
       "lat": 55.95206,
       "lon": -3.19648,
       "country_code": "GB",
-      "citations": 13
-    },
-    {
-      "name": "Cleveland Clinic",
-      "lat": 41.4995,
-      "lon": -81.69541,
-      "country_code": "US",
       "citations": 13
     },
     {
@@ -1665,6 +1665,13 @@
       "lat": 52.37403,
       "lon": 4.88969,
       "country_code": "NL",
+      "citations": 12
+    },
+    {
+      "name": "European Bioinformatics Institute",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
       "citations": 12
     },
     {
@@ -1766,13 +1773,6 @@
       "citations": 11
     },
     {
-      "name": "European Bioinformatics Institute",
-      "lat": 52.2,
-      "lon": 0.11667,
-      "country_code": "GB",
-      "citations": 11
-    },
-    {
       "name": "UNSW Sydney",
       "lat": -33.86785,
       "lon": 151.20732,
@@ -1819,6 +1819,13 @@
       "lat": 40.416500091552734,
       "lon": -3.7025599479675293,
       "country_code": "ES",
+      "citations": 11
+    },
+    {
+      "name": "Stanford Medicine",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
       "citations": 11
     },
     {
@@ -1903,13 +1910,6 @@
       "lat": 52.158329010009766,
       "lon": 4.493060111999512,
       "country_code": "NL",
-      "citations": 10
-    },
-    {
-      "name": "Stanford Medicine",
-      "lat": 37.42411,
-      "lon": -122.16608,
-      "country_code": "US",
       "citations": 10
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 175,
+      "count": 176,
       "color": "#3B82F6"
     },
     {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 351,
+        "citations": 352,
         "year": 2023
       },
       {
@@ -2373,7 +2373,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 308,
+        "citations": 309,
         "year": 2022
       },
       {
@@ -2397,7 +2397,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 177,
+        "citations": 178,
         "year": 2022
       },
       {
@@ -2413,7 +2413,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 112,
+        "citations": 114,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 888,
+        "citations": 890,
         "year": 2024
       },
       {
@@ -2453,7 +2453,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 155,
+        "citations": 156,
         "year": 2024
       },
       {
@@ -2493,7 +2493,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 331,
+        "citations": 332,
         "year": 2019
       },
       {
@@ -2517,7 +2517,7 @@
         "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2021
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 353,
+        "citations": 355,
         "year": 2024
       },
       {
@@ -2637,7 +2637,7 @@
         "label": "Ancient plant-like terpene biosynthesis in corals",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2022
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 449,
+        "citations": 451,
         "year": 2023
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 799,
+        "citations": 802,
         "year": 2021
       },
       {
@@ -2853,7 +2853,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 44,
+        "citations": 45,
         "year": 2023
       },
       {
@@ -2893,7 +2893,7 @@
         "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
         "field": "Medicine",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2017
       },
       {
@@ -2965,7 +2965,7 @@
         "label": "Localized production of defence chemicals by intracellular symbionts of Haliclona sponges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2019
       },
       {
@@ -2989,7 +2989,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2024
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4716,
+        "citations": 4720,
         "year": 2017
       },
       {
@@ -3133,7 +3133,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 181,
+        "citations": 182,
         "year": 2022
       },
       {
@@ -3189,7 +3189,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 347,
+        "citations": 348,
         "year": 2019
       },
       {
@@ -3229,7 +3229,7 @@
         "label": "Expanding Antarctic biogeography: microbial ecology of Antarctic island soils",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 14,
+        "citations": 15,
         "year": 2023
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4773,
+        "citations": 4780,
         "year": 2021
       },
       {
@@ -3377,20 +3377,20 @@
         "year": 2021
       },
       {
+        "id": "W4411466233",
+        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 14,
+        "year": 2025
+      },
+      {
         "id": "W3087184317",
         "label": "Pathway Engineering of Anthracyclines: Blazing Trails in Natural Product Glycodiversification",
         "field": "Medicine",
         "type": "citing",
         "citations": 14,
         "year": 2020
-      },
-      {
-        "id": "W4411466233",
-        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 13,
-        "year": 2025
       },
       {
         "id": "W4413683243",
@@ -4285,12 +4285,12 @@
       },
       {
         "source": "W2946278827",
-        "target": "W3087184317",
+        "target": "W4411466233",
         "strength": 0.5
       },
       {
         "source": "W2946278827",
-        "target": "W4411466233",
+        "target": "W3087184317",
         "strength": 0.5
       },
       {
