@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-22T08:02:32.606489+00:00",
+  "generated_at": "2026-04-23T08:08:00.858680+00:00",
   "summary": {
-    "total_citations": 2369,
+    "total_citations": 2370,
     "countries_reached": 76,
-    "citing_institutions": 3287,
+    "citing_institutions": 3289,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 378,
+      "cited_by_count": 379,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -371,7 +371,7 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 277,
+      "citations": 278,
       "institutions": 169
     },
     {
@@ -427,15 +427,15 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 88,
-      "institutions": 41
+      "citations": 89,
+      "institutions": 42
     },
     {
       "country": "Brazil",
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 82,
+      "citations": 83,
       "institutions": 66
     },
     {
@@ -463,20 +463,20 @@
       "institutions": 85
     },
     {
+      "country": "South Korea",
+      "country_code": "KR",
+      "lat": 35.9,
+      "lon": 127.8,
+      "citations": 60,
+      "institutions": 51
+    },
+    {
       "country": "Japan",
       "country_code": "JP",
       "lat": 36.2,
       "lon": 138.3,
       "citations": 59,
       "institutions": 69
-    },
-    {
-      "country": "South Korea",
-      "country_code": "KR",
-      "lat": 35.9,
-      "lon": 127.8,
-      "citations": 59,
-      "institutions": 51
     },
     {
       "country": "Russia",
@@ -507,7 +507,7 @@
       "country_code": "AT",
       "lat": 47.5,
       "lon": 14.6,
-      "citations": 36,
+      "citations": 37,
       "institutions": 20
     },
     {
@@ -703,6 +703,14 @@
       "institutions": 11
     },
     {
+      "country": "Indonesia",
+      "country_code": "ID",
+      "lat": -0.8,
+      "lon": 113.9,
+      "citations": 8,
+      "institutions": 9
+    },
+    {
       "country": "Bangladesh",
       "country_code": "BD",
       "lat": 23.7,
@@ -716,14 +724,6 @@
       "lat": 45.9,
       "lon": 24.9,
       "citations": 8,
-      "institutions": 8
-    },
-    {
-      "country": "Indonesia",
-      "country_code": "ID",
-      "lat": -0.8,
-      "lon": 113.9,
-      "citations": 7,
       "institutions": 8
     },
     {
@@ -1283,6 +1283,13 @@
       "citations": 19
     },
     {
+      "name": "University of Vienna",
+      "lat": 48.20849,
+      "lon": 16.37208,
+      "country_code": "AT",
+      "citations": 19
+    },
+    {
       "name": "University of California, Berkeley",
       "lat": 37.87159,
       "lon": -122.27275,
@@ -1308,13 +1315,6 @@
       "lat": 30.58333,
       "lon": 114.26667,
       "country_code": "CN",
-      "citations": 18
-    },
-    {
-      "name": "University of Vienna",
-      "lat": 48.20849,
-      "lon": 16.37208,
-      "country_code": "AT",
       "citations": 18
     },
     {
@@ -1801,6 +1801,13 @@
       "citations": 11
     },
     {
+      "name": "Medical University of Vienna",
+      "lat": 48.20849,
+      "lon": 16.37208,
+      "country_code": "AT",
+      "citations": 11
+    },
+    {
       "name": "Saarland University",
       "lat": 49.23262,
       "lon": 7.00982,
@@ -1875,13 +1882,6 @@
       "lat": 59.32938003540039,
       "lon": 18.068710327148438,
       "country_code": "SE",
-      "citations": 10
-    },
-    {
-      "name": "Medical University of Vienna",
-      "lat": 48.20849,
-      "lon": 16.37208,
-      "country_code": "AT",
       "citations": 10
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 859,
+      "count": 860,
       "color": "#14B8A6"
     },
     {
@@ -2101,7 +2101,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 378,
+        "citations": 379,
         "year": 2022
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 834,
+        "citations": 836,
         "year": 2021
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 890,
+        "citations": 893,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 280,
+        "citations": 281,
         "year": 2025
       },
       {
@@ -2589,7 +2589,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 68,
+        "citations": 69,
         "year": 2024
       },
       {
@@ -2725,7 +2725,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2023
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 802,
+        "citations": 803,
         "year": 2021
       },
       {
@@ -2997,7 +2997,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 84,
+        "citations": 85,
         "year": 2023
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4720,
+        "citations": 4722,
         "year": 2017
       },
       {
@@ -3157,7 +3157,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2022
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4780,
+        "citations": 4783,
         "year": 2021
       },
       {
