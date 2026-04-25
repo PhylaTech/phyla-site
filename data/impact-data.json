@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-24T08:17:33.724497+00:00",
+  "generated_at": "2026-04-25T07:42:25.174155+00:00",
   "summary": {
     "total_citations": 2371,
     "countries_reached": 76,
-    "citing_institutions": 3289,
+    "citing_institutions": 3294,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 936,
-      "institutions": 659
+      "citations": 937,
+      "institutions": 660
     },
     {
       "country": "China",
@@ -411,7 +411,7 @@
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
-      "citations": 93,
+      "citations": 94,
       "institutions": 42
     },
     {
@@ -636,7 +636,7 @@
       "lat": 23.7,
       "lon": 121.0,
       "citations": 19,
-      "institutions": 30
+      "institutions": 34
     },
     {
       "country": "Qatar",
@@ -743,6 +743,14 @@
       "institutions": 7
     },
     {
+      "country": "Philippines",
+      "country_code": "PH",
+      "lat": 12.9,
+      "lon": 121.8,
+      "citations": 6,
+      "institutions": 6
+    },
+    {
       "country": "Slovenia",
       "country_code": "SI",
       "lat": 46.2,
@@ -771,14 +779,6 @@
       "country_code": "BG",
       "lat": 42.7,
       "lon": 25.5,
-      "citations": 5,
-      "institutions": 6
-    },
-    {
-      "country": "Philippines",
-      "country_code": "PH",
-      "lat": 12.9,
-      "lon": 121.8,
       "citations": 5,
       "institutions": 6
     },
@@ -996,6 +996,13 @@
       "citations": 46
     },
     {
+      "name": "University of California San Diego",
+      "lat": 32.71571,
+      "lon": -117.16472,
+      "country_code": "US",
+      "citations": 42
+    },
+    {
       "name": "Harvard University",
       "lat": 42.3751,
       "lon": -71.10561,
@@ -1003,10 +1010,10 @@
       "citations": 40
     },
     {
-      "name": "University of California San Diego",
-      "lat": 32.71571,
-      "lon": -117.16472,
-      "country_code": "US",
+      "name": "ETH Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 39
     },
     {
@@ -1015,13 +1022,6 @@
       "lon": 11.5899,
       "country_code": "DE",
       "citations": 39
-    },
-    {
-      "name": "ETH Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 38
     },
     {
       "name": "University of Copenhagen",
@@ -1077,7 +1077,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 32
+      "citations": 33
     },
     {
       "name": "Universidade de S\u00e3o Paulo",
@@ -1318,6 +1318,13 @@
       "citations": 18
     },
     {
+      "name": "The University of Sydney",
+      "lat": -33.86785,
+      "lon": 151.20732,
+      "country_code": "AU",
+      "citations": 17
+    },
+    {
       "name": "University of Illinois Chicago",
       "lat": 41.85003,
       "lon": -87.65005,
@@ -1357,13 +1364,6 @@
       "lat": 42.65258,
       "lon": -73.75623,
       "country_code": "US",
-      "citations": 16
-    },
-    {
-      "name": "The University of Sydney",
-      "lat": -33.86785,
-      "lon": 151.20732,
-      "country_code": "AU",
       "citations": 16
     },
     {
@@ -1843,6 +1843,13 @@
       "citations": 11
     },
     {
+      "name": "University of Maryland, College Park",
+      "lat": 38.98067,
+      "lon": -76.93692,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
       "name": "University of North Carolina at Chapel Hill",
       "lat": 35.9132,
       "lon": -79.05584,
@@ -1861,6 +1868,13 @@
       "lat": 51.50853,
       "lon": -0.12574,
       "country_code": "GB",
+      "citations": 10
+    },
+    {
+      "name": "The University of Queensland",
+      "lat": -27.46794,
+      "lon": 153.02809,
+      "country_code": "AU",
       "citations": 10
     },
     {
@@ -1924,13 +1938,6 @@
       "lat": 35.68949890136719,
       "lon": 139.69171142578125,
       "country_code": "JP",
-      "citations": 10
-    },
-    {
-      "name": "University of Maryland, College Park",
-      "lat": 38.98067,
-      "lon": -76.93692,
-      "country_code": "US",
       "citations": 10
     },
     {
@@ -2001,13 +2008,6 @@
       "lat": 42.358428955078125,
       "lon": -71.05976867675781,
       "country_code": "US",
-      "citations": 9
-    },
-    {
-      "name": "The University of Queensland",
-      "lat": -27.46794,
-      "lon": 153.02809,
-      "country_code": "AU",
       "citations": 9
     }
   ],
@@ -2365,7 +2365,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 368,
+        "citations": 369,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 895,
+        "citations": 899,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 281,
+        "citations": 282,
         "year": 2025
       },
       {
@@ -2469,7 +2469,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2024
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 355,
+        "citations": 356,
         "year": 2024
       },
       {
@@ -2589,7 +2589,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 71,
+        "citations": 72,
         "year": 2024
       },
       {
@@ -2669,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 413,
+        "citations": 414,
         "year": 2023
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 136,
+        "citations": 137,
         "year": 2024
       },
       {
@@ -2989,7 +2989,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2024
       },
       {
@@ -2997,7 +2997,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2023
       },
       {
@@ -3069,7 +3069,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 113,
+        "citations": 114,
         "year": 2022
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4786,
+        "citations": 4788,
         "year": 2021
       },
       {
