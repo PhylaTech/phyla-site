@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-25T07:42:25.174155+00:00",
+  "generated_at": "2026-04-26T07:50:48.548632+00:00",
   "summary": {
-    "total_citations": 2371,
+    "total_citations": 2373,
     "countries_reached": 76,
-    "citing_institutions": 3294,
+    "citing_institutions": 3295,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 379,
+      "cited_by_count": 381,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -396,7 +396,7 @@
       "lat": 46.2,
       "lon": 2.2,
       "citations": 114,
-      "institutions": 174
+      "institutions": 175
     },
     {
       "country": "India",
@@ -459,7 +459,7 @@
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 66,
+      "citations": 67,
       "institutions": 85
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 860,
+      "count": 861,
       "color": "#14B8A6"
     },
     {
@@ -2034,7 +2034,7 @@
     },
     {
       "name": "Environmental Science",
-      "count": 126,
+      "count": 127,
       "color": "#8B5CF6"
     },
     {
@@ -2101,7 +2101,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 379,
+        "citations": 381,
         "year": 2022
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 838,
+        "citations": 841,
         "year": 2021
       },
       {
@@ -2317,7 +2317,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 311,
+        "citations": 312,
         "year": 2022
       },
       {
@@ -2389,7 +2389,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 217,
+        "citations": 218,
         "year": 2021
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 899,
+        "citations": 903,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 282,
+        "citations": 284,
         "year": 2025
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 64,
+        "citations": 65,
         "year": 2025
       },
       {
@@ -2493,7 +2493,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 334,
+        "citations": 335,
         "year": 2019
       },
       {
@@ -2549,7 +2549,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 356,
+        "citations": 357,
         "year": 2024
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 452,
+        "citations": 453,
         "year": 2023
       },
       {
@@ -2669,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 414,
+        "citations": 415,
         "year": 2023
       },
       {
@@ -2677,7 +2677,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 251,
+        "citations": 252,
         "year": 2022
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 805,
+        "citations": 807,
         "year": 2021
       },
       {
@@ -2861,7 +2861,7 @@
         "label": "Multi-Omic Single-Shot Technology for Integrated Proteome and Lipidome Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 38,
+        "citations": 39,
         "year": 2021
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 137,
+        "citations": 138,
         "year": 2024
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4723,
+        "citations": 4728,
         "year": 2017
       },
       {
@@ -3213,7 +3213,7 @@
         "label": "Evolution of combinatorial diversity in trans-acyltransferase polyketide synthase assembly lines across bacteria",
         "field": "Medicine",
         "type": "citing",
-        "citations": 53,
+        "citations": 54,
         "year": 2021
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4788,
+        "citations": 4794,
         "year": 2021
       },
       {
