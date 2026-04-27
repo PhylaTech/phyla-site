@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T07:50:48.548632+00:00",
+  "generated_at": "2026-04-27T08:39:37.633079+00:00",
   "summary": {
     "total_citations": 2373,
     "countries_reached": 76,
@@ -2373,7 +2373,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 309,
+        "citations": 310,
         "year": 2022
       },
       {
@@ -2453,7 +2453,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 156,
+        "citations": 157,
         "year": 2024
       },
       {
@@ -2477,7 +2477,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 65,
+        "citations": 66,
         "year": 2024
       },
       {
@@ -2781,7 +2781,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 326,
+        "citations": 327,
         "year": 2021
       },
       {
@@ -3333,7 +3333,7 @@
         "label": "Calothrixamides A and B from the Cultured Cyanobacterium <i>Calothrix</i> sp. UIC 10520",
         "field": "Medicine",
         "type": "citing",
-        "citations": 16,
+        "citations": 17,
         "year": 2018
       },
       {
