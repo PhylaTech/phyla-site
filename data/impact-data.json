@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T08:39:37.633079+00:00",
+  "generated_at": "2026-04-28T08:37:44.842956+00:00",
   "summary": {
     "total_citations": 2373,
     "countries_reached": 76,
@@ -2365,7 +2365,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 369,
+        "citations": 370,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 903,
+        "citations": 905,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 284,
+        "citations": 285,
         "year": 2025
       },
       {
@@ -2453,7 +2453,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 157,
+        "citations": 158,
         "year": 2024
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 807,
+        "citations": 808,
         "year": 2021
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4728,
+        "citations": 4729,
         "year": 2017
       },
       {
@@ -3069,7 +3069,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 114,
+        "citations": 115,
         "year": 2022
       },
       {
