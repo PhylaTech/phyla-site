@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-29T08:30:37.459792+00:00",
+  "generated_at": "2026-04-30T08:34:21.057124+00:00",
   "summary": {
     "total_citations": 2373,
     "countries_reached": 76,
-    "citing_institutions": 3293,
+    "citing_institutions": 3295,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -145,7 +145,7 @@
       "journal": "Applied and Environmental Microbiology",
       "year": 2016,
       "cited_by_count": 55,
-      "field": "Medicine",
+      "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
       ],
@@ -364,7 +364,7 @@
       "lat": 35.9,
       "lon": 104.2,
       "citations": 484,
-      "institutions": 580
+      "institutions": 581
     },
     {
       "country": "Germany",
@@ -911,6 +911,14 @@
       "institutions": 4
     },
     {
+      "country": "Tunisia",
+      "country_code": "TN",
+      "lat": 34.0,
+      "lon": 9.5,
+      "citations": 2,
+      "institutions": 3
+    },
+    {
       "country": "Venezuela",
       "country_code": "VE",
       "lat": 6.4,
@@ -941,14 +949,6 @@
       "lon": 27.9,
       "citations": 1,
       "institutions": 1
-    },
-    {
-      "country": "Tunisia",
-      "country_code": "TN",
-      "lat": 34.0,
-      "lon": 9.5,
-      "citations": 1,
-      "institutions": 2
     },
     {
       "country": "Ethiopia",
@@ -2014,42 +2014,42 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 861,
+      "count": 883,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 652,
+      "count": 635,
       "color": "#0891B2"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 216,
+      "count": 215,
       "color": "#0EA5E9"
     },
     {
       "name": "Computer Science",
-      "count": 176,
+      "count": 174,
       "color": "#3B82F6"
     },
     {
       "name": "Environmental Science",
-      "count": 127,
+      "count": 124,
       "color": "#8B5CF6"
     },
     {
       "name": "Chemistry",
-      "count": 71,
+      "count": 72,
       "color": "#A78BFA"
     },
     {
       "name": "Immunology and Microbiology",
-      "count": 63,
+      "count": 66,
       "color": "#2DD4BF"
     },
     {
       "name": "Engineering",
-      "count": 29,
+      "count": 30,
       "color": "#06B6D4"
     },
     {
@@ -2059,29 +2059,29 @@
     },
     {
       "name": "Neuroscience",
-      "count": 17,
+      "count": 13,
       "color": "#7C3AED"
     },
     {
-      "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 13,
+      "name": "Nursing",
+      "count": 11,
       "color": "#34D399"
     },
     {
       "name": "Other Disciplines",
-      "count": 47,
+      "count": 49,
       "includes": [
-        "Nursing (10)",
-        "Earth and Planetary Sciences (6)",
+        "Pharmacology, Toxicology and Pharmaceutics (10)",
+        "Earth and Planetary Sciences (7)",
         "Mathematics (5)",
-        "Psychology (5)",
         "Decision Sciences (5)",
+        "Psychology (4)",
         "Social Sciences (4)",
         "Energy (4)",
         "Dentistry (3)",
         "Chemical Engineering (3)",
-        "Health Professions (1)",
-        "Veterinary (1)"
+        "Veterinary (3)",
+        "Health Professions (1)"
       ],
       "color": "#94A3B8"
     }
@@ -2171,7 +2171,7 @@
       {
         "id": "W2513652105",
         "label": "Lack of Overt Genome Reduction in the Bryostatin-Producing Bryozoan Symbiont \u201cCandidatus Endobugula sertula\u201d",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
         "citations": 55,
         "year": 2016
@@ -2389,7 +2389,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 218,
+        "citations": 219,
         "year": 2021
       },
       {
@@ -2405,7 +2405,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2022
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 906,
+        "citations": 907,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 287,
+        "citations": 288,
         "year": 2025
       },
       {
@@ -2581,7 +2581,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 73,
+        "citations": 74,
         "year": 2023
       },
       {
@@ -2613,7 +2613,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 293,
+        "citations": 294,
         "year": 2020
       },
       {
@@ -2661,7 +2661,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 455,
+        "citations": 456,
         "year": 2023
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4731,
+        "citations": 4732,
         "year": 2017
       },
       {
@@ -3267,7 +3267,7 @@
       {
         "id": "W3209300026",
         "label": "Genome-centric metagenomics reveals insights into the evolution and metabolism of a new free-living group in Rhizobiales",
-        "field": "Environmental Science",
+        "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 10,
         "year": 2021
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4795,
+        "citations": 4799,
         "year": 2021
       },
       {
