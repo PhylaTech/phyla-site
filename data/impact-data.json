@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-30T08:34:21.057124+00:00",
+  "generated_at": "2026-05-01T08:24:10.431554+00:00",
   "summary": {
-    "total_citations": 2373,
+    "total_citations": 2374,
     "countries_reached": 76,
-    "citing_institutions": 3295,
+    "citing_institutions": 3296,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 352,
+      "cited_by_count": 353,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 484,
-      "institutions": 581
+      "citations": 485,
+      "institutions": 582
     },
     {
       "country": "Germany",
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 635,
+      "count": 636,
       "color": "#0891B2"
     },
     {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 352,
+        "citations": 353,
         "year": 2023
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 842,
+        "citations": 843,
         "year": 2021
       },
       {
