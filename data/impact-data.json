@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T08:24:10.431554+00:00",
+  "generated_at": "2026-05-02T07:55:49.720811+00:00",
   "summary": {
     "total_citations": 2374,
     "countries_reached": 76,
@@ -2381,7 +2381,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 256,
+        "citations": 257,
         "year": 2023
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 907,
+        "citations": 910,
         "year": 2024
       },
       {
@@ -2461,7 +2461,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 88,
+        "citations": 89,
         "year": 2024
       },
       {
@@ -2485,7 +2485,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 65,
+        "citations": 66,
         "year": 2025
       },
       {
@@ -2669,7 +2669,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 415,
+        "citations": 416,
         "year": 2023
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 138,
+        "citations": 139,
         "year": 2024
       },
       {
@@ -2989,7 +2989,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2024
       },
       {
@@ -3005,7 +3005,7 @@
         "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 54,
+        "citations": 55,
         "year": 2024
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4732,
+        "citations": 4734,
         "year": 2017
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4799,
+        "citations": 4801,
         "year": 2021
       },
       {
