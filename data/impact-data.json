@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T07:55:49.720811+00:00",
+  "generated_at": "2026-05-03T08:11:22.242783+00:00",
   "summary": {
     "total_citations": 2374,
     "countries_reached": 76,
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 843,
+        "citations": 845,
         "year": 2021
       },
       {
@@ -2701,7 +2701,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2022
       },
       {
@@ -3037,7 +3037,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4734,
+        "citations": 4735,
         "year": 2017
       },
       {
@@ -3133,7 +3133,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 183,
+        "citations": 184,
         "year": 2022
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4801,
+        "citations": 4803,
         "year": 2021
       },
       {
