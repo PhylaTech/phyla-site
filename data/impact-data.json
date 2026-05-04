@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-03T08:11:22.242783+00:00",
+  "generated_at": "2026-05-04T08:40:59.120425+00:00",
   "summary": {
-    "total_citations": 2374,
+    "total_citations": 2375,
     "countries_reached": 76,
     "citing_institutions": 3296,
     "disciplines_impacted": 22,
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 353,
+      "cited_by_count": 354,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -380,7 +380,7 @@
       "lat": 55.4,
       "lon": -3.4,
       "citations": 193,
-      "institutions": 157
+      "institutions": 158
     },
     {
       "country": "Canada",
@@ -2039,7 +2039,7 @@
     },
     {
       "name": "Chemistry",
-      "count": 72,
+      "count": 73,
       "color": "#A78BFA"
     },
     {
@@ -2109,7 +2109,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 353,
+        "citations": 354,
         "year": 2023
       },
       {
@@ -2301,7 +2301,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 845,
+        "citations": 846,
         "year": 2021
       },
       {
@@ -2373,7 +2373,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 310,
+        "citations": 311,
         "year": 2022
       },
       {
@@ -2381,7 +2381,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 257,
+        "citations": 258,
         "year": 2023
       },
       {
@@ -2429,7 +2429,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 910,
+        "citations": 912,
         "year": 2024
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 288,
+        "citations": 290,
         "year": 2025
       },
       {
@@ -2709,7 +2709,7 @@
         "label": "Toxic Colors: The Use of Deep Learning for Predicting Toxicity of Compounds Merely from Their Graphic Images",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2018
       },
       {
@@ -2781,7 +2781,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 327,
+        "citations": 328,
         "year": 2021
       },
       {
@@ -2829,7 +2829,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 126,
+        "citations": 127,
         "year": 2021
       },
       {
@@ -2973,7 +2973,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 139,
+        "citations": 140,
         "year": 2024
       },
       {
@@ -3341,7 +3341,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4803,
+        "citations": 4805,
         "year": 2021
       },
       {
@@ -3357,7 +3357,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 35,
+        "citations": 36,
         "year": 2022
       },
       {
