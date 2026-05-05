@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-04T08:40:59.120425+00:00",
+  "generated_at": "2026-05-05T08:22:47.748980+00:00",
   "summary": {
-    "total_citations": 2375,
+    "total_citations": 2376,
     "countries_reached": 76,
-    "citing_institutions": 3296,
+    "citing_institutions": 3297,
     "disciplines_impacted": 22,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 381,
+      "cited_by_count": 382,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -371,8 +371,8 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 278,
-      "institutions": 169
+      "citations": 279,
+      "institutions": 170
     },
     {
       "country": "United Kingdom",
@@ -2024,7 +2024,7 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 215,
+      "count": 216,
       "color": "#0EA5E9"
     },
     {
@@ -2101,7 +2101,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 381,
+        "citations": 382,
         "year": 2022
       },
       {
@@ -2365,7 +2365,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 371,
+        "citations": 372,
         "year": 2022
       },
       {
@@ -2437,7 +2437,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 290,
+        "citations": 291,
         "year": 2025
       },
       {
@@ -2773,7 +2773,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 808,
+        "citations": 809,
         "year": 2021
       },
       {
@@ -2789,7 +2789,7 @@
         "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 208,
+        "citations": 209,
         "year": 2020
       },
       {
@@ -3133,7 +3133,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 184,
+        "citations": 185,
         "year": 2022
       },
       {
