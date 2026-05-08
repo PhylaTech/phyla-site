@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-07T08:46:40.447068+00:00",
+  "generated_at": "2026-05-08T07:52:38.860769+00:00",
   "summary": {
-    "total_citations": 2388,
+    "total_citations": 2391,
     "countries_reached": 76,
-    "citing_institutions": 3306,
-    "disciplines_impacted": 22,
+    "citing_institutions": 3307,
+    "disciplines_impacted": 23,
     "total_publications": 26
   },
   "publications": [
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 383,
+      "cited_by_count": 385,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -131,7 +131,7 @@
       "title": "A large-scale genome\u2013lipid association map guides lipid identification",
       "journal": "Nature Metabolism",
       "year": 2020,
-      "cited_by_count": 57,
+      "cited_by_count": 58,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 942,
-      "institutions": 661
+      "citations": 943,
+      "institutions": 662
     },
     {
       "country": "China",
@@ -403,7 +403,7 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 111,
+      "citations": 112,
       "institutions": 140
     },
     {
@@ -1045,18 +1045,18 @@
       "citations": 37
     },
     {
+      "name": "Cornell University",
+      "lat": 42.44063,
+      "lon": -76.49661,
+      "country_code": "US",
+      "citations": 35
+    },
+    {
       "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
       "citations": 35
-    },
-    {
-      "name": "Cornell University",
-      "lat": 42.44063,
-      "lon": -76.49661,
-      "country_code": "US",
-      "citations": 34
     },
     {
       "name": "Leibniz-Institut f\u00fcr Naturstoff-Forschung und Infektionsbiologie e. V. - Hans-Kn\u00f6ll-Institut (HKI)",
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 887,
+      "count": 888,
       "color": "#14B8A6"
     },
     {
@@ -2034,7 +2034,7 @@
     },
     {
       "name": "Environmental Science",
-      "count": 124,
+      "count": 125,
       "color": "#8B5CF6"
     },
     {
@@ -2069,7 +2069,7 @@
     },
     {
       "name": "Other Disciplines",
-      "count": 49,
+      "count": 50,
       "includes": [
         "Pharmacology, Toxicology and Pharmaceutics (10)",
         "Earth and Planetary Sciences (7)",
@@ -2081,7 +2081,8 @@
         "Dentistry (3)",
         "Chemical Engineering (3)",
         "Veterinary (3)",
-        "Health Professions (1)"
+        "Health Professions (1)",
+        "Physics and Astronomy (1)"
       ],
       "color": "#94A3B8"
     }
@@ -2101,7 +2102,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 383,
+        "citations": 385,
         "year": 2022
       },
       {
@@ -2165,7 +2166,7 @@
         "label": "A large-scale genome\u2013lipid association map guides lipid identification",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 57,
+        "citations": 58,
         "year": 2020
       },
       {
@@ -2301,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 847,
+        "citations": 849,
         "year": 2021
       },
       {
@@ -2309,7 +2310,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 319,
+        "citations": 321,
         "year": 2021
       },
       {
@@ -2317,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 313,
+        "citations": 314,
         "year": 2022
       },
       {
@@ -2365,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 372,
+        "citations": 373,
         "year": 2022
       },
       {
@@ -2381,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 260,
+        "citations": 262,
         "year": 2023
       },
       {
@@ -2413,7 +2414,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 114,
+        "citations": 115,
         "year": 2022
       },
       {
@@ -2421,7 +2422,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 94,
+        "citations": 95,
         "year": 2024
       },
       {
@@ -2429,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 921,
+        "citations": 926,
         "year": 2024
       },
       {
@@ -2437,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 295,
+        "citations": 297,
         "year": 2025
       },
       {
@@ -2549,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 364,
+        "citations": 365,
         "year": 2024
       },
       {
@@ -2557,7 +2558,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2022
       },
       {
@@ -2597,7 +2598,7 @@
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Medicine",
         "type": "citing",
-        "citations": 69,
+        "citations": 70,
         "year": 2024
       },
       {
@@ -2613,7 +2614,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 294,
+        "citations": 296,
         "year": 2020
       },
       {
@@ -2629,7 +2630,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 133,
+        "citations": 134,
         "year": 2021
       },
       {
@@ -2653,7 +2654,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 634,
+        "citations": 635,
         "year": 2020
       },
       {
@@ -2749,7 +2750,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 56,
+        "citations": 57,
         "year": 2024
       },
       {
@@ -2773,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 810,
+        "citations": 811,
         "year": 2021
       },
       {
@@ -2861,7 +2862,7 @@
         "label": "Multi-Omic Single-Shot Technology for Integrated Proteome and Lipidome Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2021
       },
       {
@@ -2877,7 +2878,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 298,
+        "citations": 299,
         "year": 2019
       },
       {
@@ -2897,20 +2898,20 @@
         "year": 2017
       },
       {
+        "id": "W2910293385",
+        "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 102,
+        "year": 2019
+      },
+      {
         "id": "W2782169385",
         "label": "Accessing chemical diversity from the uncultivated symbionts of small marine animals",
         "field": "Medicine",
         "type": "citing",
         "citations": 101,
         "year": 2018
-      },
-      {
-        "id": "W2910293385",
-        "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 101,
-        "year": 2019
       },
       {
         "id": "W2893448478",
@@ -3093,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4741,
+        "citations": 4743,
         "year": 2017
       },
       {
@@ -3149,7 +3150,7 @@
         "label": "Microbial interactions trigger the production of antibiotics",
         "field": "Medicine",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2018
       },
       {
@@ -3341,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4816,
+        "citations": 4820,
         "year": 2021
       },
       {
@@ -3349,7 +3350,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2022
       },
       {
@@ -3369,20 +3370,20 @@
         "year": 2020
       },
       {
+        "id": "W4411466233",
+        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 15,
+        "year": 2025
+      },
+      {
         "id": "W3214451869",
         "label": "Synthetic Biology Advanced Natural Product Discovery",
         "field": "Medicine",
         "type": "citing",
         "citations": 15,
         "year": 2021
-      },
-      {
-        "id": "W4411466233",
-        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 14,
-        "year": 2025
       },
       {
         "id": "W3087184317",
@@ -3920,12 +3921,12 @@
       },
       {
         "source": "W2513652105",
-        "target": "W2782169385",
+        "target": "W2910293385",
         "strength": 0.5
       },
       {
         "source": "W2513652105",
-        "target": "W2910293385",
+        "target": "W2782169385",
         "strength": 0.5
       },
       {
@@ -4280,12 +4281,12 @@
       },
       {
         "source": "W2946278827",
-        "target": "W3214451869",
+        "target": "W4411466233",
         "strength": 0.5
       },
       {
         "source": "W2946278827",
-        "target": "W4411466233",
+        "target": "W3214451869",
         "strength": 0.5
       },
       {
