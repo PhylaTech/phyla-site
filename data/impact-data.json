@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-08T07:52:38.860769+00:00",
+  "generated_at": "2026-05-09T08:06:52.172894+00:00",
   "summary": {
-    "total_citations": 2391,
+    "total_citations": 2392,
     "countries_reached": 76,
-    "citing_institutions": 3307,
+    "citing_institutions": 3311,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 640,
+      "cited_by_count": 641,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 488,
-      "institutions": 585
+      "citations": 489,
+      "institutions": 589
     },
     {
       "country": "Germany",
@@ -575,6 +575,14 @@
       "institutions": 13
     },
     {
+      "country": "Egypt",
+      "country_code": "EG",
+      "lat": 26.8,
+      "lon": 30.8,
+      "citations": 22,
+      "institutions": 21
+    },
+    {
       "country": "Norway",
       "country_code": "NO",
       "lat": 60.5,
@@ -589,14 +597,6 @@
       "lon": -102.6,
       "citations": 22,
       "institutions": 11
-    },
-    {
-      "country": "Egypt",
-      "country_code": "EG",
-      "lat": 26.8,
-      "lon": 30.8,
-      "citations": 21,
-      "institutions": 21
     },
     {
       "country": "Iran",
@@ -1059,6 +1059,13 @@
       "citations": 35
     },
     {
+      "name": "University of Chinese Academy of Sciences",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 34
+    },
+    {
       "name": "Leibniz-Institut f\u00fcr Naturstoff-Forschung und Infektionsbiologie e. V. - Hans-Kn\u00f6ll-Institut (HKI)",
       "lat": 50.92878,
       "lon": 11.5899,
@@ -1070,13 +1077,6 @@
       "lat": 37.42411,
       "lon": -122.16608,
       "country_code": "US",
-      "citations": 33
-    },
-    {
-      "name": "University of Chinese Academy of Sciences",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
       "citations": 33
     },
     {
@@ -1857,6 +1857,13 @@
       "citations": 11
     },
     {
+      "name": "Xiamen University",
+      "lat": 24.47978973388672,
+      "lon": 118.08187103271484,
+      "country_code": "CN",
+      "citations": 11
+    },
+    {
       "name": "University of North Carolina at Chapel Hill",
       "lat": 35.9132,
       "lon": -79.05584,
@@ -1903,6 +1910,13 @@
       "lat": 59.32938003540039,
       "lon": 18.068710327148438,
       "country_code": "SE",
+      "citations": 10
+    },
+    {
+      "name": "Suez Canal University",
+      "lat": 30.622777938842773,
+      "lon": 32.275001525878906,
+      "country_code": "EG",
       "citations": 10
     },
     {
@@ -1969,13 +1983,6 @@
       "citations": 10
     },
     {
-      "name": "Xiamen University",
-      "lat": 24.47978973388672,
-      "lon": 118.08187103271484,
-      "country_code": "CN",
-      "citations": 10
-    },
-    {
       "name": "Board of the Swiss Federal Institutes of Technology",
       "lat": 47.366668701171875,
       "lon": 8.550000190734863,
@@ -2002,13 +2009,6 @@
       "lon": 37.61556,
       "country_code": "RU",
       "citations": 10
-    },
-    {
-      "name": "Cleveland Clinic Lerner College of Medicine",
-      "lat": 41.4995,
-      "lon": -81.69541,
-      "country_code": "US",
-      "citations": 9
     }
   ],
   "disciplines": [
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 641,
+      "count": 642,
       "color": "#0891B2"
     },
     {
@@ -2094,7 +2094,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 640,
+        "citations": 641,
         "year": 2020
       },
       {
@@ -2358,7 +2358,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 214,
+        "citations": 215,
         "year": 2021
       },
       {
@@ -2422,7 +2422,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 95,
+        "citations": 97,
         "year": 2024
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 926,
+        "citations": 927,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 297,
+        "citations": 299,
         "year": 2025
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 161,
+        "citations": 162,
         "year": 2024
       },
       {
@@ -2462,7 +2462,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 89,
+        "citations": 90,
         "year": 2024
       },
       {
@@ -2542,7 +2542,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 81,
+        "citations": 83,
         "year": 2023
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 365,
+        "citations": 366,
         "year": 2024
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 417,
+        "citations": 418,
         "year": 2023
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 252,
+        "citations": 253,
         "year": 2022
       },
       {
@@ -2718,7 +2718,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 142,
+        "citations": 143,
         "year": 2023
       },
       {
@@ -2726,7 +2726,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 99,
+        "citations": 100,
         "year": 2023
       },
       {
@@ -2838,7 +2838,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 121,
+        "citations": 122,
         "year": 2021
       },
       {
@@ -3010,20 +3010,20 @@
         "year": 2024
       },
       {
+        "id": "W4402906567",
+        "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 53,
+        "year": 2024
+      },
+      {
         "id": "W4324013663",
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 52,
         "year": 2023
-      },
-      {
-        "id": "W4402906567",
-        "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
-        "field": "Immunology and Microbiology",
-        "type": "citing",
-        "citations": 52,
-        "year": 2024
       },
       {
         "id": "W4394753092",
@@ -3046,7 +3046,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2023
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4743,
+        "citations": 4744,
         "year": 2017
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4820,
+        "citations": 4823,
         "year": 2021
       },
       {
@@ -4006,12 +4006,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4324013663",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4324013663",
         "strength": 0.5
       },
       {
