@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-09T08:06:52.172894+00:00",
+  "generated_at": "2026-05-10T08:20:11.673226+00:00",
   "summary": {
-    "total_citations": 2392,
+    "total_citations": 2394,
     "countries_reached": 76,
     "citing_institutions": 3311,
     "disciplines_impacted": 23,
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 360,
+      "cited_by_count": 362,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -1304,16 +1304,16 @@
       "citations": 18
     },
     {
-      "name": "Shanghai Jiao Tong University",
-      "lat": 31.222219467163086,
-      "lon": 121.45806121826172,
+      "name": "Huazhong University of Science and Technology",
+      "lat": 30.58333,
+      "lon": 114.26667,
       "country_code": "CN",
       "citations": 18
     },
     {
-      "name": "Huazhong University of Science and Technology",
-      "lat": 30.58333,
-      "lon": 114.26667,
+      "name": "Shanghai Jiao Tong University",
+      "lat": 31.222219467163086,
+      "lon": 121.45806121826172,
       "country_code": "CN",
       "citations": 18
     },
@@ -1913,17 +1913,17 @@
       "citations": 10
     },
     {
-      "name": "Suez Canal University",
-      "lat": 30.622777938842773,
-      "lon": 32.275001525878906,
-      "country_code": "EG",
-      "citations": 10
-    },
-    {
       "name": "Union Hospital",
       "lat": 22.360681533813477,
       "lon": 114.17512512207031,
       "country_code": "CN",
+      "citations": 10
+    },
+    {
+      "name": "Suez Canal University",
+      "lat": 30.622777938842773,
+      "lon": 32.275001525878906,
+      "country_code": "EG",
       "citations": 10
     },
     {
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 642,
+      "count": 643,
       "color": "#0891B2"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 174,
+      "count": 175,
       "color": "#3B82F6"
     },
     {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 360,
+        "citations": 362,
         "year": 2023
       },
       {
@@ -2338,19 +2338,19 @@
         "year": 2021
       },
       {
-        "id": "W3173003579",
-        "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
+        "id": "W3156257761",
+        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
         "field": "Medicine",
         "type": "citing",
         "citations": 227,
         "year": 2021
       },
       {
-        "id": "W3156257761",
-        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
+        "id": "W3173003579",
+        "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 226,
+        "citations": 227,
         "year": 2021
       },
       {
@@ -2374,7 +2374,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 312,
+        "citations": 313,
         "year": 2022
       },
       {
@@ -2398,7 +2398,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 178,
+        "citations": 179,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 927,
+        "citations": 930,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 299,
+        "citations": 301,
         "year": 2025
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 366,
+        "citations": 367,
         "year": 2024
       },
       {
@@ -2574,7 +2574,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2022
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 462,
+        "citations": 463,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 418,
+        "citations": 420,
         "year": 2023
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 253,
+        "citations": 255,
         "year": 2022
       },
       {
@@ -2878,7 +2878,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 299,
+        "citations": 300,
         "year": 2019
       },
       {
@@ -3014,7 +3014,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 53,
+        "citations": 55,
         "year": 2024
       },
       {
@@ -3054,7 +3054,7 @@
         "label": "Discovery of a Potent and Selective Targeted NSD2 Degrader for the Reduction of H3K36me2",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 59,
+        "citations": 60,
         "year": 2023
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4744,
+        "citations": 4745,
         "year": 2017
       },
       {
@@ -3102,7 +3102,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 396,
+        "citations": 397,
         "year": 2020
       },
       {
@@ -3110,7 +3110,7 @@
         "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 134,
+        "citations": 135,
         "year": 2022
       },
       {
@@ -3126,7 +3126,7 @@
         "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 218,
+        "citations": 219,
         "year": 2018
       },
       {
@@ -3142,7 +3142,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 150,
+        "citations": 151,
         "year": 2018
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4823,
+        "citations": 4824,
         "year": 2021
       },
       {
@@ -3526,12 +3526,12 @@
       },
       {
         "source": "W3091839106",
-        "target": "W3173003579",
+        "target": "W3156257761",
         "strength": 0.5
       },
       {
         "source": "W3091839106",
-        "target": "W3156257761",
+        "target": "W3173003579",
         "strength": 0.5
       },
       {
