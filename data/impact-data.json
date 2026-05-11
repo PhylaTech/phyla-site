@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-10T08:20:11.673226+00:00",
+  "generated_at": "2026-05-11T09:57:34.704645+00:00",
   "summary": {
-    "total_citations": 2394,
+    "total_citations": 2399,
     "countries_reached": 76,
-    "citing_institutions": 3311,
+    "citing_institutions": 3314,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 641,
+      "cited_by_count": 642,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 385,
+      "cited_by_count": 388,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 362,
+      "cited_by_count": 363,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -363,15 +363,15 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 489,
-      "institutions": 589
+      "citations": 490,
+      "institutions": 591
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 280,
+      "citations": 281,
       "institutions": 170
     },
     {
@@ -495,20 +495,20 @@
       "institutions": 16
     },
     {
+      "country": "Austria",
+      "country_code": "AT",
+      "lat": 47.5,
+      "lon": 14.6,
+      "citations": 38,
+      "institutions": 20
+    },
+    {
       "country": "Poland",
       "country_code": "PL",
       "lat": 51.9,
       "lon": 19.1,
       "citations": 38,
       "institutions": 30
-    },
-    {
-      "country": "Austria",
-      "country_code": "AT",
-      "lat": 47.5,
-      "lon": 14.6,
-      "citations": 37,
-      "institutions": 20
     },
     {
       "country": "South Africa",
@@ -663,20 +663,20 @@
       "institutions": 13
     },
     {
+      "country": "Chile",
+      "country_code": "CL",
+      "lat": -35.7,
+      "lon": -71.5,
+      "citations": 13,
+      "institutions": 10
+    },
+    {
       "country": "Hungary",
       "country_code": "HU",
       "lat": 47.2,
       "lon": 19.5,
       "citations": 12,
       "institutions": 15
-    },
-    {
-      "country": "Chile",
-      "country_code": "CL",
-      "lat": -35.7,
-      "lon": -71.5,
-      "citations": 12,
-      "institutions": 9
     },
     {
       "country": "Luxembourg",
@@ -1269,6 +1269,13 @@
       "citations": 20
     },
     {
+      "name": "University of Vienna",
+      "lat": 48.20849,
+      "lon": 16.37208,
+      "country_code": "AT",
+      "citations": 20
+    },
+    {
       "name": "Max Planck Institute for Evolutionary Biology",
       "lat": 54.16202,
       "lon": 10.42765,
@@ -1280,13 +1287,6 @@
       "lat": 47.60621,
       "lon": -122.33207,
       "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "University of Vienna",
-      "lat": 48.20849,
-      "lon": 16.37208,
-      "country_code": "AT",
       "citations": 19
     },
     {
@@ -1451,6 +1451,13 @@
       "citations": 15
     },
     {
+      "name": "Helmholtz Centre for Infection Research",
+      "lat": 52.26594,
+      "lon": 10.52673,
+      "country_code": "DE",
+      "citations": 15
+    },
+    {
       "name": "University of Pennsylvania",
       "lat": 39.95238,
       "lon": -75.16362,
@@ -1462,6 +1469,13 @@
       "lat": 40.79339,
       "lon": -77.86,
       "country_code": "US",
+      "citations": 15
+    },
+    {
+      "name": "Tsinghua University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 15
     },
     {
@@ -1535,13 +1549,6 @@
       "citations": 14
     },
     {
-      "name": "Helmholtz Centre for Infection Research",
-      "lat": 52.26594,
-      "lon": 10.52673,
-      "country_code": "DE",
-      "citations": 14
-    },
-    {
       "name": "Weill Cornell Medicine",
       "lat": 40.71427,
       "lon": -74.00597,
@@ -1553,13 +1560,6 @@
       "lat": 48.68333,
       "lon": 2.13333,
       "country_code": "FR",
-      "citations": 14
-    },
-    {
-      "name": "Tsinghua University",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
       "citations": 14
     },
     {
@@ -1595,6 +1595,13 @@
       "lat": 44.97997,
       "lon": -93.26384,
       "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "German Center for Infection Research",
+      "lat": 52.26594,
+      "lon": 10.52673,
+      "country_code": "DE",
       "citations": 13
     },
     {
@@ -1654,13 +1661,6 @@
       "citations": 12
     },
     {
-      "name": "German Center for Infection Research",
-      "lat": 52.26594,
-      "lon": 10.52673,
-      "country_code": "DE",
-      "citations": 12
-    },
-    {
       "name": "Karolinska Institutet",
       "lat": 59.32938003540039,
       "lon": 18.068710327148438,
@@ -1679,6 +1679,20 @@
       "lat": 52.2,
       "lon": 0.11667,
       "country_code": "GB",
+      "citations": 12
+    },
+    {
+      "name": "Saarland University",
+      "lat": 49.23262,
+      "lon": 7.00982,
+      "country_code": "DE",
+      "citations": 12
+    },
+    {
+      "name": "Helmholtz Institute for Pharmaceutical Research Saarland",
+      "lat": 49.25752639770508,
+      "lon": 7.041704177856445,
+      "country_code": "DE",
       "citations": 12
     },
     {
@@ -1805,20 +1819,6 @@
       "lat": 48.20849,
       "lon": 16.37208,
       "country_code": "AT",
-      "citations": 11
-    },
-    {
-      "name": "Saarland University",
-      "lat": 49.23262,
-      "lon": 7.00982,
-      "country_code": "DE",
-      "citations": 11
-    },
-    {
-      "name": "Helmholtz Institute for Pharmaceutical Research Saarland",
-      "lat": 49.25752639770508,
-      "lon": 7.041704177856445,
-      "country_code": "DE",
       "citations": 11
     },
     {
@@ -2014,12 +2014,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 888,
+      "count": 891,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 643,
+      "count": 645,
       "color": "#0891B2"
     },
     {
@@ -2094,7 +2094,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 641,
+        "citations": 642,
         "year": 2020
       },
       {
@@ -2102,7 +2102,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 385,
+        "citations": 388,
         "year": 2022
       },
       {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 362,
+        "citations": 363,
         "year": 2023
       },
       {
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 314,
+        "citations": 315,
         "year": 2022
       },
       {
@@ -2358,7 +2358,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 215,
+        "citations": 216,
         "year": 2021
       },
       {
@@ -2398,7 +2398,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 179,
+        "citations": 180,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 930,
+        "citations": 932,
         "year": 2024
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 68,
+        "citations": 69,
         "year": 2025
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 367,
+        "citations": 368,
         "year": 2024
       },
       {
@@ -2558,7 +2558,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 125,
+        "citations": 126,
         "year": 2022
       },
       {
@@ -2718,7 +2718,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 143,
+        "citations": 144,
         "year": 2023
       },
       {
@@ -2726,7 +2726,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2023
       },
       {
@@ -2742,7 +2742,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 70,
+        "citations": 71,
         "year": 2023
       },
       {
@@ -2766,7 +2766,7 @@
         "label": "Volatile Organic Compounds Analysis as a Potential Novel Screening Tool for Breast Cancer: A Systematic Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 46,
+        "citations": 47,
         "year": 2022
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 811,
+        "citations": 812,
         "year": 2021
       },
       {
@@ -2990,7 +2990,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2024
       },
       {
@@ -3038,7 +3038,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 115,
+        "citations": 116,
         "year": 2022
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4745,
+        "citations": 4749,
         "year": 2017
       },
       {
@@ -3102,7 +3102,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 397,
+        "citations": 398,
         "year": 2020
       },
       {
@@ -3454,7 +3454,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 34,
+        "citations": 35,
         "year": 2025
       },
       {
