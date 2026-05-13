@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-12T08:51:17.368469+00:00",
+  "generated_at": "2026-05-13T08:56:17.242437+00:00",
   "summary": {
     "total_citations": 2399,
     "countries_reached": 76,
-    "citing_institutions": 3314,
+    "citing_institutions": 3318,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -355,15 +355,15 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 943,
-      "institutions": 662
+      "citations": 944,
+      "institutions": 666
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 490,
+      "citations": 491,
       "institutions": 591
     },
     {
@@ -1049,7 +1049,7 @@
       "lat": 42.44063,
       "lon": -76.49661,
       "country_code": "US",
-      "citations": 35
+      "citations": 36
     },
     {
       "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
@@ -1084,7 +1084,7 @@
       "lat": 23.11667,
       "lon": 113.25,
       "country_code": "CN",
-      "citations": 30
+      "citations": 31
     },
     {
       "name": "Universidade de S\u00e3o Paulo",
@@ -1675,6 +1675,13 @@
       "citations": 12
     },
     {
+      "name": "Baylor College of Medicine",
+      "lat": 29.76328,
+      "lon": -95.36327,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
       "name": "European Bioinformatics Institute",
       "lat": 52.2,
       "lon": 0.11667,
@@ -1777,13 +1784,6 @@
       "lat": 43.70643,
       "lon": -79.39864,
       "country_code": "CA",
-      "citations": 11
-    },
-    {
-      "name": "Baylor College of Medicine",
-      "lat": 29.76328,
-      "lon": -95.36327,
-      "country_code": "US",
       "citations": 11
     },
     {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 849,
+        "citations": 851,
         "year": 2021
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 373,
+        "citations": 374,
         "year": 2022
       },
       {
@@ -2390,7 +2390,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 219,
+        "citations": 220,
         "year": 2021
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 932,
+        "citations": 934,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 301,
+        "citations": 303,
         "year": 2025
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 162,
+        "citations": 163,
         "year": 2024
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 335,
+        "citations": 336,
         "year": 2019
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 368,
+        "citations": 369,
         "year": 2024
       },
       {
@@ -2566,7 +2566,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2023
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 463,
+        "citations": 464,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 420,
+        "citations": 422,
         "year": 2023
       },
       {
@@ -2686,7 +2686,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 187,
+        "citations": 188,
         "year": 2021
       },
       {
@@ -2726,7 +2726,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2023
       },
       {
@@ -2782,7 +2782,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 330,
+        "citations": 331,
         "year": 2021
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 142,
+        "citations": 143,
         "year": 2024
       },
       {
@@ -3038,7 +3038,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 116,
+        "citations": 117,
         "year": 2022
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4824,
+        "citations": 4826,
         "year": 2021
       },
       {
