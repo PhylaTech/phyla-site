@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-13T08:56:17.242437+00:00",
+  "generated_at": "2026-05-14T08:48:48.988102+00:00",
   "summary": {
-    "total_citations": 2399,
+    "total_citations": 2400,
     "countries_reached": 76,
-    "citing_institutions": 3318,
+    "citing_institutions": 3321,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 363,
+      "cited_by_count": 364,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -651,8 +651,8 @@
       "country_code": "TR",
       "lat": 39.0,
       "lon": 35.2,
-      "citations": 14,
-      "institutions": 21
+      "citations": 15,
+      "institutions": 23
     },
     {
       "country": "United Arab Emirates",
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 175,
+      "count": 176,
       "color": "#3B82F6"
     },
     {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 363,
+        "citations": 364,
         "year": 2023
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 851,
+        "citations": 852,
         "year": 2021
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 374,
+        "citations": 376,
         "year": 2022
       },
       {
@@ -2374,7 +2374,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 313,
+        "citations": 316,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 934,
+        "citations": 935,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 303,
+        "citations": 306,
         "year": 2025
       },
       {
@@ -2606,7 +2606,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2023
       },
       {
@@ -2718,7 +2718,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 144,
+        "citations": 145,
         "year": 2023
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 143,
+        "citations": 144,
         "year": 2024
       },
       {
@@ -3022,7 +3022,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 52,
+        "citations": 53,
         "year": 2023
       },
       {
@@ -3030,7 +3030,7 @@
         "label": "A lipidome landscape of aging in mice",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 51,
+        "citations": 52,
         "year": 2024
       },
       {
@@ -3046,7 +3046,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2023
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4749,
+        "citations": 4750,
         "year": 2017
       },
       {
@@ -3134,7 +3134,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 185,
+        "citations": 186,
         "year": 2022
       },
       {
@@ -3230,7 +3230,7 @@
         "label": "Expanding Antarctic biogeography: microbial ecology of Antarctic island soils",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 15,
+        "citations": 16,
         "year": 2023
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4826,
+        "citations": 4829,
         "year": 2021
       },
       {
@@ -3358,7 +3358,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 36,
+        "citations": 37,
         "year": 2022
       },
       {
@@ -3454,7 +3454,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 35,
+        "citations": 36,
         "year": 2025
       },
       {
