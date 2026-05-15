@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-14T08:48:48.988102+00:00",
+  "generated_at": "2026-05-15T09:22:18.855232+00:00",
   "summary": {
-    "total_citations": 2400,
+    "total_citations": 2401,
     "countries_reached": 76,
-    "citing_institutions": 3321,
+    "citing_institutions": 3329,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 364,
+      "cited_by_count": 365,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -379,8 +379,8 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 194,
-      "institutions": 159
+      "citations": 195,
+      "institutions": 160
     },
     {
       "country": "Canada",
@@ -403,8 +403,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 112,
-      "institutions": 140
+      "citations": 113,
+      "institutions": 141
     },
     {
       "country": "Switzerland",
@@ -515,8 +515,8 @@
       "country_code": "ZA",
       "lat": -30.6,
       "lon": 22.9,
-      "citations": 34,
-      "institutions": 22
+      "citations": 35,
+      "institutions": 23
     },
     {
       "country": "New Zealand",
@@ -563,8 +563,16 @@
       "country_code": "CZ",
       "lat": 49.8,
       "lon": 15.5,
-      "citations": 24,
-      "institutions": 17
+      "citations": 25,
+      "institutions": 19
+    },
+    {
+      "country": "Norway",
+      "country_code": "NO",
+      "lat": 60.5,
+      "lon": 8.5,
+      "citations": 23,
+      "institutions": 19
     },
     {
       "country": "Singapore",
@@ -581,14 +589,6 @@
       "lon": 30.8,
       "citations": 22,
       "institutions": 21
-    },
-    {
-      "country": "Norway",
-      "country_code": "NO",
-      "lat": 60.5,
-      "lon": 8.5,
-      "citations": 22,
-      "institutions": 18
     },
     {
       "country": "Mexico",
@@ -707,8 +707,8 @@
       "country_code": "ID",
       "lat": -0.8,
       "lon": 113.9,
-      "citations": 8,
-      "institutions": 9
+      "citations": 9,
+      "institutions": 10
     },
     {
       "country": "Bangladesh",
@@ -719,6 +719,14 @@
       "institutions": 8
     },
     {
+      "country": "Thailand",
+      "country_code": "TH",
+      "lat": 15.9,
+      "lon": 100.9,
+      "citations": 8,
+      "institutions": 7
+    },
+    {
       "country": "Romania",
       "country_code": "RO",
       "lat": 45.9,
@@ -727,12 +735,12 @@
       "institutions": 8
     },
     {
-      "country": "Thailand",
-      "country_code": "TH",
-      "lat": 15.9,
-      "lon": 100.9,
+      "country": "Vietnam",
+      "country_code": "VN",
+      "lat": 14.1,
+      "lon": 108.3,
       "citations": 7,
-      "institutions": 7
+      "institutions": 9
     },
     {
       "country": "Colombia",
@@ -759,12 +767,12 @@
       "institutions": 2
     },
     {
-      "country": "Vietnam",
-      "country_code": "VN",
-      "lat": 14.1,
-      "lon": 108.3,
+      "country": "Kenya",
+      "country_code": "KE",
+      "lat": -0.0,
+      "lon": 37.9,
       "citations": 6,
-      "institutions": 8
+      "institutions": 4
     },
     {
       "country": "Argentina",
@@ -787,14 +795,6 @@
       "country_code": "PE",
       "lat": -9.2,
       "lon": -75.0,
-      "citations": 5,
-      "institutions": 4
-    },
-    {
-      "country": "Kenya",
-      "country_code": "KE",
-      "lat": -0.0,
-      "lon": 37.9,
       "citations": 5,
       "institutions": 4
     },
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 176,
+      "count": 177,
       "color": "#3B82F6"
     },
     {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 364,
+        "citations": 365,
         "year": 2023
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 852,
+        "citations": 854,
         "year": 2021
       },
       {
@@ -2338,16 +2338,16 @@
         "year": 2021
       },
       {
-        "id": "W3156257761",
-        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
+        "id": "W3173003579",
+        "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 227,
+        "citations": 228,
         "year": 2021
       },
       {
-        "id": "W3173003579",
-        "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
+        "id": "W3156257761",
+        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
         "field": "Medicine",
         "type": "citing",
         "citations": 227,
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 376,
+        "citations": 377,
         "year": 2022
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 262,
+        "citations": 263,
         "year": 2023
       },
       {
@@ -2414,7 +2414,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 115,
+        "citations": 116,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 935,
+        "citations": 940,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 306,
+        "citations": 309,
         "year": 2025
       },
       {
@@ -2446,7 +2446,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 172,
+        "citations": 173,
         "year": 2024
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 163,
+        "citations": 164,
         "year": 2024
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 69,
+        "citations": 70,
         "year": 2025
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 336,
+        "citations": 337,
         "year": 2019
       },
       {
@@ -2542,7 +2542,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 83,
+        "citations": 84,
         "year": 2023
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 369,
+        "citations": 370,
         "year": 2024
       },
       {
@@ -2558,7 +2558,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 126,
+        "citations": 127,
         "year": 2022
       },
       {
@@ -2566,7 +2566,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 105,
+        "citations": 106,
         "year": 2023
       },
       {
@@ -2654,7 +2654,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 635,
+        "citations": 636,
         "year": 2020
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 464,
+        "citations": 465,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 422,
+        "citations": 423,
         "year": 2023
       },
       {
@@ -2686,7 +2686,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 188,
+        "citations": 189,
         "year": 2021
       },
       {
@@ -2702,7 +2702,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 124,
+        "citations": 126,
         "year": 2022
       },
       {
@@ -2742,7 +2742,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 71,
+        "citations": 72,
         "year": 2023
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 812,
+        "citations": 814,
         "year": 2021
       },
       {
@@ -2846,7 +2846,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 53,
+        "citations": 54,
         "year": 2022
       },
       {
@@ -2878,7 +2878,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 300,
+        "citations": 301,
         "year": 2019
       },
       {
@@ -2934,7 +2934,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 499,
+        "citations": 500,
         "year": 2019
       },
       {
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 161,
+        "citations": 162,
         "year": 2019
       },
       {
@@ -3046,7 +3046,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2023
       },
       {
@@ -3078,7 +3078,7 @@
         "label": "RNA sequestration in P-bodies sustains myeloid leukaemia",
         "field": "Medicine",
         "type": "citing",
-        "citations": 32,
+        "citations": 33,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4750,
+        "citations": 4754,
         "year": 2017
       },
       {
@@ -3190,7 +3190,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 348,
+        "citations": 349,
         "year": 2019
       },
       {
@@ -3214,7 +3214,7 @@
         "label": "Evolution of combinatorial diversity in trans-acyltransferase polyketide synthase assembly lines across bacteria",
         "field": "Medicine",
         "type": "citing",
-        "citations": 54,
+        "citations": 55,
         "year": 2021
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4829,
+        "citations": 4835,
         "year": 2021
       },
       {
@@ -3358,7 +3358,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 37,
+        "citations": 38,
         "year": 2022
       },
       {
@@ -3526,12 +3526,12 @@
       },
       {
         "source": "W3091839106",
-        "target": "W3156257761",
+        "target": "W3173003579",
         "strength": 0.5
       },
       {
         "source": "W3091839106",
-        "target": "W3173003579",
+        "target": "W3156257761",
         "strength": 0.5
       },
       {
