@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-16T08:15:42.908832+00:00",
+  "generated_at": "2026-05-17T08:31:06.529570+00:00",
   "summary": {
-    "total_citations": 2401,
+    "total_citations": 2404,
     "countries_reached": 76,
-    "citing_institutions": 3329,
+    "citing_institutions": 3332,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 388,
+      "cited_by_count": 389,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 365,
+      "cited_by_count": 367,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 491,
-      "institutions": 591
+      "citations": 492,
+      "institutions": 593
     },
     {
       "country": "Germany",
@@ -459,8 +459,8 @@
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 67,
-      "institutions": 85
+      "citations": 68,
+      "institutions": 86
     },
     {
       "country": "South Korea",
@@ -2014,17 +2014,17 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 891,
+      "count": 892,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 645,
+      "count": 646,
       "color": "#0891B2"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 217,
+      "count": 218,
       "color": "#0EA5E9"
     },
     {
@@ -2102,7 +2102,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 388,
+        "citations": 389,
         "year": 2022
       },
       {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 365,
+        "citations": 367,
         "year": 2023
       },
       {
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 315,
+        "citations": 316,
         "year": 2022
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 263,
+        "citations": 264,
         "year": 2023
       },
       {
@@ -2406,7 +2406,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2022
       },
       {
@@ -2414,7 +2414,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 116,
+        "citations": 117,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 940,
+        "citations": 942,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 309,
+        "citations": 311,
         "year": 2025
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 70,
+        "citations": 71,
         "year": 2025
       },
       {
@@ -2502,7 +2502,7 @@
         "label": "<i>Burkholderia</i> as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 137,
+        "citations": 138,
         "year": 2019
       },
       {
@@ -2542,7 +2542,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 84,
+        "citations": 85,
         "year": 2023
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 370,
+        "citations": 372,
         "year": 2024
       },
       {
@@ -2566,7 +2566,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 423,
+        "citations": 424,
         "year": 2023
       },
       {
@@ -2750,7 +2750,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 57,
+        "citations": 58,
         "year": 2024
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 814,
+        "citations": 815,
         "year": 2021
       },
       {
@@ -2934,7 +2934,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 500,
+        "citations": 502,
         "year": 2019
       },
       {
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 162,
+        "citations": 163,
         "year": 2019
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4754,
+        "citations": 4756,
         "year": 2017
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4835,
+        "citations": 4841,
         "year": 2021
       },
       {
@@ -3374,7 +3374,7 @@
         "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
         "field": "Medicine",
         "type": "citing",
-        "citations": 15,
+        "citations": 16,
         "year": 2025
       },
       {
