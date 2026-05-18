@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-17T08:31:06.529570+00:00",
+  "generated_at": "2026-05-18T10:21:53.960763+00:00",
   "summary": {
-    "total_citations": 2404,
+    "total_citations": 2405,
     "countries_reached": 76,
-    "citing_institutions": 3332,
+    "citing_institutions": 3340,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 367,
+      "cited_by_count": 368,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -355,7 +355,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 944,
+      "citations": 945,
       "institutions": 666
     },
     {
@@ -371,7 +371,7 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 281,
+      "citations": 282,
       "institutions": 170
     },
     {
@@ -379,15 +379,15 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 195,
-      "institutions": 160
+      "citations": 196,
+      "institutions": 162
     },
     {
       "country": "Canada",
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 138,
+      "citations": 139,
       "institutions": 89
     },
     {
@@ -395,8 +395,8 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 114,
-      "institutions": 174
+      "citations": 115,
+      "institutions": 176
     },
     {
       "country": "India",
@@ -411,7 +411,7 @@
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
-      "citations": 94,
+      "citations": 95,
       "institutions": 42
     },
     {
@@ -419,7 +419,7 @@
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
-      "citations": 92,
+      "citations": 93,
       "institutions": 88
     },
     {
@@ -427,7 +427,7 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 90,
+      "citations": 91,
       "institutions": 42
     },
     {
@@ -443,15 +443,15 @@
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 75,
-      "institutions": 126
+      "citations": 76,
+      "institutions": 127
     },
     {
       "country": "Denmark",
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
-      "citations": 69,
+      "citations": 70,
       "institutions": 20
     },
     {
@@ -491,8 +491,8 @@
       "country_code": "SE",
       "lat": 60.1,
       "lon": 18.6,
-      "citations": 39,
-      "institutions": 16
+      "citations": 40,
+      "institutions": 18
     },
     {
       "country": "Austria",
@@ -571,7 +571,7 @@
       "country_code": "NO",
       "lat": 60.5,
       "lon": 8.5,
-      "citations": 23,
+      "citations": 24,
       "institutions": 19
     },
     {
@@ -615,20 +615,20 @@
       "institutions": 19
     },
     {
+      "country": "Greece",
+      "country_code": "GR",
+      "lat": 39.1,
+      "lon": 21.8,
+      "citations": 20,
+      "institutions": 21
+    },
+    {
       "country": "Israel",
       "country_code": "IL",
       "lat": 31.0,
       "lon": 34.8,
       "citations": 20,
       "institutions": 15
-    },
-    {
-      "country": "Greece",
-      "country_code": "GR",
-      "lat": 39.1,
-      "lon": 21.8,
-      "citations": 19,
-      "institutions": 21
     },
     {
       "country": "Taiwan",
@@ -831,6 +831,14 @@
       "institutions": 3
     },
     {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 4,
+      "institutions": 11
+    },
+    {
       "country": "Slovakia",
       "country_code": "SK",
       "lat": 48.7,
@@ -869,14 +877,6 @@
       "lon": 12.3,
       "citations": 3,
       "institutions": 3
-    },
-    {
-      "country": "Morocco",
-      "country_code": "MA",
-      "lat": 31.8,
-      "lon": -7.1,
-      "citations": 3,
-      "institutions": 10
     },
     {
       "country": "Croatia",
@@ -986,7 +986,7 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 49
+      "citations": 50
     },
     {
       "name": "Johannes Gutenberg University Mainz",
@@ -1007,7 +1007,7 @@
       "lat": 42.3751,
       "lon": -71.10561,
       "country_code": "US",
-      "citations": 40
+      "citations": 41
     },
     {
       "name": "ETH Zurich",
@@ -1094,18 +1094,18 @@
       "citations": 30
     },
     {
+      "name": "Inserm",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 29
+    },
+    {
       "name": "Lawrence Berkeley National Laboratory",
       "lat": 37.87158966064453,
       "lon": -122.27275085449219,
       "country_code": "US",
       "citations": 29
-    },
-    {
-      "name": "Inserm",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 28
     },
     {
       "name": "Fudan University",
@@ -1192,17 +1192,17 @@
       "citations": 24
     },
     {
-      "name": "University of Cambridge",
-      "lat": 52.2,
-      "lon": 0.11667,
-      "country_code": "GB",
-      "citations": 23
-    },
-    {
       "name": "Wageningen University & Research",
       "lat": 51.97,
       "lon": 5.66667,
       "country_code": "NL",
+      "citations": 24
+    },
+    {
+      "name": "University of Cambridge",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
       "citations": 23
     },
     {
@@ -1224,6 +1224,13 @@
       "lat": -37.814,
       "lon": 144.96332,
       "country_code": "AU",
+      "citations": 21
+    },
+    {
+      "name": "Technical University of Denmark",
+      "lat": 55.77043914794922,
+      "lon": 12.503780364990234,
+      "country_code": "DK",
       "citations": 21
     },
     {
@@ -1259,13 +1266,6 @@
       "lat": 34.05223,
       "lon": -118.24368,
       "country_code": "US",
-      "citations": 20
-    },
-    {
-      "name": "Technical University of Denmark",
-      "lat": 55.77043914794922,
-      "lon": 12.503780364990234,
-      "country_code": "DK",
       "citations": 20
     },
     {
@@ -1318,6 +1318,13 @@
       "citations": 18
     },
     {
+      "name": "Universit\u00e9 Paris Cit\u00e9",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 18
+    },
+    {
       "name": "The University of Sydney",
       "lat": -33.86785,
       "lon": 151.20732,
@@ -1339,13 +1346,6 @@
       "citations": 17
     },
     {
-      "name": "Universit\u00e9 Paris Cit\u00e9",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 17
-    },
-    {
       "name": "National Institutes of Health",
       "lat": 38.98067,
       "lon": -77.10026,
@@ -1364,6 +1364,13 @@
       "lat": 42.65258,
       "lon": -73.75623,
       "country_code": "US",
+      "citations": 16
+    },
+    {
+      "name": "Helmholtz Centre for Infection Research",
+      "lat": 52.26594,
+      "lon": 10.52673,
+      "country_code": "DE",
       "citations": 16
     },
     {
@@ -1437,6 +1444,13 @@
       "citations": 15
     },
     {
+      "name": "University of Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
+      "citations": 15
+    },
+    {
       "name": "Duke University",
       "lat": 35.99403,
       "lon": -78.89862,
@@ -1447,13 +1461,6 @@
       "name": "Technical University of Munich",
       "lat": 48.13743,
       "lon": 11.57549,
-      "country_code": "DE",
-      "citations": 15
-    },
-    {
-      "name": "Helmholtz Centre for Infection Research",
-      "lat": 52.26594,
-      "lon": 10.52673,
       "country_code": "DE",
       "citations": 15
     },
@@ -1469,6 +1476,13 @@
       "lat": 40.79339,
       "lon": -77.86,
       "country_code": "US",
+      "citations": 15
+    },
+    {
+      "name": "Universit\u00e9 Paris-Saclay",
+      "lat": 48.68333,
+      "lon": 2.13333,
+      "country_code": "FR",
       "citations": 15
     },
     {
@@ -1514,13 +1528,6 @@
       "citations": 14
     },
     {
-      "name": "University of Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 14
-    },
-    {
       "name": "Novo Nordisk Foundation",
       "lat": 55.67594,
       "lon": 12.56553,
@@ -1556,9 +1563,9 @@
       "citations": 14
     },
     {
-      "name": "Universit\u00e9 Paris-Saclay",
-      "lat": 48.68333,
-      "lon": 2.13333,
+      "name": "Sorbonne Universit\u00e9",
+      "lat": 48.85341,
+      "lon": 2.3488,
       "country_code": "FR",
       "citations": 14
     },
@@ -1619,7 +1626,7 @@
       "citations": 13
     },
     {
-      "name": "Sorbonne Universit\u00e9",
+      "name": "Assistance Publique \u2013 H\u00f4pitaux de Paris",
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
@@ -1703,17 +1710,17 @@
       "citations": 12
     },
     {
+      "name": "Instituto de Salud Carlos III",
+      "lat": 40.416500091552734,
+      "lon": -3.7025599479675293,
+      "country_code": "ES",
+      "citations": 12
+    },
+    {
       "name": "Johns Hopkins University",
       "lat": 39.29038,
       "lon": -76.61219,
       "country_code": "US",
-      "citations": 12
-    },
-    {
-      "name": "Assistance Publique \u2013 H\u00f4pitaux de Paris",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
       "citations": 12
     },
     {
@@ -1819,13 +1826,6 @@
       "lat": 48.20849,
       "lon": 16.37208,
       "country_code": "AT",
-      "citations": 11
-    },
-    {
-      "name": "Instituto de Salud Carlos III",
-      "lat": 40.416500091552734,
-      "lon": -3.7025599479675293,
-      "country_code": "ES",
       "citations": 11
     },
     {
@@ -1941,6 +1941,13 @@
       "citations": 10
     },
     {
+      "name": "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 10
+    },
+    {
       "name": "Second Affiliated Hospital of Zhejiang University",
       "lat": 30.25167465209961,
       "lon": 120.17648315429688,
@@ -2002,19 +2009,12 @@
       "lon": 26.532760620117188,
       "country_code": "ZA",
       "citations": 10
-    },
-    {
-      "name": "Russian Academy of Sciences",
-      "lat": 55.75222,
-      "lon": 37.61556,
-      "country_code": "RU",
-      "citations": 10
     }
   ],
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 892,
+      "count": 893,
       "color": "#14B8A6"
     },
     {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 367,
+        "citations": 368,
         "year": 2023
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 854,
+        "citations": 856,
         "year": 2021
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 942,
+        "citations": 944,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 311,
+        "citations": 312,
         "year": 2025
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 164,
+        "citations": 165,
         "year": 2024
       },
       {
@@ -2542,7 +2542,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2023
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 465,
+        "citations": 466,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 424,
+        "citations": 425,
         "year": 2023
       },
       {
@@ -2690,20 +2690,20 @@
         "year": 2021
       },
       {
+        "id": "W4296162381",
+        "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
+        "field": "Computer Science",
+        "type": "citing",
+        "citations": 127,
+        "year": 2022
+      },
+      {
         "id": "W3012320348",
         "label": "Virtual screening web servers: designing chemical probes and drug candidates in the cyberspace",
         "field": "Computer Science",
         "type": "citing",
         "citations": 126,
         "year": 2020
-      },
-      {
-        "id": "W4296162381",
-        "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
-        "field": "Computer Science",
-        "type": "citing",
-        "citations": 126,
-        "year": 2022
       },
       {
         "id": "W2887381903",
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 163,
+        "citations": 164,
         "year": 2019
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4756,
+        "citations": 4759,
         "year": 2017
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4841,
+        "citations": 4843,
         "year": 2021
       },
       {
@@ -3382,7 +3382,7 @@
         "label": "Synthetic Biology Advanced Natural Product Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 15,
+        "citations": 16,
         "year": 2021
       },
       {
@@ -3462,7 +3462,7 @@
         "label": "Peptide Property Prediction for Mass Spectrometry Using AI: An Introduction to State of the Art Models",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 5,
+        "citations": 6,
         "year": 2025
       },
       {
@@ -3766,12 +3766,12 @@
       },
       {
         "source": "W2972433884",
-        "target": "W3012320348",
+        "target": "W4296162381",
         "strength": 0.5
       },
       {
         "source": "W2972433884",
-        "target": "W4296162381",
+        "target": "W3012320348",
         "strength": 0.5
       },
       {
