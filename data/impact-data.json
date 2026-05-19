@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-18T10:21:53.960763+00:00",
+  "generated_at": "2026-05-19T10:02:05.020997+00:00",
   "summary": {
-    "total_citations": 2405,
+    "total_citations": 2406,
     "countries_reached": 76,
-    "citing_institutions": 3340,
+    "citing_institutions": 3344,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -92,7 +92,7 @@
       "title": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
       "journal": "Journal of Chemical Information and Modeling",
       "year": 2019,
-      "cited_by_count": 92,
+      "cited_by_count": 93,
       "field": "Computer Science",
       "authors": [
         "Ian J. Miller"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 492,
-      "institutions": 593
+      "citations": 493,
+      "institutions": 596
     },
     {
       "country": "Germany",
@@ -403,8 +403,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 113,
-      "institutions": 141
+      "citations": 114,
+      "institutions": 142
     },
     {
       "country": "Switzerland",
@@ -1164,17 +1164,17 @@
       "citations": 26
     },
     {
-      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 25
-    },
-    {
       "name": "Zhejiang University",
       "lat": 30.29365,
       "lon": 120.16142,
       "country_code": "CN",
+      "citations": 26
+    },
+    {
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
       "citations": 25
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 893,
+      "count": 894,
       "color": "#14B8A6"
     },
     {
@@ -2142,7 +2142,7 @@
         "label": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
         "field": "Computer Science",
         "type": "core",
-        "citations": 92,
+        "citations": 93,
         "year": 2019
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 856,
+        "citations": 858,
         "year": 2021
       },
       {
@@ -2310,7 +2310,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 321,
+        "citations": 322,
         "year": 2021
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 264,
+        "citations": 265,
         "year": 2023
       },
       {
@@ -2398,7 +2398,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 180,
+        "citations": 181,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 944,
+        "citations": 947,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 312,
+        "citations": 313,
         "year": 2025
       },
       {
@@ -2446,7 +2446,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 173,
+        "citations": 174,
         "year": 2024
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 337,
+        "citations": 338,
         "year": 2019
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 372,
+        "citations": 374,
         "year": 2024
       },
       {
@@ -2558,7 +2558,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 127,
+        "citations": 128,
         "year": 2022
       },
       {
@@ -2606,7 +2606,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 59,
+        "citations": 60,
         "year": 2023
       },
       {
@@ -2622,7 +2622,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 162,
+        "citations": 163,
         "year": 2019
       },
       {
@@ -2630,7 +2630,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 134,
+        "citations": 135,
         "year": 2021
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 815,
+        "citations": 817,
         "year": 2021
       },
       {
@@ -2950,7 +2950,7 @@
         "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
         "field": "Medicine",
         "type": "citing",
-        "citations": 115,
+        "citations": 116,
         "year": 2019
       },
       {
@@ -3070,7 +3070,7 @@
         "label": "Rapid Multi-Omics Sample Preparation for Mass Spectrometry",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 37,
+        "citations": 38,
         "year": 2023
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4759,
+        "citations": 4764,
         "year": 2017
       },
       {
@@ -3278,7 +3278,7 @@
         "label": "Cyanobacteriochromes from Gloeobacterales Provide New Insight into the Diversification of Cyanobacterial Photoreceptors",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 9,
+        "citations": 10,
         "year": 2023
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4843,
+        "citations": 4849,
         "year": 2021
       },
       {
@@ -3358,7 +3358,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 38,
+        "citations": 39,
         "year": 2022
       },
       {
@@ -3486,7 +3486,7 @@
         "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1,
+        "citations": 2,
         "year": 2025
       },
       {
