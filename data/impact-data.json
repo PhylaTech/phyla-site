@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-22T09:43:55.299443+00:00",
+  "generated_at": "2026-05-23T08:29:11.628889+00:00",
   "summary": {
-    "total_citations": 2409,
+    "total_citations": 2412,
     "countries_reached": 76,
-    "citing_institutions": 3352,
+    "citing_institutions": 3355,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 642,
+      "cited_by_count": 643,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 370,
+      "cited_by_count": 371,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -65,7 +65,7 @@
       "title": "Defining mitochondrial protein functions through deep multiomic profiling",
       "journal": "Nature",
       "year": 2022,
-      "cited_by_count": 116,
+      "cited_by_count": 117,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 492,
-      "institutions": 599
+      "citations": 495,
+      "institutions": 602
     },
     {
       "country": "Germany",
@@ -1899,6 +1899,13 @@
       "citations": 10
     },
     {
+      "name": "Guangxi Medical University",
+      "lat": 22.816669464111328,
+      "lon": 108.3166732788086,
+      "country_code": "CN",
+      "citations": 10
+    },
+    {
       "name": "Hospital das Cl\u00ednicas da Faculdade de Medicina da Universidade de S\u00e3o Paulo",
       "lat": -23.5475,
       "lon": -46.63611,
@@ -2002,13 +2009,6 @@
       "lon": -96.80667,
       "country_code": "US",
       "citations": 10
-    },
-    {
-      "name": "Rhodes University",
-      "lat": -33.30421829223633,
-      "lon": 26.532760620117188,
-      "country_code": "ZA",
-      "citations": 10
     }
   ],
   "disciplines": [
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 646,
+      "count": 648,
       "color": "#0891B2"
     },
     {
@@ -2044,7 +2044,7 @@
     },
     {
       "name": "Immunology and Microbiology",
-      "count": 67,
+      "count": 68,
       "color": "#2DD4BF"
     },
     {
@@ -2094,7 +2094,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 642,
+        "citations": 643,
         "year": 2020
       },
       {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 370,
+        "citations": 371,
         "year": 2023
       },
       {
@@ -2126,7 +2126,7 @@
         "label": "Defining mitochondrial protein functions through deep multiomic profiling",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 116,
+        "citations": 117,
         "year": 2022
       },
       {
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 316,
+        "citations": 317,
         "year": 2022
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 379,
+        "citations": 380,
         "year": 2022
       },
       {
@@ -2422,7 +2422,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 99,
+        "citations": 100,
         "year": 2024
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 956,
+        "citations": 957,
         "year": 2024
       },
       {
@@ -2526,7 +2526,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 94,
+        "citations": 95,
         "year": 2019
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 375,
+        "citations": 376,
         "year": 2024
       },
       {
@@ -2606,7 +2606,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 60,
+        "citations": 62,
         "year": 2023
       },
       {
@@ -2614,7 +2614,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 298,
+        "citations": 299,
         "year": 2020
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 467,
+        "citations": 468,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 428,
+        "citations": 429,
         "year": 2023
       },
       {
@@ -2726,7 +2726,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 103,
+        "citations": 104,
         "year": 2023
       },
       {
@@ -2846,7 +2846,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 54,
+        "citations": 55,
         "year": 2022
       },
       {
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 164,
+        "citations": 165,
         "year": 2019
       },
       {
@@ -3014,7 +3014,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 55,
+        "citations": 56,
         "year": 2024
       },
       {
@@ -3038,7 +3038,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 118,
+        "citations": 119,
         "year": 2022
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4770,
+        "citations": 4772,
         "year": 2017
       },
       {
@@ -3102,7 +3102,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 400,
+        "citations": 401,
         "year": 2020
       },
       {
@@ -3110,7 +3110,7 @@
         "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 135,
+        "citations": 136,
         "year": 2022
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4861,
+        "citations": 4865,
         "year": 2021
       },
       {
