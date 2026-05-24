@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-23T08:29:11.628889+00:00",
+  "generated_at": "2026-05-24T08:42:34.341271+00:00",
   "summary": {
-    "total_citations": 2412,
+    "total_citations": 2414,
     "countries_reached": 76,
-    "citing_institutions": 3355,
+    "citing_institutions": 3357,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 371,
+      "cited_by_count": 373,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 495,
-      "institutions": 602
+      "citations": 496,
+      "institutions": 604
     },
     {
       "country": "Germany",
@@ -1325,6 +1325,13 @@
       "citations": 18
     },
     {
+      "name": "China Pharmaceutical University",
+      "lat": 32.061668395996094,
+      "lon": 118.77777862548828,
+      "country_code": "CN",
+      "citations": 18
+    },
+    {
       "name": "Universit\u00e9 Paris Cit\u00e9",
       "lat": 48.85341,
       "lon": 2.3488,
@@ -1336,13 +1343,6 @@
       "lat": 41.85003,
       "lon": -87.65005,
       "country_code": "US",
-      "citations": 17
-    },
-    {
-      "name": "China Pharmaceutical University",
-      "lat": 32.061668395996094,
-      "lon": 118.77777862548828,
-      "country_code": "CN",
       "citations": 17
     },
     {
@@ -2004,17 +2004,17 @@
       "citations": 10
     },
     {
-      "name": "The University of Texas Southwestern Medical Center",
-      "lat": 32.78306,
-      "lon": -96.80667,
-      "country_code": "US",
+      "name": "Nanjing University of Chinese Medicine",
+      "lat": 32.061668395996094,
+      "lon": 118.77777862548828,
+      "country_code": "CN",
       "citations": 10
     }
   ],
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 895,
+      "count": 896,
       "color": "#14B8A6"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 178,
+      "count": 179,
       "color": "#3B82F6"
     },
     {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 371,
+        "citations": 373,
         "year": 2023
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 858,
+        "citations": 859,
         "year": 2021
       },
       {
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 317,
+        "citations": 318,
         "year": 2022
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 380,
+        "citations": 381,
         "year": 2022
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 267,
+        "citations": 268,
         "year": 2023
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 957,
+        "citations": 961,
         "year": 2024
       },
       {
@@ -2446,7 +2446,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 175,
+        "citations": 178,
         "year": 2024
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 72,
+        "citations": 73,
         "year": 2025
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 339,
+        "citations": 340,
         "year": 2019
       },
       {
@@ -2630,7 +2630,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 135,
+        "citations": 136,
         "year": 2021
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 468,
+        "citations": 470,
         "year": 2023
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 257,
+        "citations": 258,
         "year": 2022
       },
       {
@@ -2694,7 +2694,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2022
       },
       {
@@ -2742,7 +2742,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 72,
+        "citations": 73,
         "year": 2023
       },
       {
@@ -2870,7 +2870,7 @@
         "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 38,
+        "citations": 39,
         "year": 2024
       },
       {
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 165,
+        "citations": 166,
         "year": 2019
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 146,
+        "citations": 148,
         "year": 2024
       },
       {
@@ -2998,21 +2998,21 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2023
-      },
-      {
-        "id": "W4396905162",
-        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 56,
-        "year": 2024
       },
       {
         "id": "W4402906567",
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 57,
+        "year": 2024
+      },
+      {
+        "id": "W4396905162",
+        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 56,
         "year": 2024
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4772,
+        "citations": 4774,
         "year": 2017
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4865,
+        "citations": 4870,
         "year": 2021
       },
       {
@@ -4001,12 +4001,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4396905162",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4396905162",
         "strength": 0.5
       },
       {
