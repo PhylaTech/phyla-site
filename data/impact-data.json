@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-24T08:42:34.341271+00:00",
+  "generated_at": "2026-05-25T10:25:36.046995+00:00",
   "summary": {
     "total_citations": 2414,
     "countries_reached": 76,
-    "citing_institutions": 3357,
+    "citing_institutions": 3359,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 949,
-      "institutions": 669
+      "citations": 950,
+      "institutions": 670
     },
     {
       "country": "China",
@@ -391,20 +391,20 @@
       "institutions": 89
     },
     {
+      "country": "India",
+      "country_code": "IN",
+      "lat": 20.6,
+      "lon": 78.9,
+      "citations": 115,
+      "institutions": 143
+    },
+    {
       "country": "France",
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
       "citations": 115,
       "institutions": 176
-    },
-    {
-      "country": "India",
-      "country_code": "IN",
-      "lat": 20.6,
-      "lon": 78.9,
-      "citations": 114,
-      "institutions": 143
     },
     {
       "country": "Switzerland",
@@ -659,8 +659,8 @@
       "country_code": "AE",
       "lat": 23.4,
       "lon": 53.8,
-      "citations": 13,
-      "institutions": 13
+      "citations": 14,
+      "institutions": 14
     },
     {
       "country": "Chile",
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 961,
+        "citations": 962,
         "year": 2024
       },
       {
@@ -2526,7 +2526,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2019
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 376,
+        "citations": 377,
         "year": 2024
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 820,
+        "citations": 822,
         "year": 2021
       },
       {
@@ -2854,7 +2854,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 47,
+        "citations": 48,
         "year": 2023
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4870,
+        "citations": 4874,
         "year": 2021
       },
       {
@@ -3350,7 +3350,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2022
       },
       {
