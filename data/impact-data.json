@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-27T10:13:29.434415+00:00",
+  "generated_at": "2026-05-29T10:10:22.356819+00:00",
   "summary": {
-    "total_citations": 2418,
+    "total_citations": 2419,
     "countries_reached": 76,
-    "citing_institutions": 3364,
+    "citing_institutions": 3369,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -131,7 +131,7 @@
       "title": "A large-scale genome\u2013lipid association map guides lipid identification",
       "journal": "Nature Metabolism",
       "year": 2020,
-      "cited_by_count": 58,
+      "cited_by_count": 59,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -355,7 +355,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 950,
+      "citations": 951,
       "institutions": 670
     },
     {
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 497,
+      "citations": 498,
       "institutions": 604
     },
     {
@@ -371,15 +371,15 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 282,
-      "institutions": 170
+      "citations": 283,
+      "institutions": 172
     },
     {
       "country": "United Kingdom",
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 196,
+      "citations": 197,
       "institutions": 162
     },
     {
@@ -419,7 +419,7 @@
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
-      "citations": 93,
+      "citations": 94,
       "institutions": 86
     },
     {
@@ -427,7 +427,7 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 92,
+      "citations": 93,
       "institutions": 42
     },
     {
@@ -443,8 +443,16 @@
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 78,
+      "citations": 79,
       "institutions": 126
+    },
+    {
+      "country": "Italy",
+      "country_code": "IT",
+      "lat": 41.9,
+      "lon": 12.6,
+      "citations": 70,
+      "institutions": 86
     },
     {
       "country": "Denmark",
@@ -453,14 +461,6 @@
       "lon": 9.5,
       "citations": 70,
       "institutions": 20
-    },
-    {
-      "country": "Italy",
-      "country_code": "IT",
-      "lat": 41.9,
-      "lon": 12.6,
-      "citations": 69,
-      "institutions": 86
     },
     {
       "country": "South Korea",
@@ -491,15 +491,15 @@
       "country_code": "SE",
       "lat": 60.1,
       "lon": 18.6,
-      "citations": 40,
-      "institutions": 18
+      "citations": 41,
+      "institutions": 19
     },
     {
       "country": "Austria",
       "country_code": "AT",
       "lat": 47.5,
       "lon": 14.6,
-      "citations": 38,
+      "citations": 39,
       "institutions": 20
     },
     {
@@ -507,7 +507,7 @@
       "country_code": "PL",
       "lat": 51.9,
       "lon": 19.1,
-      "citations": 38,
+      "citations": 39,
       "institutions": 30
     },
     {
@@ -527,6 +527,14 @@
       "institutions": 9
     },
     {
+      "country": "Czech Republic",
+      "country_code": "CZ",
+      "lat": 49.8,
+      "lon": 15.5,
+      "citations": 27,
+      "institutions": 21
+    },
+    {
       "country": "Belgium",
       "country_code": "BE",
       "lat": 50.5,
@@ -543,19 +551,11 @@
       "institutions": 17
     },
     {
-      "country": "Czech Republic",
-      "country_code": "CZ",
-      "lat": 49.8,
-      "lon": 15.5,
-      "citations": 26,
-      "institutions": 20
-    },
-    {
       "country": "Portugal",
       "country_code": "PT",
       "lat": 39.4,
       "lon": -8.2,
-      "citations": 25,
+      "citations": 26,
       "institutions": 15
     },
     {
@@ -563,7 +563,7 @@
       "country_code": "FI",
       "lat": 61.9,
       "lon": 25.7,
-      "citations": 25,
+      "citations": 26,
       "institutions": 15
     },
     {
@@ -579,7 +579,7 @@
       "country_code": "SG",
       "lat": 1.4,
       "lon": 103.8,
-      "citations": 22,
+      "citations": 23,
       "institutions": 13
     },
     {
@@ -643,7 +643,7 @@
       "country_code": "QA",
       "lat": 25.4,
       "lon": 51.2,
-      "citations": 16,
+      "citations": 17,
       "institutions": 7
     },
     {
@@ -815,6 +815,14 @@
       "institutions": 4
     },
     {
+      "country": "Serbia",
+      "country_code": "RS",
+      "lat": 44.0,
+      "lon": 21.0,
+      "citations": 4,
+      "institutions": 3
+    },
+    {
       "country": "Sri Lanka",
       "country_code": "LK",
       "lat": 7.9,
@@ -853,14 +861,6 @@
       "lon": -78.2,
       "citations": 3,
       "institutions": 7
-    },
-    {
-      "country": "Serbia",
-      "country_code": "RS",
-      "lat": 44.0,
-      "lon": 21.0,
-      "citations": 3,
-      "institutions": 3
     },
     {
       "country": "Iraq",
@@ -1185,17 +1185,17 @@
       "citations": 25
     },
     {
-      "name": "Peking University",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 24
-    },
-    {
       "name": "Wageningen University & Research",
       "lat": 51.97,
       "lon": 5.66667,
       "country_code": "NL",
+      "citations": 25
+    },
+    {
+      "name": "Peking University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 24
     },
     {
@@ -1367,6 +1367,13 @@
       "citations": 16
     },
     {
+      "name": "Helmholtz Zentrum M\u00fcnchen",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
+      "citations": 16
+    },
+    {
       "name": "Albany Medical Center Hospital",
       "lat": 42.65258,
       "lon": -73.75623,
@@ -1398,6 +1405,13 @@
       "name": "Sichuan University",
       "lat": 30.66667,
       "lon": 104.06667,
+      "country_code": "CN",
+      "citations": 16
+    },
+    {
+      "name": "Tsinghua University",
+      "lat": 39.9075,
+      "lon": 116.39723,
       "country_code": "CN",
       "citations": 16
     },
@@ -1434,13 +1448,6 @@
       "lat": 36.66833,
       "lon": 116.99722,
       "country_code": "CN",
-      "citations": 15
-    },
-    {
-      "name": "Helmholtz Zentrum M\u00fcnchen",
-      "lat": 48.13743,
-      "lon": 11.57549,
-      "country_code": "DE",
       "citations": 15
     },
     {
@@ -1490,13 +1497,6 @@
       "lat": 48.68333,
       "lon": 2.13333,
       "country_code": "FR",
-      "citations": 15
-    },
-    {
-      "name": "Tsinghua University",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
       "citations": 15
     },
     {
@@ -1703,6 +1703,13 @@
       "citations": 12
     },
     {
+      "name": "Medical University of Vienna",
+      "lat": 48.20849,
+      "lon": 16.37208,
+      "country_code": "AT",
+      "citations": 12
+    },
+    {
       "name": "Saarland University",
       "lat": 49.23262,
       "lon": 7.00982,
@@ -1819,13 +1826,6 @@
       "lat": 23.116670608520508,
       "lon": 113.25,
       "country_code": "CN",
-      "citations": 11
-    },
-    {
-      "name": "Medical University of Vienna",
-      "lat": 48.20849,
-      "lon": 16.37208,
-      "country_code": "AT",
       "citations": 11
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 899,
+      "count": 900,
       "color": "#14B8A6"
     },
     {
@@ -2166,7 +2166,7 @@
         "label": "A large-scale genome\u2013lipid association map guides lipid identification",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 58,
+        "citations": 59,
         "year": 2020
       },
       {
@@ -2310,7 +2310,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 323,
+        "citations": 324,
         "year": 2021
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 381,
+        "citations": 382,
         "year": 2022
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 268,
+        "citations": 269,
         "year": 2023
       },
       {
@@ -2406,7 +2406,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 132,
+        "citations": 133,
         "year": 2022
       },
       {
@@ -2422,7 +2422,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2024
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 969,
+        "citations": 974,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 320,
+        "citations": 321,
         "year": 2025
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 73,
+        "citations": 74,
         "year": 2025
       },
       {
@@ -2486,7 +2486,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 66,
+        "citations": 67,
         "year": 2024
       },
       {
@@ -2518,7 +2518,7 @@
         "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2021
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 377,
+        "citations": 379,
         "year": 2024
       },
       {
@@ -2558,7 +2558,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 128,
+        "citations": 129,
         "year": 2022
       },
       {
@@ -2574,7 +2574,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2022
       },
       {
@@ -2590,7 +2590,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 73,
+        "citations": 74,
         "year": 2024
       },
       {
@@ -2614,7 +2614,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 300,
+        "citations": 301,
         "year": 2020
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 431,
+        "citations": 432,
         "year": 2023
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 260,
+        "citations": 262,
         "year": 2022
       },
       {
@@ -2734,7 +2734,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 83,
+        "citations": 84,
         "year": 2020
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 825,
+        "citations": 827,
         "year": 2021
       },
       {
@@ -2782,7 +2782,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 334,
+        "citations": 335,
         "year": 2021
       },
       {
@@ -2830,7 +2830,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 128,
+        "citations": 129,
         "year": 2021
       },
       {
@@ -2854,7 +2854,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 48,
+        "citations": 49,
         "year": 2023
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 148,
+        "citations": 151,
         "year": 2024
       },
       {
@@ -2982,7 +2982,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2023
       },
       {
@@ -2998,7 +2998,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 87,
+        "citations": 89,
         "year": 2023
       },
       {
@@ -3006,12 +3006,20 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2024
       },
       {
         "id": "W4396905162",
         "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 58,
+        "year": 2024
+      },
+      {
+        "id": "W4394753092",
+        "label": "A lipidome landscape of aging in mice",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 57,
@@ -3022,16 +3030,8 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 54,
+        "citations": 55,
         "year": 2023
-      },
-      {
-        "id": "W4394753092",
-        "label": "A lipidome landscape of aging in mice",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 53,
-        "year": 2024
       },
       {
         "id": "W4223918790",
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4778,
+        "citations": 4781,
         "year": 2017
       },
       {
@@ -3102,7 +3102,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 401,
+        "citations": 402,
         "year": 2020
       },
       {
@@ -3182,7 +3182,7 @@
         "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 37,
+        "citations": 38,
         "year": 2020
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4884,
+        "citations": 4897,
         "year": 2021
       },
       {
@@ -3414,7 +3414,7 @@
         "label": "Biological control of Fusarium wilt caused by Fusarium equiseti in Vicia faba with broad spectrum antifungal plant-associated Bacillus spp.",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2021
       },
       {
@@ -3881,12 +3881,12 @@
       },
       {
         "source": "W3087677418",
-        "target": "W4319825888",
+        "target": "W4323977918",
         "strength": 0.5
       },
       {
         "source": "W3087677418",
-        "target": "W4323977918",
+        "target": "W4319825888",
         "strength": 0.5
       },
       {
@@ -4011,12 +4011,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4324013663",
+        "target": "W4394753092",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4394753092",
+        "target": "W4324013663",
         "strength": 0.5
       },
       {
