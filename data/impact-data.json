@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-30T08:38:06.893886+00:00",
+  "generated_at": "2026-05-31T09:16:35.457711+00:00",
   "summary": {
-    "total_citations": 2419,
+    "total_citations": 2420,
     "countries_reached": 76,
-    "citing_institutions": 3369,
+    "citing_institutions": 3375,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 645,
+      "cited_by_count": 646,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -527,6 +527,14 @@
       "institutions": 9
     },
     {
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "lat": 23.9,
+      "lon": 45.1,
+      "citations": 27,
+      "institutions": 17
+    },
+    {
       "country": "Czech Republic",
       "country_code": "CZ",
       "lat": 49.8,
@@ -541,14 +549,6 @@
       "lon": 4.5,
       "citations": 27,
       "institutions": 26
-    },
-    {
-      "country": "Saudi Arabia",
-      "country_code": "SA",
-      "lat": 23.9,
-      "lon": 45.1,
-      "citations": 26,
-      "institutions": 17
     },
     {
       "country": "Portugal",
@@ -583,20 +583,20 @@
       "institutions": 13
     },
     {
+      "country": "Mexico",
+      "country_code": "MX",
+      "lat": 23.6,
+      "lon": -102.6,
+      "citations": 23,
+      "institutions": 17
+    },
+    {
       "country": "Egypt",
       "country_code": "EG",
       "lat": 26.8,
       "lon": 30.8,
       "citations": 22,
       "institutions": 21
-    },
-    {
-      "country": "Mexico",
-      "country_code": "MX",
-      "lat": 23.6,
-      "lon": -102.6,
-      "citations": 22,
-      "institutions": 11
     },
     {
       "country": "Iran",
@@ -1311,16 +1311,16 @@
       "citations": 18
     },
     {
-      "name": "Shanghai Jiao Tong University",
-      "lat": 31.222219467163086,
-      "lon": 121.45806121826172,
+      "name": "Huazhong University of Science and Technology",
+      "lat": 30.58333,
+      "lon": 114.26667,
       "country_code": "CN",
       "citations": 18
     },
     {
-      "name": "Huazhong University of Science and Technology",
-      "lat": 30.58333,
-      "lon": 114.26667,
+      "name": "Shanghai Jiao Tong University",
+      "lat": 31.222219467163086,
+      "lon": 121.45806121826172,
       "country_code": "CN",
       "citations": 18
     },
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 648,
+      "count": 649,
       "color": "#0891B2"
     },
     {
@@ -2094,7 +2094,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 645,
+        "citations": 646,
         "year": 2020
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 859,
+        "citations": 861,
         "year": 2021
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 269,
+        "citations": 270,
         "year": 2023
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 974,
+        "citations": 975,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 321,
+        "citations": 322,
         "year": 2025
       },
       {
@@ -2446,7 +2446,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 178,
+        "citations": 179,
         "year": 2024
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 166,
+        "citations": 168,
         "year": 2024
       },
       {
@@ -2462,7 +2462,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 92,
+        "citations": 93,
         "year": 2024
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 74,
+        "citations": 75,
         "year": 2025
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 340,
+        "citations": 341,
         "year": 2019
       },
       {
@@ -2574,7 +2574,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 105,
+        "citations": 106,
         "year": 2022
       },
       {
@@ -2606,7 +2606,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 432,
+        "citations": 433,
         "year": 2023
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 262,
+        "citations": 263,
         "year": 2022
       },
       {
@@ -2766,7 +2766,7 @@
         "label": "Volatile Organic Compounds Analysis as a Potential Novel Screening Tool for Breast Cancer: A Systematic Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 47,
+        "citations": 48,
         "year": 2022
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 827,
+        "citations": 828,
         "year": 2021
       },
       {
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 166,
+        "citations": 167,
         "year": 2019
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 151,
+        "citations": 152,
         "year": 2024
       },
       {
@@ -2998,7 +2998,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 89,
+        "citations": 91,
         "year": 2023
       },
       {
@@ -3038,7 +3038,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 119,
+        "citations": 120,
         "year": 2022
       },
       {
@@ -3046,7 +3046,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2023
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4781,
+        "citations": 4783,
         "year": 2017
       },
       {
@@ -3286,7 +3286,7 @@
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 48,
+        "citations": 49,
         "year": 2022
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4897,
+        "citations": 4903,
         "year": 2021
       },
       {
@@ -3414,7 +3414,7 @@
         "label": "Biological control of Fusarium wilt caused by Fusarium equiseti in Vicia faba with broad spectrum antifungal plant-associated Bacillus spp.",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 41,
+        "citations": 42,
         "year": 2021
       },
       {
@@ -3454,7 +3454,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 37,
+        "citations": 38,
         "year": 2025
       },
       {
