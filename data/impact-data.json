@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T09:16:35.457711+00:00",
+  "generated_at": "2026-06-01T11:52:06.334351+00:00",
   "summary": {
     "total_citations": 2420,
     "countries_reached": 76,
@@ -447,20 +447,20 @@
       "institutions": 126
     },
     {
+      "country": "Denmark",
+      "country_code": "DK",
+      "lat": 56.3,
+      "lon": 9.5,
+      "citations": 71,
+      "institutions": 20
+    },
+    {
       "country": "Italy",
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
       "citations": 70,
       "institutions": 86
-    },
-    {
-      "country": "Denmark",
-      "country_code": "DK",
-      "lat": 56.3,
-      "lon": 9.5,
-      "citations": 70,
-      "institutions": 20
     },
     {
       "country": "South Korea",
@@ -1017,18 +1017,18 @@
       "citations": 39
     },
     {
+      "name": "University of Copenhagen",
+      "lat": 55.67594,
+      "lon": 12.56553,
+      "country_code": "DK",
+      "citations": 39
+    },
+    {
       "name": "Friedrich Schiller University Jena",
       "lat": 50.92878,
       "lon": 11.5899,
       "country_code": "DE",
       "citations": 39
-    },
-    {
-      "name": "University of Copenhagen",
-      "lat": 55.67594,
-      "lon": 12.56553,
-      "country_code": "DK",
-      "citations": 38
     },
     {
       "name": "Washington University in St. Louis",
@@ -1381,6 +1381,13 @@
       "citations": 16
     },
     {
+      "name": "Technical University of Munich",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
+      "citations": 16
+    },
+    {
       "name": "University of Michigan",
       "lat": 42.27756,
       "lon": -83.74088,
@@ -1469,13 +1476,6 @@
       "lat": 35.99403,
       "lon": -78.89862,
       "country_code": "US",
-      "citations": 15
-    },
-    {
-      "name": "Technical University of Munich",
-      "lat": 48.13743,
-      "lon": 11.57549,
-      "country_code": "DE",
       "citations": 15
     },
     {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 270,
+        "citations": 271,
         "year": 2023
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 975,
+        "citations": 978,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 322,
+        "citations": 323,
         "year": 2025
       },
       {
@@ -2630,7 +2630,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 136,
+        "citations": 137,
         "year": 2021
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 433,
+        "citations": 434,
         "year": 2023
       },
       {
@@ -2686,7 +2686,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 190,
+        "citations": 191,
         "year": 2021
       },
       {
@@ -2990,7 +2990,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4783,
+        "citations": 4784,
         "year": 2017
       },
       {
@@ -3222,7 +3222,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 30,
+        "citations": 31,
         "year": 2023
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4903,
+        "citations": 4906,
         "year": 2021
       },
       {
