@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T11:52:06.334351+00:00",
+  "generated_at": "2026-06-02T10:51:04.458048+00:00",
   "summary": {
     "total_citations": 2420,
     "countries_reached": 76,
@@ -1584,13 +1584,6 @@
       "citations": 13
     },
     {
-      "name": "Vanderbilt University",
-      "lat": 36.16589,
-      "lon": -86.78444,
-      "country_code": "US",
-      "citations": 13
-    },
-    {
       "name": "University of California, San Francisco",
       "lat": 37.77493,
       "lon": -122.41942,
@@ -1601,6 +1594,13 @@
       "name": "University of Minnesota",
       "lat": 44.97997,
       "lon": -93.26384,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Vanderbilt University",
+      "lat": 36.16589,
+      "lon": -86.78444,
       "country_code": "US",
       "citations": 13
     },
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 319,
+        "citations": 320,
         "year": 2022
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 382,
+        "citations": 383,
         "year": 2022
       },
       {
@@ -2374,7 +2374,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 317,
+        "citations": 318,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 978,
+        "citations": 981,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 323,
+        "citations": 327,
         "year": 2025
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 168,
+        "citations": 169,
         "year": 2024
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 379,
+        "citations": 382,
         "year": 2024
       },
       {
@@ -2630,7 +2630,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 137,
+        "citations": 138,
         "year": 2021
       },
       {
@@ -2638,7 +2638,7 @@
         "label": "Ancient plant-like terpene biosynthesis in corals",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2022
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 472,
+        "citations": 473,
         "year": 2023
       },
       {
@@ -2694,7 +2694,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2022
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 828,
+        "citations": 829,
         "year": 2021
       },
       {
@@ -2838,7 +2838,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2021
       },
       {
@@ -2846,7 +2846,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 55,
+        "citations": 56,
         "year": 2022
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 152,
+        "citations": 153,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4784,
+        "citations": 4786,
         "year": 2017
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4906,
+        "citations": 4912,
         "year": 2021
       },
       {
@@ -3454,7 +3454,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 38,
+        "citations": 40,
         "year": 2025
       },
       {
