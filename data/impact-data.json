@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:51:04.458048+00:00",
+  "generated_at": "2026-06-03T11:19:33.958505+00:00",
   "summary": {
     "total_citations": 2420,
     "countries_reached": 76,
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 320,
+        "citations": 321,
         "year": 2022
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 383,
+        "citations": 384,
         "year": 2022
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 271,
+        "citations": 272,
         "year": 2023
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 981,
+        "citations": 985,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 327,
+        "citations": 329,
         "year": 2025
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 169,
+        "citations": 170,
         "year": 2024
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 382,
+        "citations": 383,
         "year": 2024
       },
       {
@@ -2630,7 +2630,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 138,
+        "citations": 140,
         "year": 2021
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 434,
+        "citations": 436,
         "year": 2023
       },
       {
@@ -2710,7 +2710,7 @@
         "label": "Toxic Colors: The Use of Deep Learning for Predicting Toxicity of Compounds Merely from Their Graphic Images",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2018
       },
       {
@@ -2734,7 +2734,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 84,
+        "citations": 85,
         "year": 2020
       },
       {
@@ -2750,7 +2750,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 60,
+        "citations": 61,
         "year": 2024
       },
       {
@@ -2822,7 +2822,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 168,
+        "citations": 169,
         "year": 2022
       },
       {
@@ -2854,7 +2854,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 49,
+        "citations": 50,
         "year": 2023
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 153,
+        "citations": 154,
         "year": 2024
       },
       {
@@ -3038,7 +3038,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 120,
+        "citations": 121,
         "year": 2022
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4912,
+        "citations": 4913,
         "year": 2021
       },
       {
