@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-03T11:19:33.958505+00:00",
+  "generated_at": "2026-06-04T10:09:57.477218+00:00",
   "summary": {
-    "total_citations": 2420,
+    "total_citations": 2423,
     "countries_reached": 76,
-    "citing_institutions": 3375,
+    "citing_institutions": 3378,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 390,
+      "cited_by_count": 391,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 375,
+      "cited_by_count": 376,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -261,7 +261,7 @@
       "title": "Omics Technologies to Understand Activation of a Biosynthetic Gene Cluster in <i>Micromonospora</i> sp. WMMB235: Deciphering Keyicin Biosynthesis",
       "journal": "ACS Chemical Biology",
       "year": 2019,
-      "cited_by_count": 13,
+      "cited_by_count": 14,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -355,7 +355,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 951,
+      "citations": 952,
       "institutions": 670
     },
     {
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 498,
-      "institutions": 604
+      "citations": 499,
+      "institutions": 605
     },
     {
       "country": "Germany",
@@ -387,8 +387,8 @@
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 139,
-      "institutions": 89
+      "citations": 140,
+      "institutions": 90
     },
     {
       "country": "India",
@@ -965,7 +965,7 @@
       "lat": 43.07305,
       "lon": -89.40123,
       "country_code": "US",
-      "citations": 221
+      "citations": 222
     },
     {
       "name": "Morgridge Institute for Research",
@@ -1084,7 +1084,7 @@
       "lat": 23.11667,
       "lon": 113.25,
       "country_code": "CN",
-      "citations": 31
+      "citations": 32
     },
     {
       "name": "Universidade de S\u00e3o Paulo",
@@ -1676,8 +1676,8 @@
     },
     {
       "name": "Karolinska Institutet",
-      "lat": 59.32938003540039,
-      "lon": 18.068710327148438,
+      "lat": 59.32938,
+      "lon": 18.06871,
       "country_code": "SE",
       "citations": 12
     },
@@ -1830,8 +1830,8 @@
     },
     {
       "name": "Leiden University",
-      "lat": 52.158329010009766,
-      "lon": 4.493060111999512,
+      "lat": 52.15833,
+      "lon": 4.49306,
       "country_code": "NL",
       "citations": 11
     },
@@ -1927,6 +1927,13 @@
       "citations": 10
     },
     {
+      "name": "Wisconsin Institutes for Discovery",
+      "lat": 43.07303237915039,
+      "lon": -89.40760803222656,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
       "name": "Union Hospital",
       "lat": 22.360681533813477,
       "lon": 114.17512512207031,
@@ -2002,24 +2009,17 @@
       "lon": 118.77777862548828,
       "country_code": "CN",
       "citations": 10
-    },
-    {
-      "name": "Board of the Swiss Federal Institutes of Technology",
-      "lat": 47.366668701171875,
-      "lon": 8.550000190734863,
-      "country_code": "CH",
-      "citations": 10
     }
   ],
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 900,
+      "count": 901,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 649,
+      "count": 651,
       "color": "#0891B2"
     },
     {
@@ -2102,7 +2102,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 390,
+        "citations": 391,
         "year": 2022
       },
       {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 375,
+        "citations": 376,
         "year": 2023
       },
       {
@@ -2246,7 +2246,7 @@
         "label": "Omics Technologies to Understand Activation of a Biosynthetic Gene Cluster in <i>Micromonospora</i> sp. WMMB235: Deciphering Keyicin Biosynthesis",
         "field": "Medicine",
         "type": "core",
-        "citations": 13,
+        "citations": 14,
         "year": 2019
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 861,
+        "citations": 862,
         "year": 2021
       },
       {
@@ -2374,7 +2374,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 318,
+        "citations": 319,
         "year": 2022
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 272,
+        "citations": 273,
         "year": 2023
       },
       {
@@ -2390,7 +2390,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 222,
+        "citations": 223,
         "year": 2021
       },
       {
@@ -2414,7 +2414,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 117,
+        "citations": 118,
         "year": 2022
       },
       {
@@ -2422,7 +2422,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 104,
         "year": 2024
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 985,
+        "citations": 987,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 329,
+        "citations": 330,
         "year": 2025
       },
       {
@@ -2446,7 +2446,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 179,
+        "citations": 180,
         "year": 2024
       },
       {
@@ -2462,7 +2462,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 93,
+        "citations": 94,
         "year": 2024
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 341,
+        "citations": 342,
         "year": 2019
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 383,
+        "citations": 385,
         "year": 2024
       },
       {
@@ -2566,7 +2566,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2023
       },
       {
@@ -2582,7 +2582,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 74,
+        "citations": 75,
         "year": 2023
       },
       {
@@ -2598,7 +2598,7 @@
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Medicine",
         "type": "citing",
-        "citations": 70,
+        "citations": 72,
         "year": 2024
       },
       {
@@ -2638,7 +2638,7 @@
         "label": "Ancient plant-like terpene biosynthesis in corals",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 108,
+        "citations": 109,
         "year": 2022
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 263,
+        "citations": 265,
         "year": 2022
       },
       {
@@ -2694,7 +2694,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 131,
+        "citations": 133,
         "year": 2022
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 829,
+        "citations": 830,
         "year": 2021
       },
       {
@@ -2782,7 +2782,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 335,
+        "citations": 337,
         "year": 2021
       },
       {
@@ -2822,7 +2822,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 169,
+        "citations": 170,
         "year": 2022
       },
       {
@@ -3002,19 +3002,19 @@
         "year": 2023
       },
       {
-        "id": "W4402906567",
-        "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
-        "field": "Immunology and Microbiology",
+        "id": "W4396905162",
+        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 59,
         "year": 2024
       },
       {
-        "id": "W4396905162",
-        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "id": "W4402906567",
+        "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
+        "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4786,
+        "citations": 4789,
         "year": 2017
       },
       {
@@ -3198,7 +3198,7 @@
         "label": "Coculture of Marine Invertebrate-Associated Bacteria and Interdisciplinary Technologies Enable Biosynthesis and Discovery of a New Antibiotic, Keyicin",
         "field": "Medicine",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2017
       },
       {
@@ -3222,7 +3222,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 31,
+        "citations": 32,
         "year": 2023
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4913,
+        "citations": 4916,
         "year": 2021
       },
       {
@@ -3350,7 +3350,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 108,
+        "citations": 109,
         "year": 2022
       },
       {
@@ -4001,12 +4001,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4396905162",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4396905162",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
