@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-04T10:09:57.477218+00:00",
+  "generated_at": "2026-06-05T10:06:41.012575+00:00",
   "summary": {
-    "total_citations": 2423,
+    "total_citations": 2425,
     "countries_reached": 76,
-    "citing_institutions": 3378,
+    "citing_institutions": 3382,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 391,
+      "cited_by_count": 392,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 376,
+      "cited_by_count": 377,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -355,16 +355,16 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 952,
-      "institutions": 670
+      "citations": 953,
+      "institutions": 671
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 499,
-      "institutions": 605
+      "citations": 500,
+      "institutions": 607
     },
     {
       "country": "Germany",
@@ -860,7 +860,7 @@
       "lat": -1.8,
       "lon": -78.2,
       "citations": 3,
-      "institutions": 7
+      "institutions": 8
     },
     {
       "country": "Iraq",
@@ -979,7 +979,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 53
+      "citations": 54
     },
     {
       "name": "Centre National de la Recherche Scientifique",
@@ -1171,17 +1171,17 @@
       "citations": 26
     },
     {
-      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 25
-    },
-    {
       "name": "University of Hong Kong",
       "lat": 22.26861,
       "lon": 114.12924,
       "country_code": "HK",
+      "citations": 26
+    },
+    {
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
       "citations": 25
     },
     {
@@ -1626,6 +1626,13 @@
       "citations": 13
     },
     {
+      "name": "Baylor College of Medicine",
+      "lat": 29.76328,
+      "lon": -95.36327,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
       "name": "Assistance Publique \u2013 H\u00f4pitaux de Paris",
       "lat": 48.85341,
       "lon": 2.3488,
@@ -1686,13 +1693,6 @@
       "lat": 52.37403,
       "lon": 4.88969,
       "country_code": "NL",
-      "citations": 12
-    },
-    {
-      "name": "Baylor College of Medicine",
-      "lat": 29.76328,
-      "lon": -95.36327,
-      "country_code": "US",
       "citations": 12
     },
     {
@@ -2014,12 +2014,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 901,
+      "count": 902,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 651,
+      "count": 652,
       "color": "#0891B2"
     },
     {
@@ -2102,7 +2102,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 391,
+        "citations": 392,
         "year": 2022
       },
       {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 376,
+        "citations": 377,
         "year": 2023
       },
       {
@@ -2318,7 +2318,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 321,
+        "citations": 322,
         "year": 2022
       },
       {
@@ -2334,7 +2334,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 267,
+        "citations": 268,
         "year": 2021
       },
       {
@@ -2398,7 +2398,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 181,
+        "citations": 182,
         "year": 2022
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 987,
+        "citations": 990,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 330,
+        "citations": 331,
         "year": 2025
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 75,
+        "citations": 76,
         "year": 2025
       },
       {
@@ -2574,7 +2574,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2022
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 473,
+        "citations": 474,
         "year": 2023
       },
       {
@@ -2902,7 +2902,7 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2019
       },
       {
@@ -2934,7 +2934,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 502,
+        "citations": 503,
         "year": 2019
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 154,
+        "citations": 155,
         "year": 2024
       },
       {
@@ -2990,7 +2990,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 105,
+        "citations": 106,
         "year": 2024
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4916,
+        "citations": 4920,
         "year": 2021
       },
       {
@@ -3454,7 +3454,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2025
       },
       {
@@ -3916,12 +3916,12 @@
       },
       {
         "source": "W2513652105",
-        "target": "W2949629831",
+        "target": "W2910293385",
         "strength": 0.5
       },
       {
         "source": "W2513652105",
-        "target": "W2910293385",
+        "target": "W2949629831",
         "strength": 0.5
       },
       {
