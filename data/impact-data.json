@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-06T08:44:16.256012+00:00",
+  "generated_at": "2026-06-07T09:29:14.731746+00:00",
   "summary": {
-    "total_citations": 2425,
+    "total_citations": 2427,
     "countries_reached": 76,
     "citing_institutions": 3382,
     "disciplines_impacted": 23,
@@ -52,7 +52,7 @@
       "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
       "journal": "Nature Communications",
       "year": 2018,
-      "cited_by_count": 131,
+      "cited_by_count": 132,
       "field": "Agricultural and Biological Sciences",
       "authors": [
         "Ian J. Miller"
@@ -118,7 +118,7 @@
       "title": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
       "journal": "mBio",
       "year": 2020,
-      "cited_by_count": 74,
+      "cited_by_count": 75,
       "field": "Agricultural and Biological Sciences",
       "authors": [
         "Evan Roy Rees"
@@ -371,7 +371,7 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 283,
+      "citations": 285,
       "institutions": 172
     },
     {
@@ -380,7 +380,7 @@
       "lat": 55.4,
       "lon": -3.4,
       "citations": 197,
-      "institutions": 162
+      "institutions": 161
     },
     {
       "country": "Canada",
@@ -427,8 +427,8 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 93,
-      "institutions": 42
+      "citations": 94,
+      "institutions": 44
     },
     {
       "country": "Brazil",
@@ -791,14 +791,6 @@
       "institutions": 4
     },
     {
-      "country": "Morocco",
-      "country_code": "MA",
-      "lat": 31.8,
-      "lon": -7.1,
-      "citations": 5,
-      "institutions": 11
-    },
-    {
       "country": "Ukraine",
       "country_code": "UA",
       "lat": 48.4,
@@ -837,6 +829,14 @@
       "lon": 32.3,
       "citations": 4,
       "institutions": 3
+    },
+    {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 4,
+      "institutions": 10
     },
     {
       "country": "Bulgaria",
@@ -1556,6 +1556,20 @@
       "citations": 14
     },
     {
+      "name": "Saarland University",
+      "lat": 49.23262,
+      "lon": 7.00982,
+      "country_code": "DE",
+      "citations": 14
+    },
+    {
+      "name": "Helmholtz Institute for Pharmaceutical Research Saarland",
+      "lat": 49.25752639770508,
+      "lon": 7.041704177856445,
+      "country_code": "DE",
+      "citations": 14
+    },
+    {
       "name": "Weill Cornell Medicine",
       "lat": 40.71427,
       "lon": -74.00597,
@@ -1616,6 +1630,13 @@
       "lat": 39.00287,
       "lon": -77.07115,
       "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Amsterdam University Medical Centers",
+      "lat": 52.37403,
+      "lon": 4.88969,
+      "country_code": "NL",
       "citations": 13
     },
     {
@@ -1689,7 +1710,7 @@
       "citations": 12
     },
     {
-      "name": "Amsterdam University Medical Centers",
+      "name": "University of Amsterdam",
       "lat": 52.37403,
       "lon": 4.88969,
       "country_code": "NL",
@@ -1707,20 +1728,6 @@
       "lat": 48.20849,
       "lon": 16.37208,
       "country_code": "AT",
-      "citations": 12
-    },
-    {
-      "name": "Saarland University",
-      "lat": 49.23262,
-      "lon": 7.00982,
-      "country_code": "DE",
-      "citations": 12
-    },
-    {
-      "name": "Helmholtz Institute for Pharmaceutical Research Saarland",
-      "lat": 49.25752639770508,
-      "lon": 7.041704177856445,
-      "country_code": "DE",
       "citations": 12
     },
     {
@@ -1784,13 +1791,6 @@
       "lat": 1.28967,
       "lon": 103.85007,
       "country_code": "SG",
-      "citations": 11
-    },
-    {
-      "name": "University of Amsterdam",
-      "lat": 52.37403,
-      "lon": 4.88969,
-      "country_code": "NL",
       "citations": 11
     },
     {
@@ -1941,17 +1941,17 @@
       "citations": 10
     },
     {
-      "name": "Universidade Estadual Paulista (Unesp)",
-      "lat": -23.5475,
-      "lon": -46.63611,
-      "country_code": "BR",
-      "citations": 10
-    },
-    {
       "name": "Heidelberg University",
       "lat": 49.40768,
       "lon": 8.69079,
       "country_code": "DE",
+      "citations": 10
+    },
+    {
+      "name": "Universidade Estadual Paulista (Unesp)",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
       "citations": 10
     },
     {
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 652,
+      "count": 654,
       "color": "#0891B2"
     },
     {
@@ -2118,7 +2118,7 @@
         "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
-        "citations": 131,
+        "citations": 132,
         "year": 2018
       },
       {
@@ -2158,7 +2158,7 @@
         "label": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
-        "citations": 74,
+        "citations": 75,
         "year": 2020
       },
       {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 862,
+        "citations": 864,
         "year": 2021
       },
       {
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 273,
+        "citations": 275,
         "year": 2023
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 990,
+        "citations": 992,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 331,
+        "citations": 332,
         "year": 2025
       },
       {
@@ -2446,7 +2446,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 180,
+        "citations": 181,
         "year": 2024
       },
       {
@@ -2454,7 +2454,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 170,
+        "citations": 171,
         "year": 2024
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 342,
+        "citations": 343,
         "year": 2019
       },
       {
@@ -2502,7 +2502,7 @@
         "label": "<i>Burkholderia</i> as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 138,
+        "citations": 139,
         "year": 2019
       },
       {
@@ -2518,7 +2518,7 @@
         "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2021
       },
       {
@@ -2542,7 +2542,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2023
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 385,
+        "citations": 391,
         "year": 2024
       },
       {
@@ -2566,7 +2566,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 110,
+        "citations": 111,
         "year": 2023
       },
       {
@@ -2582,7 +2582,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 75,
+        "citations": 76,
         "year": 2023
       },
       {
@@ -2678,7 +2678,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 265,
+        "citations": 267,
         "year": 2022
       },
       {
@@ -2766,7 +2766,7 @@
         "label": "Volatile Organic Compounds Analysis as a Potential Novel Screening Tool for Breast Cancer: A Systematic Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 48,
+        "citations": 49,
         "year": 2022
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 830,
+        "citations": 832,
         "year": 2021
       },
       {
@@ -2782,7 +2782,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 337,
+        "citations": 339,
         "year": 2021
       },
       {
@@ -2806,7 +2806,7 @@
         "label": "Insects\u2019 potential: Understanding the functional role of their gut microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 80,
+        "citations": 81,
         "year": 2020
       },
       {
@@ -2846,7 +2846,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 56,
+        "citations": 57,
         "year": 2022
       },
       {
@@ -2854,7 +2854,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2023
       },
       {
@@ -2878,7 +2878,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 301,
+        "citations": 302,
         "year": 2019
       },
       {
@@ -2950,7 +2950,7 @@
         "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
         "field": "Medicine",
         "type": "citing",
-        "citations": 117,
+        "citations": 118,
         "year": 2019
       },
       {
@@ -2966,7 +2966,7 @@
         "label": "Localized production of defence chemicals by intracellular symbionts of Haliclona sponges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2019
       },
       {
@@ -2982,7 +2982,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 125,
+        "citations": 126,
         "year": 2023
       },
       {
@@ -2998,7 +2998,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2023
       },
       {
@@ -3006,7 +3006,7 @@
         "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 59,
+        "citations": 60,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4789,
+        "citations": 4790,
         "year": 2017
       },
       {
@@ -3142,7 +3142,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 151,
+        "citations": 152,
         "year": 2018
       },
       {
@@ -3190,7 +3190,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 350,
+        "citations": 351,
         "year": 2019
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4920,
+        "citations": 4926,
         "year": 2021
       },
       {
@@ -3350,7 +3350,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2022
       },
       {
