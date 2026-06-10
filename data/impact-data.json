@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-09T09:59:48.316671+00:00",
+  "generated_at": "2026-06-10T10:17:07.827774+00:00",
   "summary": {
-    "total_citations": 2427,
+    "total_citations": 2429,
     "countries_reached": 76,
-    "citing_institutions": 3382,
+    "citing_institutions": 3383,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 646,
+      "cited_by_count": 647,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 377,
+      "cited_by_count": 378,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 500,
-      "institutions": 607
+      "citations": 502,
+      "institutions": 608
     },
     {
       "country": "Germany",
@@ -447,20 +447,20 @@
       "institutions": 126
     },
     {
+      "country": "Italy",
+      "country_code": "IT",
+      "lat": 41.9,
+      "lon": 12.6,
+      "citations": 71,
+      "institutions": 86
+    },
+    {
       "country": "Denmark",
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
       "citations": 71,
       "institutions": 20
-    },
-    {
-      "country": "Italy",
-      "country_code": "IT",
-      "lat": 41.9,
-      "lon": 12.6,
-      "citations": 70,
-      "institutions": 86
     },
     {
       "country": "South Korea",
@@ -979,7 +979,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 54
+      "citations": 55
     },
     {
       "name": "Centre National de la Recherche Scientifique",
@@ -1052,17 +1052,17 @@
       "citations": 37
     },
     {
-      "name": "Cornell University",
-      "lat": 42.44063,
-      "lon": -76.49661,
-      "country_code": "US",
-      "citations": 36
-    },
-    {
       "name": "University of Chinese Academy of Sciences",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
+      "citations": 37
+    },
+    {
+      "name": "Cornell University",
+      "lat": 42.44063,
+      "lon": -76.49661,
+      "country_code": "US",
       "citations": 36
     },
     {
@@ -2014,12 +2014,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 902,
+      "count": 903,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 654,
+      "count": 655,
       "color": "#0891B2"
     },
     {
@@ -2094,7 +2094,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 646,
+        "citations": 647,
         "year": 2020
       },
       {
@@ -2110,7 +2110,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 377,
+        "citations": 378,
         "year": 2023
       },
       {
@@ -2366,7 +2366,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 384,
+        "citations": 385,
         "year": 2022
       },
       {
@@ -2390,7 +2390,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 223,
+        "citations": 224,
         "year": 2021
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 992,
+        "citations": 993,
         "year": 2024
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 76,
+        "citations": 77,
         "year": 2025
       },
       {
@@ -2566,7 +2566,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 111,
+        "citations": 112,
         "year": 2023
       },
       {
@@ -2598,7 +2598,7 @@
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Medicine",
         "type": "citing",
-        "citations": 72,
+        "citations": 73,
         "year": 2024
       },
       {
@@ -2614,7 +2614,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 301,
+        "citations": 302,
         "year": 2020
       },
       {
@@ -2622,7 +2622,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 163,
+        "citations": 164,
         "year": 2019
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 474,
+        "citations": 475,
         "year": 2023
       },
       {
@@ -2718,7 +2718,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 146,
+        "citations": 147,
         "year": 2023
       },
       {
@@ -2750,7 +2750,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 61,
+        "citations": 62,
         "year": 2024
       },
       {
@@ -2782,7 +2782,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 339,
+        "citations": 340,
         "year": 2021
       },
       {
@@ -2830,7 +2830,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2021
       },
       {
@@ -2902,7 +2902,7 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 103,
+        "citations": 104,
         "year": 2019
       },
       {
@@ -3030,7 +3030,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 55,
+        "citations": 56,
         "year": 2023
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4790,
+        "citations": 4793,
         "year": 2017
       },
       {
@@ -3110,7 +3110,7 @@
         "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 136,
+        "citations": 137,
         "year": 2022
       },
       {
@@ -3286,7 +3286,7 @@
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 49,
+        "citations": 50,
         "year": 2022
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4927,
+        "citations": 4929,
         "year": 2021
       },
       {
