@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-10T10:17:07.827774+00:00",
+  "generated_at": "2026-06-11T10:52:45.740389+00:00",
   "summary": {
-    "total_citations": 2429,
+    "total_citations": 2431,
     "countries_reached": 76,
-    "citing_institutions": 3383,
+    "citing_institutions": 3385,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 647,
+      "cited_by_count": 648,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 392,
+      "cited_by_count": 393,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -387,7 +387,7 @@
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 140,
+      "citations": 141,
       "institutions": 90
     },
     {
@@ -415,20 +415,20 @@
       "institutions": 42
     },
     {
+      "country": "Netherlands",
+      "country_code": "NL",
+      "lat": 52.1,
+      "lon": 5.3,
+      "citations": 95,
+      "institutions": 46
+    },
+    {
       "country": "Australia",
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
       "citations": 94,
       "institutions": 86
-    },
-    {
-      "country": "Netherlands",
-      "country_code": "NL",
-      "lat": 52.1,
-      "lon": 5.3,
-      "citations": 94,
-      "institutions": 44
     },
     {
       "country": "Brazil",
@@ -1689,6 +1689,13 @@
       "citations": 13
     },
     {
+      "name": "University of Calgary",
+      "lat": 51.05011,
+      "lon": -114.08529,
+      "country_code": "CA",
+      "citations": 12
+    },
+    {
       "name": "Icahn School of Medicine at Mount Sinai",
       "lat": 40.71427,
       "lon": -74.00597,
@@ -1714,6 +1721,13 @@
       "lat": 52.37403,
       "lon": 4.88969,
       "country_code": "NL",
+      "citations": 12
+    },
+    {
+      "name": "University of Toronto",
+      "lat": 43.70643,
+      "lon": -79.39864,
+      "country_code": "CA",
       "citations": 12
     },
     {
@@ -1773,13 +1787,6 @@
       "citations": 11
     },
     {
-      "name": "University of Calgary",
-      "lat": 51.05011,
-      "lon": -114.08529,
-      "country_code": "CA",
-      "citations": 11
-    },
-    {
       "name": "Chan Zuckerberg Initiative (United States)",
       "lat": 37.48522,
       "lon": -122.23635,
@@ -1791,13 +1798,6 @@
       "lat": 1.28967,
       "lon": 103.85007,
       "country_code": "SG",
-      "citations": 11
-    },
-    {
-      "name": "University of Toronto",
-      "lat": 43.70643,
-      "lon": -79.39864,
-      "country_code": "CA",
       "citations": 11
     },
     {
@@ -2014,12 +2014,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 903,
+      "count": 904,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 655,
+      "count": 656,
       "color": "#0891B2"
     },
     {
@@ -2094,7 +2094,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 647,
+        "citations": 648,
         "year": 2020
       },
       {
@@ -2102,7 +2102,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 392,
+        "citations": 393,
         "year": 2022
       },
       {
@@ -2334,20 +2334,20 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 268,
-        "year": 2021
-      },
-      {
-        "id": "W3156257761",
-        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 228,
+        "citations": 269,
         "year": 2021
       },
       {
         "id": "W3173003579",
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 229,
+        "year": 2021
+      },
+      {
+        "id": "W3156257761",
+        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
         "field": "Medicine",
         "type": "citing",
         "citations": 228,
@@ -2382,7 +2382,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 275,
+        "citations": 276,
         "year": 2023
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 993,
+        "citations": 996,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 332,
+        "citations": 334,
         "year": 2025
       },
       {
@@ -2494,7 +2494,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 343,
+        "citations": 344,
         "year": 2019
       },
       {
@@ -2510,7 +2510,7 @@
         "label": "A Bacterial Symbiont Protects Honey Bees from Fungal Disease",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2021
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 392,
+        "citations": 394,
         "year": 2024
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 475,
+        "citations": 476,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 436,
+        "citations": 437,
         "year": 2023
       },
       {
@@ -2702,7 +2702,7 @@
         "label": "Virtual screening web servers: designing chemical probes and drug candidates in the cyberspace",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 126,
+        "citations": 128,
         "year": 2020
       },
       {
@@ -2726,7 +2726,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2023
       },
       {
@@ -2734,7 +2734,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2020
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 834,
+        "citations": 835,
         "year": 2021
       },
       {
@@ -2782,7 +2782,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 340,
+        "citations": 341,
         "year": 2021
       },
       {
@@ -2790,7 +2790,7 @@
         "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 210,
+        "citations": 211,
         "year": 2020
       },
       {
@@ -2878,7 +2878,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 302,
+        "citations": 303,
         "year": 2019
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 155,
+        "citations": 156,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4793,
+        "citations": 4794,
         "year": 2017
       },
       {
@@ -3206,7 +3206,7 @@
         "label": "The confluence of big data and evolutionary genome mining for the discovery of natural products",
         "field": "Medicine",
         "type": "citing",
-        "citations": 87,
+        "citations": 88,
         "year": 2021
       },
       {
@@ -3222,7 +3222,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 32,
+        "citations": 33,
         "year": 2023
       },
       {
@@ -3286,7 +3286,7 @@
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2022
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4929,
+        "citations": 4935,
         "year": 2021
       },
       {
@@ -3350,7 +3350,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 110,
+        "citations": 111,
         "year": 2022
       },
       {
@@ -3526,12 +3526,12 @@
       },
       {
         "source": "W3091839106",
-        "target": "W3156257761",
+        "target": "W3173003579",
         "strength": 0.5
       },
       {
         "source": "W3091839106",
-        "target": "W3173003579",
+        "target": "W3156257761",
         "strength": 0.5
       },
       {
