@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-13T09:29:03.939976+00:00",
+  "generated_at": "2026-06-14T09:50:53.382819+00:00",
   "summary": {
     "total_citations": 2431,
     "countries_reached": 76,
-    "citing_institutions": 3391,
+    "citing_institutions": 3394,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 955,
-      "institutions": 675
+      "citations": 956,
+      "institutions": 676
     },
     {
       "country": "China",
@@ -379,8 +379,8 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 197,
-      "institutions": 161
+      "citations": 198,
+      "institutions": 162
     },
     {
       "country": "Canada",
@@ -687,20 +687,20 @@
       "institutions": 2
     },
     {
+      "country": "Pakistan",
+      "country_code": "PK",
+      "lat": 30.4,
+      "lon": 69.3,
+      "citations": 12,
+      "institutions": 13
+    },
+    {
       "country": "Malaysia",
       "country_code": "MY",
       "lat": 4.2,
       "lon": 101.9,
       "citations": 11,
       "institutions": 11
-    },
-    {
-      "country": "Pakistan",
-      "country_code": "PK",
-      "lat": 30.4,
-      "lon": 69.3,
-      "citations": 11,
-      "institutions": 12
     },
     {
       "country": "Indonesia",
@@ -831,6 +831,14 @@
       "institutions": 3
     },
     {
+      "country": "Cameroon",
+      "country_code": "CM",
+      "lat": 7.4,
+      "lon": 12.3,
+      "citations": 4,
+      "institutions": 3
+    },
+    {
       "country": "Morocco",
       "country_code": "MA",
       "lat": 31.8,
@@ -869,14 +877,6 @@
       "lon": 43.7,
       "citations": 3,
       "institutions": 8
-    },
-    {
-      "country": "Cameroon",
-      "country_code": "CM",
-      "lat": 7.4,
-      "lon": 12.3,
-      "citations": 3,
-      "institutions": 3
     },
     {
       "country": "Ethiopia",
@@ -1542,13 +1542,6 @@
       "citations": 14
     },
     {
-      "name": "Guangzhou Medical University",
-      "lat": 23.13623809814453,
-      "lon": 113.25353240966797,
-      "country_code": "CN",
-      "citations": 14
-    },
-    {
       "name": "University of Helsinki",
       "lat": 60.16952,
       "lon": 24.93545,
@@ -1623,6 +1616,13 @@
       "lat": 52.26594,
       "lon": 10.52673,
       "country_code": "DE",
+      "citations": 13
+    },
+    {
+      "name": "Guangzhou Medical University",
+      "lat": 23.13623809814453,
+      "lon": 113.25353240966797,
+      "country_code": "CN",
       "citations": 13
     },
     {
@@ -2302,7 +2302,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 867,
+        "citations": 868,
         "year": 2021
       },
       {
@@ -2430,7 +2430,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1000,
+        "citations": 1004,
         "year": 2024
       },
       {
@@ -2438,7 +2438,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 336,
+        "citations": 337,
         "year": 2025
       },
       {
@@ -2470,7 +2470,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 90,
+        "citations": 93,
         "year": 2024
       },
       {
@@ -2478,7 +2478,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 77,
+        "citations": 78,
         "year": 2025
       },
       {
@@ -2534,7 +2534,7 @@
         "label": "Relevance of microbial symbiosis to insect behavior",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2020
       },
       {
@@ -2550,7 +2550,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 397,
+        "citations": 398,
         "year": 2024
       },
       {
@@ -2662,7 +2662,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 479,
+        "citations": 480,
         "year": 2023
       },
       {
@@ -2670,7 +2670,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 438,
+        "citations": 440,
         "year": 2023
       },
       {
@@ -2686,7 +2686,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 191,
+        "citations": 192,
         "year": 2021
       },
       {
@@ -2750,7 +2750,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2024
       },
       {
@@ -2774,7 +2774,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 838,
+        "citations": 840,
         "year": 2021
       },
       {
@@ -2806,7 +2806,7 @@
         "label": "Insects\u2019 potential: Understanding the functional role of their gut microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 81,
+        "citations": 82,
         "year": 2020
       },
       {
@@ -2878,7 +2878,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 304,
+        "citations": 305,
         "year": 2019
       },
       {
@@ -2934,7 +2934,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 503,
+        "citations": 504,
         "year": 2019
       },
       {
@@ -2942,7 +2942,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 167,
+        "citations": 168,
         "year": 2019
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 157,
+        "citations": 158,
         "year": 2024
       },
       {
@@ -3062,7 +3062,7 @@
         "label": "A Comprehensive State-of-the-Art Survey on Data Visualization Tools: Research Developments, Challenges and Future Domain Specific Visualization Framework",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 45,
+        "citations": 46,
         "year": 2022
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4798,
+        "citations": 4800,
         "year": 2017
       },
       {
@@ -3190,7 +3190,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 351,
+        "citations": 352,
         "year": 2019
       },
       {
@@ -3290,20 +3290,20 @@
         "year": 2022
       },
       {
+        "id": "W2945132149",
+        "label": "Droplet probe: coupling chromatography to the <i>in situ</i> evaluation of the chemistry of nature",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 34,
+        "year": 2019
+      },
+      {
         "id": "W2757788011",
         "label": "Prealamethicin F50 and related peptaibols from Trichoderma arundinaceum: validation of their authenticity via in situ chemical analysis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 33,
         "year": 2017
-      },
-      {
-        "id": "W2945132149",
-        "label": "Droplet probe: coupling chromatography to the <i>in situ</i> evaluation of the chemistry of nature",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 33,
-        "year": 2019
       },
       {
         "id": "W3195523593",
@@ -3342,7 +3342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4943,
+        "citations": 4955,
         "year": 2021
       },
       {
@@ -3370,20 +3370,20 @@
         "year": 2020
       },
       {
+        "id": "W3214451869",
+        "label": "Synthetic Biology Advanced Natural Product Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 17,
+        "year": 2021
+      },
+      {
         "id": "W4411466233",
         "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
         "field": "Medicine",
         "type": "citing",
         "citations": 16,
         "year": 2025
-      },
-      {
-        "id": "W3214451869",
-        "label": "Synthetic Biology Advanced Natural Product Discovery",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 16,
-        "year": 2021
       },
       {
         "id": "W3087184317",
@@ -4231,12 +4231,12 @@
       },
       {
         "source": "W2741464576",
-        "target": "W2757788011",
+        "target": "W2945132149",
         "strength": 0.5
       },
       {
         "source": "W2741464576",
-        "target": "W2945132149",
+        "target": "W2757788011",
         "strength": 0.5
       },
       {
@@ -4281,12 +4281,12 @@
       },
       {
         "source": "W2946278827",
-        "target": "W4411466233",
+        "target": "W3214451869",
         "strength": 0.5
       },
       {
         "source": "W2946278827",
-        "target": "W3214451869",
+        "target": "W4411466233",
         "strength": 0.5
       },
       {
