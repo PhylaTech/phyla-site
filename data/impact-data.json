@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-17T11:11:36.995729+00:00",
+  "generated_at": "2026-06-18T10:42:25.483715+00:00",
   "summary": {
     "total_citations": 2435,
     "countries_reached": 76,
-    "citing_institutions": 3406,
+    "citing_institutions": 3407,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 506,
-      "institutions": 612
+      "citations": 507,
+      "institutions": 613
     },
     {
       "country": "Germany",
