@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-18T10:42:25.483715+00:00",
+  "generated_at": "2026-06-19T10:52:34.976642+00:00",
   "summary": {
-    "total_citations": 2435,
+    "total_citations": 2437,
     "countries_reached": 76,
-    "citing_institutions": 3407,
+    "citing_institutions": 3413,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 393,
+      "cited_by_count": 394,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 380,
+      "cited_by_count": 381,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -355,7 +355,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 961,
+      "citations": 962,
       "institutions": 678
     },
     {
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 507,
-      "institutions": 613
+      "citations": 513,
+      "institutions": 618
     },
     {
       "country": "Germany",
@@ -508,7 +508,7 @@
       "lat": 51.9,
       "lon": 19.1,
       "citations": 39,
-      "institutions": 30
+      "institutions": 31
     },
     {
       "country": "South Africa",
@@ -1185,18 +1185,18 @@
       "citations": 25
     },
     {
+      "name": "Peking University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 25
+    },
+    {
       "name": "Wageningen University & Research",
       "lat": 51.97,
       "lon": 5.66667,
       "country_code": "NL",
       "citations": 25
-    },
-    {
-      "name": "Peking University",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 24
     },
     {
       "name": "University of Cambridge",
@@ -1227,6 +1227,13 @@
       "citations": 22
     },
     {
+      "name": "University of Washington",
+      "lat": 47.60621,
+      "lon": -122.33207,
+      "country_code": "US",
+      "citations": 21
+    },
+    {
       "name": "Technical University of Denmark",
       "lat": 55.77043914794922,
       "lon": 12.503780364990234,
@@ -1245,13 +1252,6 @@
       "lat": 51.50853,
       "lon": -0.12574,
       "country_code": "GB",
-      "citations": 20
-    },
-    {
-      "name": "University of Washington",
-      "lat": 47.60621,
-      "lon": -122.33207,
-      "country_code": "US",
       "citations": 20
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 905,
+      "count": 906,
       "color": "#14B8A6"
     },
     {
@@ -2039,7 +2039,7 @@
     },
     {
       "name": "Chemistry",
-      "count": 73,
+      "count": 74,
       "color": "#A78BFA"
     },
     {
@@ -2106,7 +2106,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 393,
+        "citations": 394,
         "year": 2022
       },
       {
@@ -2114,7 +2114,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 380,
+        "citations": 381,
         "year": 2023
       },
       {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 868,
+        "citations": 869,
         "year": 2021
       },
       {
@@ -2314,7 +2314,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 324,
+        "citations": 325,
         "year": 2021
       },
       {
@@ -2386,7 +2386,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 282,
+        "citations": 283,
         "year": 2023
       },
       {
@@ -2410,7 +2410,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 136,
+        "citations": 137,
         "year": 2022
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1009,
+        "citations": 1015,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 341,
+        "citations": 342,
         "year": 2025
       },
       {
@@ -2490,7 +2490,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 69,
+        "citations": 70,
         "year": 2024
       },
       {
@@ -2530,7 +2530,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2019
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 401,
+        "citations": 402,
         "year": 2024
       },
       {
@@ -2570,7 +2570,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 114,
+        "citations": 115,
         "year": 2023
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 481,
+        "citations": 483,
         "year": 2023
       },
       {
@@ -2978,7 +2978,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 159,
+        "citations": 160,
         "year": 2024
       },
       {
@@ -3002,7 +3002,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 93,
+        "citations": 95,
         "year": 2023
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4804,
+        "citations": 4805,
         "year": 2017
       },
       {
@@ -3194,7 +3194,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 352,
+        "citations": 353,
         "year": 2019
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4968,
+        "citations": 4975,
         "year": 2021
       },
       {
