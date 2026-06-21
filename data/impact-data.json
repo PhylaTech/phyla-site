@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-20T09:30:51.519351+00:00",
+  "generated_at": "2026-06-21T10:01:21.435467+00:00",
   "summary": {
-    "total_citations": 2440,
+    "total_citations": 2442,
     "countries_reached": 76,
-    "citing_institutions": 3416,
+    "citing_institutions": 3419,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 383,
+      "cited_by_count": 385,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -355,16 +355,16 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 963,
-      "institutions": 678
+      "citations": 964,
+      "institutions": 679
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 513,
-      "institutions": 618
+      "citations": 514,
+      "institutions": 620
     },
     {
       "country": "Germany",
@@ -387,7 +387,7 @@
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 141,
+      "citations": 142,
       "institutions": 90
     },
     {
@@ -435,7 +435,7 @@
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 83,
+      "citations": 84,
       "institutions": 66
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 907,
+      "count": 908,
       "color": "#14B8A6"
     },
     {
@@ -2039,7 +2039,7 @@
     },
     {
       "name": "Chemistry",
-      "count": 74,
+      "count": 75,
       "color": "#A78BFA"
     },
     {
@@ -2114,7 +2114,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 383,
+        "citations": 385,
         "year": 2023
       },
       {
@@ -2362,7 +2362,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 216,
+        "citations": 217,
         "year": 2021
       },
       {
@@ -2370,7 +2370,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 385,
+        "citations": 386,
         "year": 2022
       },
       {
@@ -2386,7 +2386,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 284,
+        "citations": 286,
         "year": 2023
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1021,
+        "citations": 1024,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 346,
+        "citations": 348,
         "year": 2025
       },
       {
@@ -2458,7 +2458,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 173,
+        "citations": 174,
         "year": 2024
       },
       {
@@ -2658,7 +2658,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 639,
+        "citations": 640,
         "year": 2020
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 444,
+        "citations": 445,
         "year": 2023
       },
       {
@@ -2746,7 +2746,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 75,
+        "citations": 76,
         "year": 2023
       },
       {
@@ -2778,7 +2778,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 843,
+        "citations": 846,
         "year": 2021
       },
       {
@@ -2882,7 +2882,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 305,
+        "citations": 306,
         "year": 2019
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4808,
+        "citations": 4809,
         "year": 2017
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4981,
+        "citations": 4983,
         "year": 2021
       },
       {
