@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T12:21:41.936579+00:00",
+  "generated_at": "2026-06-23T09:58:47.014504+00:00",
   "summary": {
     "total_citations": 2442,
     "countries_reached": 76,
@@ -799,6 +799,14 @@
       "institutions": 3
     },
     {
+      "country": "Serbia",
+      "country_code": "RS",
+      "lat": 44.0,
+      "lon": 21.0,
+      "citations": 4,
+      "institutions": 3
+    },
+    {
       "country": "Ukraine",
       "country_code": "UA",
       "lat": 48.4,
@@ -813,14 +821,6 @@
       "lon": 33.4,
       "citations": 4,
       "institutions": 4
-    },
-    {
-      "country": "Serbia",
-      "country_code": "RS",
-      "lat": 44.0,
-      "lon": 21.0,
-      "citations": 4,
-      "institutions": 3
     },
     {
       "country": "Sri Lanka",
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 445,
+        "citations": 446,
         "year": 2023
       },
       {
@@ -2978,7 +2978,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 162,
+        "citations": 163,
         "year": 2024
       },
       {
@@ -3050,7 +3050,7 @@
         "label": "Survey on Multi-omics, and Multi-omics Data Analysis, Integration andApplication",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 99,
+        "citations": 100,
         "year": 2023
       },
       {
