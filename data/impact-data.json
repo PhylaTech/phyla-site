@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-23T09:58:47.014504+00:00",
+  "generated_at": "2026-06-24T09:47:08.427662+00:00",
   "summary": {
-    "total_citations": 2442,
+    "total_citations": 2443,
     "countries_reached": 76,
-    "citing_institutions": 3419,
+    "citing_institutions": 3421,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 394,
+      "cited_by_count": 395,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -355,16 +355,16 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 964,
-      "institutions": 679
+      "citations": 965,
+      "institutions": 680
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 514,
-      "institutions": 620
+      "citations": 515,
+      "institutions": 621
     },
     {
       "country": "Germany",
@@ -687,20 +687,20 @@
       "institutions": 15
     },
     {
+      "country": "Malaysia",
+      "country_code": "MY",
+      "lat": 4.2,
+      "lon": 101.9,
+      "citations": 12,
+      "institutions": 11
+    },
+    {
       "country": "Luxembourg",
       "country_code": "LU",
       "lat": 49.8,
       "lon": 6.1,
       "citations": 12,
       "institutions": 2
-    },
-    {
-      "country": "Malaysia",
-      "country_code": "MY",
-      "lat": 4.2,
-      "lon": 101.9,
-      "citations": 11,
-      "institutions": 11
     },
     {
       "country": "Indonesia",
@@ -1451,6 +1451,13 @@
       "citations": 16
     },
     {
+      "name": "Freie Universit\u00e4t Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 15
+    },
+    {
       "name": "Shandong University",
       "lat": 36.66833,
       "lon": 116.99722,
@@ -1512,13 +1519,6 @@
       "lon": -123.26204,
       "country_code": "US",
       "citations": 15
-    },
-    {
-      "name": "Freie Universit\u00e4t Berlin",
-      "lat": 52.52437,
-      "lon": 13.41053,
-      "country_code": "DE",
-      "citations": 14
     },
     {
       "name": "Northwestern University",
@@ -1689,6 +1689,13 @@
       "citations": 13
     },
     {
+      "name": "Humboldt-Universit\u00e4t zu Berlin",
+      "lat": 52.52436828613281,
+      "lon": 13.410530090332031,
+      "country_code": "DE",
+      "citations": 12
+    },
+    {
       "name": "University of Calgary",
       "lat": 51.05011,
       "lon": -114.08529,
@@ -1785,13 +1792,6 @@
       "lon": 8.68417,
       "country_code": "DE",
       "citations": 12
-    },
-    {
-      "name": "Humboldt-Universit\u00e4t zu Berlin",
-      "lat": 52.52436828613281,
-      "lon": 13.410530090332031,
-      "country_code": "DE",
-      "citations": 11
     },
     {
       "name": "Chan Zuckerberg Initiative (United States)",
@@ -1934,13 +1934,6 @@
       "citations": 10
     },
     {
-      "name": "Wisconsin Institutes for Discovery",
-      "lat": 43.07303237915039,
-      "lon": -89.40760803222656,
-      "country_code": "US",
-      "citations": 10
-    },
-    {
       "name": "Union Hospital",
       "lat": 22.360681533813477,
       "lon": 114.17512512207031,
@@ -1966,6 +1959,13 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
+      "citations": 10
+    },
+    {
+      "name": "Wisconsin Institutes for Discovery",
+      "lat": 43.07303237915039,
+      "lon": -89.40760803222656,
+      "country_code": "US",
       "citations": 10
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 908,
+      "count": 909,
       "color": "#14B8A6"
     },
     {
@@ -2106,7 +2106,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 394,
+        "citations": 395,
         "year": 2022
       },
       {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 870,
+        "citations": 872,
         "year": 2021
       },
       {
@@ -2314,7 +2314,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 326,
+        "citations": 327,
         "year": 2021
       },
       {
@@ -2370,7 +2370,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 386,
+        "citations": 389,
         "year": 2022
       },
       {
@@ -2378,7 +2378,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 320,
+        "citations": 321,
         "year": 2022
       },
       {
@@ -2386,7 +2386,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 286,
+        "citations": 287,
         "year": 2023
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 348,
+        "citations": 351,
         "year": 2025
       },
       {
@@ -2506,7 +2506,7 @@
         "label": "<i>Burkholderia</i> as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 139,
+        "citations": 140,
         "year": 2019
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 402,
+        "citations": 406,
         "year": 2024
       },
       {
@@ -2578,7 +2578,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 108,
+        "citations": 109,
         "year": 2022
       },
       {
@@ -2610,7 +2610,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 63,
+        "citations": 64,
         "year": 2023
       },
       {
@@ -2618,7 +2618,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 303,
+        "citations": 304,
         "year": 2020
       },
       {
@@ -2658,7 +2658,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 640,
+        "citations": 641,
         "year": 2020
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 484,
+        "citations": 485,
         "year": 2023
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 446,
+        "citations": 448,
         "year": 2023
       },
       {
@@ -2778,7 +2778,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 846,
+        "citations": 847,
         "year": 2021
       },
       {
@@ -2978,7 +2978,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 163,
+        "citations": 164,
         "year": 2024
       },
       {
@@ -2986,7 +2986,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 127,
+        "citations": 128,
         "year": 2023
       },
       {
@@ -3006,17 +3006,17 @@
         "year": 2023
       },
       {
-        "id": "W4396905162",
-        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 60,
-        "year": 2024
-      },
-      {
         "id": "W4402906567",
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 61,
+        "year": 2024
+      },
+      {
+        "id": "W4396905162",
+        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 60,
         "year": 2024
@@ -3074,7 +3074,7 @@
         "label": "Rapid Multi-Omics Sample Preparation for Mass Spectrometry",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2023
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4809,
+        "citations": 4813,
         "year": 2017
       },
       {
@@ -3114,7 +3114,7 @@
         "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 137,
+        "citations": 139,
         "year": 2022
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4983,
+        "citations": 4987,
         "year": 2021
       },
       {
@@ -3458,7 +3458,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 42,
+        "citations": 44,
         "year": 2025
       },
       {
@@ -3478,17 +3478,17 @@
         "year": 2026
       },
       {
-        "id": "W4411012216",
-        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
-        "field": "Agricultural and Biological Sciences",
+        "id": "W4414553450",
+        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
+        "field": "Medicine",
         "type": "citing",
         "citations": 2,
         "year": 2025
       },
       {
-        "id": "W4414553450",
-        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
-        "field": "Medicine",
+        "id": "W4411012216",
+        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
+        "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 2,
         "year": 2025
@@ -4005,12 +4005,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4396905162",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4396905162",
         "strength": 0.5
       },
       {
@@ -4350,12 +4350,12 @@
       },
       {
         "source": "W4386446289",
-        "target": "W4411012216",
+        "target": "W4414553450",
         "strength": 0.5
       },
       {
         "source": "W4386446289",
-        "target": "W4414553450",
+        "target": "W4411012216",
         "strength": 0.5
       },
       {
