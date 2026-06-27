@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-26T09:44:50.980041+00:00",
+  "generated_at": "2026-06-27T08:47:47.586075+00:00",
   "summary": {
-    "total_citations": 2447,
+    "total_citations": 2452,
     "countries_reached": 76,
-    "citing_institutions": 3421,
+    "citing_institutions": 3422,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 386,
+      "cited_by_count": 390,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -52,7 +52,7 @@
       "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
       "journal": "Nature Communications",
       "year": 2018,
-      "cited_by_count": 133,
+      "cited_by_count": 134,
       "field": "Agricultural and Biological Sciences",
       "authors": [
         "Ian J. Miller"
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 965,
-      "institutions": 680
+      "citations": 967,
+      "institutions": 681
     },
     {
       "country": "China",
@@ -371,7 +371,7 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 287,
+      "citations": 288,
       "institutions": 174
     },
     {
@@ -535,20 +535,20 @@
       "institutions": 18
     },
     {
+      "country": "Portugal",
+      "country_code": "PT",
+      "lat": 39.4,
+      "lon": -8.2,
+      "citations": 28,
+      "institutions": 15
+    },
+    {
       "country": "New Zealand",
       "country_code": "NZ",
       "lat": -40.9,
       "lon": 174.9,
       "citations": 28,
       "institutions": 9
-    },
-    {
-      "country": "Portugal",
-      "country_code": "PT",
-      "lat": 39.4,
-      "lon": -8.2,
-      "citations": 27,
-      "institutions": 15
     },
     {
       "country": "Czech Republic",
@@ -599,6 +599,14 @@
       "institutions": 21
     },
     {
+      "country": "Israel",
+      "country_code": "IL",
+      "lat": 31.0,
+      "lon": 34.8,
+      "citations": 21,
+      "institutions": 15
+    },
+    {
       "country": "Iran",
       "country_code": "IR",
       "lat": 32.4,
@@ -621,14 +629,6 @@
       "lon": 21.8,
       "citations": 20,
       "institutions": 21
-    },
-    {
-      "country": "Israel",
-      "country_code": "IL",
-      "lat": 31.0,
-      "lon": 34.8,
-      "citations": 20,
-      "institutions": 15
     },
     {
       "country": "Taiwan",
@@ -711,20 +711,20 @@
       "institutions": 10
     },
     {
+      "country": "Thailand",
+      "country_code": "TH",
+      "lat": 15.9,
+      "lon": 100.9,
+      "citations": 9,
+      "institutions": 7
+    },
+    {
       "country": "Bangladesh",
       "country_code": "BD",
       "lat": 23.7,
       "lon": 90.4,
       "citations": 8,
       "institutions": 8
-    },
-    {
-      "country": "Thailand",
-      "country_code": "TH",
-      "lat": 15.9,
-      "lon": 100.9,
-      "citations": 8,
-      "institutions": 7
     },
     {
       "country": "Romania",
@@ -799,20 +799,20 @@
       "institutions": 3
     },
     {
-      "country": "Ukraine",
-      "country_code": "UA",
-      "lat": 48.4,
-      "lon": 31.2,
-      "citations": 4,
-      "institutions": 4
-    },
-    {
       "country": "Serbia",
       "country_code": "RS",
       "lat": 44.0,
       "lon": 21.0,
       "citations": 4,
       "institutions": 3
+    },
+    {
+      "country": "Ukraine",
+      "country_code": "UA",
+      "lat": 48.4,
+      "lon": 31.2,
+      "citations": 4,
+      "institutions": 4
     },
     {
       "country": "Cyprus",
@@ -1000,7 +1000,7 @@
       "lat": 32.71571,
       "lon": -117.16472,
       "country_code": "US",
-      "citations": 43
+      "citations": 44
     },
     {
       "name": "Harvard University",
@@ -1108,6 +1108,13 @@
       "citations": 29
     },
     {
+      "name": "Max Planck Institute for Chemical Ecology",
+      "lat": 50.92877960205078,
+      "lon": 11.589900016784668,
+      "country_code": "DE",
+      "citations": 29
+    },
+    {
       "name": "Fudan University",
       "lat": 31.22222,
       "lon": 121.45806,
@@ -1119,13 +1126,6 @@
       "lat": 37.87158966064453,
       "lon": -122.27275085449219,
       "country_code": "US",
-      "citations": 28
-    },
-    {
-      "name": "Max Planck Institute for Chemical Ecology",
-      "lat": 50.92877960205078,
-      "lon": 11.589900016784668,
-      "country_code": "DE",
       "citations": 28
     },
     {
@@ -1402,6 +1402,13 @@
       "citations": 16
     },
     {
+      "name": "University of Pennsylvania",
+      "lat": 39.95238,
+      "lon": -75.16362,
+      "country_code": "US",
+      "citations": 16
+    },
+    {
       "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
       "lat": 46.516,
       "lon": 6.63282,
@@ -1482,13 +1489,6 @@
       "name": "Duke University",
       "lat": 35.99403,
       "lon": -78.89862,
-      "country_code": "US",
-      "citations": 15
-    },
-    {
-      "name": "University of Pennsylvania",
-      "lat": 39.95238,
-      "lon": -75.16362,
       "country_code": "US",
       "citations": 15
     },
@@ -1710,6 +1710,13 @@
       "citations": 12
     },
     {
+      "name": "University of California, Irvine",
+      "lat": 33.66946,
+      "lon": -117.82311,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
       "name": "Case Western Reserve University",
       "lat": 41.4995,
       "lon": -81.69541,
@@ -1797,13 +1804,6 @@
       "name": "Chan Zuckerberg Initiative (United States)",
       "lat": 37.48522,
       "lon": -122.23635,
-      "country_code": "US",
-      "citations": 11
-    },
-    {
-      "name": "University of California, Irvine",
-      "lat": 33.66946,
-      "lon": -117.82311,
       "country_code": "US",
       "citations": 11
     },
@@ -2014,17 +2014,17 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 911,
+      "count": 912,
       "color": "#14B8A6"
     },
     {
       "name": "Medicine",
-      "count": 661,
+      "count": 664,
       "color": "#0891B2"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 218,
+      "count": 219,
       "color": "#0EA5E9"
     },
     {
@@ -2114,7 +2114,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 386,
+        "citations": 390,
         "year": 2023
       },
       {
@@ -2122,7 +2122,7 @@
         "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
-        "citations": 133,
+        "citations": 134,
         "year": 2018
       },
       {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 872,
+        "citations": 873,
         "year": 2021
       },
       {
@@ -2458,7 +2458,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 174,
+        "citations": 175,
         "year": 2024
       },
       {
@@ -2466,7 +2466,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2024
       },
       {
@@ -2474,7 +2474,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 93,
+        "citations": 94,
         "year": 2024
       },
       {
@@ -2506,7 +2506,7 @@
         "label": "<i>Burkholderia</i> as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 140,
+        "citations": 141,
         "year": 2019
       },
       {
@@ -2538,7 +2538,7 @@
         "label": "Relevance of microbial symbiosis to insect behavior",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 92,
+        "citations": 93,
         "year": 2020
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 411,
+        "citations": 412,
         "year": 2024
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 449,
+        "citations": 450,
         "year": 2023
       },
       {
@@ -2722,7 +2722,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 147,
+        "citations": 148,
         "year": 2023
       },
       {
@@ -2778,7 +2778,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 847,
+        "citations": 848,
         "year": 2021
       },
       {
@@ -2786,7 +2786,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 343,
+        "citations": 344,
         "year": 2021
       },
       {
@@ -2858,7 +2858,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 51,
+        "citations": 52,
         "year": 2023
       },
       {
@@ -3026,7 +3026,7 @@
         "label": "A lipidome landscape of aging in mice",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2024
       },
       {
@@ -3034,7 +3034,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 56,
+        "citations": 57,
         "year": 2023
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4817,
+        "citations": 4820,
         "year": 2017
       },
       {
@@ -3194,7 +3194,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 354,
+        "citations": 355,
         "year": 2019
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 4996,
+        "citations": 5001,
         "year": 2021
       },
       {
@@ -3458,7 +3458,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 44,
+        "citations": 45,
         "year": 2025
       },
       {
