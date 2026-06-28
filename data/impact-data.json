@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-27T08:47:47.586075+00:00",
+  "generated_at": "2026-06-28T09:25:24.803296+00:00",
   "summary": {
     "total_citations": 2452,
     "countries_reached": 76,
-    "citing_institutions": 3422,
+    "citing_institutions": 3425,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 516,
+      "citations": 517,
       "institutions": 621
     },
     {
@@ -395,8 +395,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 119,
-      "institutions": 146
+      "citations": 120,
+      "institutions": 147
     },
     {
       "country": "France",
@@ -515,7 +515,7 @@
       "country_code": "ZA",
       "lat": -30.6,
       "lon": 22.9,
-      "citations": 35,
+      "citations": 36,
       "institutions": 23
     },
     {
@@ -599,6 +599,14 @@
       "institutions": 21
     },
     {
+      "country": "Ireland",
+      "country_code": "IE",
+      "lat": 53.1,
+      "lon": -7.7,
+      "citations": 21,
+      "institutions": 20
+    },
+    {
       "country": "Israel",
       "country_code": "IL",
       "lat": 31.0,
@@ -613,14 +621,6 @@
       "lon": 53.7,
       "citations": 20,
       "institutions": 31
-    },
-    {
-      "country": "Ireland",
-      "country_code": "IE",
-      "lat": 53.1,
-      "lon": -7.7,
-      "citations": 20,
-      "institutions": 19
     },
     {
       "country": "Greece",
@@ -879,6 +879,14 @@
       "institutions": 8
     },
     {
+      "country": "Nigeria",
+      "country_code": "NG",
+      "lat": 9.1,
+      "lon": 8.7,
+      "citations": 3,
+      "institutions": 5
+    },
+    {
       "country": "Ethiopia",
       "country_code": "ET",
       "lat": 9.1,
@@ -909,14 +917,6 @@
       "lon": 25.0,
       "citations": 2,
       "institutions": 2
-    },
-    {
-      "country": "Nigeria",
-      "country_code": "NG",
-      "lat": 9.1,
-      "lon": 8.7,
-      "citations": 2,
-      "institutions": 4
     },
     {
       "country": "Tunisia",
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 873,
+        "citations": 875,
         "year": 2021
       },
       {
@@ -2322,7 +2322,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 324,
+        "citations": 325,
         "year": 2022
       },
       {
@@ -2370,7 +2370,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 391,
+        "citations": 393,
         "year": 2022
       },
       {
@@ -2386,7 +2386,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 287,
+        "citations": 288,
         "year": 2023
       },
       {
@@ -2402,7 +2402,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 183,
+        "citations": 184,
         "year": 2022
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1027,
+        "citations": 1037,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 355,
+        "citations": 357,
         "year": 2025
       },
       {
@@ -2466,7 +2466,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2024
       },
       {
@@ -2474,7 +2474,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 94,
+        "citations": 95,
         "year": 2024
       },
       {
@@ -2498,7 +2498,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 344,
+        "citations": 345,
         "year": 2019
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 412,
+        "citations": 413,
         "year": 2024
       },
       {
@@ -2578,7 +2578,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2022
       },
       {
@@ -2590,17 +2590,17 @@
         "year": 2023
       },
       {
-        "id": "W4396578574",
-        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 75,
-        "year": 2024
-      },
-      {
         "id": "W4396858058",
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
+        "type": "citing",
+        "citations": 76,
+        "year": 2024
+      },
+      {
+        "id": "W4396578574",
+        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
+        "field": "Medicine",
         "type": "citing",
         "citations": 75,
         "year": 2024
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 486,
+        "citations": 488,
         "year": 2023
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 450,
+        "citations": 453,
         "year": 2023
       },
       {
@@ -2690,7 +2690,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 195,
+        "citations": 196,
         "year": 2021
       },
       {
@@ -2722,7 +2722,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 148,
+        "citations": 149,
         "year": 2023
       },
       {
@@ -2754,7 +2754,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 66,
+        "citations": 67,
         "year": 2024
       },
       {
@@ -2978,7 +2978,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 165,
+        "citations": 166,
         "year": 2024
       },
       {
@@ -2986,7 +2986,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 128,
+        "citations": 129,
         "year": 2023
       },
       {
@@ -3002,21 +3002,21 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2023
-      },
-      {
-        "id": "W4396905162",
-        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 61,
-        "year": 2024
       },
       {
         "id": "W4402906567",
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 62,
+        "year": 2024
+      },
+      {
+        "id": "W4396905162",
+        "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 61,
         "year": 2024
@@ -3034,7 +3034,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 57,
+        "citations": 58,
         "year": 2023
       },
       {
@@ -3218,7 +3218,7 @@
         "label": "Evolution of combinatorial diversity in trans-acyltransferase polyketide synthase assembly lines across bacteria",
         "field": "Medicine",
         "type": "citing",
-        "citations": 55,
+        "citations": 56,
         "year": 2021
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5001,
+        "citations": 5005,
         "year": 2021
       },
       {
@@ -3690,12 +3690,12 @@
       },
       {
         "source": "W4281483346",
-        "target": "W4396578574",
+        "target": "W4396858058",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
-        "target": "W4396858058",
+        "target": "W4396578574",
         "strength": 0.5
       },
       {
@@ -4005,12 +4005,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4396905162",
+        "target": "W4402906567",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4402906567",
+        "target": "W4396905162",
         "strength": 0.5
       },
       {
