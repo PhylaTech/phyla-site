@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-01T10:05:41.551415+00:00",
+  "generated_at": "2026-07-02T09:27:29.125817+00:00",
   "summary": {
-    "total_citations": 2453,
+    "total_citations": 2456,
     "countries_reached": 76,
     "citing_institutions": 3425,
     "disciplines_impacted": 23,
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 649,
+      "cited_by_count": 650,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 396,
+      "cited_by_count": 398,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -1808,17 +1808,17 @@
       "citations": 11
     },
     {
-      "name": "The University of Queensland",
-      "lat": -27.46794,
-      "lon": 153.02809,
-      "country_code": "AU",
-      "citations": 11
-    },
-    {
       "name": "University of Wisconsin System",
       "lat": 43.07305,
       "lon": -89.40123,
       "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "The University of Queensland",
+      "lat": -27.46794,
+      "lon": 153.02809,
+      "country_code": "AU",
       "citations": 11
     },
     {
@@ -2098,7 +2098,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 649,
+        "citations": 650,
         "year": 2020
       },
       {
@@ -2106,7 +2106,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 396,
+        "citations": 398,
         "year": 2022
       },
       {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 876,
+        "citations": 877,
         "year": 2021
       },
       {
@@ -2362,7 +2362,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 217,
+        "citations": 218,
         "year": 2021
       },
       {
@@ -2386,7 +2386,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 289,
+        "citations": 290,
         "year": 2023
       },
       {
@@ -2402,7 +2402,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 185,
+        "citations": 186,
         "year": 2022
       },
       {
@@ -2410,7 +2410,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 137,
+        "citations": 138,
         "year": 2022
       },
       {
@@ -2418,7 +2418,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 118,
+        "citations": 119,
         "year": 2022
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1039,
+        "citations": 1040,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 359,
+        "citations": 360,
         "year": 2025
       },
       {
@@ -2474,7 +2474,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2024
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 416,
+        "citations": 417,
         "year": 2024
       },
       {
@@ -2634,7 +2634,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 141,
+        "citations": 142,
         "year": 2021
       },
       {
@@ -2658,7 +2658,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 641,
+        "citations": 642,
         "year": 2020
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 488,
+        "citations": 489,
         "year": 2023
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 454,
+        "citations": 455,
         "year": 2023
       },
       {
@@ -2690,7 +2690,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 196,
+        "citations": 197,
         "year": 2021
       },
       {
@@ -2778,7 +2778,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 849,
+        "citations": 850,
         "year": 2021
       },
       {
@@ -2946,7 +2946,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 168,
+        "citations": 169,
         "year": 2019
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4825,
+        "citations": 4851,
         "year": 2017
       },
       {
@@ -3106,7 +3106,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 403,
+        "citations": 405,
         "year": 2020
       },
       {
@@ -3194,7 +3194,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 355,
+        "citations": 356,
         "year": 2019
       },
       {
@@ -3254,6 +3254,14 @@
         "year": 2022
       },
       {
+        "id": "W4387614536",
+        "label": "Cyanobacteriochromes from Gloeobacterales Provide New Insight into the Diversification of Cyanobacterial Photoreceptors",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 11,
+        "year": 2023
+      },
+      {
         "id": "W4311313198",
         "label": "Niche formation and metabolic interactions result in stable diversity in a spatially structured cyanobacterial community",
         "field": "Environmental Science",
@@ -3278,19 +3286,11 @@
         "year": 2021
       },
       {
-        "id": "W4387614536",
-        "label": "Cyanobacteriochromes from Gloeobacterales Provide New Insight into the Diversification of Cyanobacterial Photoreceptors",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 10,
-        "year": 2023
-      },
-      {
         "id": "W4281785935",
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 51,
+        "citations": 52,
         "year": 2022
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5013,
+        "citations": 5015,
         "year": 2021
       },
       {
@@ -4205,6 +4205,11 @@
       },
       {
         "source": "W3116953854",
+        "target": "W4387614536",
+        "strength": 0.5
+      },
+      {
+        "source": "W3116953854",
         "target": "W4311313198",
         "strength": 0.5
       },
@@ -4216,11 +4221,6 @@
       {
         "source": "W3116953854",
         "target": "W3209300026",
-        "strength": 0.5
-      },
-      {
-        "source": "W3116953854",
-        "target": "W4387614536",
         "strength": 0.5
       },
       {
