@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T09:27:29.125817+00:00",
+  "generated_at": "2026-07-03T09:31:19.555891+00:00",
   "summary": {
     "total_citations": 2456,
     "countries_reached": 76,
@@ -1934,6 +1934,13 @@
       "citations": 10
     },
     {
+      "name": "Wisconsin Institutes for Discovery",
+      "lat": 43.07303237915039,
+      "lon": -89.40760803222656,
+      "country_code": "US",
+      "citations": 10
+    },
+    {
       "name": "Union Hospital",
       "lat": 22.360681533813477,
       "lon": 114.17512512207031,
@@ -1959,13 +1966,6 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 10
-    },
-    {
-      "name": "Wisconsin Institutes for Discovery",
-      "lat": 43.07303237915039,
-      "lon": -89.40760803222656,
-      "country_code": "US",
       "citations": 10
     },
     {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 877,
+        "citations": 878,
         "year": 2021
       },
       {
@@ -2314,7 +2314,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 327,
+        "citations": 328,
         "year": 2021
       },
       {
@@ -2370,7 +2370,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 393,
+        "citations": 394,
         "year": 2022
       },
       {
@@ -2426,7 +2426,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 105,
+        "citations": 106,
         "year": 2024
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1040,
+        "citations": 1043,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 360,
+        "citations": 362,
         "year": 2025
       },
       {
@@ -2450,7 +2450,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 183,
+        "citations": 184,
         "year": 2024
       },
       {
@@ -2498,7 +2498,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 345,
+        "citations": 346,
         "year": 2019
       },
       {
@@ -2546,7 +2546,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 88,
+        "citations": 89,
         "year": 2023
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 417,
+        "citations": 418,
         "year": 2024
       },
       {
@@ -2586,7 +2586,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 76,
+        "citations": 77,
         "year": 2023
       },
       {
@@ -2610,7 +2610,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 64,
+        "citations": 65,
         "year": 2023
       },
       {
@@ -2638,6 +2638,14 @@
         "year": 2021
       },
       {
+        "id": "W3046109898",
+        "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 109,
+        "year": 2020
+      },
+      {
         "id": "W4281391087",
         "label": "Ancient plant-like terpene biosynthesis in corals",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -2646,19 +2654,11 @@
         "year": 2022
       },
       {
-        "id": "W3046109898",
-        "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 108,
-        "year": 2020
-      },
-      {
         "id": "W3087156149",
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 642,
+        "citations": 643,
         "year": 2020
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 489,
+        "citations": 491,
         "year": 2023
       },
       {
@@ -2754,7 +2754,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 67,
+        "citations": 68,
         "year": 2024
       },
       {
@@ -2786,7 +2786,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 344,
+        "citations": 345,
         "year": 2021
       },
       {
@@ -2826,7 +2826,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 172,
+        "citations": 173,
         "year": 2022
       },
       {
@@ -2858,7 +2858,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 52,
+        "citations": 53,
         "year": 2023
       },
       {
@@ -2874,7 +2874,7 @@
         "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2024
       },
       {
@@ -2882,7 +2882,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 307,
+        "citations": 308,
         "year": 2019
       },
       {
@@ -2946,7 +2946,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 169,
+        "citations": 170,
         "year": 2019
       },
       {
@@ -2954,7 +2954,7 @@
         "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
         "field": "Medicine",
         "type": "citing",
-        "citations": 118,
+        "citations": 119,
         "year": 2019
       },
       {
@@ -2986,7 +2986,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2023
       },
       {
@@ -2994,7 +2994,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2024
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4851,
+        "citations": 4852,
         "year": 2017
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5015,
+        "citations": 5022,
         "year": 2021
       },
       {
@@ -3354,7 +3354,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 116,
+        "citations": 117,
         "year": 2022
       },
       {
@@ -3730,12 +3730,12 @@
       },
       {
         "source": "W2949629831",
-        "target": "W4281391087",
+        "target": "W3046109898",
         "strength": 0.5
       },
       {
         "source": "W2949629831",
-        "target": "W3046109898",
+        "target": "W4281391087",
         "strength": 0.5
       },
       {
