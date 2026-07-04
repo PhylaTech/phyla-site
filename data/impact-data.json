@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-03T09:31:19.555891+00:00",
+  "generated_at": "2026-07-04T08:48:37.175264+00:00",
   "summary": {
-    "total_citations": 2456,
+    "total_citations": 2458,
     "countries_reached": 76,
     "citing_institutions": 3425,
     "disciplines_impacted": 23,
@@ -26,7 +26,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 398,
+      "cited_by_count": 399,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 391,
+      "cited_by_count": 392,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 912,
+      "count": 913,
       "color": "#14B8A6"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 180,
+      "count": 181,
       "color": "#3B82F6"
     },
     {
@@ -2106,7 +2106,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 398,
+        "citations": 399,
         "year": 2022
       },
       {
@@ -2114,7 +2114,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 391,
+        "citations": 392,
         "year": 2023
       },
       {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 878,
+        "citations": 882,
         "year": 2021
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1043,
+        "citations": 1044,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 362,
+        "citations": 365,
         "year": 2025
       },
       {
@@ -2486,12 +2486,12 @@
         "year": 2025
       },
       {
-        "id": "W4406572846",
-        "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "id": "W4402465580",
+        "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
+        "field": "Medicine",
         "type": "citing",
         "citations": 73,
-        "year": 2025
+        "year": 2024
       },
       {
         "id": "W2994786999",
@@ -2546,7 +2546,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 89,
+        "citations": 90,
         "year": 2023
       },
       {
@@ -2634,7 +2634,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 142,
+        "citations": 143,
         "year": 2021
       },
       {
@@ -2642,7 +2642,7 @@
         "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2020
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 491,
+        "citations": 494,
         "year": 2023
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 455,
+        "citations": 456,
         "year": 2023
       },
       {
@@ -2706,7 +2706,7 @@
         "label": "Virtual screening web servers: designing chemical probes and drug candidates in the cyberspace",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 128,
+        "citations": 129,
         "year": 2020
       },
       {
@@ -2754,7 +2754,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 68,
+        "citations": 69,
         "year": 2024
       },
       {
@@ -2778,7 +2778,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 850,
+        "citations": 851,
         "year": 2021
       },
       {
@@ -2834,7 +2834,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2021
       },
       {
@@ -2946,7 +2946,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 170,
+        "citations": 171,
         "year": 2019
       },
       {
@@ -2978,7 +2978,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 166,
+        "citations": 167,
         "year": 2024
       },
       {
@@ -3010,7 +3010,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2024
       },
       {
@@ -3018,7 +3018,7 @@
         "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 61,
+        "citations": 62,
         "year": 2024
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4852,
+        "citations": 4856,
         "year": 2017
       },
       {
@@ -3186,7 +3186,7 @@
         "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 38,
+        "citations": 39,
         "year": 2020
       },
       {
@@ -3290,7 +3290,7 @@
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 52,
+        "citations": 53,
         "year": 2022
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5022,
+        "citations": 5029,
         "year": 2021
       },
       {
@@ -3354,7 +3354,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 117,
+        "citations": 118,
         "year": 2022
       },
       {
@@ -3378,7 +3378,7 @@
         "label": "Synthetic Biology Advanced Natural Product Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 17,
+        "citations": 18,
         "year": 2021
       },
       {
@@ -3458,7 +3458,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 45,
+        "citations": 46,
         "year": 2025
       },
       {
@@ -3620,7 +3620,7 @@
       },
       {
         "source": "W4386607677",
-        "target": "W4406572846",
+        "target": "W4402465580",
         "strength": 0.5
       },
       {
