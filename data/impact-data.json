@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-04T08:48:37.175264+00:00",
+  "generated_at": "2026-07-05T09:18:48.806057+00:00",
   "summary": {
-    "total_citations": 2458,
+    "total_citations": 2460,
     "countries_reached": 76,
     "citing_institutions": 3425,
     "disciplines_impacted": 23,
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 392,
+      "cited_by_count": 393,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -105,7 +105,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 83,
+      "cited_by_count": 84,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 517,
+      "citations": 518,
       "institutions": 621
     },
     {
@@ -387,7 +387,7 @@
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 142,
+      "citations": 143,
       "institutions": 90
     },
     {
@@ -1360,6 +1360,13 @@
       "citations": 17
     },
     {
+      "name": "Tsinghua University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 17
+    },
+    {
       "name": "St Petersburg University",
       "lat": 59.94200134277344,
       "lon": 30.298999786376953,
@@ -1419,13 +1426,6 @@
       "name": "Sichuan University",
       "lat": 30.66667,
       "lon": 104.06667,
-      "country_code": "CN",
-      "citations": 16
-    },
-    {
-      "name": "Tsinghua University",
-      "lat": 39.9075,
-      "lon": 116.39723,
       "country_code": "CN",
       "citations": 16
     },
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 913,
+      "count": 915,
       "color": "#14B8A6"
     },
     {
@@ -2114,7 +2114,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 392,
+        "citations": 393,
         "year": 2023
       },
       {
@@ -2154,7 +2154,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 83,
+        "citations": 84,
         "year": 2019
       },
       {
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 882,
+        "citations": 884,
         "year": 2021
       },
       {
@@ -2370,7 +2370,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 394,
+        "citations": 395,
         "year": 2022
       },
       {
@@ -2378,7 +2378,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 323,
+        "citations": 324,
         "year": 2022
       },
       {
@@ -2386,7 +2386,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 290,
+        "citations": 292,
         "year": 2023
       },
       {
@@ -2402,7 +2402,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 186,
+        "citations": 187,
         "year": 2022
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1044,
+        "citations": 1045,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 365,
+        "citations": 367,
         "year": 2025
       },
       {
@@ -2458,7 +2458,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 175,
+        "citations": 176,
         "year": 2024
       },
       {
@@ -2514,7 +2514,7 @@
         "label": "A Bacterial Symbiont Protects Honey Bees from Fungal Disease",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 112,
+        "citations": 113,
         "year": 2021
       },
       {
@@ -2554,7 +2554,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 418,
+        "citations": 420,
         "year": 2024
       },
       {
@@ -2562,7 +2562,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2022
       },
       {
@@ -2578,7 +2578,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 110,
+        "citations": 111,
         "year": 2022
       },
       {
@@ -2658,7 +2658,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 643,
+        "citations": 645,
         "year": 2020
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 494,
+        "citations": 495,
         "year": 2023
       },
       {
@@ -2682,7 +2682,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 270,
+        "citations": 271,
         "year": 2022
       },
       {
@@ -2738,7 +2738,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2020
       },
       {
@@ -2778,7 +2778,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 851,
+        "citations": 852,
         "year": 2021
       },
       {
@@ -2794,7 +2794,7 @@
         "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 213,
+        "citations": 214,
         "year": 2020
       },
       {
@@ -2978,7 +2978,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 167,
+        "citations": 168,
         "year": 2024
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4856,
+        "citations": 4858,
         "year": 2017
       },
       {
@@ -3346,7 +3346,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5029,
+        "citations": 5038,
         "year": 2021
       },
       {
