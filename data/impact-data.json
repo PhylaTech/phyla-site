@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-05T09:18:48.806057+00:00",
+  "generated_at": "2026-07-06T10:54:48.919883+00:00",
   "summary": {
     "total_citations": 2460,
     "countries_reached": 76,
-    "citing_institutions": 3425,
+    "citing_institutions": 3428,
     "disciplines_impacted": 23,
     "total_publications": 26
   },
@@ -355,8 +355,8 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 967,
-      "institutions": 681
+      "citations": 968,
+      "institutions": 682
     },
     {
       "country": "China",
@@ -519,6 +519,14 @@
       "institutions": 23
     },
     {
+      "country": "Portugal",
+      "country_code": "PT",
+      "lat": 39.4,
+      "lon": -8.2,
+      "citations": 29,
+      "institutions": 17
+    },
+    {
       "country": "Belgium",
       "country_code": "BE",
       "lat": 50.5,
@@ -533,14 +541,6 @@
       "lon": 45.1,
       "citations": 28,
       "institutions": 18
-    },
-    {
-      "country": "Portugal",
-      "country_code": "PT",
-      "lat": 39.4,
-      "lon": -8.2,
-      "citations": 28,
-      "institutions": 15
     },
     {
       "country": "New Zealand",
@@ -651,7 +651,7 @@
       "country_code": "AE",
       "lat": 23.4,
       "lon": 53.8,
-      "citations": 15,
+      "citations": 16,
       "institutions": 15
     },
     {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1045,
+        "citations": 1047,
         "year": 2024
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 456,
+        "citations": 457,
         "year": 2023
       },
       {
@@ -3098,7 +3098,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4858,
+        "citations": 4860,
         "year": 2017
       },
       {
