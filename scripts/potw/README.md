@@ -1,7 +1,7 @@
 # Protein of the Week: research + drafting harness
 
 A small multi-agent pipeline that researches one protein and drafts a weekly
-issue for [Protein of the Week](../../protein-of-the-week.html), in the site's
+issue for [Protein of the Week](../../potw.html), in the site's
 house voice.
 
 ## How it works
@@ -48,8 +48,8 @@ mamba run -n phyla-site python scripts/potw/render.py 002-insulin.json
 mamba run -n phyla-site python scripts/potw/render.py --all          # re-render issues 2+
 ```
 
-Issue No. 1 (GFP) is the hand-authored launch page at `protein-of-the-week.html`;
-`render.py` leaves it alone unless you pass `--set-latest`. Issues 2+ render to
+Issue No. 1 (GFP) is the hand-authored launch page at `potw.html` (served at
+`/potw`); `render.py` leaves it alone unless you pass `--set-latest`. Issues 2+ render to
 `potw-<NNN>-<slug>.html` at the site root. Every render rewrites the archive list
 between the `POTW:ARCHIVE` markers on all POTW pages.
 

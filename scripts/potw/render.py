@@ -8,10 +8,11 @@ easy to preview locally.
     mamba run -n phyla-site python scripts/potw/render.py --all          # re-render every issue
     mamba run -n phyla-site python scripts/potw/render.py 002-insulin.json --set-latest
 
-Issue No. 1 (GFP) is the hand-authored launch page at protein-of-the-week.html and is
-left alone unless you pass --set-latest. Issues 2+ render to potw-<NNN>-<slug>.html at
-the site root. Every render refreshes the archive list on all POTW pages (the region
-between the POTW:ARCHIVE markers).
+Issue No. 1 (GFP) is the hand-authored launch page at potw.html (served at
+phylatech.com/potw) and is left alone unless you pass --set-latest. Issues 2+ render to
+potw-<NNN>-<slug>.html at the site root. protein-of-the-week.html is a redirect alias to
+/potw. Every render refreshes the archive list on all POTW pages (the region between the
+POTW:ARCHIVE markers).
 """
 
 from __future__ import annotations
@@ -25,7 +26,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ISSUES_DIR = HERE / "issues"
 SITE_ROOT = HERE.parent.parent  # repo root (worktree)
-CANONICAL = SITE_ROOT / "protein-of-the-week.html"
+CANONICAL = SITE_ROOT / "potw.html"
 
 ARCHIVE_START = "<!-- POTW:ARCHIVE:START -->"
 ARCHIVE_END = "<!-- POTW:ARCHIVE:END -->"
@@ -36,7 +37,7 @@ def esc(s: str) -> str:
 
 
 def issue_href(number: int, slug: str) -> str:
-    return "protein-of-the-week.html" if number == 1 else f"potw-{number:03d}-{slug}.html"
+    return "potw.html" if number == 1 else f"potw-{number:03d}-{slug}.html"
 
 
 def load_all_issues() -> list[dict]:
@@ -265,7 +266,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Render a POTW issue JSON to HTML.")
     ap.add_argument("issue", nargs="?", help="Issue JSON filename (in scripts/potw/issues/) or path.")
     ap.add_argument("--all", action="store_true", help="Re-render every issue (2+).")
-    ap.add_argument("--set-latest", action="store_true", help="Also write this issue to protein-of-the-week.html (the canonical page).")
+    ap.add_argument("--set-latest", action="store_true", help="Also write this issue to potw.html (the canonical page, served at /potw).")
     args = ap.parse_args()
 
     all_issues = load_all_issues()

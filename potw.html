@@ -2,13 +2,442 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Protein of the Week, Phyla Technologies</title>
-  <link rel="canonical" href="https://phylatech.com/protein-of-the-week.html">
-  <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0; url=protein-of-the-week.html">
-  <script>location.replace('protein-of-the-week.html' + location.search + location.hash);</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Protein of the Week from Phyla Technologies: a weekly history of a single protein, its discovery, the people behind it, the techniques it took, and where it's used. This week: Green Fluorescent Protein.">
+  <link rel="canonical" href="https://phylatech.com/potw">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Protein of the Week: Green Fluorescent Protein">
+  <meta property="og:description" content="A weekly history of a single protein. This week: how a glowing jellyfish protein rewired biology.">
+  <meta property="og:url" content="https://phylatech.com/potw">
+  <meta property="og:site_name" content="Phyla Technologies">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Protein of the Week: Green Fluorescent Protein">
+  <meta name="twitter:description" content="A weekly history of a single protein. This week: how a glowing jellyfish protein rewired biology.">
+
+  <meta name="view-transition" content="same-origin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Page-specific styles. Shared design system lives in styles.css */
+
+    /* === Masthead (standalone column header) === */
+    .masthead {
+      border-bottom: 1px solid var(--ink-hairline);
+      background: var(--parchment);
+    }
+    .masthead-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-block: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .masthead .column-name {
+      font-size: 0.75rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--tannin);
+    }
+
+    /* === Issue header === */
+    .issue {
+      padding-block: clamp(3rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
+    }
+    .issue-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .issue-line::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--tannin);
+    }
+    .issue-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+    .issue h1 {
+      font-size: clamp(2.5rem, 6vw, 4.25rem);
+      margin-bottom: 1rem;
+    }
+    .issue .binomial {
+      font-style: italic;
+      font-variation-settings: "wdth" 95, "wght" 500;
+      color: var(--tannin);
+      font-size: 1.1875rem;
+      margin-bottom: 1.25rem;
+    }
+    .issue .dek {
+      font-size: 1.1875rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 40ch;
+    }
+
+    /* barrel figure */
+    .barrel { width: 100%; max-width: 320px; height: auto; display: block; margin-inline: auto; }
+    .barrel-caption {
+      text-align: center;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin-top: 0.9rem;
+    }
+
+    /* === Fact strip === */
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: start;
+      column-gap: clamp(1.5rem, 4vw, 3.5rem);
+      margin-top: clamp(2rem, 4vw, 3rem);
+      padding-top: 2rem;
+      border-top: 1px solid var(--ink-hairline);
+    }
+    .fact { padding-right: clamp(1.5rem, 4vw, 3.5rem); border-right: 1px solid var(--ink-hairline-strong); }
+    .fact:last-child { border-right: none; padding-right: 0; }
+    .fact .val {
+      display: block;
+      font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+      font-variation-settings: "wdth" 95, "wght" 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    .fact .val em { font-style: italic; color: var(--tannin); font-variation-settings: "wdth" 95, "wght" 600; }
+    .fact .label { display: block; margin-top: 0.5rem; font-size: 0.6875rem; }
+
+    /* === Article body === */
+    .article { max-width: 68ch; }
+    .article .movement { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+    .article .movement:last-child { margin-bottom: 0; }
+    .article h2 {
+      font-variation-settings: "wdth" 100, "wght" 600;
+      font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+      letter-spacing: -0.015em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .article .movement-num {
+      font-size: 0.6875rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .article p {
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+    }
+    .article p:last-child { margin-bottom: 0; }
+    .article p .lede-cap {
+      font-variation-settings: "wdth" 100, "wght" 600;
+      color: var(--ink);
+    }
+    .article em { font-style: italic; }
+    .article .name { font-variation-settings: "wdth" 100, "wght" 500; color: var(--ink); font-style: normal; }
+
+    /* Pull quote */
+    .pullquote {
+      border-top: 1px solid var(--ink-hairline);
+      border-bottom: 1px solid var(--ink-hairline);
+      padding-block: 1.5rem;
+      margin-block: 2rem;
+      max-width: 68ch;
+    }
+    .pullquote p {
+      font-size: clamp(1.25rem, 2.4vw, 1.625rem);
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      font-variation-settings: "wdth" 95, "wght" 500;
+    }
+    .pullquote em { font-style: italic; color: var(--tannin); }
+
+    /* === Meanwhile list === */
+    .meanwhile { max-width: 68ch; }
+    .meanwhile .ml {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr;
+      gap: 1rem;
+      padding-block: 0.8rem;
+      border-bottom: 1px solid var(--ink-hairline);
+      align-items: baseline;
+    }
+    .meanwhile .ml:first-child { border-top: 1px solid var(--ink-hairline); }
+    .meanwhile .ml .when {
+      font-variation-settings: "wdth" 95, "wght" 600;
+      color: var(--tannin);
+      font-variant-numeric: tabular-nums;
+    }
+    .meanwhile .ml .what { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.5; }
+
+    /* === Archive === */
+    .archive-list { border-top: 1px solid var(--ink-hairline); }
+    .arch {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem 1.5rem;
+      align-items: baseline;
+      padding-block: 1.1rem;
+      border-bottom: 1px solid var(--ink-hairline);
+      text-decoration: none;
+      color: inherit;
+    }
+    .arch .arch-no {
+      font-size: 0.6875rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .arch .arch-name {
+      font-size: 1.0625rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+    }
+    .arch .arch-name .binomial { font-style: italic; font-variation-settings: "wdth" 95, "wght" 500; color: var(--ink-soft); font-size: 0.9375rem; margin-left: 0.5rem; }
+    .arch .arch-date { font-size: 0.8125rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .arch.current .arch-no { color: var(--tannin); }
+    .archive-note { margin-top: 1.5rem; font-size: 0.875rem; color: var(--ink-soft); max-width: 60ch; }
+
+    /* === Follow === */
+    .follow-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+    .follow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.2rem;
+      border: 1px solid var(--ink-hairline-strong);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      transition: border-color 180ms ease-out, color 180ms ease-out;
+    }
+    .follow-btn:hover { border-color: var(--tannin); color: var(--tannin); }
+
+    /* byline */
+    .byline {
+      margin-top: clamp(2.5rem, 5vw, 3.5rem);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--ink-hairline);
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      max-width: 60ch;
+    }
+
+    /* === Page-specific responsive === */
+    @media (max-width: 820px) {
+      .issue-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+      .issue-visual { order: -1; }
+      .barrel { max-width: 240px; }
+    }
+    @media (max-width: 600px) {
+      .facts { grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }
+      .fact:nth-child(2) { border-right: none; padding-right: 0; }
+      .meanwhile .ml { grid-template-columns: 4.5rem 1fr; }
+      .arch { grid-template-columns: auto 1fr; }
+      .arch .arch-date { grid-column: 2; }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="protein-of-the-week.html">Protein of the Week</a>.</p>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <span class="column-name">Protein of the Week</span>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ISSUE HEADER -->
+    <section class="issue">
+      <div class="wrap">
+        <span class="issue-line label">No. 001 &nbsp;·&nbsp; Week of 6 July 2026</span>
+        <div class="issue-grid">
+          <div class="issue-text">
+            <h1 class="display">Green Fluorescent Protein</h1>
+            <p class="binomial">from Aequorea victoria, the crystal jelly</p>
+            <p class="dek">A protein that does nothing but glow, pulled from a Pacific jellyfish, quietly became one of the most important tools in modern biology.</p>
+          </div>
+          <div class="issue-visual">
+            <svg class="barrel" viewBox="0 0 240 280" role="img" aria-labelledby="barrelTitle barrelDesc">
+              <title id="barrelTitle">The GFP beta-barrel</title>
+              <desc id="barrelDesc">A stylized drawing of the eleven-stranded beta-barrel of green fluorescent protein, with the light-emitting chromophore held at its center.</desc>
+              <!-- barrel body: two ellipses + vertical strands -->
+              <ellipse cx="120" cy="56" rx="78" ry="26" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+              <ellipse cx="120" cy="224" rx="78" ry="26" fill="var(--parchment-pale)" stroke="var(--ink)" stroke-width="1.4"/>
+              <!-- side walls -->
+              <path d="M 42 56 L 42 224" stroke="var(--ink)" stroke-width="1.4" fill="none"/>
+              <path d="M 198 56 L 198 224" stroke="var(--ink)" stroke-width="1.4" fill="none"/>
+              <!-- beta strands (vertical hairlines around the barrel) -->
+              <g stroke="var(--ink)" stroke-width="0.9" opacity="0.5">
+                <path d="M 66 46 L 66 214" fill="none"/>
+                <path d="M 90 40 L 90 208" fill="none"/>
+                <path d="M 120 38 L 120 206" fill="none"/>
+                <path d="M 150 40 L 150 208" fill="none"/>
+                <path d="M 174 46 L 174 214" fill="none"/>
+              </g>
+              <!-- subtle strand shading on the near face -->
+              <g stroke="var(--ink)" stroke-width="0.5" opacity="0.28">
+                <path d="M 54 52 L 54 220" fill="none"/>
+                <path d="M 78 43 L 78 211" fill="none"/>
+                <path d="M 104 39 L 104 207" fill="none"/>
+                <path d="M 136 39 L 136 207" fill="none"/>
+                <path d="M 162 43 L 162 211" fill="none"/>
+                <path d="M 186 52 L 186 220" fill="none"/>
+              </g>
+              <!-- central helix threading the barrel -->
+              <path d="M 120 70 C 104 96, 136 120, 120 146 C 104 172, 136 196, 120 210" stroke="var(--ink-soft)" stroke-width="1.1" fill="none" opacity="0.6"/>
+              <!-- the chromophore, glowing at the center -->
+              <circle cx="120" cy="140" r="13" fill="var(--tannin)" opacity="0.18"/>
+              <circle cx="120" cy="140" r="7" fill="var(--tannin)"/>
+              <circle cx="117" cy="137" r="2" fill="var(--parchment-pale)" opacity="0.6"/>
+            </svg>
+            <p class="barrel-caption">Eleven &beta;-strands, one chromophore.</p>
+          </div>
+        </div>
+
+        <dl class="facts">
+          <div class="fact"><dd class="val">1962</dd><dt class="label">First isolated</dt></div>
+          <div class="fact"><dd class="val"><em>A. victoria</em></dd><dt class="label">Source organism</dt></div>
+          <div class="fact"><dd class="val">2008</dd><dt class="label">Nobel Prize</dt></div>
+          <div class="fact"><dd class="val">11</dd><dt class="label">&beta;-strands</dt></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <section id="article">
+      <div class="wrap">
+        <div class="article">
+
+          <div class="movement">
+            <span class="movement-num">&sect; 01 &nbsp; The discovery</span>
+            <h2>A byproduct nobody was looking for.</h2>
+            <p><span class="lede-cap">In the summers of the early 1960s,</span> a young Japanese chemist named <span class="name">Osamu Shimomura</span> spent his days at Friday Harbor, on the Washington coast, scooping crystal jellyfish out of the water by the tens of thousands. He was chasing <span class="name">aequorin</span>, a protein that flashes blue when it meets calcium. He found it. But alongside it sat a second protein he hadn't gone looking for, one that soaked up the aequorin's blue light and re-emitted it as a soft green.</p>
+            <p>That second protein glowed all on its own under ultraviolet light, with no calcium, no reaction, no fuel of any kind. Shimomura described it in 1962 and moved on. It would sit in the literature, a curiosity, for the better part of thirty years.</p>
+          </div>
+
+          <div class="pullquote">
+            <p>Most proteins are machines. This one is a <em>lantern</em>, and that turned out to be the more useful thing to be.</p>
+          </div>
+
+          <div class="movement">
+            <span class="movement-num">&sect; 02 &nbsp; The people</span>
+            <h2>Four scientists, three decades apart.</h2>
+            <p>The gene sat unread until 1992, when <span class="name">Douglas Prasher</span> cloned and sequenced it, guessing it might make a useful biological marker. His funding ran out before he could prove it. He shared his clones with two other labs and left research; for a time he was driving a courtesy shuttle at a car dealership in Alabama.</p>
+            <p>Those clones did the rest. In 1994 <span class="name">Martin Chalfie</span> put the gene into bacteria and into a worm and watched them light up, proof that this jellyfish protein would fold and glow inside almost any living thing, needing nothing but oxygen. <span class="name">Roger Tsien</span> then worked out exactly how the chromophore forms and re-engineered it into a whole palette of colors and brightnesses. In 2008 the three shared the Nobel Prize in Chemistry. They used their moment to name Prasher, who had flown to Stockholm as their guest.</p>
+          </div>
+
+          <div class="movement">
+            <span class="movement-num">&sect; 03 &nbsp; How it was cracked</span>
+            <h2>The techniques it took.</h2>
+            <p>Getting from a glowing jellyfish to a laboratory tool took three distinct crafts, each from a different era. First, <span class="name">bioprospecting and protein chemistry</span>: the patient work of collecting an organism and separating one faint protein from everything else in it. Then <span class="name">molecular cloning</span>: reading out the gene so it could be copied and moved. Finally <span class="name">fluorescence microscopy and genetic fusion</span>: stitching the gene onto other proteins so a cell would build its own light and show you where things go.</p>
+            <p>The elegance is in the protein itself. Eleven &beta;-strands wrap into a tight can, and buried at its center three ordinary amino acids fold in on themselves and react with oxygen to become a chromophore. No enzyme assembles it. The barrel is both the scaffold and the shield.</p>
+          </div>
+
+          <div class="movement">
+            <span class="movement-num">&sect; 04 &nbsp; Where it went</span>
+            <h2>What it made possible.</h2>
+            <p>Before GFP, watching a specific protein inside a living cell was mostly impossible; you fixed the cell, stained it, and looked at a corpse. Fusing a gene to GFP changed that. Suddenly you could watch a protein move, a gene switch on, a neuron fire, a tumor spread, all in living color and in real time.</p>
+            <p>Today it is everywhere biology is done: reporting gene expression, tagging proteins, sorting cells on a flow cytometer, and reporting on calcium, voltage, and pH through engineered biosensors. It sits in the daily workflow of academic labs and drug-discovery pipelines alike, a permanent piece of infrastructure that started as a jellyfish's party trick.</p>
+          </div>
+
+          <div class="movement">
+            <span class="movement-num">&sect; 05 &nbsp; Meanwhile</span>
+            <h2>The world in 1962.</h2>
+            <div class="meanwhile">
+              <div class="ml"><span class="when">Feb</span><span class="what">John Glenn becomes the first American to orbit the Earth.</span></div>
+              <div class="ml"><span class="when">Sep</span><span class="what">Rachel Carson publishes <em>Silent Spring</em>, and modern environmentalism begins.</span></div>
+              <div class="ml"><span class="when">Oct</span><span class="what">The Cuban Missile Crisis brings the world to the edge for thirteen days.</span></div>
+              <div class="ml"><span class="when">Dec</span><span class="what">Watson, Crick, and Wilkins receive the Nobel Prize for the structure of DNA.</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="byline">Researched and written by the Phyla Protein Historian, a weekly dispatch on the molecules that quietly run the living world.</p>
+      </div>
+    </section>
+
+    <!-- ARCHIVE + FOLLOW -->
+    <section id="archive">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The archive</span>
+          <h2 class="headline">Every protein, every week.</h2>
+        </div>
+        <div class="archive-list">
+          <!-- POTW:ARCHIVE:START -->
+          <a class="arch current" aria-current="page" href="potw.html">
+            <span class="arch-no">No. 001</span>
+            <span class="arch-name">Green Fluorescent Protein<span class="binomial">Aequorea victoria</span></span>
+            <span class="arch-date">6 July 2026</span>
+          </a>
+          <!-- POTW:ARCHIVE:END -->
+        </div>
+        <p class="archive-note">The series starts here. A new protein lands every week, with its history, the people who found it, and where it ended up. Past issues will collect on this page.</p>
+
+        <div class="follow-row">
+          <a class="follow-btn" href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">
+            <span>Follow on LinkedIn</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="follow-btn" href="https://x.com/phylatech" target="_blank" rel="noopener noreferrer">
+            <span>Follow on X</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="index.html">Main site</a>
+        <a href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/orgs/phylatech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

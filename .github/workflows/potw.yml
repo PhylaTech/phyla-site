@@ -65,7 +65,7 @@ jobs:
           git config user.name "phyla-bot"
           git config user.email "bot@phylatech.com"
           git checkout -b "$branch"
-          git add scripts/potw/issues/ potw-*.html protein-of-the-week.html
+          git add scripts/potw/issues/ potw.html potw-*.html protein-of-the-week.html
           git commit -m "content: Protein of the Week No. ${num} draft, ${name}"
           git push -u origin "$branch"
           gh pr create --base main --head "$branch" \

@@ -1,48 +1,45 @@
-# Serving Protein of the Week at potw.phylatech.com
+# Where Protein of the Week lives
 
-Today, Protein of the Week lives on the main site:
+**Decision: Option A, a path on the main site.** Protein of the Week is served
+from this one repo at:
 
-- Canonical: `https://phylatech.com/protein-of-the-week`
-- Short alias: `https://phylatech.com/potw` (a redirect, `potw.html`)
+- **Canonical: `https://phylatech.com/potw`** (the file `potw.html`)
+- Descriptive alias: `https://phylatech.com/protein-of-the-week` -> 301s to `/potw`
+- Back issues: `https://phylatech.com/potw-<NNN>-<slug>`
 
-That works now, with no extra infrastructure. A **subdomain** (`potw.phylatech.com`)
-needs a hosting change, because GitHub Pages serves exactly one custom domain per
-repository, and this repo's is `phylatech.com` (see `CNAME`). Anthropic/Claude
-cannot edit your DNS or GitHub settings, so the last step is yours. Two clean paths:
+No DNS changes, no second repository, one source of truth. This works because
+GitHub Pages serves a file `potw.html` at the extensionless path `/potw` (verified
+against the live site: `/impact` serves `impact.html`), so the short URL is the real
+page, not a redirect.
 
-## Option A (recommended): DNS redirect to the path
+## How it fits together
 
-Keep everything in this one repo and point the subdomain at the existing page.
+- `potw.html` is the current issue (the hand-authored GFP launch page today; the
+  render pipeline overwrites it when a newer issue is promoted with `--set-latest`).
+- `protein-of-the-week.html` is a tiny `noindex` redirect stub pointing at `/potw`,
+  kept so the descriptive URL keeps working for anyone who has it.
+- `scripts/potw/render.py` treats `potw.html` as canonical (`CANONICAL`) and links
+  issue No. 1 to `/potw` in every archive list. Back issues render to
+  `potw-<NNN>-<slug>.html` at the site root.
+- The homepage links to it from the primary nav ("Protein of the Week").
 
-1. **DNS**: add a `CNAME` record `potw.phylatech.com` at your DNS provider.
-2. **Redirect**: most providers (Cloudflare, Netlify DNS, Porkbun, etc.) offer a
-   "redirect / URL forward" rule. Forward `potw.phylatech.com/*` to
-   `https://phylatech.com/protein-of-the-week` (301). On Cloudflare this is a
-   single Redirect Rule; no second deployment.
+Nothing here needs your access. It ships the moment PR #10 (and its base, the POTW
+page PR) merge to `main`.
 
-Result: `potw.phylatech.com` lands on the current page. One repo, one source of
-truth, nothing to keep in sync.
+## If you ever want the subdomain instead (`potw.phylatech.com`)
 
-## Option B: a second GitHub Pages site
+Not required, and not done, because GitHub Pages serves exactly one custom domain
+per repository and this repo's is `phylatech.com` (see `CNAME`). If you later want a
+true subdomain, two paths, both needing access only you have:
 
-Serve the subdomain as its own Pages site if you want it fully independent.
+1. **DNS redirect (simplest).** Add a `CNAME` DNS record for `potw.phylatech.com`,
+   then a URL-forward rule at your DNS/CDN provider (Cloudflare, Porkbun, etc.)
+   sending `potw.phylatech.com/*` to `https://phylatech.com/potw` (301). No second
+   deployment; the path above stays the source of truth.
+2. **A second GitHub Pages site.** Create a separate repo whose Pages output is the
+   POTW files, add a `CNAME` file containing `potw.phylatech.com`, and set that
+   custom domain in its Pages settings. Fully independent, but assets live in two
+   places and must be kept in sync. Prefer option 1 unless you specifically want
+   POTW deployed on its own.
 
-1. Create a second repo (e.g. `phylatech/potw`) whose Pages output is the POTW
-   pages (`protein-of-the-week.html` as its `index.html`, plus `styles.css`,
-   `favicon.svg`, and the generated `potw-*.html`).
-2. Add a `CNAME` file containing `potw.phylatech.com` to that repo.
-3. In its **Settings → Pages**, set the custom domain to `potw.phylatech.com`;
-   GitHub will prompt you to add the DNS `CNAME` record and will provision TLS.
-4. Point the POTW harness (or a small publish step) at that repo.
-
-This gives a true standalone site but means keeping assets in two places. Prefer
-Option A unless you specifically want POTW deployed separately.
-
-## What I can do vs what needs you
-
-- Done in-repo: canonical page, `/potw` alias, the render pipeline, and this guide.
-- Needs your access: the DNS record and (Option B) the second repo + Pages setting.
-
-Tell me which option you want and I'll prepare whatever the repo side needs (the
-redirect target is already live for Option A; for Option B I can assemble the
-standalone site directory and its `CNAME`).
+Either way, tell me and I'll prepare whatever the repo side needs.
