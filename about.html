@@ -115,21 +115,19 @@
       border-bottom: 1px solid var(--ink-hairline);
     }
     .person:first-child { border-top: 1px solid var(--ink-hairline); }
-    .person-figure { position: relative; }
+    /* Arched specimen-plate mount: domed top, parchment matte, hairline frame */
+    .person-figure {
+      background: var(--parchment-pale);
+      border: 1px solid var(--ink-hairline-strong);
+      border-radius: 50% 50% 4px 4px / 40% 40% 4px 4px;
+      padding: 6px;
+    }
     .person-figure img {
       width: 100%;
       height: auto;
       display: block;
       filter: grayscale(0.18) sepia(0.12) contrast(0.96);
-      border: 1px solid var(--ink-hairline-strong);
-    }
-    .person-figure::after {
-      content: "";
-      position: absolute;
-      inset: -6px -6px 6px 6px;
-      border: 1px solid var(--ink-hairline);
-      pointer-events: none;
-      z-index: -1;
+      border-radius: 50% 50% 2px 2px / 40% 40% 2px 2px;
     }
     .person-body .person-num {
       font-size: 0.6875rem;
@@ -163,7 +161,7 @@
     }
     @media (max-width: 560px) {
       .person { grid-template-columns: 96px minmax(0, 1fr); gap: 1.25rem; }
-      .person-figure::after { inset: -4px -4px 4px 4px; }
+      .person-figure { padding: 4px; }
     }
     @media (max-width: 400px) {
       .person { grid-template-columns: 1fr; }
