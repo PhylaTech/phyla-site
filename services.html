@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="What Phyla builds for biotech: MLOps and pipelines, bio- and cheminformatics, dashboards and analytics, bespoke software, AI/LLM integration, and the infrastructure underneath.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Services, Phyla Technologies">
+  <meta property="og:description" content="MLOps, bio/cheminformatics, dashboards, bespoke software, and the infrastructure underneath, for life sciences teams.">
+  <meta property="og:url" content="https://phylatech.com/services.html">
+  <meta property="og:site_name" content="Phyla Technologies">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services, Phyla Technologies">
+  <meta name="twitter:description" content="MLOps, bio/cheminformatics, dashboards, bespoke software, and the infrastructure underneath, for life sciences teams.">
+
+  <meta name="view-transition" content="same-origin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Page-specific styles. Shared design system lives in styles.css */
+
+    /* === Hero === */
+    .svc-hero {
+      padding-block: clamp(3.25rem, 8vw, 6rem) clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .svc-hero .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 1.5rem;
+    }
+    .svc-hero .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--tannin);
+    }
+    .svc-hero h1 { max-width: 16ch; margin-bottom: 1.5rem; }
+    .svc-hero .lead { max-width: 50ch; }
+
+    /* === Service entries === */
+    .svc-list { border-top: 1px solid var(--ink-hairline); }
+    .svc {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+      gap: clamp(1.5rem, 5vw, 4rem);
+      padding-block: clamp(2rem, 4vw, 3rem);
+      border-bottom: 1px solid var(--ink-hairline);
+      align-items: start;
+    }
+    .svc-head { position: relative; }
+    .svc-num {
+      font-size: 0.6875rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: block;
+      margin-bottom: 0.7rem;
+    }
+    .svc-head h2 {
+      font-size: clamp(1.375rem, 2.6vw, 1.875rem);
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+    .svc-body p {
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 60ch;
+      margin-bottom: 1.25rem;
+    }
+    .svc-includes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    .svc-includes li {
+      font-size: 0.8125rem;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      color: var(--ink-soft);
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--ink-hairline-strong);
+    }
+
+    /* === Engagement models === */
+    .engagements {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      border-top: 1px solid var(--ink-hairline);
+      padding-top: clamp(2rem, 4vw, 3rem);
+    }
+    .engagement h3 {
+      font-size: 1.0625rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.005em;
+      margin-bottom: 0.6rem;
+      color: var(--ink);
+    }
+    .engagement .eng-tag {
+      display: block;
+      font-size: 0.6875rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--moss-deep);
+      margin-bottom: 0.7rem;
+    }
+    .engagement p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    /* === Closing === */
+    .closing .link-arrow { margin-top: 0.5rem; }
+
+    /* === Page-specific responsive === */
+    @media (max-width: 780px) {
+      .svc { grid-template-columns: 1fr; gap: 1rem; }
+      .engagements { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <nav class="primary" aria-label="Primary">
+        <a href="services.html" aria-current="page" class="active">Services</a>
+        <a href="impact.html">Impact</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact" class="cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="svc-hero">
+      <div class="wrap">
+        <span class="eyebrow label">Services</span>
+        <h1 class="display">The whole stack, from data to production.</h1>
+        <p class="lead body-large">We take on the parts of a biotech's ML and data work that need to be reproducible, observable, and fast. Six practices, one team, scoped to whatever the engagement actually needs.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="list">
+      <div class="wrap">
+        <ol class="svc-list">
+          <li class="svc">
+            <div class="svc-head">
+              <span class="svc-num">i.</span>
+              <h2>MLOps &amp; Pipelines</h2>
+            </div>
+            <div class="svc-body">
+              <p>Custom models, trained, evaluated, and deployed on infrastructure you can actually operate. We build reproducible pipelines that run the same way on a laptop and in production, so the model that passed review is the model that ships.</p>
+              <ul class="svc-includes">
+                <li>Reproducible training pipelines</li>
+                <li>Model registry &amp; versioning</li>
+                <li>CI/CD for models</li>
+                <li>Monitoring &amp; drift detection</li>
+                <li>GPU &amp; batch scheduling</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="svc">
+            <div class="svc-head">
+              <span class="svc-num">ii.</span>
+              <h2>Bio &amp; Cheminformatics</h2>
+            </div>
+            <div class="svc-body">
+              <p>The foundational layer for natural-products-inspired ML: metagenomics, molecular property prediction, sequence and structure analysis, and computational drug discovery. This is where our research roots are, and it shows in how we handle the messy realities of scientific data.</p>
+              <ul class="svc-includes">
+                <li>Metagenomic assembly &amp; binning</li>
+                <li>Molecular property prediction</li>
+                <li>Sequence &amp; structure analysis</li>
+                <li>Cheminformatics workflows</li>
+                <li>Data curation &amp; QC</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="svc">
+            <div class="svc-head">
+              <span class="svc-num">iii.</span>
+              <h2>Dashboards &amp; Analytics</h2>
+            </div>
+            <div class="svc-body">
+              <p>Interactive tools for exploration, decision-making, and publication, tuned to the shape of scientific data rather than generic business charts. Built so a scientist can answer their own next question without filing a ticket.</p>
+              <ul class="svc-includes">
+                <li>Interactive data apps</li>
+                <li>Exploratory analysis tooling</li>
+                <li>Publication-quality figures</li>
+                <li>Real-time &amp; batch views</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="svc">
+            <div class="svc-head">
+              <span class="svc-num">iv.</span>
+              <h2>Bespoke Software</h2>
+            </div>
+            <div class="svc-body">
+              <p>Internal tools, web applications, CLIs, and the connective tissue between them. Development, deployment, and maintenance handled by the same people, so what we build doesn't rot the moment we leave.</p>
+              <ul class="svc-includes">
+                <li>Web applications</li>
+                <li>Internal tools &amp; CLIs</li>
+                <li>APIs &amp; integrations</li>
+                <li>Maintenance &amp; handoff</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="svc">
+            <div class="svc-head">
+              <span class="svc-num">v.</span>
+              <h2>AI &amp; LLM Integration</h2>
+            </div>
+            <div class="svc-body">
+              <p>Applications built on large language models where they genuinely help: retrieval over scientific corpora, structured extraction from unstructured records, and agent workflows scoped to real tasks. We are equally willing to tell you when an LLM is the wrong tool.</p>
+              <ul class="svc-includes">
+                <li>Retrieval-augmented generation</li>
+                <li>Structured extraction</li>
+                <li>Fine-tuning &amp; evaluation</li>
+                <li>Agent workflows</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="svc">
+            <div class="svc-head">
+              <span class="svc-num">vi.</span>
+              <h2>Infrastructure &amp; DevOps</h2>
+            </div>
+            <div class="svc-body">
+              <p>The layer everything else stands on: cloud infrastructure, containerization, CI/CD, and monitoring for computational workloads that need to run reliably and at scale. Usually the difference between a promising prototype and a system a team can depend on.</p>
+              <ul class="svc-includes">
+                <li>Cloud infrastructure (IaC)</li>
+                <li>Containerization</li>
+                <li>CI/CD &amp; automation</li>
+                <li>Observability &amp; cost control</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT MODELS -->
+    <section id="engagements">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; How engagements work</span>
+          <h2 class="headline">Three ways to work together.</h2>
+          <p class="body">Most work starts as a scoped project and grows from there. We shape the arrangement around your problem, not a fixed template.</p>
+        </div>
+        <div class="engagements">
+          <div class="engagement">
+            <span class="eng-tag">Scoped project</span>
+            <h3>Build a defined thing.</h3>
+            <p>A pipeline, a model, a tool, or a platform with a clear goal and endpoint. We scope it together, build it, and hand it over documented and running.</p>
+          </div>
+          <div class="engagement">
+            <span class="eng-tag">Embedded</span>
+            <h3>Work alongside your team.</h3>
+            <p>We join an existing effort for a stretch, adding ML and infrastructure depth where your team is stretched thin, and leaving it stronger than we found it.</p>
+          </div>
+          <div class="engagement">
+            <span class="eng-tag">Advisory</span>
+            <h3>Get the architecture right first.</h3>
+            <p>Shorter, higher-leverage work: reviewing an approach, choosing a stack, or de-risking a direction before anyone commits months to it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing" id="closing">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; Get in touch</span>
+          <h2 class="headline">Not sure which one fits?</h2>
+          <p class="body">Tell us the problem and we'll tell you honestly how we'd take it on, or whether we're the right team for it at all.</p>
+        </div>
+        <a href="index.html#contact" class="link-arrow">
+          <span>Start a conversation</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/orgs/phylatech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
