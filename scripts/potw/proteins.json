@@ -1,0 +1,14 @@
+{
+  "_comment": "Queue for the Protein of the Week harness. research.py pops the first entry of 'upcoming' unless a protein is passed on the CLI. Move entries to 'published' (with number + date) once an issue ships. Add your own; 'hint' is optional seed context passed to the researchers.",
+  "upcoming": [
+    { "protein": "Insulin", "slug": "insulin", "hint": "Banting & Best (Toronto, 1921); Sanger's sequencing (1951, first protein sequenced); first recombinant-DNA drug, Humulin (Genentech / Eli Lilly, 1982)." },
+    { "protein": "Taq polymerase", "slug": "taq-polymerase", "hint": "From Thermus aquaticus, a Yellowstone hot-spring bacterium (Brock, 1969); made PCR practical; Kary Mullis, 1993 Nobel." },
+    { "protein": "Hemoglobin", "slug": "hemoglobin", "hint": "Max Perutz's decades-long X-ray structure (1959, Nobel 1962); oxygen transport; sickle-cell as the first 'molecular disease' (Pauling, 1949)." },
+    { "protein": "Firefly luciferase", "slug": "firefly-luciferase", "hint": "Photinus pyralis bioluminescence; ATP-dependent light; ubiquitous reporter and ATP assay." },
+    { "protein": "Cas9", "slug": "cas9", "hint": "CRISPR-associated nuclease; Streptococcus pyogenes; Doudna & Charpentier, 2012; 2020 Nobel; genome editing." },
+    { "protein": "Pepsin", "slug": "pepsin", "hint": "One of the first enzymes named (Schwann, 1836); crystallized by Northrop (1930s, Nobel 1946); digestion; acid protease." }
+  ],
+  "published": [
+    { "protein": "Green Fluorescent Protein", "slug": "green-fluorescent-protein", "number": 1, "date_iso": "2026-07-06" }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "number": 1,
+  "slug": "green-fluorescent-protein",
+  "date_iso": "2026-07-06",
+  "date_display": "6 July 2026",
+  "protein": "Green Fluorescent Protein",
+  "binomial": "from Aequorea victoria, the crystal jelly",
+  "dek": "A protein that does nothing but glow, pulled from a Pacific jellyfish, quietly became one of the most important tools in modern biology.",
+  "byline": "Researched and written by the Phyla Protein Historian, a weekly dispatch on the molecules that quietly run the living world.",
+  "facts": [
+    { "value": "1962", "label": "First isolated" },
+    { "value": "A. victoria", "label": "Source organism" },
+    { "value": "2008", "label": "Nobel Prize" },
+    { "value": "11", "label": "β-strands" }
+  ],
+  "movements": [
+    {
+      "kicker": "The discovery",
+      "heading": "A byproduct nobody was looking for.",
+      "paragraphs": [
+        "In the summers of the early 1960s, a young Japanese chemist named Osamu Shimomura spent his days at Friday Harbor, on the Washington coast, scooping crystal jellyfish out of the water by the tens of thousands. He was chasing aequorin, a protein that flashes blue when it meets calcium. He found it. But alongside it sat a second protein he hadn't gone looking for, one that soaked up the aequorin's blue light and re-emitted it as a soft green.",
+        "That second protein glowed all on its own under ultraviolet light, with no calcium, no reaction, no fuel of any kind. Shimomura described it in 1962 and moved on. It would sit in the literature, a curiosity, for the better part of thirty years."
+      ]
+    },
+    {
+      "kicker": "The people",
+      "heading": "Four scientists, three decades apart.",
+      "paragraphs": [
+        "The gene sat unread until 1992, when Douglas Prasher cloned and sequenced it, guessing it might make a useful biological marker. His funding ran out before he could prove it. He shared his clones with two other labs and left research; for a time he was driving a courtesy shuttle at a car dealership in Alabama.",
+        "Those clones did the rest. In 1994 Martin Chalfie put the gene into bacteria and into a worm and watched them light up, proof that this jellyfish protein would fold and glow inside almost any living thing, needing nothing but oxygen. Roger Tsien then worked out exactly how the chromophore forms and re-engineered it into a whole palette of colors and brightnesses. In 2008 the three shared the Nobel Prize in Chemistry. They used their moment to name Prasher, who had flown to Stockholm as their guest."
+      ]
+    },
+    {
+      "kicker": "How it was cracked",
+      "heading": "The techniques it took.",
+      "paragraphs": [
+        "Getting from a glowing jellyfish to a laboratory tool took three distinct crafts, each from a different era. First, bioprospecting and protein chemistry: the patient work of collecting an organism and separating one faint protein from everything else in it. Then molecular cloning: reading out the gene so it could be copied and moved. Finally fluorescence microscopy and genetic fusion: stitching the gene onto other proteins so a cell would build its own light and show you where things go.",
+        "The elegance is in the protein itself. Eleven β-strands wrap into a tight can, and buried at its center three ordinary amino acids fold in on themselves and react with oxygen to become a chromophore. No enzyme assembles it. The barrel is both the scaffold and the shield."
+      ]
+    },
+    {
+      "kicker": "Where it went",
+      "heading": "What it made possible.",
+      "paragraphs": [
+        "Before GFP, watching a specific protein inside a living cell was mostly impossible; you fixed the cell, stained it, and looked at a corpse. Fusing a gene to GFP changed that. Suddenly you could watch a protein move, a gene switch on, a neuron fire, a tumor spread, all in living color and in real time.",
+        "Today it is everywhere biology is done: reporting gene expression, tagging proteins, sorting cells on a flow cytometer, and reporting on calcium, voltage, and pH through engineered biosensors. It sits in the daily workflow of academic labs and drug-discovery pipelines alike, a permanent piece of infrastructure that started as a jellyfish's party trick."
+      ]
+    }
+  ],
+  "pull_quote": "Most proteins are machines. This one is a lantern, and that turned out to be the more useful thing to be.",
+  "meanwhile_heading": "The world in 1962.",
+  "meanwhile": [
+    { "when": "Feb", "what": "John Glenn becomes the first American to orbit the Earth." },
+    { "when": "Sep", "what": "Rachel Carson publishes Silent Spring, and modern environmentalism begins." },
+    { "when": "Oct", "what": "The Cuban Missile Crisis brings the world to the edge for thirteen days." },
+    { "when": "Dec", "what": "Watson, Crick, and Wilkins receive the Nobel Prize for the structure of DNA." }
+  ]
+}

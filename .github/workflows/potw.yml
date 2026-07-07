@@ -1,0 +1,73 @@
+name: Protein of the Week
+
+# Drafts a weekly Protein of the Week issue and opens a PR for review.
+# It never publishes directly: a human reviews, fact-checks, edits, and merges.
+
+on:
+  schedule:
+    - cron: "0 13 * * 1" # Mondays ~13:00 UTC
+  workflow_dispatch:
+    inputs:
+      protein:
+        description: "Protein name (optional; default = next in scripts/potw/proteins.json)"
+        required: false
+      slug:
+        description: "URL slug (optional)"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install "anthropic>=0.69" "pydantic>=2.7"
+
+      - name: Research and draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          POTW_MODEL: ${{ vars.POTW_MODEL }}
+          POTW_RESEARCH_MODEL: ${{ vars.POTW_RESEARCH_MODEL }}
+          POTW_WRITER_MODEL: ${{ vars.POTW_WRITER_MODEL }}
+          PROTEIN: ${{ github.event.inputs.protein }}
+          SLUG: ${{ github.event.inputs.slug }}
+        run: |
+          args=()
+          if [ -n "$PROTEIN" ]; then args+=(--protein "$PROTEIN"); fi
+          if [ -n "$SLUG" ]; then args+=(--slug "$SLUG"); fi
+          python scripts/potw/research.py "${args[@]}"
+
+      - name: Render page and refresh archive
+        run: python scripts/potw/render.py --all
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          new_json=$(git ls-files --others --exclude-standard scripts/potw/issues/ | head -1)
+          if [ -z "$new_json" ]; then
+            echo "No new issue was produced; nothing to open."
+            exit 0
+          fi
+          name=$(python -c "import json,sys; print(json.load(open(sys.argv[1]))['protein'])" "$new_json")
+          num=$(python -c "import json,sys; print('%03d' % json.load(open(sys.argv[1]))['number'])" "$new_json")
+          branch="potw/issue-${num}"
+          git config user.name "phyla-bot"
+          git config user.email "bot@phylatech.com"
+          git checkout -b "$branch"
+          git add scripts/potw/issues/ potw-*.html protein-of-the-week.html
+          git commit -m "content: Protein of the Week No. ${num} draft, ${name}"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" \
+            --title "Protein of the Week No. ${num}: ${name} (draft)" \
+            --body "Auto-drafted by the Protein of the Week harness. Fact-check against the cited sources, edit for voice, then merge. See scripts/potw/README.md."

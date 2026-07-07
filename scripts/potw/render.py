@@ -1,0 +1,312 @@
+#!/usr/bin/env python3
+"""Render a Protein of the Week issue JSON into an HTML page, and refresh the archive.
+
+Deterministic: no API calls, no network. Safe to run in CI after research.py, and
+easy to preview locally.
+
+    mamba run -n phyla-site python scripts/potw/render.py 002-insulin.json
+    mamba run -n phyla-site python scripts/potw/render.py --all          # re-render every issue
+    mamba run -n phyla-site python scripts/potw/render.py 002-insulin.json --set-latest
+
+Issue No. 1 (GFP) is the hand-authored launch page at protein-of-the-week.html and is
+left alone unless you pass --set-latest. Issues 2+ render to potw-<NNN>-<slug>.html at
+the site root. Every render refreshes the archive list on all POTW pages (the region
+between the POTW:ARCHIVE markers).
+"""
+
+from __future__ import annotations
+
+import argparse
+import html
+import json
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ISSUES_DIR = HERE / "issues"
+SITE_ROOT = HERE.parent.parent  # repo root (worktree)
+CANONICAL = SITE_ROOT / "protein-of-the-week.html"
+
+ARCHIVE_START = "<!-- POTW:ARCHIVE:START -->"
+ARCHIVE_END = "<!-- POTW:ARCHIVE:END -->"
+
+
+def esc(s: str) -> str:
+    return html.escape(str(s), quote=True)
+
+
+def issue_href(number: int, slug: str) -> str:
+    return "protein-of-the-week.html" if number == 1 else f"potw-{number:03d}-{slug}.html"
+
+
+def load_all_issues() -> list[dict]:
+    issues = []
+    for p in sorted(ISSUES_DIR.glob("*.json")):
+        issues.append(json.loads(p.read_text()))
+    issues.sort(key=lambda d: d.get("number", 0), reverse=True)
+    return issues
+
+
+def render_archive_rows(issues: list[dict], current_number: int) -> str:
+    rows = []
+    for d in issues:
+        n, slug = d["number"], d["slug"]
+        current = ' current" aria-current="page' if n == current_number else ""
+        rows.append(
+            f'          <a class="arch{current}" href="{issue_href(n, slug)}">\n'
+            f'            <span class="arch-no">No. {n:03d}</span>\n'
+            f'            <span class="arch-name">{esc(d["protein"])}'
+            f'<span class="binomial">{esc(_organism(d["binomial"]))}</span></span>\n'
+            f'            <span class="arch-date">{esc(d["date_display"])}</span>\n'
+            f"          </a>"
+        )
+    return "\n".join(rows)
+
+
+def _organism(binomial: str) -> str:
+    """Trim a source line like 'from Aequorea victoria, the crystal jelly' to the binomial."""
+    s = binomial.strip()
+    for prefix in ("from ", "From "):
+        if s.startswith(prefix):
+            s = s[len(prefix):]
+    return s.split(",")[0].strip()
+
+
+def update_archive_in_file(path: Path, issues: list[dict], current_number: int) -> None:
+    if not path.exists():
+        return
+    text = path.read_text()
+    if ARCHIVE_START not in text or ARCHIVE_END not in text:
+        return
+    rows = render_archive_rows(issues, current_number)
+    pre, _, rest = text.partition(ARCHIVE_START)
+    _, _, post = rest.partition(ARCHIVE_END)
+    new = f"{pre}{ARCHIVE_START}\n{rows}\n          {ARCHIVE_END}{post}"
+    path.write_text(new)
+
+
+PEPTIDE_MOTIF = """<svg class="peptide" viewBox="0 0 320 120" role="img" aria-labelledby="pepTitle pepDesc">
+            <title id="pepTitle">Peptide chain</title>
+            <desc id="pepDesc">A stylized peptide backbone: a folded chain of residues with one highlighted.</desc>
+            <path d="M 20 84 L 52 44 L 84 84 L 116 44 L 148 84 L 180 44 L 212 84 L 244 44 L 276 84 L 300 60"
+                  fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+            <g fill="var(--parchment)" stroke="var(--ink)" stroke-width="1.3">
+              <circle cx="20" cy="84" r="6"/><circle cx="52" cy="44" r="6"/><circle cx="84" cy="84" r="6"/>
+              <circle cx="116" cy="44" r="6"/><circle cx="180" cy="44" r="6"/><circle cx="212" cy="84" r="6"/>
+              <circle cx="244" cy="44" r="6"/><circle cx="276" cy="84" r="6"/>
+            </g>
+            <circle cx="148" cy="84" r="7.5" fill="var(--tannin)" stroke="var(--tannin)"/>
+          </svg>"""
+
+
+def render_page(issue: dict, issues: list[dict]) -> str:
+    n = issue["number"]
+    facts = "\n".join(
+        f'            <div class="fact"><dd class="value">{esc(f["value"])}</dd>'
+        f'<dt class="label">{esc(f["label"])}</dt></div>'
+        for f in issue["facts"]
+    )
+    movements = []
+    for i, m in enumerate(issue["movements"], start=1):
+        paras = "\n".join(f"            <p>{esc(p)}</p>" for p in m["paragraphs"])
+        movements.append(
+            f'          <div class="movement">\n'
+            f'            <span class="movement-num">&sect; {i:02d} &nbsp; {esc(m["kicker"])}</span>\n'
+            f'            <h2>{esc(m["heading"])}</h2>\n{paras}\n          </div>'
+        )
+    movements_html = "\n".join(movements)
+    meanwhile = "\n".join(
+        f'              <div class="ml"><span class="when">{esc(x["when"])}</span>'
+        f'<span class="what">{esc(x["what"])}</span></div>'
+        for x in issue["meanwhile"]
+    )
+    archive_rows = render_archive_rows(issues, n)
+    org = esc(_organism(issue["binomial"]))
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein of the Week: {esc(issue["protein"])}, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Protein of the Week No. {n:03d} from Phyla Technologies: {esc(issue["dek"])}">
+  <meta name="view-transition" content="same-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Generated by scripts/potw/render.py. Page-specific styles for a POTW issue. */
+    .masthead {{ border-bottom: 1px solid var(--ink-hairline); background: var(--parchment); }}
+    .masthead-inner {{ display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding-block: 1.25rem; flex-wrap: wrap; }}
+    .masthead .column-name {{ font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }}
+    .issue {{ padding-block: clamp(3rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem); }}
+    .issue-line {{ display: inline-flex; align-items: center; gap: 0.625rem; margin-bottom: 1.5rem; flex-wrap: wrap; }}
+    .issue-line::before {{ content: ""; display: inline-block; width: 28px; height: 1px; background: var(--tannin); }}
+    .issue-grid {{ display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }}
+    .issue h1 {{ font-size: clamp(2.5rem, 6vw, 4.25rem); margin-bottom: 1rem; }}
+    .issue .binomial {{ font-style: italic; font-variation-settings: "wdth" 95, "wght" 500; color: var(--tannin); font-size: 1.1875rem; margin-bottom: 1.25rem; }}
+    .issue .dek {{ font-size: 1.1875rem; line-height: 1.55; color: var(--ink-soft); max-width: 42ch; }}
+    .peptide {{ width: 100%; max-width: 320px; height: auto; display: block; margin-inline: auto; }}
+    .facts {{ display: grid; grid-template-columns: repeat(4, auto); justify-content: start; column-gap: clamp(1.5rem, 4vw, 3.5rem); margin-top: clamp(2rem, 4vw, 3rem); padding-top: 2rem; border-top: 1px solid var(--ink-hairline); }}
+    .fact {{ padding-right: clamp(1.5rem, 4vw, 3.5rem); border-right: 1px solid var(--ink-hairline-strong); }}
+    .fact:last-child {{ border-right: none; padding-right: 0; }}
+    .fact .value {{ display: block; font-size: clamp(1.25rem, 2.6vw, 1.75rem); font-variation-settings: "wdth" 95, "wght" 600; color: var(--ink); letter-spacing: -0.02em; line-height: 1.05; }}
+    .fact .label {{ display: block; margin-top: 0.5rem; font-size: 0.6875rem; }}
+    .article {{ max-width: 68ch; }}
+    .article .movement {{ margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }}
+    .article h2 {{ font-variation-settings: "wdth" 100, "wght" 600; font-size: clamp(1.375rem, 2.4vw, 1.75rem); letter-spacing: -0.015em; line-height: 1.15; margin-bottom: 1rem; }}
+    .article .movement-num {{ font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); display: block; margin-bottom: 0.6rem; }}
+    .article p {{ font-size: 1.0625rem; line-height: 1.65; color: var(--ink-soft); margin-bottom: 1rem; }}
+    .pullquote {{ border-top: 1px solid var(--ink-hairline); border-bottom: 1px solid var(--ink-hairline); padding-block: 1.5rem; margin-block: 2rem; max-width: 68ch; }}
+    .pullquote p {{ font-size: clamp(1.25rem, 2.4vw, 1.625rem); line-height: 1.3; letter-spacing: -0.015em; color: var(--ink); font-variation-settings: "wdth" 95, "wght" 500; }}
+    .meanwhile {{ max-width: 68ch; }}
+    .meanwhile .ml {{ display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding-block: 0.8rem; border-bottom: 1px solid var(--ink-hairline); align-items: baseline; }}
+    .meanwhile .ml:first-child {{ border-top: 1px solid var(--ink-hairline); }}
+    .meanwhile .ml .when {{ font-variation-settings: "wdth" 95, "wght" 600; color: var(--tannin); font-variant-numeric: tabular-nums; }}
+    .meanwhile .ml .what {{ font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.5; }}
+    .byline {{ margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.5rem; border-top: 1px solid var(--ink-hairline); font-size: 0.875rem; color: var(--ink-soft); font-style: italic; max-width: 60ch; }}
+    .archive-list {{ border-top: 1px solid var(--ink-hairline); }}
+    .arch {{ display: grid; grid-template-columns: auto 1fr auto; gap: 1rem 1.5rem; align-items: baseline; padding-block: 1.1rem; border-bottom: 1px solid var(--ink-hairline); text-decoration: none; color: inherit; }}
+    .arch .arch-no {{ font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }}
+    .arch .arch-name {{ font-size: 1.0625rem; font-variation-settings: "wdth" 100, "wght" 600; color: var(--ink); letter-spacing: -0.005em; }}
+    .arch .arch-name .binomial {{ font-style: italic; font-variation-settings: "wdth" 95, "wght" 500; color: var(--ink-soft); font-size: 0.9375rem; margin-left: 0.5rem; }}
+    .arch .arch-date {{ font-size: 0.8125rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }}
+    .arch.current .arch-no {{ color: var(--tannin); }}
+    @media (max-width: 820px) {{ .issue-grid {{ grid-template-columns: 1fr; gap: 2.25rem; }} .issue-visual {{ order: -1; }} }}
+    @media (max-width: 600px) {{ .facts {{ grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }} .fact:nth-child(2) {{ border-right: none; padding-right: 0; }} .meanwhile .ml {{ grid-template-columns: 4.5rem 1fr; }} .arch {{ grid-template-columns: auto 1fr; }} .arch .arch-date {{ grid-column: 2; }} }}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <span class="column-name">Protein of the Week</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="issue">
+      <div class="wrap">
+        <span class="issue-line label">No. {n:03d} &nbsp;&middot;&nbsp; {esc(issue["date_display"])}</span>
+        <div class="issue-grid">
+          <div class="issue-text">
+            <h1 class="display">{esc(issue["protein"])}</h1>
+            <p class="binomial">{esc(issue["binomial"])}</p>
+            <p class="dek">{esc(issue["dek"])}</p>
+          </div>
+          <div class="issue-visual">
+          {PEPTIDE_MOTIF}
+          </div>
+        </div>
+        <dl class="facts">
+{facts}
+        </dl>
+      </div>
+    </section>
+
+    <section id="article">
+      <div class="wrap">
+        <div class="article">
+{movements_html}
+          <div class="pullquote"><p>{esc(issue["pull_quote"])}</p></div>
+          <div class="movement">
+            <span class="movement-num">&sect; &nbsp; Meanwhile</span>
+            <h2>{esc(issue["meanwhile_heading"])}</h2>
+            <div class="meanwhile">
+{meanwhile}
+            </div>
+          </div>
+        </div>
+        <p class="byline">{esc(issue["byline"])}</p>
+      </div>
+    </section>
+
+    <section id="archive">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The archive</span>
+          <h2 class="headline">Every protein, every week.</h2>
+        </div>
+        <div class="archive-list">
+          {ARCHIVE_START}
+{archive_rows}
+          {ARCHIVE_END}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="index.html">Main site</a>
+        <a href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/orgs/phylatech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+"""
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Render a POTW issue JSON to HTML.")
+    ap.add_argument("issue", nargs="?", help="Issue JSON filename (in scripts/potw/issues/) or path.")
+    ap.add_argument("--all", action="store_true", help="Re-render every issue (2+).")
+    ap.add_argument("--set-latest", action="store_true", help="Also write this issue to protein-of-the-week.html (the canonical page).")
+    args = ap.parse_args()
+
+    all_issues = load_all_issues()
+    if not all_issues:
+        print("No issues found in scripts/potw/issues/.", file=sys.stderr)
+        return 1
+
+    if args.all:
+        targets = [d for d in all_issues if d["number"] != 1]
+    elif args.issue:
+        p = Path(args.issue)
+        if not p.exists():
+            p = ISSUES_DIR / args.issue
+        targets = [json.loads(p.read_text())]
+    else:
+        print("Pass an issue filename or --all.", file=sys.stderr)
+        return 1
+
+    for issue in targets:
+        n, slug = issue["number"], issue["slug"]
+        page = render_page(issue, all_issues)
+        if n == 1 and not args.set_latest:
+            print(f"No. {n:03d} is the hand-authored launch page; skipping (use --set-latest to overwrite).", file=sys.stderr)
+        else:
+            dest = CANONICAL if (args.set_latest and issue is targets[0]) else (SITE_ROOT / issue_href(n, slug))
+            dest.write_text(page)
+            print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
+
+    # Refresh the archive region on every POTW page.
+    update_archive_in_file(CANONICAL, all_issues, current_number=_canonical_number(all_issues, args))
+    for d in all_issues:
+        if d["number"] != 1:
+            update_archive_in_file(SITE_ROOT / issue_href(d["number"], d["slug"]), all_issues, current_number=d["number"])
+    print("Archive lists refreshed.", file=sys.stderr)
+    return 0
+
+
+def _canonical_number(all_issues: list[dict], args) -> int:
+    # The canonical page currently shows GFP (No. 1) unless --set-latest promoted another.
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

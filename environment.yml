@@ -1,0 +1,9 @@
+name: phyla-site
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - "anthropic>=0.69"
+      - "pydantic>=2.7"
