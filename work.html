@@ -150,6 +150,64 @@
       color: var(--ink-soft);
     }
 
+    /* === Open source & community === */
+    .oss-list { border-top: 1px solid var(--ink-hairline); }
+    .oss {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.6rem 2rem;
+      align-items: baseline;
+      padding-block: 1.6rem;
+      border-bottom: 1px solid var(--ink-hairline);
+      text-decoration: none;
+      color: inherit;
+    }
+    .oss-name {
+      display: inline;
+      font-size: 1.125rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+      background-image: linear-gradient(var(--tannin), var(--tannin));
+      background-size: 0% 1px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      transition: background-size 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .oss:hover .oss-name, .oss:focus-visible .oss-name { background-size: 100% 1px; color: var(--tannin); }
+    .oss-desc {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 62ch;
+    }
+    .oss-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+    .oss-tags span {
+      font-size: 0.6875rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--ink-hairline-strong);
+    }
+    .oss-link {
+      font-size: 0.8125rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      color: var(--tannin);
+      white-space: nowrap;
+    }
+    .oss:hover .oss-link { color: var(--tannin-deep); }
+    .oss-note {
+      margin-top: 1.5rem;
+      font-size: 0.8125rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      max-width: 62ch;
+    }
+    @media (max-width: 560px) { .oss { grid-template-columns: 1fr; } }
+
     /* === Closing === */
     .closing .link-arrow { margin-top: 0.5rem; }
 
@@ -255,6 +313,36 @@
             </svg>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- OPEN SOURCE & COMMUNITY -->
+    <section id="opensource">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; Community</span>
+          <h2 class="headline">Built in the open.</h2>
+          <p class="body">Autometa isn't the only thing we've put in the commons. Alongside it we build and maintain smaller open-source tools for the community we came up in, the kind of glue that makes everyday genomics work a little less painful.</p>
+        </div>
+        <div class="oss-list">
+          <a class="oss" href="https://github.com/Full-Spectrum-Analytics/nf-notion" target="_blank" rel="noopener noreferrer">
+            <span class="oss-main">
+              <span class="oss-name">nf-notion</span>
+              <span class="oss-desc">A Nextflow plugin that mirrors a pipeline run into Notion as a live-updating page, so an entire team can follow a genomics workflow in real time without anyone reading a log file.</span>
+              <span class="oss-tags"><span>Nextflow plugin</span><span>Groovy</span></span>
+            </span>
+            <span class="oss-link">GitHub &rarr;</span>
+          </a>
+          <a class="oss" href="https://github.com/Full-Spectrum-Analytics/dash-seqviz" target="_blank" rel="noopener noreferrer">
+            <span class="oss-main">
+              <span class="oss-name">dash-seqviz</span>
+              <span class="oss-desc">A Plotly Dash wrapper for the SeqViz DNA, RNA, and protein viewer, with annotations, primers, and restriction sites. Interactive sequence visualization without leaving the Python dashboards scientists already build in.</span>
+              <span class="oss-tags"><span>Dash component</span><span>Python &amp; JavaScript</span></span>
+            </span>
+            <span class="oss-link">GitHub &rarr;</span>
+          </a>
+        </div>
+        <p class="oss-note">nf-notion and dash-seqviz are maintained under Full Spectrum Analytics, a co-founder's company, and are moving to Phyla.</p>
       </div>
     </section>
 
