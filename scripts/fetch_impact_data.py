@@ -28,11 +28,14 @@ OUTPUT_PATH = os.path.join(PROJECT_DIR, "data", "impact-data.json")
 
 BASE_URL = "https://api.openalex.org"
 
-# Palette for disciplines (cycles if more than available)
+# Earth-tone palette for disciplines (cycles if more than available).
+# Matches the "Specimen palette" in DESIGN.md / styles.css. The frontend
+# (impact.html) also derives these from brand tokens, but keeping the JSON
+# on-brand avoids any stale neon leaking through if the colors are used directly.
 DISCIPLINE_COLORS = [
-    "#14B8A6", "#0891B2", "#0EA5E9", "#3B82F6", "#8B5CF6",
-    "#A78BFA", "#2DD4BF", "#06B6D4", "#60A5FA", "#7C3AED",
-    "#34D399", "#F59E0B", "#EC4899", "#EF4444", "#6366F1",
+    "#6E4B2A", "#5C6E4A", "#B07C39", "#9A553B", "#7A6A3E",
+    "#47603F", "#8E9A6E", "#C39A5C", "#5A4632", "#A06A3C",
+    "#6B7357", "#7E4A2E", "#8A6D3B", "#4E5B3A", "#95612F",
 ]
 
 # ISO alpha-2 -> approximate centroid lat/lon for map visualization

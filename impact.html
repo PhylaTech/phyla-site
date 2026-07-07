@@ -3,1290 +3,647 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impact &amp; Influence — Phyla Technologies</title>
+  <title>Impact &amp; Influence, Phyla Technologies</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Explore Phyla Technologies' research impact — citation networks, global reach across 76 countries, and interdisciplinary influence spanning metagenomics, drug discovery, and computational biology.">
+  <meta name="description" content="Where the Phyla team's published research travels: live citation data from OpenAlex, cited across 76 countries and 23 disciplines.">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Impact & Influence — Phyla Technologies">
-  <meta property="og:description" content="Our work is cited across 76 countries and 22 disciplines. Explore our citation network, global reach, and interdisciplinary influence.">
+  <meta property="og:title" content="Impact & Influence, Phyla Technologies">
+  <meta property="og:description" content="Live citation data from OpenAlex: cited across 76 countries and 23 disciplines.">
   <meta property="og:url" content="https://phylatech.com/impact.html">
   <meta property="og:site_name" content="Phyla Technologies">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Impact & Influence — Phyla Technologies">
-  <meta name="twitter:description" content="Our work is cited across 76 countries and 22 disciplines. Explore our citation network, global reach, and interdisciplinary influence.">
+  <meta name="twitter:title" content="Impact & Influence, Phyla Technologies">
+  <meta name="twitter:description" content="Live citation data from OpenAlex: cited across 76 countries and 23 disciplines.">
 
-  <!-- Page transitions -->
   <meta name="view-transition" content="same-origin">
-  <style>
-    @view-transition { navigation: auto; }
-    ::view-transition-old(root) { animation: fade-out 0.25s ease-in; }
-    ::view-transition-new(root) { animation: fade-in 0.3s ease-out; }
-    @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
-    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-  </style>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://d3js.org/topojson.v3.min.js"></script>
+
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Page-specific styles. Shared design system lives in styles.css */
 
-    :root {
-      --teal-900: #0F766E;
-      --teal-700: #0D9488;
-      --teal-600: #0F9E94;
-      --teal-500: #14B8A6;
-      --teal-400: #2DD4BF;
-      --cyan-600: #0891B2;
-      --cyan-500: #06B6D4;
-      --sky-500: #0EA5E9;
-      --blue-600: #2563EB;
-      --blue-500: #3B82F6;
-      --violet-600: #7C3AED;
-      --violet-500: #8B5CF6;
-      --slate-950: #020617;
-      --slate-900: #0F172A;
-      --slate-800: #1E293B;
-      --slate-700: #334155;
-      --slate-600: #475569;
-      --slate-500: #64748B;
-      --slate-400: #94A3B8;
-      --slate-300: #CBD5E1;
-      --slate-200: #E2E8F0;
-      --slate-100: #F1F5F9;
-      --slate-50: #F8FAFC;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--slate-950);
-      color: var(--slate-300);
-      min-height: 100vh;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* ── HEADER ── */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(2, 6, 23, 0.7);
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-group {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-
-    nav { display: flex; align-items: center; gap: 8px; }
-
-    nav a {
-      color: var(--slate-400);
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all 0.2s;
-    }
-
-    nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
-    nav a.active { color: var(--teal-400); }
-
-    .nav-cta {
-      background: rgba(13, 148, 136, 0.15) !important;
-      color: var(--teal-400) !important;
-      border: 1px solid rgba(13, 148, 136, 0.25);
-    }
-
-    .nav-cta:hover {
-      background: rgba(13, 148, 136, 0.25) !important;
-      color: var(--teal-400) !important;
-    }
-
-    /* ── SECTION SHARED ── */
-    .section-title {
-      font-size: 40px; font-weight: 800; letter-spacing: -1.5px;
-      color: #fff; text-align: center; margin-bottom: 12px;
-    }
-    .section-sub {
-      text-align: center; color: var(--slate-400); font-size: 16px;
-      max-width: 560px; margin: 0 auto 60px; line-height: 1.7;
-    }
-
-    /* ── HERO ── */
+    /* === Hero === */
     .impact-hero {
-      position: relative;
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 140px 40px 60px;
-      text-align: center;
-      overflow: hidden;
+      padding-block: clamp(3.25rem, 8vw, 6rem) clamp(2.5rem, 5vw, 3.5rem);
     }
-
-    .impact-hero::before {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
-      background:
-        radial-gradient(ellipse 600px 400px at 30% 40%, rgba(13,148,136,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 500px at 70% 60%, rgba(37,99,235,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 400px 300px at 50% 30%, rgba(139,92,246,0.06) 0%, transparent 70%);
-      animation: meshMove 20s ease-in-out infinite alternate;
-      z-index: 0;
-    }
-
-    .impact-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-      background-size: 60px 60px;
-      z-index: 0;
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 80%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 80%);
-    }
-
-    @keyframes meshMove {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(-40px, 30px) rotate(3deg); }
-    }
-
-    .impact-hero > * { position: relative; z-index: 1; }
-
-    .impact-hero h1 {
-      font-size: 56px;
-      font-weight: 800;
-      letter-spacing: -2.5px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .impact-hero h1 .gradient-text {
-      background: linear-gradient(135deg, var(--teal-400) 0%, var(--sky-500) 50%, var(--violet-500) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .impact-hero h1 .gradient-text-alt {
-      background: linear-gradient(135deg, var(--violet-500) 0%, var(--sky-500) 50%, var(--teal-400) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .impact-hero .tagline {
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--slate-400);
-      max-width: 600px;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-
-    /* ── SECTION NAV ── */
-    .section-nav {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      padding: 0 40px 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-nav-btn {
+    .impact-hero .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--slate-400);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.25s;
+      gap: 0.625rem;
+      margin-bottom: 1.5rem;
     }
-
-    .section-nav-btn:hover {
-      background: rgba(13,148,136,0.12);
-      border-color: rgba(13,148,136,0.25);
-      color: var(--teal-400);
-      transform: translateY(-1px);
+    .impact-hero .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--tannin);
     }
+    .impact-hero h1 { max-width: 15ch; margin-bottom: 1.5rem; }
+    .impact-hero .lead { max-width: 46ch; }
 
-    /* ── METRICS STRIP ── */
-    .metrics-strip {
-      position: relative;
-      padding: 40px 40px 80px;
-      z-index: 1;
-    }
-
-    .metrics-grid {
-      max-width: 1000px;
-      margin: 0 auto;
+    /* === Metrics row (hairline-divided) === */
+    .metrics {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(4, auto);
+      justify-content: start;
+      column-gap: clamp(1.5rem, 4vw, 3.5rem);
+      margin-top: 2.75rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--ink-hairline);
     }
-
-    .metric-card {
-      text-align: center;
-      padding: 32px 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: all 0.3s;
+    .metric {
+      padding-right: clamp(1.5rem, 4vw, 3.5rem);
+      border-right: 1px solid var(--ink-hairline-strong);
     }
-
-    .metric-card:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.1);
-      transform: translateY(-2px);
-    }
-
-    .metric-value {
-      font-size: 42px;
-      font-weight: 800;
-      letter-spacing: -2px;
+    .metric:last-child { border-right: none; padding-right: 0; }
+    .metric .value {
+      display: block;
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-variation-settings: "wdth" 92, "wght" 600;
+      color: var(--ink);
+      letter-spacing: -0.025em;
       line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .metric-value.c-teal { color: var(--teal-400); }
-    .metric-value.c-cyan { color: var(--cyan-500); }
-    .metric-value.c-blue { color: var(--blue-500); }
-    .metric-value.c-violet { color: var(--violet-500); }
-
-    .metric-label {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--slate-400);
-      letter-spacing: 0.02em;
-    }
-
-    /* ── CITATION NETWORK ── */
-    .citation-network {
-      position: relative;
-      padding: 100px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .citation-network::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--teal-700), transparent);
-    }
-
-    .network-controls {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-    }
-
-    .net-btn {
-      padding: 8px 18px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.03);
-      color: var(--slate-400);
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .net-btn:hover {
-      background: rgba(255,255,255,0.06);
-      color: var(--slate-200);
-    }
-
-    .net-btn.active {
-      background: rgba(13,148,136,0.15);
-      border-color: rgba(13,148,136,0.3);
-      color: var(--teal-400);
-    }
-
-    .network-container {
-      position: relative;
-      width: 100%;
-      height: 560px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
-      overflow: hidden;
-    }
-
-    .network-container svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .network-tooltip {
-      position: absolute;
-      padding: 10px 14px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      font-size: 12.5px;
-      color: var(--slate-200);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.15s;
-      z-index: 10;
-      max-width: 260px;
-      backdrop-filter: blur(12px);
-    }
-
-    .network-tooltip .tt-title {
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-
-    .network-tooltip .tt-field {
-      font-size: 11px;
-      color: var(--slate-500);
-      margin-bottom: 2px;
-    }
-
-    .network-tooltip .tt-field span {
-      color: var(--slate-300);
-    }
-
-    .network-legend {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      color: var(--slate-400);
-    }
-
-    .legend-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    /* ── WORLD MAP ── */
-    .geo-section {
-      position: relative;
-      padding: 100px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .geo-section::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--cyan-600), transparent);
-    }
-
-    .map-container {
-      position: relative;
-      width: 100%;
-      height: 480px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
-      overflow: hidden;
-    }
-
-    .map-container svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .map-tooltip {
-      position: absolute;
-      padding: 10px 14px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      font-size: 12.5px;
-      color: var(--slate-200);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.15s;
-      z-index: 10;
-      backdrop-filter: blur(12px);
-    }
-
-    /* ── DISCIPLINES ── */
-    .disciplines-section {
-      position: relative;
-      padding: 100px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .disciplines-section::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--blue-600), transparent);
-    }
-
-    .disc-chart {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .disc-row {
-      display: grid;
-      grid-template-columns: 180px 1fr 50px;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .disc-label {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: var(--slate-300);
-      text-align: right;
-    }
-
-    .disc-bar-bg {
-      height: 28px;
-      background: rgba(255,255,255,0.04);
-      border-radius: 6px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .disc-bar-fill {
-      height: 100%;
-      border-radius: 6px;
-      width: 0;
-      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-      position: relative;
-    }
-
-    .disc-bar-fill::after {
-      content: '';
-      position: absolute;
-      right: 0; top: 0; bottom: 0;
-      width: 40%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08));
-    }
-
-    .disc-count {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--slate-400);
-      text-align: left;
       font-variant-numeric: tabular-nums;
     }
+    .metric .label { display: block; margin-top: 0.6rem; font-size: 0.6875rem; }
 
-    .disc-info-icon {
+    /* === Viz figures === */
+    .viz-figure {
+      position: relative;
+      border: 1px solid var(--ink-hairline);
+      background: var(--parchment-pale);
+      overflow: hidden;
+    }
+    .viz-figure svg { width: 100%; height: 100%; display: block; }
+    .map-figure { height: clamp(300px, 42vw, 480px); }
+    .network-figure { height: clamp(360px, 48vw, 560px); }
+
+    /* Network controls */
+    .network-controls {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .net-btn {
+      padding: 0.5rem 1.05rem;
+      border: 1px solid var(--ink-hairline-strong);
+      background: transparent;
+      color: var(--ink-soft);
+      font-size: 0.8125rem;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      cursor: pointer;
+      border-radius: 0;
+      transition: color 180ms ease-out, border-color 180ms ease-out, background 180ms ease-out;
+    }
+    .net-btn:hover { color: var(--ink); border-color: var(--ink-soft); }
+    .net-btn.active {
+      color: var(--parchment-pale);
+      background: var(--tannin);
+      border-color: var(--tannin);
+    }
+    .viz-hint {
+      margin-top: 0.9rem;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    /* Tooltip (shared shape for map + network) */
+    .viz-tooltip {
+      position: absolute;
+      padding: 0.6rem 0.8rem;
+      background: var(--parchment-pale);
+      border: 1px solid var(--ink-hairline-strong);
+      font-size: 0.8125rem;
+      color: var(--ink);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 10;
+      max-width: 250px;
+      box-shadow: 0 8px 28px oklch(22% 0.02 70 / 0.14);
+    }
+    .viz-tooltip .tt-title { font-variation-settings: "wdth" 100, "wght" 600; color: var(--ink); margin-bottom: 0.3rem; }
+    .viz-tooltip .tt-field { font-size: 0.75rem; color: var(--ink-soft); margin-top: 0.1rem; }
+    .viz-tooltip .tt-field span { color: var(--ink); }
+
+    /* Legend */
+    .legend { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin-top: 1.5rem; }
+    .legend-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; color: var(--ink-soft); }
+    .legend-swatch { width: 11px; height: 11px; border-radius: 2px; flex: none; }
+
+    /* Disciplines */
+    .disc-chart { display: flex; flex-direction: column; gap: 0.7rem; }
+    .disc-row {
+      display: grid;
+      grid-template-columns: minmax(150px, 240px) 1fr auto;
+      align-items: center;
+      gap: 1.1rem;
+    }
+    .disc-label {
+      font-size: 0.875rem;
+      color: var(--ink);
+      text-align: right;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      line-height: 1.3;
+    }
+    .disc-track {
+      height: 22px;
+      background: var(--parchment-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .disc-fill {
+      height: 100%;
+      width: 0;
+      transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .disc-count {
+      font-size: 0.8125rem;
+      color: var(--ink-soft);
+      font-variant-numeric: tabular-nums;
+      min-width: 3.5ch;
+      text-align: right;
+    }
+    .disc-info {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: var(--slate-400);
-      font-size: 10px;
+      border: 1px solid var(--ink-hairline-strong);
+      color: var(--ink-soft);
+      font-size: 9px;
       font-style: italic;
-      font-weight: 600;
+      font-variation-settings: "wght" 600;
       cursor: help;
       position: relative;
       vertical-align: middle;
-      margin-left: 4px;
+      margin-left: 0.4rem;
     }
-
-    .disc-info-icon:hover { background: rgba(255,255,255,0.14); color: #fff; }
-
+    .disc-info:hover { border-color: var(--ink-soft); color: var(--ink); }
     .disc-info-tip {
       display: none;
       position: absolute;
       bottom: calc(100% + 8px);
       right: -8px;
-      width: 260px;
-      padding: 10px 14px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      font-size: 12px;
+      width: 240px;
+      padding: 0.7rem 0.85rem;
+      background: var(--parchment-pale);
+      border: 1px solid var(--ink-hairline-strong);
+      font-size: 0.75rem;
       font-style: normal;
-      font-weight: 400;
-      color: var(--slate-300);
-      line-height: 1.6;
-      backdrop-filter: blur(12px);
+      font-variation-settings: "wght" 400;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      text-align: left;
       z-index: 20;
-      white-space: normal;
+      box-shadow: 0 8px 28px oklch(22% 0.02 70 / 0.14);
     }
+    .disc-info:hover .disc-info-tip { display: block; }
 
-    .disc-info-icon:hover .disc-info-tip { display: block; }
-
-    /* ── BRIDGING / INTERDISCIPLINARY ── */
-    .bridging-section {
-      position: relative;
-      padding: 100px 40px 120px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .bridging-section::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--violet-600), transparent);
-    }
-
-    .bridging-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .bridge-card {
-      background: rgba(255,255,255,0.03);
-      border-radius: 16px;
-      padding: 32px 24px;
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bridge-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-      opacity: 0;
-      transition: opacity 0.35s;
-    }
-
-    .bridge-card:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.1);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.5);
-    }
-
-    .bridge-card:hover::before { opacity: 1; }
-
-    .bridge-icon {
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px;
-    }
-
-    .bridge-card h3 {
-      font-size: 16px; font-weight: 600; color: var(--slate-100);
-      margin-bottom: 10px; letter-spacing: -0.02em;
-    }
-
-    .bridge-card p {
-      font-size: 13.5px; color: var(--slate-400); line-height: 1.7;
-    }
-
-    .bridge-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 14px;
-    }
-
-    .bridge-tag {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      color: var(--slate-400);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    /* ── CTA ── */
-    .impact-cta {
-      position: relative;
-      padding: 100px 40px;
-      text-align: center;
-    }
-
-    .impact-cta::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--teal-700), transparent);
-    }
-
-    .cta-btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 15px 36px;
-      background: linear-gradient(135deg, var(--teal-700), var(--blue-600));
-      color: white;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      font-weight: 600; font-size: 15px;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(13,148,136,0.25);
-      text-decoration: none;
-      font-family: inherit;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(13,148,136,0.4);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 32px 40px;
-      display: flex; align-items: center; justify-content: space-between;
-      max-width: 1200px; margin: 0 auto;
-      font-size: 12.5px; color: var(--slate-500);
-    }
-
-    footer a {
-      color: var(--slate-400); text-decoration: none;
-      margin-left: 24px; transition: color 0.2s;
-    }
-
-    footer a:hover { color: #fff; }
-
-    .footer-updated {
-      font-size: 11px;
-      color: var(--slate-600);
+    /* Closing */
+    .closing .updated {
+      margin-top: 1.75rem;
+      font-size: 0.8125rem;
+      color: var(--ink-soft);
       font-variant-numeric: tabular-nums;
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .impact-hero h1 { font-size: 44px; letter-spacing: -2px; }
-      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 768px) {
-      .impact-hero h1 { font-size: 34px; letter-spacing: -1.5px; }
-      .impact-hero .tagline { font-size: 15px; max-width: 400px; }
-      .section-nav { gap: 8px; padding: 0 20px 10px; }
-      .section-nav-btn { padding: 8px 14px; font-size: 12px; }
-      .metrics-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-      .metric-value { font-size: 32px; }
-      .header-inner { padding: 14px 20px; }
-      nav { flex-wrap: wrap; justify-content: center; }
-      nav a { padding: 6px 10px; font-size: 12px; }
-      .section-title { font-size: 30px; }
-      .network-container { height: 400px; }
-      .map-container { height: 320px; }
-      .bridging-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-      .disc-row { grid-template-columns: 120px 1fr 40px; }
-      .disc-label { font-size: 12px; }
-      footer { flex-direction: column; gap: 12px; text-align: center; }
-    }
-
-    @media (max-width: 480px) {
-      .metrics-grid { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; }
-      .disc-row { grid-template-columns: 1fr; gap: 4px; }
+    /* === Page-specific responsive === */
+    @media (max-width: 640px) {
+      .metrics { grid-template-columns: 1fr 1fr; row-gap: 1.75rem; }
+      .metric:nth-child(2) { border-right: none; padding-right: 0; }
+      .disc-row { grid-template-columns: 1fr; gap: 0.3rem; }
       .disc-label { text-align: left; }
-      .network-controls { gap: 6px; }
-      .net-btn { padding: 6px 12px; font-size: 12px; }
+      .disc-count { text-align: left; }
     }
   </style>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="logo-group">
-        <img src="phyla_technologies_logo_dark.svg" alt="Phyla Technologies" height="58">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
       </a>
-      <nav>
-        <a href="index.html#services">Services</a>
-        <a href="impact.html" class="active">Impact</a>
+      <nav class="primary" aria-label="Primary">
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="impact.html" aria-current="page" class="active">Impact</a>
         <a href="index.html#team">Team</a>
-        <a href="index.html#contact" class="nav-cta">Contact</a>
+        <a href="index.html#contact" class="cta">Get in touch</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="impact-hero">
-    <h1>
-      <span class="gradient-text">Impact</span> &amp; <span class="gradient-text-alt">Influence</span>
-    </h1>
-    <p class="tagline">Explore how our work propagates through global research and applied domains — from citation networks to cross-disciplinary influence.</p>
-  </section>
+  <main id="main">
 
-  <!-- SECTION NAV -->
-  <nav class="section-nav">
-    <a href="#geography" class="section-nav-btn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      Global Reach
-    </a>
-    <a href="#network" class="section-nav-btn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.5 7.5L11 16M17.5 7.5L13 16M7 6h10"/></svg>
-      Citation Network
-    </a>
-    <a href="#disciplines" class="section-nav-btn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="6" width="4" height="15" rx="1"/><rect x="17" y="2" width="4" height="19" rx="1"/></svg>
-      Disciplines
-    </a>
-  </nav>
+    <!-- HERO -->
+    <section class="impact-hero">
+      <div class="wrap">
+        <span class="eyebrow label">Impact &amp; Influence</span>
+        <h1 class="display">The work travels.</h1>
+        <p class="lead body-large">Research the Phyla team has published keeps getting read, cited, and built on, long after it went out. These aren't numbers we get to inflate: they come live from OpenAlex, the open record of the world's research.</p>
 
-  <!-- KEY METRICS -->
-  <section class="metrics-strip">
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-value c-teal" data-target="1847">0</div>
-        <div class="metric-label">Total Citations</div>
+        <dl class="metrics">
+          <div class="metric">
+            <dd class="value" data-impact="total_citations">2,391</dd>
+            <dt class="label">Citations</dt>
+          </div>
+          <div class="metric">
+            <dd class="value" data-impact="countries_reached">76</dd>
+            <dt class="label">Countries</dt>
+          </div>
+          <div class="metric">
+            <dd class="value" data-impact="citing_institutions">3,307</dd>
+            <dt class="label">Institutions</dt>
+          </div>
+          <div class="metric">
+            <dd class="value" data-impact="disciplines_impacted">23</dd>
+            <dt class="label">Disciplines</dt>
+          </div>
+        </dl>
       </div>
-      <div class="metric-card">
-        <div class="metric-value c-cyan" data-target="42">0</div>
-        <div class="metric-label">Countries Reached</div>
+    </section>
+
+    <!-- GLOBAL REACH -->
+    <section id="geography">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 01 &nbsp; Global reach</span>
+          <h2 class="headline">Useful work doesn't stay home.</h2>
+          <p class="body">When a method holds up, other groups reach for it, wherever they are. Every thread on this map leads back to Madison, Wisconsin, where most of ours started.</p>
+        </div>
+        <figure class="viz-figure map-figure" id="mapViz">
+          <div class="viz-tooltip" id="mapTooltip"></div>
+        </figure>
       </div>
-      <div class="metric-card">
-        <div class="metric-value c-blue" data-target="156">0</div>
-        <div class="metric-label">Citing Institutions</div>
+    </section>
+
+    <!-- CITATION NETWORK -->
+    <section id="network">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 02 &nbsp; Citation network</span>
+          <h2 class="headline">Foundations, not footnotes.</h2>
+          <p class="body">A citation is a small vote that a piece of work was worth building on. Each of our publications anchors its own cluster of the research it went on to make possible.</p>
+        </div>
+        <div class="network-controls" role="group" aria-label="Network layout">
+          <button class="net-btn active" data-layout="force">Force</button>
+          <button class="net-btn" data-layout="radial">Radial</button>
+          <button class="net-btn" data-layout="cluster">By field</button>
+        </div>
+        <p class="viz-hint">Drag any node to pull it loose, or re-arrange the whole graph.</p>
+        <figure class="viz-figure network-figure" id="networkViz">
+          <div class="viz-tooltip" id="netTooltip"></div>
+        </figure>
+        <div class="legend" id="networkLegend"></div>
       </div>
-      <div class="metric-card">
-        <div class="metric-value c-violet" data-target="12">0</div>
-        <div class="metric-label">Disciplines Impacted</div>
+    </section>
+
+    <!-- DISCIPLINARY INFLUENCE -->
+    <section id="disciplines">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 03 &nbsp; Disciplines</span>
+          <h2 class="headline">It doesn't stay in one field.</h2>
+          <p class="body">The same methods that resolve a microbial genome turn up in chemistry, medicine, and computer science. That range is the difference between a specialist and a team you can hand an unfamiliar problem.</p>
+        </div>
+        <div class="disc-chart" id="discChart"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GEOGRAPHIC REACH -->
-  <section class="geo-section" id="geography">
-    <h2 class="section-title">Global Reach</h2>
-    <p class="section-sub">Our work is cited by researchers worldwide, spanning six continents.</p>
-
-    <div class="map-container" id="mapViz">
-      <div class="map-tooltip" id="mapTooltip"></div>
-    </div>
-  </section>
-
-  <!-- CITATION NETWORK -->
-  <section class="citation-network" id="network">
-    <h2 class="section-title">Citation Network</h2>
-    <p class="section-sub">An interactive view of how our publications connect to downstream research. Each node is a paper; edges represent citations.</p>
-
-    <div class="network-controls">
-      <button class="net-btn active" data-layout="force">Force Layout</button>
-      <button class="net-btn" data-layout="radial">Radial</button>
-      <button class="net-btn" data-layout="cluster">By Field</button>
-    </div>
-
-    <div class="network-container" id="networkViz">
-      <div class="network-tooltip" id="netTooltip"></div>
-    </div>
-
-    <div class="network-legend" id="networkLegend"></div>
-  </section>
-
-  <!-- DISCIPLINARY INFLUENCE -->
-  <section class="disciplines-section" id="disciplines">
-    <h2 class="section-title">Disciplinary Influence</h2>
-    <p class="section-sub">How our research propagates across fields — from core domains to adjacent disciplines where our methods and findings create new connections.</p>
-
-    <div class="disc-chart" id="discChart"></div>
-  </section>
-
-  <!-- INTERDISCIPLINARY BRIDGING -->
-  <section class="bridging-section" id="bridging">
-    <h2 class="section-title">Interdisciplinary Bridging</h2>
-    <p class="section-sub">We connect traditionally disconnected fields, creating pathways for methods and insights to flow across research boundaries.</p>
-
-    <div class="bridging-grid">
-      <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(13,148,136,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    <!-- CLOSING -->
+    <section class="closing" id="closing">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 04 &nbsp; Work with us</span>
+          <h2 class="headline">Work with the people behind it.</h2>
+          <p class="body">The same people whose work is on this page are the ones who will scope and build yours. Same hands, from the first call to production.</p>
         </div>
-        <h3>Omics &times; Machine Learning</h3>
-        <p>Bridging high-dimensional biological data with modern AI — from multi-omic disease profiling to genome-scale lipid mapping and real-time metabolomics.</p>
-        <div class="bridge-tags">
-          <span class="bridge-tag">Proteomics</span>
-          <span class="bridge-tag">Metabolomics</span>
-          <span class="bridge-tag">Deep Learning</span>
-        </div>
+        <a href="index.html#contact" class="link-arrow">
+          <span>Start a conversation</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="updated" id="lastUpdated"></p>
       </div>
-      <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(52,211,153,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5-.5 6c-1.3 2.3-3.5 3.5-5.5 4.5"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-        </div>
-        <h3>Natural Products &times; Drug Discovery</h3>
-        <p>Connecting microbial chemistry with therapeutic pipelines — learning drug functions from molecular structure, identifying bioactive compounds, and mapping biosynthetic potential.</p>
-        <div class="bridge-tags">
-          <span class="bridge-tag">Cheminformatics</span>
-          <span class="bridge-tag">Bioactive Compounds</span>
-          <span class="bridge-tag">CNNs</span>
-        </div>
-      </div>
-      <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(59,130,246,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <h3>Clinical Data &times; Precision Medicine</h3>
-        <p>Translating molecular-scale insights into clinical impact — large-scale severity profiling, health monitoring through urine metabolomics, and pharmacokinetic modeling.</p>
-        <div class="bridge-tags">
-          <span class="bridge-tag">Biomarkers</span>
-          <span class="bridge-tag">Diagnostics</span>
-          <span class="bridge-tag">Translational Research</span>
-        </div>
-      </div>
-      <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(139,92,246,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-        </div>
-        <h3>Bioinformatics &times; Software Engineering</h3>
-        <p>Production-grade tools for research computing — from interactive metagenome visualization platforms to collaborative multi-omic data exploration.</p>
-        <div class="bridge-tags">
-          <span class="bridge-tag">Autometa</span>
-          <span class="bridge-tag">Automappa</span>
-          <span class="bridge-tag">Argonaut</span>
-        </div>
-      </div>
-      <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(6,182,212,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"><path d="M8 2l1.88 1.88M14.12 3.88L16 2M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v2M6 13H2M22 13h-4"/></svg>
-        </div>
-        <h3>Microbial Ecology &times; Genomics</h3>
-        <p>Resolving microbial dark matter across environments — from marine invertebrate symbionts to peritidal stromatolite communities and host-microbiome interactions.</p>
-        <div class="bridge-tags">
-          <span class="bridge-tag">Metagenomics</span>
-          <span class="bridge-tag">Symbiosis</span>
-          <span class="bridge-tag">Environmental</span>
-        </div>
-      </div>
-      <div class="bridge-card">
-        <div class="bridge-icon" style="background: rgba(234,179,8,0.12);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L17.2 7v6L12 16 6.8 13V7z"/><path d="M12 4v6l5.2 3M12 10L6.8 13"/><circle cx="12" cy="4" r="1.2" fill="#EAB308"/><circle cx="17.2" cy="7" r="1.2" fill="#EAB308"/><circle cx="17.2" cy="13" r="1.2" fill="#EAB308"/><circle cx="12" cy="16" r="1.2" fill="#EAB308"/><circle cx="6.8" cy="13" r="1.2" fill="#EAB308"/><circle cx="6.8" cy="7" r="1.2" fill="#EAB308"/></svg>
-        </div>
-        <h3>Chemistry &times; Analytical Intelligence</h3>
-        <p>Advancing how molecular data is captured and interpreted — mass spectrometry imaging, FAIMS mobility prediction, and in situ chemical profiling of biological systems.</p>
-        <div class="bridge-tags">
-          <span class="bridge-tag">Mass Spectrometry</span>
-          <span class="bridge-tag">FAIMS</span>
-          <span class="bridge-tag">Spatial Profiling</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="impact-cta">
-    <h2 class="section-title">Plug Into the Network</h2>
-    <p class="section-sub">Engaging with Phyla means connecting to a high-leverage network of research and application across life sciences and ML.</p>
-    <a href="index.html#contact" class="cta-btn">Get In Touch</a>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <span>&copy; 2026 Phyla Technologies</span>
-    <span class="footer-updated" id="lastUpdated"></span>
-    <div>
-      <a href="https://www.linkedin.com/company/phylatech" target="_blank">LinkedIn</a>
-      <a href="https://github.com/orgs/phylatech" target="_blank">GitHub</a>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/orgs/phylatech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    // ═══════════════════════════════════════════
-    //  LOAD DATA & INITIALIZE
-    // ═══════════════════════════════════════════
-
     (async function init() {
-      const resp = await fetch('data/impact-data.json');
-      const DATA = await resp.json();
+      const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Resolve brand tokens from the shared stylesheet so the viz stays on-palette.
+      const css = getComputedStyle(document.documentElement);
+      const tok = (name, fallback) => (css.getPropertyValue(name).trim() || fallback);
+      const INK        = tok('--ink', '#302a22');
+      const INK_SOFT   = tok('--ink-soft', '#4f4638');
+      const TANNIN     = tok('--tannin', '#7c4e2b');
+      const TANNIN_DEEP= tok('--tannin-deep', '#5b3a20');
+      const PARCHMENT  = tok('--parchment-pale', '#f8f4ec');
+      const HAIRLINE   = 'oklch(35% 0.025 70 / 0.22)';
+      const HAIRLINE_FAINT = 'oklch(35% 0.025 70 / 0.10)';
+
+      // Earth-tone ramp for disciplines / citation fields (replaces the pipeline's neon hex).
+      const EARTH = [
+        '#6E4B2A', '#5C6E4A', '#B07C39', '#9A553B', '#7A6A3E', '#47603F',
+        '#8E9A6E', '#C39A5C', '#5A4632', '#A06A3C', '#6B7357', '#7E4A2E'
+      ];
+
+      let DATA;
+      try {
+        const resp = await fetch('data/impact-data.json');
+        DATA = await resp.json();
+      } catch (e) {
+        return; // Static fallback numbers already render; nothing else to draw.
+      }
 
       const FIELDS = DATA.field_colors || {};
+      const FIELD_NAMES = Object.keys(FIELDS).sort();
+      const fieldColor = (name) => {
+        if (!name) return INK_SOFT;
+        const i = FIELD_NAMES.indexOf(name);
+        return i < 0 ? INK_SOFT : EARTH[i % EARTH.length];
+      };
+
       const disciplineData = DATA.disciplines || [];
-      const geoData = DATA.geographic || [];
       const networkData = DATA.citation_network || { nodes: [], links: [] };
       const summary = DATA.summary || {};
 
-      // Update metric cards with real data
-      const metricTargets = [
-        summary.total_citations,
-        summary.countries_reached,
-        summary.citing_institutions,
-        summary.disciplines_impacted,
-      ];
-      document.querySelectorAll('.metric-value[data-target]').forEach((el, i) => {
-        if (metricTargets[i] != null) el.dataset.target = metricTargets[i];
-      });
-
-    // ═══════════════════════════════════════════
-    //  ANIMATED COUNTERS
-    // ═══════════════════════════════════════════
-
-    function animateCounters() {
-      document.querySelectorAll('.metric-value[data-target]').forEach(el => {
-        const target = parseInt(el.dataset.target);
-        const duration = 2000;
-        const start = Date.now();
-        const tick = () => {
-          const elapsed = Date.now() - start;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
+      // ── Metric counters ──────────────────────────────
+      document.querySelectorAll('.metric .value[data-impact]').forEach(el => {
+        const key = el.dataset.impact;
+        const target = summary[key];
+        if (target == null) return;
+        if (REDUCE) { el.textContent = target.toLocaleString(); return; }
+        const duration = 1600, start = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
           el.textContent = Math.floor(eased * target).toLocaleString();
-          if (progress < 1) setTimeout(tick, 16);
+          if (p < 1) requestAnimationFrame(tick);
+          else el.textContent = target.toLocaleString();
         };
-        tick();
+        requestAnimationFrame(tick);
       });
-    }
 
-    // Animate counters once data is loaded
-    animateCounters();
-
-    // Show last updated timestamp in footer
-    if (DATA.generated_at) {
-      const d = new Date(DATA.generated_at);
-      document.getElementById('lastUpdated').textContent =
-        'Citation data updated ' + d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    }
-
-    // ═══════════════════════════════════════════
-    //  CITATION NETWORK (D3.js)
-    // ═══════════════════════════════════════════
-
-    (function buildNetwork() {
-      const container = document.getElementById('networkViz');
-      const tooltip = document.getElementById('netTooltip');
-      const data = networkData;
-      // Use a fixed simulation space for consistent layout regardless of container size
-      const width = 900;
-      const height = 700;
-
-      const svg = d3.select('#networkViz')
-        .append('svg')
-        .attr('viewBox', `0 0 ${width} ${height}`)
-        .attr('preserveAspectRatio', 'xMidYMid meet');
-
-      const g = svg.append('g');
-
-      const zoom = d3.zoom()
-        .scaleExtent([0.3, 4])
-        .on('zoom', (event) => g.attr('transform', event.transform));
-      svg.call(zoom);
-
-      const simulation = d3.forceSimulation(data.nodes)
-        .force('link', d3.forceLink(data.links).id(d => d.id).distance(60).strength(d => d.strength * 0.3))
-        .force('charge', d3.forceManyBody().strength(-60))
-        .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('collision', d3.forceCollide().radius(d => d.type === 'core' ? 18 : 8))
-        .force('boundX', d3.forceX(width / 2).strength(0.07))
-        .force('boundY', d3.forceY(height / 2).strength(0.07));
-
-      const link = g.append('g')
-        .selectAll('line')
-        .data(data.links)
-        .join('line')
-        .attr('stroke', 'rgba(255,255,255,0.15)')
-        .attr('stroke-width', d => d.strength * 1.8 + 0.3);
-
-      const node = g.append('g')
-        .selectAll('circle')
-        .data(data.nodes)
-        .join('circle')
-        .attr('r', d => d.type === 'core' ? 12 : 4 + Math.sqrt(d.citations) * 0.5)
-        .attr('fill', d => FIELDS[d.field] || '#64748B')
-        .attr('fill-opacity', d => d.type === 'core' ? 0.9 : 0.55)
-        .attr('stroke', d => d.type === 'core' ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.1)')
-        .attr('stroke-width', d => d.type === 'core' ? 2 : 0.5)
-        .style('cursor', 'pointer')
-        .call(d3.drag()
-          .on('start', (event, d) => {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x; d.fy = d.y;
-          })
-          .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
-          .on('end', (event, d) => {
-            if (!event.active) simulation.alphaTarget(0);
-            d.fx = null; d.fy = null;
-          }));
-
-      function buildNetTooltip(d) {
-        tooltip.textContent = '';
-        const title = document.createElement('div');
-        title.className = 'tt-title';
-        title.textContent = d.label;
-        tooltip.appendChild(title);
-        [['Field', d.field], ['Year', d.year], ['Citations', d.citations], ['Type', d.type === 'core' ? 'Phyla Tech Publication' : 'Citing Work']].forEach(([k, v]) => {
-          const row = document.createElement('div');
-          row.className = 'tt-field';
-          row.textContent = k + ': ';
-          const span = document.createElement('span');
-          span.textContent = v;
-          if (k === 'Type') span.style.textTransform = 'capitalize';
-          row.appendChild(span);
-          tooltip.appendChild(row);
-        });
+      // ── Last-updated stamp ───────────────────────────
+      if (DATA.generated_at) {
+        const d = new Date(DATA.generated_at);
+        document.getElementById('lastUpdated').textContent =
+          'Citation data updated ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.';
       }
 
-      node.on('mouseenter', (event, d) => {
-        tooltip.style.opacity = '1';
-        buildNetTooltip(d);
-        const rect = container.getBoundingClientRect();
-        tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
-        tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+      // ── Citation network ─────────────────────────────
+      (function buildNetwork() {
+        const container = document.getElementById('networkViz');
+        const tooltip = document.getElementById('netTooltip');
+        const data = networkData;
+        const width = 900, height = 700;
 
-        node.attr('fill-opacity', n => {
-          if (n.id === d.id) return 1;
-          const connected = data.links.some(l =>
-            (l.source.id === d.id && l.target.id === n.id) ||
-            (l.target.id === d.id && l.source.id === n.id)
-          );
-          return connected ? 0.8 : 0.1;
+        const svg = d3.select('#networkViz').append('svg')
+          .attr('viewBox', `0 0 ${width} ${height}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet');
+        const g = svg.append('g');
+
+        svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', (e) => g.attr('transform', e.transform)));
+
+        const simulation = d3.forceSimulation(data.nodes)
+          .force('link', d3.forceLink(data.links).id(d => d.id).distance(60).strength(d => d.strength * 0.3))
+          .force('charge', d3.forceManyBody().strength(-60))
+          .force('center', d3.forceCenter(width / 2, height / 2))
+          .force('collision', d3.forceCollide().radius(d => d.type === 'core' ? 18 : 8))
+          .force('boundX', d3.forceX(width / 2).strength(0.07))
+          .force('boundY', d3.forceY(height / 2).strength(0.07));
+
+        const link = g.append('g').selectAll('line')
+          .data(data.links).join('line')
+          .attr('stroke', HAIRLINE)
+          .attr('stroke-width', d => d.strength * 1.6 + 0.3);
+
+        const node = g.append('g').selectAll('circle')
+          .data(data.nodes).join('circle')
+          .attr('r', d => d.type === 'core' ? 12 : 4 + Math.sqrt(d.citations) * 0.5)
+          .attr('fill', d => d.type === 'core' ? TANNIN : fieldColor(d.field))
+          .attr('fill-opacity', d => d.type === 'core' ? 0.95 : 0.7)
+          .attr('stroke', d => d.type === 'core' ? INK : PARCHMENT)
+          .attr('stroke-width', d => d.type === 'core' ? 1.5 : 0.75)
+          .style('cursor', 'pointer')
+          .call(d3.drag()
+            .on('start', (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+            .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+            .on('end', (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+        function fillTooltip(d) {
+          tooltip.textContent = '';
+          const title = document.createElement('div');
+          title.className = 'tt-title';
+          title.textContent = d.label;
+          tooltip.appendChild(title);
+          [['Field', d.field], ['Year', d.year], ['Citations', d.citations],
+           ['Type', d.type === 'core' ? 'Phyla publication' : 'Citing work']].forEach(([k, v]) => {
+            if (v == null || v === '') return;
+            const row = document.createElement('div');
+            row.className = 'tt-field';
+            row.textContent = k + ': ';
+            const span = document.createElement('span');
+            span.textContent = v;
+            row.appendChild(span);
+            tooltip.appendChild(row);
+          });
+        }
+
+        node.on('mouseenter', (event, d) => {
+          tooltip.style.opacity = '1';
+          fillTooltip(d);
+          const rect = container.getBoundingClientRect();
+          tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+          tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+          node.attr('fill-opacity', n => {
+            if (n.id === d.id) return 1;
+            const connected = data.links.some(l =>
+              (l.source.id === d.id && l.target.id === n.id) ||
+              (l.target.id === d.id && l.source.id === n.id));
+            return connected ? 0.85 : 0.12;
+          });
+          link.attr('stroke', l => (l.source.id === d.id || l.target.id === d.id) ? TANNIN : HAIRLINE_FAINT);
+        })
+        .on('mousemove', (event) => {
+          const rect = container.getBoundingClientRect();
+          tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+          tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+        })
+        .on('mouseleave', () => {
+          tooltip.style.opacity = '0';
+          node.attr('fill-opacity', d => d.type === 'core' ? 0.95 : 0.7);
+          link.attr('stroke', HAIRLINE);
         });
-        link.attr('stroke', l =>
-          (l.source.id === d.id || l.target.id === d.id)
-            ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.04)'
-        );
-      })
-      .on('mousemove', (event) => {
-        const rect = container.getBoundingClientRect();
-        tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
-        tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
-      })
-      .on('mouseleave', () => {
-        tooltip.style.opacity = '0';
-        node.attr('fill-opacity', d => d.type === 'core' ? 0.9 : 0.55);
-        link.attr('stroke', 'rgba(255,255,255,0.15)');
-      });
 
-      simulation.on('tick', () => {
-        link
-          .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-          .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
-        node.attr('cx', d => d.x).attr('cy', d => d.y);
-      });
-
-      // Layout switching
-      let currentLayout = 'force';
-      document.querySelectorAll('.net-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.net-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const layout = btn.dataset.layout;
-          currentLayout = layout;
-
-          simulation.alpha(0.8).restart();
-
-          if (layout === 'force') {
-            simulation
-              .force('center', d3.forceCenter(width / 2, height / 2))
-              .force('radial', null)
-              .force('x', null)
-              .force('y', null);
-          } else if (layout === 'radial') {
-            simulation
-              .force('center', null)
-              .force('radial', d3.forceRadial(
-                d => d.type === 'core' ? 0 : 160, width / 2, height / 2
-              ).strength(0.8))
-              .force('x', null)
-              .force('y', null);
-          } else if (layout === 'cluster') {
-            const fieldNames = Object.keys(FIELDS);
-            const cols = Math.ceil(Math.sqrt(fieldNames.length));
-            const cellW = width / (cols + 1);
-            const cellH = height / (Math.ceil(fieldNames.length / cols) + 1);
-            const fieldPos = {};
-            fieldNames.forEach((f, i) => {
-              fieldPos[f] = {
-                x: (i % cols + 1) * cellW,
-                y: (Math.floor(i / cols) + 1) * cellH
-              };
-            });
-
-            simulation
-              .force('center', null)
-              .force('radial', null)
-              .force('x', d3.forceX(d => (fieldPos[d.field] || { x: width / 2 }).x).strength(0.6))
-              .force('y', d3.forceY(d => (fieldPos[d.field] || { y: height / 2 }).y).strength(0.6));
-          }
+        simulation.on('tick', () => {
+          link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+              .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+          node.attr('cx', d => d.x).attr('cy', d => d.y);
         });
-      });
 
-      // Build legend
-      const legendContainer = document.getElementById('networkLegend');
-      Object.entries(FIELDS).forEach(([name, color]) => {
-        const item = document.createElement('div');
-        item.className = 'legend-item';
-        item.innerHTML = `<span class="legend-dot" style="background:${color}"></span>${name}`;
-        legendContainer.appendChild(item);
-      });
-    })();
+        document.querySelectorAll('.net-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.net-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const layout = btn.dataset.layout;
+            simulation.alpha(0.8).restart();
+            if (layout === 'force') {
+              simulation.force('center', d3.forceCenter(width / 2, height / 2))
+                .force('radial', null).force('x', null).force('y', null);
+            } else if (layout === 'radial') {
+              simulation.force('center', null)
+                .force('radial', d3.forceRadial(d => d.type === 'core' ? 0 : 160, width / 2, height / 2).strength(0.8))
+                .force('x', null).force('y', null);
+            } else if (layout === 'cluster') {
+              const cols = Math.ceil(Math.sqrt(FIELD_NAMES.length));
+              const cellW = width / (cols + 1);
+              const cellH = height / (Math.ceil(FIELD_NAMES.length / cols) + 1);
+              const pos = {};
+              FIELD_NAMES.forEach((f, i) => { pos[f] = { x: (i % cols + 1) * cellW, y: (Math.floor(i / cols) + 1) * cellH }; });
+              simulation.force('center', null).force('radial', null)
+                .force('x', d3.forceX(d => (pos[d.field] || { x: width / 2 }).x).strength(0.6))
+                .force('y', d3.forceY(d => (pos[d.field] || { y: height / 2 }).y).strength(0.6));
+            }
+          });
+        });
 
-    // ═══════════════════════════════════════════
-    //  GEOGRAPHIC MAP
-    // ═══════════════════════════════════════════
+        const legend = document.getElementById('networkLegend');
+        FIELD_NAMES.forEach(name => {
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+          const sw = document.createElement('span');
+          sw.className = 'legend-swatch';
+          sw.style.background = fieldColor(name);
+          item.appendChild(sw);
+          item.appendChild(document.createTextNode(name));
+          legend.appendChild(item);
+        });
+      })();
 
-    (async function buildMap() {
-      const container = document.getElementById('mapViz');
-      const tooltip = document.getElementById('mapTooltip');
-      const instData = DATA.institutions_geo || [];
-      // Use parent section width as containers may not be laid out yet
-      let width = container.offsetWidth || container.parentElement.offsetWidth || 1120;
-      let height = container.offsetHeight || 480;
-      if (width < 100) { width = 1120; height = 480; }
+      // ── Geographic map ───────────────────────────────
+      (async function buildMap() {
+        const container = document.getElementById('mapViz');
+        const tooltip = document.getElementById('mapTooltip');
+        const instData = DATA.institutions_geo || [];
+        let width = container.offsetWidth || 1120;
+        let height = container.offsetHeight || 480;
+        if (width < 100) { width = 1120; height = 480; }
 
-      const svg = d3.select('#mapViz')
-        .append('svg')
-        .attr('viewBox', `0 0 ${width} ${height}`)
-        .attr('preserveAspectRatio', 'xMidYMid meet');
+        const svg = d3.select('#mapViz').append('svg')
+          .attr('viewBox', `0 0 ${width} ${height}`)
+          .attr('preserveAspectRatio', 'xMidYMid meet');
 
-      const projection = d3.geoNaturalEarth1()
-        .scale(width / 5.5)
-        .translate([width / 2, height / 2]);
+        const projection = d3.geoNaturalEarth1().scale(width / 5.4).translate([width / 2, height / 2]);
+        const path = d3.geoPath().projection(projection);
 
-      const path = d3.geoPath().projection(projection);
+        try {
+          const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+          const countries = topojson.feature(world, world.objects.countries);
+          svg.append('g').selectAll('path')
+            .data(countries.features).join('path')
+            .attr('d', path)
+            .attr('fill', HAIRLINE_FAINT)
+            .attr('stroke', HAIRLINE)
+            .attr('stroke-width', 0.5);
+          // graticule for a naturalist's-chart feel
+          const graticule = d3.geoGraticule10();
+          svg.insert('path', ':first-child')
+            .datum(graticule).attr('d', path)
+            .attr('fill', 'none').attr('stroke', HAIRLINE_FAINT).attr('stroke-width', 0.4);
+        } catch (e) {
+          svg.append('rect').attr('x', width * 0.05).attr('y', height * 0.1)
+            .attr('width', width * 0.9).attr('height', height * 0.8)
+            .attr('fill', HAIRLINE_FAINT).attr('stroke', HAIRLINE);
+        }
 
-      try {
-        const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-        const countries = topojson.feature(world, world.objects.countries);
-        svg.append('g')
-          .selectAll('path')
-          .data(countries.features)
-          .join('path')
-          .attr('d', path)
-          .attr('fill', 'rgba(255,255,255,0.04)')
-          .attr('stroke', 'rgba(255,255,255,0.08)')
-          .attr('stroke-width', 0.5);
-      } catch (e) {
-        svg.append('rect')
-          .attr('x', width * 0.05).attr('y', height * 0.1)
-          .attr('width', width * 0.9).attr('height', height * 0.8)
-          .attr('rx', 8)
-          .attr('fill', 'rgba(255,255,255,0.02)')
-          .attr('stroke', 'rgba(255,255,255,0.06)');
-      }
+        const maxCit = d3.max(instData, d => d.citations) || 1;
+        const rScale = d3.scaleSqrt().domain([1, maxCit]).range([2, 13]);
+        const madison = projection([-89.4, 43.07]);
 
-      const maxCitations = d3.max(instData, d => d.citations) || 1;
-      const rScale = d3.scaleSqrt().domain([1, maxCitations]).range([2, 14]);
-
-      // Lines from Madison, WI to each institution (with flowing pulse)
-      const madisonCoord = projection([-89.4, 43.07]);
-      const lineG = svg.append('g');
-      instData.forEach((d, i) => {
-        const [x, y] = projection([d.lon, d.lat]);
-        if (x && y && madisonCoord) {
-          const dist = Math.sqrt((x - madisonCoord[0]) ** 2 + (y - madisonCoord[1]) ** 2);
-          if (dist > 20) {
-            const line = lineG.append('line')
-              .attr('x1', madisonCoord[0]).attr('y1', madisonCoord[1])
-              .attr('x2', x).attr('y2', y)
-              .attr('stroke', 'rgba(20,184,166,0.18)')
-              .attr('stroke-width', 0.7)
-              .attr('stroke-dasharray', '4,6');
-            line.append('animate')
-              .attr('attributeName', 'stroke-dashoffset')
-              .attr('from', '0')
-              .attr('to', '-20')
-              .attr('dur', (2 + (i % 3)) + 's')
+        // Flow lines back to Madison
+        const lineG = svg.append('g');
+        instData.forEach((d, i) => {
+          const p = projection([d.lon, d.lat]);
+          if (!p || !madison) return;
+          const dist = Math.hypot(p[0] - madison[0], p[1] - madison[1]);
+          if (dist <= 20) return;
+          const line = lineG.append('line')
+            .attr('x1', madison[0]).attr('y1', madison[1])
+            .attr('x2', p[0]).attr('y2', p[1])
+            .attr('stroke', TANNIN).attr('stroke-opacity', 0.18)
+            .attr('stroke-width', 0.7).attr('stroke-dasharray', '3,6');
+          if (!REDUCE) {
+            line.append('animate').attr('attributeName', 'stroke-dashoffset')
+              .attr('from', '0').attr('to', '-18').attr('dur', (2 + (i % 3)) + 's')
               .attr('repeatCount', 'indefinite');
           }
-        }
-      });
+        });
 
-      // Pulse rings on top institutions
-      const pulseG = svg.append('g');
-      instData.filter(d => d.citations >= 10).forEach((d, i) => {
-        const [x, y] = projection([d.lon, d.lat]);
-        if (x && y) {
-          const r = rScale(d.citations);
-          const circle = pulseG.append('circle')
-            .attr('cx', x).attr('cy', y)
-            .attr('r', r)
-            .attr('fill', 'none')
-            .attr('stroke', 'rgba(20,184,166,0.35)')
-            .attr('stroke-width', 1);
-          circle.append('animate')
-            .attr('attributeName', 'r')
-            .attr('from', r)
-            .attr('to', r + 8)
-            .attr('dur', '2.5s')
-            .attr('begin', (i * 0.3 % 2.5) + 's')
-            .attr('repeatCount', 'indefinite');
-          circle.append('animate')
-            .attr('attributeName', 'opacity')
-            .attr('from', '0.6')
-            .attr('to', '0')
-            .attr('dur', '2.5s')
-            .attr('begin', (i * 0.3 % 2.5) + 's')
-            .attr('repeatCount', 'indefinite');
+        // Pulse rings on the busiest institutions
+        if (!REDUCE) {
+          const pulseG = svg.append('g');
+          instData.filter(d => d.citations >= 10).forEach((d, i) => {
+            const p = projection([d.lon, d.lat]);
+            if (!p) return;
+            const r = rScale(d.citations);
+            const c = pulseG.append('circle').attr('cx', p[0]).attr('cy', p[1]).attr('r', r)
+              .attr('fill', 'none').attr('stroke', TANNIN).attr('stroke-width', 1).attr('stroke-opacity', 0.5);
+            c.append('animate').attr('attributeName', 'r').attr('from', r).attr('to', r + 8)
+              .attr('dur', '2.6s').attr('begin', (i * 0.3 % 2.6) + 's').attr('repeatCount', 'indefinite');
+            c.append('animate').attr('attributeName', 'stroke-opacity').attr('from', '0.5').attr('to', '0')
+              .attr('dur', '2.6s').attr('begin', (i * 0.3 % 2.6) + 's').attr('repeatCount', 'indefinite');
+          });
         }
-      });
 
-      // Institution dots
-      const dotsG = svg.append('g');
-      instData.forEach(d => {
-        const [x, y] = projection([d.lon, d.lat]);
-        if (x && y) {
-          dotsG.append('circle')
-            .attr('cx', x).attr('cy', y)
-            .attr('r', rScale(d.citations))
-            .attr('fill', 'rgba(20,184,166,0.55)')
-            .attr('stroke', 'rgba(20,184,166,0.9)')
-            .attr('stroke-width', 0.8)
+        // Institution dots
+        const dotsG = svg.append('g');
+        instData.forEach(d => {
+          const p = projection([d.lon, d.lat]);
+          if (!p) return;
+          dotsG.append('circle').attr('cx', p[0]).attr('cy', p[1]).attr('r', rScale(d.citations))
+            .attr('fill', TANNIN).attr('fill-opacity', 0.55)
+            .attr('stroke', TANNIN).attr('stroke-width', 0.8)
             .style('cursor', 'pointer')
             .on('mouseenter', (event) => {
               tooltip.style.opacity = '1';
               tooltip.textContent = '';
-              const strong = document.createElement('strong');
-              strong.style.color = '#fff';
-              strong.textContent = d.name;
-              tooltip.appendChild(strong);
-              tooltip.appendChild(document.createElement('br'));
-              tooltip.appendChild(document.createTextNode(d.citations + ' citing works'));
+              const t = document.createElement('div'); t.className = 'tt-title'; t.textContent = d.name;
+              const f = document.createElement('div'); f.className = 'tt-field';
+              f.textContent = d.citations + ' citing work' + (d.citations === 1 ? '' : 's');
+              tooltip.appendChild(t); tooltip.appendChild(f);
               const rect = container.getBoundingClientRect();
               tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
               tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
@@ -1297,95 +654,66 @@
               tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
             })
             .on('mouseleave', () => { tooltip.style.opacity = '0'; });
-        }
-      });
-    })();
-
-    // ═══════════════════════════════════════════
-    //  DISCIPLINE BARS
-    // ═══════════════════════════════════════════
-
-    (function buildDisciplines() {
-      const chart = document.getElementById('discChart');
-      const maxCount = Math.max(...disciplineData.map(d => d.count));
-
-      disciplineData.forEach(d => {
-        const row = document.createElement('div');
-        row.className = 'disc-row';
-        const pct = (d.count / maxCount * 100).toFixed(1);
-
-        const label = document.createElement('div');
-        label.className = 'disc-label';
-        label.textContent = d.name;
-
-        // Add info icon for "Other Disciplines"
-        if (d.includes && d.includes.length > 0) {
-          const info = document.createElement('span');
-          info.className = 'disc-info-icon';
-          info.textContent = 'i';
-          const tip = document.createElement('span');
-          tip.className = 'disc-info-tip';
-          tip.textContent = d.includes.join(', ');
-          info.appendChild(tip);
-          label.appendChild(document.createTextNode(' '));
-          label.appendChild(info);
-        }
-
-        const barBg = document.createElement('div');
-        barBg.className = 'disc-bar-bg';
-        const barFill = document.createElement('div');
-        barFill.className = 'disc-bar-fill';
-        barFill.dataset.width = pct + '%';
-        barFill.style.background = 'linear-gradient(90deg, ' + d.color + 'cc, ' + d.color + '66)';
-        barBg.appendChild(barFill);
-
-        const count = document.createElement('div');
-        count.className = 'disc-count';
-        count.textContent = d.count;
-
-        row.appendChild(label);
-        row.appendChild(barBg);
-        row.appendChild(count);
-        chart.appendChild(row);
-      });
-
-      const discObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            document.querySelectorAll('.disc-bar-fill').forEach((bar, i) => {
-              setTimeout(() => {
-                bar.style.width = bar.dataset.width;
-              }, i * 60);
-            });
-            discObserver.unobserve(entry.target);
-          }
         });
-      }, { threshold: 0.2 });
+      })();
 
-      discObserver.observe(chart);
+      // ── Discipline bars ──────────────────────────────
+      (function buildDisciplines() {
+        const chart = document.getElementById('discChart');
+        const maxCount = Math.max(...disciplineData.map(d => d.count), 1);
+
+        disciplineData.forEach((d, idx) => {
+          const row = document.createElement('div');
+          row.className = 'disc-row';
+          const pct = (d.count / maxCount * 100).toFixed(1);
+
+          const label = document.createElement('div');
+          label.className = 'disc-label';
+          label.textContent = d.name;
+          if (d.includes && d.includes.length > 0) {
+            const info = document.createElement('span');
+            info.className = 'disc-info';
+            info.textContent = 'i';
+            const tip = document.createElement('span');
+            tip.className = 'disc-info-tip';
+            tip.textContent = d.includes.join(', ');
+            info.appendChild(tip);
+            label.appendChild(document.createTextNode(' '));
+            label.appendChild(info);
+          }
+
+          const track = document.createElement('div');
+          track.className = 'disc-track';
+          const fill = document.createElement('div');
+          fill.className = 'disc-fill';
+          fill.dataset.width = pct + '%';
+          fill.style.background = (d.includes && d.includes.length > 0) ? INK_SOFT : fieldColor(d.name);
+          track.appendChild(fill);
+
+          const count = document.createElement('div');
+          count.className = 'disc-count';
+          count.textContent = d.count.toLocaleString();
+
+          row.appendChild(label);
+          row.appendChild(track);
+          row.appendChild(count);
+          chart.appendChild(row);
+        });
+
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            document.querySelectorAll('.disc-fill').forEach((bar, i) => {
+              if (REDUCE) { bar.style.width = bar.dataset.width; return; }
+              setTimeout(() => { bar.style.width = bar.dataset.width; }, i * 55);
+            });
+            obs.unobserve(entry.target);
+          });
+        }, { threshold: 0.2 });
+        obs.observe(chart);
+      })();
+
     })();
-
-    // ═══════════════════════════════════════════
-    //  FADE-IN ON SCROLL
-    // ═══════════════════════════════════════════
-
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.bridge-card, .metric-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease, background 0.35s, border-color 0.35s, box-shadow 0.35s';
-      fadeObserver.observe(el);
-    });
-
-    })(); // end async init()
   </script>
 </body>
 </html>
