@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Phyla Technologies is a founder-led ML and data consultancy for biotech, with roots in natural-products science and pharmacognosy.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About, Phyla Technologies">
+  <meta property="og:description" content="A founder-led ML and data consultancy for biotech, rooted in natural-products science.">
+  <meta property="og:url" content="https://phylatech.com/about.html">
+  <meta property="og:site_name" content="Phyla Technologies">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About, Phyla Technologies">
+  <meta name="twitter:description" content="A founder-led ML and data consultancy for biotech, rooted in natural-products science.">
+
+  <meta name="view-transition" content="same-origin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Page-specific styles. Shared design system lives in styles.css */
+
+    /* === Hero === */
+    .about-hero {
+      padding-block: clamp(3.25rem, 8vw, 6rem) clamp(2.5rem, 5vw, 3.5rem);
+    }
+    .about-hero .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-hero .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--tannin);
+    }
+    .about-hero h1 { max-width: 17ch; margin-bottom: 1.5rem; }
+    .about-hero .lead { max-width: 48ch; }
+
+    /* === The name: prose + rank ladder === */
+    .name-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: clamp(2.5rem, 6vw, 5.5rem);
+      align-items: center;
+    }
+    .name-prose p { margin-bottom: 1rem; }
+    .name-prose p:last-child { margin-bottom: 0; }
+    .name-prose em { font-style: italic; color: var(--tannin); font-variation-settings: "wdth" 95, "wght" 500; }
+
+    .rank-ladder {
+      border-top: 1px solid var(--ink-hairline);
+      border-bottom: 1px solid var(--ink-hairline);
+    }
+    .rank-ladder .rank {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 0.7rem;
+      border-bottom: 1px solid var(--ink-hairline);
+      font-variation-settings: "wdth" 100, "wght" 500;
+      color: var(--ink-soft);
+    }
+    .rank-ladder .rank:last-child { border-bottom: none; }
+    .rank-ladder .rank .rank-name {
+      font-size: 1.0625rem;
+      letter-spacing: -0.005em;
+    }
+    .rank-ladder .rank .rank-num {
+      font-size: 0.6875rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      opacity: 0.7;
+    }
+    .rank-ladder .rank.is-phylum {
+      color: var(--tannin);
+    }
+    .rank-ladder .rank.is-phylum .rank-name {
+      font-style: italic;
+      font-variation-settings: "wdth" 95, "wght" 600;
+      font-size: 1.25rem;
+    }
+    .rank-ladder .rank.is-phylum .rank-num { color: var(--tannin); opacity: 0.85; }
+
+    /* === Lineage === */
+    .lineage-prose { max-width: var(--measure); }
+    .lineage-prose p { margin-bottom: 1.1rem; }
+    .lineage-prose p:last-child { margin-bottom: 0; }
+    .lineage-prose em { font-style: italic; }
+
+    /* === People === */
+    .people {
+      display: flex;
+      flex-direction: column;
+    }
+    .person {
+      display: grid;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: start;
+      padding-block: clamp(1.75rem, 4vw, 2.5rem);
+      border-bottom: 1px solid var(--ink-hairline);
+    }
+    .person:first-child { border-top: 1px solid var(--ink-hairline); }
+    .person-figure { position: relative; }
+    .person-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(0.18) sepia(0.12) contrast(0.96);
+      border: 1px solid var(--ink-hairline-strong);
+    }
+    .person-figure::after {
+      content: "";
+      position: absolute;
+      inset: -6px -6px 6px 6px;
+      border: 1px solid var(--ink-hairline);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .person-body .person-num {
+      font-size: 0.6875rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--moss-deep);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .person-body h3 {
+      font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+    }
+    .person-body p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 56ch;
+    }
+
+    /* === Closing === */
+    .closing .link-arrow { margin-top: 0.5rem; }
+
+    /* === Page-specific responsive === */
+    @media (max-width: 860px) {
+      .name-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 560px) {
+      .person { grid-template-columns: 96px minmax(0, 1fr); gap: 1.25rem; }
+      .person-figure::after { inset: -4px -4px 4px 4px; }
+    }
+    @media (max-width: 400px) {
+      .person { grid-template-columns: 1fr; }
+      .person-figure { max-width: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <nav class="primary" aria-label="Primary">
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="impact.html">Impact</a>
+        <a href="about.html" aria-current="page" class="active">About</a>
+        <a href="index.html#contact" class="cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="wrap">
+        <span class="eyebrow label">About</span>
+        <h1 class="display">We named it for the way we think.</h1>
+        <p class="lead body-large">Phyla is a small, founder-led team that builds and operates machine learning infrastructure for biotech. Our roots are in natural-products science, and the way we work still shows it.</p>
+      </div>
+    </section>
+
+    <!-- THE NAME -->
+    <section id="name">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 01 &nbsp; The name</span>
+          <h2 class="headline">Phyla, plural of phylum.</h2>
+        </div>
+        <div class="name-grid">
+          <div class="name-prose body">
+            <p><em>Phylum</em> is the rank Linnaeus's successors used to carve the living world into its great branches, between kingdom and class. Naming a thing, placing it, seeing what it's related to: that is the oldest move in biology, and it is still the useful one.</p>
+            <p>We came to machine learning through that tradition, not around it. Before there was a company, there was work on the chemistry of plants, fungi, and microbes, the field called <em>pharmacognosy</em>, the study of medicines drawn from the living world. Underneath every model we ship is the same instinct: sort the data, find the structure, name what's there.</p>
+          </div>
+          <div class="rank-ladder" aria-label="Linnaean taxonomic ranks">
+            <div class="rank"><span class="rank-name">Kingdom</span><span class="rank-num">i</span></div>
+            <div class="rank is-phylum"><span class="rank-name">Phylum</span><span class="rank-num">ii</span></div>
+            <div class="rank"><span class="rank-name">Class</span><span class="rank-num">iii</span></div>
+            <div class="rank"><span class="rank-name">Order</span><span class="rank-num">iv</span></div>
+            <div class="rank"><span class="rank-name">Family</span><span class="rank-num">v</span></div>
+            <div class="rank"><span class="rank-name">Genus</span><span class="rank-num">vi</span></div>
+            <div class="rank"><span class="rank-name">Species</span><span class="rank-num">vii</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE LINEAGE -->
+    <section id="lineage">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 02 &nbsp; The lineage</span>
+          <h2 class="headline">Scientists who learned to ship.</h2>
+        </div>
+        <div class="lineage-prose body">
+          <p>Between us we came up through computational drug discovery, metagenomics, multi-omics, and the software engineering that holds those together. We spent years building the pipelines, models, and tools that research actually runs on, then watched too much of that work stall because the infrastructure around it was an afterthought.</p>
+          <p>Phyla exists to be that infrastructure, done properly. We take the parts of a biotech's data and ML stack that need to be reproducible, observable, and fast, and we build and operate them like the production systems they are. The science is the point; the engineering is how it survives contact with reality.</p>
+          <p>We work as one team, end to end. The people who scope an engagement are the people who build it. There are no layered handoffs and no junior delivery, and there is no version of us that hands you a slide deck instead of a working system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE PEOPLE -->
+    <section id="people">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 03 &nbsp; The people</span>
+          <h2 class="headline">Three of us, so far.</h2>
+          <p class="body">Chemistry, biology, mathematics, and the engineering that connects them. We are growing carefully, and everyone here does the work.</p>
+        </div>
+        <div class="people">
+          <article class="person">
+            <figure class="person-figure">
+              <img src="ian.jpg" alt="Portrait of Ian Miller">
+            </figure>
+            <div class="person-body">
+              <span class="person-num">i.</span>
+              <h3>Ian Miller</h3>
+              <p>Background in biochemistry and computational drug discovery. Builds the model training and deployment infrastructure at the spine of Phyla's engagements, the systems that take a model from a notebook to something a team can rely on in production.</p>
+            </div>
+          </article>
+          <article class="person">
+            <figure class="person-figure">
+              <img src="evan.jpg" alt="Portrait of Evan Rees">
+            </figure>
+            <div class="person-body">
+              <span class="person-num">ii.</span>
+              <h3>Evan Rees</h3>
+              <p>Background in chemistry, bioinformatics, and computational drug discovery. Owns the bio- and cheminformatics side of the work, from molecule to genome: the pipelines and analysis that turn raw scientific data into something you can build on.</p>
+            </div>
+          </article>
+          <article class="person">
+            <figure class="person-figure">
+              <img src="erik.jpg" alt="Portrait of Erik Miller-Galow">
+            </figure>
+            <div class="person-body">
+              <span class="person-num">iii.</span>
+              <h3>Erik Miller-Galow</h3>
+              <p>Background in mathematics and software engineering. Builds the applications, dashboards, and tooling that turn scientific systems into something a team can actually use day to day.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing" id="closing">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; 04 &nbsp; Work with us</span>
+          <h2 class="headline">Bring us something hard.</h2>
+          <p class="body">A pipeline that needs to be reproducible. A model that needs to ship. A dataset nobody can see clearly yet. That's the work we want.</p>
+        </div>
+        <a href="index.html#contact" class="link-arrow">
+          <span>Start a conversation</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/orgs/phylatech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
