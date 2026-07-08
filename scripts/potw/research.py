@@ -105,7 +105,12 @@ WRITER_SYSTEM = (
     "Structure: exactly four fact cells; four or five movements (cover discovery, the "
     "people, the techniques, and where it went, plus a final 'meanwhile' framing); one "
     "pull quote that earns its place; a meanwhile heading naming the era; three or four "
-    "meanwhile events. Keep paragraphs tight."
+    "meanwhile events; and a story timeline of six to nine chronological milestones in the "
+    "protein's own history (earliest first), each with a year, a short title, and one "
+    "sentence of context, spanning as many years or decades as the story needs. The "
+    "timeline is the protein's own arc (discovery, cloning, engineering, recognition, "
+    "impact), drawn strictly from the dossiers, and is distinct from the meanwhile world "
+    "events. Give it a heading that names the arc. Keep paragraphs tight."
 )
 
 

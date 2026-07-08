@@ -35,6 +35,14 @@ class Meanwhile(BaseModel):
     what: str = Field(description="One sentence on a contemporaneous world event.")
 
 
+class Milestone(BaseModel):
+    """One entry in the protein's own story timeline: a chronology across the years."""
+
+    year: str = Field(description="Year or short range, e.g. '1962' or '1992-1994'. Years only; keep it terse.")
+    title: str = Field(description="Short sentence-case headline for the event, no trailing period, e.g. 'Shimomura isolates GFP at Friday Harbor'.")
+    detail: str = Field(description="One sentence of context for the event. No em dashes.")
+
+
 class DraftIssue(BaseModel):
     """The content fields the writer model produces (no metadata)."""
 
@@ -46,6 +54,8 @@ class DraftIssue(BaseModel):
     pull_quote: str = Field(description="One memorable sentence used as a pull quote.")
     meanwhile_heading: str = Field(description="Heading for the meanwhile section, e.g. 'The world in 1962.'")
     meanwhile: list[Meanwhile] = Field(description="Three or four contemporaneous events from the discovery era.")
+    timeline_heading: str = Field(description="Heading for the story-timeline section, e.g. 'From a jellyfish to a Nobel Prize.'")
+    timeline: list[Milestone] = Field(description="Six to nine chronological milestones in the protein's own history, earliest first, from first observation to modern impact. May span many years or decades. Distinct from 'meanwhile': these are the protein's own notable events, not world events.")
 
 
 class Issue(DraftIssue):

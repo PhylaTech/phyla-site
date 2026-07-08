@@ -54,5 +54,16 @@
     { "when": "Sep", "what": "Rachel Carson publishes Silent Spring, and modern environmentalism begins." },
     { "when": "Oct", "what": "The Cuban Missile Crisis brings the world to the edge for thirteen days." },
     { "when": "Dec", "what": "Watson, Crick, and Wilkins receive the Nobel Prize for the structure of DNA." }
+  ],
+  "timeline_heading": "From a jellyfish to a Nobel Prize.",
+  "timeline": [
+    { "year": "1955", "title": "A green glow in the crystal jelly", "detail": "Demorest Davenport and Joseph Nicol report that Aequorea victoria fluoresces green under ultraviolet light." },
+    { "year": "1962", "title": "Shimomura isolates GFP at Friday Harbor", "detail": "Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own." },
+    { "year": "1979", "title": "The chromophore is worked out", "detail": "Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required." },
+    { "year": "1992", "title": "Prasher clones the gene", "detail": "Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use." },
+    { "year": "1994", "title": "A microbe and a worm light up", "detail": "Martin Chalfie expresses GFP in E. coli and in C. elegans, proving it folds and glows inside almost any living thing." },
+    { "year": "1994–1995", "title": "Tsien engineers a brighter palette", "detail": "Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors." },
+    { "year": "1996", "title": "The barrel comes into view", "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams." },
+    { "year": "2008", "title": "The Nobel Prize in Chemistry", "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest." }
   ]
 }

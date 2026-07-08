@@ -100,6 +100,42 @@ PEPTIDE_MOTIF = """<svg class="peptide" viewBox="0 0 320 120" role="img" aria-la
           </svg>"""
 
 
+# Story-timeline styles and reveal script. Kept as plain strings (not f-strings) so the
+# CSS/JS braces need no escaping; interpolated into the page template by name.
+TIMELINE_CSS = """
+    /* === Story timeline === */
+    .timeline { max-width: 62ch; list-style: none; }
+    .tl-item { position: relative; display: grid; grid-template-columns: 5rem 1fr; column-gap: 1.5rem; align-items: baseline; padding: 0 0 1.5rem 1.75rem; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before { content: ""; position: absolute; left: 3px; top: 0.55rem; bottom: 0; width: 1px; background: var(--ink-hairline); }
+    .tl-item:last-child::before { display: none; }
+    .tl-item::after { content: ""; position: absolute; left: 0; top: 0.4rem; width: 7px; height: 7px; border-radius: 50%; background: var(--parchment); border: 1.5px solid var(--tannin); }
+    .tl-year { font-variation-settings: "wdth" 95, "wght" 600; color: var(--tannin); font-variant-numeric: tabular-nums; font-size: 0.9375rem; white-space: nowrap; line-height: 1.5; }
+    .tl-title { display: block; font-variation-settings: "wdth" 100, "wght" 600; color: var(--ink); font-size: 1.0625rem; letter-spacing: -0.005em; line-height: 1.3; margin-bottom: 0.3rem; }
+    .tl-detail { display: block; font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.55; }
+    .timeline.reveal .tl-item { opacity: 0; transform: translateY(10px); transition: opacity 620ms cubic-bezier(0.16, 1, 0.3, 1), transform 620ms cubic-bezier(0.16, 1, 0.3, 1); }
+    .timeline.reveal .tl-item.shown { opacity: 1; transform: none; }
+    @media (max-width: 600px) { .tl-item { grid-template-columns: 4rem 1fr; column-gap: 1rem; } }"""
+
+TIMELINE_SCRIPT = """  <script>
+    /* Timeline: a restrained, staggered reveal on scroll. Progressive enhancement,
+       the section stays fully legible with no JS or with reduced motion. */
+    (function () {
+      var tl = document.querySelector('.timeline');
+      if (!tl || !('IntersectionObserver' in window)) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      tl.classList.add('reveal');
+      var items = tl.querySelectorAll('.tl-item');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+      items.forEach(function (it, i) { it.style.transitionDelay = Math.min(i * 70, 420) + 'ms'; io.observe(it); });
+    })();
+  </script>"""
+
+
 def render_page(issue: dict, issues: list[dict]) -> str:
     n = issue["number"]
     facts = "\n".join(
@@ -120,6 +156,14 @@ def render_page(issue: dict, issues: list[dict]) -> str:
         f'              <div class="ml"><span class="when">{esc(x["when"])}</span>'
         f'<span class="what">{esc(x["what"])}</span></div>'
         for x in issue["meanwhile"]
+    )
+    timeline = "\n".join(
+        f'          <li class="tl-item">\n'
+        f'            <span class="tl-year">{esc(m["year"])}</span>\n'
+        f'            <span class="tl-body"><span class="tl-title">{esc(m["title"])}</span>'
+        f'<span class="tl-detail">{esc(m["detail"])}</span></span>\n'
+        f'          </li>'
+        for m in issue["timeline"]
     )
     archive_rows = render_archive_rows(issues, n)
     org = esc(_organism(issue["binomial"]))
@@ -177,6 +221,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     .arch.current .arch-no {{ color: var(--tannin); }}
     @media (max-width: 820px) {{ .issue-grid {{ grid-template-columns: 1fr; gap: 2.25rem; }} .issue-visual {{ order: -1; }} }}
     @media (max-width: 600px) {{ .facts {{ grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }} .fact:nth-child(2) {{ border-right: none; padding-right: 0; }} .meanwhile .ml {{ grid-template-columns: 4.5rem 1fr; }} .arch {{ grid-template-columns: auto 1fr; }} .arch .arch-date {{ grid-column: 2; }} }}
+{TIMELINE_CSS}
   </style>
 </head>
 <body>
@@ -229,6 +274,19 @@ def render_page(issue: dict, issues: list[dict]) -> str:
       </div>
     </section>
 
+    <!-- STORY TIMELINE -->
+    <section id="timeline">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The chronology</span>
+          <h2 class="headline">{esc(issue["timeline_heading"])}</h2>
+        </div>
+        <ol class="timeline">
+{timeline}
+        </ol>
+      </div>
+    </section>
+
     <section id="archive">
       <div class="wrap">
         <div class="section-head">
@@ -257,6 +315,8 @@ def render_page(issue: dict, issues: list[dict]) -> str:
       </div>
     </div>
   </footer>
+
+{TIMELINE_SCRIPT}
 </body>
 </html>
 """
