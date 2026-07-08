@@ -29,8 +29,10 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ISSUES_DIR = HERE / "issues"
 ANNOUNCE_DIR = HERE / "announcements"
+QUEUE_PATH = HERE / "proteins.json"
 SITE_ROOT = HERE.parent.parent  # repo root (worktree)
 CANONICAL = SITE_ROOT / "potw.html"
+CATALOGUE = SITE_ROOT / "potw-catalogue.html"
 
 ARCHIVE_START = "<!-- POTW:ARCHIVE:START -->"
 ARCHIVE_END = "<!-- POTW:ARCHIVE:END -->"
@@ -88,6 +90,38 @@ def load_all_issues() -> list[dict]:
         issues.append(json.loads(p.read_text()))
     issues.sort(key=lambda d: d.get("number", 0), reverse=True)
     return issues
+
+
+# --- Calendar helpers (kept local so render.py needs no API deps; mirror research.py) ---
+
+def load_queue() -> dict:
+    return json.loads(QUEUE_PATH.read_text()) if QUEUE_PATH.exists() else {}
+
+
+def _spec_slug(spec: dict) -> str:
+    return spec.get("slug") or re.sub(r"[^a-z0-9]+", "-", spec["protein"].lower()).strip("-")
+
+
+def iter_specimens(queue: dict):
+    """Yield (number, specimen, collection, season) in calendar order; number = 1-based position."""
+    number = 0
+    for season in queue.get("seasons", []):
+        for collection in season.get("collections", []):
+            for specimen in collection.get("specimens", []):
+                number += 1
+                yield number, specimen, collection, season
+
+
+def _is_drafted(number: int, spec: dict) -> bool:
+    slug = _spec_slug(spec)
+    return spec.get("status") == "published" or (ISSUES_DIR / f"{number:03d}-{slug}.json").exists()
+
+
+def _reveal_iso(number: int, anchor: str) -> str:
+    try:
+        return (dt.date.fromisoformat(anchor) + dt.timedelta(days=7 * (number - 1))).isoformat()
+    except ValueError:
+        return ""
 
 
 def _arch_row(d: dict, current_number: int) -> str:
@@ -562,7 +596,7 @@ def render_announcement(ann: dict) -> str:
 {features_html}
           </ol>
         </div>
-        <p class="kickoff-back"><a class="link-arrow" href="potw.html">The latest issue <span class="arrow">&rarr;</span></a></p>
+        <p class="kickoff-back"><a class="link-arrow" href="potw.html">The latest issue <span class="arrow">&rarr;</span></a> &nbsp;&nbsp; <a class="link-arrow" href="potw-catalogue.html">The full catalogue <span class="arrow">&rarr;</span></a></p>
       </div>
     </section>
 
@@ -737,6 +771,226 @@ def _references_section(issue: dict) -> str:
     )
 
 
+CATALOGUE_CSS = """
+    /* === Catalogue (browse the whole series) === */
+    .catalogue .cat-progress { display: flex; align-items: center; gap: 0.9rem; margin-top: 1.5rem; max-width: 32rem; }
+    .cat-progress-track { flex: 1; height: 3px; background: var(--ink-hairline); position: relative; }
+    .cat-progress-fill { position: absolute; inset: 0 auto 0 0; background: var(--tannin); }
+    .cat-progress-label { font-size: 0.6875rem; font-variation-settings: "wght" 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .cat-latest { margin-top: 1.5rem; }
+    .cat-season { border-top: 1px solid var(--ink-hairline-strong); margin-top: clamp(2.5rem, 5vw, 3.75rem); padding-top: clamp(1.75rem, 4vw, 2.5rem); }
+    .cat-season-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem; margin-bottom: 0.35rem; }
+    .cat-season-kicker { font-size: 0.6875rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .cat-season-name { font-variation-settings: "wdth" 95, "wght" 700; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+    a.cat-season-name:hover { color: var(--tannin); }
+    .cat-season-blurb { flex-basis: 100%; font-size: 0.9375rem; color: var(--ink-soft); max-width: 62ch; }
+    .cat-collection { margin-top: 1.6rem; }
+    .cat-collection-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.85rem; margin-bottom: 0.65rem; }
+    .cat-collection-name { font-size: 0.75rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); text-decoration: none; }
+    a.cat-collection-name { border-bottom: 1px solid transparent; }
+    a.cat-collection-name:hover { border-color: var(--tannin); }
+    .cat-collection-month { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .cat-collection-blurb { flex-basis: 100%; font-size: 0.8125rem; color: var(--ink-soft); }
+    .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--ink-hairline); border: 1px solid var(--ink-hairline); }
+    @media (max-width: 760px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 440px) { .cat-grid { grid-template-columns: 1fr; } }
+    .cat-cell { display: flex; flex-direction: column; min-height: 118px; padding: 0.9rem 1rem 1.05rem; background: var(--parchment); text-decoration: none; color: inherit; }
+    .cat-no { font-size: 0.625rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .cat-body { margin-top: auto; display: flex; flex-direction: column; gap: 0.3rem; padding-top: 0.75rem; }
+    .cat-name { font-variation-settings: "wdth" 95, "wght" 600; font-size: 1.0625rem; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+    .cat-org { display: block; font-style: italic; font-variation-settings: "wdth" 95, "wght" 400; font-size: 0.8125rem; color: var(--ink-soft); margin-top: 0.15rem; }
+    .cat-date { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    a.cat-cell.is-live { transition: background 160ms ease-out; }
+    a.cat-cell.is-live:hover { background: var(--parchment-pale); }
+    a.cat-cell.is-live:hover .cat-name { color: var(--tannin); }
+    .cat-cell.is-current { box-shadow: inset 3px 0 0 var(--tannin); }
+    .cat-cell.is-current .cat-no { color: var(--tannin); }
+    .cat-cell.is-sealed { background: var(--parchment-mid); }
+    a.cat-cell.is-sealed { transition: background 160ms ease-out; }
+    a.cat-cell.is-sealed:hover { background: var(--parchment-deep); }
+    a.cat-cell.is-sealed:hover .cat-sealed-note { color: var(--tannin); }
+    .cat-seal { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid var(--tannin); opacity: 0.45; }
+    .cat-when { font-variation-settings: "wdth" 95, "wght" 600; font-size: 0.9375rem; color: var(--tannin); font-variant-numeric: tabular-nums; }
+    .cat-sealed-note { font-size: 0.75rem; color: var(--ink-soft); transition: color 160ms ease-out; }
+    .cat-cell.is-preview-sealed { border: 1px dashed var(--ink-hairline-strong); }
+    .cat-preview-banner { background: var(--tannin); color: var(--parchment-pale); text-align: center; font-size: 0.8125rem; font-variation-settings: "wght" 600; letter-spacing: 0.04em; padding: 0.55rem 1rem; }"""
+
+CATALOGUE_SCRIPT = """  <script>
+    /* Sealed cells: turn the reveal date into a live countdown. */
+    (function () {
+      var els = document.querySelectorAll('.cat-when[data-reveal]');
+      if (!els.length) return;
+      var today = new Date(); today.setHours(0, 0, 0, 0);
+      els.forEach(function (el) {
+        var iso = (el.getAttribute('data-reveal') || '').split('-');
+        if (iso.length !== 3) return;
+        var d = new Date(+iso[0], +iso[1] - 1, +iso[2]); d.setHours(0, 0, 0, 0);
+        var days = Math.round((d - today) / 86400000);
+        if (days > 1) el.textContent = 'Opens in ' + days + ' days';
+        else if (days === 1) el.textContent = 'Opens tomorrow';
+        else if (days === 0) el.textContent = 'Opens today';
+      });
+    })();
+  </script>"""
+
+
+def _cat_cell(number: int, spec: dict, drafted: bool, current_number: int, anchor: str,
+              issues_by_slug: dict, preview: bool) -> str:
+    slug = _spec_slug(spec)
+    if drafted:
+        issue = issues_by_slug.get(slug)
+        org = f'<span class="cat-org">{esc(_organism(issue["binomial"]))}</span>' if issue else ""
+        date = f'<span class="cat-date">{esc(issue["date_display"])}</span>' if issue else ""
+        cur = " is-current" if number == current_number else ""
+        body = f'<span class="cat-body"><span class="cat-name">{esc(spec["protein"])}{org}</span>{date}</span>'
+        return f'<a class="cat-cell is-live{cur}" href="{issue_href(number, slug)}"><span class="cat-no">No. {number:03d}</span>{body}</a>'
+    rev = _reveal_iso(number, anchor)
+    friendly = esc(_friendly_date(rev)) if rev else "soon"
+    if preview:
+        body = f'<span class="cat-body"><span class="cat-name">{esc(spec["protein"])}</span><span class="cat-date">Opens {friendly}</span></span>'
+        return f'<div class="cat-cell is-live is-preview-sealed"><span class="cat-no">No. {number:03d}</span>{body}</div>'
+    body = (
+        '<span class="cat-body"><span class="cat-seal" aria-hidden="true"></span>'
+        f'<span class="cat-when" data-reveal="{esc(rev)}">Opens {friendly}</span>'
+        '<span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span>'
+    )
+    return f'<a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. {number:03d}</span>{body}</a>'
+
+
+def render_catalogue(preview: bool = False) -> str:
+    """The full series as one browsable page: seasons, collections, and specimen cells.
+
+    Published specimens are named and linked; upcoming ones are sealed teasers with a
+    countdown (build-time embargo, same gate as the kickoffs). preview=True reveals every
+    name for editorial review and is not meant to be published.
+    """
+    queue = load_queue()
+    anchor = queue.get("anchor_date", "2026-07-06")
+    announced = announced_ids()
+    issues_by_slug = {d.get("slug"): d for d in load_all_issues()}
+
+    num_of, drafted_nums, total = {}, [], 0
+    for number, spec, _c, _s in iter_specimens(queue):
+        num_of[id(spec)] = number
+        total += 1
+        if _is_drafted(number, spec):
+            drafted_nums.append(number)
+    revealed = len(drafted_nums)
+    current_number = max(drafted_nums) if drafted_nums else 0
+
+    seasons_html = []
+    for season in queue.get("seasons", []):
+        sid = season.get("id", "")
+        sname = esc(season["label"])
+        sname_el = (f'<a class="cat-season-name" href="{announce_href(sid)}">{sname}</a>'
+                    if sid in announced else f'<span class="cat-season-name">{sname}</span>')
+        colls_html = []
+        for coll in season.get("collections", []):
+            cid = coll.get("id", "")
+            cname = esc(coll["label"])
+            cname_el = (f'<a class="cat-collection-name" href="{announce_href(cid)}">{cname}</a>'
+                        if cid in announced else f'<span class="cat-collection-name">{cname}</span>')
+            cells = [
+                _cat_cell(num_of[id(spec)], spec, _is_drafted(num_of[id(spec)], spec),
+                          current_number, anchor, issues_by_slug, preview)
+                for spec in coll.get("specimens", [])
+            ]
+            colls_html.append(
+                '        <div class="cat-collection">\n'
+                f'          <div class="cat-collection-head">{cname_el}'
+                f'<span class="cat-collection-month">{esc(coll.get("month", ""))}</span>'
+                f'<span class="cat-collection-blurb">{esc(coll.get("blurb", ""))}</span></div>\n'
+                '          <div class="cat-grid">\n            '
+                + "\n            ".join(cells)
+                + '\n          </div>\n        </div>'
+            )
+        seasons_html.append(
+            '      <div class="cat-season">\n        <div class="wrap">\n'
+            f'          <div class="cat-season-head"><span class="cat-season-kicker">{esc(season.get("quarter", ""))}</span>'
+            f'{sname_el}<span class="cat-season-blurb">{esc(season.get("blurb", ""))}</span></div>\n'
+            + "\n".join(colls_html)
+            + '\n        </div>\n      </div>'
+        )
+    seasons_block = "\n".join(seasons_html)
+    pct = round(100 * revealed / total) if total else 0
+    banner = '  <div class="cat-preview-banner">Editorial preview: shows unrevealed names. Not for publishing.</div>\n' if preview else ""
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The catalogue: Protein of the Week, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="The full Protein of the Week series: a protein every week, gathered into monthly collections and quarterly seasons. One is revealed each week.">
+  <meta name="view-transition" content="same-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .masthead {{ border-bottom: 1px solid var(--ink-hairline); background: var(--parchment); }}
+    .masthead-inner {{ display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding-block: 1.25rem; flex-wrap: wrap; }}
+    .masthead .column-name {{ font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }}
+{CATALOGUE_CSS}
+{SUBSCRIBE_CSS}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+{banner}
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <a class="column-name" href="potw.html" style="text-decoration: none;">Protein of the Week</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="catalogue">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The catalogue</span>
+          <h2 class="headline">The whole series, in order.</h2>
+          <p class="body">A new protein every week, gathered into monthly collections and quarterly seasons. One specimen is revealed each week; the rest stay sealed until their date.</p>
+        </div>
+        <div class="cat-progress"><span class="cat-progress-track"><span class="cat-progress-fill" style="width: {pct}%"></span></span><span class="cat-progress-label">{revealed} of {total} revealed</span></div>
+        <p class="cat-latest"><a class="link-arrow" href="potw.html">Read the latest issue <span class="arrow">&rarr;</span></a></p>
+      </div>
+{seasons_block}
+    </section>
+
+{SUBSCRIBE_HTML}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="index.html">Main site</a>
+        <a href="potw.html">Latest issue</a>
+      </div>
+    </div>
+  </footer>
+
+{CATALOGUE_SCRIPT}
+</body>
+</html>
+"""
+
+
+def render_catalogue_file(preview: bool = False) -> None:
+    dest = (SITE_ROOT / "potw-catalogue-preview.html") if preview else CATALOGUE
+    dest.write_text(render_catalogue(preview=preview))
+    print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
+
+
 def render_page(issue: dict, issues: list[dict]) -> str:
     n = issue["number"]
     ref_count = len(issue.get("references") or [])
@@ -907,6 +1161,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
         <div class="section-head">
           <span class="label">&sect; &nbsp; The archive</span>
           <h2 class="headline">Every protein, every week.</h2>
+          <p><a class="link-arrow" href="potw-catalogue.html">Browse the full catalogue <span class="arrow">&rarr;</span></a></p>
         </div>
         <div class="archive-list">
           {ARCHIVE_START}
@@ -955,6 +1210,8 @@ def main() -> int:
     ap.add_argument("--all", action="store_true", help="Re-render every issue (2+) and every announcement.")
     ap.add_argument("--announcement", help="Render one announcement (id like 2026-07 / 2026-q3, or a path).")
     ap.add_argument("--set-latest", action="store_true", help="Also write this issue to potw.html (the canonical page, served at /potw).")
+    ap.add_argument("--catalogue", action="store_true", help="Render the full-series catalogue page (potw-catalogue.html).")
+    ap.add_argument("--preview", action="store_true", help="With the catalogue, also write an editorial preview that reveals every name (potw-catalogue-preview.html, gitignored).")
     args = ap.parse_args()
 
     all_issues = load_all_issues()
@@ -972,6 +1229,8 @@ def main() -> int:
     elif args.all and ANNOUNCE_DIR.exists():
         ann_targets = sorted(ANNOUNCE_DIR.glob("*.json"))
 
+    want_catalogue = args.all or args.catalogue or args.preview
+
     # Which issues to render this run.
     if args.all:
         targets = [d for d in all_issues if d["number"] != 1]
@@ -980,13 +1239,13 @@ def main() -> int:
         if not p.exists():
             p = ISSUES_DIR / args.issue
         targets = [json.loads(p.read_text())]
-    elif args.announcement:
-        targets = []  # announcement-only run
+    elif args.announcement or want_catalogue:
+        targets = []  # announcement- or catalogue-only run
     else:
-        print("Pass an issue filename, --announcement <id>, or --all.", file=sys.stderr)
+        print("Pass an issue filename, --announcement <id>, --catalogue, or --all.", file=sys.stderr)
         return 1
 
-    if not all_issues and not ann_targets:
+    if not all_issues and not ann_targets and not want_catalogue:
         print("Nothing to render (no issues in scripts/potw/issues/).", file=sys.stderr)
         return 1
 
@@ -1010,6 +1269,11 @@ def main() -> int:
             if d["number"] != 1:
                 update_archive_in_file(SITE_ROOT / issue_href(d["number"], d["slug"]), all_issues, current_number=d["number"])
         print("Archive lists refreshed.", file=sys.stderr)
+
+    if want_catalogue:
+        render_catalogue_file(preview=False)
+    if args.preview:
+        render_catalogue_file(preview=True)
     return 0
 
 

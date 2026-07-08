@@ -4,3 +4,6 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# POTW editorial preview (reveals unpublished names; local review only)
+potw-catalogue-preview.html

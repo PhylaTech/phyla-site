@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The catalogue: Protein of the Week, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="The full Protein of the Week series: a protein every week, gathered into monthly collections and quarterly seasons. One is revealed each week.">
+  <meta name="view-transition" content="same-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .masthead { border-bottom: 1px solid var(--ink-hairline); background: var(--parchment); }
+    .masthead-inner { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding-block: 1.25rem; flex-wrap: wrap; }
+    .masthead .column-name { font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }
+
+    /* === Catalogue (browse the whole series) === */
+    .catalogue .cat-progress { display: flex; align-items: center; gap: 0.9rem; margin-top: 1.5rem; max-width: 32rem; }
+    .cat-progress-track { flex: 1; height: 3px; background: var(--ink-hairline); position: relative; }
+    .cat-progress-fill { position: absolute; inset: 0 auto 0 0; background: var(--tannin); }
+    .cat-progress-label { font-size: 0.6875rem; font-variation-settings: "wght" 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .cat-latest { margin-top: 1.5rem; }
+    .cat-season { border-top: 1px solid var(--ink-hairline-strong); margin-top: clamp(2.5rem, 5vw, 3.75rem); padding-top: clamp(1.75rem, 4vw, 2.5rem); }
+    .cat-season-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem; margin-bottom: 0.35rem; }
+    .cat-season-kicker { font-size: 0.6875rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .cat-season-name { font-variation-settings: "wdth" 95, "wght" 700; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+    a.cat-season-name:hover { color: var(--tannin); }
+    .cat-season-blurb { flex-basis: 100%; font-size: 0.9375rem; color: var(--ink-soft); max-width: 62ch; }
+    .cat-collection { margin-top: 1.6rem; }
+    .cat-collection-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.85rem; margin-bottom: 0.65rem; }
+    .cat-collection-name { font-size: 0.75rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); text-decoration: none; }
+    a.cat-collection-name { border-bottom: 1px solid transparent; }
+    a.cat-collection-name:hover { border-color: var(--tannin); }
+    .cat-collection-month { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .cat-collection-blurb { flex-basis: 100%; font-size: 0.8125rem; color: var(--ink-soft); }
+    .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--ink-hairline); border: 1px solid var(--ink-hairline); }
+    @media (max-width: 760px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 440px) { .cat-grid { grid-template-columns: 1fr; } }
+    .cat-cell { display: flex; flex-direction: column; min-height: 118px; padding: 0.9rem 1rem 1.05rem; background: var(--parchment); text-decoration: none; color: inherit; }
+    .cat-no { font-size: 0.625rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .cat-body { margin-top: auto; display: flex; flex-direction: column; gap: 0.3rem; padding-top: 0.75rem; }
+    .cat-name { font-variation-settings: "wdth" 95, "wght" 600; font-size: 1.0625rem; letter-spacing: -0.01em; color: var(--ink); line-height: 1.2; }
+    .cat-org { display: block; font-style: italic; font-variation-settings: "wdth" 95, "wght" 400; font-size: 0.8125rem; color: var(--ink-soft); margin-top: 0.15rem; }
+    .cat-date { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    a.cat-cell.is-live { transition: background 160ms ease-out; }
+    a.cat-cell.is-live:hover { background: var(--parchment-pale); }
+    a.cat-cell.is-live:hover .cat-name { color: var(--tannin); }
+    .cat-cell.is-current { box-shadow: inset 3px 0 0 var(--tannin); }
+    .cat-cell.is-current .cat-no { color: var(--tannin); }
+    .cat-cell.is-sealed { background: var(--parchment-mid); }
+    a.cat-cell.is-sealed { transition: background 160ms ease-out; }
+    a.cat-cell.is-sealed:hover { background: var(--parchment-deep); }
+    a.cat-cell.is-sealed:hover .cat-sealed-note { color: var(--tannin); }
+    .cat-seal { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid var(--tannin); opacity: 0.45; }
+    .cat-when { font-variation-settings: "wdth" 95, "wght" 600; font-size: 0.9375rem; color: var(--tannin); font-variant-numeric: tabular-nums; }
+    .cat-sealed-note { font-size: 0.75rem; color: var(--ink-soft); transition: color 160ms ease-out; }
+    .cat-cell.is-preview-sealed { border: 1px dashed var(--ink-hairline-strong); }
+    .cat-preview-banner { background: var(--tannin); color: var(--parchment-pale); text-align: center; font-size: 0.8125rem; font-variation-settings: "wght" 600; letter-spacing: 0.04em; padding: 0.55rem 1rem; }
+
+    /* === Subscribe CTA === */
+    .subscribe { border-top: 1px solid var(--ink-hairline); }
+    .sub-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+    .sub-form { display: flex; flex-direction: column; gap: 1.1rem; max-width: 34rem; }
+    .sub-cadence { display: flex; flex-direction: column; gap: 0.6rem; }
+    .sub-cadence label { display: flex; align-items: baseline; gap: 0.6rem; font-size: 0.9375rem; color: var(--ink-soft); cursor: pointer; }
+    .sub-cadence input { accent-color: var(--tannin); }
+    .sub-cadence b { color: var(--ink); font-variation-settings: "wdth" 100, "wght" 600; }
+    .sub-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .sub-row input[type=email] { flex: 1 1 15rem; padding: 0.75rem 0.9rem; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); color: var(--ink); border-radius: 0; font-size: 0.9375rem; }
+    .sub-social { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+    .sub-note { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); max-width: 62ch; }
+    .sub-note code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--parchment-mid); padding: 0.05em 0.35em; }
+    .follow-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.2rem; border: 1px solid var(--ink-hairline-strong); color: var(--ink); text-decoration: none; font-size: 0.9375rem; font-variation-settings: "wdth" 100, "wght" 500; transition: border-color 180ms ease-out, color 180ms ease-out; }
+    .follow-btn:hover { border-color: var(--tannin); color: var(--tannin); }
+    @media (max-width: 720px) { .sub-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <a class="column-name" href="potw.html" style="text-decoration: none;">Protein of the Week</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="catalogue">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The catalogue</span>
+          <h2 class="headline">The whole series, in order.</h2>
+          <p class="body">A new protein every week, gathered into monthly collections and quarterly seasons. One specimen is revealed each week; the rest stay sealed until their date.</p>
+        </div>
+        <div class="cat-progress"><span class="cat-progress-track"><span class="cat-progress-fill" style="width: 2%"></span></span><span class="cat-progress-label">1 of 48 revealed</span></div>
+        <p class="cat-latest"><a class="link-arrow" href="potw.html">Read the latest issue <span class="arrow">&rarr;</span></a></p>
+      </div>
+      <div class="cat-season">
+        <div class="wrap">
+          <div class="cat-season-head"><span class="cat-season-kicker">Q3 2026</span><a class="cat-season-name" href="potw-2026-q3.html">The Instruments</a><span class="cat-season-blurb">Proteins that stopped being something biologists studied and became something they use.</span></div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><a class="cat-collection-name" href="potw-2026-07.html">Seeing</a><span class="cat-collection-month">July 2026</span><span class="cat-collection-blurb">Proteins that made the invisible visible.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-live is-current" href="potw.html"><span class="cat-no">No. 001</span><span class="cat-body"><span class="cat-name">Green Fluorescent Protein<span class="cat-org">Aequorea victoria</span></span><span class="cat-date">6 July 2026</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 002</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-07-13">Opens Mon 13 Jul</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 003</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-07-20">Opens Mon 20 Jul</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 004</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-07-27">Opens Mon 27 Jul</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Copying</span><span class="cat-collection-month">August 2026</span><span class="cat-collection-blurb">The enzymes that let us read, amplify, and rewrite the code.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 005</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-08-03">Opens Mon 3 Aug</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 006</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-08-10">Opens Mon 10 Aug</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 007</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-08-17">Opens Mon 17 Aug</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 008</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-08-24">Opens Mon 24 Aug</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Cutting &amp; editing</span><span class="cat-collection-month">September 2026</span><span class="cat-collection-blurb">Proteins that perform surgery on DNA and on other proteins.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 009</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-08-31">Opens Mon 31 Aug</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 010</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-09-07">Opens Mon 7 Sep</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 011</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-09-14">Opens Mon 14 Sep</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 012</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-09-21">Opens Mon 21 Sep</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="cat-season">
+        <div class="wrap">
+          <div class="cat-season-head"><span class="cat-season-kicker">Q4 2026</span><span class="cat-season-name">Nature&#x27;s Pharmacy</span><span class="cat-season-blurb">Molecules that evolved to harm, redeployed to heal.</span></div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Venom to vial</span><span class="cat-collection-month">October 2026</span><span class="cat-collection-blurb">Animal venoms that became medicines.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 013</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-09-28">Opens Mon 28 Sep</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 014</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-10-05">Opens Mon 5 Oct</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 015</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-10-12">Opens Mon 12 Oct</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 016</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-10-19">Opens Mon 19 Oct</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">The toxin toolbox</span><span class="cat-collection-month">November 2026</span><span class="cat-collection-blurb">Bacterial toxins turned into tools and cures.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 017</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-10-26">Opens Mon 26 Oct</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 018</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-11-02">Opens Mon 2 Nov</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 019</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-11-09">Opens Mon 9 Nov</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 020</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-11-16">Opens Mon 16 Nov</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Hormones we learned to make</span><span class="cat-collection-month">December 2026</span><span class="cat-collection-blurb">The body&#x27;s own proteins, turned into medicine.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 021</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-11-23">Opens Mon 23 Nov</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 022</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-11-30">Opens Mon 30 Nov</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 023</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-12-07">Opens Mon 7 Dec</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 024</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-12-14">Opens Mon 14 Dec</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="cat-season">
+        <div class="wrap">
+          <div class="cat-season-head"><span class="cat-season-kicker">Q1 2027</span><span class="cat-season-name">The Immune Arsenal</span><span class="cat-season-blurb">Antibodies and the biologics that grew from them.</span></div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">The antibody</span><span class="cat-collection-month">January 2027</span><span class="cat-collection-blurb">The Y-shaped molecule and the first drugs made from it.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 025</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-12-21">Opens Mon 21 Dec</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 026</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2026-12-28">Opens Mon 28 Dec</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 027</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-01-04">Opens Mon 4 Jan</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 028</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-01-11">Opens Mon 11 Jan</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Checkpoints &amp; signals</span><span class="cat-collection-month">February 2027</span><span class="cat-collection-blurb">Proteins that turn the immune system up and down.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 029</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-01-18">Opens Mon 18 Jan</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 030</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-01-25">Opens Mon 25 Jan</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 031</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-02-01">Opens Mon 1 Feb</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 032</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-02-08">Opens Mon 8 Feb</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Engineered immunity</span><span class="cat-collection-month">March 2027</span><span class="cat-collection-blurb">Immune proteins redesigned by human hands.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 033</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-02-15">Opens Mon 15 Feb</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 034</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-02-22">Opens Mon 22 Feb</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 035</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-03-01">Opens Mon 1 Mar</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 036</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-03-08">Opens Mon 8 Mar</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="cat-season">
+        <div class="wrap">
+          <div class="cat-season-head"><span class="cat-season-kicker">Q2 2027</span><span class="cat-season-name">The Machinery of the Cell</span><span class="cat-season-blurb">The fundamental molecular machines that keep a cell alive.</span></div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Motors</span><span class="cat-collection-month">April 2027</span><span class="cat-collection-blurb">Proteins that move.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 037</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-03-15">Opens Mon 15 Mar</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 038</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-03-22">Opens Mon 22 Mar</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 039</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-03-29">Opens Mon 29 Mar</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 040</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-04-05">Opens Mon 5 Apr</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Scaffolds &amp; shape</span><span class="cat-collection-month">May 2027</span><span class="cat-collection-blurb">Proteins that build structure.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 041</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-04-12">Opens Mon 12 Apr</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 042</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-04-19">Opens Mon 19 Apr</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 043</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-04-26">Opens Mon 26 Apr</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 044</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-05-03">Opens Mon 3 May</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        <div class="cat-collection">
+          <div class="cat-collection-head"><span class="cat-collection-name">Information machines</span><span class="cat-collection-month">June 2027</span><span class="cat-collection-blurb">Proteins that read and write the code of life.</span></div>
+          <div class="cat-grid">
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 045</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-05-10">Opens Mon 10 May</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 046</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-05-17">Opens Mon 17 May</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 047</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-05-24">Opens Mon 24 May</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+            <a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. 048</span><span class="cat-body"><span class="cat-seal" aria-hidden="true"></span><span class="cat-when" data-reveal="2027-05-31">Opens Mon 31 May</span><span class="cat-sealed-note">Sealed. Subscribe to catch it.</span></span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe" id="subscribe">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; Follow along</span>
+          <h2 class="headline">Never miss a protein.</h2>
+          <p class="body">A specimen every week, a collection every month, a season every quarter. Choose how closely you want to follow.</p>
+        </div>
+        <div class="sub-grid">
+          <form class="sub-form" method="post" action="https://example.com/REPLACE-WITH-YOUR-EMAIL-ENDPOINT" target="_blank" rel="noopener noreferrer">
+            <div class="sub-cadence">
+              <label><input type="radio" name="cadence" value="weekly" checked> <span><b>Weekly</b> &middot; every protein, as it is revealed</span></label>
+              <label><input type="radio" name="cadence" value="monthly"> <span><b>Monthly</b> &middot; the collection kickoff</span></label>
+              <label><input type="radio" name="cadence" value="quarterly"> <span><b>Quarterly</b> &middot; the season preview</span></label>
+            </div>
+            <div class="sub-row">
+              <input type="email" name="email" placeholder="you@lab.org" aria-label="Email address" required>
+              <button class="btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="sub-social">
+            <span class="label">Or follow on social</span>
+            <a class="follow-btn" href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">&rarr;</span></a>
+            <a class="follow-btn" href="https://x.com/phylatech" target="_blank" rel="noopener noreferrer"><span>X</span><span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <p class="sub-note">Email delivery is not wired up yet. Point the form's <code>action</code> at your provider (Buttondown, Mailchimp, ConvertKit, or similar); see scripts/potw/README.md.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="index.html">Main site</a>
+        <a href="potw.html">Latest issue</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Sealed cells: turn the reveal date into a live countdown. */
+    (function () {
+      var els = document.querySelectorAll('.cat-when[data-reveal]');
+      if (!els.length) return;
+      var today = new Date(); today.setHours(0, 0, 0, 0);
+      els.forEach(function (el) {
+        var iso = (el.getAttribute('data-reveal') || '').split('-');
+        if (iso.length !== 3) return;
+        var d = new Date(+iso[0], +iso[1] - 1, +iso[2]); d.setHours(0, 0, 0, 0);
+        var days = Math.round((d - today) / 86400000);
+        if (days > 1) el.textContent = 'Opens in ' + days + ' days';
+        else if (days === 1) el.textContent = 'Opens tomorrow';
+        else if (days === 0) el.textContent = 'Opens today';
+      });
+    })();
+  </script>
+</body>
+</html>
