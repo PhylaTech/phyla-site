@@ -333,6 +333,42 @@
     @keyframes reveal-rise { from { opacity: 0; transform: translateY(18px) scale(0.985); } }
     @keyframes reveal-name { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 
+    /* === Structure viewer (the specimen) === */
+    .structure-figure { margin-top: 0.5rem; }
+    .specimen { position: relative; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 4 / 3; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); overflow: hidden; }
+    .specimen-stage { position: absolute; inset: 0; }
+    .specimen-stage canvas { display: block; }
+    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); }
+    .specimen-fallback a { color: var(--tannin); }
+    .specimen-caption { margin-top: 0.9rem; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); text-align: center; max-width: 62ch; margin-inline: auto; }
+    .specimen-caption a { color: var(--tannin); font-style: normal; text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
+    .specimen-caption a:hover { border-color: var(--tannin); }
+    /* Colony-ripple loader: hairline rings spreading from a point, like a culture on agar. */
+    .loader { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; display: grid; place-items: center; pointer-events: none; }
+    .loader[hidden] { display: none; }
+    .loader span { position: absolute; inset: 0; margin: auto; width: 100%; height: 100%; border: 1px solid var(--tannin); border-radius: 50%; opacity: 0; animation: colony-ripple 2.2s cubic-bezier(0.2, 0.6, 0.3, 1) infinite; }
+    .loader span:nth-child(2) { animation-delay: 0.73s; }
+    .loader span:nth-child(3) { animation-delay: 1.46s; }
+    .loader em { width: 8px; height: 8px; border-radius: 50%; background: var(--tannin); }
+    @keyframes colony-ripple { 0% { transform: scale(0.12); opacity: 0; } 25% { opacity: 0.5; } 100% { transform: scale(1); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .loader span { animation: none; opacity: 0.32; transform: scale(0.66); } .loader span:nth-child(3) { transform: scale(0.9); } }
+
+    /* === Inline citations + references === */
+    .cite { font-size: 0.7em; line-height: 0; vertical-align: super; margin-left: 0.08em; font-variation-settings: "wght" 600; white-space: nowrap; }
+    .cite a { color: var(--tannin); text-decoration: none; }
+    .cite a:hover { text-decoration: underline; }
+    .references { border-top: 1px solid var(--ink-hairline); }
+    .ref-list { list-style: none; max-width: 70ch; }
+    .ref-item { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.9rem; padding-block: 0.7rem; border-bottom: 1px solid var(--ink-hairline); font-size: 0.9375rem; line-height: 1.5; scroll-margin-top: 1.5rem; }
+    .ref-item:first-child { border-top: 1px solid var(--ink-hairline); }
+    .ref-item:target { background: var(--parchment-mid); }
+    .ref-num { color: var(--tannin); font-variant-numeric: tabular-nums; font-variation-settings: "wdth" 95, "wght" 600; }
+    .ref-title { color: var(--ink); }
+    .ref-src { color: var(--ink-soft); font-style: italic; }
+    .ref-body a { color: var(--tannin); text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); white-space: nowrap; }
+    .ref-body a:hover { border-color: var(--tannin); }
+    .ref-foot { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); font-style: italic; max-width: 60ch; }
+
     /* byline */
     .byline {
       margin-top: clamp(2.5rem, 5vw, 3.5rem);
@@ -447,8 +483,8 @@
           <div class="movement">
             <span class="movement-num">&sect; 01 &nbsp; The discovery</span>
             <h2>A byproduct nobody was looking for.</h2>
-            <p><span class="lede-cap">In the summers of the early 1960s,</span> a young Japanese chemist named <span class="name">Osamu Shimomura</span> spent his days at Friday Harbor, on the Washington coast, scooping crystal jellyfish out of the water by the tens of thousands. He was chasing <span class="name">aequorin</span>, a protein that flashes blue when it meets calcium. He found it. But alongside it sat a second protein he hadn't gone looking for, one that soaked up the aequorin's blue light and re-emitted it as a soft green.</p>
-            <p>That second protein glowed all on its own under ultraviolet light, with no calcium, no reaction, no fuel of any kind. Shimomura described it in 1962 and moved on. It would sit in the literature, a curiosity, for the better part of thirty years.</p>
+            <p><span class="lede-cap">In the summers of the early 1960s,</span> a young Japanese chemist named <span class="name">Osamu Shimomura</span> spent his days at Friday Harbor, on the Washington coast, scooping crystal jellyfish out of the water by the tens of thousands. He was chasing <span class="name">aequorin</span>, a protein that flashes blue when it meets calcium. He found it. But alongside it sat a second protein he hadn't gone looking for, one that soaked up the aequorin's blue light and re-emitted it as a soft green.<sup class="cite"><a href="#ref-1">1</a></sup></p>
+            <p>That second protein glowed all on its own under ultraviolet light, with no calcium, no reaction, no fuel of any kind. Shimomura described it in 1962<sup class="cite"><a href="#ref-1">1</a></sup> and moved on. It would sit in the literature, a curiosity, for the better part of thirty years.</p>
           </div>
 
           <div class="pullquote">
@@ -458,15 +494,15 @@
           <div class="movement">
             <span class="movement-num">&sect; 02 &nbsp; The people</span>
             <h2>Four scientists, three decades apart.</h2>
-            <p>The gene sat unread until 1992, when <span class="name">Douglas Prasher</span> cloned and sequenced it, guessing it might make a useful biological marker. His funding ran out before he could prove it. He shared his clones with two other labs and left research; for a time he was driving a courtesy shuttle at a car dealership in Alabama.</p>
-            <p>Those clones did the rest. In 1994 <span class="name">Martin Chalfie</span> put the gene into bacteria and into a worm and watched them light up, proof that this jellyfish protein would fold and glow inside almost any living thing, needing nothing but oxygen. <span class="name">Roger Tsien</span> then worked out exactly how the chromophore forms and re-engineered it into a whole palette of colors and brightnesses. In 2008 the three shared the Nobel Prize in Chemistry. They used their moment to name Prasher, who had flown to Stockholm as their guest.</p>
+            <p>The gene sat unread until 1992, when <span class="name">Douglas Prasher</span> cloned and sequenced it, guessing it might make a useful biological marker.<sup class="cite"><a href="#ref-3">3</a></sup> His funding ran out before he could prove it. He shared his clones with two other labs and left research; for a time he was driving a courtesy shuttle at a car dealership in Alabama.</p>
+            <p>Those clones did the rest. In 1994 <span class="name">Martin Chalfie</span> put the gene into bacteria and into a worm and watched them light up, proof that this jellyfish protein would fold and glow inside almost any living thing, needing nothing but oxygen.<sup class="cite"><a href="#ref-4">4</a></sup> <span class="name">Roger Tsien</span> then worked out exactly how the chromophore forms and re-engineered it into a whole palette of colors and brightnesses.<sup class="cite"><a href="#ref-5">5</a></sup> In 2008 the three shared the Nobel Prize in Chemistry.<sup class="cite"><a href="#ref-7">7</a></sup> They used their moment to name Prasher, who had flown to Stockholm as their guest.</p>
           </div>
 
           <div class="movement">
             <span class="movement-num">&sect; 03 &nbsp; How it was cracked</span>
             <h2>The techniques it took.</h2>
             <p>Getting from a glowing jellyfish to a laboratory tool took three distinct crafts, each from a different era. First, <span class="name">bioprospecting and protein chemistry</span>: the patient work of collecting an organism and separating one faint protein from everything else in it. Then <span class="name">molecular cloning</span>: reading out the gene so it could be copied and moved. Finally <span class="name">fluorescence microscopy and genetic fusion</span>: stitching the gene onto other proteins so a cell would build its own light and show you where things go.</p>
-            <p>The elegance is in the protein itself. Eleven &beta;-strands wrap into a tight can, and buried at its center three ordinary amino acids fold in on themselves and react with oxygen to become a chromophore. No enzyme assembles it. The barrel is both the scaffold and the shield.</p>
+            <p>The elegance is in the protein itself. Eleven &beta;-strands wrap into a tight can, and buried at its center three ordinary amino acids fold in on themselves and react with oxygen to become a chromophore.<sup class="cite"><a href="#ref-2">2</a></sup><sup class="cite"><a href="#ref-6">6</a></sup> No enzyme assembles it. The barrel is both the scaffold and the shield.</p>
           </div>
 
           <div class="movement">
@@ -493,6 +529,26 @@
       </div>
     </section>
 
+    <!-- STRUCTURE (the specimen) -->
+    <section id="structure">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The specimen</span>
+          <h2 class="headline">Turn it over in your hand.</h2>
+        </div>
+        <div class="structure-figure">
+          <div class="specimen" data-pdb="1EMA">
+            <div class="specimen-stage" id="pdbStage"></div>
+            <div class="loader" id="pdbLoader" role="status" aria-label="Loading the 3D structure">
+              <span></span><span></span><span></span><em></em>
+            </div>
+            <div class="specimen-fallback" id="pdbFallback" hidden><p>Interactive view unavailable. <a href="https://www.rcsb.org/structure/1EMA" target="_blank" rel="noopener noreferrer">Open PDB 1EMA at RCSB &rarr;</a></p></div>
+          </div>
+          <p class="specimen-caption">The GFP &beta;-barrel and its buried chromophore, from the S65T structure solved by Ormö and colleagues in 1996. PDB <a href="https://www.rcsb.org/structure/1EMA" target="_blank" rel="noopener noreferrer">1EMA</a>. Drag to rotate, scroll to zoom.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- STORY TIMELINE -->
     <section id="timeline">
       <div class="wrap">
@@ -507,33 +563,54 @@
           </li>
           <li class="tl-item">
             <span class="tl-year">1962</span>
-            <span class="tl-body"><span class="tl-title">Shimomura isolates GFP at Friday Harbor</span><span class="tl-detail">Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own.</span></span>
+            <span class="tl-body"><span class="tl-title">Shimomura isolates GFP at Friday Harbor</span><span class="tl-detail">Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own.<sup class="cite"><a href="#ref-1">1</a></sup></span></span>
           </li>
           <li class="tl-item">
             <span class="tl-year">1979</span>
-            <span class="tl-body"><span class="tl-title">The chromophore is worked out</span><span class="tl-detail">Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required.</span></span>
+            <span class="tl-body"><span class="tl-title">The chromophore is worked out</span><span class="tl-detail">Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required.<sup class="cite"><a href="#ref-2">2</a></sup></span></span>
           </li>
           <li class="tl-item">
             <span class="tl-year">1992</span>
-            <span class="tl-body"><span class="tl-title">Prasher clones the gene</span><span class="tl-detail">Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use.</span></span>
+            <span class="tl-body"><span class="tl-title">Prasher clones the gene</span><span class="tl-detail">Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use.<sup class="cite"><a href="#ref-3">3</a></sup></span></span>
           </li>
           <li class="tl-item">
             <span class="tl-year">1994</span>
-            <span class="tl-body"><span class="tl-title">A microbe and a worm light up</span><span class="tl-detail">Martin Chalfie expresses GFP in <em>E. coli</em> and in <em>C. elegans</em>, proving it folds and glows inside almost any living thing.</span></span>
+            <span class="tl-body"><span class="tl-title">A microbe and a worm light up</span><span class="tl-detail">Martin Chalfie expresses GFP in <em>E. coli</em> and in <em>C. elegans</em>, proving it folds and glows inside almost any living thing.<sup class="cite"><a href="#ref-4">4</a></sup></span></span>
           </li>
           <li class="tl-item">
             <span class="tl-year">1994&ndash;1995</span>
-            <span class="tl-body"><span class="tl-title">Tsien engineers a brighter palette</span><span class="tl-detail">Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors.</span></span>
+            <span class="tl-body"><span class="tl-title">Tsien engineers a brighter palette</span><span class="tl-detail">Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors.<sup class="cite"><a href="#ref-5">5</a></sup></span></span>
           </li>
           <li class="tl-item">
             <span class="tl-year">1996</span>
-            <span class="tl-body"><span class="tl-title">The barrel comes into view</span><span class="tl-detail">The first crystal structures reveal an eleven-stranded &beta;-barrel wrapped around the chromophore, solved independently by two teams.</span></span>
+            <span class="tl-body"><span class="tl-title">The barrel comes into view</span><span class="tl-detail">The first crystal structures reveal an eleven-stranded &beta;-barrel wrapped around the chromophore, solved independently by two teams.<sup class="cite"><a href="#ref-6">6</a></sup></span></span>
           </li>
           <li class="tl-item">
             <span class="tl-year">2008</span>
-            <span class="tl-body"><span class="tl-title">The Nobel Prize in Chemistry</span><span class="tl-detail">Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest.</span></span>
+            <span class="tl-body"><span class="tl-title">The Nobel Prize in Chemistry</span><span class="tl-detail">Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest.<sup class="cite"><a href="#ref-7">7</a></sup></span></span>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="references">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; Sources</span>
+          <h2 class="headline">Where this comes from.</h2>
+        </div>
+        <ol class="ref-list">
+          <li class="ref-item" id="ref-1"><span class="ref-num">1.</span><span class="ref-body"><span class="ref-title">Extraction, purification and properties of aequorin, a bioluminescent protein from the luminous hydromedusan, Aequorea</span> <span class="ref-src">J. Cell. Comp. Physiol., 1962</span> <a href="https://doi.org/10.1002/jcp.1030590302" target="_blank" rel="noopener noreferrer">doi.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-2"><span class="ref-num">2.</span><span class="ref-body"><span class="ref-title">Structure of the chromophore of Aequorea green fluorescent protein</span> <span class="ref-src">FEBS Letters, 1979</span> <a href="https://doi.org/10.1016/0014-5793(79)80818-2" target="_blank" rel="noopener noreferrer">doi.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-3"><span class="ref-num">3.</span><span class="ref-body"><span class="ref-title">Primary structure of the Aequorea victoria green-fluorescent protein</span> <span class="ref-src">Gene, 1992</span> <a href="https://doi.org/10.1016/0378-1119(92)90691-H" target="_blank" rel="noopener noreferrer">doi.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-4"><span class="ref-num">4.</span><span class="ref-body"><span class="ref-title">Green fluorescent protein as a marker for gene expression</span> <span class="ref-src">Science, 1994</span> <a href="https://doi.org/10.1126/science.8303295" target="_blank" rel="noopener noreferrer">doi.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-5"><span class="ref-num">5.</span><span class="ref-body"><span class="ref-title">Improved green fluorescence</span> <span class="ref-src">Nature, 1995</span> <a href="https://doi.org/10.1038/373663b0" target="_blank" rel="noopener noreferrer">doi.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-6"><span class="ref-num">6.</span><span class="ref-body"><span class="ref-title">Crystal structure of the Aequorea victoria green fluorescent protein</span> <span class="ref-src">Science, 1996</span> <a href="https://doi.org/10.1126/science.273.5280.1392" target="_blank" rel="noopener noreferrer">doi.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-7"><span class="ref-num">7.</span><span class="ref-body"><span class="ref-title">The Nobel Prize in Chemistry 2008</span> <span class="ref-src">NobelPrize.org</span> <a href="https://www.nobelprize.org/prizes/chemistry/2008/" target="_blank" rel="noopener noreferrer">nobelprize.org &rarr;</a></span></li>
+          <li class="ref-item" id="ref-8"><span class="ref-num">8.</span><span class="ref-body"><span class="ref-title">Crystal structure of GFP (S65T), PDB entry 1EMA</span> <span class="ref-src">RCSB Protein Data Bank</span> <a href="https://www.rcsb.org/structure/1EMA" target="_blank" rel="noopener noreferrer">rcsb.org &rarr;</a></span></li>
+        </ol>
+        <p class="ref-foot">This inaugural issue was hand-checked against these sources. Follow any link to read further.</p>
       </div>
     </section>
 
@@ -671,6 +748,55 @@
       document.addEventListener('keydown', onKey);
       var els = modal.querySelectorAll('[data-close]');
       for (var i = 0; i < els.length; i++) els[i].addEventListener('click', close);
+    })();
+  </script>
+
+  <script>
+    /* Structure viewer: lazy-load 3Dmol only when the specimen scrolls into view, fetch the
+       PDB from RCSB, and style it in the house palette. Fully optional: on any failure the
+       page keeps its fallback link, and the article stands on its own. */
+    (function () {
+      var stage = document.getElementById('pdbStage');
+      if (!stage || !('fetch' in window)) return;
+      var specimen = stage.closest('.specimen');
+      var pdb = (specimen.getAttribute('data-pdb') || '').trim();
+      var loader = document.getElementById('pdbLoader');
+      var fallback = document.getElementById('pdbFallback');
+      var started = false;
+      function reduce() { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+      function fail() { if (loader) loader.hidden = true; if (fallback) fallback.hidden = false; }
+      function build() {
+        if (!window.$3Dmol) return fail();
+        try {
+          var viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 });
+          fetch('https://files.rcsb.org/download/' + pdb + '.pdb')
+            .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+            .then(function (data) {
+              viewer.addModel(data, 'pdb');
+              viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
+              viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
+              viewer.zoomTo();
+              viewer.render();
+              if (!reduce()) viewer.spin('y', 0.35);
+              if (loader) loader.hidden = true;
+              window.addEventListener('resize', function () { viewer.resize(); });
+            })
+            .catch(fail);
+        } catch (e) { fail(); }
+      }
+      function start() {
+        if (started) return; started = true;
+        var s = document.createElement('script');
+        s.src = 'https://3Dmol.org/build/3Dmol-min.js';
+        s.async = true; s.onload = build; s.onerror = fail;
+        document.head.appendChild(s);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { start(); io.disconnect(); } });
+        }, { rootMargin: '250px' });
+        io.observe(specimen);
+      } else { start(); }
     })();
   </script>
 

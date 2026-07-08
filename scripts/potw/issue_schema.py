@@ -43,6 +43,14 @@ class Milestone(BaseModel):
     detail: str = Field(description="One sentence of context for the event. No em dashes.")
 
 
+class Reference(BaseModel):
+    """One source in the references list, cited inline as [n] by its 1-based position."""
+
+    title: str = Field(description="Article, paper, or page title.")
+    source: str = Field(default="", description="Journal, publisher, or site, with year, e.g. 'Science, 1994' or 'NobelPrize.org'.")
+    url: str = Field(default="", description="Stable link. Prefer a DOI (https://doi.org/...); otherwise a canonical URL.")
+
+
 class DraftIssue(BaseModel):
     """The content fields the writer model produces (no metadata)."""
 
@@ -56,6 +64,9 @@ class DraftIssue(BaseModel):
     meanwhile: list[Meanwhile] = Field(description="Three or four contemporaneous events from the discovery era.")
     timeline_heading: str = Field(description="Heading for the story-timeline section, e.g. 'From a jellyfish to a Nobel Prize.'")
     timeline: list[Milestone] = Field(description="Six to nine chronological milestones in the protein's own history, earliest first, from first observation to modern impact. May span many years or decades. Distinct from 'meanwhile': these are the protein's own notable events, not world events.")
+    references: list[Reference] = Field(default_factory=list, description="Sources for the load-bearing claims, in citation order. Cite them inline in prose and timeline details with bracketed numbers like [1], [2], matching each reference's 1-based position in this list.")
+    pdb_id: str = Field(default="", description="One representative RCSB PDB id for the protein's 3D structure, e.g. '1EMA'. Leave empty for a family or concept with no single canonical structure, or if unsure it is correct.")
+    pdb_note: str = Field(default="", description="Short caption for the structure, e.g. 'The GFP beta-barrel (S65T mutant), solved by Ormo et al., 1996.' Empty when pdb_id is empty.")
 
 
 class ThemeRef(BaseModel):

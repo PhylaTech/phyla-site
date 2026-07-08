@@ -82,7 +82,11 @@ RESEARCH_SYSTEM = (
     "Use the web_search tool to find accurate, verifiable details. Prefer primary and "
     "authoritative sources (peer-reviewed papers, Nobel records, university and museum "
     "histories) over blogs. Return a dense, factual dossier: names, dates, places, "
-    "institutions, and numbers, each as a short bulletted claim. Flag anything uncertain "
+    "institutions, and numbers, each as a short bulletted claim. After each claim, put the "
+    "source it rests on as a bare URL in parentheses, preferring a DOI link (https://doi.org/...) "
+    "or an authoritative page, so the writer can cite it. When your beat touches structure or "
+    "mechanism, report the single most representative RCSB PDB id for the protein (for example "
+    "1EMA) if one exists, with its title and citation. Flag anything uncertain "
     "or contested rather than guessing. Do not write prose for publication; this is raw "
     "material for a writer. Never use em dashes."
 )
@@ -110,7 +114,14 @@ WRITER_SYSTEM = (
     "sentence of context, spanning as many years or decades as the story needs. The "
     "timeline is the protein's own arc (discovery, cloning, engineering, recognition, "
     "impact), drawn strictly from the dossiers, and is distinct from the meanwhile world "
-    "events. Give it a heading that names the arc. Keep paragraphs tight."
+    "events. Give it a heading that names the arc. Keep paragraphs tight.\n\n"
+    "Cite your sources. Compile a 'references' list, in citation order, of the sources behind "
+    "the load-bearing facts (each with a title, a source with year, and a URL, preferring DOI "
+    "links). Add inline citation markers in square brackets, like [1] or [2], at the end of the "
+    "clauses or sentences that rest on a specific source, numbered by the reference's 1-based "
+    "position. Cite the anchor facts (dates, discoveries, structures, prizes), not every "
+    "sentence. If the protein has one canonical 3D structure, set pdb_id to its RCSB PDB id and "
+    "write a short pdb_note; leave both empty for families or concepts without a single structure."
 )
 
 

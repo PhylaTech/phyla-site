@@ -18,16 +18,16 @@
       "kicker": "The discovery",
       "heading": "A byproduct nobody was looking for.",
       "paragraphs": [
-        "In the summers of the early 1960s, a young Japanese chemist named Osamu Shimomura spent his days at Friday Harbor, on the Washington coast, scooping crystal jellyfish out of the water by the tens of thousands. He was chasing aequorin, a protein that flashes blue when it meets calcium. He found it. But alongside it sat a second protein he hadn't gone looking for, one that soaked up the aequorin's blue light and re-emitted it as a soft green.",
-        "That second protein glowed all on its own under ultraviolet light, with no calcium, no reaction, no fuel of any kind. Shimomura described it in 1962 and moved on. It would sit in the literature, a curiosity, for the better part of thirty years."
+        "In the summers of the early 1960s, a young Japanese chemist named Osamu Shimomura spent his days at Friday Harbor, on the Washington coast, scooping crystal jellyfish out of the water by the tens of thousands. He was chasing aequorin, a protein that flashes blue when it meets calcium. He found it. But alongside it sat a second protein he hadn't gone looking for, one that soaked up the aequorin's blue light and re-emitted it as a soft green.[1]",
+        "That second protein glowed all on its own under ultraviolet light, with no calcium, no reaction, no fuel of any kind. Shimomura described it in 1962[1] and moved on. It would sit in the literature, a curiosity, for the better part of thirty years."
       ]
     },
     {
       "kicker": "The people",
       "heading": "Four scientists, three decades apart.",
       "paragraphs": [
-        "The gene sat unread until 1992, when Douglas Prasher cloned and sequenced it, guessing it might make a useful biological marker. His funding ran out before he could prove it. He shared his clones with two other labs and left research; for a time he was driving a courtesy shuttle at a car dealership in Alabama.",
-        "Those clones did the rest. In 1994 Martin Chalfie put the gene into bacteria and into a worm and watched them light up, proof that this jellyfish protein would fold and glow inside almost any living thing, needing nothing but oxygen. Roger Tsien then worked out exactly how the chromophore forms and re-engineered it into a whole palette of colors and brightnesses. In 2008 the three shared the Nobel Prize in Chemistry. They used their moment to name Prasher, who had flown to Stockholm as their guest."
+        "The gene sat unread until 1992, when Douglas Prasher cloned and sequenced it, guessing it might make a useful biological marker.[3] His funding ran out before he could prove it. He shared his clones with two other labs and left research; for a time he was driving a courtesy shuttle at a car dealership in Alabama.",
+        "Those clones did the rest. In 1994 Martin Chalfie put the gene into bacteria and into a worm and watched them light up, proof that this jellyfish protein would fold and glow inside almost any living thing, needing nothing but oxygen.[4] Roger Tsien then worked out exactly how the chromophore forms and re-engineered it into a whole palette of colors and brightnesses.[5] In 2008 the three shared the Nobel Prize in Chemistry.[7] They used their moment to name Prasher, who had flown to Stockholm as their guest."
       ]
     },
     {
@@ -35,7 +35,7 @@
       "heading": "The techniques it took.",
       "paragraphs": [
         "Getting from a glowing jellyfish to a laboratory tool took three distinct crafts, each from a different era. First, bioprospecting and protein chemistry: the patient work of collecting an organism and separating one faint protein from everything else in it. Then molecular cloning: reading out the gene so it could be copied and moved. Finally fluorescence microscopy and genetic fusion: stitching the gene onto other proteins so a cell would build its own light and show you where things go.",
-        "The elegance is in the protein itself. Eleven β-strands wrap into a tight can, and buried at its center three ordinary amino acids fold in on themselves and react with oxygen to become a chromophore. No enzyme assembles it. The barrel is both the scaffold and the shield."
+        "The elegance is in the protein itself. Eleven β-strands wrap into a tight can, and buried at its center three ordinary amino acids fold in on themselves and react with oxygen to become a chromophore.[2][6] No enzyme assembles it. The barrel is both the scaffold and the shield."
       ]
     },
     {
@@ -58,14 +58,26 @@
   "timeline_heading": "From a jellyfish to a Nobel Prize.",
   "timeline": [
     { "year": "1955", "title": "A green glow in the crystal jelly", "detail": "Demorest Davenport and Joseph Nicol report that Aequorea victoria fluoresces green under ultraviolet light." },
-    { "year": "1962", "title": "Shimomura isolates GFP at Friday Harbor", "detail": "Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own." },
-    { "year": "1979", "title": "The chromophore is worked out", "detail": "Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required." },
-    { "year": "1992", "title": "Prasher clones the gene", "detail": "Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use." },
-    { "year": "1994", "title": "A microbe and a worm light up", "detail": "Martin Chalfie expresses GFP in E. coli and in C. elegans, proving it folds and glows inside almost any living thing." },
-    { "year": "1994–1995", "title": "Tsien engineers a brighter palette", "detail": "Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors." },
-    { "year": "1996", "title": "The barrel comes into view", "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams." },
-    { "year": "2008", "title": "The Nobel Prize in Chemistry", "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest." }
+    { "year": "1962", "title": "Shimomura isolates GFP at Friday Harbor", "detail": "Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own.[1]" },
+    { "year": "1979", "title": "The chromophore is worked out", "detail": "Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required.[2]" },
+    { "year": "1992", "title": "Prasher clones the gene", "detail": "Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use.[3]" },
+    { "year": "1994", "title": "A microbe and a worm light up", "detail": "Martin Chalfie expresses GFP in E. coli and in C. elegans, proving it folds and glows inside almost any living thing.[4]" },
+    { "year": "1994–1995", "title": "Tsien engineers a brighter palette", "detail": "Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors.[5]" },
+    { "year": "1996", "title": "The barrel comes into view", "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams.[6]" },
+    { "year": "2008", "title": "The Nobel Prize in Chemistry", "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest.[7]" }
   ],
+  "references": [
+    { "title": "Extraction, purification and properties of aequorin, a bioluminescent protein from the luminous hydromedusan, Aequorea", "source": "J. Cell. Comp. Physiol., 1962", "url": "https://doi.org/10.1002/jcp.1030590302" },
+    { "title": "Structure of the chromophore of Aequorea green fluorescent protein", "source": "FEBS Letters, 1979", "url": "https://doi.org/10.1016/0014-5793(79)80818-2" },
+    { "title": "Primary structure of the Aequorea victoria green-fluorescent protein", "source": "Gene, 1992", "url": "https://doi.org/10.1016/0378-1119(92)90691-H" },
+    { "title": "Green fluorescent protein as a marker for gene expression", "source": "Science, 1994", "url": "https://doi.org/10.1126/science.8303295" },
+    { "title": "Improved green fluorescence", "source": "Nature, 1995", "url": "https://doi.org/10.1038/373663b0" },
+    { "title": "Crystal structure of the Aequorea victoria green fluorescent protein", "source": "Science, 1996", "url": "https://doi.org/10.1126/science.273.5280.1392" },
+    { "title": "The Nobel Prize in Chemistry 2008", "source": "NobelPrize.org", "url": "https://www.nobelprize.org/prizes/chemistry/2008/" },
+    { "title": "Crystal structure of GFP (S65T), PDB entry 1EMA", "source": "RCSB Protein Data Bank", "url": "https://www.rcsb.org/structure/1EMA" }
+  ],
+  "pdb_id": "1EMA",
+  "pdb_note": "The GFP β-barrel and its buried chromophore, from the S65T structure solved by Ormö and colleagues in 1996.",
   "collection": { "id": "2026-07", "label": "Seeing", "blurb": "Proteins that made the invisible visible.", "period": "July 2026" },
   "season": { "id": "2026-q3", "label": "The Instruments", "blurb": "Proteins that stopped being something biologists studied and became something they use.", "period": "Q3 2026" }
 }

@@ -30,6 +30,18 @@ dashes, sentence-case headings, facts grounded in the dossiers.
 on every POTW page. It is deterministic (no API calls), so it is safe to run in
 CI and easy to preview.
 
+Each issue also carries **sources** and, where one exists, a **structure**:
+
+- `references` is a numbered source list. The writer cites them inline in prose and
+  timeline details with bracketed markers like `[1]`, which the renderer turns into
+  superscript links to a "Sources" section at the foot of the article. Prefer DOI
+  links, and verify them in the fact-check before shipping.
+- `pdb_id` (plus a short `pdb_note`) embeds an interactive 3D view of the protein.
+  The page lazy-loads [3Dmol.js](https://3dmol.org) only when the viewer scrolls into
+  view, fetches the structure from the RCSB PDB, and styles it in the house palette;
+  on any failure it falls back to a link. Leave `pdb_id` empty for families or
+  concepts with no single canonical structure.
+
 ## The editorial calendar
 
 `proteins.json` is a three-level calendar, not a flat list:

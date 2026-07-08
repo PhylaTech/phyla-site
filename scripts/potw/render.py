@@ -22,6 +22,7 @@ import datetime as dt
 import html
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -37,6 +38,24 @@ ARCHIVE_END = "<!-- POTW:ARCHIVE:END -->"
 
 def esc(s: str) -> str:
     return html.escape(str(s), quote=True)
+
+
+_CITE_RE = re.compile(r"\[(\d{1,3})\]")
+
+
+def _cite(text: str, ref_count: int) -> str:
+    """Escape prose, then turn [n] markers into superscript links to #ref-n (in range only)."""
+    def repl(m: "re.Match") -> str:
+        n = int(m.group(1))
+        if 1 <= n <= ref_count:
+            return f'<sup class="cite"><a href="#ref-{n}">{n}</a></sup>'
+        return m.group(0)
+    return _CITE_RE.sub(repl, esc(text))
+
+
+def _host(url: str) -> str:
+    """'https://doi.org/10.x/y' -> 'doi.org'."""
+    return re.sub(r"^https?://(www\.)?", "", url).split("/")[0]
 
 
 def _friendly_date(iso: str) -> str:
@@ -569,8 +588,158 @@ def render_announcement(ann: dict) -> str:
 """
 
 
+STRUCTURE_CSS = """
+    /* === Structure viewer (the specimen) === */
+    .structure-figure { margin-top: 0.5rem; }
+    .specimen { position: relative; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 4 / 3; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); overflow: hidden; }
+    .specimen-stage { position: absolute; inset: 0; }
+    .specimen-stage canvas { display: block; }
+    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); }
+    .specimen-fallback a { color: var(--tannin); }
+    .specimen-caption { margin-top: 0.9rem; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); text-align: center; max-width: 62ch; margin-inline: auto; }
+    .specimen-caption a { color: var(--tannin); font-style: normal; text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
+    .specimen-caption a:hover { border-color: var(--tannin); }
+    /* Colony-ripple loader: hairline rings spreading from a point, like a culture on agar. */
+    .loader { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; display: grid; place-items: center; pointer-events: none; }
+    .loader[hidden] { display: none; }
+    .loader span { position: absolute; inset: 0; margin: auto; width: 100%; height: 100%; border: 1px solid var(--tannin); border-radius: 50%; opacity: 0; animation: colony-ripple 2.2s cubic-bezier(0.2, 0.6, 0.3, 1) infinite; }
+    .loader span:nth-child(2) { animation-delay: 0.73s; }
+    .loader span:nth-child(3) { animation-delay: 1.46s; }
+    .loader em { width: 8px; height: 8px; border-radius: 50%; background: var(--tannin); }
+    @keyframes colony-ripple { 0% { transform: scale(0.12); opacity: 0; } 25% { opacity: 0.5; } 100% { transform: scale(1); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .loader span { animation: none; opacity: 0.32; transform: scale(0.66); } .loader span:nth-child(3) { transform: scale(0.9); } }"""
+
+REFERENCES_CSS = """
+    /* === Inline citations + references === */
+    .cite { font-size: 0.7em; line-height: 0; vertical-align: super; margin-left: 0.08em; font-variation-settings: "wght" 600; white-space: nowrap; }
+    .cite a { color: var(--tannin); text-decoration: none; }
+    .cite a:hover { text-decoration: underline; }
+    .references { border-top: 1px solid var(--ink-hairline); }
+    .ref-list { list-style: none; max-width: 70ch; }
+    .ref-item { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.9rem; padding-block: 0.7rem; border-bottom: 1px solid var(--ink-hairline); font-size: 0.9375rem; line-height: 1.5; scroll-margin-top: 1.5rem; }
+    .ref-item:first-child { border-top: 1px solid var(--ink-hairline); }
+    .ref-item:target { background: var(--parchment-mid); }
+    .ref-num { color: var(--tannin); font-variant-numeric: tabular-nums; font-variation-settings: "wdth" 95, "wght" 600; }
+    .ref-title { color: var(--ink); }
+    .ref-src { color: var(--ink-soft); font-style: italic; }
+    .ref-body a { color: var(--tannin); text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); white-space: nowrap; }
+    .ref-body a:hover { border-color: var(--tannin); }
+    .ref-foot { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); font-style: italic; max-width: 60ch; }"""
+
+STRUCTURE_SCRIPT = """  <script>
+    /* Structure viewer: lazy-load 3Dmol only when the specimen scrolls into view, fetch the
+       PDB from RCSB, and style it in the house palette. Fully optional: on any failure the
+       page keeps its fallback link, and the article stands on its own. */
+    (function () {
+      var stage = document.getElementById('pdbStage');
+      if (!stage || !('fetch' in window)) return;
+      var specimen = stage.closest('.specimen');
+      var pdb = (specimen.getAttribute('data-pdb') || '').trim();
+      var loader = document.getElementById('pdbLoader');
+      var fallback = document.getElementById('pdbFallback');
+      var started = false;
+      function reduce() { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+      function fail() { if (loader) loader.hidden = true; if (fallback) fallback.hidden = false; }
+      function build() {
+        if (!window.$3Dmol) return fail();
+        try {
+          var viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 });
+          fetch('https://files.rcsb.org/download/' + pdb + '.pdb')
+            .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+            .then(function (data) {
+              viewer.addModel(data, 'pdb');
+              viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
+              viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
+              viewer.zoomTo();
+              viewer.render();
+              if (!reduce()) viewer.spin('y', 0.35);
+              if (loader) loader.hidden = true;
+              window.addEventListener('resize', function () { viewer.resize(); });
+            })
+            .catch(fail);
+        } catch (e) { fail(); }
+      }
+      function start() {
+        if (started) return; started = true;
+        var s = document.createElement('script');
+        s.src = 'https://3Dmol.org/build/3Dmol-min.js';
+        s.async = true; s.onload = build; s.onerror = fail;
+        document.head.appendChild(s);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { start(); io.disconnect(); } });
+        }, { rootMargin: '250px' });
+        io.observe(specimen);
+      } else { start(); }
+    })();
+  </script>"""
+
+
+def _structure_section(issue: dict) -> str:
+    """The interactive 3D structure section, rendered only when the issue has a PDB id."""
+    pdb = (issue.get("pdb_id") or "").strip()
+    if not pdb:
+        return ""
+    pu = esc(pdb.upper())
+    rcsb = f"https://www.rcsb.org/structure/{pu}"
+    note = esc(issue.get("pdb_note") or f"Structure from the RCSB Protein Data Bank.")
+    return (
+        '    <section id="structure">\n'
+        '      <div class="wrap">\n'
+        '        <div class="section-head">\n'
+        '          <span class="label">&sect; &nbsp; The specimen</span>\n'
+        '          <h2 class="headline">Turn it over in your hand.</h2>\n'
+        '        </div>\n'
+        '        <div class="structure-figure">\n'
+        f'          <div class="specimen" data-pdb="{pu}">\n'
+        '            <div class="specimen-stage" id="pdbStage"></div>\n'
+        '            <div class="loader" id="pdbLoader" role="status" aria-label="Loading the 3D structure">\n'
+        '              <span></span><span></span><span></span><em></em>\n'
+        '            </div>\n'
+        f'            <div class="specimen-fallback" id="pdbFallback" hidden><p>Interactive view unavailable. <a href="{rcsb}" target="_blank" rel="noopener noreferrer">Open PDB {pu} at RCSB &rarr;</a></p></div>\n'
+        '          </div>\n'
+        f'          <p class="specimen-caption">{note} PDB <a href="{rcsb}" target="_blank" rel="noopener noreferrer">{pu}</a>. Drag to rotate, scroll to zoom.</p>\n'
+        '        </div>\n'
+        '      </div>\n'
+        '    </section>'
+    )
+
+
+def _references_section(issue: dict) -> str:
+    """The numbered references list, rendered only when the issue carries sources."""
+    refs = issue.get("references") or []
+    if not refs:
+        return ""
+    items = []
+    for i, r in enumerate(refs, start=1):
+        title = esc(r.get("title", ""))
+        source = f' <span class="ref-src">{esc(r.get("source", ""))}</span>' if r.get("source") else ""
+        url = r.get("url", "")
+        link = f' <a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(_host(url))} &rarr;</a>' if url else ""
+        items.append(
+            f'          <li class="ref-item" id="ref-{i}">'
+            f'<span class="ref-num">{i}.</span>'
+            f'<span class="ref-body"><span class="ref-title">{title}</span>{source}{link}</span></li>'
+        )
+    inner = "\n".join(items)
+    return (
+        '    <section id="references">\n'
+        '      <div class="wrap">\n'
+        '        <div class="section-head">\n'
+        '          <span class="label">&sect; &nbsp; Sources</span>\n'
+        '          <h2 class="headline">Where this comes from.</h2>\n'
+        '        </div>\n'
+        f'        <ol class="ref-list">\n{inner}\n        </ol>\n'
+        '        <p class="ref-foot">Each issue is drafted by a research harness and checked against these sources before it ships. Follow any link to read further.</p>\n'
+        '      </div>\n'
+        '    </section>'
+    )
+
+
 def render_page(issue: dict, issues: list[dict]) -> str:
     n = issue["number"]
+    ref_count = len(issue.get("references") or [])
     facts = "\n".join(
         f'            <div class="fact"><dd class="value">{esc(f["value"])}</dd>'
         f'<dt class="label">{esc(f["label"])}</dt></div>'
@@ -578,7 +747,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     )
     movements = []
     for i, m in enumerate(issue["movements"], start=1):
-        paras = "\n".join(f"            <p>{esc(p)}</p>" for p in m["paragraphs"])
+        paras = "\n".join(f"            <p>{_cite(p, ref_count)}</p>" for p in m["paragraphs"])
         movements.append(
             f'          <div class="movement">\n'
             f'            <span class="movement-num">&sect; {i:02d} &nbsp; {esc(m["kicker"])}</span>\n'
@@ -594,7 +763,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
         f'          <li class="tl-item">\n'
         f'            <span class="tl-year">{esc(m["year"])}</span>\n'
         f'            <span class="tl-body"><span class="tl-title">{esc(m["title"])}</span>'
-        f'<span class="tl-detail">{esc(m["detail"])}</span></span>\n'
+        f'<span class="tl-detail">{_cite(m["detail"], ref_count)}</span></span>\n'
         f'          </li>'
         for m in issue["timeline"]
     )
@@ -602,6 +771,9 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     org = esc(_organism(issue["binomial"]))
     band = _collection_band(issue)
     reveal_modal = _reveal_modal(n, issue)
+    structure_section = _structure_section(issue)
+    references_section = _references_section(issue)
+    structure_script = STRUCTURE_SCRIPT if (issue.get("pdb_id") or "").strip() else ""
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -661,6 +833,8 @@ def render_page(issue: dict, issues: list[dict]) -> str:
 {ARCHIVE_GROUP_CSS}
 {SUBSCRIBE_CSS}
 {REVEAL_CSS}
+{STRUCTURE_CSS}
+{REFERENCES_CSS}
   </style>
 </head>
 <body>
@@ -700,7 +874,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
       <div class="wrap">
         <div class="article">
 {movements_html}
-          <div class="pullquote"><p>{esc(issue["pull_quote"])}</p></div>
+          <div class="pullquote"><p>{_cite(issue["pull_quote"], ref_count)}</p></div>
           <div class="movement">
             <span class="movement-num">&sect; &nbsp; Meanwhile</span>
             <h2>{esc(issue["meanwhile_heading"])}</h2>
@@ -713,6 +887,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
       </div>
     </section>
 
+{structure_section}
     <!-- STORY TIMELINE -->
     <section id="timeline">
       <div class="wrap">
@@ -726,6 +901,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
       </div>
     </section>
 
+{references_section}
     <section id="archive">
       <div class="wrap">
         <div class="section-head">
@@ -760,6 +936,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
 {reveal_modal}
 {TIMELINE_SCRIPT}
 {REVEAL_SCRIPT}
+{structure_script}
 </body>
 </html>
 """
