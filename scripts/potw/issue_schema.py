@@ -58,6 +58,13 @@ class DraftIssue(BaseModel):
     timeline: list[Milestone] = Field(description="Six to nine chronological milestones in the protein's own history, earliest first, from first observation to modern impact. May span many years or decades. Distinct from 'meanwhile': these are the protein's own notable events, not world events.")
 
 
+class ThemeRef(BaseModel):
+    """A collection (month) or season (quarter) an issue belongs to."""
+
+    label: str = Field(description="Display name, e.g. 'Seeing' or 'The Instruments'.")
+    blurb: str = Field(default="", description="One-line, reader-facing description of the grouping.")
+
+
 class Issue(DraftIssue):
     """A full issue: draft content plus harness-assigned metadata."""
 
@@ -66,3 +73,6 @@ class Issue(DraftIssue):
     date_iso: str
     date_display: str
     byline: str = "Researched and written by the Phyla Protein Historian, a weekly dispatch on the molecules that quietly run the living world."
+    # Editorial placement in the calendar. Optional: an off-queue (--protein) issue has none.
+    collection: ThemeRef | None = None
+    season: ThemeRef | None = None

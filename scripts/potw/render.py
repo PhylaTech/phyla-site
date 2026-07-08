@@ -135,6 +135,45 @@ TIMELINE_SCRIPT = """  <script>
     })();
   </script>"""
 
+# Collection/season band (the "this month / this season" ribbon under the masthead).
+BAND_CSS = """
+    /* === Collection / season band === */
+    .collection-band { border-bottom: 1px solid var(--ink-hairline); background: var(--parchment-mid); }
+    .collection-band .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 2.5rem; padding-block: 0.8rem; }
+    .cb-item { display: flex; align-items: baseline; gap: 0.6rem; }
+    .cb-kicker { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); white-space: nowrap; }
+    .cb-label { font-variation-settings: "wdth" 95, "wght" 600; color: var(--ink); font-size: 0.9375rem; white-space: nowrap; }
+    .cb-blurb { font-size: 0.8125rem; color: var(--ink-soft); }
+    @media (max-width: 640px) { .cb-blurb { display: none; } }"""
+
+
+def _band_item(kicker: str, ref: dict) -> str:
+    return (
+        f'        <span class="cb-item"><span class="cb-kicker">{kicker}</span>'
+        f'<span class="cb-label">{esc(ref.get("label", ""))}</span>'
+        f'<span class="cb-blurb">{esc(ref.get("blurb", ""))}</span></span>'
+    )
+
+
+def _collection_band(issue: dict) -> str:
+    """Render the 'this month / this season' ribbon, or '' when the issue has no theme."""
+    coll, seas = issue.get("collection"), issue.get("season")
+    if not coll and not seas:
+        return ""
+    items = []
+    if coll:
+        items.append(_band_item("This month", coll))
+    if seas:
+        items.append(_band_item("This season", seas))
+    inner = "\n".join(items)
+    return (
+        '  <div class="collection-band">\n'
+        '    <div class="wrap">\n'
+        f'{inner}\n'
+        "    </div>\n"
+        "  </div>"
+    )
+
 
 def render_page(issue: dict, issues: list[dict]) -> str:
     n = issue["number"]
@@ -167,6 +206,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     )
     archive_rows = render_archive_rows(issues, n)
     org = esc(_organism(issue["binomial"]))
+    band = _collection_band(issue)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -222,6 +262,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     @media (max-width: 820px) {{ .issue-grid {{ grid-template-columns: 1fr; gap: 2.25rem; }} .issue-visual {{ order: -1; }} }}
     @media (max-width: 600px) {{ .facts {{ grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }} .fact:nth-child(2) {{ border-right: none; padding-right: 0; }} .meanwhile .ml {{ grid-template-columns: 4.5rem 1fr; }} .arch {{ grid-template-columns: auto 1fr; }} .arch .arch-date {{ grid-column: 2; }} }}
 {TIMELINE_CSS}
+{BAND_CSS}
   </style>
 </head>
 <body>
@@ -236,7 +277,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
       <span class="column-name">Protein of the Week</span>
     </div>
   </header>
-
+{band}
   <main id="main">
     <section class="issue">
       <div class="wrap">

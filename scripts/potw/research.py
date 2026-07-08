@@ -34,7 +34,7 @@ from pathlib import Path
 import anthropic
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from issue_schema import DraftIssue, Issue  # noqa: E402
+from issue_schema import DraftIssue, Issue, ThemeRef  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 ISSUES_DIR = HERE / "issues"
@@ -150,14 +150,15 @@ def research_beat(client: anthropic.Anthropic, protein: str, hint: str, beat: di
     return _text_of(resp)
 
 
-def synthesize(client: anthropic.Anthropic, protein: str, dossiers: dict[str, str]) -> DraftIssue:
+def synthesize(client: anthropic.Anthropic, protein: str, dossiers: dict[str, str], theme: str = "") -> DraftIssue:
     """Writer sub-agent: fold the dossiers into a structured issue."""
     dossier_block = "\n\n".join(
         f"=== {beat['title']} ===\n{dossiers.get(beat['key'], '(no material)')}" for beat in BEATS
     )
     user = (
         f"Write this week's Protein of the Week issue on: {protein}.\n\n"
-        "Base every fact strictly on the research dossiers below. Do not add facts that "
+        + (theme + "\n\n" if theme else "")
+        + "Base every fact strictly on the research dossiers below. Do not add facts that "
         "are not supported by them.\n\n"
         f"{dossier_block}"
     )
@@ -176,13 +177,65 @@ def load_queue() -> dict:
     return json.loads(QUEUE_PATH.read_text())
 
 
-def next_number(queue: dict) -> int:
-    nums = [p.get("number", 0) for p in queue.get("published", [])]
+def slugify(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def iter_specimens(queue: dict):
+    """Yield (number, specimen, collection, season) for every specimen in calendar order.
+
+    The week number is the specimen's 1-based position in the flattened calendar.
+    """
+    number = 0
+    for season in queue.get("seasons", []):
+        for collection in season.get("collections", []):
+            for specimen in collection.get("specimens", []):
+                number += 1
+                yield number, specimen, collection, season
+
+
+def _issue_path(number: int, slug: str) -> Path:
+    return ISSUES_DIR / f"{number:03d}-{slug}.json"
+
+
+def _is_drafted(number: int, specimen: dict) -> bool:
+    slug = specimen.get("slug") or slugify(specimen["protein"])
+    return specimen.get("status") == "published" or _issue_path(number, slug).exists()
+
+
+def next_specimen(queue: dict):
+    """First specimen not yet drafted, with its collection and season; None if the calendar is done."""
+    for number, specimen, collection, season in iter_specimens(queue):
+        if not _is_drafted(number, specimen):
+            return number, specimen, collection, season
+    return None
+
+
+def _next_off_queue_number() -> int:
+    """Number for an off-calendar --protein run: one past the highest existing issue."""
+    nums = []
+    for p in ISSUES_DIR.glob("*.json"):
+        m = re.match(r"(\d+)-", p.name)
+        if m:
+            nums.append(int(m.group(1)))
     return (max(nums) + 1) if nums else 1
 
 
-def slugify(name: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+def theme_context(collection: dict | None, season: dict | None) -> str:
+    """A short editorial-context note for the writer; empty for off-calendar issues."""
+    if not collection and not season:
+        return ""
+    parts = []
+    if season:
+        parts.append(f"the quarterly season '{season['label']}' ({season.get('blurb', '')})")
+    if collection:
+        parts.append(f"the monthly collection '{collection['label']}' ({collection.get('blurb', '')})")
+    return (
+        "Editorial context: this protein was chosen as part of a themed run, "
+        + " within ".join(reversed(parts))
+        + ". You may let this lightly shape emphasis or a passing aside, but do not force the "
+        "connection and do not invent facts to fit it."
+    )
 
 
 def main() -> int:
@@ -195,23 +248,33 @@ def main() -> int:
 
     queue = load_queue()
     if args.list:
-        for i, p in enumerate(queue.get("upcoming", [])):
-            print(f"{i + 1:>2}. {p['protein']}  ({p.get('slug', slugify(p['protein']))})")
+        current_season = None
+        for number, specimen, collection, season in iter_specimens(queue):
+            if season["label"] != current_season:
+                current_season = season["label"]
+                print(f"\n=== {season['quarter']}  {season['label']} ===")
+            mark = "x" if _is_drafted(number, specimen) else " "
+            print(f"  [{mark}] {number:>2}. {specimen['protein']}  ({collection['label']})")
         return 0
 
+    collection = season = None
     if args.protein:
-        protein, slug, hint = args.protein, args.slug or slugify(args.protein), args.hint
+        protein = args.protein
+        slug = args.slug or slugify(args.protein)
+        hint = args.hint
+        number = _next_off_queue_number()
     else:
-        upcoming = queue.get("upcoming", [])
-        if not upcoming:
-            print("Queue is empty. Add to proteins.json or pass --protein.", file=sys.stderr)
+        selected = next_specimen(queue)
+        if not selected:
+            print("The calendar is fully drafted. Add specimens to proteins.json or pass --protein.", file=sys.stderr)
             return 1
-        entry = upcoming[0]
-        protein = entry["protein"]
-        slug = args.slug or entry.get("slug", slugify(protein))
-        hint = args.hint or entry.get("hint", "")
+        number, specimen, coll, seas = selected
+        protein = specimen["protein"]
+        slug = args.slug or specimen.get("slug") or slugify(protein)
+        hint = args.hint or specimen.get("hint", "")
+        collection = {"label": coll["label"], "blurb": coll.get("blurb", "")}
+        season = {"label": seas["label"], "blurb": seas.get("blurb", "")}
 
-    number = next_number(queue)
     today = dt.date.today()
     print(f"Researching No. {number:03d}: {protein} ...", file=sys.stderr)
 
@@ -231,7 +294,7 @@ def main() -> int:
                 print(f"  beat failed ({beat['title']}): {exc}", file=sys.stderr)
 
     print("Synthesizing the issue ...", file=sys.stderr)
-    draft = synthesize(client, protein, dossiers)
+    draft = synthesize(client, protein, dossiers, theme_context(collection, season))
 
     issue = Issue(
         **draft.model_dump(),
@@ -239,6 +302,8 @@ def main() -> int:
         slug=slug,
         date_iso=today.isoformat(),
         date_display=today.strftime("%-d %B %Y") if os.name != "nt" else today.strftime("%#d %B %Y"),
+        collection=ThemeRef(**collection) if collection else None,
+        season=ThemeRef(**season) if season else None,
     )
 
     ISSUES_DIR.mkdir(parents=True, exist_ok=True)

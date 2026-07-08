@@ -30,6 +30,31 @@ dashes, sentence-case headings, facts grounded in the dossiers.
 on every POTW page. It is deterministic (no API calls), so it is safe to run in
 CI and easy to preview.
 
+## The editorial calendar
+
+`proteins.json` is a three-level calendar, not a flat list:
+
+```
+season (quarter)   ─▶   collection (month)   ─▶   specimen (week)
+"The Instruments"       "Seeing"                  Green Fluorescent Protein
+                                                  Firefly luciferase, ...
+```
+
+- **Week** is one protein (one issue). **Month** groups ~4 proteins under a shared
+  connection; **quarter** groups three months under a broad domain. Each level carries a
+  `label`, a reader-facing `blurb`, and an `axis` naming what ties the group together
+  (family, function, provenance, impact, discovery, disease, or any non-obvious link).
+- The **week number is position**: `research.py` flattens the calendar in order, so the
+  Nth specimen is issue No. N. A specimen counts as done when its
+  `issues/<NNN>-<slug>.json` exists (or it is marked `"status": "published"`);
+  `research.py` drafts the first one that is not.
+- The chosen specimen's month and season are passed to the writer as light editorial
+  context and stamped onto the issue, so the rendered page shows a "this month / this
+  season" band and the story may gently reflect its collection.
+
+`research.py --list` prints the whole calendar with a mark beside each drafted issue.
+Add, reorder, or retheme freely; numbering just follows position.
+
 ## Running it
 
 Everything runs in the project's mamba environment (`environment.yml`):
@@ -41,7 +66,7 @@ export ANTHROPIC_API_KEY=sk-ant-...          # or use an `ant auth login` profil
 # Research + draft the next queued protein (or pass one explicitly)
 mamba run -n phyla-site python scripts/potw/research.py
 mamba run -n phyla-site python scripts/potw/research.py --protein "Insulin" --slug insulin
-mamba run -n phyla-site python scripts/potw/research.py --list
+mamba run -n phyla-site python scripts/potw/research.py --list      # print the full calendar
 
 # Render it and refresh the archive
 mamba run -n phyla-site python scripts/potw/render.py 002-insulin.json
@@ -81,7 +106,7 @@ substitute for a fact-check.
 
 | File | Role |
 |---|---|
-| `proteins.json` | The queue. Move entries from `upcoming` to `published` as issues ship. |
+| `proteins.json` | The editorial calendar: seasons (quarters) to collections (months) to specimens (weeks). See above. |
 | `issue_schema.py` | Pydantic schema shared by the writer and the renderer. |
 | `research.py` | Multi-subagent research + structured drafting (needs the API). |
 | `render.py` | Issue JSON to HTML + archive refresh (deterministic, no API). |

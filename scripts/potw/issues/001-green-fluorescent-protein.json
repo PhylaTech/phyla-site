@@ -65,5 +65,7 @@
     { "year": "1994–1995", "title": "Tsien engineers a brighter palette", "detail": "Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors." },
     { "year": "1996", "title": "The barrel comes into view", "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams." },
     { "year": "2008", "title": "The Nobel Prize in Chemistry", "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest." }
-  ]
+  ],
+  "collection": { "label": "Seeing", "blurb": "Proteins that made the invisible visible." },
+  "season": { "label": "The Instruments", "blurb": "Proteins that stopped being something biologists studied and became something they use." }
 }

@@ -1,14 +1,197 @@
 {
-  "_comment": "Queue for the Protein of the Week harness. research.py pops the first entry of 'upcoming' unless a protein is passed on the CLI. Move entries to 'published' (with number + date) once an issue ships. Add your own; 'hint' is optional seed context passed to the researchers.",
-  "upcoming": [
-    { "protein": "Insulin", "slug": "insulin", "hint": "Banting & Best (Toronto, 1921); Sanger's sequencing (1951, first protein sequenced); first recombinant-DNA drug, Humulin (Genentech / Eli Lilly, 1982)." },
-    { "protein": "Taq polymerase", "slug": "taq-polymerase", "hint": "From Thermus aquaticus, a Yellowstone hot-spring bacterium (Brock, 1969); made PCR practical; Kary Mullis, 1993 Nobel." },
-    { "protein": "Hemoglobin", "slug": "hemoglobin", "hint": "Max Perutz's decades-long X-ray structure (1959, Nobel 1962); oxygen transport; sickle-cell as the first 'molecular disease' (Pauling, 1949)." },
-    { "protein": "Firefly luciferase", "slug": "firefly-luciferase", "hint": "Photinus pyralis bioluminescence; ATP-dependent light; ubiquitous reporter and ATP assay." },
-    { "protein": "Cas9", "slug": "cas9", "hint": "CRISPR-associated nuclease; Streptococcus pyogenes; Doudna & Charpentier, 2012; 2020 Nobel; genome editing." },
-    { "protein": "Pepsin", "slug": "pepsin", "hint": "One of the first enzymes named (Schwann, 1836); crystallized by Northrop (1930s, Nobel 1946); digestion; acid protease." }
-  ],
-  "published": [
-    { "protein": "Green Fluorescent Protein", "slug": "green-fluorescent-protein", "number": 1, "date_iso": "2026-07-06" }
+  "_comment": "Editorial calendar for Protein of the Week. Three levels: season (quarter) -> collection (month) -> specimen (week). research.py flattens the specimens in order (week number = position), picks the first one with no issue JSON yet (and status != 'published'), and passes its collection + season theme to the researchers and writer as light context. 'axis' names what ties a group together (family, function, provenance, impact, discovery, disease, or any non-obvious connection); it is editorial metadata and can differ per level. 'blurb' is the reader-facing announcement line. Add or reorder freely; numbering follows position.",
+  "seasons": [
+    {
+      "id": "2026-q3",
+      "quarter": "Q3 2026",
+      "label": "The Instruments",
+      "axis": "impact",
+      "blurb": "Proteins that stopped being something biologists studied and became something they use.",
+      "collections": [
+        {
+          "id": "2026-07",
+          "month": "July 2026",
+          "label": "Seeing",
+          "axis": "function",
+          "blurb": "Proteins that made the invisible visible.",
+          "specimens": [
+            { "protein": "Green Fluorescent Protein", "slug": "green-fluorescent-protein", "number": 1, "date_iso": "2026-07-06", "status": "published" },
+            { "protein": "Firefly luciferase", "slug": "firefly-luciferase", "hint": "Photinus pyralis bioluminescence; ATP-dependent light from luciferin; ubiquitous reporter gene and ATP assay." },
+            { "protein": "Beta-galactosidase (LacZ)", "slug": "beta-galactosidase", "hint": "E. coli lac operon (Jacob & Monod); blue-white screening with X-gal; a founding reporter enzyme." },
+            { "protein": "DsRed and mCherry", "slug": "dsred-mcherry", "hint": "DsRed from Discosoma coral; Tsien lab engineered the monomeric 'mFruit' palette (mCherry, mOrange), extending fluorescent tags beyond green." }
+          ]
+        },
+        {
+          "id": "2026-08",
+          "month": "August 2026",
+          "label": "Copying",
+          "axis": "function",
+          "blurb": "The enzymes that let us read, amplify, and rewrite the code.",
+          "specimens": [
+            { "protein": "Taq polymerase", "slug": "taq-polymerase", "hint": "From Thermus aquaticus, a Yellowstone hot-spring bacterium (Brock, 1969); thermostable; made PCR practical; Kary Mullis, 1993 Nobel." },
+            { "protein": "Reverse transcriptase", "slug": "reverse-transcriptase", "hint": "RNA-dependent DNA polymerase; Temin & Baltimore, 1970 (Nobel 1975); retroviruses; the basis of cDNA, RT-PCR, and RNA-seq." },
+            { "protein": "T7 RNA polymerase", "slug": "t7-rna-polymerase", "hint": "Single-subunit polymerase from bacteriophage T7; in vitro transcription and the pET expression systems." },
+            { "protein": "T4 DNA ligase", "slug": "t4-dna-ligase", "hint": "From bacteriophage T4; seals nicks and joins fragments; the workhorse of molecular cloning." }
+          ]
+        },
+        {
+          "id": "2026-09",
+          "month": "September 2026",
+          "label": "Cutting & editing",
+          "axis": "function",
+          "blurb": "Proteins that perform surgery on DNA and on other proteins.",
+          "specimens": [
+            { "protein": "EcoRI", "slug": "ecori", "hint": "E. coli restriction endonuclease; cuts the palindrome GAATTC; central to the Cohen-Boyer recombinant-DNA revolution." },
+            { "protein": "Cas9", "slug": "cas9", "hint": "CRISPR-associated nuclease from Streptococcus pyogenes; Doudna & Charpentier, 2012; 2020 Nobel; guided genome editing." },
+            { "protein": "Cre recombinase", "slug": "cre-recombinase", "hint": "From bacteriophage P1; site-specific recombination at loxP sites; conditional and tissue-specific gene knockouts." },
+            { "protein": "TEV protease", "slug": "tev-protease", "hint": "Tobacco Etch Virus NIa protease; highly specific ENLYFQ/S cleavage; the molecular scalpel used to remove affinity tags." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-q4",
+      "quarter": "Q4 2026",
+      "label": "Nature's Pharmacy",
+      "axis": "provenance",
+      "blurb": "Molecules that evolved to harm, redeployed to heal.",
+      "collections": [
+        {
+          "id": "2026-10",
+          "month": "October 2026",
+          "label": "Venom to vial",
+          "axis": "provenance",
+          "blurb": "Animal venoms that became medicines.",
+          "specimens": [
+            { "protein": "Exenatide", "slug": "exenatide", "hint": "Synthetic exendin-4 from Gila monster (Heloderma suspectum) saliva; GLP-1 receptor agonist for type 2 diabetes (Byetta)." },
+            { "protein": "Ziconotide", "slug": "ziconotide", "hint": "Synthetic omega-conotoxin MVIIA from the cone snail Conus magus; N-type calcium channel blocker for severe chronic pain (Prialt)." },
+            { "protein": "Teprotide and captopril", "slug": "teprotide-captopril", "hint": "Bradykinin-potentiating peptide from the pit viper Bothrops jararaca; teprotide inspired captopril, the first ACE inhibitor." },
+            { "protein": "Eptifibatide", "slug": "eptifibatide", "hint": "Derived from barbourin, a disintegrin in pygmy rattlesnake (Sistrurus miliarius barbouri) venom; GPIIb/IIIa antiplatelet drug." }
+          ]
+        },
+        {
+          "id": "2026-11",
+          "month": "November 2026",
+          "label": "The toxin toolbox",
+          "axis": "provenance",
+          "blurb": "Bacterial toxins turned into tools and cures.",
+          "specimens": [
+            { "protein": "Botulinum toxin", "slug": "botulinum-toxin", "hint": "From Clostridium botulinum; cleaves SNAREs to block acetylcholine release; the deadliest known toxin, and Botox for dystonia and cosmetics." },
+            { "protein": "Diphtheria toxin", "slug": "diphtheria-toxin", "hint": "From Corynebacterium diphtheriae; ADP-ribosylates EF-2; the basis of immunotoxins and, as a toxoid, the DTP vaccine." },
+            { "protein": "Cholera toxin", "slug": "cholera-toxin", "hint": "From Vibrio cholerae; ADP-ribosylates Gs-alpha; a classic G-protein signaling probe; the B subunit is an adjuvant and neural tracer." },
+            { "protein": "Tetanus toxin", "slug": "tetanus-toxin", "hint": "From Clostridium tetani; cleaves synaptobrevin; a retrograde axonal-transport tracer, and as a toxoid the tetanus vaccine." }
+          ]
+        },
+        {
+          "id": "2026-12",
+          "month": "December 2026",
+          "label": "Hormones we learned to make",
+          "axis": "impact",
+          "blurb": "The body's own proteins, turned into medicine.",
+          "specimens": [
+            { "protein": "Insulin", "slug": "insulin", "hint": "Banting & Best (Toronto, 1921); Sanger's sequencing (1951, first protein sequenced); first recombinant-DNA drug, Humulin (Genentech / Eli Lilly, 1982)." },
+            { "protein": "Human growth hormone", "slug": "human-growth-hormone", "hint": "Somatotropin; once pituitary-derived (until CJD risk), then recombinant (Protropin, 1985); treats growth disorders." },
+            { "protein": "Erythropoietin", "slug": "erythropoietin", "hint": "EPO; drives red-cell production; recombinant (Epogen, Amgen, 1989) for anemia; infamous as a doping agent." },
+            { "protein": "GLP-1 and glucagon", "slug": "glp-1-glucagon", "hint": "Opposing pancreatic and gut hormones of glucose control; GLP-1 agonists (semaglutide) now treat diabetes and obesity." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2027-q1",
+      "quarter": "Q1 2027",
+      "label": "The Immune Arsenal",
+      "axis": "function",
+      "blurb": "Antibodies and the biologics that grew from them.",
+      "collections": [
+        {
+          "id": "2027-01",
+          "month": "January 2027",
+          "label": "The antibody",
+          "axis": "family",
+          "blurb": "The Y-shaped molecule and the first drugs made from it.",
+          "specimens": [
+            { "protein": "Immunoglobulin G", "slug": "immunoglobulin-g", "hint": "The Y-shaped antibody; Edelman & Porter worked out its structure (Nobel 1972); the workhorse of adaptive immunity." },
+            { "protein": "The monoclonal antibody", "slug": "monoclonal-antibody", "hint": "Kohler & Milstein's hybridoma (1975, Nobel 1984); one antibody against one target; the birth of antibody therapeutics." },
+            { "protein": "Rituximab", "slug": "rituximab", "hint": "Anti-CD20 chimeric monoclonal; the first monoclonal antibody approved for cancer (1997); B-cell lymphoma." },
+            { "protein": "Trastuzumab", "slug": "trastuzumab", "hint": "Herceptin; humanized anti-HER2 monoclonal (Slamon); targeted therapy for HER2-positive breast cancer." }
+          ]
+        },
+        {
+          "id": "2027-02",
+          "month": "February 2027",
+          "label": "Checkpoints & signals",
+          "axis": "disease",
+          "blurb": "Proteins that turn the immune system up and down.",
+          "specimens": [
+            { "protein": "PD-1 and PD-L1", "slug": "pd-1-pd-l1", "hint": "Honjo's checkpoint; blockade (nivolumab, pembrolizumab) unleashes T cells on tumors; 2018 Nobel." },
+            { "protein": "CTLA-4", "slug": "ctla-4", "hint": "Allison's checkpoint; ipilimumab was the first checkpoint inhibitor approved; 2018 Nobel." },
+            { "protein": "TNF-alpha", "slug": "tnf-alpha", "hint": "Inflammatory cytokine; blockers (infliximab, adalimumab, etanercept) transformed rheumatoid arthritis and IBD." },
+            { "protein": "Interferon", "slug": "interferon", "hint": "Isaacs & Lindenmann, 1957; antiviral cytokines; IFN-alpha for hepatitis, IFN-beta for multiple sclerosis." }
+          ]
+        },
+        {
+          "id": "2027-03",
+          "month": "March 2027",
+          "label": "Engineered immunity",
+          "axis": "impact",
+          "blurb": "Immune proteins redesigned by human hands.",
+          "specimens": [
+            { "protein": "CAR-T receptor", "slug": "car-t-receptor", "hint": "Chimeric antigen receptor; T cells re-armed against cancer; tisagenlecleucel (Kymriah) for leukemia." },
+            { "protein": "Bispecific antibody", "slug": "bispecific-antibody", "hint": "Blinatumomab (CD19 x CD3 BiTE) grabs a T cell with one arm and a tumor cell with the other." },
+            { "protein": "Nanobody", "slug": "nanobody", "hint": "Camelid single-domain VHH (Hamers-Casterman, 1993); tiny and stable; caplacizumab and countless research reagents." },
+            { "protein": "Fc-fusion protein", "slug": "fc-fusion-protein", "hint": "Etanercept (a TNF receptor fused to antibody Fc); receptor 'traps' like aflibercept; a whole class of biologics." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2027-q2",
+      "quarter": "Q2 2027",
+      "label": "The Machinery of the Cell",
+      "axis": "function",
+      "blurb": "The fundamental molecular machines that keep a cell alive.",
+      "collections": [
+        {
+          "id": "2027-04",
+          "month": "April 2027",
+          "label": "Motors",
+          "axis": "function",
+          "blurb": "Proteins that move.",
+          "specimens": [
+            { "protein": "Myosin", "slug": "myosin", "hint": "Actin-based motor of muscle; Huxley's sliding-filament model; a vast superfamily beyond muscle." },
+            { "protein": "Kinesin", "slug": "kinesin", "hint": "Microtubule plus-end motor; anterograde axonal transport; discovered by Vale & Sheetz, 1985." },
+            { "protein": "Dynein", "slug": "dynein", "hint": "Microtubule minus-end motor; retrograde transport and the beating of cilia and flagella." },
+            { "protein": "ATP synthase", "slug": "atp-synthase", "hint": "A rotary motor that makes ATP; Boyer & Walker's binding-change mechanism (Nobel 1997); Mitchell's chemiosmosis." }
+          ]
+        },
+        {
+          "id": "2027-05",
+          "month": "May 2027",
+          "label": "Scaffolds & shape",
+          "axis": "function",
+          "blurb": "Proteins that build structure.",
+          "specimens": [
+            { "protein": "Actin", "slug": "actin", "hint": "The most abundant cytoskeletal protein; microfilaments; cell shape, division, and motility." },
+            { "protein": "Tubulin", "slug": "tubulin", "hint": "Alpha/beta subunit of microtubules; the mitotic spindle; the target of taxol and colchicine." },
+            { "protein": "Collagen", "slug": "collagen", "hint": "The most abundant protein in mammals; a triple helix; connective tissue; the vitamin-C link to scurvy." },
+            { "protein": "Titin", "slug": "titin", "hint": "The largest known protein (~34,000 residues); the molecular spring of the sarcomere; muscle elasticity." }
+          ]
+        },
+        {
+          "id": "2027-06",
+          "month": "June 2027",
+          "label": "Information machines",
+          "axis": "function",
+          "blurb": "Proteins that read and write the code of life.",
+          "specimens": [
+            { "protein": "RNA polymerase", "slug": "rna-polymerase", "hint": "Transcribes DNA into RNA; Roger Kornberg's structures (Nobel 2006); a multisubunit machine." },
+            { "protein": "The ribosome", "slug": "ribosome", "hint": "A ribonucleoprotein machine that translates mRNA into protein; Ramakrishnan, Steitz, Yonath (Nobel 2009)." },
+            { "protein": "DNA polymerase", "slug": "dna-polymerase", "hint": "Replicates DNA; Arthur Kornberg's Pol I (Nobel 1959); proofreading and replication fidelity." },
+            { "protein": "Histones", "slug": "histones", "hint": "Spool DNA into nucleosomes; the histone code; the foundation of chromatin and epigenetics." }
+          ]
+        }
+      ]
+    }
   ]
 }

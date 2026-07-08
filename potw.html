@@ -50,6 +50,15 @@
       color: var(--tannin);
     }
 
+    /* === Collection / season band === */
+    .collection-band { border-bottom: 1px solid var(--ink-hairline); background: var(--parchment-mid); }
+    .collection-band .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 2.5rem; padding-block: 0.8rem; }
+    .cb-item { display: flex; align-items: baseline; gap: 0.6rem; }
+    .cb-kicker { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); white-space: nowrap; }
+    .cb-label { font-variation-settings: "wdth" 95, "wght" 600; color: var(--ink); font-size: 0.9375rem; white-space: nowrap; }
+    .cb-blurb { font-size: 0.8125rem; color: var(--ink-soft); }
+    @media (max-width: 640px) { .cb-blurb { display: none; } }
+
     /* === Issue header === */
     .issue {
       padding-block: clamp(3rem, 7vw, 5rem) clamp(2rem, 4vw, 3rem);
@@ -333,6 +342,13 @@
       <span class="column-name">Protein of the Week</span>
     </div>
   </header>
+
+  <div class="collection-band">
+    <div class="wrap">
+      <span class="cb-item"><span class="cb-kicker">This month</span><span class="cb-label">Seeing</span><span class="cb-blurb">Proteins that made the invisible visible.</span></span>
+      <span class="cb-item"><span class="cb-kicker">This season</span><span class="cb-label">The Instruments</span><span class="cb-blurb">Proteins that stopped being something biologists studied and became something they use.</span></span>
+    </div>
+  </div>
 
   <main id="main">
 
