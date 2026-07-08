@@ -374,6 +374,80 @@ SUBSCRIBE_HTML = """    <section class="subscribe" id="subscribe">
       </div>
     </section>"""
 
+REVEAL_CSS = """
+    /* === First-visit reveal modal === */
+    .reveal[hidden] { display: none; }
+    .reveal { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 1.5rem; }
+    .reveal-backdrop { position: absolute; inset: 0; background: oklch(22% 0.02 70 / 0.55); animation: reveal-fade 320ms ease-out both; }
+    .reveal-card { position: relative; z-index: 1; width: 100%; max-width: 30rem; background: var(--parchment-pale); border: 1px solid var(--ink-hairline-strong); padding: clamp(1.75rem, 4vw, 2.75rem); box-shadow: 0 24px 64px -24px oklch(22% 0.02 70 / 0.45); animation: reveal-rise 560ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .reveal-flush { display: block; width: 34px; height: 1px; background: var(--tannin); margin-bottom: 1.1rem; }
+    .reveal-eyebrow { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--tannin); display: block; }
+    .reveal-no { display: block; margin-top: 0.5rem; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .reveal-name { font-variation-settings: "wdth" 95, "wght" 700; font-size: clamp(1.75rem, 4vw, 2.5rem); line-height: 1.05; letter-spacing: -0.02em; color: var(--ink); margin: 0.75rem 0; animation: reveal-name 720ms 140ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .reveal-dek { font-size: 1rem; line-height: 1.5; color: var(--ink-soft); }
+    .reveal-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: 1.75rem; }
+    .reveal-close { position: absolute; top: 0.6rem; right: 0.8rem; font-size: 1.5rem; line-height: 1; color: var(--ink-soft); padding: 0.2rem 0.4rem; }
+    .reveal-close:hover { color: var(--ink); }
+    @keyframes reveal-fade { from { opacity: 0; } }
+    @keyframes reveal-rise { from { opacity: 0; transform: translateY(18px) scale(0.985); } }
+    @keyframes reveal-name { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }"""
+
+REVEAL_SCRIPT = """  <script>
+    /* First visit of the week: reveal this week's protein once, then remember (per ISO week). */
+    (function () {
+      var modal = document.getElementById('revealModal');
+      if (!modal) return;
+      var iso = (modal.getAttribute('data-issue-date') || '').split('-');
+      if (iso.length !== 3) return;
+      function weekKey(d) {
+        var t = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+        t.setDate(t.getDate() - ((t.getDay() + 6) % 7) + 3);
+        var firstThu = new Date(t.getFullYear(), 0, 4);
+        var wk = 1 + Math.round(((t - firstThu) / 86400000 - 3 + ((firstThu.getDay() + 6) % 7)) / 7);
+        return t.getFullYear() + '-W' + wk;
+      }
+      var issue = new Date(+iso[0], +iso[1] - 1, +iso[2]);
+      var thisWeek = weekKey(new Date());
+      if (weekKey(issue) !== thisWeek) return;
+      var key = 'potw-revealed-' + thisWeek + '-' + (modal.getAttribute('data-slug') || '');
+      try { if (localStorage.getItem(key)) return; } catch (e) {}
+      function close() {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        try { localStorage.setItem(key, '1'); } catch (e) {}
+        document.removeEventListener('keydown', onKey);
+      }
+      function onKey(e) { if (e.key === 'Escape') close(); }
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.addEventListener('keydown', onKey);
+      var els = modal.querySelectorAll('[data-close]');
+      for (var i = 0; i < els.length; i++) els[i].addEventListener('click', close);
+    })();
+  </script>"""
+
+
+def _reveal_modal(n: int, issue: dict) -> str:
+    """The once-a-week reveal dialog for an issue page (shown by REVEAL_SCRIPT)."""
+    return (
+        f'  <div class="reveal" id="revealModal" hidden aria-hidden="true" '
+        f'data-issue-date="{esc(issue.get("date_iso", ""))}" data-slug="{esc(issue.get("slug", ""))}">\n'
+        '    <div class="reveal-backdrop" data-close></div>\n'
+        '    <div class="reveal-card" role="dialog" aria-modal="true" aria-labelledby="revealName">\n'
+        '      <button class="reveal-close" data-close aria-label="Close">&times;</button>\n'
+        '      <span class="reveal-flush"></span>\n'
+        "      <span class=\"reveal-eyebrow\">This week's protein</span>\n"
+        f'      <span class="reveal-no">No. {n:03d} &nbsp;&middot;&nbsp; {esc(issue.get("date_display", ""))}</span>\n'
+        f'      <h2 class="reveal-name" id="revealName">{esc(issue["protein"])}</h2>\n'
+        f'      <p class="reveal-dek">{esc(issue["dek"])}</p>\n'
+        '      <div class="reveal-actions">\n'
+        "        <button class=\"btn-primary\" data-close>Read this week's issue</button>\n"
+        '        <a class="link-arrow" href="#subscribe" data-close>Follow the series <span class="arrow">&rarr;</span></a>\n'
+        '      </div>\n'
+        '    </div>\n'
+        '  </div>'
+    )
+
 
 def _announcement_band(ann: dict) -> str:
     """For a month kickoff, a ribbon linking up to its season; empty for a season kickoff."""
@@ -527,6 +601,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     archive_rows = render_archive(issues, n)
     org = esc(_organism(issue["binomial"]))
     band = _collection_band(issue)
+    reveal_modal = _reveal_modal(n, issue)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -585,6 +660,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
 {BAND_CSS}
 {ARCHIVE_GROUP_CSS}
 {SUBSCRIBE_CSS}
+{REVEAL_CSS}
   </style>
 </head>
 <body>
@@ -681,7 +757,9 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     </div>
   </footer>
 
+{reveal_modal}
 {TIMELINE_SCRIPT}
+{REVEAL_SCRIPT}
 </body>
 </html>
 """
