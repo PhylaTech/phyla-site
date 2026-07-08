@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-07T09:57:19.186152+00:00",
+  "generated_at": "2026-07-08T08:40:49.675460+00:00",
   "summary": {
-    "total_citations": 2460,
+    "total_citations": 2461,
     "countries_reached": 76,
     "citing_institutions": 3428,
     "disciplines_impacted": 23,
@@ -118,7 +118,7 @@
       "title": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
       "journal": "mBio",
       "year": 2020,
-      "cited_by_count": 75,
+      "cited_by_count": 76,
       "field": "Agricultural and Biological Sciences",
       "authors": [
         "Evan Roy Rees"
@@ -403,7 +403,7 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 116,
+      "citations": 117,
       "institutions": 180
     },
     {
@@ -599,20 +599,20 @@
       "institutions": 21
     },
     {
+      "country": "Israel",
+      "country_code": "IL",
+      "lat": 31.0,
+      "lon": 34.8,
+      "citations": 22,
+      "institutions": 15
+    },
+    {
       "country": "Ireland",
       "country_code": "IE",
       "lat": 53.1,
       "lon": -7.7,
       "citations": 21,
       "institutions": 20
-    },
-    {
-      "country": "Israel",
-      "country_code": "IL",
-      "lat": 31.0,
-      "lon": 34.8,
-      "citations": 21,
-      "institutions": 15
     },
     {
       "country": "Iran",
@@ -1164,6 +1164,13 @@
       "citations": 26
     },
     {
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 26
+    },
+    {
       "name": "Zhejiang University",
       "lat": 30.29365,
       "lon": 120.16142,
@@ -1176,13 +1183,6 @@
       "lon": 114.12924,
       "country_code": "HK",
       "citations": 26
-    },
-    {
-      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 25
     },
     {
       "name": "Peking University",
@@ -2024,7 +2024,7 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 219,
+      "count": 220,
       "color": "#0EA5E9"
     },
     {
@@ -2162,7 +2162,7 @@
         "label": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
-        "citations": 75,
+        "citations": 76,
         "year": 2020
       },
       {
@@ -2434,7 +2434,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1047,
+        "citations": 1050,
         "year": 2024
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 367,
+        "citations": 369,
         "year": 2025
       },
       {
@@ -2486,19 +2486,19 @@
         "year": 2025
       },
       {
-        "id": "W4402465580",
-        "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
-        "field": "Medicine",
+        "id": "W4406572846",
+        "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 73,
-        "year": 2024
+        "citations": 74,
+        "year": 2025
       },
       {
         "id": "W2994786999",
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 346,
+        "citations": 347,
         "year": 2019
       },
       {
@@ -2618,7 +2618,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 304,
+        "citations": 305,
         "year": 2020
       },
       {
@@ -2674,7 +2674,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 457,
+        "citations": 458,
         "year": 2023
       },
       {
@@ -2858,7 +2858,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 53,
+        "citations": 54,
         "year": 2023
       },
       {
@@ -2906,7 +2906,7 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2019
       },
       {
@@ -2923,14 +2923,6 @@
         "field": "Medicine",
         "type": "citing",
         "citations": 97,
-        "year": 2018
-      },
-      {
-        "id": "W2787455282",
-        "label": "Parallel lives of symbionts and hosts: chemical mutualism in marine animals",
-        "field": "Environmental Science",
-        "type": "citing",
-        "citations": 76,
         "year": 2018
       },
       {
@@ -3002,7 +2994,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2023
       },
       {
@@ -3010,7 +3002,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 63,
+        "citations": 64,
         "year": 2024
       },
       {
@@ -3098,7 +3090,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4860,
+        "citations": 4863,
         "year": 2017
       },
       {
@@ -3210,7 +3202,7 @@
         "label": "The confluence of big data and evolutionary genome mining for the discovery of natural products",
         "field": "Medicine",
         "type": "citing",
-        "citations": 88,
+        "citations": 89,
         "year": 2021
       },
       {
@@ -3346,7 +3338,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5038,
+        "citations": 5044,
         "year": 2021
       },
       {
@@ -3620,7 +3612,7 @@
       },
       {
         "source": "W4386607677",
-        "target": "W4402465580",
+        "target": "W4406572846",
         "strength": 0.5
       },
       {
@@ -3940,7 +3932,7 @@
       },
       {
         "source": "W2513652105",
-        "target": "W2787455282",
+        "target": "W3006681944",
         "strength": 0.5
       },
       {
@@ -3980,7 +3972,7 @@
       },
       {
         "source": "W2769473564",
-        "target": "W2787455282",
+        "target": "W3006681944",
         "strength": 0.5
       },
       {
