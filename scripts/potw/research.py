@@ -272,8 +272,8 @@ def main() -> int:
         protein = specimen["protein"]
         slug = args.slug or specimen.get("slug") or slugify(protein)
         hint = args.hint or specimen.get("hint", "")
-        collection = {"label": coll["label"], "blurb": coll.get("blurb", ""), "period": coll.get("month", "")}
-        season = {"label": seas["label"], "blurb": seas.get("blurb", ""), "period": seas.get("quarter", "")}
+        collection = {"id": coll.get("id", ""), "label": coll["label"], "blurb": coll.get("blurb", ""), "period": coll.get("month", "")}
+        season = {"id": seas.get("id", ""), "label": seas["label"], "blurb": seas.get("blurb", ""), "period": seas.get("quarter", "")}
 
     today = dt.date.today()
     print(f"Researching No. {number:03d}: {protein} ...", file=sys.stderr)

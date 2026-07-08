@@ -61,6 +61,7 @@ class DraftIssue(BaseModel):
 class ThemeRef(BaseModel):
     """A collection (month) or season (quarter) an issue belongs to."""
 
+    id: str = Field(default="", description="Calendar id, e.g. '2026-07' (month) or '2026-q3' (quarter); links to its kickoff page.")
     label: str = Field(description="Display name, e.g. 'Seeing' or 'The Instruments'.")
     blurb: str = Field(default="", description="One-line, reader-facing description of the grouping.")
     period: str = Field(default="", description="Calendar period, e.g. 'July 2026' (month) or 'Q3 2026' (quarter).")
@@ -77,3 +78,35 @@ class Issue(DraftIssue):
     # Editorial placement in the calendar. Optional: an off-queue (--protein) issue has none.
     collection: ThemeRef | None = None
     season: ThemeRef | None = None
+
+
+class AnnouncementFeature(BaseModel):
+    """One item listed in a kickoff: a protein (month) or a collection (season)."""
+
+    name: str = Field(description="Protein or collection name.")
+    note: str = Field(default="", description="One-line description.")
+    href: str = Field(default="", description="Optional link to the issue page or child kickoff.")
+
+
+class DraftAnnouncement(BaseModel):
+    """The copy an announcement writer produces (no metadata)."""
+
+    heading: str = Field(description="Compelling, sentence-case headline for the kickoff.")
+    dek: str = Field(description="One-sentence standfirst under the heading.")
+    paragraphs: list[str] = Field(description="Two or three short paragraphs introducing the theme and why these belong together. No em dashes.")
+    feature_notes: list[str] = Field(default_factory=list, description="One short note (<= 90 chars) per featured item, in the given order. No em dashes. Optional.")
+
+
+class Announcement(DraftAnnouncement):
+    """A month or season kickoff: draft copy plus calendar metadata."""
+
+    kind: str  # "collection" (month) or "season" (quarter)
+    period_id: str  # e.g. "2026-07" or "2026-q3"
+    period: str  # e.g. "July 2026" or "Q3 2026"
+    label: str  # e.g. "Seeing" or "The Instruments"
+    blurb: str = ""
+    axis: str = ""
+    parent: ThemeRef | None = None  # the season a collection sits in
+    features: list[AnnouncementFeature] = []
+    date_iso: str = ""
+    date_display: str = ""

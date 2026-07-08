@@ -1,0 +1,24 @@
+{
+  "kind": "collection",
+  "period_id": "2026-07",
+  "period": "July 2026",
+  "label": "Seeing",
+  "blurb": "Proteins that made the invisible visible.",
+  "axis": "function",
+  "parent": { "id": "2026-q3", "label": "The Instruments", "blurb": "Proteins that stopped being something biologists studied and became something they use.", "period": "Q3 2026" },
+  "heading": "First, learn to see.",
+  "dek": "July's proteins share one job: they make the invisible parts of a living cell show themselves.",
+  "paragraphs": [
+    "Before you can study a thing, you have to see it, and for most of biology's history the most interesting things were far too small and too clear to watch at work. This month's four proteins each solved a piece of that problem.",
+    "One glows on its own. One makes light from a chemical reaction. One turns colorless colonies blue. One took the first and painted it in a range of new colors. Together they turned the microscope from a way of looking at dead, stained tissue into a way of watching life happen in real time.",
+    "We begin, fittingly, with the jellyfish protein that started it all."
+  ],
+  "features": [
+    { "name": "Green Fluorescent Protein", "note": "A jellyfish's glow, turned into a universal tag.", "href": "potw.html" },
+    { "name": "Firefly luciferase", "note": "Light on demand, powered by ATP.", "href": "" },
+    { "name": "Beta-galactosidase (LacZ)", "note": "The blue-white readout that made cloning legible.", "href": "" },
+    { "name": "DsRed and mCherry", "note": "The palette that took the glow beyond green.", "href": "" }
+  ],
+  "date_iso": "2026-07-01",
+  "date_display": "1 July 2026"
+}

@@ -25,6 +25,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ISSUES_DIR = HERE / "issues"
+ANNOUNCE_DIR = HERE / "announcements"
 SITE_ROOT = HERE.parent.parent  # repo root (worktree)
 CANONICAL = SITE_ROOT / "potw.html"
 
@@ -38,6 +39,17 @@ def esc(s: str) -> str:
 
 def issue_href(number: int, slug: str) -> str:
     return "potw.html" if number == 1 else f"potw-{number:03d}-{slug}.html"
+
+
+def announce_href(period_id: str) -> str:
+    return f"potw-{period_id}.html"
+
+
+def announced_ids() -> set:
+    """Period ids with a drafted announcement, so pages can link to their kickoff."""
+    if not ANNOUNCE_DIR.exists():
+        return set()
+    return {p.stem for p in ANNOUNCE_DIR.glob("*.json")}
 
 
 def load_all_issues() -> list[dict]:
@@ -67,6 +79,7 @@ def render_archive(issues: list[dict], current_number: int) -> str:
     Issues with no season (off-calendar --protein runs) collect into a trailing,
     header-less group, so nothing is ever dropped from the archive.
     """
+    announced = announced_ids()
     order: list[str] = []
     seasons: dict[str, dict] = {}
     for d in issues:
@@ -88,22 +101,31 @@ def render_archive(issues: list[dict], current_number: int) -> str:
         for cl in grp["col_order"]:
             col = grp["cols"][cl]
             if cl:
-                period = col["ref"].get("period", "")
+                cref = col["ref"]
+                period = cref.get("period", "")
                 period_span = f'<span class="arch-collection-period">{esc(period)}</span>' if period else ""
-                body.append(
-                    '            <div class="arch-collection-head">'
-                    f'<span class="arch-collection-name">{esc(cl)}</span>{period_span}</div>'
+                cid = cref.get("id", "")
+                name_el = (
+                    f'<a class="arch-collection-name" href="{announce_href(cid)}">{esc(cl)}</a>'
+                    if cid and cid in announced
+                    else f'<span class="arch-collection-name">{esc(cl)}</span>'
                 )
+                body.append(f'            <div class="arch-collection-head">{name_el}{period_span}</div>')
             body.extend(col["rows"])
         body_html = "\n".join(body)
         if sl:
             s = grp["ref"]
             kicker = f'<span class="arch-season-kicker">{esc(s.get("period", ""))}</span>' if s.get("period") else ""
             blurb = f'<span class="arch-season-blurb">{esc(s.get("blurb", ""))}</span>' if s.get("blurb") else ""
+            sid = s.get("id", "")
+            name_el = (
+                f'<a class="arch-season-name" href="{announce_href(sid)}">{esc(sl)}</a>'
+                if sid and sid in announced
+                else f'<span class="arch-season-name">{esc(sl)}</span>'
+            )
             blocks.append(
                 '          <div class="arch-season">\n'
-                f'            <div class="arch-season-head">{kicker}'
-                f'<span class="arch-season-name">{esc(sl)}</span>{blurb}</div>\n'
+                f'            <div class="arch-season-head">{kicker}{name_el}{blurb}</div>\n'
                 f"{body_html}\n"
                 "          </div>"
             )
@@ -192,13 +214,22 @@ BAND_CSS = """
     .cb-kicker { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); white-space: nowrap; }
     .cb-label { font-variation-settings: "wdth" 95, "wght" 600; color: var(--ink); font-size: 0.9375rem; white-space: nowrap; }
     .cb-blurb { font-size: 0.8125rem; color: var(--ink-soft); }
+    a.cb-label { text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
+    a.cb-label:hover { color: var(--tannin); border-color: var(--tannin); }
     @media (max-width: 640px) { .cb-blurb { display: none; } }"""
 
 
-def _band_item(kicker: str, ref: dict) -> str:
+def _band_item(kicker: str, ref: dict, announced: set) -> str:
+    label = esc(ref.get("label", ""))
+    rid = ref.get("id", "")
+    label_el = (
+        f'<a class="cb-label" href="{announce_href(rid)}">{label}</a>'
+        if rid and rid in announced
+        else f'<span class="cb-label">{label}</span>'
+    )
     return (
         f'        <span class="cb-item"><span class="cb-kicker">{kicker}</span>'
-        f'<span class="cb-label">{esc(ref.get("label", ""))}</span>'
+        f'{label_el}'
         f'<span class="cb-blurb">{esc(ref.get("blurb", ""))}</span></span>'
     )
 
@@ -208,11 +239,12 @@ def _collection_band(issue: dict) -> str:
     coll, seas = issue.get("collection"), issue.get("season")
     if not coll and not seas:
         return ""
+    announced = announced_ids()
     items = []
     if coll:
-        items.append(_band_item("This month", coll))
+        items.append(_band_item("This month", coll, announced))
     if seas:
-        items.append(_band_item("This season", seas))
+        items.append(_band_item("This season", seas, announced))
     inner = "\n".join(items)
     return (
         '  <div class="collection-band">\n'
@@ -233,7 +265,133 @@ ARCHIVE_GROUP_CSS = """
     .arch-season-blurb { font-size: 0.875rem; color: var(--ink-soft); flex-basis: 100%; max-width: 60ch; }
     .arch-collection-head { display: flex; align-items: baseline; gap: 0.75rem; margin-top: 1.15rem; padding-bottom: 0.15rem; }
     .arch-collection-name { font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); }
-    .arch-collection-period { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }"""
+    .arch-collection-period { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    a.arch-season-name { text-decoration: none; }
+    a.arch-season-name:hover { color: var(--tannin); }
+    a.arch-collection-name { text-decoration: none; border-bottom: 1px solid transparent; }
+    a.arch-collection-name:hover { border-color: var(--tannin); }"""
+
+ANNOUNCEMENT_CSS = """
+    /* === Kickoff (announcement) page === */
+    .kickoff { padding-block: clamp(3rem, 7vw, 5rem) clamp(3rem, 6vw, 5rem); }
+    .kickoff .issue-line { display: inline-flex; align-items: center; gap: 0.625rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .kickoff .issue-line::before { content: ""; display: inline-block; width: 28px; height: 1px; background: var(--tannin); }
+    .kickoff h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); margin-bottom: 1.25rem; max-width: 20ch; }
+    .kickoff .dek { font-size: 1.375rem; line-height: 1.4; color: var(--ink-soft); max-width: 46ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+    .kickoff-body { max-width: 62ch; }
+    .kickoff-body p { font-size: 1.0625rem; line-height: 1.65; color: var(--ink-soft); margin-bottom: 1rem; }
+    .kickoff-body p:last-child { margin-bottom: 0; }
+    .kickoff-features { margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.75rem; border-top: 1px solid var(--ink-hairline); }
+    .kickoff-features > .label { display: block; margin-bottom: 1rem; }
+    .feature-list { list-style: none; max-width: 62ch; }
+    .feat { display: grid; grid-template-columns: minmax(0, 15rem) 1fr; gap: 0.4rem 1.75rem; align-items: baseline; padding-block: 0.9rem; border-bottom: 1px solid var(--ink-hairline); }
+    .feat:first-child { border-top: 1px solid var(--ink-hairline); }
+    .feat-name { font-variation-settings: "wdth" 95, "wght" 600; color: var(--ink); font-size: 1.0625rem; }
+    a.feat-name { text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
+    a.feat-name:hover { color: var(--tannin); border-color: var(--tannin); }
+    .feat-note { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.5; }
+    .kickoff-back { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+    @media (max-width: 600px) { .feat { grid-template-columns: 1fr; gap: 0.2rem; } }"""
+
+
+def _announcement_band(ann: dict) -> str:
+    """For a month kickoff, a ribbon linking up to its season; empty for a season kickoff."""
+    parent = ann.get("parent")
+    if ann.get("kind") == "collection" and parent:
+        item = _band_item("This season", parent, announced_ids())
+        return f'  <div class="collection-band">\n    <div class="wrap">\n{item}\n    </div>\n  </div>'
+    return ""
+
+
+def render_announcement(ann: dict) -> str:
+    """Render a month or season kickoff announcement into a standalone HTML page."""
+    kind = ann.get("kind", "collection")
+    period = esc(ann.get("period", ""))
+    label = esc(ann.get("label", ""))
+    heading = esc(ann.get("heading", ""))
+    dek = esc(ann.get("dek", ""))
+    paras = "\n".join(f"            <p>{esc(p)}</p>" for p in ann.get("paragraphs", []))
+    feats = []
+    for f in ann.get("features", []):
+        name, note, href = esc(f.get("name", "")), esc(f.get("note", "")), f.get("href", "")
+        name_el = f'<a class="feat-name" href="{esc(href)}">{name}</a>' if href else f'<span class="feat-name">{name}</span>'
+        feats.append(f'            <li class="feat">{name_el}<span class="feat-note">{note}</span></li>')
+    features_html = "\n".join(feats)
+    kicker = "The season ahead" if kind == "season" else "The month ahead"
+    feat_label = "This season's collections" if kind == "season" else "In this collection"
+    band = _announcement_band(ann)
+    period_id = ann.get("period_id", "")
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{label}: Protein of the Week, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="{dek}">
+  <link rel="canonical" href="https://phylatech.com/{announce_href(period_id)}">
+  <meta name="view-transition" content="same-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .masthead {{ border-bottom: 1px solid var(--ink-hairline); background: var(--parchment); }}
+    .masthead-inner {{ display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding-block: 1.25rem; flex-wrap: wrap; }}
+    .masthead .column-name {{ font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }}
+{BAND_CSS}
+{ANNOUNCEMENT_CSS}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <span class="column-name">Protein of the Week</span>
+    </div>
+  </header>
+{band}
+  <main id="main">
+    <section class="kickoff">
+      <div class="wrap">
+        <span class="issue-line label">{kicker} &nbsp;&middot;&nbsp; {period}</span>
+        <h1 class="display">{heading}</h1>
+        <p class="dek">{dek}</p>
+        <div class="kickoff-body">
+{paras}
+        </div>
+        <div class="kickoff-features">
+          <span class="label">{feat_label}</span>
+          <ol class="feature-list">
+{features_html}
+          </ol>
+        </div>
+        <p class="kickoff-back"><a class="link-arrow" href="potw.html">The latest issue <span class="arrow">&rarr;</span></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="index.html">Main site</a>
+        <a href="potw.html">Protein of the Week</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+"""
 
 
 def render_page(issue: dict, issues: list[dict]) -> str:
@@ -425,18 +583,37 @@ def render_page(issue: dict, issues: list[dict]) -> str:
 """
 
 
+def render_announcement_file(path: Path) -> None:
+    ann = json.loads(path.read_text())
+    dest = SITE_ROOT / announce_href(ann["period_id"])
+    dest.write_text(render_announcement(ann))
+    print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
+
+
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Render a POTW issue JSON to HTML.")
+    ap = argparse.ArgumentParser(description="Render a POTW issue or announcement JSON to HTML.")
     ap.add_argument("issue", nargs="?", help="Issue JSON filename (in scripts/potw/issues/) or path.")
-    ap.add_argument("--all", action="store_true", help="Re-render every issue (2+).")
+    ap.add_argument("--all", action="store_true", help="Re-render every issue (2+) and every announcement.")
+    ap.add_argument("--announcement", help="Render one announcement (id like 2026-07 / 2026-q3, or a path).")
     ap.add_argument("--set-latest", action="store_true", help="Also write this issue to potw.html (the canonical page, served at /potw).")
     args = ap.parse_args()
 
     all_issues = load_all_issues()
-    if not all_issues:
-        print("No issues found in scripts/potw/issues/.", file=sys.stderr)
-        return 1
 
+    # Which announcements to (re-)render this run.
+    ann_targets: list[Path] = []
+    if args.announcement:
+        p = Path(args.announcement)
+        if not p.exists():
+            p = ANNOUNCE_DIR / (args.announcement if args.announcement.endswith(".json") else f"{args.announcement}.json")
+        if not p.exists():
+            print(f"Announcement not found: {args.announcement}", file=sys.stderr)
+            return 1
+        ann_targets = [p]
+    elif args.all and ANNOUNCE_DIR.exists():
+        ann_targets = sorted(ANNOUNCE_DIR.glob("*.json"))
+
+    # Which issues to render this run.
     if args.all:
         targets = [d for d in all_issues if d["number"] != 1]
     elif args.issue:
@@ -444,8 +621,14 @@ def main() -> int:
         if not p.exists():
             p = ISSUES_DIR / args.issue
         targets = [json.loads(p.read_text())]
+    elif args.announcement:
+        targets = []  # announcement-only run
     else:
-        print("Pass an issue filename or --all.", file=sys.stderr)
+        print("Pass an issue filename, --announcement <id>, or --all.", file=sys.stderr)
+        return 1
+
+    if not all_issues and not ann_targets:
+        print("Nothing to render (no issues in scripts/potw/issues/).", file=sys.stderr)
         return 1
 
     for issue in targets:
@@ -458,12 +641,16 @@ def main() -> int:
             dest.write_text(page)
             print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
 
-    # Refresh the archive region on every POTW page.
-    update_archive_in_file(CANONICAL, all_issues, current_number=_canonical_number(all_issues, args))
-    for d in all_issues:
-        if d["number"] != 1:
-            update_archive_in_file(SITE_ROOT / issue_href(d["number"], d["slug"]), all_issues, current_number=d["number"])
-    print("Archive lists refreshed.", file=sys.stderr)
+    for ann_path in ann_targets:
+        render_announcement_file(ann_path)
+
+    # Refresh the archive region on every POTW page (kickoff links appear once drafted).
+    if all_issues:
+        update_archive_in_file(CANONICAL, all_issues, current_number=_canonical_number(all_issues, args))
+        for d in all_issues:
+            if d["number"] != 1:
+                update_archive_in_file(SITE_ROOT / issue_href(d["number"], d["slug"]), all_issues, current_number=d["number"])
+        print("Archive lists refreshed.", file=sys.stderr)
     return 0
 
 

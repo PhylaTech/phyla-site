@@ -78,6 +78,29 @@ Issue No. 1 (GFP) is the hand-authored launch page at `potw.html` (served at
 `potw-<NNN>-<slug>.html` at the site root. Every render rewrites the archive list
 between the `POTW:ARCHIVE` markers on all POTW pages.
 
+## Monthly and quarterly announcements
+
+At the start of each month and quarter, a short kickoff introduces the theme ("the
+proteins this month are all ..."). `announce.py` drafts one with a single writer
+sub-agent (no web search: it frames the proteins the weekly issues cover in depth, so
+it stays high-level and invents nothing).
+
+```bash
+mamba run -n phyla-site python scripts/potw/announce.py --list           # calendar + what is drafted
+mamba run -n phyla-site python scripts/potw/announce.py --period 2026-07  # a month (collection)
+mamba run -n phyla-site python scripts/potw/announce.py --period 2026-q3  # a quarter (season)
+
+# Render the kickoff page (and refresh the links on every POTW page)
+mamba run -n phyla-site python scripts/potw/render.py --announcement 2026-07
+```
+
+Output is `announcements/<period-id>.json`, rendered to `potw-<period-id>.html` (e.g.
+`potw-2026-07.html`, `potw-2026-q3.html`). Kickoff pages list the proteins (for a month)
+or child collections (for a quarter); the issue pages' "this month / this season" band
+and the grouped archive link to a kickoff once it is drafted. The launch month (Seeing)
+and season (The Instruments) kickoffs are hand-authored, like the GFP issue itself;
+`announce.py` drafts the rest. Override the model with `POTW_ANNOUNCE_MODEL`.
+
 ## Models and cost
 
 Defaults to `claude-opus-4-8` for both research and writing. Each issue is roughly
@@ -109,5 +132,7 @@ substitute for a fact-check.
 | `proteins.json` | The editorial calendar: seasons (quarters) to collections (months) to specimens (weeks). See above. |
 | `issue_schema.py` | Pydantic schema shared by the writer and the renderer. |
 | `research.py` | Multi-subagent research + structured drafting (needs the API). |
-| `render.py` | Issue JSON to HTML + archive refresh (deterministic, no API). |
+| `announce.py` | Drafts a month/quarter kickoff announcement (one sub-agent, needs the API). |
+| `render.py` | Issue and announcement JSON to HTML + archive refresh (deterministic, no API). |
 | `issues/*.json` | The source record for each issue. |
+| `announcements/*.json` | The source record for each month/quarter kickoff. |

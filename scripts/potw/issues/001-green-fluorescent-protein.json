@@ -66,6 +66,6 @@
     { "year": "1996", "title": "The barrel comes into view", "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams." },
     { "year": "2008", "title": "The Nobel Prize in Chemistry", "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest." }
   ],
-  "collection": { "label": "Seeing", "blurb": "Proteins that made the invisible visible.", "period": "July 2026" },
-  "season": { "label": "The Instruments", "blurb": "Proteins that stopped being something biologists studied and became something they use.", "period": "Q3 2026" }
+  "collection": { "id": "2026-07", "label": "Seeing", "blurb": "Proteins that made the invisible visible.", "period": "July 2026" },
+  "season": { "id": "2026-q3", "label": "The Instruments", "blurb": "Proteins that stopped being something biologists studied and became something they use.", "period": "Q3 2026" }
 }

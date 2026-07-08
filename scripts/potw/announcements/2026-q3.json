@@ -1,0 +1,23 @@
+{
+  "kind": "season",
+  "period_id": "2026-q3",
+  "period": "Q3 2026",
+  "label": "The Instruments",
+  "blurb": "Proteins that stopped being something biologists studied and became something they use.",
+  "axis": "impact",
+  "parent": null,
+  "heading": "The tools were alive first.",
+  "dek": "This season gathers proteins that stopped being subjects of biology and became its instruments.",
+  "paragraphs": [
+    "Every field runs on tools it has stopped thinking about. In biology, a surprising number of those tools are themselves proteins: molecules first studied as curiosities, then quietly conscripted into the daily work of the lab.",
+    "From July through September we follow that turn. First the proteins that let us see, then the ones that let us copy the genetic code, then the ones that let us cut and edit it. Each began in some organism minding its own business, and each ended up on a bench, in a kit, in a protocol run a million times a day.",
+    "Three months, three kinds of work, one idea: the tools were alive first."
+  ],
+  "features": [
+    { "name": "Seeing", "note": "Proteins that made the invisible visible.", "href": "potw-2026-07.html" },
+    { "name": "Copying", "note": "The enzymes that read, amplify, and rewrite the code.", "href": "" },
+    { "name": "Cutting & editing", "note": "Surgery on DNA and on other proteins.", "href": "" }
+  ],
+  "date_iso": "2026-07-01",
+  "date_display": "1 July 2026"
+}

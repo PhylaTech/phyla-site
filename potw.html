@@ -57,6 +57,8 @@
     .cb-kicker { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); white-space: nowrap; }
     .cb-label { font-variation-settings: "wdth" 95, "wght" 600; color: var(--ink); font-size: 0.9375rem; white-space: nowrap; }
     .cb-blurb { font-size: 0.8125rem; color: var(--ink-soft); }
+    a.cb-label { text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
+    a.cb-label:hover { color: var(--tannin); border-color: var(--tannin); }
     @media (max-width: 640px) { .cb-blurb { display: none; } }
 
     /* === Issue header === */
@@ -355,8 +357,8 @@
 
   <div class="collection-band">
     <div class="wrap">
-      <span class="cb-item"><span class="cb-kicker">This month</span><span class="cb-label">Seeing</span><span class="cb-blurb">Proteins that made the invisible visible.</span></span>
-      <span class="cb-item"><span class="cb-kicker">This season</span><span class="cb-label">The Instruments</span><span class="cb-blurb">Proteins that stopped being something biologists studied and became something they use.</span></span>
+      <span class="cb-item"><span class="cb-kicker">This month</span><a class="cb-label" href="potw-2026-07.html">Seeing</a><span class="cb-blurb">Proteins that made the invisible visible.</span></span>
+      <span class="cb-item"><span class="cb-kicker">This season</span><a class="cb-label" href="potw-2026-q3.html">The Instruments</a><span class="cb-blurb">Proteins that stopped being something biologists studied and became something they use.</span></span>
     </div>
   </div>
 
@@ -527,8 +529,8 @@
         <div class="archive-list">
           <!-- POTW:ARCHIVE:START -->
           <div class="arch-season">
-            <div class="arch-season-head"><span class="arch-season-kicker">Q3 2026</span><span class="arch-season-name">The Instruments</span><span class="arch-season-blurb">Proteins that stopped being something biologists studied and became something they use.</span></div>
-            <div class="arch-collection-head"><span class="arch-collection-name">Seeing</span><span class="arch-collection-period">July 2026</span></div>
+            <div class="arch-season-head"><span class="arch-season-kicker">Q3 2026</span><a class="arch-season-name" href="potw-2026-q3.html">The Instruments</a><span class="arch-season-blurb">Proteins that stopped being something biologists studied and became something they use.</span></div>
+            <div class="arch-collection-head"><a class="arch-collection-name" href="potw-2026-07.html">Seeing</a><span class="arch-collection-period">July 2026</span></div>
           <a class="arch current" aria-current="page" href="potw.html">
             <span class="arch-no">No. 001</span>
             <span class="arch-name">Green Fluorescent Protein<span class="binomial">Aequorea victoria</span></span>
