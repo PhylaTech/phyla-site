@@ -1,5 +1,6 @@
 {
-  "_comment": "Editorial calendar for Protein of the Week. Three levels: season (quarter) -> collection (month) -> specimen (week). research.py flattens the specimens in order (week number = position), picks the first one with no issue JSON yet (and status != 'published'), and passes its collection + season theme to the researchers and writer as light context. 'axis' names what ties a group together (family, function, provenance, impact, discovery, disease, or any non-obvious connection); it is editorial metadata and can differ per level. 'blurb' is the reader-facing announcement line. Add or reorder freely; numbering follows position.",
+  "_comment": "Editorial calendar for Protein of the Week. Three levels: season (quarter) -> collection (month) -> specimen (week). research.py flattens the specimens in order (week number = position), picks the first one with no issue JSON yet (and status != 'published'), and passes its collection + season theme to the researchers and writer as light context. 'axis' names what ties a group together (family, function, provenance, impact, discovery, disease, or any non-obvious connection); it is editorial metadata and can differ per level. 'blurb' is the reader-facing announcement line. 'anchor_date' is week 1's publish date (a Monday); a specimen's reveal week is anchor_date + 7*(position-1) days, used for teasers. Add or reorder freely; numbering follows position.",
+  "anchor_date": "2026-07-06",
   "seasons": [
     {
       "id": "2026-q3",

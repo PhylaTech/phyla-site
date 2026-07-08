@@ -18,8 +18,10 @@ POTW:ARCHIVE markers).
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -35,6 +37,15 @@ ARCHIVE_END = "<!-- POTW:ARCHIVE:END -->"
 
 def esc(s: str) -> str:
     return html.escape(str(s), quote=True)
+
+
+def _friendly_date(iso: str) -> str:
+    """'2026-07-13' -> 'Mon 13 Jul'. Returns the input unchanged if it is not an ISO date."""
+    try:
+        d = dt.date.fromisoformat(iso)
+    except ValueError:
+        return iso
+    return d.strftime("%a %#d %b" if os.name == "nt" else "%a %-d %b")
 
 
 def issue_href(number: int, slug: str) -> str:
@@ -290,8 +301,78 @@ ANNOUNCEMENT_CSS = """
     a.feat-name { text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
     a.feat-name:hover { color: var(--tannin); border-color: var(--tannin); }
     .feat-note { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.5; }
+    a.feat.feat-sealed { text-decoration: none; opacity: 0.7; transition: opacity 160ms ease-out; }
+    a.feat.feat-sealed:hover { opacity: 1; }
+    .feat-when { font-variation-settings: "wdth" 95, "wght" 600; color: var(--tannin); font-variant-numeric: tabular-nums; position: relative; padding-left: 1.15rem; }
+    .feat-when::before { content: ""; position: absolute; left: 0; top: 0.2em; width: 0.72em; height: 0.72em; border: 1.5px solid var(--tannin); border-radius: 50%; opacity: 0.5; }
+    .feat-opens { display: block; margin-top: 0.15rem; font-size: 0.8125rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
     .kickoff-back { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
     @media (max-width: 600px) { .feat { grid-template-columns: 1fr; gap: 0.2rem; } }"""
+
+TEASER_SCRIPT = """  <script>
+    /* Sealed teasers: turn the opening date into a relative countdown. */
+    (function () {
+      var els = document.querySelectorAll('.feat-when[data-reveal]');
+      if (!els.length) return;
+      var today = new Date(); today.setHours(0, 0, 0, 0);
+      els.forEach(function (el) {
+        var iso = (el.getAttribute('data-reveal') || '').split('-');
+        if (iso.length !== 3) return;
+        var d = new Date(+iso[0], +iso[1] - 1, +iso[2]); d.setHours(0, 0, 0, 0);
+        var days = Math.round((d - today) / 86400000);
+        if (days > 1) el.textContent = 'Opens in ' + days + ' days';
+        else if (days === 1) el.textContent = 'Opens tomorrow';
+        else if (days === 0) el.textContent = 'Opens today';
+      });
+    })();
+  </script>"""
+
+SUBSCRIBE_CSS = """
+    /* === Subscribe CTA === */
+    .subscribe { border-top: 1px solid var(--ink-hairline); }
+    .sub-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+    .sub-form { display: flex; flex-direction: column; gap: 1.1rem; max-width: 34rem; }
+    .sub-cadence { display: flex; flex-direction: column; gap: 0.6rem; }
+    .sub-cadence label { display: flex; align-items: baseline; gap: 0.6rem; font-size: 0.9375rem; color: var(--ink-soft); cursor: pointer; }
+    .sub-cadence input { accent-color: var(--tannin); }
+    .sub-cadence b { color: var(--ink); font-variation-settings: "wdth" 100, "wght" 600; }
+    .sub-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .sub-row input[type=email] { flex: 1 1 15rem; padding: 0.75rem 0.9rem; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); color: var(--ink); border-radius: 0; font-size: 0.9375rem; }
+    .sub-social { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+    .sub-note { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); max-width: 62ch; }
+    .sub-note code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--parchment-mid); padding: 0.05em 0.35em; }
+    .follow-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.2rem; border: 1px solid var(--ink-hairline-strong); color: var(--ink); text-decoration: none; font-size: 0.9375rem; font-variation-settings: "wdth" 100, "wght" 500; transition: border-color 180ms ease-out, color 180ms ease-out; }
+    .follow-btn:hover { border-color: var(--tannin); color: var(--tannin); }
+    @media (max-width: 720px) { .sub-grid { grid-template-columns: 1fr; } }"""
+
+SUBSCRIBE_HTML = """    <section class="subscribe" id="subscribe">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; Follow along</span>
+          <h2 class="headline">Never miss a protein.</h2>
+          <p class="body">A specimen every week, a collection every month, a season every quarter. Choose how closely you want to follow.</p>
+        </div>
+        <div class="sub-grid">
+          <form class="sub-form" method="post" action="https://example.com/REPLACE-WITH-YOUR-EMAIL-ENDPOINT" target="_blank" rel="noopener noreferrer">
+            <div class="sub-cadence">
+              <label><input type="radio" name="cadence" value="weekly" checked> <span><b>Weekly</b> &middot; every protein, as it is revealed</span></label>
+              <label><input type="radio" name="cadence" value="monthly"> <span><b>Monthly</b> &middot; the collection kickoff</span></label>
+              <label><input type="radio" name="cadence" value="quarterly"> <span><b>Quarterly</b> &middot; the season preview</span></label>
+            </div>
+            <div class="sub-row">
+              <input type="email" name="email" placeholder="you@lab.org" aria-label="Email address" required>
+              <button class="btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="sub-social">
+            <span class="label">Or follow on social</span>
+            <a class="follow-btn" href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">&rarr;</span></a>
+            <a class="follow-btn" href="https://x.com/phylatech" target="_blank" rel="noopener noreferrer"><span>X</span><span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <p class="sub-note">Email delivery is not wired up yet. Point the form's <code>action</code> at your provider (Buttondown, Mailchimp, ConvertKit, or similar); see scripts/potw/README.md.</p>
+      </div>
+    </section>"""
 
 
 def _announcement_band(ann: dict) -> str:
@@ -311,11 +392,26 @@ def render_announcement(ann: dict) -> str:
     heading = esc(ann.get("heading", ""))
     dek = esc(ann.get("dek", ""))
     paras = "\n".join(f"            <p>{esc(p)}</p>" for p in ann.get("paragraphs", []))
+    is_month = kind == "collection"
     feats = []
     for f in ann.get("features", []):
-        name, note, href = esc(f.get("name", "")), esc(f.get("note", "")), f.get("href", "")
-        name_el = f'<a class="feat-name" href="{esc(href)}">{name}</a>' if href else f'<span class="feat-name">{name}</span>'
-        feats.append(f'            <li class="feat">{name_el}<span class="feat-note">{note}</span></li>')
+        note = esc(f.get("note", ""))
+        revealed = f.get("revealed", True)
+        reveal = f.get("reveal", "")
+        if is_month and not revealed:
+            # Sealed protein: tease the schedule, never the name. The row is a CTA to subscribe.
+            friendly = esc(_friendly_date(reveal)) if reveal else "soon"
+            feats.append(
+                '            <li><a class="feat feat-sealed" href="#subscribe">'
+                f'<span class="feat-name feat-when" data-reveal="{esc(reveal)}">Opens {friendly}</span>'
+                '<span class="feat-note">Sealed until then. Subscribe to catch the reveal.</span></a></li>'
+            )
+        else:
+            name = esc(f.get("name", ""))
+            href = f.get("href", "")
+            name_el = f'<a class="feat-name" href="{esc(href)}">{name}</a>' if href else f'<span class="feat-name">{name}</span>'
+            extra = f' <span class="feat-opens">Opens {esc(reveal)}</span>' if (not revealed and reveal) else ""
+            feats.append(f'            <li class="feat">{name_el}<span class="feat-note">{note}{extra}</span></li>')
     features_html = "\n".join(feats)
     kicker = "The season ahead" if kind == "season" else "The month ahead"
     feat_label = "This season's collections" if kind == "season" else "In this collection"
@@ -342,6 +438,7 @@ def render_announcement(ann: dict) -> str:
     .masthead .column-name {{ font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }}
 {BAND_CSS}
 {ANNOUNCEMENT_CSS}
+{SUBSCRIBE_CSS}
   </style>
 </head>
 <body>
@@ -375,6 +472,8 @@ def render_announcement(ann: dict) -> str:
         <p class="kickoff-back"><a class="link-arrow" href="potw.html">The latest issue <span class="arrow">&rarr;</span></a></p>
       </div>
     </section>
+
+{SUBSCRIBE_HTML}
   </main>
 
   <footer class="site-footer">
@@ -389,6 +488,8 @@ def render_announcement(ann: dict) -> str:
       </div>
     </div>
   </footer>
+
+{TEASER_SCRIPT}
 </body>
 </html>
 """
@@ -483,6 +584,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
 {TIMELINE_CSS}
 {BAND_CSS}
 {ARCHIVE_GROUP_CSS}
+{SUBSCRIBE_CSS}
   </style>
 </head>
 <body>
@@ -561,6 +663,8 @@ def render_page(issue: dict, issues: list[dict]) -> str:
         </div>
       </div>
     </section>
+
+{SUBSCRIBE_HTML}
   </main>
 
   <footer class="site-footer">

@@ -14,10 +14,10 @@
     "We begin, fittingly, with the jellyfish protein that started it all."
   ],
   "features": [
-    { "name": "Green Fluorescent Protein", "note": "A jellyfish's glow, turned into a universal tag.", "href": "potw.html" },
-    { "name": "Firefly luciferase", "note": "Light on demand, powered by ATP.", "href": "" },
-    { "name": "Beta-galactosidase (LacZ)", "note": "The blue-white readout that made cloning legible.", "href": "" },
-    { "name": "DsRed and mCherry", "note": "The palette that took the glow beyond green.", "href": "" }
+    { "name": "Green Fluorescent Protein", "note": "A jellyfish's glow, turned into a universal tag.", "href": "potw.html", "revealed": true },
+    { "name": "Firefly luciferase", "note": "Light on demand, powered by ATP.", "revealed": false, "reveal": "2026-07-13" },
+    { "name": "Beta-galactosidase (LacZ)", "note": "The blue-white readout that made cloning legible.", "revealed": false, "reveal": "2026-07-20" },
+    { "name": "DsRed and mCherry", "note": "The palette that took the glow beyond green.", "revealed": false, "reveal": "2026-07-27" }
   ],
   "date_iso": "2026-07-01",
   "date_display": "1 July 2026"

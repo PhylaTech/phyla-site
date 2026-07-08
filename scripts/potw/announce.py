@@ -76,40 +76,72 @@ def locate(queue: dict, period_id: str):
     return None, None, None
 
 
+def _reveal_iso(number: int | None, anchor: str) -> str:
+    if not number:
+        return ""
+    return (dt.date.fromisoformat(anchor) + dt.timedelta(days=7 * (number - 1))).isoformat()
+
+
 def build_features(kind: str, group: dict, queue: dict) -> list[dict]:
-    """The items a kickoff lists: proteins (for a month) or collections (for a season)."""
+    """The items a kickoff lists: proteins (for a month) or collections (for a season).
+
+    Unrevealed items become sealed teasers: revealed=False plus a 'reveal' marker (an ISO
+    week for a protein, a period label for a collection) so the page teases without naming.
+    """
+    anchor = queue.get("anchor_date", "2026-07-06")
     feats = []
     if kind == "collection":
         idx = _specimen_index(queue)
         for spec in group.get("specimens", []):
             slug = spec.get("slug") or research.slugify(spec["protein"])
             number, indexed = idx.get(slug, (None, None))
-            href = ""
-            if number is not None and research._is_drafted(number, indexed or spec):
-                href = render.issue_href(number, slug)
-            feats.append({"name": spec["protein"], "href": href})
+            revealed = number is not None and research._is_drafted(number, indexed or spec)
+            feats.append({
+                "name": spec["protein"],
+                "href": render.issue_href(number, slug) if revealed else "",
+                "revealed": revealed,
+                "reveal": "" if revealed else _reveal_iso(number, anchor),
+            })
     else:
         announced = render.announced_ids()
+        first_num: dict[str, int] = {}
+        for number, _spec, coll, _seas in research.iter_specimens(queue):
+            cid = coll.get("id", "")
+            if cid and cid not in first_num:
+                first_num[cid] = number
         for coll in group.get("collections", []):
             cid = coll.get("id", "")
-            href = render.announce_href(cid) if cid and cid in announced else ""
-            feats.append({"name": coll["label"], "note": coll.get("blurb", ""), "href": href})
+            revealed = bool(cid and cid in announced)
+            feats.append({
+                "name": coll["label"],
+                "note": coll.get("blurb", ""),
+                "href": render.announce_href(cid) if revealed else "",
+                "revealed": revealed,
+                "reveal": "" if revealed else coll.get("month", ""),
+            })
     return feats
 
 
-def draft(client: anthropic.Anthropic, kind: str, label: str, blurb: str, axis: str, lines: list[str]) -> DraftAnnouncement:
+def draft(client: anthropic.Anthropic, kind: str, label: str, blurb: str, axis: str, lines: list[str], sealed_count: int = 0) -> DraftAnnouncement:
     what = "monthly collection" if kind == "collection" else "quarterly season"
     listing = "\n".join(f"- {x}" for x in lines)
+    seal_note = ""
+    if kind == "collection":
+        seal_note = (
+            f"\n\nThose are the proteins revealed so far. {sealed_count} more are still sealed and "
+            "will be revealed one per week; do NOT name or guess them. Write about the theme, not a roll call."
+        )
     user = (
         f"Write the opening announcement for the {what} titled '{label}'.\n"
         f"Its one-line theme: {blurb}\n"
         f"What connects them: {axis}.\n\n"
-        + ("The proteins in this collection, in order:\n" if kind == "collection"
+        + ("Revealed so far:\n" if kind == "collection"
            else "The monthly collections in this season, in order:\n")
         + listing
+        + seal_note
         + "\n\nReturn a heading, a one-sentence dek, and two or three short paragraphs."
         + (f"\nAlso return feature_notes: one short note (at most 90 characters) for each of "
-           f"the {len(lines)} proteins above, in the same order." if kind == "collection" else "")
+           f"the {len(lines)} revealed proteins above, in the same order." if kind == "collection" else "")
     )
     resp = client.messages.parse(
         model=WRITER_MODEL,
@@ -153,21 +185,29 @@ def main() -> int:
     axis = group.get("axis", "")
     features = build_features(kind, group, queue)
     if kind == "collection":
-        lines = [f["name"] for f in features]
+        lines = [f["name"] for f in features if f.get("revealed")] or ["(none revealed yet)"]
+        sealed_count = sum(1 for f in features if not f.get("revealed"))
     else:
         lines = [f'{f["name"]}: {f.get("note", "")}' for f in features]
+        sealed_count = 0
 
     client = anthropic.Anthropic()
     print(f"Drafting {kind} kickoff: {label} ...", file=sys.stderr)
-    drafted = draft(client, kind, label, blurb, axis, lines)
+    drafted = draft(client, kind, label, blurb, axis, lines, sealed_count)
 
-    notes = drafted.feature_notes if kind == "collection" else []
+    notes = list(drafted.feature_notes) if kind == "collection" else []
     feats_out = []
-    for i, f in enumerate(features):
+    ni = 0
+    for f in features:
         note = f.get("note", "")
-        if kind == "collection" and i < len(notes):
-            note = notes[i]
-        feats_out.append(AnnouncementFeature(name=f["name"], note=note, href=f.get("href", "")))
+        if kind == "collection":
+            note = notes[ni] if (f.get("revealed") and ni < len(notes)) else ""
+            if f.get("revealed"):
+                ni += 1
+        feats_out.append(AnnouncementFeature(
+            name=f["name"], note=note, href=f.get("href", ""),
+            revealed=f.get("revealed", True), reveal=f.get("reveal", ""),
+        ))
 
     parent = None
     if kind == "collection" and season_ref:

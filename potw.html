@@ -299,21 +299,22 @@
     .arch-collection-period { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
     .archive-note { margin-top: 1.5rem; font-size: 0.875rem; color: var(--ink-soft); max-width: 60ch; }
 
-    /* === Follow === */
-    .follow-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
-    .follow-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.65rem 1.2rem;
-      border: 1px solid var(--ink-hairline-strong);
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 0.9375rem;
-      font-variation-settings: "wdth" 100, "wght" 500;
-      transition: border-color 180ms ease-out, color 180ms ease-out;
-    }
+    /* === Subscribe CTA === */
+    .subscribe { border-top: 1px solid var(--ink-hairline); }
+    .sub-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+    .sub-form { display: flex; flex-direction: column; gap: 1.1rem; max-width: 34rem; }
+    .sub-cadence { display: flex; flex-direction: column; gap: 0.6rem; }
+    .sub-cadence label { display: flex; align-items: baseline; gap: 0.6rem; font-size: 0.9375rem; color: var(--ink-soft); cursor: pointer; }
+    .sub-cadence input { accent-color: var(--tannin); }
+    .sub-cadence b { color: var(--ink); font-variation-settings: "wdth" 100, "wght" 600; }
+    .sub-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .sub-row input[type=email] { flex: 1 1 15rem; padding: 0.75rem 0.9rem; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); color: var(--ink); border-radius: 0; font-size: 0.9375rem; }
+    .sub-social { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; }
+    .sub-note { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); max-width: 62ch; }
+    .sub-note code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--parchment-mid); padding: 0.05em 0.35em; }
+    .follow-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.2rem; border: 1px solid var(--ink-hairline-strong); color: var(--ink); text-decoration: none; font-size: 0.9375rem; font-variation-settings: "wdth" 100, "wght" 500; transition: border-color 180ms ease-out, color 180ms ease-out; }
     .follow-btn:hover { border-color: var(--tannin); color: var(--tannin); }
+    @media (max-width: 720px) { .sub-grid { grid-template-columns: 1fr; } }
 
     /* byline */
     .byline {
@@ -540,17 +541,35 @@
           <!-- POTW:ARCHIVE:END -->
         </div>
         <p class="archive-note">The series starts here. A new protein lands every week, with its history, the people who found it, and where it ended up. Past issues will collect on this page.</p>
+      </div>
+    </section>
 
-        <div class="follow-row">
-          <a class="follow-btn" href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">
-            <span>Follow on LinkedIn</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
-          <a class="follow-btn" href="https://x.com/phylatech" target="_blank" rel="noopener noreferrer">
-            <span>Follow on X</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
+    <section class="subscribe" id="subscribe">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; Follow along</span>
+          <h2 class="headline">Never miss a protein.</h2>
+          <p class="body">A specimen every week, a collection every month, a season every quarter. Choose how closely you want to follow.</p>
         </div>
+        <div class="sub-grid">
+          <form class="sub-form" method="post" action="https://example.com/REPLACE-WITH-YOUR-EMAIL-ENDPOINT" target="_blank" rel="noopener noreferrer">
+            <div class="sub-cadence">
+              <label><input type="radio" name="cadence" value="weekly" checked> <span><b>Weekly</b> &middot; every protein, as it is revealed</span></label>
+              <label><input type="radio" name="cadence" value="monthly"> <span><b>Monthly</b> &middot; the collection kickoff</span></label>
+              <label><input type="radio" name="cadence" value="quarterly"> <span><b>Quarterly</b> &middot; the season preview</span></label>
+            </div>
+            <div class="sub-row">
+              <input type="email" name="email" placeholder="you@lab.org" aria-label="Email address" required>
+              <button class="btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="sub-social">
+            <span class="label">Or follow on social</span>
+            <a class="follow-btn" href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">&rarr;</span></a>
+            <a class="follow-btn" href="https://x.com/phylatech" target="_blank" rel="noopener noreferrer"><span>X</span><span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <p class="sub-note">Email delivery is not wired up yet. Point the form's <code>action</code> at your provider (Buttondown, Mailchimp, ConvertKit, or similar); see scripts/potw/README.md.</p>
       </div>
     </section>
 

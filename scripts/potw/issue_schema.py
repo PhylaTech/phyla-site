@@ -86,6 +86,8 @@ class AnnouncementFeature(BaseModel):
     name: str = Field(description="Protein or collection name.")
     note: str = Field(default="", description="One-line description.")
     href: str = Field(default="", description="Optional link to the issue page or child kickoff.")
+    revealed: bool = Field(default=True, description="False = a sealed teaser: the page shows the schedule, not the name.")
+    reveal: str = Field(default="", description="When it opens: an ISO date (a week) or a period label (a month), shown on sealed teasers.")
 
 
 class DraftAnnouncement(BaseModel):

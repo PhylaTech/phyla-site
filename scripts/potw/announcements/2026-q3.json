@@ -14,9 +14,9 @@
     "Three months, three kinds of work, one idea: the tools were alive first."
   ],
   "features": [
-    { "name": "Seeing", "note": "Proteins that made the invisible visible.", "href": "potw-2026-07.html" },
-    { "name": "Copying", "note": "The enzymes that read, amplify, and rewrite the code.", "href": "" },
-    { "name": "Cutting & editing", "note": "Surgery on DNA and on other proteins.", "href": "" }
+    { "name": "Seeing", "note": "Proteins that made the invisible visible.", "href": "potw-2026-07.html", "revealed": true },
+    { "name": "Copying", "note": "The enzymes that read, amplify, and rewrite the code.", "revealed": false, "reveal": "August 2026" },
+    { "name": "Cutting & editing", "note": "Surgery on DNA and on other proteins.", "revealed": false, "reveal": "September 2026" }
   ],
   "date_iso": "2026-07-01",
   "date_display": "1 July 2026"

@@ -101,6 +101,26 @@ and the grouped archive link to a kickoff once it is drafted. The launch month (
 and season (The Instruments) kickoffs are hand-authored, like the GFP issue itself;
 `announce.py` drafts the rest. Override the model with `POTW_ANNOUNCE_MODEL`.
 
+## Reveals and the subscribe form
+
+Upcoming proteins are held back: `render.py` only *names* a protein whose issue has
+shipped. Unrevealed items render as sealed teasers ("Opens in 5 days", counting down
+client-side) that link to the subscribe CTA, so a kickoff never spoils the weeks ahead.
+Because the site rebuilds weekly, each protein unlocks on its week automatically. (The
+full queue does live in `proteins.json`, so anyone reading the *repo* can see it; hold
+future entries out of the committed queue if you need true secrecy.)
+
+The subscribe CTA on every POTW page posts `email` and a `cadence` (`weekly` /
+`monthly` / `quarterly`) to the form's `action`. It ships with a placeholder endpoint:
+
+- Point it at your email provider (Buttondown, ConvertKit, Mailchimp, Formspree, all
+  accept a simple POST). Replace `https://example.com/REPLACE-WITH-YOUR-EMAIL-ENDPOINT`
+  in `render.py`'s `SUBSCRIBE_HTML` and in `potw.html`.
+- Map the `cadence` field to lists or tags on the provider side, or drop it.
+- Social follow (LinkedIn, X) needs no setup.
+
+Anthropic cannot create the account or endpoint; that step is yours.
+
 ## Models and cost
 
 Defaults to `claude-opus-4-8` for both research and writing. Each issue is roughly
