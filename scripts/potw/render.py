@@ -48,20 +48,68 @@ def load_all_issues() -> list[dict]:
     return issues
 
 
-def render_archive_rows(issues: list[dict], current_number: int) -> str:
-    rows = []
+def _arch_row(d: dict, current_number: int) -> str:
+    n, slug = d["number"], d["slug"]
+    current = ' current" aria-current="page' if n == current_number else ""
+    return (
+        f'          <a class="arch{current}" href="{issue_href(n, slug)}">\n'
+        f'            <span class="arch-no">No. {n:03d}</span>\n'
+        f'            <span class="arch-name">{esc(d["protein"])}'
+        f'<span class="binomial">{esc(_organism(d["binomial"]))}</span></span>\n'
+        f'            <span class="arch-date">{esc(d["date_display"])}</span>\n'
+        f"          </a>"
+    )
+
+
+def render_archive(issues: list[dict], current_number: int) -> str:
+    """Group issues by season then collection, preserving incoming (newest-first) order.
+
+    Issues with no season (off-calendar --protein runs) collect into a trailing,
+    header-less group, so nothing is ever dropped from the archive.
+    """
+    order: list[str] = []
+    seasons: dict[str, dict] = {}
     for d in issues:
-        n, slug = d["number"], d["slug"]
-        current = ' current" aria-current="page' if n == current_number else ""
-        rows.append(
-            f'          <a class="arch{current}" href="{issue_href(n, slug)}">\n'
-            f'            <span class="arch-no">No. {n:03d}</span>\n'
-            f'            <span class="arch-name">{esc(d["protein"])}'
-            f'<span class="binomial">{esc(_organism(d["binomial"]))}</span></span>\n'
-            f'            <span class="arch-date">{esc(d["date_display"])}</span>\n'
-            f"          </a>"
-        )
-    return "\n".join(rows)
+        s, c = d.get("season") or {}, d.get("collection") or {}
+        sl, cl = s.get("label", ""), c.get("label", "")
+        if sl not in seasons:
+            seasons[sl] = {"ref": s, "col_order": [], "cols": {}}
+            order.append(sl)
+        grp = seasons[sl]
+        if cl not in grp["cols"]:
+            grp["cols"][cl] = {"ref": c, "rows": []}
+            grp["col_order"].append(cl)
+        grp["cols"][cl]["rows"].append(_arch_row(d, current_number))
+
+    blocks = []
+    for sl in order:
+        grp = seasons[sl]
+        body = []
+        for cl in grp["col_order"]:
+            col = grp["cols"][cl]
+            if cl:
+                period = col["ref"].get("period", "")
+                period_span = f'<span class="arch-collection-period">{esc(period)}</span>' if period else ""
+                body.append(
+                    '            <div class="arch-collection-head">'
+                    f'<span class="arch-collection-name">{esc(cl)}</span>{period_span}</div>'
+                )
+            body.extend(col["rows"])
+        body_html = "\n".join(body)
+        if sl:
+            s = grp["ref"]
+            kicker = f'<span class="arch-season-kicker">{esc(s.get("period", ""))}</span>' if s.get("period") else ""
+            blurb = f'<span class="arch-season-blurb">{esc(s.get("blurb", ""))}</span>' if s.get("blurb") else ""
+            blocks.append(
+                '          <div class="arch-season">\n'
+                f'            <div class="arch-season-head">{kicker}'
+                f'<span class="arch-season-name">{esc(sl)}</span>{blurb}</div>\n'
+                f"{body_html}\n"
+                "          </div>"
+            )
+        else:
+            blocks.append(body_html)
+    return "\n".join(blocks)
 
 
 def _organism(binomial: str) -> str:
@@ -79,7 +127,7 @@ def update_archive_in_file(path: Path, issues: list[dict], current_number: int) 
     text = path.read_text()
     if ARCHIVE_START not in text or ARCHIVE_END not in text:
         return
-    rows = render_archive_rows(issues, current_number)
+    rows = render_archive(issues, current_number)
     pre, _, rest = text.partition(ARCHIVE_START)
     _, _, post = rest.partition(ARCHIVE_END)
     new = f"{pre}{ARCHIVE_START}\n{rows}\n          {ARCHIVE_END}{post}"
@@ -175,6 +223,19 @@ def _collection_band(issue: dict) -> str:
     )
 
 
+ARCHIVE_GROUP_CSS = """
+    /* === Grouped archive (season > collection > issues) === */
+    .arch-season { border-top: 1px solid var(--ink-hairline-strong); margin-top: 2rem; padding-top: 1.5rem; }
+    .arch-season:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+    .arch-season-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.9rem; margin-bottom: 0.4rem; }
+    .arch-season-kicker { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .arch-season-name { font-variation-settings: "wdth" 95, "wght" 700; font-size: 1.25rem; letter-spacing: -0.015em; color: var(--ink); }
+    .arch-season-blurb { font-size: 0.875rem; color: var(--ink-soft); flex-basis: 100%; max-width: 60ch; }
+    .arch-collection-head { display: flex; align-items: baseline; gap: 0.75rem; margin-top: 1.15rem; padding-bottom: 0.15rem; }
+    .arch-collection-name { font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); }
+    .arch-collection-period { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }"""
+
+
 def render_page(issue: dict, issues: list[dict]) -> str:
     n = issue["number"]
     facts = "\n".join(
@@ -204,7 +265,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
         f'          </li>'
         for m in issue["timeline"]
     )
-    archive_rows = render_archive_rows(issues, n)
+    archive_rows = render_archive(issues, n)
     org = esc(_organism(issue["binomial"]))
     band = _collection_band(issue)
 
@@ -263,6 +324,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
     @media (max-width: 600px) {{ .facts {{ grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }} .fact:nth-child(2) {{ border-right: none; padding-right: 0; }} .meanwhile .ml {{ grid-template-columns: 4.5rem 1fr; }} .arch {{ grid-template-columns: auto 1fr; }} .arch .arch-date {{ grid-column: 2; }} }}
 {TIMELINE_CSS}
 {BAND_CSS}
+{ARCHIVE_GROUP_CSS}
   </style>
 </head>
 <body>

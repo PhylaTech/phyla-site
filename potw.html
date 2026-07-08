@@ -285,6 +285,16 @@
     .arch .arch-name .binomial { font-style: italic; font-variation-settings: "wdth" 95, "wght" 500; color: var(--ink-soft); font-size: 0.9375rem; margin-left: 0.5rem; }
     .arch .arch-date { font-size: 0.8125rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
     .arch.current .arch-no { color: var(--tannin); }
+    /* Grouped archive (season > collection > issues) */
+    .arch-season { border-top: 1px solid var(--ink-hairline-strong); margin-top: 2rem; padding-top: 1.5rem; }
+    .arch-season:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+    .arch-season-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.9rem; margin-bottom: 0.4rem; }
+    .arch-season-kicker { font-size: 0.6875rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .arch-season-name { font-variation-settings: "wdth" 95, "wght" 700; font-size: 1.25rem; letter-spacing: -0.015em; color: var(--ink); }
+    .arch-season-blurb { font-size: 0.875rem; color: var(--ink-soft); flex-basis: 100%; max-width: 60ch; }
+    .arch-collection-head { display: flex; align-items: baseline; gap: 0.75rem; margin-top: 1.15rem; padding-bottom: 0.15rem; }
+    .arch-collection-name { font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tannin); }
+    .arch-collection-period { font-size: 0.75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
     .archive-note { margin-top: 1.5rem; font-size: 0.875rem; color: var(--ink-soft); max-width: 60ch; }
 
     /* === Follow === */
@@ -516,11 +526,15 @@
         </div>
         <div class="archive-list">
           <!-- POTW:ARCHIVE:START -->
+          <div class="arch-season">
+            <div class="arch-season-head"><span class="arch-season-kicker">Q3 2026</span><span class="arch-season-name">The Instruments</span><span class="arch-season-blurb">Proteins that stopped being something biologists studied and became something they use.</span></div>
+            <div class="arch-collection-head"><span class="arch-collection-name">Seeing</span><span class="arch-collection-period">July 2026</span></div>
           <a class="arch current" aria-current="page" href="potw.html">
             <span class="arch-no">No. 001</span>
             <span class="arch-name">Green Fluorescent Protein<span class="binomial">Aequorea victoria</span></span>
             <span class="arch-date">6 July 2026</span>
           </a>
+          </div>
           <!-- POTW:ARCHIVE:END -->
         </div>
         <p class="archive-note">The series starts here. A new protein lands every week, with its history, the people who found it, and where it ended up. Past issues will collect on this page.</p>

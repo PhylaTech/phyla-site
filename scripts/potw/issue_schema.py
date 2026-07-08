@@ -63,6 +63,7 @@ class ThemeRef(BaseModel):
 
     label: str = Field(description="Display name, e.g. 'Seeing' or 'The Instruments'.")
     blurb: str = Field(default="", description="One-line, reader-facing description of the grouping.")
+    period: str = Field(default="", description="Calendar period, e.g. 'July 2026' (month) or 'Q3 2026' (quarter).")
 
 
 class Issue(DraftIssue):
