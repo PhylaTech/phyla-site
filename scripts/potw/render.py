@@ -431,8 +431,8 @@ SUBSCRIBE_HTML = """    <section class="subscribe" id="subscribe">
 
 REVEAL_CSS = """
     /* === First-visit reveal modal === */
-    .reveal[hidden] { display: none; }
-    .reveal { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 1.5rem; }
+    .reveal-modal[hidden] { display: none; }
+    .reveal-modal { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 1.5rem; }
     .reveal-backdrop { position: absolute; inset: 0; background: oklch(22% 0.02 70 / 0.55); animation: reveal-fade 320ms ease-out both; }
     .reveal-card { position: relative; z-index: 1; width: 100%; max-width: 30rem; background: var(--parchment-pale); border: 1px solid var(--ink-hairline-strong); padding: clamp(1.75rem, 4vw, 2.75rem); box-shadow: 0 24px 64px -24px oklch(22% 0.02 70 / 0.45); animation: reveal-rise 560ms cubic-bezier(0.16, 1, 0.3, 1) both; }
     .reveal-flush { display: block; width: 34px; height: 1px; background: var(--tannin); margin-bottom: 1.1rem; }
@@ -485,7 +485,7 @@ REVEAL_SCRIPT = """  <script>
 def _reveal_modal(n: int, issue: dict) -> str:
     """The once-a-week reveal dialog for an issue page (shown by REVEAL_SCRIPT)."""
     return (
-        f'  <div class="reveal" id="revealModal" hidden aria-hidden="true" '
+        f'  <div class="reveal-modal" id="revealModal" hidden aria-hidden="true" '
         f'data-issue-date="{esc(issue.get("date_iso", ""))}" data-slug="{esc(issue.get("slug", ""))}">\n'
         '    <div class="reveal-backdrop" data-close></div>\n'
         '    <div class="reveal-card" role="dialog" aria-modal="true" aria-labelledby="revealName">\n'
