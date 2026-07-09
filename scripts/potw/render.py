@@ -706,10 +706,10 @@ STRUCTURE_SCRIPT = """  <script>
       function start() {
         if (started) return; started = true;
         var s = document.createElement('script');
-        s.src = 'https://3Dmol.org/build/3Dmol-min.js';
+        s.src = 'https://cdn.jsdelivr.net/npm/3dmol@2/build/3Dmol-min.js';
         s.async = true; s.onload = build; s.onerror = fail;
         document.head.appendChild(s);
-        setTimeout(function () { if (loader && !loader.hidden) fail(); }, 8000);
+        setTimeout(function () { if (loader && !loader.hidden) fail(); }, 20000);
       }
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (es) {
