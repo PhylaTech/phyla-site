@@ -22,6 +22,9 @@
     .cat-progress-fill { position: absolute; inset: 0 auto 0 0; background: var(--tannin); }
     .cat-progress-label { font-size: 0.6875rem; font-variation-settings: "wght" 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
     .cat-latest { margin-top: 1.5rem; }
+    .cat-hook { margin-top: 1rem; font-size: 0.9375rem; color: var(--ink-soft); max-width: 60ch; }
+    .cat-hook a { color: var(--tannin); text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); font-variation-settings: "wght" 600; }
+    .cat-hook a:hover { border-color: var(--tannin); }
     .cat-season { border-top: 1px solid var(--ink-hairline-strong); margin-top: clamp(2.5rem, 5vw, 3.75rem); padding-top: clamp(1.75rem, 4vw, 2.5rem); }
     .cat-season-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 1rem; margin-bottom: 0.35rem; }
     .cat-season-kicker { font-size: 0.6875rem; font-variation-settings: "wght" 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
@@ -100,6 +103,7 @@
         </div>
         <div class="cat-progress"><span class="cat-progress-track"><span class="cat-progress-fill" style="width: 1%"></span></span><span class="cat-progress-label">1 of 96 revealed</span></div>
         <p class="cat-latest"><a class="link-arrow" href="potw.html">Read the latest issue <span class="arrow">&rarr;</span></a></p>
+        <p class="cat-hook">95 of the 96 are still sealed. You cannot skip the line, but you need not check back: <a href="#subscribe">have each one delivered the week it opens &rarr;</a></p>
       </div>
       <div class="cat-season">
         <div class="wrap">
@@ -362,9 +366,9 @@
     <section class="subscribe" id="subscribe">
       <div class="wrap">
         <div class="section-head">
-          <span class="label">&sect; &nbsp; Follow along</span>
-          <h2 class="headline">Never miss a protein.</h2>
-          <p class="body">A specimen every week, a collection every month, a season every quarter. Choose how closely you want to follow.</p>
+          <span class="label">&sect; &nbsp; The dispatch</span>
+          <h2 class="headline">Never miss a reveal.</h2>
+          <p class="body">The catalogue stays sealed: each specimen opens only on its week. Subscribe to <em>The Naturalist's Dispatch</em> and every reveal comes to you the moment it opens, so you follow the whole series without ever checking back. A specimen every week, a collection every month, a season every quarter: choose your cadence.</p>
         </div>
         <div class="sub-grid">
           <form class="sub-form" method="post" action="https://example.com/REPLACE-WITH-YOUR-EMAIL-ENDPOINT" target="_blank" rel="noopener noreferrer">
