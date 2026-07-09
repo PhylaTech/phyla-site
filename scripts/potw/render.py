@@ -862,6 +862,117 @@ def _cat_cell(number: int, spec: dict, drafted: bool, current_number: int, ancho
     return f'<a class="cat-cell is-sealed" href="#subscribe"><span class="cat-no">No. {number:03d}</span>{body}</a>'
 
 
+CATALOGUE_TREE_CSS = """
+    /* === Catalogue view toggle + classification tree === */
+    .cat-viewtabs { display: inline-flex; border: 1px solid var(--ink-hairline-strong); margin-top: 1.6rem; }
+    .cat-tab { padding: 0.4rem 1.15rem; font-size: 0.75rem; font-variation-settings: "wght" 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); border-right: 1px solid var(--ink-hairline-strong); background: var(--parchment); transition: background 160ms ease-out, color 160ms ease-out; }
+    .cat-tab:last-child { border-right: none; }
+    .cat-tab.is-active { background: var(--tannin); color: var(--parchment-pale); }
+    .cat-panel[hidden] { display: none; }
+    .tree-scroll { overflow-x: auto; margin-top: 1.75rem; border: 1px solid var(--ink-hairline); background: var(--parchment-pale); padding: 1.25rem 0.75rem; }
+    .tree-svg { display: block; width: 100%; min-width: 760px; height: auto; }
+    .tree-root { font-variation-settings: "wght" 600; font-size: 10px; letter-spacing: 0.14em; fill: var(--ink-soft); }
+    .tree-season { font-variation-settings: "wdth" 95, "wght" 600; font-size: 12px; fill: var(--tannin); }
+    .tree-coll { font-variation-settings: "wght" 600; font-size: 9px; letter-spacing: 0.1em; fill: var(--ink-soft); }
+    .tree-leaf { font-style: italic; font-variation-settings: "wdth" 95, "wght" 400; font-size: 11px; fill: var(--tannin); }
+    .tree-svg a { text-decoration: none; }
+    .tree-svg a:hover .tree-leaf { fill: var(--tannin-deep); text-decoration: underline; }
+    .tree-note { margin-top: 1.1rem; font-size: 0.875rem; line-height: 1.55; color: var(--ink-soft); max-width: 64ch; }"""
+
+CATALOGUE_TREE_SCRIPT = """  <script>
+    /* Catalogue grid/tree toggle. Static views; no layout work client-side. */
+    (function () {
+      var tabs = document.querySelectorAll('.cat-tab');
+      var panels = document.querySelectorAll('.cat-panel');
+      if (!tabs.length) return;
+      function show(v) {
+        tabs.forEach(function (t) { var on = t.getAttribute('data-view') === v; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); });
+        panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== v; });
+      }
+      tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.getAttribute('data-view')); }); });
+    })();
+  </script>"""
+
+
+def _catalogue_tree_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
+    """The catalogue as a static classification tree (horizontal dendrogram).
+
+    Root -> seasons -> collections -> specimen leaves. Published specimens are named,
+    linked leaves; sealed specimens are unlabeled 'bud' tips (embargo-safe: no name in
+    the source, only a reveal-date title). Deterministic, no client-side layout.
+    """
+    ROOT_X, SEASON_X, COLL_X, LEAF_X = 52, 250, 468, 684
+    LABEL_X = LEAF_X + 12
+    STEP, COLL_GAP, SEASON_GAP, TOP, WIDTH = 15, 8, 16, 34, 1060
+
+    links, dots, labels, leaves = [], [], [], []
+    y = TOP
+    num = 0
+    season_pts = []
+    for si, season in enumerate(queue.get("seasons", [])):
+        if si:
+            y += SEASON_GAP
+        coll_pts = []
+        for ci, coll in enumerate(season.get("collections", [])):
+            if ci:
+                y += COLL_GAP
+            leaf_ys = []
+            for spec in coll.get("specimens", []):
+                num += 1
+                ly = y
+                y += STEP
+                leaf_ys.append(ly)
+                if _is_drafted(num, spec):
+                    nm = esc(spec["protein"])
+                    dots.append(f'<circle cx="{LEAF_X}" cy="{ly}" r="3.2" fill="var(--tannin)"/>')
+                    leaves.append(
+                        f'<a href="{issue_href(num, _spec_slug(spec))}"><title>No. {num:03d}: {nm}</title>'
+                        f'<text class="tree-leaf" x="{LABEL_X}" y="{ly}" dy="0.32em">{nm}</text></a>'
+                    )
+                else:
+                    rev = _reveal_iso(num, anchor)
+                    fr = esc(_friendly_date(rev)) if rev else "soon"
+                    dots.append(
+                        f'<circle cx="{LEAF_X}" cy="{ly}" r="2.6" fill="var(--parchment)" '
+                        f'stroke="var(--ink-soft)" stroke-width="1" opacity="0.6">'
+                        f'<title>No. {num:03d}: opens {fr}</title></circle>'
+                    )
+            cy = sum(leaf_ys) / len(leaf_ys)
+            coll_pts.append(cy)
+            dots.append(f'<circle cx="{COLL_X}" cy="{cy:.1f}" r="2.8" fill="var(--ink-soft)"/>')
+            labels.append(
+                f'<text class="tree-coll" x="{COLL_X - 8}" y="{cy - 5:.1f}" text-anchor="end">'
+                f'{esc(coll["label"].upper())}</text>'
+            )
+            for ly in leaf_ys:
+                links.append(f'<path d="M {LEAF_X},{ly} H {COLL_X} V {cy:.1f}"/>')
+        scy = sum(coll_pts) / len(coll_pts)
+        season_pts.append(scy)
+        dots.append(f'<circle cx="{SEASON_X}" cy="{scy:.1f}" r="3.4" fill="var(--tannin)"/>')
+        labels.append(
+            f'<text class="tree-season" x="{SEASON_X - 10}" y="{scy - 6:.1f}" text-anchor="end">'
+            f'{esc(season["label"])}</text>'
+        )
+        for cy in coll_pts:
+            links.append(f'<path d="M {COLL_X},{cy:.1f} H {SEASON_X} V {scy:.1f}"/>')
+    rcy = sum(season_pts) / len(season_pts)
+    dots.append(f'<circle cx="{ROOT_X}" cy="{rcy:.1f}" r="4" fill="var(--tannin)"/>')
+    labels.append(f'<text class="tree-root" x="{ROOT_X}" y="16">PROTEIN OF THE WEEK</text>')
+    for scy in season_pts:
+        links.append(f'<path d="M {SEASON_X},{scy:.1f} H {ROOT_X} V {rcy:.1f}"/>')
+
+    height = int(y + TOP)
+    return (
+        f'<svg class="tree-svg" viewBox="0 0 {WIDTH} {height}" role="img" '
+        f'aria-label="The Protein of the Week catalogue drawn as a classification tree">'
+        f'<g fill="none" stroke="var(--ink-hairline-strong)" stroke-width="1">{"".join(links)}</g>'
+        f'<g>{"".join(dots)}</g>'
+        f'<g>{"".join(labels)}</g>'
+        f'<g>{"".join(leaves)}</g>'
+        "</svg>"
+    )
+
+
 def render_catalogue(preview: bool = False) -> str:
     """The full series as one browsable page: seasons, collections, and specimen cells.
 
@@ -918,6 +1029,7 @@ def render_catalogue(preview: bool = False) -> str:
             + '\n        </div>\n      </div>'
         )
     seasons_block = "\n".join(seasons_html)
+    tree_svg = _catalogue_tree_svg(queue, issues_by_slug, anchor)
     pct = round(100 * revealed / total) if total else 0
     banner = '  <div class="cat-preview-banner">Editorial preview: shows unrevealed names. Not for publishing.</div>\n' if preview else ""
 
@@ -939,6 +1051,7 @@ def render_catalogue(preview: bool = False) -> str:
     .masthead-inner {{ display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding-block: 1.25rem; flex-wrap: wrap; }}
     .masthead .column-name {{ font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }}
 {CATALOGUE_CSS}
+{CATALOGUE_TREE_CSS}
 {SUBSCRIBE_CSS}
   </style>
 </head>
@@ -966,8 +1079,22 @@ def render_catalogue(preview: bool = False) -> str:
         <div class="cat-progress"><span class="cat-progress-track"><span class="cat-progress-fill" style="width: {pct}%"></span></span><span class="cat-progress-label">{revealed} of {total} revealed</span></div>
         <p class="cat-latest"><a class="link-arrow" href="potw.html">Read the latest issue <span class="arrow">&rarr;</span></a> &nbsp;&nbsp; <a class="link-arrow" href="potw-field-guide.html">The field guide <span class="arrow">&rarr;</span></a></p>
         <p class="cat-hook">{sealed} of the {total} are still sealed. You cannot skip the line, but you need not check back: <a href="#subscribe">have each one delivered the week it opens &rarr;</a></p>
+        <div class="cat-viewtabs" role="tablist" aria-label="Catalogue view">
+          <button class="cat-tab is-active" type="button" data-view="grid" role="tab" aria-selected="true">Grid</button>
+          <button class="cat-tab" type="button" data-view="tree" role="tab" aria-selected="false">Tree</button>
+        </div>
       </div>
+      <div class="cat-panel" data-panel="grid">
 {seasons_block}
+      </div>
+      <div class="cat-panel" data-panel="tree" hidden>
+        <div class="wrap">
+          <div class="tree-scroll">
+{tree_svg}
+          </div>
+          <p class="tree-note">Root to leaf: the series, its quarterly seasons, its monthly collections, and every specimen. Published specimens open as named leaves; sealed weeks are buds, one opening each week. Switch to the grid for reveal dates.</p>
+        </div>
+      </div>
     </section>
 
 {SUBSCRIBE_HTML}
@@ -987,6 +1114,7 @@ def render_catalogue(preview: bool = False) -> str:
   </footer>
 
 {CATALOGUE_SCRIPT}
+{CATALOGUE_TREE_SCRIPT}
 </body>
 </html>
 """
