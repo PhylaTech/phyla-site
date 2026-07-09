@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T08:40:49.675460+00:00",
+  "generated_at": "2026-07-09T09:53:48.911308+00:00",
   "summary": {
     "total_citations": 2461,
     "countries_reached": 76,
@@ -2306,7 +2306,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 884,
+        "citations": 886,
         "year": 2021
       },
       {
@@ -2314,7 +2314,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 328,
+        "citations": 329,
         "year": 2021
       },
       {
@@ -2378,7 +2378,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 324,
+        "citations": 325,
         "year": 2022
       },
       {
@@ -2442,7 +2442,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 369,
+        "citations": 370,
         "year": 2025
       },
       {
@@ -2474,7 +2474,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2024
       },
       {
@@ -2482,7 +2482,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 81,
+        "citations": 82,
         "year": 2025
       },
       {
@@ -2570,7 +2570,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 118,
+        "citations": 119,
         "year": 2023
       },
       {
@@ -2658,7 +2658,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 645,
+        "citations": 646,
         "year": 2020
       },
       {
@@ -2666,7 +2666,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 495,
+        "citations": 496,
         "year": 2023
       },
       {
@@ -2690,7 +2690,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 197,
+        "citations": 198,
         "year": 2021
       },
       {
@@ -2842,7 +2842,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2021
       },
       {
@@ -3090,7 +3090,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4863,
+        "citations": 4864,
         "year": 2017
       },
       {
@@ -3338,7 +3338,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5044,
+        "citations": 5048,
         "year": 2021
       },
       {
@@ -3450,7 +3450,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 46,
+        "citations": 47,
         "year": 2025
       },
       {
