@@ -699,6 +699,7 @@ STRUCTURE_SCRIPT = """  <script>
             rendered = true;
             if (loader) loader.hidden = true;
             if (fallback) fallback.hidden = true;
+            if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) viewer.spin('y', 0.35);
           })
           .catch(function () { if (!rendered) fail(); });
       }
