@@ -22,6 +22,7 @@ import datetime as dt
 import html
 import json
 import os
+import random
 import re
 import sys
 from pathlib import Path
@@ -33,6 +34,7 @@ QUEUE_PATH = HERE / "proteins.json"
 SITE_ROOT = HERE.parent.parent  # repo root (worktree)
 CANONICAL = SITE_ROOT / "potw.html"
 CATALOGUE = SITE_ROOT / "potw-catalogue.html"
+FIELD_GUIDE = SITE_ROOT / "potw-field-guide.html"
 
 ARCHIVE_START = "<!-- POTW:ARCHIVE:START -->"
 ARCHIVE_END = "<!-- POTW:ARCHIVE:END -->"
@@ -962,7 +964,7 @@ def render_catalogue(preview: bool = False) -> str:
           <p class="body">A new protein every week, gathered into monthly collections and quarterly seasons. One specimen is revealed each week; the rest stay sealed until their date.</p>
         </div>
         <div class="cat-progress"><span class="cat-progress-track"><span class="cat-progress-fill" style="width: {pct}%"></span></span><span class="cat-progress-label">{revealed} of {total} revealed</span></div>
-        <p class="cat-latest"><a class="link-arrow" href="potw.html">Read the latest issue <span class="arrow">&rarr;</span></a></p>
+        <p class="cat-latest"><a class="link-arrow" href="potw.html">Read the latest issue <span class="arrow">&rarr;</span></a> &nbsp;&nbsp; <a class="link-arrow" href="potw-field-guide.html">The field guide <span class="arrow">&rarr;</span></a></p>
         <p class="cat-hook">{sealed} of the {total} are still sealed. You cannot skip the line, but you need not check back: <a href="#subscribe">have each one delivered the week it opens &rarr;</a></p>
       </div>
 {seasons_block}
@@ -994,6 +996,147 @@ def render_catalogue_file(preview: bool = False) -> None:
     dest = (SITE_ROOT / "potw-catalogue-preview.html") if preview else CATALOGUE
     dest.write_text(render_catalogue(preview=preview))
     print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
+
+
+FIELD_GUIDE_CSS = """
+    /* === Field guide (Topicpile atlas placeholder) === */
+    .fg-plate { position: relative; margin-top: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); aspect-ratio: 16 / 8; overflow: hidden; }
+    .fg-plate .atlas-svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.62; }
+    .fg-status { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1.25rem; }
+    .fg-status-card { background: var(--parchment); border: 1px solid var(--ink-hairline-strong); padding: 1.4rem 1.75rem; max-width: 34rem; text-align: center; display: flex; flex-direction: column; gap: 0.55rem; }
+    .fg-status-card .label { color: var(--tannin); }
+    .fg-status-line { font-variation-settings: "wdth" 95, "wght" 600; font-size: clamp(1.125rem, 2.4vw, 1.5rem); letter-spacing: -0.015em; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .fg-status-sub { font-size: 0.875rem; line-height: 1.5; color: var(--ink-soft); }
+    .fg-credit { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.8rem; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--ink-hairline); }
+    .fg-credit-mark { font-variation-settings: "wght" 600; letter-spacing: 0.02em; color: var(--ink); }
+    .fg-credit-note { font-size: 0.9375rem; color: var(--ink-soft); }
+    @media (max-width: 600px) { .fg-plate { aspect-ratio: 4 / 5; } }"""
+
+
+def _atlas_svg() -> str:
+    """A decorative, abstract preview of the topic atlas (no labels, embargo-safe).
+
+    Seeded so the output is deterministic across builds. Replaced by the live Topicpile
+    embed once that service exists.
+    """
+    rng = random.Random(7)
+    clusters = [(190, 150, "var(--tannin)"), (560, 135, "var(--moss)"),
+                (320, 320, "var(--ochre)"), (620, 340, "var(--moss-deep)")]
+    dots, links = [], []
+    for cx, cy, color in clusters:
+        for _ in range(rng.randint(9, 13)):
+            x = round(cx + rng.uniform(-80, 80), 1)
+            y = round(cy + rng.uniform(-64, 64), 1)
+            r = round(rng.uniform(2.4, 5.4), 1)
+            if rng.random() < 0.3:
+                dots.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{color}" opacity="0.85"/>')
+            else:
+                dots.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="none" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>')
+            if rng.random() < 0.45:
+                links.append(f'<line x1="{cx}" y1="{cy}" x2="{x}" y2="{y}" stroke="var(--ink)" stroke-width="0.75" opacity="0.09"/>')
+    return ('<svg class="atlas-svg" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+            + "".join(links) + "".join(dots) + "</svg>")
+
+
+def render_field_guide() -> str:
+    """The field guide: a Topicpile topic-atlas of the published series.
+
+    Ships now as a palette-matched placeholder (abstract atlas + live count + a
+    'Created with Topicpile' funnel). The live embed mounts in place of .fg-status
+    once the Topicpile service exists. Only ever reflects published counts, so it
+    stays embargo-safe. See scripts/potw/README and the field-guide memory.
+    """
+    queue = load_queue()
+    specs = list(iter_specimens(queue))
+    total = len(specs)
+    revealed = sum(1 for number, spec, _c, _s in specs if _is_drafted(number, spec))
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The field guide: Protein of the Week, Phyla Technologies</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="The Protein of the Week field guide: an explorable topic atlas of the series, where every published protein finds its place among the others.">
+  <meta name="view-transition" content="same-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .masthead {{ border-bottom: 1px solid var(--ink-hairline); background: var(--parchment); }}
+    .masthead-inner {{ display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding-block: 1.25rem; flex-wrap: wrap; }}
+    .masthead .column-name {{ font-size: 0.75rem; font-variation-settings: "wdth" 100, "wght" 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tannin); }}
+{FIELD_GUIDE_CSS}
+{SUBSCRIBE_CSS}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <span class="wordmark-name">Phyla</span>
+        <span class="wordmark-sub">Technologies</span>
+      </a>
+      <a class="column-name" href="potw.html" style="text-decoration: none;">Protein of the Week</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="field-guide">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">&sect; &nbsp; The field guide</span>
+          <h2 class="headline">The series as a map.</h2>
+          <p class="body">Every published protein takes its place in a living atlas: not a list but a map, where specimens drift into clusters by the techniques they share, the organisms they came from, and the problems they solved. It fills in one point a week.</p>
+        </div>
+        <!-- The live Topicpile atlas mounts here once that service exists; it replaces .fg-status and the placeholder .atlas-svg, and must map published issues only (embargo). -->
+        <div class="fg-plate">
+          {_atlas_svg()}
+          <div class="fg-status">
+            <div class="fg-status-card">
+              <span class="label">Being drawn</span>
+              <span class="fg-status-line">{revealed} of {total} specimens mapped</span>
+              <span class="fg-status-sub">The interactive atlas opens once enough of the collection is on the page. New points appear as each week is revealed.</span>
+            </div>
+          </div>
+        </div>
+        <div class="fg-credit">
+          <span class="fg-credit-mark">Created with Topicpile</span>
+          <span class="fg-credit-note">Topicpile turns any research library into a map like this one.</span>
+          <!-- TODO: point to the Topicpile product URL once the service is live. -->
+          <a class="link-arrow" href="https://fullspec.dev" target="_blank" rel="noopener noreferrer">Explore Topicpile <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+{SUBSCRIBE_HTML}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div class="footer-meta">&copy; 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="index.html">Main site</a>
+        <a href="potw.html">Latest issue</a>
+        <a href="potw-catalogue.html">The catalogue</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+"""
+
+
+def render_field_guide_file() -> None:
+    FIELD_GUIDE.write_text(render_field_guide())
+    print(f"Wrote {FIELD_GUIDE.relative_to(SITE_ROOT)}", file=sys.stderr)
 
 
 def render_page(issue: dict, issues: list[dict]) -> str:
@@ -1217,6 +1360,7 @@ def main() -> int:
     ap.add_argument("--set-latest", action="store_true", help="Also write this issue to potw.html (the canonical page, served at /potw).")
     ap.add_argument("--catalogue", action="store_true", help="Render the full-series catalogue page (potw-catalogue.html).")
     ap.add_argument("--preview", action="store_true", help="With the catalogue, also write an editorial preview that reveals every name (potw-catalogue-preview.html, gitignored).")
+    ap.add_argument("--field-guide", action="store_true", help="Render the field-guide page (potw-field-guide.html), the Topicpile atlas placeholder.")
     args = ap.parse_args()
 
     all_issues = load_all_issues()
@@ -1235,6 +1379,8 @@ def main() -> int:
         ann_targets = sorted(ANNOUNCE_DIR.glob("*.json"))
 
     want_catalogue = args.all or args.catalogue or args.preview
+    want_field_guide = args.all or args.field_guide
+    want_pages = want_catalogue or want_field_guide
 
     # Which issues to render this run.
     if args.all:
@@ -1244,13 +1390,13 @@ def main() -> int:
         if not p.exists():
             p = ISSUES_DIR / args.issue
         targets = [json.loads(p.read_text())]
-    elif args.announcement or want_catalogue:
-        targets = []  # announcement- or catalogue-only run
+    elif args.announcement or want_pages:
+        targets = []  # announcement-, catalogue-, or field-guide-only run
     else:
-        print("Pass an issue filename, --announcement <id>, --catalogue, or --all.", file=sys.stderr)
+        print("Pass an issue filename, --announcement <id>, --catalogue, --field-guide, or --all.", file=sys.stderr)
         return 1
 
-    if not all_issues and not ann_targets and not want_catalogue:
+    if not all_issues and not ann_targets and not want_pages:
         print("Nothing to render (no issues in scripts/potw/issues/).", file=sys.stderr)
         return 1
 
@@ -1279,6 +1425,8 @@ def main() -> int:
         render_catalogue_file(preview=False)
     if args.preview:
         render_catalogue_file(preview=True)
+    if want_field_guide:
+        render_field_guide_file()
     return 0
 
 
