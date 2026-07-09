@@ -338,7 +338,7 @@
     .specimen { position: relative; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 4 / 3; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); overflow: hidden; }
     .specimen-stage { position: absolute; inset: 0; }
     .specimen-stage canvas { display: block; }
-    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); }
+    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); background: var(--parchment-pale); }
     .specimen-fallback a { color: var(--tannin); }
     .specimen-caption { margin-top: 0.9rem; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); text-align: center; max-width: 62ch; margin-inline: auto; }
     .specimen-caption a { color: var(--tannin); font-style: normal; text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
@@ -764,26 +764,26 @@
       var loader = document.getElementById('pdbLoader');
       var fallback = document.getElementById('pdbFallback');
       var started = false;
-      function reduce() { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
       function fail() { if (loader) loader.hidden = true; if (fallback) fallback.hidden = false; }
       function build() {
         if (!window.$3Dmol) return fail();
-        try {
-          var viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 });
-          fetch('https://files.rcsb.org/download/' + pdb + '.pdb')
-            .then(function (r) { if (!r.ok) throw 0; return r.text(); })
-            .then(function (data) {
-              viewer.addModel(data, 'pdb');
-              viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
-              viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
-              viewer.zoomTo();
-              viewer.render();
-              if (!reduce()) viewer.spin('y', 0.35);
-              if (loader) loader.hidden = true;
-              window.addEventListener('resize', function () { viewer.resize(); });
-            })
-            .catch(fail);
-        } catch (e) { fail(); }
+        var viewer, rendered = false;
+        try { viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 }); }
+        catch (e) { return fail(); }
+        window.addEventListener('resize', function () { if (rendered) { try { viewer.resize(); } catch (e) {} } });
+        fetch('https://files.rcsb.org/download/' + pdb + '.pdb')
+          .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+          .then(function (data) {
+            viewer.addModel(data, 'pdb');
+            viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
+            viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
+            viewer.zoomTo();
+            viewer.render();
+            rendered = true;
+            if (loader) loader.hidden = true;
+            if (fallback) fallback.hidden = true;
+          })
+          .catch(function () { if (!rendered) fail(); });
       }
       function start() {
         if (started) return; started = true;
@@ -791,6 +791,7 @@
         s.src = 'https://3Dmol.org/build/3Dmol-min.js';
         s.async = true; s.onload = build; s.onerror = fail;
         document.head.appendChild(s);
+        setTimeout(function () { if (loader && !loader.hidden) fail(); }, 8000);
       }
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (es) {
