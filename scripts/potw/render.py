@@ -249,9 +249,16 @@ TIMELINE_CSS = """
     .tl-year { font-variation-settings: "wdth" 95, "wght" 600; color: var(--tannin); font-variant-numeric: tabular-nums; font-size: 0.9375rem; white-space: nowrap; line-height: 1.5; }
     .tl-title { display: block; font-variation-settings: "wdth" 100, "wght" 600; color: var(--ink); font-size: 1.0625rem; letter-spacing: -0.005em; line-height: 1.3; margin-bottom: 0.3rem; }
     .tl-detail { display: block; font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.55; }
+    .tl-item.has-photo .tl-body { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .tl-item.has-photo .tl-text { flex: 1 1 auto; min-width: 0; }
+    .tl-photo { flex: 0 0 112px; margin: 0; }
+    .tl-photo img { width: 112px; height: 140px; object-fit: cover; display: block; border: 1px solid var(--ink-hairline-strong); filter: grayscale(0.25) sepia(0.1) contrast(0.96); background: var(--parchment-mid); }
+    .tl-photo figcaption { margin-top: 0.32rem; font-size: 0.5625rem; line-height: 1.35; color: var(--ink-soft); }
+    .tl-photo figcaption a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--ink-hairline); }
+    .tl-photo figcaption a:hover { color: var(--ink); }
     .timeline.reveal .tl-item { opacity: 0; transform: translateY(10px); transition: opacity 620ms cubic-bezier(0.16, 1, 0.3, 1), transform 620ms cubic-bezier(0.16, 1, 0.3, 1); }
     .timeline.reveal .tl-item.shown { opacity: 1; transform: none; }
-    @media (max-width: 600px) { .tl-item { grid-template-columns: 4rem 1fr; column-gap: 1rem; } }"""
+    @media (max-width: 600px) { .tl-item { grid-template-columns: 4rem 1fr; column-gap: 1rem; } .tl-item.has-photo .tl-body { gap: 0.85rem; } .tl-photo { flex-basis: 82px; } .tl-photo img { width: 82px; height: 102px; } }"""
 
 TIMELINE_SCRIPT = """  <script>
     /* Timeline: a restrained, staggered reveal on scroll. Progressive enhancement,
@@ -1268,6 +1275,32 @@ def render_field_guide_file() -> None:
     print(f"Wrote {FIELD_GUIDE.relative_to(SITE_ROOT)}", file=sys.stderr)
 
 
+def _tl_item(m: dict, ref_count: int) -> str:
+    """One timeline row, optionally with an open-licensed portrait/photo scattered beside it."""
+    img = (m.get("image") or "").strip()
+    photo, has = "", ""
+    if img:
+        has = " has-photo"
+        alt = esc(m.get("image_alt") or m.get("title", ""))
+        credit = esc(m.get("image_credit", ""))
+        href = esc(m.get("image_href", ""))
+        cap = ""
+        if credit:
+            inner = f'<a href="{href}" target="_blank" rel="noopener noreferrer">{credit}</a>' if href else credit
+            cap = f"<figcaption>{inner}</figcaption>"
+        photo = (
+            f'<figure class="tl-photo"><img src="{esc(img)}" alt="{alt}" loading="lazy" '
+            f'width="112" height="140">{cap}</figure>'
+        )
+    return (
+        f'          <li class="tl-item{has}">\n'
+        f'            <span class="tl-year">{esc(m["year"])}</span>\n'
+        f'            <span class="tl-body"><span class="tl-text"><span class="tl-title">{esc(m["title"])}</span>'
+        f'<span class="tl-detail">{_cite(m["detail"], ref_count)}</span></span>{photo}</span>\n'
+        f'          </li>'
+    )
+
+
 def render_page(issue: dict, issues: list[dict]) -> str:
     n = issue["number"]
     ref_count = len(issue.get("references") or [])
@@ -1290,14 +1323,7 @@ def render_page(issue: dict, issues: list[dict]) -> str:
         f'<span class="what">{esc(x["what"])}</span></div>'
         for x in issue["meanwhile"]
     )
-    timeline = "\n".join(
-        f'          <li class="tl-item">\n'
-        f'            <span class="tl-year">{esc(m["year"])}</span>\n'
-        f'            <span class="tl-body"><span class="tl-title">{esc(m["title"])}</span>'
-        f'<span class="tl-detail">{_cite(m["detail"], ref_count)}</span></span>\n'
-        f'          </li>'
-        for m in issue["timeline"]
-    )
+    timeline = "\n".join(_tl_item(m, ref_count) for m in issue["timeline"])
     archive_rows = render_archive(issues, n)
     org = esc(_organism(issue["binomial"]))
     band = _collection_band(issue)

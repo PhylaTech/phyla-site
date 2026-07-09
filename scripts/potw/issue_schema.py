@@ -41,6 +41,10 @@ class Milestone(BaseModel):
     year: str = Field(description="Year or short range, e.g. '1962' or '1992-1994'. Years only; keep it terse.")
     title: str = Field(description="Short sentence-case headline for the event, no trailing period, e.g. 'Shimomura isolates GFP at Friday Harbor'.")
     detail: str = Field(description="One sentence of context for the event. No em dashes.")
+    image: str = Field(default="", description="Optional local path to an OPEN-licensed portrait/photo beside this entry, e.g. 'assets/potw/gfp/shimomura.jpg'. Use for people when introduced; most entries have none.")
+    image_alt: str = Field(default="", description="Alt text describing the image.")
+    image_credit: str = Field(default="", description="Attribution to display for a public-domain or Creative Commons image, e.g. 'Bengt Nyman, CC BY 4.0'.")
+    image_href: str = Field(default="", description="Source link for the image, e.g. the Wikimedia Commons file page.")
 
 
 class Reference(BaseModel):

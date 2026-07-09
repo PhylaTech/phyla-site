@@ -8,10 +8,22 @@
   "dek": "A protein that does nothing but glow, pulled from a Pacific jellyfish, quietly became one of the most important tools in modern biology.",
   "byline": "Researched and written by the Phyla Protein Historian, a weekly dispatch on the molecules that quietly run the living world.",
   "facts": [
-    { "value": "1962", "label": "First isolated" },
-    { "value": "A. victoria", "label": "Source organism" },
-    { "value": "2008", "label": "Nobel Prize" },
-    { "value": "11", "label": "β-strands" }
+    {
+      "value": "1962",
+      "label": "First isolated"
+    },
+    {
+      "value": "A. victoria",
+      "label": "Source organism"
+    },
+    {
+      "value": "2008",
+      "label": "Nobel Prize"
+    },
+    {
+      "value": "11",
+      "label": "β-strands"
+    }
   ],
   "movements": [
     {
@@ -50,34 +62,136 @@
   "pull_quote": "Most proteins are machines. This one is a lantern, and that turned out to be the more useful thing to be.",
   "meanwhile_heading": "The world in 1962.",
   "meanwhile": [
-    { "when": "Feb", "what": "John Glenn becomes the first American to orbit the Earth." },
-    { "when": "Sep", "what": "Rachel Carson publishes Silent Spring, and modern environmentalism begins." },
-    { "when": "Oct", "what": "The Cuban Missile Crisis brings the world to the edge for thirteen days." },
-    { "when": "Dec", "what": "Watson, Crick, and Wilkins receive the Nobel Prize for the structure of DNA." }
+    {
+      "when": "Feb",
+      "what": "John Glenn becomes the first American to orbit the Earth."
+    },
+    {
+      "when": "Sep",
+      "what": "Rachel Carson publishes Silent Spring, and modern environmentalism begins."
+    },
+    {
+      "when": "Oct",
+      "what": "The Cuban Missile Crisis brings the world to the edge for thirteen days."
+    },
+    {
+      "when": "Dec",
+      "what": "Watson, Crick, and Wilkins receive the Nobel Prize for the structure of DNA."
+    }
   ],
   "timeline_heading": "From a jellyfish to a Nobel Prize.",
   "timeline": [
-    { "year": "1955", "title": "A green glow in the crystal jelly", "detail": "Demorest Davenport and Joseph Nicol report that Aequorea victoria fluoresces green under ultraviolet light." },
-    { "year": "1962", "title": "Shimomura isolates GFP at Friday Harbor", "detail": "Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own.[1]" },
-    { "year": "1979", "title": "The chromophore is worked out", "detail": "Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required.[2]" },
-    { "year": "1992", "title": "Prasher clones the gene", "detail": "Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use.[3]" },
-    { "year": "1994", "title": "A microbe and a worm light up", "detail": "Martin Chalfie expresses GFP in E. coli and in C. elegans, proving it folds and glows inside almost any living thing.[4]" },
-    { "year": "1994–1995", "title": "Tsien engineers a brighter palette", "detail": "Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors.[5]" },
-    { "year": "1996", "title": "The barrel comes into view", "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams.[6]" },
-    { "year": "2008", "title": "The Nobel Prize in Chemistry", "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest.[7]" }
+    {
+      "year": "1955",
+      "title": "A green glow in the crystal jelly",
+      "detail": "Demorest Davenport and Joseph Nicol report that Aequorea victoria fluoresces green under ultraviolet light.",
+      "image": "assets/potw/gfp/aequorea.jpg",
+      "image_alt": "Aequorea victoria, the crystal jelly that green fluorescent protein comes from",
+      "image_credit": "Aequorea victoria, Sierra Blakely",
+      "image_href": "https://commons.wikimedia.org/wiki/File:Aequorea4.jpg"
+    },
+    {
+      "year": "1962",
+      "title": "Shimomura isolates GFP at Friday Harbor",
+      "detail": "Hunting the blue-glowing aequorin, Osamu Shimomura pulls a second protein from the jellyfish and finds it glows green on its own.[1]",
+      "image": "assets/potw/gfp/shimomura.jpg",
+      "image_alt": "Portrait of Osamu Shimomura",
+      "image_credit": "Osamu Shimomura, Prolineserver, CC BY-SA 4.0",
+      "image_href": "https://commons.wikimedia.org/wiki/File:Osamu_Shimomura-press_conference_Dec_06th,_2008-2_(cropped).jpg"
+    },
+    {
+      "year": "1979",
+      "title": "The chromophore is worked out",
+      "detail": "Shimomura shows the light comes from three amino acids that fold and react with oxygen inside the protein, with no enzyme required.[2]"
+    },
+    {
+      "year": "1992",
+      "title": "Prasher clones the gene",
+      "detail": "Douglas Prasher sequences the GFP gene and shares his clones, then loses his funding before he can prove its use.[3]"
+    },
+    {
+      "year": "1994",
+      "title": "A microbe and a worm light up",
+      "detail": "Martin Chalfie expresses GFP in E. coli and in C. elegans, proving it folds and glows inside almost any living thing.[4]",
+      "image": "assets/potw/gfp/chalfie.jpg",
+      "image_alt": "Portrait of Martin Chalfie",
+      "image_credit": "Martin Chalfie, Duncan Hull, CC BY-SA 4.0",
+      "image_href": "https://commons.wikimedia.org/wiki/File:Martin_Chalfie_Royal_Society.jpg"
+    },
+    {
+      "year": "1994–1995",
+      "title": "Tsien engineers a brighter palette",
+      "detail": "Roger Tsien's lab introduces the S65T mutation and others, making GFP far brighter and opening a spectrum of colors.[5]",
+      "image": "assets/potw/gfp/tsien.jpg",
+      "image_alt": "Portrait of Roger Y. Tsien",
+      "image_credit": "Roger Y. Tsien, Santiagoagentino, CC BY-SA 3.0",
+      "image_href": "https://commons.wikimedia.org/wiki/File:Roger-Tsien-2010-Paris.JPG"
+    },
+    {
+      "year": "1996",
+      "title": "The barrel comes into view",
+      "detail": "The first crystal structures reveal an eleven-stranded β-barrel wrapped around the chromophore, solved independently by two teams.[6]"
+    },
+    {
+      "year": "2008",
+      "title": "The Nobel Prize in Chemistry",
+      "detail": "Shimomura, Chalfie, and Tsien share the prize for the discovery and development of GFP, and bring Prasher to Stockholm as their guest.[7]"
+    }
   ],
   "references": [
-    { "title": "Extraction, purification and properties of aequorin, a bioluminescent protein from the luminous hydromedusan, Aequorea", "source": "J. Cell. Comp. Physiol., 1962", "url": "https://doi.org/10.1002/jcp.1030590302" },
-    { "title": "Structure of the chromophore of Aequorea green fluorescent protein", "source": "FEBS Letters, 1979", "url": "https://doi.org/10.1016/0014-5793(79)80818-2" },
-    { "title": "Primary structure of the Aequorea victoria green-fluorescent protein", "source": "Gene, 1992", "url": "https://doi.org/10.1016/0378-1119(92)90691-H" },
-    { "title": "Green fluorescent protein as a marker for gene expression", "source": "Science, 1994", "url": "https://doi.org/10.1126/science.8303295" },
-    { "title": "Improved green fluorescence", "source": "Nature, 1995", "url": "https://doi.org/10.1038/373663b0" },
-    { "title": "Crystal structure of the Aequorea victoria green fluorescent protein", "source": "Science, 1996", "url": "https://doi.org/10.1126/science.273.5280.1392" },
-    { "title": "The Nobel Prize in Chemistry 2008", "source": "NobelPrize.org", "url": "https://www.nobelprize.org/prizes/chemistry/2008/" },
-    { "title": "Crystal structure of GFP (S65T), PDB entry 1EMA", "source": "RCSB Protein Data Bank", "url": "https://www.rcsb.org/structure/1EMA" }
+    {
+      "title": "Extraction, purification and properties of aequorin, a bioluminescent protein from the luminous hydromedusan, Aequorea",
+      "source": "J. Cell. Comp. Physiol., 1962",
+      "url": "https://doi.org/10.1002/jcp.1030590302"
+    },
+    {
+      "title": "Structure of the chromophore of Aequorea green fluorescent protein",
+      "source": "FEBS Letters, 1979",
+      "url": "https://doi.org/10.1016/0014-5793(79)80818-2"
+    },
+    {
+      "title": "Primary structure of the Aequorea victoria green-fluorescent protein",
+      "source": "Gene, 1992",
+      "url": "https://doi.org/10.1016/0378-1119(92)90691-H"
+    },
+    {
+      "title": "Green fluorescent protein as a marker for gene expression",
+      "source": "Science, 1994",
+      "url": "https://doi.org/10.1126/science.8303295"
+    },
+    {
+      "title": "Improved green fluorescence",
+      "source": "Nature, 1995",
+      "url": "https://doi.org/10.1038/373663b0"
+    },
+    {
+      "title": "Crystal structure of the Aequorea victoria green fluorescent protein",
+      "source": "Science, 1996",
+      "url": "https://doi.org/10.1126/science.273.5280.1392"
+    },
+    {
+      "title": "The Nobel Prize in Chemistry 2008",
+      "source": "NobelPrize.org",
+      "url": "https://www.nobelprize.org/prizes/chemistry/2008/"
+    },
+    {
+      "title": "Crystal structure of GFP (S65T), PDB entry 1EMA",
+      "source": "RCSB Protein Data Bank",
+      "url": "https://www.rcsb.org/structure/1EMA"
+    }
   ],
   "pdb_id": "1EMA",
   "pdb_note": "The GFP β-barrel and its buried chromophore, from the S65T structure solved by Ormö and colleagues in 1996.",
-  "collection": { "id": "2026-07", "label": "Seeing", "blurb": "Proteins that made the invisible visible.", "period": "July 2026" },
-  "season": { "id": "2026-q3", "label": "The Instruments", "blurb": "Proteins that stopped being something biologists studied and became something they use.", "period": "Q3 2026" }
+  "collection": {
+    "id": "2026-07",
+    "label": "Seeing",
+    "blurb": "Proteins that made the invisible visible.",
+    "period": "July 2026"
+  },
+  "season": {
+    "id": "2026-q3",
+    "label": "The Instruments",
+    "blurb": "Proteins that stopped being something biologists studied and became something they use.",
+    "period": "Q3 2026"
+  }
 }
