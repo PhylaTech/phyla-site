@@ -1,5 +1,5 @@
 {
-  "_comment": "Editorial calendar for Protein of the Week. Three levels: season (quarter) -> collection (month) -> specimen (week). research.py flattens the specimens in order (week number = position), picks the first one with no issue JSON yet (and status != 'published'), and passes its collection + season theme to the researchers and writer as light context. 'axis' names what ties a group together (family, function, provenance, impact, discovery, disease, or any non-obvious connection); it is editorial metadata and can differ per level. 'blurb' is the reader-facing announcement line. 'anchor_date' is week 1's publish date (a Monday); a specimen's reveal week is anchor_date + 7*(position-1) days, used for teasers. Add or reorder freely; numbering follows position.",
+  "_comment": "Editorial calendar for Protein of the Week. Three levels: season (quarter) -> collection (month) -> specimen (week). research.py flattens the specimens in order (week number = position), picks the first one with no issue JSON yet (and status != 'published'), and passes its collection + season theme to the researchers and writer as light context. 'axis' names what ties a group together (family, function, provenance, impact, discovery, disease, or any non-obvious connection); it is editorial metadata and can differ per level. 'blurb' is the reader-facing announcement line. 'anchor_date' is week 1's publish date (a Monday); a specimen's reveal week is anchor_date + 7*(position-1) days, used for teasers. Add or reorder freely; numbering follows position. The 'bench' array holds unscheduled seasons as swap inventory: nothing in the harness or renderer walks it, so week numbers and the catalogue are unaffected. To schedule a bench season, move its object into 'seasons' at the desired position (it then picks up week numbers and reveal dates automatically) and give its season/collections real quarter/month ids; to shelve one, move it back.",
   "anchor_date": "2026-07-06",
   "seasons": [
     {
@@ -190,6 +190,296 @@
             { "protein": "The ribosome", "slug": "ribosome", "hint": "A ribonucleoprotein machine that translates mRNA into protein; Ramakrishnan, Steitz, Yonath (Nobel 2009)." },
             { "protein": "DNA polymerase", "slug": "dna-polymerase", "hint": "Replicates DNA; Arthur Kornberg's Pol I (Nobel 1959); proofreading and replication fidelity." },
             { "protein": "Histones", "slug": "histones", "hint": "Spool DNA into nucleosomes; the histone code; the foundation of chromatin and epigenetics." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2027-q3",
+      "quarter": "Q3 2027",
+      "label": "The Molecular Diseases",
+      "axis": "disease",
+      "blurb": "Proteins defined by what goes wrong when they break; Pauling called sickle-cell the first molecular disease.",
+      "collections": [
+        {
+          "id": "2027-07",
+          "month": "July 2027",
+          "label": "One letter's difference",
+          "axis": "disease",
+          "blurb": "Single mutations with outsized consequences.",
+          "specimens": [
+            { "protein": "Hemoglobin", "slug": "hemoglobin", "hint": "Oxygen carrier; Pauling's 'molecular disease' (1949) and Ingram's single amino-acid substitution (1957) explained sickle-cell anemia." },
+            { "protein": "CFTR", "slug": "cftr", "hint": "Cystic fibrosis transmembrane conductance regulator; the F508del mutation; gene cloned in 1989 by Tsui, Riordan, and Collins." },
+            { "protein": "Dystrophin", "slug": "dystrophin", "hint": "Duchenne muscular dystrophy; product of the largest human gene; identified by Kunkel, 1987." },
+            { "protein": "Phenylalanine hydroxylase", "slug": "phenylalanine-hydroxylase", "hint": "Phenylketonuria (PKU); Folling, 1934; the basis of the Guthrie newborn heel-prick screen." }
+          ]
+        },
+        {
+          "id": "2027-08",
+          "month": "August 2027",
+          "label": "The shape of forgetting",
+          "axis": "disease",
+          "blurb": "Proteins that misfold and clump, and the diseases that follow.",
+          "specimens": [
+            { "protein": "Prion protein", "slug": "prion-protein", "hint": "Stanley Prusiner's protein-only infectious agent (Nobel 1997); scrapie, CJD, and mad cow disease." },
+            { "protein": "Amyloid-beta", "slug": "amyloid-beta", "hint": "The plaque-forming peptide of Alzheimer's disease; cleaved from APP; characterized by Glenner and Wong, 1984." },
+            { "protein": "Alpha-synuclein", "slug": "alpha-synuclein", "hint": "The main component of Parkinson's Lewy bodies; linked to disease by Goedert and Spillantini, 1997." },
+            { "protein": "Tau", "slug": "tau", "hint": "Microtubule-associated protein whose tangles define Alzheimer's and the tauopathies." }
+          ]
+        },
+        {
+          "id": "2027-09",
+          "month": "September 2027",
+          "label": "When the blood won't stop",
+          "axis": "disease",
+          "blurb": "The clotting cascade, seen through the diseases of its failure.",
+          "specimens": [
+            { "protein": "Factor VIII", "slug": "factor-viii", "hint": "Hemophilia A, the 'royal disease'; the first recombinant clotting factor, 1992." },
+            { "protein": "Von Willebrand factor", "slug": "von-willebrand-factor", "hint": "Platelet-adhesion protein; its deficiency is the most common inherited bleeding disorder." },
+            { "protein": "Fibrinogen", "slug": "fibrinogen", "hint": "Thrombin cleaves it into fibrin, the mesh of a blood clot." },
+            { "protein": "Antithrombin", "slug": "antithrombin", "hint": "The cascade's brake; heparin works through it; its deficiency causes thrombosis." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2027-q4",
+      "quarter": "Q4 2027",
+      "label": "First Light: the founding enzymes",
+      "axis": "discovery",
+      "blurb": "The enzymes that built biochemistry, from the first one named to the first ones seen.",
+      "collections": [
+        {
+          "id": "2027-10",
+          "month": "October 2027",
+          "label": "Named before they were known",
+          "axis": "discovery",
+          "blurb": "The enzymes that gave enzymology its start, and its vocabulary.",
+          "specimens": [
+            { "protein": "Diastase (amylase)", "slug": "diastase-amylase", "hint": "Payen and Persoz, 1833: the first enzyme described; its name is the root of the '-ase' suffix." },
+            { "protein": "Pepsin", "slug": "pepsin", "hint": "Theodor Schwann named the stomach's digestive principle in 1836; later crystallized by Northrop (Nobel 1946)." },
+            { "protein": "Trypsin", "slug": "trypsin", "hint": "Wilhelm Kuhne characterized it in 1876 and, in 1877, coined the word 'enzyme.'" },
+            { "protein": "Urease", "slug": "urease", "hint": "James Sumner crystallized it in 1926, the first proof that enzymes are proteins (Nobel 1946)." }
+          ]
+        },
+        {
+          "id": "2027-11",
+          "month": "November 2027",
+          "label": "The first structures",
+          "axis": "discovery",
+          "blurb": "The enzymes whose atomic shapes we saw first.",
+          "specimens": [
+            { "protein": "Lysozyme", "slug": "lysozyme", "hint": "Discovered by Fleming in 1922; in 1965, the first enzyme structure and mechanism, solved by David Phillips." },
+            { "protein": "Ribonuclease A", "slug": "ribonuclease-a", "hint": "Anfinsen's refolding showed sequence dictates structure (Nobel 1972); Merrifield's total synthesis (Nobel 1984)." },
+            { "protein": "Chymotrypsin", "slug": "chymotrypsin", "hint": "The serine-protease catalytic triad; an early window into how enzymes actually work." },
+            { "protein": "Carboxypeptidase A", "slug": "carboxypeptidase-a", "hint": "William Lipscomb's structure; an early view of a zinc metalloenzyme's active site." }
+          ]
+        },
+        {
+          "id": "2027-12",
+          "month": "December 2027",
+          "label": "Catalytic perfection",
+          "axis": "function",
+          "blurb": "Enzymes that run up against the physical limits of speed.",
+          "specimens": [
+            { "protein": "Carbonic anhydrase", "slug": "carbonic-anhydrase", "hint": "Near the diffusion limit; interconverts carbon dioxide and bicarbonate millions of times a second." },
+            { "protein": "Triosephosphate isomerase", "slug": "triosephosphate-isomerase", "hint": "The textbook 'catalytically perfect' enzyme, limited only by how fast substrate arrives." },
+            { "protein": "Acetylcholinesterase", "slug": "acetylcholinesterase", "hint": "Clears the neurotransmitter at the synapse at near-diffusion-limited rates; the target of nerve agents." },
+            { "protein": "Beta-lactamase", "slug": "beta-lactamase", "hint": "Destroys penicillins almost as fast as they arrive; a chief engine of antibiotic resistance." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2028-q1",
+      "quarter": "Q1 2028",
+      "label": "The Oxygen Chronicles",
+      "axis": "function",
+      "blurb": "Life's fraught relationship with oxygen: carrying it, burning it, and surviving it.",
+      "collections": [
+        {
+          "id": "2028-01",
+          "month": "January 2028",
+          "label": "Carrying it",
+          "axis": "function",
+          "blurb": "The famous oxygen carrier's lesser-known cousins, and how other lineages move oxygen.",
+          "specimens": [
+            { "protein": "Myoglobin", "slug": "myoglobin", "hint": "Kendrew's 1958 structure was the first of any protein (Nobel 1962); stores oxygen in muscle." },
+            { "protein": "Hemocyanin", "slug": "hemocyanin", "hint": "Copper-based oxygen carrier; the blue blood of snails, octopuses, and horseshoe crabs." },
+            { "protein": "Leghemoglobin", "slug": "leghemoglobin", "hint": "A plant globin in legume root nodules; shields nitrogen-fixing enzymes from oxygen." },
+            { "protein": "Hemerythrin", "slug": "hemerythrin", "hint": "A non-heme, iron-based oxygen carrier found in a few marine invertebrate phyla." }
+          ]
+        },
+        {
+          "id": "2028-02",
+          "month": "February 2028",
+          "label": "Burning it",
+          "axis": "function",
+          "blurb": "The electron-transport chain, where oxygen meets its end.",
+          "specimens": [
+            { "protein": "Cytochrome c", "slug": "cytochrome-c", "hint": "A mobile electron carrier so conserved it serves as a molecular evolutionary clock; also triggers apoptosis." },
+            { "protein": "Cytochrome c oxidase", "slug": "cytochrome-c-oxidase", "hint": "Complex IV; the terminal step that hands electrons to oxygen to make water." },
+            { "protein": "Ferredoxin", "slug": "ferredoxin", "hint": "An ancient iron-sulfur electron carrier at the heart of metabolism." },
+            { "protein": "NADH dehydrogenase", "slug": "nadh-dehydrogenase", "hint": "Complex I; the largest and first enzyme of the respiratory chain." }
+          ]
+        },
+        {
+          "id": "2028-03",
+          "month": "March 2028",
+          "label": "Making it, taming it",
+          "axis": "function",
+          "blurb": "The protein that releases oxygen, and the ones that defend against its damage.",
+          "specimens": [
+            { "protein": "Photosystem II", "slug": "photosystem-ii", "hint": "Splits water and releases the oxygen we breathe; its manganese cluster is the only known biological water-oxidizer." },
+            { "protein": "Rubisco", "slug": "rubisco", "hint": "The most abundant protein on Earth; fixes atmospheric carbon, famously slowly." },
+            { "protein": "Superoxide dismutase", "slug": "superoxide-dismutase", "hint": "Neutralizes the superoxide radical, a toxic byproduct of oxygen metabolism." },
+            { "protein": "Catalase", "slug": "catalase", "hint": "Breaks hydrogen peroxide into water and oxygen at one of the highest turnover rates known." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2028-q2",
+      "quarter": "Q2 2028",
+      "label": "Signals & Switches",
+      "axis": "function",
+      "blurb": "How a cell senses its world and decides what to do about it.",
+      "collections": [
+        {
+          "id": "2028-04",
+          "month": "April 2028",
+          "label": "The receptors",
+          "axis": "function",
+          "blurb": "The antennae that read the outside world.",
+          "specimens": [
+            { "protein": "Rhodopsin", "slug": "rhodopsin", "hint": "The light receptor of the eye; the first G-protein-coupled receptor structure (Palczewski, 2000)." },
+            { "protein": "Beta-adrenergic receptor", "slug": "beta-adrenergic-receptor", "hint": "The model GPCR; Lefkowitz and Kobilka's work on it won the 2012 Nobel." },
+            { "protein": "Nicotinic acetylcholine receptor", "slug": "nicotinic-acetylcholine-receptor", "hint": "The first neurotransmitter receptor isolated, from the electric ray's electric organ." },
+            { "protein": "Insulin receptor", "slug": "insulin-receptor", "hint": "A receptor tyrosine kinase; the cell-surface half of the insulin story." }
+          ]
+        },
+        {
+          "id": "2028-05",
+          "month": "May 2028",
+          "label": "The switches",
+          "axis": "function",
+          "blurb": "The molecular toggles that relay and amplify a signal.",
+          "specimens": [
+            { "protein": "Ras", "slug": "ras", "hint": "A GTPase that switches growth signaling on and off; mutated in roughly a quarter of human cancers." },
+            { "protein": "Protein kinase A", "slug": "protein-kinase-a", "hint": "The prototype protein kinase; Krebs and Fischer's phosphorylation work (Nobel 1992)." },
+            { "protein": "Calmodulin", "slug": "calmodulin", "hint": "A small, ubiquitous calcium sensor that relays the calcium signal to dozens of targets." },
+            { "protein": "p53", "slug": "p53", "hint": "The 'guardian of the genome'; the most frequently mutated tumor-suppressor protein." }
+          ]
+        },
+        {
+          "id": "2028-06",
+          "month": "June 2028",
+          "label": "Gates & channels",
+          "axis": "function",
+          "blurb": "Proteins that make cells electrical.",
+          "specimens": [
+            { "protein": "Potassium channel", "slug": "potassium-channel", "hint": "MacKinnon's structure revealed the selectivity filter (Nobel 2003)." },
+            { "protein": "Voltage-gated sodium channel", "slug": "voltage-gated-sodium-channel", "hint": "Carries the action potential; the molecular basis of Hodgkin and Huxley's nerve impulse." },
+            { "protein": "Aquaporin", "slug": "aquaporin", "hint": "The water channel; Peter Agre's discovery shared the 2003 Nobel." },
+            { "protein": "Piezo", "slug": "piezo", "hint": "The mechanosensitive channel behind touch and pressure sensing; Patapoutian's 2021 Nobel." }
+          ]
+        }
+      ]
+    }
+  ],
+  "bench": [
+    {
+      "id": "bench-green-world",
+      "quarter": "Bench",
+      "label": "The Green World",
+      "axis": "provenance",
+      "blurb": "Plant proteins: catching light, fighting back, and ripening.",
+      "collections": [
+        {
+          "id": "bench-green-light",
+          "month": "Bench",
+          "label": "Catching light",
+          "axis": "function",
+          "blurb": "How plants harvest and read light.",
+          "specimens": [
+            { "protein": "Photosystem I", "slug": "photosystem-i", "hint": "The second photosystem; passes light-excited electrons on to make NADPH." },
+            { "protein": "Light-harvesting complex", "slug": "light-harvesting-complex", "hint": "The chlorophyll-and-carotenoid antenna that funnels photons to the reaction center." },
+            { "protein": "Phytochrome", "slug": "phytochrome", "hint": "A red / far-red light switch that tells a plant about day length and shade." },
+            { "protein": "Cryptochrome", "slug": "cryptochrome", "hint": "A blue-light sensor tied to plant growth and to animal circadian clocks and magnetoreception." }
+          ]
+        },
+        {
+          "id": "bench-green-defense",
+          "month": "Bench",
+          "label": "The arsenal",
+          "axis": "provenance",
+          "blurb": "The proteins plants use to defend themselves.",
+          "specimens": [
+            { "protein": "Ricin", "slug": "ricin", "hint": "A ribosome-inactivating toxin from castor beans; infamous from the 1978 umbrella-tip assassination of Georgi Markov." },
+            { "protein": "Concanavalin A", "slug": "concanavalin-a", "hint": "A jack-bean lectin that binds sugars; a workhorse reagent in glycobiology." },
+            { "protein": "Systemin", "slug": "systemin", "hint": "A wound-signaling peptide that triggers a tomato plant's defenses." },
+            { "protein": "Thaumatin", "slug": "thaumatin", "hint": "An intensely sweet protein from a West African fruit, thousands of times sweeter than sugar." }
+          ]
+        },
+        {
+          "id": "bench-green-growth",
+          "month": "Bench",
+          "label": "Ripening & growth",
+          "axis": "function",
+          "blurb": "The proteins that soften, sweeten, and grow.",
+          "specimens": [
+            { "protein": "ACC synthase", "slug": "acc-synthase", "hint": "The committed step in making ethylene, the gas hormone that ripens fruit." },
+            { "protein": "Expansin", "slug": "expansin", "hint": "Loosens the cell wall so a plant cell can grow." },
+            { "protein": "Papain", "slug": "papain", "hint": "A cysteine protease from papaya; a meat tenderizer and a classic mechanistic enzyme." },
+            { "protein": "Bromelain", "slug": "bromelain", "hint": "A pineapple protease used in food and folk medicine." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bench-living-materials",
+      "quarter": "Bench",
+      "label": "Living Materials",
+      "axis": "impact",
+      "blurb": "The structural proteins humans borrow for fibers, glues, and optics.",
+      "collections": [
+        {
+          "id": "bench-mat-threads",
+          "month": "Bench",
+          "label": "Threads",
+          "axis": "impact",
+          "blurb": "Protein fibers stronger than their weight suggests.",
+          "specimens": [
+            { "protein": "Spider silk", "slug": "spider-silk", "hint": "Dragline spidroin; tougher for its weight than steel or Kevlar." },
+            { "protein": "Silk fibroin", "slug": "silk-fibroin", "hint": "The silkworm's fiber; the material of the Silk Road and, now, of biomedical scaffolds." },
+            { "protein": "Keratin", "slug": "keratin", "hint": "The protein of hair, horn, wool, and feathers." },
+            { "protein": "Elastin", "slug": "elastin", "hint": "The recoil in skin, lungs, and arteries; it snaps back a billion times over a lifetime." }
+          ]
+        },
+        {
+          "id": "bench-mat-glues",
+          "month": "Bench",
+          "label": "Glues & springs",
+          "axis": "impact",
+          "blurb": "Adhesives and elastics evolution reached first.",
+          "specimens": [
+            { "protein": "Mussel foot protein", "slug": "mussel-foot-protein", "hint": "A DOPA-based adhesive that sets underwater; the model for wet glues." },
+            { "protein": "Resilin", "slug": "resilin", "hint": "A nearly perfect elastic protein; it powers the flea's jump and the insect wing-hinge." },
+            { "protein": "Byssus", "slug": "byssus", "hint": "The tough anchoring threads a mussel spins to hold onto rock." },
+            { "protein": "Barnacle cement", "slug": "barnacle-cement", "hint": "One of nature's most durable permanent adhesives." }
+          ]
+        },
+        {
+          "id": "bench-mat-optics",
+          "month": "Bench",
+          "label": "Optics & light",
+          "axis": "impact",
+          "blurb": "Proteins that bend, store, or make light.",
+          "specimens": [
+            { "protein": "Crystallins", "slug": "crystallins", "hint": "Packed into the eye's lens at high concentration to stay transparent for a lifetime." },
+            { "protein": "Reflectin", "slug": "reflectin", "hint": "The tunable, iridescent protein behind squid and cuttlefish camouflage." },
+            { "protein": "Antifreeze protein", "slug": "antifreeze-protein", "hint": "Binds tiny ice crystals to keep polar fish and insects from freezing." },
+            { "protein": "Aequorin", "slug": "aequorin", "hint": "The other Aequorea victoria protein: a calcium-triggered blue light that led Shimomura to GFP." }
           ]
         }
       ]
