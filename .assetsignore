@@ -1,0 +1,20 @@
+# Files NOT to publish as static assets (like .gitignore, for the Worker's asset upload).
+# Keep the deployed site to the web files only; drop source, tooling, and docs.
+.git
+.github
+.claude
+node_modules
+scripts
+data/*.py
+*.py
+environment.yml
+wrangler.jsonc
+.assetsignore
+.gitignore
+CNAME
+CODEOWNERS
+DESIGN.md
+DESIGN-TOKENS.md
+PRODUCT.md
+README.md
+potw-catalogue-preview.html
