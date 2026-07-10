@@ -1,0 +1,10 @@
+{
+  // Static-assets Worker for the Phyla site. Cloudflare Workers Builds runs
+  // `wrangler deploy` against this; it serves the repo root as static files.
+  // Production (main) and every non-production branch (preview URL) use this.
+  "name": "phyla-site",
+  "compatibility_date": "2026-07-10",
+  "assets": {
+    "directory": "."
+  }
+}
