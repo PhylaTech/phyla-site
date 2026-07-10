@@ -637,9 +637,12 @@ STRUCTURE_CSS = """
     .specimen { position: relative; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 4 / 3; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); overflow: hidden; }
     .specimen-stage { position: absolute; inset: 0; }
     .specimen-stage canvas { display: block; }
-    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); background: var(--parchment-pale); }
+    .specimen-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--parchment-pale); }
+    .specimen-still { flex: 1 1 auto; min-height: 0; width: 100%; object-fit: contain; padding: 4%; filter: grayscale(0.3) sepia(0.16) contrast(0.97); }
+    .specimen-fallback-bar { flex: 0 0 auto; display: flex; flex-direction: column; gap: 0.15rem; text-align: center; padding: 0.5rem 1rem 0.7rem; border-top: 1px solid var(--ink-hairline); font-size: 0.8125rem; color: var(--ink-soft); }
     .specimen-fallback a { color: var(--tannin); }
-    .specimen-why { margin-top: 0.6rem; font-size: 0.75rem; color: var(--ink-soft); max-width: 40ch; }
+    .specimen-credit { font-size: 0.625rem; color: var(--ink-soft); }
+    .specimen-why { font-size: 0.6875rem; color: var(--ink-soft); }
     .specimen-caption { margin-top: 0.9rem; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); text-align: center; max-width: 62ch; margin-inline: auto; }
     .specimen-caption a { color: var(--tannin); font-style: normal; text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
     .specimen-caption a:hover { border-color: var(--tannin); }
@@ -737,6 +740,9 @@ def _structure_section(issue: dict) -> str:
     pu = esc(pdb.upper())
     rcsb = f"https://www.rcsb.org/structure/{pu}"
     note = esc(issue.get("pdb_note") or f"Structure from the RCSB Protein Data Bank.")
+    pdb_low = esc(pdb.lower())
+    credit = esc(issue.get("pdb_still_credit", ""))
+    credit_html = f'<span class="specimen-credit">{credit}</span>' if credit else ""
     return (
         '    <section id="structure">\n'
         '      <div class="wrap">\n'
@@ -750,7 +756,14 @@ def _structure_section(issue: dict) -> str:
         '            <div class="loader" id="pdbLoader" role="status" aria-label="Loading the 3D structure">\n'
         '              <span></span><span></span><span></span><em></em>\n'
         '            </div>\n'
-        f'            <div class="specimen-fallback" id="pdbFallback" hidden><p>Interactive view unavailable. <a href="{rcsb}" target="_blank" rel="noopener noreferrer">Open PDB {pu} at RCSB &rarr;</a></p><p class="specimen-why" id="pdbWhy"></p></div>\n'
+        '            <div class="specimen-fallback" id="pdbFallback" hidden>\n'
+        f'              <img class="specimen-still" src="assets/potw/pdb/{pdb_low}-still.png" alt="Structure of {esc(issue["protein"])} (PDB {pu})" loading="lazy" onerror="this.remove()">\n'
+        '              <div class="specimen-fallback-bar">\n'
+        f'                <span>Interactive view unavailable. <a href="{rcsb}" target="_blank" rel="noopener noreferrer">Open PDB {pu} at RCSB &rarr;</a></span>\n'
+        f'                {credit_html}\n'
+        '                <span class="specimen-why" id="pdbWhy"></span>\n'
+        '              </div>\n'
+        '            </div>\n'
         '          </div>\n'
         f'          <p class="specimen-caption">{note} PDB <a href="{rcsb}" target="_blank" rel="noopener noreferrer">{pu}</a>. Drag to rotate, scroll to zoom.</p>\n'
         '        </div>\n'
