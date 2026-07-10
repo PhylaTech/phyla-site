@@ -637,8 +637,9 @@ STRUCTURE_CSS = """
     .specimen { position: relative; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 4 / 3; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); overflow: hidden; }
     .specimen-stage { position: absolute; inset: 0; }
     .specimen-stage canvas { display: block; }
-    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); background: var(--parchment-pale); }
+    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); background: var(--parchment-pale); }
     .specimen-fallback a { color: var(--tannin); }
+    .specimen-why { margin-top: 0.6rem; font-size: 0.75rem; color: var(--ink-soft); max-width: 40ch; }
     .specimen-caption { margin-top: 0.9rem; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); text-align: center; max-width: 62ch; margin-inline: auto; }
     .specimen-caption a { color: var(--tannin); font-style: normal; text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
     .specimen-caption a:hover { border-color: var(--tannin); }
@@ -670,9 +671,9 @@ REFERENCES_CSS = """
     .ref-foot { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); font-style: italic; max-width: 60ch; }"""
 
 STRUCTURE_SCRIPT = """  <script>
-    /* Structure viewer: lazy-load 3Dmol only when the specimen scrolls into view, fetch the
-       PDB from RCSB, and style it in the house palette. Fully optional: on any failure the
-       page keeps its fallback link, and the article stands on its own. */
+    /* Structure viewer: lazy-load a vendored 3Dmol when the specimen scrolls into view, load
+       the vendored PDB, style it in the house palette, and rotate. No third-party requests;
+       on failure the fallback names the specific cause and keeps the RCSB link. */
     (function () {
       var stage = document.getElementById('pdbStage');
       if (!stage || !('fetch' in window)) return;
@@ -680,36 +681,43 @@ STRUCTURE_SCRIPT = """  <script>
       var pdb = (specimen.getAttribute('data-pdb') || '').trim();
       var loader = document.getElementById('pdbLoader');
       var fallback = document.getElementById('pdbFallback');
-      var started = false;
-      function fail() { if (loader) loader.hidden = true; if (fallback) fallback.hidden = false; }
+      var why = document.getElementById('pdbWhy');
+      var started = false, done = false;
+      function fail(reason) {
+        if (done) return; done = true;
+        if (loader) loader.hidden = true;
+        if (fallback) fallback.hidden = false;
+        if (reason) { try { console.error('[POTW structure] ' + reason); } catch (e) {} if (why) why.textContent = reason; }
+      }
       function build() {
-        if (!window.$3Dmol) return fail();
+        if (!window.$3Dmol) return fail('The 3D viewer library loaded but did not initialize.');
         var viewer, rendered = false;
         try { viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 }); }
-        catch (e) { return fail(); }
+        catch (e) { return fail('WebGL (3D graphics) is unavailable or disabled in this browser.'); }
         window.addEventListener('resize', function () { if (rendered) { try { viewer.resize(); } catch (e) {} } });
-        fetch('https://files.rcsb.org/download/' + pdb + '.pdb')
-          .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+        fetch('assets/potw/pdb/' + pdb.toLowerCase() + '.pdb')
+          .then(function (r) { if (!r.ok) throw new Error('The structure file could not be loaded (HTTP ' + r.status + ').'); return r.text(); })
           .then(function (data) {
             viewer.addModel(data, 'pdb');
             viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
             viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
             viewer.zoomTo();
             viewer.render();
-            rendered = true;
+            rendered = true; done = true;
             if (loader) loader.hidden = true;
             if (fallback) fallback.hidden = true;
             if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) viewer.spin('y', 0.35);
           })
-          .catch(function () { if (!rendered) fail(); });
+          .catch(function (e) { if (!rendered) fail((e && e.message) || 'The structure could not be drawn.'); });
       }
       function start() {
         if (started) return; started = true;
         var s = document.createElement('script');
-        s.src = 'https://cdn.jsdelivr.net/npm/3dmol@2/build/3Dmol-min.js';
-        s.async = true; s.onload = build; s.onerror = fail;
+        s.src = 'assets/potw/vendor/3Dmol-min.js';
+        s.async = true; s.onload = build;
+        s.onerror = function () { fail('The 3D viewer library failed to load.'); };
         document.head.appendChild(s);
-        setTimeout(function () { if (loader && !loader.hidden) fail(); }, 20000);
+        setTimeout(function () { if (!done) fail('Timed out loading the 3D viewer.'); }, 20000);
       }
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (es) {
@@ -742,7 +750,7 @@ def _structure_section(issue: dict) -> str:
         '            <div class="loader" id="pdbLoader" role="status" aria-label="Loading the 3D structure">\n'
         '              <span></span><span></span><span></span><em></em>\n'
         '            </div>\n'
-        f'            <div class="specimen-fallback" id="pdbFallback" hidden><p>Interactive view unavailable. <a href="{rcsb}" target="_blank" rel="noopener noreferrer">Open PDB {pu} at RCSB &rarr;</a></p></div>\n'
+        f'            <div class="specimen-fallback" id="pdbFallback" hidden><p>Interactive view unavailable. <a href="{rcsb}" target="_blank" rel="noopener noreferrer">Open PDB {pu} at RCSB &rarr;</a></p><p class="specimen-why" id="pdbWhy"></p></div>\n'
         '          </div>\n'
         f'          <p class="specimen-caption">{note} PDB <a href="{rcsb}" target="_blank" rel="noopener noreferrer">{pu}</a>. Drag to rotate, scroll to zoom.</p>\n'
         '        </div>\n'
