@@ -346,9 +346,12 @@
     .specimen { position: relative; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 4 / 3; border: 1px solid var(--ink-hairline-strong); background: var(--parchment-pale); overflow: hidden; }
     .specimen-stage { position: absolute; inset: 0; }
     .specimen-stage canvas { display: block; }
-    .specimen-fallback { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; text-align: center; padding: 2rem; font-size: 0.9375rem; color: var(--ink-soft); background: var(--parchment-pale); }
-    .specimen-why { margin-top: 0.6rem; font-size: 0.75rem; color: var(--ink-soft); max-width: 40ch; }
+    .specimen-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--parchment-pale); }
+    .specimen-still { flex: 1 1 auto; min-height: 0; width: 100%; object-fit: contain; padding: 4%; filter: grayscale(0.3) sepia(0.16) contrast(0.97); }
+    .specimen-fallback-bar { flex: 0 0 auto; display: flex; flex-direction: column; gap: 0.15rem; text-align: center; padding: 0.5rem 1rem 0.7rem; border-top: 1px solid var(--ink-hairline); font-size: 0.8125rem; color: var(--ink-soft); }
     .specimen-fallback a { color: var(--tannin); }
+    .specimen-credit { font-size: 0.625rem; color: var(--ink-soft); }
+    .specimen-why { font-size: 0.6875rem; color: var(--ink-soft); }
     .specimen-caption { margin-top: 0.9rem; font-size: 0.8125rem; font-style: italic; color: var(--ink-soft); text-align: center; max-width: 62ch; margin-inline: auto; }
     .specimen-caption a { color: var(--tannin); font-style: normal; text-decoration: none; border-bottom: 1px solid var(--ink-hairline-strong); }
     .specimen-caption a:hover { border-color: var(--tannin); }
@@ -551,7 +554,14 @@
             <div class="loader" id="pdbLoader" role="status" aria-label="Loading the 3D structure">
               <span></span><span></span><span></span><em></em>
             </div>
-            <div class="specimen-fallback" id="pdbFallback" hidden><p>Interactive view unavailable. <a href="https://www.rcsb.org/structure/1EMA" target="_blank" rel="noopener noreferrer">Open PDB 1EMA at RCSB &rarr;</a></p><p class="specimen-why" id="pdbWhy"></p></div>
+            <div class="specimen-fallback" id="pdbFallback" hidden>
+              <img class="specimen-still" src="assets/potw/pdb/1ema-still.png" alt="Crystal structure of green fluorescent protein (PDB 1EMA): an eleven-stranded beta-barrel wrapped around its chromophore" loading="lazy">
+              <div class="specimen-fallback-bar">
+                <span>Interactive view unavailable. <a href="https://www.rcsb.org/structure/1EMA" target="_blank" rel="noopener noreferrer">Open PDB 1EMA at RCSB &rarr;</a></span>
+                <span class="specimen-credit">Structure illustration by Richard Wheeler (Zephyris), <a href="https://commons.wikimedia.org/wiki/File:GFP_structure.png" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></span>
+                <span class="specimen-why" id="pdbWhy"></span>
+              </div>
+            </div>
           </div>
           <p class="specimen-caption">The GFP &beta;-barrel and its buried chromophore, from the S65T structure solved by Ormö and colleagues in 1996. PDB <a href="https://www.rcsb.org/structure/1EMA" target="_blank" rel="noopener noreferrer">1EMA</a>. Drag to rotate, scroll to zoom.</p>
         </div>
