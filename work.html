@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work, Phyla Technologies</title>
+  <title>Open source, Phyla Technologies</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Selected work from the Phyla team: open-source tools like Autometa and peer-reviewed research across metagenomics, drug discovery, and multi-omics.">
+  <meta name="description" content="Open-source software from the Phyla team: tools we maintain for the genomics and ML community, and upstream contributions to the projects our field relies on.">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Work, Phyla Technologies">
-  <meta property="og:description" content="Open-source tools and peer-reviewed research from the Phyla team.">
+  <meta property="og:title" content="Open source, Phyla Technologies">
+  <meta property="og:description" content="Tools we maintain for the community, and upstream contributions to the projects our field relies on.">
   <meta property="og:url" content="https://phylatech.com/work.html">
   <meta property="og:site_name" content="Phyla Technologies">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Work, Phyla Technologies">
-  <meta name="twitter:description" content="Open-source tools and peer-reviewed research from the Phyla team.">
+  <meta name="twitter:title" content="Open source, Phyla Technologies">
+  <meta name="twitter:description" content="Tools we maintain for the community, and upstream contributions to the projects our field relies on.">
 
   <meta name="view-transition" content="same-origin">
 
@@ -46,109 +46,7 @@
       background: var(--tannin);
     }
     .work-hero h1 { max-width: 15ch; margin-bottom: 1.5rem; }
-    .work-hero .lead { max-width: 52ch; }
-
-    /* === Featured tool === */
-    .feature {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-      gap: clamp(2rem, 5vw, 4.5rem);
-      align-items: center;
-      border-top: 1px solid var(--ink-hairline);
-      border-bottom: 1px solid var(--ink-hairline);
-      padding-block: clamp(2.5rem, 5vw, 4rem);
-    }
-    .feature-body .kicker {
-      font-size: 0.6875rem;
-      font-variation-settings: "wdth" 100, "wght" 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--moss-deep);
-      display: block;
-      margin-bottom: 0.9rem;
-    }
-    .feature-body h2 {
-      font-size: clamp(1.75rem, 3.4vw, 2.5rem);
-      font-variation-settings: "wdth" 95, "wght" 700;
-      letter-spacing: -0.02em;
-      line-height: 1.05;
-      margin-bottom: 1rem;
-    }
-    .feature-body h2 .latin { font-style: italic; font-variation-settings: "wdth" 95, "wght" 600; color: var(--tannin); }
-    .feature-body p { margin-bottom: 1rem; }
-    .feature-body p:last-of-type { margin-bottom: 1.5rem; }
-    .feature-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 2rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid var(--ink-hairline);
-      margin-bottom: 1.5rem;
-    }
-    .feature-meta .m .label { display: block; margin-bottom: 0.3rem; }
-    .feature-meta .m .val {
-      font-size: 0.9375rem;
-      color: var(--ink);
-      font-variation-settings: "wdth" 100, "wght" 500;
-      font-variant-numeric: tabular-nums;
-    }
-
-    /* Genome-binning motif (right column) */
-    .binning { width: 100%; max-width: 460px; height: auto; display: block; margin-inline: auto; }
-
-    /* === Publications === */
-    .pub-list { border-top: 1px solid var(--ink-hairline); }
-    .pub {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 1rem 2rem;
-      align-items: baseline;
-      padding-block: 1.4rem;
-      border-bottom: 1px solid var(--ink-hairline);
-    }
-    .pub-main .pub-title {
-      font-size: 1.0625rem;
-      font-variation-settings: "wdth" 100, "wght" 600;
-      letter-spacing: -0.005em;
-      color: var(--ink);
-      line-height: 1.35;
-      text-decoration: none;
-      display: inline;
-      background-image: linear-gradient(var(--ink-hairline-strong), var(--ink-hairline-strong));
-      background-size: 0% 1px;
-      background-repeat: no-repeat;
-      background-position: 0 100%;
-      transition: background-size 220ms cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    a.pub-title:hover { background-size: 100% 1px; }
-    .pub-meta {
-      margin-top: 0.4rem;
-      font-size: 0.875rem;
-      color: var(--ink-soft);
-    }
-    .pub-meta .venue { font-style: italic; }
-    .pub-cites {
-      font-size: 0.8125rem;
-      color: var(--ink-soft);
-      font-variant-numeric: tabular-nums;
-      white-space: nowrap;
-      text-align: right;
-    }
-    .pub-cites strong {
-      display: block;
-      font-size: 1.375rem;
-      font-variation-settings: "wdth" 92, "wght" 600;
-      color: var(--tannin);
-      letter-spacing: -0.01em;
-      line-height: 1;
-      margin-bottom: 0.2rem;
-    }
-    .pub-note {
-      margin-top: 1.5rem;
-      font-size: 0.8125rem;
-      font-style: italic;
-      color: var(--ink-soft);
-    }
+    .work-hero .lead { max-width: 54ch; }
 
     /* === Open source & community === */
     .oss-list { border-top: 1px solid var(--ink-hairline); }
@@ -210,17 +108,6 @@
 
     /* === Closing === */
     .closing .link-arrow { margin-top: 0.5rem; }
-
-    /* === Page-specific responsive === */
-    @media (max-width: 820px) {
-      .feature { grid-template-columns: 1fr; gap: 2.25rem; }
-      .feature-visual { order: -1; }
-    }
-    @media (max-width: 520px) {
-      .pub { grid-template-columns: 1fr; gap: 0.5rem; }
-      .pub-cites { text-align: left; display: flex; align-items: baseline; gap: 0.4rem; }
-      .pub-cites strong { display: inline; font-size: 1rem; margin-bottom: 0; }
-    }
   </style>
 </head>
 <body>
@@ -234,7 +121,7 @@
       </a>
       <nav class="primary" aria-label="Primary">
         <a href="services.html">Services</a>
-        <a href="work.html" aria-current="page" class="active">Work</a>
+        <a href="work.html" aria-current="page" class="active">Open source</a>
         <a href="impact.html">Impact</a>
         <a href="about.html">About</a>
         <a href="index.html#contact" class="cta">Get in touch</a>
@@ -247,82 +134,17 @@
     <!-- HERO -->
     <section class="work-hero">
       <div class="wrap">
-        <span class="eyebrow label">Selected work</span>
-        <h1 class="display">The record so far.</h1>
-        <p class="lead body-large">Phyla is young, so this is the work we did on the way here: open-source tools other labs run, and peer-reviewed research that's still being built on. Client engagements will join this page as we deliver them.</p>
+        <span class="eyebrow label">Open source</span>
+        <h1 class="display">Built in the open.</h1>
+        <p class="lead body-large">The tools we build for our own work, we tend to give away. Phyla maintains open-source software for the community we came up in, and contributes upstream to the projects our field relies on.</p>
       </div>
     </section>
 
-    <!-- FEATURED TOOL -->
-    <section id="tool">
-      <div class="wrap">
-        <div class="feature">
-          <div class="feature-body">
-            <span class="kicker">Open source</span>
-            <h2><span class="latin">Autometa</span></h2>
-            <p>An open-source pipeline for pulling individual microbial genomes out of shotgun metagenomes, developed by members of our team and used by research groups worldwide. It turns a tangle of mixed environmental DNA into separated, analyzable genomes.</p>
-            <p>It is exactly the kind of work we do now for clients: a hard scientific problem, solved as real, reproducible, maintained software rather than a one-off script.</p>
-            <div class="feature-meta">
-              <div class="m">
-                <span class="label">Published in</span>
-                <span class="val">Nucleic Acids Research</span>
-              </div>
-              <div class="m">
-                <span class="label">Citations</span>
-                <span class="val" data-autometa-cites>103</span>
-              </div>
-              <div class="m">
-                <span class="label">License</span>
-                <span class="val">Open source</span>
-              </div>
-            </div>
-            <a href="https://github.com/KwanLab/Autometa" target="_blank" rel="noopener noreferrer" class="link-arrow">
-              <span>View on GitHub</span>
-              <span class="arrow" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-          <div class="feature-visual">
-            <svg class="binning" viewBox="0 0 460 360" role="img" aria-labelledby="binTitle binDesc">
-              <title id="binTitle">Genome binning</title>
-              <desc id="binDesc">A scatter of points resolving into three separated clusters, a stylized picture of sorting mixed metagenomic contigs into individual genomes.</desc>
-              <!-- axes hairlines -->
-              <line x1="40" y1="320" x2="430" y2="320" stroke="var(--ink-hairline-strong)" stroke-width="0.6"/>
-              <line x1="40" y1="40" x2="40" y2="320" stroke="var(--ink-hairline-strong)" stroke-width="0.6"/>
-              <!-- cluster 1 (tannin) -->
-              <g fill="var(--tannin)" fill-opacity="0.62">
-                <circle cx="120" cy="110" r="5"/><circle cx="138" cy="96" r="6"/><circle cx="108" cy="128" r="4.5"/><circle cx="150" cy="120" r="5.5"/><circle cx="128" cy="140" r="4"/><circle cx="160" cy="104" r="4"/><circle cx="115" cy="94" r="3.5"/><circle cx="142" cy="128" r="5"/><circle cx="100" cy="112" r="3.5"/><circle cx="152" cy="138" r="3.5"/>
-              </g>
-              <!-- cluster 2 (moss) -->
-              <g fill="var(--moss-deep)" fill-opacity="0.6">
-                <circle cx="300" cy="150" r="6"/><circle cx="322" cy="138" r="5"/><circle cx="286" cy="164" r="5.5"/><circle cx="330" cy="166" r="4.5"/><circle cx="308" cy="178" r="4"/><circle cx="344" cy="150" r="4"/><circle cx="296" cy="136" r="4"/><circle cx="318" cy="180" r="3.5"/><circle cx="278" cy="148" r="3.5"/><circle cx="336" cy="132" r="3.5"/>
-              </g>
-              <!-- cluster 3 (ochre) -->
-              <g fill="var(--ochre)" fill-opacity="0.62">
-                <circle cx="230" cy="250" r="5.5"/><circle cx="250" cy="238" r="5"/><circle cx="214" cy="262" r="5"/><circle cx="258" cy="264" r="4.5"/><circle cx="238" cy="276" r="4"/><circle cx="272" cy="248" r="3.5"/><circle cx="222" cy="240" r="3.5"/><circle cx="248" cy="280" r="3.5"/><circle cx="206" cy="250" r="3"/>
-              </g>
-              <!-- unbinned scatter (ink, faint) -->
-              <g fill="var(--ink)" fill-opacity="0.22">
-                <circle cx="190" cy="180" r="3"/><circle cx="210" cy="150" r="2.5"/><circle cx="260" cy="200" r="3"/><circle cx="175" cy="210" r="2.5"/><circle cx="290" cy="215" r="2.5"/><circle cx="165" cy="150" r="2.5"/><circle cx="360" cy="200" r="3"/><circle cx="120" cy="200" r="2.5"/><circle cx="320" cy="250" r="2.5"/><circle cx="200" cy="290" r="2.5"/><circle cx="380" cy="150" r="2.5"/><circle cx="90" cy="160" r="2.5"/>
-              </g>
-              <!-- hulls -->
-              <g fill="none" stroke-width="1" stroke-dasharray="3 4">
-                <ellipse cx="130" cy="116" rx="42" ry="34" stroke="var(--tannin)" stroke-opacity="0.5"/>
-                <ellipse cx="312" cy="158" rx="42" ry="32" stroke="var(--moss-deep)" stroke-opacity="0.5"/>
-                <ellipse cx="238" cy="258" rx="40" ry="30" stroke="var(--ochre)" stroke-opacity="0.5"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OPEN SOURCE & COMMUNITY -->
-    <section id="opensource">
+    <!-- CONTRIBUTIONS -->
+    <section id="contributions">
       <div class="wrap">
         <div class="section-head">
-          <span class="label">&sect; &nbsp; Community</span>
-          <h2 class="headline">Built in the open.</h2>
-          <p class="body">The tools we build for our own work, we tend to give away. Outside of any single research project, we maintain open-source software for the community we came up in, and contribute upstream to the projects our field relies on.</p>
+          <span class="label">&sect; &nbsp; What we maintain, and where we contribute</span>
         </div>
         <div class="oss-list">
           <a class="oss" href="https://github.com/Full-Spectrum-Analytics/nf-notion" target="_blank" rel="noopener noreferrer">
@@ -358,22 +180,7 @@
             <span class="oss-link">pymoo.org &rarr;</span>
           </a>
         </div>
-        <p class="oss-note">nf-notion and dash-seqviz are maintained under Full Spectrum Analytics, a co-founder's company, and are moving to Phyla.</p>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="label">&sect; &nbsp; Selected research</span>
-          <h2 class="headline">Work that's still being cited.</h2>
-          <p class="body">A selection of the team's peer-reviewed research, most-cited first. Citation counts are live from OpenAlex, the same source as the <a href="impact.html" style="color: var(--tannin); text-decoration: underline; text-decoration-color: var(--ink-hairline-strong); text-underline-offset: 3px;">impact map</a>.</p>
-        </div>
-        <ol class="pub-list" id="pubList">
-          <!-- rendered from data/impact-data.json -->
-        </ol>
-        <p class="pub-note" id="pubNote"></p>
+        <p class="oss-note">nf-notion and dash-seqviz are maintained under Full Spectrum Analytics, a co-founder's company, and are moving to Phyla. Peer-reviewed research from the team lives on the <a href="impact.html" style="color: var(--tannin); text-decoration: underline; text-decoration-color: var(--ink-hairline-strong); text-underline-offset: 3px;">impact map</a>.</p>
       </div>
     </section>
 
@@ -383,7 +190,7 @@
         <div class="section-head">
           <span class="label">&sect; &nbsp; Work with us</span>
           <h2 class="headline">Your project, next on the list.</h2>
-          <p class="body">The track record above is research and open source. The next entries will be the systems we build for biotech teams. Yours could be one of them.</p>
+          <p class="body">The same care that goes into the tools above goes into the systems we build for biotech teams. Yours could be one of them.</p>
         </div>
         <a href="index.html#contact" class="link-arrow">
           <span>Start a conversation</span>
@@ -407,73 +214,5 @@
     </div>
   </footer>
 
-  <script>
-    (async function () {
-      let data;
-      try {
-        const resp = await fetch('data/impact-data.json');
-        data = await resp.json();
-      } catch (e) {
-        return; // Featured tool + static fallbacks still render.
-      }
-
-      const core = (data.publications || [])
-        .filter(p => p.type === 'core' && p.title)
-        .sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
-
-      // Keep the Autometa citation count in sync with the live data.
-      const autometa = core.find(p => /autometa/i.test(p.title));
-      if (autometa) {
-        document.querySelectorAll('[data-autometa-cites]').forEach(el => {
-          el.textContent = (autometa.cited_by_count || 0).toLocaleString();
-        });
-      }
-
-      const list = document.getElementById('pubList');
-      const top = core.slice(0, 10);
-      top.forEach(p => {
-        const li = document.createElement('li');
-        li.className = 'pub';
-
-        const main = document.createElement('div');
-        main.className = 'pub-main';
-
-        const titleEl = p.doi ? document.createElement('a') : document.createElement('span');
-        titleEl.className = 'pub-title';
-        titleEl.textContent = p.title;
-        if (p.doi) {
-          titleEl.href = p.doi;
-          titleEl.target = '_blank';
-          titleEl.rel = 'noopener noreferrer';
-        }
-        main.appendChild(titleEl);
-
-        const meta = document.createElement('div');
-        meta.className = 'pub-meta';
-        const venue = document.createElement('span');
-        venue.className = 'venue';
-        venue.textContent = p.journal || 'Preprint';
-        meta.appendChild(venue);
-        if (p.year) meta.appendChild(document.createTextNode('  ·  ' + p.year));
-        main.appendChild(meta);
-
-        const cites = document.createElement('div');
-        cites.className = 'pub-cites';
-        const n = document.createElement('strong');
-        n.textContent = (p.cited_by_count || 0).toLocaleString();
-        cites.appendChild(n);
-        cites.appendChild(document.createTextNode((p.cited_by_count === 1 ? 'citation' : 'citations')));
-
-        li.appendChild(main);
-        li.appendChild(cites);
-        list.appendChild(li);
-      });
-
-      const note = document.getElementById('pubNote');
-      if (note && core.length > top.length) {
-        note.textContent = 'Showing ' + top.length + ' of ' + core.length + ' publications tracked. Full picture on the impact page.';
-      }
-    })();
-  </script>
 </body>
 </html>
