@@ -674,59 +674,92 @@ REFERENCES_CSS = """
     .ref-foot { margin-top: 1.5rem; font-size: 0.8125rem; color: var(--ink-soft); font-style: italic; max-width: 60ch; }"""
 
 STRUCTURE_SCRIPT = """  <script>
-    /* Structure viewer: lazy-load a vendored 3Dmol when the specimen scrolls into view, load
-       the vendored PDB, style it in the house palette, and rotate. No third-party requests;
-       on failure the fallback names the specific cause and keeps the RCSB link. */
+    /* Structure viewer. The goal is to show the ACTUAL rotating 3D structure as widely as
+       possible, so every step cascades through fallbacks before giving up:
+         - the 3Dmol library:  vendored (same-origin) -> 3Dmol.org -> jsDelivr
+         - the structure file:  vendored PDB (same-origin) -> RCSB
+       Only if every one of those routes fails do we reveal the static structure image.
+       This makes the viewer resilient to a blocked CDN, a stale/broken cached asset, an
+       ad-blocker, or a flaky network: whichever route works first wins. */
     (function () {
       var stage = document.getElementById('pdbStage');
-      if (!stage || !('fetch' in window)) return;
+      if (!stage) return;
       var specimen = stage.closest('.specimen');
       var pdb = (specimen.getAttribute('data-pdb') || '').trim();
       var loader = document.getElementById('pdbLoader');
       var fallback = document.getElementById('pdbFallback');
       var why = document.getElementById('pdbWhy');
-      var started = false, done = false;
-      function fail(reason) {
-        if (done) return; done = true;
+      if (!pdb || !('fetch' in window)) { showStill('This browser cannot load the interactive view.'); return; }
+
+      var LIBS = [
+        'assets/potw/vendor/3Dmol-min.js',
+        'https://3Dmol.org/build/3Dmol-min.js',
+        'https://cdn.jsdelivr.net/npm/3dmol@2.4.2/build/3Dmol-min.js'
+      ];
+      var PDBS = [
+        'assets/potw/pdb/' + pdb.toLowerCase() + '.pdb',
+        'https://files.rcsb.org/download/' + pdb.toUpperCase() + '.pdb'
+      ];
+      var started = false, rendered = false;
+
+      function showStill(reason) {
+        if (rendered) return;            /* never cover a live render */
         if (loader) loader.hidden = true;
         if (fallback) fallback.hidden = false;
-        if (reason) { try { console.error('[POTW structure] ' + reason); } catch (e) {} if (why) why.textContent = reason; }
+        if (reason) { try { console.warn('[POTW structure] ' + reason); } catch (e) {} if (why) why.textContent = reason; }
       }
-      function build() {
-        if (!window.$3Dmol) return fail('The 3D viewer library loaded but did not initialize.');
-        var viewer, rendered = false;
-        try { viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 }); }
-        catch (e) { return fail('WebGL (3D graphics) is unavailable or disabled in this browser.'); }
-        window.addEventListener('resize', function () { if (rendered) { try { viewer.resize(); } catch (e) {} } });
-        fetch('assets/potw/pdb/' + pdb.toLowerCase() + '.pdb')
-          .then(function (r) { if (!r.ok) throw new Error('The structure file could not be loaded (HTTP ' + r.status + ').'); return r.text(); })
-          .then(function (data) {
-            viewer.addModel(data, 'pdb');
-            viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
-            viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
-            viewer.zoomTo();
-            viewer.render();
-            rendered = true; done = true;
-            if (loader) loader.hidden = true;
-            if (fallback) fallback.hidden = true;
-            if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) viewer.spin('y', 0.35);
-          })
-          .catch(function (e) { if (!rendered) fail((e && e.message) || 'The structure could not be drawn.'); });
-      }
-      function start() {
-        if (started) return; started = true;
+
+      /* Walk the library sources until one leaves a working $3Dmol on the page. */
+      function loadLib(i) {
+        if (window.$3Dmol) return build();
+        if (i >= LIBS.length) return showStill('The 3D viewer library could not be loaded from any source.');
         var s = document.createElement('script');
-        s.src = 'assets/potw/vendor/3Dmol-min.js';
-        s.async = true; s.onload = build;
-        s.onerror = function () { fail('The 3D viewer library failed to load.'); };
+        s.src = LIBS[i]; s.async = true;
+        s.onload = function () { window.$3Dmol ? build() : loadLib(i + 1); };
+        s.onerror = function () { loadLib(i + 1); };
         document.head.appendChild(s);
-        setTimeout(function () { if (!done) fail('Timed out loading the 3D viewer.'); }, 20000);
       }
+
+      /* Walk the PDB sources until one returns text. */
+      function fetchPdb(i) {
+        if (i >= PDBS.length) return Promise.reject(new Error('The structure file could not be downloaded from any source.'));
+        return fetch(PDBS[i]).then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.text();
+        }).then(function (t) {
+          if (!t || t.length < 200) throw new Error('empty response');
+          return t;
+        }, function () { return fetchPdb(i + 1); });
+      }
+
+      function build() {
+        var viewer;
+        try { viewer = $3Dmol.createViewer(stage, { backgroundColor: 0xf7f3e9 }); }
+        catch (e) { return showStill('This browser has WebGL (3D graphics) turned off, so the interactive structure cannot be drawn.'); }
+        fetchPdb(0).then(function (data) {
+          viewer.addModel(data, 'pdb');
+          viewer.setStyle({}, { cartoon: { color: '#8a5730' } });
+          viewer.addStyle({ hetflag: true }, { stick: { color: '#c0893e', radius: 0.22 } });
+          viewer.zoomTo();
+          viewer.render();
+          rendered = true;
+          if (loader) loader.hidden = true;
+          if (fallback) fallback.hidden = true;
+          if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) viewer.spin('y', 0.35);
+          window.addEventListener('resize', function () { try { viewer.resize(); } catch (e) {} });
+        }).catch(function (e) { showStill((e && e.message) || 'The structure could not be drawn.'); });
+      }
+
+      function start() { if (started) return; started = true; loadLib(0); }
+
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (es) {
           es.forEach(function (e) { if (e.isIntersecting) { start(); io.disconnect(); } });
-        }, { rootMargin: '250px' });
+        }, { rootMargin: '300px' });
         io.observe(specimen);
+        /* Safety net: if the observer never fires (odd scroll containers, hidden tab that
+           later shows, etc.), kick it off anyway so the viewer isn't stuck waiting. */
+        setTimeout(function () { if (!started) start(); }, 3000);
       } else { start(); }
     })();
   </script>"""
