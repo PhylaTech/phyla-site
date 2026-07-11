@@ -72,11 +72,8 @@ Each researcher entry in `researchers.json` supports:
 | `orcid` | Yes | ORCID identifier |
 | `include_work_ids` | Recommended | Allowlist of OpenAlex work IDs. If set, only these works are fetched (bypasses conflation). |
 | `exclude_work_ids` | Optional | Blocklist of work IDs to skip. Only used when `include_work_ids` is empty (ORCID-based fallback). |
-| `pending` | Optional | If `true`, the fetch script skips this researcher entirely. Use it to add someone to the roster before their ORCID and work IDs are confirmed, so no conflated data gets pulled. Remove the flag (and fill in `orcid` + `include_work_ids`) once verified. |
 
 Using `include_work_ids` is strongly recommended. OpenAlex profiles are frequently conflated for common names, and the allowlist ensures only verified publications are included.
-
-To stage a not-yet-confirmed teammate, add an entry with `"pending": true` and empty `orcid` / `include_work_ids`. They stay out of the impact data until someone verifies their OpenAlex identity and removes the flag.
 
 ---
 

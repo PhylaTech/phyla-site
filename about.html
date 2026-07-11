@@ -102,25 +102,28 @@
     .lineage-prose em { font-style: italic; }
 
     /* === People === */
+    /* Everyone shown as equals: one uniform grid, no ordering, no titles, no rank.
+       (Maister, "Managing the Professional Service Firm": internal hierarchy stays
+       internal.) Every card is identical in weight and size. */
     .people {
-      display: flex;
-      flex-direction: column;
-    }
-    .person {
       display: grid;
-      grid-template-columns: 132px minmax(0, 1fr);
-      gap: clamp(1.5rem, 4vw, 3rem);
-      align-items: start;
-      padding-block: clamp(1.75rem, 4vw, 2.5rem);
-      border-bottom: 1px solid var(--ink-hairline);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(2.25rem, 4vw, 3.25rem) clamp(1.75rem, 3vw, 2.5rem);
+      border-top: 1px solid var(--ink-hairline);
+      padding-top: clamp(2.5rem, 5vw, 3.5rem);
     }
-    .person:first-child { border-top: 1px solid var(--ink-hairline); }
+    @media (max-width: 760px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 460px) { .people { grid-template-columns: 1fr; } .person-figure { max-width: 148px; } }
+    .person { display: flex; flex-direction: column; }
     /* Arched specimen-plate mount: domed top, parchment matte, hairline frame */
     .person-figure {
       background: var(--parchment-pale);
       border: 1px solid var(--ink-hairline-strong);
       border-radius: 50% 50% 4px 4px / 40% 40% 4px 4px;
       padding: 6px;
+      width: 100%;
+      max-width: 168px;
+      margin-bottom: 1.1rem;
     }
     .person-figure img {
       width: 100%;
@@ -129,43 +132,37 @@
       filter: grayscale(0.18) sepia(0.12) contrast(0.96);
       border-radius: 50% 50% 2px 2px / 40% 40% 2px 2px;
     }
-    .person-body .person-num {
-      font-size: 0.6875rem;
-      font-variation-settings: "wdth" 100, "wght" 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--moss-deep);
-      display: block;
-      margin-bottom: 0.6rem;
+    /* Initials plate, until a portrait arrives. Same footprint as a photo. */
+    .person-figure.is-placeholder {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1 / 1.12;
+    }
+    .person-mono {
+      font-variation-settings: "wdth" 95, "wght" 600;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      letter-spacing: 0.03em;
+      color: var(--ink-hairline-strong);
     }
     .person-body h3 {
-      font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+      font-size: 1.1875rem;
       font-variation-settings: "wdth" 100, "wght" 600;
-      letter-spacing: -0.015em;
-      line-height: 1.1;
-      margin-bottom: 0.65rem;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
     }
     .person-body p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--ink-soft);
-      max-width: 56ch;
-    }
-    /* Optional self-given title, sits between the name and the bio */
-    .person-body .person-title {
       font-size: 0.9375rem;
-      font-variation-settings: "wdth" 100, "wght" 600;
-      letter-spacing: -0.005em;
-      color: var(--moss-deep);
-      margin: -0.2rem 0 0.75rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
     }
-    /* Optional social / profile links */
+    /* Optional social / profile links a person asks us to list */
     .person-socials {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 1.25rem;
-      margin-top: 1rem;
+      gap: 0.35rem 1rem;
+      margin-top: 0.9rem;
       padding: 0;
     }
     .person-socials a {
@@ -179,23 +176,7 @@
     }
     .person-socials a:hover { color: var(--tannin-deep); border-color: var(--tannin); }
     /* Fill-in placeholder text, easy to spot and replace */
-    .person-body .tbd, .person-socials .tbd {
-      font-style: italic;
-      color: var(--ink-soft);
-      opacity: 0.72;
-    }
-    /* Specimen plate with initials, until a portrait arrives */
-    .person-figure.is-placeholder {
-      display: grid;
-      place-items: center;
-      aspect-ratio: 1 / 1.12;
-    }
-    .person-mono {
-      font-variation-settings: "wdth" 95, "wght" 600;
-      font-size: clamp(1.75rem, 5vw, 2.5rem);
-      letter-spacing: 0.03em;
-      color: var(--ink-hairline-strong);
-    }
+    .person-body .tbd { font-style: italic; color: var(--ink-soft); opacity: 0.72; }
 
     /* === Closing === */
     .closing .link-arrow { margin-top: 0.5rem; }
@@ -203,14 +184,6 @@
     /* === Page-specific responsive === */
     @media (max-width: 860px) {
       .name-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-    @media (max-width: 560px) {
-      .person { grid-template-columns: 96px minmax(0, 1fr); gap: 1.25rem; }
-      .person-figure { padding: 4px; }
-    }
-    @media (max-width: 400px) {
-      .person { grid-template-columns: 1fr; }
-      .person-figure { max-width: 160px; }
     }
   </style>
 </head>
@@ -289,15 +262,19 @@
         <div class="section-head">
           <span class="label">&sect; 03 &nbsp; The people</span>
           <h2 class="headline">The people you'll work with.</h2>
-          <p class="body">Chemistry, biology, mathematics, and the engineering that connects them. These are the people at the core of Phyla and the ones you'll work with directly. We grow deliberately and bring in trusted collaborators as the work calls for them.</p>
+          <p class="body">Chemistry, biology, mathematics, and the engineering that connects them. These are the people you'll work with, and everyone here does the work.</p>
         </div>
+        <!-- One flat grid, no ranking or titles: internally we have roles, but the firm
+             presents its people as equals (Maister). To finish a placeholder card, swap the
+             initials plate for <img src="NAME.jpg" alt="Portrait of NAME">, replace the muted
+             bio (drop .tbd), and uncomment the socials each person asks us to list.
+             Research is wired into the impact page separately via scripts/researchers.json. -->
         <div class="people">
           <article class="person">
             <figure class="person-figure">
               <img src="ian.jpg" alt="Portrait of Ian Miller">
             </figure>
             <div class="person-body">
-              <span class="person-num">i.</span>
               <h3>Ian Miller</h3>
               <p>Background in biochemistry and computational drug discovery. Builds the model training and deployment infrastructure at the spine of Phyla's engagements, the systems that take a model from a notebook to something a team can rely on in production.</p>
             </div>
@@ -307,7 +284,6 @@
               <img src="evan.jpg" alt="Portrait of Evan Rees">
             </figure>
             <div class="person-body">
-              <span class="person-num">ii.</span>
               <h3>Evan Rees</h3>
               <p>Background in chemistry, bioinformatics, and computational drug discovery. Owns the bio- and cheminformatics side of the work, from molecule to genome: the pipelines and analysis that turn raw scientific data into something you can build on.</p>
             </div>
@@ -317,31 +293,20 @@
               <img src="erik.jpg" alt="Portrait of Erik Miller-Galow">
             </figure>
             <div class="person-body">
-              <span class="person-num">iii.</span>
               <h3>Erik Miller-Galow</h3>
               <p>Background in mathematics and software engineering. Builds the applications, dashboards, and tooling that turn scientific systems into something a team can actually use day to day.</p>
             </div>
           </article>
-
-          <!-- New team members. Placeholders below are filled in once each person confirms
-               their title, bio, and any socials they want listed. To finish a card:
-                 1. swap the .is-placeholder figure for <img src="NAME.jpg" alt="Portrait of NAME">
-                 2. replace the .person-title and bio text (drop the .tbd class)
-                 3. uncomment / fill the .person-socials links they provide
-               Their research is wired into the impact page separately via scripts/researchers.json. -->
           <article class="person">
             <figure class="person-figure is-placeholder" aria-hidden="true">
               <span class="person-mono">CW</span>
             </figure>
             <div class="person-body">
-              <span class="person-num">iv.</span>
               <h3>Craig Wenger</h3>
-              <p class="person-title tbd">Title to come</p>
               <p class="tbd">A short bio from Craig is on the way.</p>
               <ul class="person-socials">
                 <!-- <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
                 <!-- <li><a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X</a></li> -->
-                <li class="tbd">Socials to come</li>
               </ul>
             </div>
           </article>
@@ -350,14 +315,11 @@
               <span class="person-mono">AM</span>
             </figure>
             <div class="person-body">
-              <span class="person-num">v.</span>
               <h3>Alex Mead</h3>
-              <p class="person-title tbd">Title to come</p>
               <p class="tbd">A short bio from Alex is on the way.</p>
               <ul class="person-socials">
+                <!-- <li><a href="https://scholar.google.com/citations?user=INor-DIAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></li> -->
                 <!-- <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
-                <!-- <li><a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X</a></li> -->
-                <li class="tbd">Socials to come</li>
               </ul>
             </div>
           </article>
@@ -366,15 +328,12 @@
               <span class="person-mono">JJ</span>
             </figure>
             <div class="person-body">
-              <span class="person-num">vi.</span>
               <h3>Jordan Jahnke</h3>
-              <p class="person-title tbd">Title to come</p>
               <p class="tbd">A short bio from Jordan is on the way.</p>
               <ul class="person-socials">
                 <!-- Directory: https://sph.umich.edu/directory/index.php?dept=biostat -->
                 <!-- <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
                 <!-- <li><a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X</a></li> -->
-                <li class="tbd">Socials to come</li>
               </ul>
             </div>
           </article>
