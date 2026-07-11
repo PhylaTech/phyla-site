@@ -1173,7 +1173,9 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
         return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
 
     TAU = 2.0 * math.pi
-    L1, L2, L3 = 54.0, 46.0, 120.0  # branch lengths: series->season, ->collection, ->leaf
+    L1, L2, L3 = 84.0, 66.0, 104.0  # branch lengths: series->season, ->collection, ->leaf
+    # Internal branches (L1, L2) are long enough that each clade shows a visible backbone
+    # and its sub-fans split off partway out, rather than everything spraying from one knot.
 
     segs, dots, leaves = [], [], []
     xs, ys = [0.0], [0.0]
@@ -1183,28 +1185,35 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
         segs.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{color}" stroke-width="{w}"/>')
         xs.extend([x1, x2]); ys.extend([y1, y2])
 
+    def rnd(seed):
+        # Deterministic hash in [0,1). Gives every branch its own length wobble so the
+        # fans read like an evolved iTOL tree, not a mechanical spray. Fixed across builds.
+        v = math.sin(seed * 12.9898 + 4.1) * 43758.5453
+        return v - math.floor(v)
+
     a = -math.pi / 2.0  # start at the top
     for si, season in enumerate(seasons):
         color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
         s_leaves = sum(len(c.get("specimens", [])) for c in season.get("collections", []))
         s_start, s_end = a, a + TAU * s_leaves / total
         s_mid = (s_start + s_end) / 2.0
-        sx, sy = L1 * math.cos(s_mid), L1 * math.sin(s_mid)
+        s_len = L1 * (0.72 + rnd(si + 1) * 0.72)  # internal branch: staggers where each clade begins
+        sx, sy = s_len * math.cos(s_mid), s_len * math.sin(s_mid)
         edge(0.0, 0.0, sx, sy, color, 1.5)
         ca = s_start
-        for coll in season.get("collections", []):
+        for ci, coll in enumerate(season.get("collections", [])):
             c_leaves = len(coll.get("specimens", []))
             c_start, c_end = ca, ca + TAU * c_leaves / total
             c_mid = (c_start + c_end) / 2.0
-            cx, cy = sx + L2 * math.cos(c_mid), sy + L2 * math.sin(c_mid)
+            c_len = L2 * (0.58 + rnd((si + 1) * 97 + ci + 1) * 0.92)  # sub-fans start at varied radii
+            cx, cy = sx + c_len * math.cos(c_mid), sy + c_len * math.sin(c_mid)
             edge(sx, sy, cx, cy, color, 1.1)
             la = c_start
             for spec in coll.get("specimens", []):
                 num += 1
                 l_start, l_end = la, la + TAU / total
                 l_mid = (l_start + l_end) / 2.0
-                jit = ((num * 2654435761) % 997) / 997.0  # deterministic organic wobble
-                llen = L3 + jit * 40.0
+                llen = L3 * (0.5 + rnd(num * 1.7 + 0.3) * 1.25)  # ragged terminal lengths
                 lx, ly = cx + llen * math.cos(l_mid), cy + llen * math.sin(l_mid)
                 edge(cx, cy, lx, ly, color, 0.75)
                 if _is_drafted(num, spec):
