@@ -939,6 +939,12 @@ CATALOGUE_TREE_CSS = """
     .tree-radial { display: block; width: 100%; max-width: 640px; height: auto; margin-inline: auto; }
     .tree-radial a { text-decoration: none; }
     .tree-radial a:hover .tree-leaf { fill: var(--tannin-deep); text-decoration: underline; }
+    .tree-phylo { display: block; width: 100%; max-width: 680px; height: auto; margin-inline: auto; }
+    .tree-phylo a { text-decoration: none; }
+    .tree-phylo a:hover .tree-leaf { fill: var(--tannin-deep); text-decoration: underline; }
+    .phylo-key { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; margin: 1.25rem 0 0; padding: 0; }
+    .phylo-key-item { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.8125rem; color: var(--ink-soft); }
+    .phylo-key-dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
     .tree-root { font-variation-settings: "wght" 600; font-size: 10px; letter-spacing: 0.14em; fill: var(--ink-soft); }
     .tree-season { font-variation-settings: "wdth" 95, "wght" 600; font-size: 12px; fill: var(--tannin); }
     .tree-coll { font-variation-settings: "wght" 600; font-size: 9px; letter-spacing: 0.1em; fill: var(--ink-soft); }
@@ -1041,12 +1047,12 @@ def _catalogue_tree_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
     )
 
 
-def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
-    """The same classification drawn as an unrooted, radial tree.
+def _catalogue_radial_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
+    """The same classification drawn as a radial tree.
 
-    No fixed root direction: the series sits as a faint hub at the center, seasons
-    radiate outward, collections branch, and specimens are the leaf tips around the
-    rim. Same embargo behavior as the rooted view: published specimens are named,
+    The series sits as a faint hub at the center, seasons radiate outward at a fixed
+    radius, collections branch, and specimens are the leaf tips evenly spaced around
+    the rim. Same embargo behavior as the rooted view: published specimens are named,
     linked leaves; sealed weeks are unlabeled buds. Deterministic, no client layout.
     """
     SIZE = 940
@@ -1144,6 +1150,112 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str) -> s
     )
 
 
+# Clade tints for the unrooted phylogram, drawn from the Specimen palette (no rainbow).
+_CLADE_COLORS = [
+    "var(--tannin)", "var(--moss)", "var(--ochre)", "var(--tannin-deep)",
+    "var(--moss-deep)", "var(--ink-soft)", "var(--tannin)", "var(--moss)",
+]
+
+
+def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
+    """The catalogue as a true unrooted phylogram (Felsenstein's equal-angle layout).
+
+    No root and no fixed rim: the series is an unlabeled junction, and each subtree is
+    given an angular wedge proportional to how many specimens it holds, then fans out
+    from its parent along that wedge's bisector. Seasons read as clades, tinted from the
+    palette. Same embargo behavior (named/linked leaves for published, buds for sealed).
+    Returns (svg, legend_html). Deterministic; branch lengths carry a fixed per-leaf
+    jitter so the fans look organic, not mechanical.
+    """
+    seasons = queue.get("seasons", [])
+    total = sum(len(c.get("specimens", [])) for s in seasons for c in s.get("collections", []))
+    if not total:
+        return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
+
+    TAU = 2.0 * math.pi
+    L1, L2, L3 = 54.0, 46.0, 120.0  # branch lengths: series->season, ->collection, ->leaf
+
+    segs, dots, leaves = [], [], []
+    xs, ys = [0.0], [0.0]
+    num = 0
+
+    def edge(x1, y1, x2, y2, color, w):
+        segs.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{color}" stroke-width="{w}"/>')
+        xs.extend([x1, x2]); ys.extend([y1, y2])
+
+    a = -math.pi / 2.0  # start at the top
+    for si, season in enumerate(seasons):
+        color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
+        s_leaves = sum(len(c.get("specimens", [])) for c in season.get("collections", []))
+        s_start, s_end = a, a + TAU * s_leaves / total
+        s_mid = (s_start + s_end) / 2.0
+        sx, sy = L1 * math.cos(s_mid), L1 * math.sin(s_mid)
+        edge(0.0, 0.0, sx, sy, color, 1.5)
+        ca = s_start
+        for coll in season.get("collections", []):
+            c_leaves = len(coll.get("specimens", []))
+            c_start, c_end = ca, ca + TAU * c_leaves / total
+            c_mid = (c_start + c_end) / 2.0
+            cx, cy = sx + L2 * math.cos(c_mid), sy + L2 * math.sin(c_mid)
+            edge(sx, sy, cx, cy, color, 1.1)
+            la = c_start
+            for spec in coll.get("specimens", []):
+                num += 1
+                l_start, l_end = la, la + TAU / total
+                l_mid = (l_start + l_end) / 2.0
+                jit = ((num * 2654435761) % 997) / 997.0  # deterministic organic wobble
+                llen = L3 + jit * 40.0
+                lx, ly = cx + llen * math.cos(l_mid), cy + llen * math.sin(l_mid)
+                edge(cx, cy, lx, ly, color, 0.75)
+                if _is_drafted(num, spec):
+                    nm = esc(spec["protein"])
+                    dots.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="3" fill="{color}"/>')
+                    deg = math.degrees(l_mid)
+                    if 90.0 < (deg % 360.0) < 270.0:
+                        rot, anc = deg + 180.0, "end"
+                    else:
+                        rot, anc = deg, "start"
+                    tx, ty = cx + (llen + 8) * math.cos(l_mid), cy + (llen + 8) * math.sin(l_mid)
+                    leaves.append(
+                        f'<a href="{issue_href(num, _spec_slug(spec))}"><title>No. {num:03d}: {nm}</title>'
+                        f'<text class="tree-leaf" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anc}" dy="0.32em" '
+                        f'transform="rotate({rot:.1f} {tx:.1f} {ty:.1f})">{nm}</text></a>'
+                    )
+                    ex = cx + (llen + 8 + len(nm) * 6.0) * math.cos(l_mid)
+                    ey = cy + (llen + 8 + len(nm) * 6.0) * math.sin(l_mid)
+                    xs.append(ex); ys.append(ey)
+                else:
+                    rev = _reveal_iso(num, anchor)
+                    fr = esc(_friendly_date(rev)) if rev else "soon"
+                    dots.append(
+                        f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2" fill="{color}" opacity="0.5">'
+                        f'<title>No. {num:03d}: opens {fr}</title></circle>'
+                    )
+                la = l_end
+            ca = c_end
+        a = s_end
+    dots.append('<circle cx="0" cy="0" r="2.4" fill="var(--ink-soft)" opacity="0.45"/>')
+
+    pad = 14.0
+    minx, maxx, miny, maxy = min(xs) - pad, max(xs) + pad, min(ys) - pad, max(ys) + pad
+    w, h = maxx - minx, maxy - miny
+    svg = (
+        f'<svg class="tree-phylo" viewBox="{minx:.1f} {miny:.1f} {w:.1f} {h:.1f}" role="img" '
+        f'aria-label="The Protein of the Week catalogue drawn as an unrooted phylogram">'
+        f'<g fill="none" stroke-linecap="round">{"".join(segs)}</g>'
+        f'<g>{"".join(dots)}</g>'
+        f'<g>{"".join(leaves)}</g>'
+        "</svg>"
+    )
+    swatches = "".join(
+        f'<li class="phylo-key-item"><span class="phylo-key-dot" style="background: {_CLADE_COLORS[i % len(_CLADE_COLORS)]}"></span>'
+        f'{esc(s["label"])}</li>'
+        for i, s in enumerate(seasons)
+    )
+    legend = f'<ul class="phylo-key">{swatches}</ul>'
+    return svg, legend
+
+
 def render_catalogue(preview: bool = False) -> str:
     """The full series as one browsable page: seasons, collections, and specimen cells.
 
@@ -1201,7 +1313,8 @@ def render_catalogue(preview: bool = False) -> str:
         )
     seasons_block = "\n".join(seasons_html)
     tree_svg = _catalogue_tree_svg(queue, issues_by_slug, anchor)
-    unrooted_svg = _catalogue_unrooted_svg(queue, issues_by_slug, anchor)
+    radial_svg = _catalogue_radial_svg(queue, issues_by_slug, anchor)
+    unrooted_svg, phylo_legend = _catalogue_unrooted_svg(queue, issues_by_slug, anchor)
     pct = round(100 * revealed / total) if total else 0
     banner = '  <div class="cat-preview-banner">Editorial preview: shows unrevealed names. Not for publishing.</div>\n' if preview else ""
 
@@ -1254,6 +1367,7 @@ def render_catalogue(preview: bool = False) -> str:
         <div class="cat-viewtabs" role="tablist" aria-label="Catalogue view">
           <button class="cat-tab is-active" type="button" data-view="grid" role="tab" aria-selected="true">Grid</button>
           <button class="cat-tab" type="button" data-view="tree" role="tab" aria-selected="false">Tree</button>
+          <button class="cat-tab" type="button" data-view="radial" role="tab" aria-selected="false">Radial</button>
           <button class="cat-tab" type="button" data-view="unrooted" role="tab" aria-selected="false">Unrooted</button>
         </div>
       </div>
@@ -1268,12 +1382,21 @@ def render_catalogue(preview: bool = False) -> str:
           <p class="tree-note">Root to leaf: the series, its quarterly seasons, its monthly collections, and every specimen. Published specimens open as named leaves; sealed weeks are buds, one opening each week. Switch to the grid for reveal dates.</p>
         </div>
       </div>
+      <div class="cat-panel" data-panel="radial" hidden>
+        <div class="wrap">
+          <div class="tree-scroll tree-scroll-radial">
+{radial_svg}
+          </div>
+          <p class="tree-note">The same classification laid out radially: the series is the faint hub at the center, seasons radiate outward, and each specimen is a leaf evenly spaced on the rim. Named tips are published; buds are still sealed. Hover a node for its collection or reveal date.</p>
+        </div>
+      </div>
       <div class="cat-panel" data-panel="unrooted" hidden>
         <div class="wrap">
           <div class="tree-scroll tree-scroll-radial">
 {unrooted_svg}
           </div>
-          <p class="tree-note">The same classification with no fixed root: the series is the faint hub at the center, seasons radiate outward, and each specimen is a leaf on the rim. Named tips are published; buds are still sealed. Hover a node for its collection or reveal date.</p>
+          {phylo_legend}
+          <p class="tree-note">An unrooted phylogram, drawn the way molecular phylogenies are: no root and no fixed rim. Each season is a clade that fans out in proportion to how many specimens it holds, tinted by the legend above. Named tips are published; fainter tips are still sealed. Hover or click a tip for its issue.</p>
         </div>
       </div>
     </section>
