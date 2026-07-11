@@ -39,6 +39,30 @@
         "W4386203568",
         "W4380538648"
       ]
+    },
+    {
+      "name": "Craig Wenger",
+      "pending": true,
+      "orcid": "",
+      "include_work_ids": [],
+      "_candidate_openalex_id": "https://openalex.org/A5083665081",
+      "_note": "PLACEHOLDER, not yet live. Unconfirmed OpenAlex match (Craig D. Wenger, chemistry / cheminformatics, University of Wisconsin-Madison). Before removing 'pending', confirm the ORCID and paste the verified OpenAlex work IDs into include_work_ids."
+    },
+    {
+      "name": "Alex Mead",
+      "pending": true,
+      "orcid": "",
+      "include_work_ids": [],
+      "_candidate_openalex_id": "",
+      "_note": "PLACEHOLDER, not yet live. No confident OpenAlex match found for 'Alex Mead' (common name, several conflated profiles). Before removing 'pending', confirm the ORCID and paste the verified OpenAlex work IDs into include_work_ids."
+    },
+    {
+      "name": "Jordan Jahnke",
+      "pending": true,
+      "orcid": "",
+      "include_work_ids": [],
+      "_candidate_openalex_id": "https://openalex.org/A5087878848",
+      "_note": "PLACEHOLDER, not yet live. Directory: https://sph.umich.edu/directory/index.php?dept=biostat (UMich Biostatistics). Unconfirmed OpenAlex match. Before removing 'pending', confirm the ORCID and paste the verified OpenAlex work IDs into include_work_ids."
     }
   ],
   "email": "contact@phylatech.com"

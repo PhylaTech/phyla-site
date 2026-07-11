@@ -340,6 +340,12 @@ def main():
     work_authors = defaultdict(list)  # work_id -> [researcher names]
 
     for researcher in researchers:
+        if researcher.get("pending"):
+            # Placeholder entry: on the team roster but not yet confirmed on OpenAlex.
+            # Skipped until someone supplies a verified ORCID and work IDs and drops
+            # the "pending" flag, so no conflated works pollute the impact data.
+            print(f"\nSkipping {researcher['name']} — pending confirmation of ORCID and works.")
+            continue
         works = fetch_works_for_researcher(researcher)
         for w in works:
             wid = extract_work_id(w)

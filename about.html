@@ -151,6 +151,51 @@
       color: var(--ink-soft);
       max-width: 56ch;
     }
+    /* Optional self-given title, sits between the name and the bio */
+    .person-body .person-title {
+      font-size: 0.9375rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.005em;
+      color: var(--moss-deep);
+      margin: -0.2rem 0 0.75rem;
+    }
+    /* Optional social / profile links */
+    .person-socials {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.25rem;
+      margin-top: 1rem;
+      padding: 0;
+    }
+    .person-socials a {
+      font-size: 0.8125rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      color: var(--tannin);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink-hairline-strong);
+      padding-bottom: 1px;
+      transition: border-color 180ms ease-out, color 180ms ease-out;
+    }
+    .person-socials a:hover { color: var(--tannin-deep); border-color: var(--tannin); }
+    /* Fill-in placeholder text, easy to spot and replace */
+    .person-body .tbd, .person-socials .tbd {
+      font-style: italic;
+      color: var(--ink-soft);
+      opacity: 0.72;
+    }
+    /* Specimen plate with initials, until a portrait arrives */
+    .person-figure.is-placeholder {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1 / 1.12;
+    }
+    .person-mono {
+      font-variation-settings: "wdth" 95, "wght" 600;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      letter-spacing: 0.03em;
+      color: var(--ink-hairline-strong);
+    }
 
     /* === Closing === */
     .closing .link-arrow { margin-top: 0.5rem; }
@@ -275,6 +320,62 @@
               <span class="person-num">iii.</span>
               <h3>Erik Miller-Galow</h3>
               <p>Background in mathematics and software engineering. Builds the applications, dashboards, and tooling that turn scientific systems into something a team can actually use day to day.</p>
+            </div>
+          </article>
+
+          <!-- New team members. Placeholders below are filled in once each person confirms
+               their title, bio, and any socials they want listed. To finish a card:
+                 1. swap the .is-placeholder figure for <img src="NAME.jpg" alt="Portrait of NAME">
+                 2. replace the .person-title and bio text (drop the .tbd class)
+                 3. uncomment / fill the .person-socials links they provide
+               Their research is wired into the impact page separately via scripts/researchers.json. -->
+          <article class="person">
+            <figure class="person-figure is-placeholder" aria-hidden="true">
+              <span class="person-mono">CW</span>
+            </figure>
+            <div class="person-body">
+              <span class="person-num">iv.</span>
+              <h3>Craig Wenger</h3>
+              <p class="person-title tbd">Title to come</p>
+              <p class="tbd">A short bio from Craig is on the way.</p>
+              <ul class="person-socials">
+                <!-- <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
+                <!-- <li><a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X</a></li> -->
+                <li class="tbd">Socials to come</li>
+              </ul>
+            </div>
+          </article>
+          <article class="person">
+            <figure class="person-figure is-placeholder" aria-hidden="true">
+              <span class="person-mono">AM</span>
+            </figure>
+            <div class="person-body">
+              <span class="person-num">v.</span>
+              <h3>Alex Mead</h3>
+              <p class="person-title tbd">Title to come</p>
+              <p class="tbd">A short bio from Alex is on the way.</p>
+              <ul class="person-socials">
+                <!-- <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
+                <!-- <li><a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X</a></li> -->
+                <li class="tbd">Socials to come</li>
+              </ul>
+            </div>
+          </article>
+          <article class="person">
+            <figure class="person-figure is-placeholder" aria-hidden="true">
+              <span class="person-mono">JJ</span>
+            </figure>
+            <div class="person-body">
+              <span class="person-num">vi.</span>
+              <h3>Jordan Jahnke</h3>
+              <p class="person-title tbd">Title to come</p>
+              <p class="tbd">A short bio from Jordan is on the way.</p>
+              <ul class="person-socials">
+                <!-- Directory: https://sph.umich.edu/directory/index.php?dept=biostat -->
+                <!-- <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
+                <!-- <li><a href="https://x.com/USERNAME" target="_blank" rel="noopener noreferrer">X</a></li> -->
+                <li class="tbd">Socials to come</li>
+              </ul>
             </div>
           </article>
         </div>
