@@ -21,6 +21,7 @@ import argparse
 import datetime as dt
 import html
 import json
+import math
 import os
 import random
 import re
@@ -934,6 +935,10 @@ CATALOGUE_TREE_CSS = """
     .cat-panel[hidden] { display: none; }
     .tree-scroll { overflow-x: auto; margin-top: 1.75rem; border: 1px solid var(--ink-hairline); background: var(--parchment-pale); padding: 1.25rem 0.75rem; }
     .tree-svg { display: block; width: 100%; min-width: 760px; height: auto; }
+    .tree-scroll-radial { overflow-x: hidden; padding: 1rem; }
+    .tree-radial { display: block; width: 100%; max-width: 640px; height: auto; margin-inline: auto; }
+    .tree-radial a { text-decoration: none; }
+    .tree-radial a:hover .tree-leaf { fill: var(--tannin-deep); text-decoration: underline; }
     .tree-root { font-variation-settings: "wght" 600; font-size: 10px; letter-spacing: 0.14em; fill: var(--ink-soft); }
     .tree-season { font-variation-settings: "wdth" 95, "wght" 600; font-size: 12px; fill: var(--tannin); }
     .tree-coll { font-variation-settings: "wght" 600; font-size: 9px; letter-spacing: 0.1em; fill: var(--ink-soft); }
@@ -1036,6 +1041,109 @@ def _catalogue_tree_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
     )
 
 
+def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
+    """The same classification drawn as an unrooted, radial tree.
+
+    No fixed root direction: the series sits as a faint hub at the center, seasons
+    radiate outward, collections branch, and specimens are the leaf tips around the
+    rim. Same embargo behavior as the rooted view: published specimens are named,
+    linked leaves; sealed weeks are unlabeled buds. Deterministic, no client layout.
+    """
+    SIZE = 940
+    C = SIZE / 2
+    R_SEASON, R_COLL, R_LEAF, LABEL_PAD = 96, 210, 322, 9
+    GAP_DEG = 12.0
+    start = -90.0 + GAP_DEG / 2.0
+    sweep = 360.0 - GAP_DEG
+
+    total_leaves = sum(
+        len(c.get("specimens", []))
+        for s in queue.get("seasons", [])
+        for c in s.get("collections", [])
+    )
+    if not total_leaves:
+        return f'<svg class="tree-radial" viewBox="0 0 {SIZE} {SIZE}"></svg>'
+
+    def pt(r: float, deg: float) -> tuple[float, float]:
+        rad = math.radians(deg)
+        return (C + r * math.cos(rad), C + r * math.sin(rad))
+
+    def radial_text(deg: float) -> tuple[float, str]:
+        """(rotation, text-anchor) so labels read outward and never upside down."""
+        if 90.0 < (deg % 360.0) < 270.0:
+            return deg + 180.0, "end"
+        return deg, "start"
+
+    links, dots, labels, leaves = [], [], [], []
+    num = 0
+    leaf_i = 0
+    season_angles = []
+    for season in queue.get("seasons", []):
+        coll_angles = []
+        for coll in season.get("collections", []):
+            spec_angles = []
+            for spec in coll.get("specimens", []):
+                num += 1
+                ang = start + (leaf_i + 0.5) * sweep / total_leaves
+                leaf_i += 1
+                spec_angles.append(ang)
+                lx, ly = pt(R_LEAF, ang)
+                if _is_drafted(num, spec):
+                    nm = esc(spec["protein"])
+                    dots.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="3.2" fill="var(--tannin)"/>')
+                    tx, ty = pt(R_LEAF + LABEL_PAD, ang)
+                    rot, anc = radial_text(ang)
+                    leaves.append(
+                        f'<a href="{issue_href(num, _spec_slug(spec))}"><title>No. {num:03d}: {nm}</title>'
+                        f'<text class="tree-leaf" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anc}" dy="0.32em" '
+                        f'transform="rotate({rot:.1f} {tx:.1f} {ty:.1f})">{nm}</text></a>'
+                    )
+                else:
+                    rev = _reveal_iso(num, anchor)
+                    fr = esc(_friendly_date(rev)) if rev else "soon"
+                    dots.append(
+                        f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2.4" fill="var(--parchment)" '
+                        f'stroke="var(--ink-soft)" stroke-width="1" opacity="0.6">'
+                        f'<title>No. {num:03d}: opens {fr}</title></circle>'
+                    )
+            cang = sum(spec_angles) / len(spec_angles)
+            coll_angles.append(cang)
+            ccx, ccy = pt(R_COLL, cang)
+            dots.append(
+                f'<circle cx="{ccx:.1f}" cy="{ccy:.1f}" r="2.8" fill="var(--ink-soft)">'
+                f'<title>{esc(coll["label"])}</title></circle>'
+            )
+            for ang in spec_angles:
+                lx, ly = pt(R_LEAF, ang)
+                links.append(f'<path d="M {ccx:.1f},{ccy:.1f} L {lx:.1f},{ly:.1f}"/>')
+        sang = sum(coll_angles) / len(coll_angles)
+        season_angles.append(sang)
+        scx, scy = pt(R_SEASON, sang)
+        dots.append(f'<circle cx="{scx:.1f}" cy="{scy:.1f}" r="3.4" fill="var(--tannin)"/>')
+        srot, sanc = radial_text(sang)
+        labels.append(
+            f'<text class="tree-season" x="{scx:.1f}" y="{scy:.1f}" text-anchor="{sanc}" dy="-0.55em" '
+            f'transform="rotate({srot:.1f} {scx:.1f} {scy:.1f})">{esc(season["label"])}</text>'
+        )
+        for cang in coll_angles:
+            ccx, ccy = pt(R_COLL, cang)
+            links.append(f'<path d="M {scx:.1f},{scy:.1f} L {ccx:.1f},{ccy:.1f}"/>')
+    for sang in season_angles:
+        scx, scy = pt(R_SEASON, sang)
+        links.append(f'<path d="M {C:.1f},{C:.1f} L {scx:.1f},{scy:.1f}"/>')
+    dots.append(f'<circle cx="{C:.1f}" cy="{C:.1f}" r="2.6" fill="var(--ink-soft)" opacity="0.5"/>')
+
+    return (
+        f'<svg class="tree-radial" viewBox="0 0 {SIZE} {SIZE}" role="img" '
+        f'aria-label="The Protein of the Week catalogue drawn as an unrooted radial tree">'
+        f'<g fill="none" stroke="var(--ink-hairline-strong)" stroke-width="1">{"".join(links)}</g>'
+        f'<g>{"".join(dots)}</g>'
+        f'<g>{"".join(labels)}</g>'
+        f'<g>{"".join(leaves)}</g>'
+        "</svg>"
+    )
+
+
 def render_catalogue(preview: bool = False) -> str:
     """The full series as one browsable page: seasons, collections, and specimen cells.
 
@@ -1093,6 +1201,7 @@ def render_catalogue(preview: bool = False) -> str:
         )
     seasons_block = "\n".join(seasons_html)
     tree_svg = _catalogue_tree_svg(queue, issues_by_slug, anchor)
+    unrooted_svg = _catalogue_unrooted_svg(queue, issues_by_slug, anchor)
     pct = round(100 * revealed / total) if total else 0
     banner = '  <div class="cat-preview-banner">Editorial preview: shows unrevealed names. Not for publishing.</div>\n' if preview else ""
 
@@ -1145,6 +1254,7 @@ def render_catalogue(preview: bool = False) -> str:
         <div class="cat-viewtabs" role="tablist" aria-label="Catalogue view">
           <button class="cat-tab is-active" type="button" data-view="grid" role="tab" aria-selected="true">Grid</button>
           <button class="cat-tab" type="button" data-view="tree" role="tab" aria-selected="false">Tree</button>
+          <button class="cat-tab" type="button" data-view="unrooted" role="tab" aria-selected="false">Unrooted</button>
         </div>
       </div>
       <div class="cat-panel" data-panel="grid">
@@ -1156,6 +1266,14 @@ def render_catalogue(preview: bool = False) -> str:
 {tree_svg}
           </div>
           <p class="tree-note">Root to leaf: the series, its quarterly seasons, its monthly collections, and every specimen. Published specimens open as named leaves; sealed weeks are buds, one opening each week. Switch to the grid for reveal dates.</p>
+        </div>
+      </div>
+      <div class="cat-panel" data-panel="unrooted" hidden>
+        <div class="wrap">
+          <div class="tree-scroll tree-scroll-radial">
+{unrooted_svg}
+          </div>
+          <p class="tree-note">The same classification with no fixed root: the series is the faint hub at the center, seasons radiate outward, and each specimen is a leaf on the rim. Named tips are published; buds are still sealed. Hover a node for its collection or reveal date.</p>
         </div>
       </div>
     </section>
