@@ -1160,13 +1160,14 @@ _CLADE_COLORS = [
 def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
     """The catalogue as a dense, curved unrooted phylogram (iTOL-style).
 
-    No root and no fixed rim: the series is an unlabeled central junction, each season is a
-    clade branching off it, and every clade ends in a feathered fan of curved branches whose
-    width is proportional to how many specimens it holds. The fan is deliberately denser than
-    the catalogue: catalogue specimens are the named/linked tips (published) or buds (sealed),
-    and around them sit related proteins from the same clade as a brush of finer branches, a
-    few of which carry a name and a further-reading link. Returns (svg, legend_html).
-    Deterministic; per-branch length noise keeps the fans organic, not mechanical.
+    Built the way iTOL draws unrooted trees: a deeply nested, slightly unbalanced bifurcating
+    tree laid out with Felsenstein's equal-angle algorithm. There is no star-hub at the
+    center and no fixed rim, so the envelope comes out elliptical and off-center rather than
+    a clean circle. Each season is a contiguous clade tinted from the palette; the catalogue
+    specimens are the named/linked tips (published) or buds (sealed), and the finer branches
+    around them are related proteins from the same clade (a few carry a name + a
+    further-reading link, the rest are unlabeled twigs that build the feather).
+    Returns (svg, legend_html). Deterministic; per-branch length + split noise keep it organic.
     """
     seasons = queue.get("seasons", [])
     total = sum(len(c.get("specimens", [])) for s in seasons for c in s.get("collections", []))
@@ -1174,113 +1175,133 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
         return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
 
     TAU = 2.0 * math.pi
-    L1, L3 = 84.0, 104.0  # backbone (series->clade) and terminal (clade->leaf) branch lengths
-    # The backbone is long enough that each clade reads as its own branch off the central
-    # junction; the terminal fan then feathers out from the end of that backbone.
+    NEUTRAL = "var(--ink-soft)"
 
     segs, dots, leaves = [], [], []
-    xs, ys = [0.0], [0.0]
+    xs, ys = [], []
     num = 0
 
     def rnd(seed):
-        # Deterministic hash in [0,1). Gives every branch its own length wobble so the
-        # fans read like an evolved iTOL tree, not a mechanical spray. Fixed across builds.
+        # Deterministic hash in [0,1). Drives length + split noise so the tree reads like an
+        # evolved iTOL phylogeny, not a mechanical spray. Fixed across builds.
         v = math.sin(seed * 12.9898 + 4.1) * 43758.5453
         return v - math.floor(v)
 
-    def branch(px, py, spine, ang, length, color, w, opacity):
-        # Quadratic bezier that leaves (px, py) heading along the clade spine, then bends to
-        # its own angle. Tips near the spine stay straight; edge tips curve hard, so a dense
-        # fan sweeps like an iTOL feather instead of spraying as straight spokes.
-        ex, ey = px + length * math.cos(ang), py + length * math.sin(ang)
-        qx = px + length * 0.55 * math.cos(spine)
-        qy = py + length * 0.55 * math.sin(spine)
-        segs.append(
-            f'<path d="M{px:.1f} {py:.1f} Q{qx:.1f} {qy:.1f} {ex:.1f} {ey:.1f}" '
-            f'stroke="{color}" stroke-width="{w}" opacity="{opacity:.2f}"/>'
-        )
-        xs.extend([px, ex, qx]); ys.extend([py, ey, qy])
-        return ex, ey
-
-    # Each catalogue specimen is drawn amid a brush of related branches: real proteins from
-    # the same clade that weren't issues but reward the curious. Most are unlabeled strokes
-    # that build the feather; any carrying a name (from a collection's "related" list) become
-    # faint, hoverable tips that link out for further reading.
-    DENSITY = 6  # brush strokes per catalogue specimen
-    a = -math.pi / 2.0  # start at the top
+    # ---- 1. Leaves: each specimen trailed by a brush of related/filler leaves ------------
+    DENSITY = 5  # brush leaves per catalogue specimen
+    clades = []  # list of (color, [leaf, ...]) preserving catalogue order
     for si, season in enumerate(seasons):
         color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
-        real_specs, related_pool = [], []
+        specs, related = [], []
         for coll in season.get("collections", []):
-            real_specs.extend(coll.get("specimens", []))
-            related_pool.extend(coll.get("related", []))
-        R = len(real_specs)
-        if not R:
+            specs.extend(coll.get("specimens", []))
+            related.extend(coll.get("related", []))
+        if not specs:
             continue
-        s_start, s_end = a, a + TAU * R / total
-        span = s_end - s_start
-        s_mid = (s_start + s_end) / 2.0
-        s_len = L1 * (0.72 + rnd(si + 1) * 0.72)  # backbone: staggers where each clade begins
-        sx, sy = branch(0.0, 0.0, s_mid, s_mid, s_len, color, 1.6, 1.0)
-
-        slots = max(R, R * DENSITY)
-        real_slot = {}
-        for r in range(R):
-            slot = min(slots - 1, int((r + 0.5) / R * slots))
-            while slot in real_slot:
-                slot += 1
-            real_slot[slot] = r
-        rel_i = 0
-        for j in range(slots):
-            ang = s_start + (j + 0.5) / slots * span
-            if j in real_slot:
-                spec = real_specs[real_slot[j]]
-                num += 1
-                llen = L3 * (0.92 + rnd(num * 1.7 + 0.3) * 0.5)  # real tips poke past the brush
-                lx, ly = branch(sx, sy, s_mid, ang, llen, color, 0.95, 1.0)
-                if _is_drafted(num, spec):
-                    nm = esc(spec["protein"])
-                    dots.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="3" fill="{color}"/>')
-                    deg = math.degrees(ang)
-                    if 90.0 < (deg % 360.0) < 270.0:
-                        rot, anc = deg + 180.0, "end"
-                    else:
-                        rot, anc = deg, "start"
-                    tx, ty = lx + 8 * math.cos(ang), ly + 8 * math.sin(ang)
-                    leaves.append(
-                        f'<a href="{issue_href(num, _spec_slug(spec))}"><title>No. {num:03d}: {nm}</title>'
-                        f'<text class="tree-leaf" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anc}" dy="0.32em" '
-                        f'transform="rotate({rot:.1f} {tx:.1f} {ty:.1f})">{nm}</text></a>'
-                    )
-                    ex = lx + (8 + len(nm) * 6.0) * math.cos(ang)
-                    ey = ly + (8 + len(nm) * 6.0) * math.sin(ang)
-                    xs.append(ex); ys.append(ey)
+        rel_i, items = 0, []
+        for spec in specs:
+            num += 1
+            items.append({"leaf": True, "n": 1, "color": color, "kind": "specimen", "num": num, "spec": spec})
+            for _ in range(DENSITY):
+                if rel_i < len(related):
+                    r = related[rel_i]; rel_i += 1
+                    items.append({"leaf": True, "n": 1, "color": color, "kind": "related",
+                                  "name": r.get("name", ""), "href": r.get("href", "")})
                 else:
-                    rev = _reveal_iso(num, anchor)
-                    fr = esc(_friendly_date(rev)) if rev else "soon"
-                    dots.append(
-                        f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2" fill="{color}" opacity="0.5">'
-                        f'<title>No. {num:03d}: opens {fr}</title></circle>'
-                    )
+                    items.append({"leaf": True, "n": 1, "color": color, "kind": "filler"})
+        while rel_i < len(related):
+            r = related[rel_i]; rel_i += 1
+            items.append({"leaf": True, "n": 1, "color": color, "kind": "related",
+                          "name": r.get("name", ""), "href": r.get("href", "")})
+        clades.append((color, items))
+    if not clades:
+        return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
+
+    # ---- 2. Bifurcating tree: slightly unbalanced binary split (uneven depths -> organic) --
+    def join(left, right, seed):
+        col = left["color"] if left["color"] == right["color"] else NEUTRAL
+        return {"leaf": False, "n": left["n"] + right["n"], "children": [left, right], "color": col, "seed": seed}
+
+    def bin_tree(nodes, seed):
+        if len(nodes) == 1:
+            return nodes[0]
+        cut = max(1, min(len(nodes) - 1, int(len(nodes) * (0.36 + 0.28 * rnd(seed)))))
+        return join(bin_tree(nodes[:cut], seed * 2 + 1), bin_tree(nodes[cut:], seed * 2 + 3), seed)
+
+    clade_roots = [bin_tree([dict(it) for it in items], 31 * (ci + 1)) for ci, (color, items) in enumerate(clades)]
+    root = bin_tree(clade_roots, 7) if len(clade_roots) > 1 else clade_roots[0]
+
+    # ---- 3. Equal-angle layout with curved (feathered) edges -----------------------------
+    def emit_edge(x, y, ex, ey, pdir, color, w, op):
+        # Bezier that leaves (x,y) along the parent's direction, then bends to the child, so
+        # sibling branches sweep as a feather rather than spraying straight from a hub.
+        d = pdir if pdir is not None else math.atan2(ey - y, ex - x)
+        seg = math.hypot(ex - x, ey - y)
+        qx, qy = x + seg * 0.5 * math.cos(d), y + seg * 0.5 * math.sin(d)
+        segs.append(
+            f'<path d="M{x:.1f} {y:.1f} Q{qx:.1f} {qy:.1f} {ex:.1f} {ey:.1f}" '
+            f'stroke="{color}" stroke-width="{w:.2f}" opacity="{op:.2f}"/>'
+        )
+        xs.extend([x, ex, qx]); ys.extend([y, ey, qy])
+
+    def emit_tip(node, x, y, pdir):
+        color = node["color"]
+        deg = math.degrees(pdir)
+        if 90.0 < (deg % 360.0) < 270.0:
+            rot, anc, sgn = deg + 180.0, "end", 1.0
+        else:
+            rot, anc, sgn = deg, "start", 1.0
+        if node["kind"] == "specimen":
+            spec, n = node["spec"], node["num"]
+            if _is_drafted(n, spec):
+                nm = esc(spec["protein"])
+                dots.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{color}"/>')
+                tx, ty = x + 8 * math.cos(pdir), y + 8 * math.sin(pdir)
+                leaves.append(
+                    f'<a href="{issue_href(n, _spec_slug(spec))}"><title>No. {n:03d}: {nm}</title>'
+                    f'<text class="tree-leaf" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anc}" dy="0.32em" '
+                    f'transform="rotate({rot:.1f} {tx:.1f} {ty:.1f})">{nm}</text></a>'
+                )
+                ext = 8 + len(nm) * 6.0
+                xs.append(x + ext * math.cos(pdir) * sgn); ys.append(y + ext * math.sin(pdir))
             else:
-                llen = L3 * (0.4 + rnd(j * 3.1 + si * 13.0 + 0.7) * 0.55)  # brush: shorter, ragged
-                lx, ly = branch(sx, sy, s_mid, ang, llen, color, 0.5, 0.5)
-                if rel_i < len(related_pool):
-                    rel = related_pool[rel_i]; rel_i += 1
-                    rnm, href = esc(rel.get("name", "")), esc(rel.get("href", ""))
-                    if rnm and href:
-                        dots.append(
-                            f'<a href="{href}" target="_blank" rel="noopener noreferrer">'
-                            f'<title>{rnm} · related, further reading</title>'
-                            f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2.2" fill="{color}" opacity="0.65"/></a>'
-                        )
-                    elif rnm:
-                        dots.append(
-                            f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="1.8" fill="{color}" opacity="0.5">'
-                            f'<title>{rnm}</title></circle>'
-                        )
-        a = s_end
-    dots.append('<circle cx="0" cy="0" r="2.2" fill="var(--ink-soft)" opacity="0.4"/>')
+                rev = _reveal_iso(n, anchor)
+                fr = esc(_friendly_date(rev)) if rev else "soon"
+                dots.append(
+                    f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2" fill="{color}" opacity="0.5">'
+                    f'<title>No. {n:03d}: opens {fr}</title></circle>'
+                )
+        elif node["kind"] == "related":
+            rnm, href = esc(node.get("name", "")), esc(node.get("href", ""))
+            if rnm and href:
+                dots.append(
+                    f'<a href="{href}" target="_blank" rel="noopener noreferrer">'
+                    f'<title>{rnm} · related, further reading</title>'
+                    f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.2" fill="{color}" opacity="0.62"/></a>'
+                )
+            elif rnm:
+                dots.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="1.7" fill="{color}" opacity="0.5"><title>{rnm}</title></circle>')
+        # filler tips carry no marker; their branch stroke is the feather
+
+    def layout(node, x, y, a0, a1, pdir, depth):
+        if node["leaf"]:
+            emit_tip(node, x, y, pdir if pdir is not None else (a0 + a1) / 2.0)
+            return
+        acc = a0
+        for ci, ch in enumerate(node["children"]):
+            frac = ch["n"] / node["n"]
+            b = acc + (a1 - a0) * frac
+            mid = (acc + b) / 2.0
+            seed = node.get("seed", 1) * 13 + ci * 101 + depth * 7 + 5
+            blen = 62.0 * (0.45 + rnd(seed)) * (0.83 ** depth)  # accumulates to varied tip radii
+            cx, cy = x + blen * math.cos(mid), y + blen * math.sin(mid)
+            w = max(0.5, 1.7 - depth * 0.16)
+            op = max(0.5, 1.0 - depth * 0.035)
+            emit_edge(x, y, cx, cy, pdir, ch["color"], w, op)
+            layout(ch, cx, cy, acc, b, mid, depth + 1)
+            acc = b
+
+    layout(root, 0.0, 0.0, 0.0, TAU, None, 0)
 
     pad = 14.0
     minx, maxx, miny, maxy = min(xs) - pad, max(xs) + pad, min(ys) - pad, max(ys) + pad
