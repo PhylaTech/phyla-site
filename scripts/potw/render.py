@@ -1158,14 +1158,15 @@ _CLADE_COLORS = [
 
 
 def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
-    """The catalogue as a true unrooted phylogram (Felsenstein's equal-angle layout).
+    """The catalogue as a dense, curved unrooted phylogram (iTOL-style).
 
-    No root and no fixed rim: the series is an unlabeled junction, and each subtree is
-    given an angular wedge proportional to how many specimens it holds, then fans out
-    from its parent along that wedge's bisector. Seasons read as clades, tinted from the
-    palette. Same embargo behavior (named/linked leaves for published, buds for sealed).
-    Returns (svg, legend_html). Deterministic; branch lengths carry a fixed per-leaf
-    jitter so the fans look organic, not mechanical.
+    No root and no fixed rim: the series is an unlabeled central junction, each season is a
+    clade branching off it, and every clade ends in a feathered fan of curved branches whose
+    width is proportional to how many specimens it holds. The fan is deliberately denser than
+    the catalogue: catalogue specimens are the named/linked tips (published) or buds (sealed),
+    and around them sit related proteins from the same clade as a brush of finer branches, a
+    few of which carry a name and a further-reading link. Returns (svg, legend_html).
+    Deterministic; per-branch length noise keeps the fans organic, not mechanical.
     """
     seasons = queue.get("seasons", [])
     total = sum(len(c.get("specimens", [])) for s in seasons for c in s.get("collections", []))
@@ -1173,17 +1174,13 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
         return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
 
     TAU = 2.0 * math.pi
-    L1, L2, L3 = 84.0, 66.0, 104.0  # branch lengths: series->season, ->collection, ->leaf
-    # Internal branches (L1, L2) are long enough that each clade shows a visible backbone
-    # and its sub-fans split off partway out, rather than everything spraying from one knot.
+    L1, L3 = 84.0, 104.0  # backbone (series->clade) and terminal (clade->leaf) branch lengths
+    # The backbone is long enough that each clade reads as its own branch off the central
+    # junction; the terminal fan then feathers out from the end of that backbone.
 
     segs, dots, leaves = [], [], []
     xs, ys = [0.0], [0.0]
     num = 0
-
-    def edge(x1, y1, x2, y2, color, w):
-        segs.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{color}" stroke-width="{w}"/>')
-        xs.extend([x1, x2]); ys.extend([y1, y2])
 
     def rnd(seed):
         # Deterministic hash in [0,1). Gives every branch its own length wobble so the
@@ -1191,47 +1188,72 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
         v = math.sin(seed * 12.9898 + 4.1) * 43758.5453
         return v - math.floor(v)
 
+    def branch(px, py, spine, ang, length, color, w, opacity):
+        # Quadratic bezier that leaves (px, py) heading along the clade spine, then bends to
+        # its own angle. Tips near the spine stay straight; edge tips curve hard, so a dense
+        # fan sweeps like an iTOL feather instead of spraying as straight spokes.
+        ex, ey = px + length * math.cos(ang), py + length * math.sin(ang)
+        qx = px + length * 0.55 * math.cos(spine)
+        qy = py + length * 0.55 * math.sin(spine)
+        segs.append(
+            f'<path d="M{px:.1f} {py:.1f} Q{qx:.1f} {qy:.1f} {ex:.1f} {ey:.1f}" '
+            f'stroke="{color}" stroke-width="{w}" opacity="{opacity:.2f}"/>'
+        )
+        xs.extend([px, ex, qx]); ys.extend([py, ey, qy])
+        return ex, ey
+
+    # Each catalogue specimen is drawn amid a brush of related branches: real proteins from
+    # the same clade that weren't issues but reward the curious. Most are unlabeled strokes
+    # that build the feather; any carrying a name (from a collection's "related" list) become
+    # faint, hoverable tips that link out for further reading.
+    DENSITY = 6  # brush strokes per catalogue specimen
     a = -math.pi / 2.0  # start at the top
     for si, season in enumerate(seasons):
         color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
-        s_leaves = sum(len(c.get("specimens", [])) for c in season.get("collections", []))
-        s_start, s_end = a, a + TAU * s_leaves / total
+        real_specs, related_pool = [], []
+        for coll in season.get("collections", []):
+            real_specs.extend(coll.get("specimens", []))
+            related_pool.extend(coll.get("related", []))
+        R = len(real_specs)
+        if not R:
+            continue
+        s_start, s_end = a, a + TAU * R / total
+        span = s_end - s_start
         s_mid = (s_start + s_end) / 2.0
-        s_len = L1 * (0.72 + rnd(si + 1) * 0.72)  # internal branch: staggers where each clade begins
-        sx, sy = s_len * math.cos(s_mid), s_len * math.sin(s_mid)
-        edge(0.0, 0.0, sx, sy, color, 1.5)
-        ca = s_start
-        for ci, coll in enumerate(season.get("collections", [])):
-            c_leaves = len(coll.get("specimens", []))
-            c_start, c_end = ca, ca + TAU * c_leaves / total
-            c_mid = (c_start + c_end) / 2.0
-            c_len = L2 * (0.58 + rnd((si + 1) * 97 + ci + 1) * 0.92)  # sub-fans start at varied radii
-            cx, cy = sx + c_len * math.cos(c_mid), sy + c_len * math.sin(c_mid)
-            edge(sx, sy, cx, cy, color, 1.1)
-            la = c_start
-            for spec in coll.get("specimens", []):
+        s_len = L1 * (0.72 + rnd(si + 1) * 0.72)  # backbone: staggers where each clade begins
+        sx, sy = branch(0.0, 0.0, s_mid, s_mid, s_len, color, 1.6, 1.0)
+
+        slots = max(R, R * DENSITY)
+        real_slot = {}
+        for r in range(R):
+            slot = min(slots - 1, int((r + 0.5) / R * slots))
+            while slot in real_slot:
+                slot += 1
+            real_slot[slot] = r
+        rel_i = 0
+        for j in range(slots):
+            ang = s_start + (j + 0.5) / slots * span
+            if j in real_slot:
+                spec = real_specs[real_slot[j]]
                 num += 1
-                l_start, l_end = la, la + TAU / total
-                l_mid = (l_start + l_end) / 2.0
-                llen = L3 * (0.5 + rnd(num * 1.7 + 0.3) * 1.25)  # ragged terminal lengths
-                lx, ly = cx + llen * math.cos(l_mid), cy + llen * math.sin(l_mid)
-                edge(cx, cy, lx, ly, color, 0.75)
+                llen = L3 * (0.92 + rnd(num * 1.7 + 0.3) * 0.5)  # real tips poke past the brush
+                lx, ly = branch(sx, sy, s_mid, ang, llen, color, 0.95, 1.0)
                 if _is_drafted(num, spec):
                     nm = esc(spec["protein"])
                     dots.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="3" fill="{color}"/>')
-                    deg = math.degrees(l_mid)
+                    deg = math.degrees(ang)
                     if 90.0 < (deg % 360.0) < 270.0:
                         rot, anc = deg + 180.0, "end"
                     else:
                         rot, anc = deg, "start"
-                    tx, ty = cx + (llen + 8) * math.cos(l_mid), cy + (llen + 8) * math.sin(l_mid)
+                    tx, ty = lx + 8 * math.cos(ang), ly + 8 * math.sin(ang)
                     leaves.append(
                         f'<a href="{issue_href(num, _spec_slug(spec))}"><title>No. {num:03d}: {nm}</title>'
                         f'<text class="tree-leaf" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anc}" dy="0.32em" '
                         f'transform="rotate({rot:.1f} {tx:.1f} {ty:.1f})">{nm}</text></a>'
                     )
-                    ex = cx + (llen + 8 + len(nm) * 6.0) * math.cos(l_mid)
-                    ey = cy + (llen + 8 + len(nm) * 6.0) * math.sin(l_mid)
+                    ex = lx + (8 + len(nm) * 6.0) * math.cos(ang)
+                    ey = ly + (8 + len(nm) * 6.0) * math.sin(ang)
                     xs.append(ex); ys.append(ey)
                 else:
                     rev = _reveal_iso(num, anchor)
@@ -1240,10 +1262,25 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
                         f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2" fill="{color}" opacity="0.5">'
                         f'<title>No. {num:03d}: opens {fr}</title></circle>'
                     )
-                la = l_end
-            ca = c_end
+            else:
+                llen = L3 * (0.4 + rnd(j * 3.1 + si * 13.0 + 0.7) * 0.55)  # brush: shorter, ragged
+                lx, ly = branch(sx, sy, s_mid, ang, llen, color, 0.5, 0.5)
+                if rel_i < len(related_pool):
+                    rel = related_pool[rel_i]; rel_i += 1
+                    rnm, href = esc(rel.get("name", "")), esc(rel.get("href", ""))
+                    if rnm and href:
+                        dots.append(
+                            f'<a href="{href}" target="_blank" rel="noopener noreferrer">'
+                            f'<title>{rnm} · related, further reading</title>'
+                            f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2.2" fill="{color}" opacity="0.65"/></a>'
+                        )
+                    elif rnm:
+                        dots.append(
+                            f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="1.8" fill="{color}" opacity="0.5">'
+                            f'<title>{rnm}</title></circle>'
+                        )
         a = s_end
-    dots.append('<circle cx="0" cy="0" r="2.4" fill="var(--ink-soft)" opacity="0.45"/>')
+    dots.append('<circle cx="0" cy="0" r="2.2" fill="var(--ink-soft)" opacity="0.4"/>')
 
     pad = 14.0
     minx, maxx, miny, maxy = min(xs) - pad, max(xs) + pad, min(ys) - pad, max(ys) + pad
@@ -1405,7 +1442,7 @@ def render_catalogue(preview: bool = False) -> str:
 {unrooted_svg}
           </div>
           {phylo_legend}
-          <p class="tree-note">An unrooted phylogram, drawn the way molecular phylogenies are: no root and no fixed rim. Each season is a clade that fans out in proportion to how many specimens it holds, tinted by the legend above. Named tips are published; fainter tips are still sealed. Hover or click a tip for its issue.</p>
+          <p class="tree-note">An unrooted phylogram, drawn the way molecular phylogenies are: no root and no fixed rim. Each season is a clade that fans out in proportion to how many specimens it holds, tinted by the legend above. The named tips are the published specimens; the finer branches around them are related proteins from the same clade, further reading for the curious. Hover a tip for its name; click to open its issue, or a related protein for further reading.</p>
         </div>
       </div>
     </section>

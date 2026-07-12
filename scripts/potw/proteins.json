@@ -15,6 +15,15 @@
           "label": "Seeing",
           "axis": "function",
           "blurb": "Proteins that made the invisible visible.",
+          "related": [
+            { "name": "Aequorin", "href": "https://en.wikipedia.org/wiki/Aequorin" },
+            { "name": "Yellow fluorescent protein", "href": "https://en.wikipedia.org/wiki/Yellow_fluorescent_protein" },
+            { "name": "Cyan fluorescent protein", "href": "https://en.wikipedia.org/wiki/Cyan_fluorescent_protein" },
+            { "name": "DsRed", "href": "https://en.wikipedia.org/wiki/DsRed" },
+            { "name": "mCherry", "href": "https://en.wikipedia.org/wiki/MCherry" },
+            { "name": "Kaede", "href": "https://en.wikipedia.org/wiki/Kaede_(protein)" },
+            { "name": "GCaMP", "href": "https://en.wikipedia.org/wiki/GCaMP" }
+          ],
           "specimens": [
             { "protein": "Green Fluorescent Protein", "slug": "green-fluorescent-protein", "number": 1, "date_iso": "2026-07-06", "status": "published" },
             { "protein": "Firefly luciferase", "slug": "firefly-luciferase", "hint": "Photinus pyralis bioluminescence; ATP-dependent light from luciferin; ubiquitous reporter gene and ATP assay." },
