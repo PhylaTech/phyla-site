@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POTW unrooted tree tuner (temporary)</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { padding: 1.5rem clamp(1rem,4vw,2.5rem); }
+  .tuner { display: grid; grid-template-columns: 268px minmax(0,1fr); gap: 1.75rem; align-items: start; max-width: 1180px; margin-inline: auto; }
+  .controls { position: sticky; top: 1rem; display: flex; flex-direction: column; gap: 0.85rem; }
+  .ctl label { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.8125rem; font-variation-settings: "wght" 600; margin-bottom: 0.25rem; }
+  .ctl label b { color: var(--tannin); font-variant-numeric: tabular-nums; }
+  .ctl input[type=range] { width: 100%; accent-color: var(--tannin); }
+  .readout { white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; background: var(--parchment-pale); border: 1px solid var(--ink-hairline); padding: 0.7rem; overflow-x: auto; }
+  .stage { border: 1px solid var(--ink-hairline); background: var(--parchment-pale); padding: 0.5rem; }
+  .stage svg { width: 100%; height: auto; display: block; }
+  .tree-leaf { font-style: italic; font-variation-settings: "wdth" 95, "wght" 400; font-size: 11px; fill: var(--tannin); }
+  .row { display: flex; gap: 0.5rem; }
+  button { border: 1px solid var(--tannin); color: var(--tannin); padding: 0.45rem 0.8rem; background: none; font-variation-settings: "wght" 600; }
+  button:hover { background: var(--tannin); color: var(--parchment-pale); }
+</style>
+</head>
+<body>
+  <div class="wrap-narrow" style="max-width:1180px;margin-inline:auto;padding-inline:0;">
+    <span class="label" style="color:var(--ochre)">&sect; &nbsp; Temporary tuning harness &mdash; not part of the site</span>
+    <h1 class="headline" style="margin:0.5rem 0 0.75rem;">Unrooted tree tuner.</h1>
+    <p class="body">Move the sliders until the tree feels right, then hit <b>Copy config</b> and send me the block. Once we agree, I bake these numbers into the static generator and delete this page. Sealed specimens show blurred (no names); published and related proteins stay crisp.</p>
+  </div>
+  <div class="tuner" style="margin-top:1.5rem;">
+    <div class="controls" id="controls"></div>
+    <div class="stage"><div id="tree"></div></div>
+  </div>
+<script>
+var DATA = [{"color": "var(--tannin)", "label": "The Instruments", "specimens": [{"num": 1, "drafted": true, "name": "Green Fluorescent Protein", "href": "potw.html"}, {"num": 2, "drafted": false, "reveal": "Mon 13 Jul"}, {"num": 3, "drafted": false, "reveal": "Mon 20 Jul"}, {"num": 4, "drafted": false, "reveal": "Mon 27 Jul"}, {"num": 5, "drafted": false, "reveal": "Mon 3 Aug"}, {"num": 6, "drafted": false, "reveal": "Mon 10 Aug"}, {"num": 7, "drafted": false, "reveal": "Mon 17 Aug"}, {"num": 8, "drafted": false, "reveal": "Mon 24 Aug"}, {"num": 9, "drafted": false, "reveal": "Mon 31 Aug"}, {"num": 10, "drafted": false, "reveal": "Mon 7 Sep"}, {"num": 11, "drafted": false, "reveal": "Mon 14 Sep"}, {"num": 12, "drafted": false, "reveal": "Mon 21 Sep"}], "related": [{"name": "Aequorin", "href": "https://en.wikipedia.org/wiki/Aequorin"}, {"name": "Yellow fluorescent protein", "href": "https://en.wikipedia.org/wiki/Yellow_fluorescent_protein"}, {"name": "Cyan fluorescent protein", "href": "https://en.wikipedia.org/wiki/Cyan_fluorescent_protein"}, {"name": "DsRed", "href": "https://en.wikipedia.org/wiki/DsRed"}, {"name": "mCherry", "href": "https://en.wikipedia.org/wiki/MCherry"}, {"name": "Kaede", "href": "https://en.wikipedia.org/wiki/Kaede_(protein)"}, {"name": "GCaMP", "href": "https://en.wikipedia.org/wiki/GCaMP"}]}, {"color": "var(--moss)", "label": "Nature's Pharmacy", "specimens": [{"num": 13, "drafted": false, "reveal": "Mon 28 Sep"}, {"num": 14, "drafted": false, "reveal": "Mon 5 Oct"}, {"num": 15, "drafted": false, "reveal": "Mon 12 Oct"}, {"num": 16, "drafted": false, "reveal": "Mon 19 Oct"}, {"num": 17, "drafted": false, "reveal": "Mon 26 Oct"}, {"num": 18, "drafted": false, "reveal": "Mon 2 Nov"}, {"num": 19, "drafted": false, "reveal": "Mon 9 Nov"}, {"num": 20, "drafted": false, "reveal": "Mon 16 Nov"}, {"num": 21, "drafted": false, "reveal": "Mon 23 Nov"}, {"num": 22, "drafted": false, "reveal": "Mon 30 Nov"}, {"num": 23, "drafted": false, "reveal": "Mon 7 Dec"}, {"num": 24, "drafted": false, "reveal": "Mon 14 Dec"}], "related": []}, {"color": "var(--ochre)", "label": "The Immune Arsenal", "specimens": [{"num": 25, "drafted": false, "reveal": "Mon 21 Dec"}, {"num": 26, "drafted": false, "reveal": "Mon 28 Dec"}, {"num": 27, "drafted": false, "reveal": "Mon 4 Jan"}, {"num": 28, "drafted": false, "reveal": "Mon 11 Jan"}, {"num": 29, "drafted": false, "reveal": "Mon 18 Jan"}, {"num": 30, "drafted": false, "reveal": "Mon 25 Jan"}, {"num": 31, "drafted": false, "reveal": "Mon 1 Feb"}, {"num": 32, "drafted": false, "reveal": "Mon 8 Feb"}, {"num": 33, "drafted": false, "reveal": "Mon 15 Feb"}, {"num": 34, "drafted": false, "reveal": "Mon 22 Feb"}, {"num": 35, "drafted": false, "reveal": "Mon 1 Mar"}, {"num": 36, "drafted": false, "reveal": "Mon 8 Mar"}], "related": []}, {"color": "var(--tannin-deep)", "label": "The Machinery of the Cell", "specimens": [{"num": 37, "drafted": false, "reveal": "Mon 15 Mar"}, {"num": 38, "drafted": false, "reveal": "Mon 22 Mar"}, {"num": 39, "drafted": false, "reveal": "Mon 29 Mar"}, {"num": 40, "drafted": false, "reveal": "Mon 5 Apr"}, {"num": 41, "drafted": false, "reveal": "Mon 12 Apr"}, {"num": 42, "drafted": false, "reveal": "Mon 19 Apr"}, {"num": 43, "drafted": false, "reveal": "Mon 26 Apr"}, {"num": 44, "drafted": false, "reveal": "Mon 3 May"}, {"num": 45, "drafted": false, "reveal": "Mon 10 May"}, {"num": 46, "drafted": false, "reveal": "Mon 17 May"}, {"num": 47, "drafted": false, "reveal": "Mon 24 May"}, {"num": 48, "drafted": false, "reveal": "Mon 31 May"}], "related": []}, {"color": "var(--moss-deep)", "label": "The Molecular Diseases", "specimens": [{"num": 49, "drafted": false, "reveal": "Mon 7 Jun"}, {"num": 50, "drafted": false, "reveal": "Mon 14 Jun"}, {"num": 51, "drafted": false, "reveal": "Mon 21 Jun"}, {"num": 52, "drafted": false, "reveal": "Mon 28 Jun"}, {"num": 53, "drafted": false, "reveal": "Mon 5 Jul"}, {"num": 54, "drafted": false, "reveal": "Mon 12 Jul"}, {"num": 55, "drafted": false, "reveal": "Mon 19 Jul"}, {"num": 56, "drafted": false, "reveal": "Mon 26 Jul"}, {"num": 57, "drafted": false, "reveal": "Mon 2 Aug"}, {"num": 58, "drafted": false, "reveal": "Mon 9 Aug"}, {"num": 59, "drafted": false, "reveal": "Mon 16 Aug"}, {"num": 60, "drafted": false, "reveal": "Mon 23 Aug"}], "related": []}, {"color": "var(--ink-soft)", "label": "First Light: the founding enzymes", "specimens": [{"num": 61, "drafted": false, "reveal": "Mon 30 Aug"}, {"num": 62, "drafted": false, "reveal": "Mon 6 Sep"}, {"num": 63, "drafted": false, "reveal": "Mon 13 Sep"}, {"num": 64, "drafted": false, "reveal": "Mon 20 Sep"}, {"num": 65, "drafted": false, "reveal": "Mon 27 Sep"}, {"num": 66, "drafted": false, "reveal": "Mon 4 Oct"}, {"num": 67, "drafted": false, "reveal": "Mon 11 Oct"}, {"num": 68, "drafted": false, "reveal": "Mon 18 Oct"}, {"num": 69, "drafted": false, "reveal": "Mon 25 Oct"}, {"num": 70, "drafted": false, "reveal": "Mon 1 Nov"}, {"num": 71, "drafted": false, "reveal": "Mon 8 Nov"}, {"num": 72, "drafted": false, "reveal": "Mon 15 Nov"}], "related": []}, {"color": "var(--tannin)", "label": "The Oxygen Chronicles", "specimens": [{"num": 73, "drafted": false, "reveal": "Mon 22 Nov"}, {"num": 74, "drafted": false, "reveal": "Mon 29 Nov"}, {"num": 75, "drafted": false, "reveal": "Mon 6 Dec"}, {"num": 76, "drafted": false, "reveal": "Mon 13 Dec"}, {"num": 77, "drafted": false, "reveal": "Mon 20 Dec"}, {"num": 78, "drafted": false, "reveal": "Mon 27 Dec"}, {"num": 79, "drafted": false, "reveal": "Mon 3 Jan"}, {"num": 80, "drafted": false, "reveal": "Mon 10 Jan"}, {"num": 81, "drafted": false, "reveal": "Mon 17 Jan"}, {"num": 82, "drafted": false, "reveal": "Mon 24 Jan"}, {"num": 83, "drafted": false, "reveal": "Mon 31 Jan"}, {"num": 84, "drafted": false, "reveal": "Mon 7 Feb"}], "related": []}, {"color": "var(--moss)", "label": "Signals & Switches", "specimens": [{"num": 85, "drafted": false, "reveal": "Mon 14 Feb"}, {"num": 86, "drafted": false, "reveal": "Mon 21 Feb"}, {"num": 87, "drafted": false, "reveal": "Mon 28 Feb"}, {"num": 88, "drafted": false, "reveal": "Mon 6 Mar"}, {"num": 89, "drafted": false, "reveal": "Mon 13 Mar"}, {"num": 90, "drafted": false, "reveal": "Mon 20 Mar"}, {"num": 91, "drafted": false, "reveal": "Mon 27 Mar"}, {"num": 92, "drafted": false, "reveal": "Mon 3 Apr"}, {"num": 93, "drafted": false, "reveal": "Mon 10 Apr"}, {"num": 94, "drafted": false, "reveal": "Mon 17 Apr"}, {"num": 95, "drafted": false, "reveal": "Mon 24 Apr"}, {"num": 96, "drafted": false, "reveal": "Mon 1 May"}], "related": []}];
+var SPEC = [
+  {k:'curve',    label:'Curviness',          min:0,    max:1,    step:0.02, val:0.50},
+  {k:'len',      label:'Branch length',      min:20,   max:130,  step:1,    val:62},
+  {k:'decay',    label:'Length decay / depth',min:0.55, max:0.98, step:0.01, val:0.83},
+  {k:'lenNoise', label:'Length noise',       min:0,    max:2,    step:0.05, val:1.00},
+  {k:'imbalance',label:'Imbalance',          min:0,    max:0.9,  step:0.02, val:0.28},
+  {k:'density',  label:'Brush density',      min:1,    max:10,   step:1,    val:5},
+  {k:'blur',     label:'Unrevealed blur',    min:0,    max:4,    step:0.1,  val:1.6},
+  {k:'rot',      label:'Rotation (deg)',     min:0,    max:360,  step:5,    val:270}
+];
+var cfg = {}; SPEC.forEach(function(s){ cfg[s.k] = s.val; });
+
+function rnd(seed){ var v = Math.sin(seed*12.9898 + 4.1)*43758.5453; return v - Math.floor(v); }
+function f(n){ return n.toFixed(1); }
+
+function buildLeaves(clade){
+  var items = [], rel = clade.related || [], ri = 0, D = cfg.density;
+  clade.specimens.forEach(function(sp){
+    items.push({leaf:true,n:1,color:clade.color,kind:'specimen',spec:sp});
+    for (var k=0;k<D;k++){
+      if (ri < rel.length){ items.push({leaf:true,n:1,color:clade.color,kind:'related',name:rel[ri].name,href:rel[ri].href}); ri++; }
+      else items.push({leaf:true,n:1,color:clade.color,kind:'filler'});
+    }
+  });
+  while (ri < rel.length){ items.push({leaf:true,n:1,color:clade.color,kind:'related',name:rel[ri].name,href:rel[ri].href}); ri++; }
+  return items;
+}
+function join(l,r,seed){ var c = (l.color===r.color)?l.color:'var(--ink-soft)'; return {leaf:false,n:l.n+r.n,children:[l,r],color:c,seed:seed}; }
+function binTree(nodes,seed){
+  if (nodes.length===1) return nodes[0];
+  var frac = 0.5 + (rnd(seed)-0.5)*cfg.imbalance;
+  var cut = Math.max(1, Math.min(nodes.length-1, Math.round(nodes.length*frac)));
+  return join(binTree(nodes.slice(0,cut), seed*2+1), binTree(nodes.slice(cut), seed*2+3), seed);
+}
+
+function render(){
+  var segs=[], segsB=[], dots=[], dotsB=[], labels=[], xs=[], ys=[];
+  function edge(x,y,ex,ey,pdir,color,w,op,blur){
+    var d = (pdir===null)?Math.atan2(ey-y,ex-x):pdir;
+    var seg = Math.hypot(ex-x,ey-y);
+    var qx = x + seg*cfg.curve*Math.cos(d), qy = y + seg*cfg.curve*Math.sin(d);
+    var p = '<path d="M'+f(x)+' '+f(y)+' Q'+f(qx)+' '+f(qy)+' '+f(ex)+' '+f(ey)+'" stroke="'+color+'" stroke-width="'+w.toFixed(2)+'" opacity="'+op.toFixed(2)+'"/>';
+    (blur?segsB:segs).push(p); xs.push(x,ex,qx); ys.push(y,ey,qy);
+  }
+  function tip(node,x,y,dir){
+    var color = node.color, deg = dir*180/Math.PI;
+    var anc, rot; if (((deg%360)+360)%360 > 90 && ((deg%360)+360)%360 < 270){ rot = deg+180; anc='end'; } else { rot = deg; anc='start'; }
+    if (node.kind==='specimen'){
+      var sp = node.spec;
+      if (sp.drafted){
+        dots.push('<circle cx="'+f(x)+'" cy="'+f(y)+'" r="3" fill="'+color+'"/>');
+        var tx = x + 8*Math.cos(dir), ty = y + 8*Math.sin(dir);
+        labels.push('<a href="'+sp.href+'"><title>No. '+('00'+sp.num).slice(-3)+': '+sp.name+'</title>'
+          + '<text class="tree-leaf" x="'+f(tx)+'" y="'+f(ty)+'" text-anchor="'+anc+'" dy="0.32em" transform="rotate('+rot.toFixed(1)+' '+f(tx)+' '+f(ty)+')">'+sp.name+'</text></a>');
+        var ext = 8 + sp.name.length*6.0; xs.push(x+ext*Math.cos(dir)); ys.push(y+ext*Math.sin(dir));
+      } else {
+        dotsB.push('<circle cx="'+f(x)+'" cy="'+f(y)+'" r="2" fill="'+color+'" opacity="0.7"><title>No. '+('00'+sp.num).slice(-3)+': opens '+sp.reveal+'</title></circle>');
+      }
+    } else if (node.kind==='related'){
+      if (node.name && node.href) dots.push('<a href="'+node.href+'" target="_blank" rel="noopener noreferrer"><title>'+node.name+' · related, further reading</title><circle cx="'+f(x)+'" cy="'+f(y)+'" r="2.2" fill="'+color+'" opacity="0.62"/></a>');
+      else if (node.name) dots.push('<circle cx="'+f(x)+'" cy="'+f(y)+'" r="1.7" fill="'+color+'" opacity="0.5"><title>'+node.name+'</title></circle>');
+    }
+  }
+  function blurred(ch){ return ch.leaf && (ch.kind==='filler' || (ch.kind==='specimen' && !ch.spec.drafted)); }
+  function layout(node,x,y,a0,a1,pdir,depth){
+    if (node.leaf){ tip(node,x,y, pdir===null?(a0+a1)/2:pdir); return; }
+    var acc = a0;
+    node.children.forEach(function(ch,ci){
+      var frac = ch.n/node.n, b = acc + (a1-a0)*frac, mid = (acc+b)/2;
+      var seed = (node.seed||1)*13 + ci*101 + depth*7 + 5;
+      var blen = cfg.len*(0.45 + rnd(seed)*cfg.lenNoise)*Math.pow(cfg.decay,depth);
+      var cx = x + blen*Math.cos(mid), cy = y + blen*Math.sin(mid);
+      var w = Math.max(0.5, 1.7 - depth*0.16), op = Math.max(0.5, 1 - depth*0.035);
+      edge(x,y,cx,cy,pdir,ch.color,w,op, blurred(ch));
+      layout(ch,cx,cy,acc,b,mid,depth+1);
+      acc = b;
+    });
+  }
+  var roots = DATA.map(function(c,ci){ return binTree(buildLeaves(c).map(function(o){return o;}), 31*(ci+1)); });
+  var root = roots.length>1 ? binTree(roots, 7) : roots[0];
+  var r0 = cfg.rot*Math.PI/180;
+  layout(root, 0,0, r0, r0+2*Math.PI, null, 0);
+  var pad=16, minx=Math.min.apply(null,xs)-pad, maxx=Math.max.apply(null,xs)+pad, miny=Math.min.apply(null,ys)-pad, maxy=Math.max.apply(null,ys)+pad;
+  var svg = '<svg viewBox="'+f(minx)+' '+f(miny)+' '+f(maxx-minx)+' '+f(maxy-miny)+'" role="img" aria-label="Unrooted tree tuner">'
+    + '<defs><filter id="sb" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="'+cfg.blur+'"/></filter></defs>'
+    + '<g filter="url(#sb)" fill="none" stroke-linecap="round">'+segsB.join('')+'</g>'
+    + '<g fill="none" stroke-linecap="round">'+segs.join('')+'</g>'
+    + '<g filter="url(#sb)">'+dotsB.join('')+'</g>'
+    + '<g>'+dots.join('')+'</g><g>'+labels.join('')+'</g></svg>';
+  document.getElementById('tree').innerHTML = svg;
+  document.getElementById('readout').textContent = JSON.stringify(cfg, null, 2);
+}
+
+var C = document.getElementById('controls');
+SPEC.forEach(function(s){
+  var wrap = document.createElement('div'); wrap.className='ctl';
+  var lab = document.createElement('label'); lab.innerHTML = s.label + ' <b id="v_'+s.k+'">'+s.val+'</b>';
+  var inp = document.createElement('input'); inp.type='range'; inp.min=s.min; inp.max=s.max; inp.step=s.step; inp.value=s.val;
+  inp.addEventListener('input', function(){ cfg[s.k]=parseFloat(inp.value); document.getElementById('v_'+s.k).textContent=inp.value; render(); });
+  wrap.appendChild(lab); wrap.appendChild(inp); C.appendChild(wrap);
+});
+var brow = document.createElement('div'); brow.className='row';
+var btn = document.createElement('button'); btn.textContent='Copy config';
+btn.addEventListener('click', function(){ navigator.clipboard.writeText(JSON.stringify(cfg,null,2)); btn.textContent='Copied!'; setTimeout(function(){btn.textContent='Copy config';},1200); });
+brow.appendChild(btn); C.appendChild(brow);
+var ro = document.createElement('div'); ro.className='readout'; ro.id='readout'; C.appendChild(ro);
+render();
+</script>
+</body>
+</html>
