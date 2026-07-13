@@ -968,6 +968,60 @@ CATALOGUE_TREE_SCRIPT = """  <script>
   </script>"""
 
 
+# ---- Shared hierarchical-blur helpers, used by all three tree variants -------------------
+# Unrevealed structure hazes over by the tier of the largest sealed unit it belongs to: a
+# whole future quarter blurs most, a sealed month less, the next sealed weeks least. Anything
+# published (and the theme labels that orient the reader) stays crisp.
+_TREE_BLUR = 2.5
+_TREE_BLUR_STD = {"q": _TREE_BLUR * 1.8, "m": _TREE_BLUR * 1.05, "w": _TREE_BLUR * 0.5}
+
+
+def _seal_map(queue: dict) -> tuple[dict, dict]:
+    """Per-season and per-collection 'fully sealed' flags, keyed by index in issue order."""
+    n = 0
+    season_sealed, coll_sealed = {}, {}
+    for si, season in enumerate(queue.get("seasons", [])):
+        s_all, s_has = True, False
+        for ci, coll in enumerate(season.get("collections", [])):
+            c_all, c_has = True, False
+            for spec in coll.get("specimens", []):
+                n += 1; c_has = True; s_has = True
+                if _is_drafted(n, spec):
+                    c_all = False; s_all = False
+            coll_sealed[(si, ci)] = c_has and c_all
+        season_sealed[si] = s_has and s_all
+    return season_sealed, coll_sealed
+
+
+def _spec_tier(si, ci, drafted, season_sealed, coll_sealed):
+    if drafted:
+        return None
+    return "q" if season_sealed.get(si) else "m" if coll_sealed.get((si, ci)) else "w"
+
+
+def _coll_tier(si, ci, season_sealed, coll_sealed):
+    return "q" if season_sealed.get(si) else "m" if coll_sealed.get((si, ci)) else None
+
+
+def _blur_defs(prefix: str) -> str:
+    return "".join(
+        f'<filter id="{prefix}-{t}" x="-20%" y="-20%" width="140%" height="140%">'
+        f'<feGaussianBlur stdDeviation="{_TREE_BLUR_STD[t]:.2f}"/></filter>'
+        for t in ("q", "m", "w")
+    )
+
+
+def _blur_group_layers(prefix: str, buckets: dict, open_tag: str) -> str:
+    """Wrap tier buckets in filtered groups (q, m, w) then a crisp group. open_tag is the
+    '<g ...>' opener sans the filter attr (e.g. '<g fill="none" stroke="...">')."""
+    head, rest = open_tag[:2], open_tag[2:]  # '<g' + ' ...>'
+    out = "".join(
+        f'{head} filter="url(#{prefix}-{t})"{rest}{"".join(buckets.get(t, []))}</g>'
+        for t in ("q", "m", "w")
+    )
+    return out + f'{open_tag}{"".join(buckets.get(None, []))}</g>'
+
+
 def _catalogue_tree_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
     """The catalogue as a static classification tree (horizontal dendrogram).
 
@@ -979,26 +1033,33 @@ def _catalogue_tree_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
     LABEL_X = LEAF_X + 12
     STEP, COLL_GAP, SEASON_GAP, TOP, WIDTH = 15, 8, 16, 34, 1060
 
-    links, dots, labels, leaves = [], [], [], []
+    season_sealed, coll_sealed = _seal_map(queue)
+    links = {None: [], "q": [], "m": [], "w": []}
+    dots = {None: [], "q": [], "m": [], "w": []}
+    labels, leaves = [], []
     y = TOP
     num = 0
     season_pts = []
     for si, season in enumerate(queue.get("seasons", [])):
         if si:
             y += SEASON_GAP
+        stier = "q" if season_sealed.get(si) else None
         coll_pts = []
         for ci, coll in enumerate(season.get("collections", [])):
             if ci:
                 y += COLL_GAP
-            leaf_ys = []
+            ctier = _coll_tier(si, ci, season_sealed, coll_sealed)
+            leaf_rows = []
             for spec in coll.get("specimens", []):
                 num += 1
                 ly = y
                 y += STEP
-                leaf_ys.append(ly)
-                if _is_drafted(num, spec):
+                drafted = _is_drafted(num, spec)
+                tier = _spec_tier(si, ci, drafted, season_sealed, coll_sealed)
+                leaf_rows.append((ly, tier))
+                if drafted:
                     nm = esc(spec["protein"])
-                    dots.append(f'<circle cx="{LEAF_X}" cy="{ly}" r="3.2" fill="var(--tannin)"/>')
+                    dots[tier].append(f'<circle cx="{LEAF_X}" cy="{ly}" r="3.2" fill="var(--tannin)"/>')
                     leaves.append(
                         f'<a href="{issue_href(num, _spec_slug(spec))}"><title>No. {num:03d}: {nm}</title>'
                         f'<text class="tree-leaf" x="{LABEL_X}" y="{ly}" dy="0.32em">{nm}</text></a>'
@@ -1006,41 +1067,45 @@ def _catalogue_tree_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str:
                 else:
                     rev = _reveal_iso(num, anchor)
                     fr = esc(_friendly_date(rev)) if rev else "soon"
-                    dots.append(
+                    dots[tier].append(
                         f'<circle cx="{LEAF_X}" cy="{ly}" r="2.6" fill="var(--parchment)" '
                         f'stroke="var(--ink-soft)" stroke-width="1" opacity="0.6">'
                         f'<title>No. {num:03d}: opens {fr}</title></circle>'
                     )
-            cy = sum(leaf_ys) / len(leaf_ys)
+            cy = sum( y0 for y0, _t in leaf_rows) / len(leaf_rows)
             coll_pts.append(cy)
-            dots.append(f'<circle cx="{COLL_X}" cy="{cy:.1f}" r="2.8" fill="var(--ink-soft)"/>')
+            dots[ctier].append(f'<circle cx="{COLL_X}" cy="{cy:.1f}" r="2.8" fill="var(--ink-soft)"/>')
             labels.append(
                 f'<text class="tree-coll" x="{COLL_X - 8}" y="{cy - 5:.1f}" text-anchor="end">'
                 f'{esc(coll["label"].upper())}</text>'
             )
-            for ly in leaf_ys:
-                links.append(f'<path d="M {LEAF_X},{ly} H {COLL_X} V {cy:.1f}"/>')
+            for ly, tier in leaf_rows:
+                links[tier].append(f'<path d="M {LEAF_X},{ly} H {COLL_X} V {cy:.1f}"/>')
         scy = sum(coll_pts) / len(coll_pts)
-        season_pts.append(scy)
-        dots.append(f'<circle cx="{SEASON_X}" cy="{scy:.1f}" r="3.4" fill="var(--tannin)"/>')
+        season_pts.append((scy, stier))
+        dots[stier].append(f'<circle cx="{SEASON_X}" cy="{scy:.1f}" r="3.4" fill="var(--tannin)"/>')
         labels.append(
             f'<text class="tree-season" x="{SEASON_X - 10}" y="{scy - 6:.1f}" text-anchor="end">'
             f'{esc(season["label"])}</text>'
         )
-        for cy in coll_pts:
-            links.append(f'<path d="M {COLL_X},{cy:.1f} H {SEASON_X} V {scy:.1f}"/>')
-    rcy = sum(season_pts) / len(season_pts)
-    dots.append(f'<circle cx="{ROOT_X}" cy="{rcy:.1f}" r="4" fill="var(--tannin)"/>')
+        for ci, cy in enumerate(coll_pts):
+            links[_coll_tier(si, ci, season_sealed, coll_sealed)].append(
+                f'<path d="M {COLL_X},{cy:.1f} H {SEASON_X} V {scy:.1f}"/>'
+            )
+    rcy = sum(s for s, _t in season_pts) / len(season_pts)
+    dots[None].append(f'<circle cx="{ROOT_X}" cy="{rcy:.1f}" r="4" fill="var(--tannin)"/>')
     labels.append(f'<text class="tree-root" x="{ROOT_X}" y="16">PROTEIN OF THE WEEK</text>')
-    for scy in season_pts:
-        links.append(f'<path d="M {SEASON_X},{scy:.1f} H {ROOT_X} V {rcy:.1f}"/>')
+    for scy, stier in season_pts:
+        links[stier].append(f'<path d="M {SEASON_X},{scy:.1f} H {ROOT_X} V {rcy:.1f}"/>')
 
     height = int(y + TOP)
+    link_open = '<g fill="none" stroke="var(--ink-hairline-strong)" stroke-width="1">'
     return (
         f'<svg class="tree-svg" viewBox="0 0 {WIDTH} {height}" role="img" '
         f'aria-label="The Protein of the Week catalogue drawn as a classification tree">'
-        f'<g fill="none" stroke="var(--ink-hairline-strong)" stroke-width="1">{"".join(links)}</g>'
-        f'<g>{"".join(dots)}</g>'
+        f'<defs>{_blur_defs("hz-t")}</defs>'
+        f'{_blur_group_layers("hz-t", links, link_open)}'
+        f'{_blur_group_layers("hz-t", dots, "<g>")}'
         f'<g>{"".join(labels)}</g>'
         f'<g>{"".join(leaves)}</g>'
         "</svg>"
@@ -1080,23 +1145,30 @@ def _catalogue_radial_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str
             return deg + 180.0, "end"
         return deg, "start"
 
-    links, dots, labels, leaves = [], [], [], []
+    season_sealed, coll_sealed = _seal_map(queue)
+    links = {None: [], "q": [], "m": [], "w": []}
+    dots = {None: [], "q": [], "m": [], "w": []}
+    labels, leaves = [], []
     num = 0
     leaf_i = 0
     season_angles = []
-    for season in queue.get("seasons", []):
+    for si, season in enumerate(queue.get("seasons", [])):
+        stier = "q" if season_sealed.get(si) else None
         coll_angles = []
-        for coll in season.get("collections", []):
-            spec_angles = []
+        for ci, coll in enumerate(season.get("collections", [])):
+            ctier = _coll_tier(si, ci, season_sealed, coll_sealed)
+            spec_rows = []
             for spec in coll.get("specimens", []):
                 num += 1
                 ang = start + (leaf_i + 0.5) * sweep / total_leaves
                 leaf_i += 1
-                spec_angles.append(ang)
+                drafted = _is_drafted(num, spec)
+                tier = _spec_tier(si, ci, drafted, season_sealed, coll_sealed)
+                spec_rows.append((ang, tier))
                 lx, ly = pt(R_LEAF, ang)
-                if _is_drafted(num, spec):
+                if drafted:
                     nm = esc(spec["protein"])
-                    dots.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="3.2" fill="var(--tannin)"/>')
+                    dots[tier].append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="3.2" fill="var(--tannin)"/>')
                     tx, ty = pt(R_LEAF + LABEL_PAD, ang)
                     rot, anc = radial_text(ang)
                     leaves.append(
@@ -1107,43 +1179,47 @@ def _catalogue_radial_svg(queue: dict, issues_by_slug: dict, anchor: str) -> str
                 else:
                     rev = _reveal_iso(num, anchor)
                     fr = esc(_friendly_date(rev)) if rev else "soon"
-                    dots.append(
+                    dots[tier].append(
                         f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="2.4" fill="var(--parchment)" '
                         f'stroke="var(--ink-soft)" stroke-width="1" opacity="0.6">'
                         f'<title>No. {num:03d}: opens {fr}</title></circle>'
                     )
-            cang = sum(spec_angles) / len(spec_angles)
+            cang = sum(a for a, _t in spec_rows) / len(spec_rows)
             coll_angles.append(cang)
             ccx, ccy = pt(R_COLL, cang)
-            dots.append(
+            dots[ctier].append(
                 f'<circle cx="{ccx:.1f}" cy="{ccy:.1f}" r="2.8" fill="var(--ink-soft)">'
                 f'<title>{esc(coll["label"])}</title></circle>'
             )
-            for ang in spec_angles:
+            for ang, tier in spec_rows:
                 lx, ly = pt(R_LEAF, ang)
-                links.append(f'<path d="M {ccx:.1f},{ccy:.1f} L {lx:.1f},{ly:.1f}"/>')
+                links[tier].append(f'<path d="M {ccx:.1f},{ccy:.1f} L {lx:.1f},{ly:.1f}"/>')
         sang = sum(coll_angles) / len(coll_angles)
-        season_angles.append(sang)
+        season_angles.append((sang, stier))
         scx, scy = pt(R_SEASON, sang)
-        dots.append(f'<circle cx="{scx:.1f}" cy="{scy:.1f}" r="3.4" fill="var(--tannin)"/>')
+        dots[stier].append(f'<circle cx="{scx:.1f}" cy="{scy:.1f}" r="3.4" fill="var(--tannin)"/>')
         srot, sanc = radial_text(sang)
         labels.append(
             f'<text class="tree-season" x="{scx:.1f}" y="{scy:.1f}" text-anchor="{sanc}" dy="-0.55em" '
             f'transform="rotate({srot:.1f} {scx:.1f} {scy:.1f})">{esc(season["label"])}</text>'
         )
-        for cang in coll_angles:
+        for ci, cang in enumerate(coll_angles):
             ccx, ccy = pt(R_COLL, cang)
-            links.append(f'<path d="M {scx:.1f},{scy:.1f} L {ccx:.1f},{ccy:.1f}"/>')
-    for sang in season_angles:
+            links[_coll_tier(si, ci, season_sealed, coll_sealed)].append(
+                f'<path d="M {scx:.1f},{scy:.1f} L {ccx:.1f},{ccy:.1f}"/>'
+            )
+    for sang, stier in season_angles:
         scx, scy = pt(R_SEASON, sang)
-        links.append(f'<path d="M {C:.1f},{C:.1f} L {scx:.1f},{scy:.1f}"/>')
-    dots.append(f'<circle cx="{C:.1f}" cy="{C:.1f}" r="2.6" fill="var(--ink-soft)" opacity="0.5"/>')
+        links[stier].append(f'<path d="M {C:.1f},{C:.1f} L {scx:.1f},{scy:.1f}"/>')
+    dots[None].append(f'<circle cx="{C:.1f}" cy="{C:.1f}" r="2.6" fill="var(--ink-soft)" opacity="0.5"/>')
 
+    link_open = '<g fill="none" stroke="var(--ink-hairline-strong)" stroke-width="1">'
     return (
         f'<svg class="tree-radial" viewBox="0 0 {SIZE} {SIZE}" role="img" '
         f'aria-label="The Protein of the Week catalogue drawn as an unrooted radial tree">'
-        f'<g fill="none" stroke="var(--ink-hairline-strong)" stroke-width="1">{"".join(links)}</g>'
-        f'<g>{"".join(dots)}</g>'
+        f'<defs>{_blur_defs("hz-r")}</defs>'
+        f'{_blur_group_layers("hz-r", links, link_open)}'
+        f'{_blur_group_layers("hz-r", dots, "<g>")}'
         f'<g>{"".join(labels)}</g>'
         f'<g>{"".join(leaves)}</g>'
         "</svg>"
@@ -1178,11 +1254,11 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
     NEUTRAL = "var(--ink-soft)"
 
     # Locked layout config (tuned in the interactive harness, then baked in here).
-    CURVE, LEN, DECAY, LEN_NOISE, IMBALANCE, DENSITY, BLUR, ROT_DEG = 0.22, 26.0, 0.98, 0.65, 0.58, 10, 2.5, 145.0
-    # Hierarchical blur: an unrevealed subtree hazes over as a whole, and the deeper the
-    # sealed unit the softer the focus -- a whole quarter is blurriest, a month less so, a
-    # lone week least. Revealed specimens (and the further-reading tips beside them) stay crisp.
-    BLUR_STD = {"q": BLUR * 1.8, "m": BLUR * 1.05, "w": BLUR * 0.5}
+    CURVE, LEN, DECAY, LEN_NOISE, IMBALANCE, DENSITY, ROT_DEG = 0.22, 26.0, 0.98, 0.65, 0.58, 10, 145.0
+    # Hierarchical blur (shared with the tree + radial views via _TREE_BLUR_STD): an
+    # unrevealed subtree hazes over as a whole, and the deeper the sealed unit the softer the
+    # focus -- a whole quarter is blurriest, a month less so, a lone week least. Revealed
+    # specimens (and the further-reading tips beside them) stay crisp.
 
     # Per-tier layers so each blur strength is its own filtered group; None = crisp.
     segs = {None: [], "q": [], "m": [], "w": []}
@@ -1337,22 +1413,12 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
     pad = 14.0
     minx, maxx, miny, maxy = min(xs) - pad, max(xs) + pad, min(ys) - pad, max(ys) + pad
     w, h = maxx - minx, maxy - miny
-    defs = "".join(
-        f'<filter id="potw-haze-{t}" x="-20%" y="-20%" width="140%" height="140%">'
-        f'<feGaussianBlur stdDeviation="{BLUR_STD[t]:.2f}"/></filter>'
-        for t in ("q", "m", "w")
-    )
-    seg_layers = "".join(
-        f'<g filter="url(#potw-haze-{t})" fill="none" stroke-linecap="round">{"".join(segs[t])}</g>'
-        for t in ("q", "m", "w")
-    ) + f'<g fill="none" stroke-linecap="round">{"".join(segs[None])}</g>'
-    dot_layers = "".join(
-        f'<g filter="url(#potw-haze-{t})">{"".join(dots[t])}</g>' for t in ("q", "m", "w")
-    ) + f'<g>{"".join(dots[None])}</g>'
+    seg_layers = _blur_group_layers("hz-u", segs, '<g fill="none" stroke-linecap="round">')
+    dot_layers = _blur_group_layers("hz-u", dots, "<g>")
     svg = (
         f'<svg class="tree-phylo" viewBox="{minx:.1f} {miny:.1f} {w:.1f} {h:.1f}" role="img" '
         f'aria-label="The Protein of the Week catalogue drawn as an unrooted phylogram">'
-        f'<defs>{defs}</defs>'
+        f'<defs>{_blur_defs("hz-u")}</defs>'
         f'{seg_layers}{dot_layers}'
         f'<g>{"".join(labels)}</g>'
         "</svg>"
