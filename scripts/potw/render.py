@@ -1177,7 +1177,17 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
     TAU = 2.0 * math.pi
     NEUTRAL = "var(--ink-soft)"
 
-    segs, dots, leaves = [], [], []
+    # Locked layout config (tuned in the interactive harness, then baked in here).
+    CURVE, LEN, DECAY, LEN_NOISE, IMBALANCE, DENSITY, BLUR, ROT_DEG = 0.22, 26.0, 0.98, 0.65, 0.58, 10, 2.5, 145.0
+    # Hierarchical blur: an unrevealed subtree hazes over as a whole, and the deeper the
+    # sealed unit the softer the focus -- a whole quarter is blurriest, a month less so, a
+    # lone week least. Revealed specimens (and the further-reading tips beside them) stay crisp.
+    BLUR_STD = {"q": BLUR * 1.8, "m": BLUR * 1.05, "w": BLUR * 0.5}
+
+    # Per-tier layers so each blur strength is its own filtered group; None = crisp.
+    segs = {None: [], "q": [], "m": [], "w": []}
+    dots = {None: [], "q": [], "m": [], "w": []}
+    labels = []
     xs, ys = [], []
     num = 0
 
@@ -1187,105 +1197,125 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
         v = math.sin(seed * 12.9898 + 4.1) * 43758.5453
         return v - math.floor(v)
 
-    # ---- 1. Leaves: each specimen trailed by a brush of related/filler leaves ------------
-    DENSITY = 5  # brush leaves per catalogue specimen
-    clades = []  # list of (color, [leaf, ...]) preserving catalogue order
-    for si, season in enumerate(seasons):
-        color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
-        specs, related = [], []
-        for coll in season.get("collections", []):
-            specs.extend(coll.get("specimens", []))
-            related.extend(coll.get("related", []))
-        if not specs:
-            continue
-        rel_i, items = 0, []
-        for spec in specs:
-            num += 1
-            items.append({"leaf": True, "n": 1, "color": color, "kind": "specimen", "num": num, "spec": spec})
-            for _ in range(DENSITY):
-                if rel_i < len(related):
-                    r = related[rel_i]; rel_i += 1
-                    items.append({"leaf": True, "n": 1, "color": color, "kind": "related",
-                                  "name": r.get("name", ""), "href": r.get("href", "")})
-                else:
-                    items.append({"leaf": True, "n": 1, "color": color, "kind": "filler"})
-        while rel_i < len(related):
-            r = related[rel_i]; rel_i += 1
-            items.append({"leaf": True, "n": 1, "color": color, "kind": "related",
-                          "name": r.get("name", ""), "href": r.get("href", "")})
-        clades.append((color, items))
-    if not clades:
-        return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
-
-    # ---- 2. Bifurcating tree: slightly unbalanced binary split (uneven depths -> organic) --
+    # ---- 1. Tree that mirrors the taxonomy so blur can follow it: root -> seasons
+    #         (quarters) -> collections (months) -> specimen+brush leaves (weeks). Each sealed
+    #         specimen is tagged with the level of the largest sealed unit it sits in
+    #         (q > m > w) so blur can later haze whole quarters/months, not just leaf tips. --
     def join(left, right, seed):
         col = left["color"] if left["color"] == right["color"] else NEUTRAL
         return {"leaf": False, "n": left["n"] + right["n"], "children": [left, right], "color": col, "seed": seed}
 
     def bin_tree(nodes, seed):
+        # Slightly unbalanced binary split -> uneven depths -> organic, non-circular envelope.
         if len(nodes) == 1:
             return nodes[0]
-        cut = max(1, min(len(nodes) - 1, int(len(nodes) * (0.36 + 0.28 * rnd(seed)))))
+        frac = 0.5 + (rnd(seed) - 0.5) * IMBALANCE
+        cut = max(1, min(len(nodes) - 1, round(len(nodes) * frac)))
         return join(bin_tree(nodes[:cut], seed * 2 + 1), bin_tree(nodes[cut:], seed * 2 + 3), seed)
 
-    clade_roots = [bin_tree([dict(it) for it in items], 31 * (ci + 1)) for ci, (color, items) in enumerate(clades)]
-    root = bin_tree(clade_roots, 7) if len(clade_roots) > 1 else clade_roots[0]
+    season_trees = []
+    for si, season in enumerate(seasons):
+        color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
+        colls = []
+        for coll in season.get("collections", []):
+            specs = coll.get("specimens", [])
+            if not specs and not coll.get("related"):
+                continue
+            recs = []
+            for spec in specs:
+                num += 1
+                recs.append((num, spec, _is_drafted(num, spec)))
+            colls.append({"recs": recs, "related": list(coll.get("related", [])),
+                          "sealed": bool(recs) and all(not d for _n, _s, d in recs)})
+        if not colls:
+            continue
+        season_sealed = all(c["sealed"] for c in colls)
+        coll_trees = []
+        for ci, c in enumerate(colls):
+            m_tier = "q" if season_sealed else ("m" if c["sealed"] else None)
+            rel_i, items = 0, []
+            for n, spec, drafted in c["recs"]:
+                sp_tier = None if drafted else (m_tier or "w")  # sealed week in a live month -> 'w'
+                items.append({"leaf": True, "n": 1, "color": color, "kind": "specimen",
+                              "num": n, "spec": spec, "btier": sp_tier})
+                for _ in range(DENSITY):
+                    if rel_i < len(c["related"]):
+                        r = c["related"][rel_i]; rel_i += 1
+                        items.append({"leaf": True, "n": 1, "color": color, "kind": "related",
+                                      "name": r.get("name", ""), "href": r.get("href", ""), "btier": sp_tier})
+                    else:
+                        items.append({"leaf": True, "n": 1, "color": color, "kind": "filler", "btier": sp_tier})
+            while rel_i < len(c["related"]):
+                r = c["related"][rel_i]; rel_i += 1
+                items.append({"leaf": True, "n": 1, "color": color, "kind": "related",
+                              "name": r.get("name", ""), "href": r.get("href", ""), "btier": m_tier})
+            coll_trees.append(bin_tree(items, 31 * (si + 1) * 17 + ci * 7 + 3))
+        season_trees.append(bin_tree(coll_trees, 53 * (si + 1) + 11) if len(coll_trees) > 1 else coll_trees[0])
+    if not season_trees:
+        return '<svg class="tree-phylo" viewBox="0 0 100 100"></svg>', ""
+    root = bin_tree(season_trees, 7) if len(season_trees) > 1 else season_trees[0]
+
+    # ---- 2. A subtree's blur tier is its leaves' shared tier; mixed subtrees stay crisp,
+    #         so a fully-sealed quarter/month hazes as a whole while a live region stays sharp.
+    def calc_btier(node):
+        if node["leaf"]:
+            return node.get("btier")
+        ts = [calc_btier(c) for c in node["children"]]
+        t0 = ts[0]
+        node["btier"] = t0 if (t0 is not None and all(t == t0 for t in ts)) else None
+        return node["btier"]
+    calc_btier(root)
 
     # ---- 3. Equal-angle layout with curved (feathered) edges -----------------------------
-    def emit_edge(x, y, ex, ey, pdir, color, w, op):
-        # Bezier that leaves (x,y) along the parent's direction, then bends to the child, so
-        # sibling branches sweep as a feather rather than spraying straight from a hub.
+    def emit_edge(x, y, ex, ey, pdir, color, w, op, tier):
         d = pdir if pdir is not None else math.atan2(ey - y, ex - x)
         seg = math.hypot(ex - x, ey - y)
-        qx, qy = x + seg * 0.5 * math.cos(d), y + seg * 0.5 * math.sin(d)
-        segs.append(
+        qx, qy = x + seg * CURVE * math.cos(d), y + seg * CURVE * math.sin(d)
+        segs[tier].append(
             f'<path d="M{x:.1f} {y:.1f} Q{qx:.1f} {qy:.1f} {ex:.1f} {ey:.1f}" '
             f'stroke="{color}" stroke-width="{w:.2f}" opacity="{op:.2f}"/>'
         )
         xs.extend([x, ex, qx]); ys.extend([y, ey, qy])
 
-    def emit_tip(node, x, y, pdir):
+    def emit_tip(node, x, y, pdir, tier):
         color = node["color"]
         deg = math.degrees(pdir)
-        if 90.0 < (deg % 360.0) < 270.0:
-            rot, anc, sgn = deg + 180.0, "end", 1.0
-        else:
-            rot, anc, sgn = deg, "start", 1.0
+        rot, anc = (deg + 180.0, "end") if 90.0 < (deg % 360.0) < 270.0 else (deg, "start")
         if node["kind"] == "specimen":
             spec, n = node["spec"], node["num"]
             if _is_drafted(n, spec):
                 nm = esc(spec["protein"])
-                dots.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{color}"/>')
+                dots[None].append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{color}"/>')
                 tx, ty = x + 8 * math.cos(pdir), y + 8 * math.sin(pdir)
-                leaves.append(
+                labels.append(
                     f'<a href="{issue_href(n, _spec_slug(spec))}"><title>No. {n:03d}: {nm}</title>'
                     f'<text class="tree-leaf" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anc}" dy="0.32em" '
                     f'transform="rotate({rot:.1f} {tx:.1f} {ty:.1f})">{nm}</text></a>'
                 )
                 ext = 8 + len(nm) * 6.0
-                xs.append(x + ext * math.cos(pdir) * sgn); ys.append(y + ext * math.sin(pdir))
+                xs.append(x + ext * math.cos(pdir)); ys.append(y + ext * math.sin(pdir))
             else:
                 rev = _reveal_iso(n, anchor)
                 fr = esc(_friendly_date(rev)) if rev else "soon"
-                dots.append(
+                dots[tier].append(
                     f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2" fill="{color}" opacity="0.5">'
                     f'<title>No. {n:03d}: opens {fr}</title></circle>'
                 )
         elif node["kind"] == "related":
             rnm, href = esc(node.get("name", "")), esc(node.get("href", ""))
             if rnm and href:
-                dots.append(
+                dots[tier].append(
                     f'<a href="{href}" target="_blank" rel="noopener noreferrer">'
                     f'<title>{rnm} · related, further reading</title>'
                     f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.2" fill="{color}" opacity="0.62"/></a>'
                 )
             elif rnm:
-                dots.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="1.7" fill="{color}" opacity="0.5"><title>{rnm}</title></circle>')
+                dots[tier].append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="1.7" fill="{color}" opacity="0.5"><title>{rnm}</title></circle>')
         # filler tips carry no marker; their branch stroke is the feather
 
     def layout(node, x, y, a0, a1, pdir, depth):
         if node["leaf"]:
-            emit_tip(node, x, y, pdir if pdir is not None else (a0 + a1) / 2.0)
+            emit_tip(node, x, y, pdir if pdir is not None else (a0 + a1) / 2.0, node.get("btier"))
             return
         acc = a0
         for ci, ch in enumerate(node["children"]):
@@ -1293,25 +1323,38 @@ def _catalogue_unrooted_svg(queue: dict, issues_by_slug: dict, anchor: str):
             b = acc + (a1 - a0) * frac
             mid = (acc + b) / 2.0
             seed = node.get("seed", 1) * 13 + ci * 101 + depth * 7 + 5
-            blen = 62.0 * (0.45 + rnd(seed)) * (0.83 ** depth)  # accumulates to varied tip radii
+            blen = LEN * (0.45 + rnd(seed) * LEN_NOISE) * (DECAY ** depth)
             cx, cy = x + blen * math.cos(mid), y + blen * math.sin(mid)
             w = max(0.5, 1.7 - depth * 0.16)
             op = max(0.5, 1.0 - depth * 0.035)
-            emit_edge(x, y, cx, cy, pdir, ch["color"], w, op)
+            emit_edge(x, y, cx, cy, pdir, ch["color"], w, op, ch.get("btier"))
             layout(ch, cx, cy, acc, b, mid, depth + 1)
             acc = b
 
-    layout(root, 0.0, 0.0, 0.0, TAU, None, 0)
+    r0 = math.radians(ROT_DEG)
+    layout(root, 0.0, 0.0, r0, r0 + TAU, None, 0)
 
     pad = 14.0
     minx, maxx, miny, maxy = min(xs) - pad, max(xs) + pad, min(ys) - pad, max(ys) + pad
     w, h = maxx - minx, maxy - miny
+    defs = "".join(
+        f'<filter id="potw-haze-{t}" x="-20%" y="-20%" width="140%" height="140%">'
+        f'<feGaussianBlur stdDeviation="{BLUR_STD[t]:.2f}"/></filter>'
+        for t in ("q", "m", "w")
+    )
+    seg_layers = "".join(
+        f'<g filter="url(#potw-haze-{t})" fill="none" stroke-linecap="round">{"".join(segs[t])}</g>'
+        for t in ("q", "m", "w")
+    ) + f'<g fill="none" stroke-linecap="round">{"".join(segs[None])}</g>'
+    dot_layers = "".join(
+        f'<g filter="url(#potw-haze-{t})">{"".join(dots[t])}</g>' for t in ("q", "m", "w")
+    ) + f'<g>{"".join(dots[None])}</g>'
     svg = (
         f'<svg class="tree-phylo" viewBox="{minx:.1f} {miny:.1f} {w:.1f} {h:.1f}" role="img" '
         f'aria-label="The Protein of the Week catalogue drawn as an unrooted phylogram">'
-        f'<g fill="none" stroke-linecap="round">{"".join(segs)}</g>'
-        f'<g>{"".join(dots)}</g>'
-        f'<g>{"".join(leaves)}</g>'
+        f'<defs>{defs}</defs>'
+        f'{seg_layers}{dot_layers}'
+        f'<g>{"".join(labels)}</g>'
         "</svg>"
     )
     swatches = "".join(
@@ -1463,7 +1506,7 @@ def render_catalogue(preview: bool = False) -> str:
 {unrooted_svg}
           </div>
           {phylo_legend}
-          <p class="tree-note">An unrooted phylogram, drawn the way molecular phylogenies are: no root and no fixed rim. Each season is a clade that fans out in proportion to how many specimens it holds, tinted by the legend above. The named tips are the published specimens; the finer branches around them are related proteins from the same clade, further reading for the curious. Hover a tip for its name; click to open its issue, or a related protein for further reading.</p>
+          <p class="tree-note">An unrooted phylogram, drawn the way molecular phylogenies are: no root and no fixed rim. Each season is a clade that fans out in proportion to how many specimens it holds, tinted by the legend above. What is published sits in sharp focus; everything still sealed is present but held out of focus, and the further out it is the softer it reads: whole future quarters blur most, then months, then the next few weeks. Hover a crisp tip for its name; click to open its issue, or a related protein for further reading.</p>
         </div>
       </div>
     </section>
@@ -1870,196 +1913,6 @@ def render_announcement_file(path: Path) -> None:
     print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
 
 
-def _tree_tuner_data(queue: dict, anchor: str) -> list:
-    """Embargo-safe tree data for the tuner: sealed specimens carry NO name, only their
-    reveal date; drafted specimens carry name + issue link; related proteins carry names
-    (they are not catalogue specimens). Mirrors the layout inputs of _catalogue_unrooted_svg.
-    """
-    clades, num = [], 0
-    for si, season in enumerate(queue.get("seasons", [])):
-        color = _CLADE_COLORS[si % len(_CLADE_COLORS)]
-        specs, related = [], []
-        for coll in season.get("collections", []):
-            specs.extend(coll.get("specimens", []))
-            related.extend(coll.get("related", []))
-        if not specs:
-            continue
-        out_specs = []
-        for spec in specs:
-            num += 1
-            if _is_drafted(num, spec):
-                out_specs.append({"num": num, "drafted": True, "name": spec["protein"],
-                                  "href": issue_href(num, _spec_slug(spec))})
-            else:
-                rev = _reveal_iso(num, anchor)
-                out_specs.append({"num": num, "drafted": False,
-                                  "reveal": _friendly_date(rev) if rev else "soon"})
-        clades.append({"color": color, "label": season.get("label", ""), "specimens": out_specs,
-                       "related": [{"name": r.get("name", ""), "href": r.get("href", "")} for r in related]})
-    return clades
-
-
-# TEMPORARY tuning harness. Delete this (and the --tree-tuner flag, and potw-tree-tuner.html)
-# once the config is locked into _catalogue_unrooted_svg.
-_TREE_TUNER_TEMPLATE = r"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>POTW unrooted tree tuner (temporary)</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-  body { padding: 1.5rem clamp(1rem,4vw,2.5rem); }
-  .tuner { display: grid; grid-template-columns: 268px minmax(0,1fr); gap: 1.75rem; align-items: start; max-width: 1180px; margin-inline: auto; }
-  .controls { position: sticky; top: 1rem; display: flex; flex-direction: column; gap: 0.85rem; }
-  .ctl label { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.8125rem; font-variation-settings: "wght" 600; margin-bottom: 0.25rem; }
-  .ctl label b { color: var(--tannin); font-variant-numeric: tabular-nums; }
-  .ctl input[type=range] { width: 100%; accent-color: var(--tannin); }
-  .readout { white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; background: var(--parchment-pale); border: 1px solid var(--ink-hairline); padding: 0.7rem; overflow-x: auto; }
-  .stage { border: 1px solid var(--ink-hairline); background: var(--parchment-pale); padding: 0.5rem; }
-  .stage svg { width: 100%; height: auto; display: block; }
-  .tree-leaf { font-style: italic; font-variation-settings: "wdth" 95, "wght" 400; font-size: 11px; fill: var(--tannin); }
-  .row { display: flex; gap: 0.5rem; }
-  button { border: 1px solid var(--tannin); color: var(--tannin); padding: 0.45rem 0.8rem; background: none; font-variation-settings: "wght" 600; }
-  button:hover { background: var(--tannin); color: var(--parchment-pale); }
-</style>
-</head>
-<body>
-  <div class="wrap-narrow" style="max-width:1180px;margin-inline:auto;padding-inline:0;">
-    <span class="label" style="color:var(--ochre)">&sect; &nbsp; Temporary tuning harness &mdash; not part of the site</span>
-    <h1 class="headline" style="margin:0.5rem 0 0.75rem;">Unrooted tree tuner.</h1>
-    <p class="body">Move the sliders until the tree feels right, then hit <b>Copy config</b> and send me the block. Once we agree, I bake these numbers into the static generator and delete this page. Sealed specimens show blurred (no names); published and related proteins stay crisp.</p>
-  </div>
-  <div class="tuner" style="margin-top:1.5rem;">
-    <div class="controls" id="controls"></div>
-    <div class="stage"><div id="tree"></div></div>
-  </div>
-<script>
-var DATA = __DATA__;
-var SPEC = [
-  {k:'curve',    label:'Curviness',          min:0,    max:1,    step:0.02, val:0.50},
-  {k:'len',      label:'Branch length',      min:20,   max:130,  step:1,    val:62},
-  {k:'decay',    label:'Length decay / depth',min:0.55, max:0.98, step:0.01, val:0.83},
-  {k:'lenNoise', label:'Length noise',       min:0,    max:2,    step:0.05, val:1.00},
-  {k:'imbalance',label:'Imbalance',          min:0,    max:0.9,  step:0.02, val:0.28},
-  {k:'density',  label:'Brush density',      min:1,    max:10,   step:1,    val:5},
-  {k:'blur',     label:'Unrevealed blur',    min:0,    max:4,    step:0.1,  val:1.6},
-  {k:'rot',      label:'Rotation (deg)',     min:0,    max:360,  step:5,    val:270}
-];
-var cfg = {}; SPEC.forEach(function(s){ cfg[s.k] = s.val; });
-
-function rnd(seed){ var v = Math.sin(seed*12.9898 + 4.1)*43758.5453; return v - Math.floor(v); }
-function f(n){ return n.toFixed(1); }
-
-function buildLeaves(clade){
-  var items = [], rel = clade.related || [], ri = 0, D = cfg.density;
-  clade.specimens.forEach(function(sp){
-    items.push({leaf:true,n:1,color:clade.color,kind:'specimen',spec:sp});
-    for (var k=0;k<D;k++){
-      if (ri < rel.length){ items.push({leaf:true,n:1,color:clade.color,kind:'related',name:rel[ri].name,href:rel[ri].href}); ri++; }
-      else items.push({leaf:true,n:1,color:clade.color,kind:'filler'});
-    }
-  });
-  while (ri < rel.length){ items.push({leaf:true,n:1,color:clade.color,kind:'related',name:rel[ri].name,href:rel[ri].href}); ri++; }
-  return items;
-}
-function join(l,r,seed){ var c = (l.color===r.color)?l.color:'var(--ink-soft)'; return {leaf:false,n:l.n+r.n,children:[l,r],color:c,seed:seed}; }
-function binTree(nodes,seed){
-  if (nodes.length===1) return nodes[0];
-  var frac = 0.5 + (rnd(seed)-0.5)*cfg.imbalance;
-  var cut = Math.max(1, Math.min(nodes.length-1, Math.round(nodes.length*frac)));
-  return join(binTree(nodes.slice(0,cut), seed*2+1), binTree(nodes.slice(cut), seed*2+3), seed);
-}
-
-function render(){
-  var segs=[], segsB=[], dots=[], dotsB=[], labels=[], xs=[], ys=[];
-  function edge(x,y,ex,ey,pdir,color,w,op,blur){
-    var d = (pdir===null)?Math.atan2(ey-y,ex-x):pdir;
-    var seg = Math.hypot(ex-x,ey-y);
-    var qx = x + seg*cfg.curve*Math.cos(d), qy = y + seg*cfg.curve*Math.sin(d);
-    var p = '<path d="M'+f(x)+' '+f(y)+' Q'+f(qx)+' '+f(qy)+' '+f(ex)+' '+f(ey)+'" stroke="'+color+'" stroke-width="'+w.toFixed(2)+'" opacity="'+op.toFixed(2)+'"/>';
-    (blur?segsB:segs).push(p); xs.push(x,ex,qx); ys.push(y,ey,qy);
-  }
-  function tip(node,x,y,dir){
-    var color = node.color, deg = dir*180/Math.PI;
-    var anc, rot; if (((deg%360)+360)%360 > 90 && ((deg%360)+360)%360 < 270){ rot = deg+180; anc='end'; } else { rot = deg; anc='start'; }
-    if (node.kind==='specimen'){
-      var sp = node.spec;
-      if (sp.drafted){
-        dots.push('<circle cx="'+f(x)+'" cy="'+f(y)+'" r="3" fill="'+color+'"/>');
-        var tx = x + 8*Math.cos(dir), ty = y + 8*Math.sin(dir);
-        labels.push('<a href="'+sp.href+'"><title>No. '+('00'+sp.num).slice(-3)+': '+sp.name+'</title>'
-          + '<text class="tree-leaf" x="'+f(tx)+'" y="'+f(ty)+'" text-anchor="'+anc+'" dy="0.32em" transform="rotate('+rot.toFixed(1)+' '+f(tx)+' '+f(ty)+')">'+sp.name+'</text></a>');
-        var ext = 8 + sp.name.length*6.0; xs.push(x+ext*Math.cos(dir)); ys.push(y+ext*Math.sin(dir));
-      } else {
-        dotsB.push('<circle cx="'+f(x)+'" cy="'+f(y)+'" r="2" fill="'+color+'" opacity="0.7"><title>No. '+('00'+sp.num).slice(-3)+': opens '+sp.reveal+'</title></circle>');
-      }
-    } else if (node.kind==='related'){
-      if (node.name && node.href) dots.push('<a href="'+node.href+'" target="_blank" rel="noopener noreferrer"><title>'+node.name+' · related, further reading</title><circle cx="'+f(x)+'" cy="'+f(y)+'" r="2.2" fill="'+color+'" opacity="0.62"/></a>');
-      else if (node.name) dots.push('<circle cx="'+f(x)+'" cy="'+f(y)+'" r="1.7" fill="'+color+'" opacity="0.5"><title>'+node.name+'</title></circle>');
-    }
-  }
-  function blurred(ch){ return ch.leaf && (ch.kind==='filler' || (ch.kind==='specimen' && !ch.spec.drafted)); }
-  function layout(node,x,y,a0,a1,pdir,depth){
-    if (node.leaf){ tip(node,x,y, pdir===null?(a0+a1)/2:pdir); return; }
-    var acc = a0;
-    node.children.forEach(function(ch,ci){
-      var frac = ch.n/node.n, b = acc + (a1-a0)*frac, mid = (acc+b)/2;
-      var seed = (node.seed||1)*13 + ci*101 + depth*7 + 5;
-      var blen = cfg.len*(0.45 + rnd(seed)*cfg.lenNoise)*Math.pow(cfg.decay,depth);
-      var cx = x + blen*Math.cos(mid), cy = y + blen*Math.sin(mid);
-      var w = Math.max(0.5, 1.7 - depth*0.16), op = Math.max(0.5, 1 - depth*0.035);
-      edge(x,y,cx,cy,pdir,ch.color,w,op, blurred(ch));
-      layout(ch,cx,cy,acc,b,mid,depth+1);
-      acc = b;
-    });
-  }
-  var roots = DATA.map(function(c,ci){ return binTree(buildLeaves(c).map(function(o){return o;}), 31*(ci+1)); });
-  var root = roots.length>1 ? binTree(roots, 7) : roots[0];
-  var r0 = cfg.rot*Math.PI/180;
-  layout(root, 0,0, r0, r0+2*Math.PI, null, 0);
-  var pad=16, minx=Math.min.apply(null,xs)-pad, maxx=Math.max.apply(null,xs)+pad, miny=Math.min.apply(null,ys)-pad, maxy=Math.max.apply(null,ys)+pad;
-  var svg = '<svg viewBox="'+f(minx)+' '+f(miny)+' '+f(maxx-minx)+' '+f(maxy-miny)+'" role="img" aria-label="Unrooted tree tuner">'
-    + '<defs><filter id="sb" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="'+cfg.blur+'"/></filter></defs>'
-    + '<g filter="url(#sb)" fill="none" stroke-linecap="round">'+segsB.join('')+'</g>'
-    + '<g fill="none" stroke-linecap="round">'+segs.join('')+'</g>'
-    + '<g filter="url(#sb)">'+dotsB.join('')+'</g>'
-    + '<g>'+dots.join('')+'</g><g>'+labels.join('')+'</g></svg>';
-  document.getElementById('tree').innerHTML = svg;
-  document.getElementById('readout').textContent = JSON.stringify(cfg, null, 2);
-}
-
-var C = document.getElementById('controls');
-SPEC.forEach(function(s){
-  var wrap = document.createElement('div'); wrap.className='ctl';
-  var lab = document.createElement('label'); lab.innerHTML = s.label + ' <b id="v_'+s.k+'">'+s.val+'</b>';
-  var inp = document.createElement('input'); inp.type='range'; inp.min=s.min; inp.max=s.max; inp.step=s.step; inp.value=s.val;
-  inp.addEventListener('input', function(){ cfg[s.k]=parseFloat(inp.value); document.getElementById('v_'+s.k).textContent=inp.value; render(); });
-  wrap.appendChild(lab); wrap.appendChild(inp); C.appendChild(wrap);
-});
-var brow = document.createElement('div'); brow.className='row';
-var btn = document.createElement('button'); btn.textContent='Copy config';
-btn.addEventListener('click', function(){ navigator.clipboard.writeText(JSON.stringify(cfg,null,2)); btn.textContent='Copied!'; setTimeout(function(){btn.textContent='Copy config';},1200); });
-brow.appendChild(btn); C.appendChild(brow);
-var ro = document.createElement('div'); ro.className='readout'; ro.id='readout'; C.appendChild(ro);
-render();
-</script>
-</body>
-</html>
-"""
-
-
-def render_tree_tuner_file() -> None:
-    """Write the temporary interactive tuner (potw-tree-tuner.html). Not part of the site."""
-    queue = load_queue()
-    anchor = queue.get("anchor_date", "2026-07-06")
-    data = _tree_tuner_data(queue, anchor)
-    html = _TREE_TUNER_TEMPLATE.replace("__DATA__", json.dumps(data))
-    dest = SITE_ROOT / "potw-tree-tuner.html"
-    dest.write_text(html)
-    print(f"Wrote {dest.relative_to(SITE_ROOT)}", file=sys.stderr)
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(description="Render a POTW issue or announcement JSON to HTML.")
     ap.add_argument("issue", nargs="?", help="Issue JSON filename (in scripts/potw/issues/) or path.")
@@ -2069,13 +1922,7 @@ def main() -> int:
     ap.add_argument("--catalogue", action="store_true", help="Render the full-series catalogue page (potw-catalogue.html).")
     ap.add_argument("--preview", action="store_true", help="With the catalogue, also write an editorial preview that reveals every name (potw-catalogue-preview.html, gitignored).")
     ap.add_argument("--field-guide", action="store_true", help="Render the field-guide page (potw-field-guide.html), the Topicpile atlas placeholder.")
-    ap.add_argument("--tree-tuner", action="store_true", help="TEMPORARY: write the interactive unrooted-tree tuner (potw-tree-tuner.html) for dialing in the layout config.")
     args = ap.parse_args()
-
-    if args.tree_tuner:
-        render_tree_tuner_file()
-        if not (args.issue or args.all or args.announcement or args.catalogue or args.preview or args.field_guide):
-            return 0
 
     all_issues = load_all_issues()
 
