@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 
@@ -68,10 +68,11 @@
     .metric:last-child { border-right: none; padding-right: 0; }
     .metric .value {
       display: block;
-      font-size: clamp(1.75rem, 4vw, 3rem);
-      font-variation-settings: "wdth" 92, "wght" 600;
+      font-family: var(--f-data);
+      font-weight: 700;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
       color: var(--ink);
-      letter-spacing: -0.025em;
+      letter-spacing: -0.02em;
       line-height: 1;
       font-variant-numeric: tabular-nums;
     }
@@ -261,7 +262,7 @@
 
         <dl class="metrics">
           <div class="metric">
-            <dd class="value" data-impact="total_citations">2,391</dd>
+            <dd class="value" data-impact="total_citations">2,460</dd>
             <dt class="label">Citations</dt>
           </div>
           <div class="metric">
@@ -269,7 +270,7 @@
             <dt class="label">Countries</dt>
           </div>
           <div class="metric">
-            <dd class="value" data-impact="citing_institutions">3,307</dd>
+            <dd class="value" data-impact="citing_institutions">3,428</dd>
             <dt class="label">Institutions</dt>
           </div>
           <div class="metric">
@@ -381,7 +382,7 @@
 
       let DATA;
       try {
-        const resp = await fetch('data/impact-data.json');
+        const resp = await fetch('data/impact-data.json', { cache: 'no-store' });
         DATA = await resp.json();
       } catch (e) {
         return; // Static fallback numbers already render; nothing else to draw.
@@ -683,9 +684,32 @@
       // ── Discipline bars ──────────────────────────────
       (function buildDisciplines() {
         const chart = document.getElementById('discChart');
-        const maxCount = Math.max(...disciplineData.map(d => d.count), 1);
 
-        disciplineData.forEach((d, idx) => {
+        // Keep the top N named disciplines; fold the long tail into "Other disciplines"
+        // (rendered last, with the full list on hover). A compact chart of the fields
+        // that carry weight, plus an honest residual, reads the story better than a
+        // dozen tiny bars.
+        const MAX_NAMED = 8;
+        const explicitOther = disciplineData.find(d => d.includes && d.includes.length > 0);
+        const named = disciplineData
+          .filter(d => d !== explicitOther)
+          .sort((a, b) => b.count - a.count);
+        const keep = named.slice(0, MAX_NAMED);
+        const folded = named.slice(MAX_NAMED);
+
+        let other = null;
+        if (explicitOther || folded.length) {
+          other = {
+            name: "Other disciplines",
+            count: (explicitOther ? explicitOther.count : 0) + folded.reduce((s, d) => s + d.count, 0),
+            includes: [...(explicitOther ? explicitOther.includes : []), ...folded.map(d => d.name)].sort(),
+            isOther: true,
+          };
+        }
+        const rows = other ? [...keep, other] : keep;
+        const maxCount = Math.max(...rows.map(d => d.count), 1);
+
+        rows.forEach((d) => {
           const row = document.createElement('div');
           row.className = 'disc-row';
           const pct = (d.count / maxCount * 100).toFixed(1);
@@ -710,7 +734,7 @@
           const fill = document.createElement('div');
           fill.className = 'disc-fill';
           fill.dataset.width = pct + '%';
-          fill.style.background = (d.includes && d.includes.length > 0) ? INK_SOFT : fieldColor(d.name);
+          fill.style.background = d.isOther ? INK_SOFT : fieldColor(d.name);
           track.appendChild(fill);
 
           const count = document.createElement('div');
