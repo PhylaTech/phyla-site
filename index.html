@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 
@@ -234,6 +234,22 @@
       max-width: 340px;
       height: auto;
       display: block;
+      cursor: crosshair;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Each colony scales up from its inoculation point as it "grows in". */
+    .colony-grow {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: scale(0);
+      animation: colony-grow var(--grow, 9s) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: var(--delay, 0s);
+    }
+    @keyframes colony-grow {
+      0%   { transform: scale(0); opacity: 0; }
+      10%  { opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
     }
     .petri-caption {
       text-align: center;
@@ -243,36 +259,21 @@
       font-size: 1rem;
       color: var(--tannin);
       display: block;
-      margin-bottom: 0.4rem;
       font-style: italic;
       font-variation-settings: "wdth" 95, "wght" 500;
     }
-    .petri-caption .description {
-      font-size: 0.8125rem;
-      line-height: 1.6;
+    .petri-hint {
+      text-align: center;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--ink-soft);
+      opacity: 0.7;
     }
-    .petri-caption .description::before {
-      content: "";
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--ink-hairline-strong);
-      margin: 0.65rem auto;
-    }
-    @keyframes colony-pulse {
-      0%, 100% { opacity: 0.93; }
-      50%     { opacity: 1; }
-    }
-    .colony { animation: colony-pulse 6s ease-in-out infinite; }
-    .colony.c1 { animation-duration: 7s;  animation-delay: 0s; }
-    .colony.c2 { animation-duration: 9s;  animation-delay: 1.5s; }
-    .colony.c3 { animation-duration: 6s;  animation-delay: 3s; }
-    .colony.c4 { animation-duration: 8s;  animation-delay: 0.8s; }
-    .colony.c5 { animation-duration: 5s;  animation-delay: 4s; }
     @media (prefers-reduced-motion: reduce) {
-      .colony { animation: none; }
-      .petri animate { display: none; }
+      .colony-grow { animation: none; transform: scale(1); opacity: 1; }
+      .petri { cursor: default; }
+      .petri-hint { display: none; }
     }
 
     /* === Impact === */
@@ -321,20 +322,22 @@
       align-items: start;
       gap: clamp(1.5rem, 5vw, 3.5rem);
     }
-    .team-row.row-a { grid-template-columns: minmax(0, 0.55fr) minmax(0, 1fr); }
-    .team-row.row-b { grid-template-columns: minmax(0, 1fr) minmax(0, 0.65fr); }
+    /* Fixed 220px figure column on every row so all three portraits are the same size. */
+    .team-row.row-a { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
+    .team-row.row-b { grid-template-columns: minmax(0, 1fr) minmax(0, 220px); }
     .team-row.row-b .team-figure { order: 2; }
     .team-row.row-b .team-text { order: 1; }
-    .team-row.row-c { grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr); }
+    .team-row.row-c { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
     .team-row.row-c .team-text { padding-top: 0.5rem; }
 
     .team-figure {
       position: relative;
-      max-width: 280px;
+      max-width: 220px;
     }
     .team-figure img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       display: block;
       filter: grayscale(0.18) sepia(0.12) contrast(0.96);
       border: 1px solid var(--ink-hairline-strong);
@@ -347,7 +350,6 @@
       pointer-events: none;
       z-index: -1;
     }
-    .team-figure.compact { max-width: 220px; }
 
     .team-text .team-eyebrow {
       display: inline-flex;
@@ -657,135 +659,41 @@
 
           <aside class="services-aside">
             <figure class="services-figure">
-              <svg class="petri" viewBox="0 0 320 320" role="img" aria-labelledby="petriTitle petriDesc">
-                <title id="petriTitle">Cultures on agar</title>
-                <desc id="petriDesc">A round petri dish viewed from above, with bacterial and fungal colonies in different morphologies. The colonies pulse slowly to suggest active growth.</desc>
+              <svg class="petri" id="petri" viewBox="0 0 320 320" role="img" aria-labelledby="petriTitle petriDesc">
+                <title id="petriTitle">A culture plate, growing</title>
+                <desc id="petriDesc">A round petri dish of agar on which bacterial and fungal colonies grow in over time, then the plate is reseeded. Clicking the agar inoculates a new colony.</desc>
 
                 <defs>
-                  <radialGradient id="agarGrad" cx="50%" cy="50%" r="55%">
+                  <radialGradient id="agarGrad" cx="50%" cy="45%" r="60%">
                     <stop offset="0%" stop-color="oklch(96% 0.012 80)" />
                     <stop offset="100%" stop-color="oklch(91% 0.018 78)" />
                   </radialGradient>
+                  <clipPath id="agarClip"><circle cx="160" cy="160" r="140" /></clipPath>
                 </defs>
 
-                <!-- Dish rim and edge -->
+                <!-- Dish rim and agar -->
                 <circle cx="160" cy="160" r="150" fill="var(--parchment-pale)" stroke="var(--ink)" stroke-width="1.2" />
                 <circle cx="160" cy="160" r="143" fill="url(#agarGrad)" stroke="var(--ink-hairline)" stroke-width="0.5" />
                 <circle cx="160" cy="160" r="138" fill="none" stroke="var(--ink-hairline)" stroke-width="0.4" opacity="0.5" />
 
                 <!-- Plate ID -->
-                <text x="160" y="38" text-anchor="middle" font-family="var(--sans)" font-size="9" letter-spacing="0.22em" fill="var(--ink-soft)" style="text-transform: uppercase; font-variation-settings: 'wght' 600;">Phyla · iii</text>
+                <text x="160" y="30" text-anchor="middle" font-family="var(--sans)" font-size="9" letter-spacing="0.22em" fill="var(--ink-soft)" style="text-transform: uppercase; font-variation-settings: 'wght' 600;">Phyla &middot; iii</text>
 
-                <!-- Colony 1: Streptomyces (filamentous) -->
-                <g class="colony c1">
-                  <g stroke="var(--ink)" stroke-width="0.6" stroke-linecap="round" opacity="0.6" fill="none">
-                    <line x1="110" y1="115" x2="142" y2="115" />
-                    <line x1="110" y1="115" x2="138" y2="128" />
-                    <line x1="110" y1="115" x2="131" y2="138" />
-                    <line x1="110" y1="115" x2="121" y2="142" />
-                    <line x1="110" y1="115" x2="110" y2="146" />
-                    <line x1="110" y1="115" x2="98" y2="142" />
-                    <line x1="110" y1="115" x2="89" y2="135" />
-                    <line x1="110" y1="115" x2="83" y2="125" />
-                    <line x1="110" y1="115" x2="78" y2="115" />
-                    <line x1="110" y1="115" x2="82" y2="103" />
-                    <line x1="110" y1="115" x2="89" y2="93" />
-                    <line x1="110" y1="115" x2="98" y2="86" />
-                    <line x1="110" y1="115" x2="110" y2="83" />
-                    <line x1="110" y1="115" x2="121" y2="86" />
-                    <line x1="110" y1="115" x2="132" y2="93" />
-                    <line x1="110" y1="115" x2="138" y2="103" />
-                  </g>
-                  <circle cx="110" cy="115" r="14" fill="var(--ink)" opacity="0.78">
-                    <animate attributeName="r" values="13.5; 15; 13.5" dur="7s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="110" cy="115" r="9" fill="var(--ink)" />
-                  <circle cx="110" cy="115" r="3.5" fill="var(--tannin)" opacity="0.85" />
+                <!-- Agar texture: faint scattered dust -->
+                <g fill="var(--ink-soft)" opacity="0.16" clip-path="url(#agarClip)">
+                  <circle cx="170" cy="82" r="0.6" /><circle cx="82" cy="162" r="0.6" /><circle cx="240" cy="182" r="0.6" />
+                  <circle cx="182" cy="242" r="0.6" /><circle cx="262" cy="140" r="0.6" /><circle cx="140" cy="262" r="0.6" />
+                  <circle cx="66" cy="200" r="0.6" /><circle cx="70" cy="118" r="0.6" /><circle cx="252" cy="86" r="0.6" />
                 </g>
 
-                <!-- Colony 2: Penicillium (concentric, fluffy) -->
-                <g class="colony c2">
-                  <circle cx="218" cy="118" r="24" fill="none" stroke="var(--ink)" stroke-width="0.5" opacity="0.42">
-                    <animate attributeName="r" values="22; 25; 22" dur="9s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="218" cy="118" r="18" fill="none" stroke="var(--ink)" stroke-width="0.7" opacity="0.6" />
-                  <circle cx="218" cy="118" r="13" fill="var(--tannin)" opacity="0.4" />
-                  <circle cx="218" cy="118" r="9" fill="var(--ink)" opacity="0.78" />
-                  <circle cx="218" cy="118" r="4" fill="var(--ink)" />
-                  <!-- Outer fluff (small radial dashes) -->
-                  <g stroke="var(--ink)" stroke-width="0.4" stroke-linecap="round" opacity="0.45" fill="none">
-                    <line x1="218" y1="92" x2="218" y2="88" />
-                    <line x1="231" y1="96" x2="234" y2="93" />
-                    <line x1="240" y1="105" x2="244" y2="103" />
-                    <line x1="244" y1="118" x2="248" y2="118" />
-                    <line x1="240" y1="131" x2="244" y2="133" />
-                    <line x1="231" y1="140" x2="234" y2="143" />
-                    <line x1="218" y1="144" x2="218" y2="148" />
-                    <line x1="205" y1="140" x2="202" y2="143" />
-                    <line x1="196" y1="131" x2="192" y2="133" />
-                    <line x1="192" y1="118" x2="188" y2="118" />
-                    <line x1="196" y1="105" x2="192" y2="103" />
-                    <line x1="205" y1="96" x2="202" y2="93" />
-                  </g>
-                </g>
-
-                <!-- Colony 3: smooth bacterial round -->
-                <g class="colony c3">
-                  <circle cx="105" cy="218" r="17" fill="var(--ink)" opacity="0.55">
-                    <animate attributeName="r" values="16; 18; 16" dur="6s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="105" cy="218" r="13" fill="var(--ink)" opacity="0.85" />
-                  <circle cx="105" cy="218" r="8" fill="var(--ink)" />
-                  <circle cx="103" cy="216" r="2.5" fill="var(--parchment-mid)" opacity="0.45" />
-                </g>
-
-                <!-- Colony 4: stippled cluster (yeast / nascent colonies) -->
-                <g class="colony c4">
-                  <circle cx="215" cy="212" r="2.4" fill="var(--ink)" opacity="0.85" />
-                  <circle cx="223" cy="214" r="1.8" fill="var(--ink)" opacity="0.85" />
-                  <circle cx="208" cy="214" r="2.2" fill="var(--ink)" opacity="0.85" />
-                  <circle cx="212" cy="220" r="2" fill="var(--ink)" opacity="0.85" />
-                  <circle cx="220" cy="220" r="1.8" fill="var(--ink)" opacity="0.85" />
-                  <circle cx="226" cy="208" r="1.5" fill="var(--ink)" opacity="0.7" />
-                  <circle cx="204" cy="208" r="1.6" fill="var(--ink)" opacity="0.7" />
-                  <circle cx="221" cy="225" r="1.6" fill="var(--ink)" opacity="0.7" />
-                  <circle cx="208" cy="223" r="1.5" fill="var(--ink)" opacity="0.65" />
-                  <circle cx="231" cy="216" r="1.4" fill="var(--ink)" opacity="0.6" />
-                  <circle cx="200" cy="218" r="1.4" fill="var(--ink)" opacity="0.6" />
-                  <circle cx="216" cy="204" r="1.5" fill="var(--ink)" opacity="0.7" />
-                  <circle cx="226" cy="223" r="1.2" fill="var(--ink)" opacity="0.5" />
-                  <circle cx="204" cy="222" r="1.2" fill="var(--ink)" opacity="0.5" />
-                  <circle cx="218" cy="200" r="1.2" fill="var(--ink)" opacity="0.5" />
-                  <circle cx="234" cy="220" r="1" fill="var(--ink)" opacity="0.4" />
-                  <circle cx="198" cy="225" r="1" fill="var(--ink)" opacity="0.4" />
-                </g>
-
-                <!-- Colony 5: small bacillus swarm (lower-center) -->
-                <g class="colony c5">
-                  <path d="M 158 256 Q 148 248, 144 256 Q 142 264, 154 268 Q 166 270, 172 263 Q 174 256, 164 252 Q 160 251, 158 256 Z" fill="var(--ink)" opacity="0.5">
-                    <animate attributeName="opacity" values="0.45; 0.65; 0.45" dur="5s" repeatCount="indefinite" />
-                  </path>
-                  <circle cx="156" cy="258" r="3.5" fill="var(--ink)" />
-                  <circle cx="164" cy="260" r="2" fill="var(--ink)" opacity="0.85" />
-                </g>
-
-                <!-- Subtle agar texture: tiny scattered dust marks -->
-                <g fill="var(--ink-soft)" opacity="0.18">
-                  <circle cx="170" cy="80" r="0.6" />
-                  <circle cx="80" cy="160" r="0.6" />
-                  <circle cx="240" cy="180" r="0.6" />
-                  <circle cx="180" cy="240" r="0.6" />
-                  <circle cx="265" cy="140" r="0.6" />
-                  <circle cx="140" cy="265" r="0.6" />
-                  <circle cx="60" cy="200" r="0.6" />
-                  <circle cx="60" cy="120" r="0.6" />
-                  <circle cx="260" cy="80" r="0.6" />
-                </g>
+                <!-- Colonies grow here (populated by script) -->
+                <g id="petriColonies" clip-path="url(#agarClip)"></g>
               </svg>
 
               <figcaption class="petri-caption">
                 <span class="latin">In vitro.</span>
               </figcaption>
+              <p class="petri-hint" aria-hidden="true">Click the agar to inoculate</p>
             </figure>
           </aside>
         </div>
@@ -803,7 +711,7 @@
           </p>
           <dl class="impact-numbers">
             <div class="impact-number">
-              <dd class="value" data-impact="citations">2,391</dd>
+              <dd class="value" data-impact="citations">2,460</dd>
               <dt class="label">Citations</dt>
             </div>
             <div class="impact-number">
@@ -1033,6 +941,150 @@
           submitBtn.disabled = false;
         }
       });
+    })();
+
+    // === Keep the impact teaser numbers live from the same OpenAlex data as /impact ===
+    (async function () {
+      try {
+        const resp = await fetch('data/impact-data.json', { cache: 'no-store' });
+        const s = (await resp.json()).summary || {};
+        const map = {
+          citations: s.total_citations,
+          countries: s.countries_reached,
+          disciplines: s.disciplines_impacted,
+        };
+        document.querySelectorAll('.impact-numbers .value[data-impact]').forEach(el => {
+          const v = map[el.dataset.impact];
+          if (v != null) el.textContent = v.toLocaleString();
+        });
+      } catch (e) { /* static fallbacks remain */ }
+    })();
+
+    // === Living petri dish: colonies grow in over time, and you can inoculate your own ===
+    (function () {
+      const svg = document.getElementById('petri');
+      const layer = document.getElementById('petriColonies');
+      if (!svg || !layer) return;
+
+      const NS = 'http://www.w3.org/2000/svg';
+      const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const css = getComputedStyle(document.documentElement);
+      const tok = (n, f) => (css.getPropertyValue(n).trim() || f);
+      const INK = tok('--ink', '#302a22');
+      const TANNIN = tok('--tannin', '#7c4e2b');
+      const MOSS = tok('--moss-deep', '#3f5a3a');
+      const OCHRE = tok('--ochre', '#b07c39');
+      const PALETTE = [INK, TANNIN, MOSS, OCHRE, TANNIN];
+
+      const CENTER = 160, AGAR_R = 132;
+      const rand = (a, b) => a + Math.random() * (b - a);
+      const pick = (arr) => arr[(Math.random() * arr.length) | 0];
+
+      function e(name, attrs) {
+        const node = document.createElementNS(NS, name);
+        for (const k in attrs) node.setAttribute(k, attrs[k]);
+        return node;
+      }
+
+      // Morphologies: return SVG children centered at (0,0), sized to radius R.
+      function filament(R, color) {
+        const out = [];
+        const n = 13 + ((Math.random() * 4) | 0);
+        for (let i = 0; i < n; i++) {
+          const a = (i / n) * Math.PI * 2 + rand(-0.12, 0.12);
+          const len = R * rand(0.85, 1.35);
+          out.push(e('line', { x1: 0, y1: 0, x2: (Math.cos(a) * len).toFixed(1), y2: (Math.sin(a) * len).toFixed(1), stroke: INK, 'stroke-width': 0.6, 'stroke-linecap': 'round', opacity: 0.5 }));
+        }
+        out.push(e('circle', { r: (R * 0.5).toFixed(1), fill: color, 'fill-opacity': 0.75 }));
+        out.push(e('circle', { r: (R * 0.22).toFixed(1), fill: TANNIN }));
+        return out;
+      }
+      function concentric(R, color) {
+        return [
+          e('circle', { r: R.toFixed(1), fill: 'none', stroke: color, 'stroke-width': 0.6, 'stroke-opacity': 0.4 }),
+          e('circle', { r: (R * 0.68).toFixed(1), fill: 'none', stroke: color, 'stroke-width': 0.8, 'stroke-opacity': 0.6 }),
+          e('circle', { r: (R * 0.42).toFixed(1), fill: color, 'fill-opacity': 0.35 }),
+          e('circle', { r: (R * 0.2).toFixed(1), fill: INK, 'fill-opacity': 0.8 }),
+        ];
+      }
+      function smooth(R, color) {
+        return [
+          e('circle', { r: R.toFixed(1), fill: color, 'fill-opacity': 0.5 }),
+          e('circle', { r: (R * 0.68).toFixed(1), fill: color, 'fill-opacity': 0.82 }),
+          e('circle', { r: (R * 0.36).toFixed(1), fill: color }),
+          e('circle', { cx: (-R * 0.16).toFixed(1), cy: (-R * 0.16).toFixed(1), r: (R * 0.12).toFixed(1), fill: 'var(--parchment-mid)', 'fill-opacity': 0.45 }),
+        ];
+      }
+      function stippled(R, color) {
+        const out = [];
+        const n = 12 + ((Math.random() * 6) | 0);
+        for (let i = 0; i < n; i++) {
+          const a = Math.random() * Math.PI * 2, rr = Math.sqrt(Math.random()) * R;
+          out.push(e('circle', { cx: (Math.cos(a) * rr).toFixed(1), cy: (Math.sin(a) * rr).toFixed(1), r: rand(1, 2.6).toFixed(1), fill: color, 'fill-opacity': rand(0.5, 0.9).toFixed(2) }));
+        }
+        return out;
+      }
+      const MORPHS = [filament, concentric, smooth, stippled];
+
+      function inoculate(cx, cy, opts) {
+        opts = opts || {};
+        const R = opts.R != null ? opts.R : rand(11, 22);
+        const color = opts.color || pick(PALETTE);
+        const morph = opts.morph || pick(MORPHS);
+        const pos = e('g', { transform: `translate(${cx.toFixed(1)} ${cy.toFixed(1)})` });
+        pos.style.transition = 'opacity 1.4s ease-out';
+        const grow = e('g', { class: 'colony-grow' });
+        grow.style.setProperty('--grow', (opts.grow != null ? opts.grow : rand(7, 11)).toFixed(2) + 's');
+        grow.style.setProperty('--delay', (opts.delay || 0).toFixed(2) + 's');
+        morph(R, color).forEach((c) => grow.appendChild(c));
+        pos.appendChild(grow);
+        layer.appendChild(pos);
+        return pos;
+      }
+
+      // Spaced-out random inoculation points within the agar.
+      function scatter(n) {
+        const pts = [];
+        let tries = 0;
+        while (pts.length < n && tries < n * 40) {
+          tries++;
+          const a = Math.random() * Math.PI * 2, r = Math.sqrt(Math.random()) * (AGAR_R - 30);
+          const x = CENTER + Math.cos(a) * r, y = CENTER + Math.sin(a) * r;
+          if (pts.every((p) => Math.hypot(p.x - x, p.y - y) > 48)) pts.push({ x, y });
+        }
+        return pts;
+      }
+
+      let generation = [];
+      function clearGeneration() {
+        generation.forEach((g) => { g.style.opacity = '0'; setTimeout(() => g.remove(), 1500); });
+        generation = [];
+      }
+      function seedGeneration() {
+        generation = scatter(5).map((p, i) => inoculate(p.x, p.y, { delay: i * 0.5 }));
+      }
+
+      // Click / tap the agar to add your own colony.
+      svg.addEventListener('click', (ev) => {
+        const p = new DOMPoint(ev.clientX, ev.clientY).matrixTransform(svg.getScreenCTM().inverse());
+        if (Math.hypot(p.x - CENTER, p.y - CENTER) > AGAR_R - 6) return;
+        generation.push(inoculate(p.x, p.y, { delay: 0, R: rand(12, 20) }));
+      });
+
+      if (REDUCE) { seedGeneration(); return; } // one static plate, no time-lapse loop
+
+      // Ambient time-lapse: reseed the plate on a cycle, only while it's on screen.
+      let timer = null;
+      function start() {
+        if (timer) return;
+        if (!generation.length) seedGeneration();
+        timer = setInterval(() => { clearGeneration(); seedGeneration(); }, 17000);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      new IntersectionObserver((entries) => {
+        entries.forEach((en) => (en.isIntersecting ? start() : stop()));
+      }, { threshold: 0.25 }).observe(svg);
+      document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else start(); });
     })();
   </script>
 </body>
