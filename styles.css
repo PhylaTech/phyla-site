@@ -35,7 +35,13 @@ a { color: inherit; }
 
   --focus:            oklch(42% 0.10 55);
 
-  --sans: 'Bricolage Grotesque', 'Source Sans 3', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+  /* Type system, "Field Data": Familjen Grotesk = logo only; Schibsted Grotesk = voice
+     (headlines, body, UI); Space Mono = data (eyebrows, labels, numbers, IDs, buttons).
+     Loaded as variable fonts so the font-variation-settings "wght" throughout keeps working. */
+  --f-wordmark: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+  --f-voice:    'Schibsted Grotesk', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
+  --f-data:     'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --sans: var(--f-voice); /* alias: existing var(--sans) usages now render in the voice face */
 
   --measure-narrow: 52ch;
   --measure: 65ch;
@@ -102,20 +108,23 @@ body {
 /* === Type === */
 .display {
   font-family: var(--sans);
-  font-variation-settings: "wdth" 95, "wght" 700;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
   font-size: clamp(2.75rem, 7vw, 5rem);
   line-height: 1.02;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   color: var(--ink);
 }
 .display em {
   font-style: italic;
-  font-variation-settings: "wdth" 95, "wght" 600;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   color: var(--tannin);
 }
 
 .headline {
-  font-variation-settings: "wdth" 100, "wght" 600;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   font-size: clamp(1.75rem, 3.2vw, 2.625rem);
   line-height: 1.15;
   letter-spacing: -0.018em;
@@ -123,12 +132,14 @@ body {
 }
 .headline em {
   font-style: italic;
-  font-variation-settings: "wdth" 95, "wght" 600;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   color: var(--tannin);
 }
 
 .title {
-  font-variation-settings: "wdth" 100, "wght" 600;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   font-size: 1.0625rem;
   line-height: 1.35;
   letter-spacing: -0.005em;
@@ -150,8 +161,9 @@ body {
 }
 
 .label {
-  font-size: 0.75rem;
-  font-variation-settings: "wdth" 100, "wght" 600;
+  font-family: var(--f-data);
+  font-size: 0.6875rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -159,7 +171,8 @@ body {
 
 .latin {
   font-style: italic;
-  font-variation-settings: "wdth" 95, "wght" 400;
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
 }
 
 /* === Layout primitives === */
@@ -197,23 +210,35 @@ header.site-header {
 }
 .wordmark {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.65rem;
+  align-items: center;
+  gap: 0.6rem;
   text-decoration: none;
   color: var(--ink);
   line-height: 1;
 }
+/* Phylogenetic-network mark, injected so every page's existing lockup picks it up. */
+.wordmark::before {
+  content: "";
+  flex: none;
+  width: 30px;
+  height: 32px;
+  background: url(assets/phyla-mark.svg) center / contain no-repeat;
+}
 .wordmark-name {
-  font-size: 1.4375rem;
-  font-variation-settings: "wdth" 95, "wght" 700;
-  letter-spacing: -0.025em;
+  font-family: var(--f-wordmark);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.035em;
+  text-transform: lowercase;
 }
 .wordmark-sub {
-  font-size: 0.6875rem;
-  font-variation-settings: "wdth" 100, "wght" 500;
-  letter-spacing: 0.22em;
+  font-family: var(--f-wordmark);
+  font-weight: 500;
+  font-size: 0.625rem;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--ink-soft);
+  align-self: center;
 }
 nav.primary {
   display: flex;
@@ -257,9 +282,11 @@ section { padding-bottom: clamp(4.5rem, 9vw, 8rem); }
   background: var(--tannin);
   color: var(--parchment-pale);
   padding: 0.85rem 1.6rem;
-  font-size: 0.9375rem;
-  font-variation-settings: "wdth" 100, "wght" 600;
-  letter-spacing: 0.02em;
+  font-family: var(--f-data);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   border: 1px solid var(--tannin);
   border-radius: 0;
   text-decoration: none;
@@ -269,7 +296,7 @@ section { padding-bottom: clamp(4.5rem, 9vw, 8rem); }
 .btn-primary:active { transform: translateY(1px); }
 .btn-primary[disabled] { opacity: 0.65; cursor: not-allowed; }
 
-/* Underlined tannin text link with a nudging arrow */
+/* Underlined tannin text link with a nudging arrow. Mono, per the data/label system. */
 .link-arrow {
   display: inline-flex;
   align-items: center;
@@ -277,8 +304,9 @@ section { padding-bottom: clamp(4.5rem, 9vw, 8rem); }
   padding-bottom: 0.25rem;
   color: var(--tannin);
   text-decoration: none;
-  font-variation-settings: "wdth" 100, "wght" 600;
-  font-size: 0.9375rem;
+  font-family: var(--f-data);
+  font-weight: 700;
+  font-size: 0.8125rem;
   border-bottom: 1px solid var(--tannin);
   transition: color 180ms ease-out, border-color 180ms ease-out;
 }
