@@ -1,29 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396" role="img" aria-label="Phyla Technologies">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1120"/>
-      <stop offset="100%" stop-color="#0F1729"/>
-    </linearGradient>
-    <linearGradient id="tagline" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#5EEAD4"/>
-      <stop offset="50%" stop-color="#7DD3FC"/>
-      <stop offset="100%" stop-color="#A78BFA"/>
-    </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-    </pattern>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&amp;family=Schibsted+Grotesk:ital,wght@0,400;1,500&amp;display=swap');
+      .wm { font-family:'Familjen Grotesk','Helvetica Neue',system-ui,sans-serif; }
+      .vo { font-family:'Schibsted Grotesk','Helvetica Neue',system-ui,sans-serif; }</style>
   </defs>
-
-  <!-- Background -->
-  <rect width="1584" height="396" fill="url(#bg)"/>
-  <rect width="1584" height="396" fill="url(#grid)"/>
-
-  <!-- Company name — centered -->
-  <text x="792" y="185" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="120" font-weight="700" letter-spacing="-3" fill="#ffffff">phyla</text>
-
-  <!-- Subname -->
-  <text x="792" y="248" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="400" letter-spacing="12" fill="#64748B">TECHNOLOGIES</text>
-
-  <!-- Tagline -->
-  <text x="792" y="300" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="400" letter-spacing="1" fill="url(#tagline)">MLOps for Life Sciences</text>
+  <rect width="1584" height="396" fill="#f4efe7"/>
+  <!-- Faint mark watermark, right -->
+  <g transform="translate(1140,36) scale(2.0)" opacity="0.06">
+    <g transform="translate(14,81)">
+      <path d="m 12,-40 c 23,0 28,-12 46,-15" stroke="#211910" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="m 12,-40 c 23,2 28,18 46,22" stroke="#211910" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M 12,0 C 35,-2 40,-14 58,-18" stroke="#211910" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M 12,0 C 35,2 40,14 58,18" stroke="#211910" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="m 12,40 c 23,0 28,12 46,15" stroke="#211910" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M 12,40 C 35,38 40,22 58,18" stroke="#211910" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="m 70,-55 c 20,-1 30,-7 48,-13" stroke="#211910" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="m 70,-18 c 20,0 30,-2 48,-2" stroke="#211910" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="m 70,18 c 20,0 30,2 48,2" stroke="#211910" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="m 70,55 c 20,1 30,7 48,13" stroke="#211910" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="8" cy="-40" r="9" fill="#211910"/><circle cx="8" cy="0" r="9" fill="#211910"/><circle cx="8" cy="40" r="9" fill="#211910"/>
+      <circle cx="64" cy="-55" r="7" fill="#211910"/><circle cx="64" cy="-18" r="7" fill="#211910"/><circle cx="64" cy="18" r="7" fill="#211910"/><circle cx="64" cy="55" r="7" fill="#211910"/>
+      <circle cx="122" cy="-68" r="10" fill="#211910"/><circle cx="122" cy="-20" r="10" fill="#211910"/><circle cx="122" cy="20" r="10" fill="#211910"/><circle cx="122" cy="68" r="10" fill="#211910"/>
+    </g>
+  </g>
+  <!-- Lockup -->
+  <g transform="translate(430,121) scale(0.72)">
+    <g transform="translate(14,81)">
+      <path d="m 12,-40 c 23,0 28,-12 46,-15" stroke="#43382c" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="m 12,-40 c 23,2 28,18 46,22" stroke="#43382c" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+      <path d="m 12,-40 c 23,8 28,50 46,58" stroke="#43382c" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.25"/>
+      <path d="M 12,0 C 35,-8 40,-48 58,-55" stroke="#43382c" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+      <path d="M 12,0 C 35,-2 40,-14 58,-18" stroke="#43382c" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="M 12,0 C 35,2 40,14 58,18" stroke="#43382c" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="M 12,0 C 35,8 40,48 58,55" stroke="#43382c" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+      <path d="M 12,40 C 35,32 40,-10 58,-18" stroke="#43382c" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.25"/>
+      <path d="M 12,40 C 35,38 40,22 58,18" stroke="#43382c" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+      <path d="m 12,40 c 23,0 28,12 46,15" stroke="#43382c" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="m 70,-55 c 20,-1 30,-7 48,-13" stroke="#43382c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="m 70,-55 c 20,7 30,25 48,35" stroke="#43382c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+      <path d="m 70,-18 c 20,-6 30,-38 48,-50" stroke="#43382c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+      <path d="m 70,-18 c 20,0 30,-2 48,-2" stroke="#43382c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="m 70,-18 c 20,8 30,30 48,38" stroke="#43382c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+      <path d="m 70,18 c 20,-8 30,-30 48,-38" stroke="#43382c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+      <path d="m 70,18 c 20,0 30,2 48,2" stroke="#43382c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="m 70,18 c 20,6 30,38 48,50" stroke="#43382c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+      <path d="M 70,55 C 90,48 100,30 118,20" stroke="#43382c" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+      <path d="m 70,55 c 20,1 30,7 48,13" stroke="#43382c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="8" cy="-40" r="9" fill="#753b07"/>
+      <circle cx="8" cy="0" r="9" fill="#753b07"/>
+      <circle cx="8" cy="40" r="9" fill="#753b07"/>
+      <circle cx="64" cy="-55" r="7" fill="#4a6e42"/>
+      <circle cx="64" cy="-18" r="7" fill="#4a6e42"/>
+      <circle cx="64" cy="18" r="7" fill="#4a6e42"/>
+      <circle cx="64" cy="55" r="7" fill="#4a6e42"/>
+      <circle cx="122" cy="-68" r="10" fill="#542300"/>
+      <circle cx="122" cy="-20" r="10" fill="#542300"/>
+      <circle cx="122" cy="20" r="10" fill="#542300"/>
+      <circle cx="122" cy="68" r="10" fill="#542300"/>
+    </g>
+  </g>
+  <text class="wm" x="560" y="196" font-size="96" font-weight="700" letter-spacing="-4" fill="#211910">phyla</text>
+  <text class="wm" x="564" y="232" font-size="22" font-weight="500" letter-spacing="9" fill="#43382c">TECHNOLOGIES</text>
+  <text class="vo" x="566" y="288" font-size="27" font-weight="400" fill="#43382c">Machine learning for the <tspan font-style="italic" font-weight="500" fill="#753b07">living world</tspan>.</text>
 </svg>
