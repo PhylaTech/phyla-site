@@ -23,6 +23,10 @@ def main():
     scale = args.dpi / 96.0
     png_data = cairosvg.svg2png(url=args.input, scale=scale, dpi=args.dpi)
 
+    out_dir = os.path.dirname(args.output)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
+
     img = Image.open(io.BytesIO(png_data))
     img.save(args.output, dpi=(args.dpi, args.dpi))
 
