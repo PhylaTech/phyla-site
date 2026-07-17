@@ -127,6 +127,50 @@ def _reveal_iso(number: int, anchor: str) -> str:
         return ""
 
 
+DEFAULT_ANCHOR = "2026-07-06"
+
+
+def _resolve_anchor(queue: dict) -> str:
+    """Launch date: the Monday week 1 publishes, and the single knob that shifts the whole
+    schedule (every reveal/teaser date is anchor + 7*(week-1) days). POTW_ANCHOR overrides the
+    data file for one build (e.g. to preview a future week); otherwise it is proteins.json's
+    'anchor_date'. Change it permanently with `render.py --set-anchor YYYY-MM-DD`."""
+    return os.environ.get("POTW_ANCHOR") or queue.get("anchor_date") or DEFAULT_ANCHOR
+
+
+def _long_date(d: dt.date) -> str:
+    """date -> '6 July 2026'."""
+    return d.strftime("%#d %B %Y" if os.name == "nt" else "%-d %B %Y")
+
+
+def _set_anchor_date(new_iso: str) -> None:
+    """Persist a new launch date into proteins.json (minimal-diff text edit, so the hand-tuned
+    formatting survives) and keep the hand-authored week-1 issue's own date in sync. Warns if
+    the date is not a Monday, since the series cadences weekly on Mondays."""
+    try:
+        d = dt.date.fromisoformat(new_iso)
+    except ValueError:
+        raise SystemExit(f"--set-anchor: '{new_iso}' is not an ISO date (YYYY-MM-DD).")
+    if d.weekday() != 0:
+        print(f"WARNING: {new_iso} is a {d.strftime('%A')}, not a Monday; the series is built "
+              "around Monday reveals.", file=sys.stderr)
+    raw = QUEUE_PATH.read_text()
+    new_raw, n = re.subn(r'("anchor_date"\s*:\s*")\d{4}-\d{2}-\d{2}(")',
+                         rf"\g<1>{new_iso}\g<2>", raw, count=1)
+    if not n:
+        raise SystemExit("--set-anchor: no anchor_date field found in proteins.json.")
+    QUEUE_PATH.write_text(new_raw)
+    print(f"anchor_date -> {new_iso} ({d.strftime('%A')})", file=sys.stderr)
+    gfp = ISSUES_DIR / "001-green-fluorescent-protein.json"
+    if gfp.exists():
+        g = gfp.read_text()
+        g2 = re.sub(r'("date_iso"\s*:\s*")\d{4}-\d{2}-\d{2}(")', rf"\g<1>{new_iso}\g<2>", g, count=1)
+        g2 = re.sub(r'("date_display"\s*:\s*")[^"]*(")', rf"\g<1>{_long_date(d)}\g<2>", g2, count=1)
+        if g2 != g:
+            gfp.write_text(g2)
+            print(f"week-1 issue date -> {_long_date(d)}", file=sys.stderr)
+
+
 def _arch_row(d: dict, current_number: int) -> str:
     n, slug = d["number"], d["slug"]
     current = ' current" aria-current="page' if n == current_number else ""
@@ -1440,7 +1484,7 @@ def render_catalogue(preview: bool = False) -> str:
     name for editorial review and is not meant to be published.
     """
     queue = load_queue()
-    anchor = queue.get("anchor_date", "2026-07-06")
+    anchor = _resolve_anchor(queue)
     announced = announced_ids()
     issues_by_slug = {d.get("slug"): d for d in load_all_issues()}
 
@@ -1988,7 +2032,15 @@ def main() -> int:
     ap.add_argument("--catalogue", action="store_true", help="Render the full-series catalogue page (potw-catalogue.html).")
     ap.add_argument("--preview", action="store_true", help="With the catalogue, also write an editorial preview that reveals every name (potw-catalogue-preview.html, gitignored).")
     ap.add_argument("--field-guide", action="store_true", help="Render the field-guide page (potw-field-guide.html), the Topicpile atlas placeholder.")
+    ap.add_argument("--set-anchor", metavar="YYYY-MM-DD", help="Shift the whole schedule to a new launch date (week 1, a Monday): rewrite proteins.json's anchor_date and the week-1 issue's date, then regenerate. Run alone to regenerate everything; combine with other flags to scope.")
     args = ap.parse_args()
+
+    if args.set_anchor:
+        _set_anchor_date(args.set_anchor)
+        # Regenerate the date-bearing surfaces so the new schedule propagates. Alone,
+        # --set-anchor rebuilds everything; if scoping flags are given, respect them.
+        if not (args.all or args.catalogue or args.field_guide or args.preview or args.issue or args.announcement):
+            args.all = args.catalogue = args.field_guide = True
 
     all_issues = load_all_issues()
 
