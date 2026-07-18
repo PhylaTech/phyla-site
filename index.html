@@ -157,6 +157,21 @@
       from { opacity: 0; transform: translateY(2px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+    /* Continuous "signal flowing" pulse traveling root -> leaves, once the tree has drawn. */
+    .phylo-flow {
+      fill: none;
+      stroke: var(--tannin);
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-dasharray: 2 22;
+      opacity: 0;
+    }
+    .phylo-animate .phylo-flow {
+      opacity: 0.65;
+      animation: phylo-flow 2.6s linear infinite;
+      animation-delay: 1500ms;
+    }
+    @keyframes phylo-flow { to { stroke-dashoffset: -120; } }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -172,6 +187,7 @@
         opacity: 1;
         transform: none;
       }
+      .phylo-animate .phylo-flow { animation: none; opacity: 0; }
     }
 
     /* === Services === */
@@ -509,12 +525,42 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a href="#" class="wordmark" aria-label="Phyla Technologies, home">
-        <span class="wordmark-name">Phyla</span>
-        <span class="wordmark-sub">Technologies</span>
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <svg class="wordmark-svg" viewBox="0 0 590.41529 267.508" role="img" aria-label="Phyla Technologies">
+          <g transform="translate(20,130)" fill="none" stroke="var(--ink-soft)" stroke-linecap="round">
+            <path d="m 12,-40 c 23,0 28,-12 46,-15" stroke-width="2.2" opacity="0.7"/>
+            <path d="m 12,-40 c 23,2 28,18 46,22" stroke-width="2.2" opacity="0.5"/>
+            <path d="M 12,0 C 35,-2 40,-14 58,-18" stroke-width="2.2" opacity="0.7"/>
+            <path d="M 12,0 C 35,2 40,14 58,18" stroke-width="2.2" opacity="0.7"/>
+            <path d="m 12,40 c 23,0 28,12 46,15" stroke-width="2.2" opacity="0.7"/>
+            <path d="M 12,40 C 35,38 40,22 58,18" stroke-width="2.2" opacity="0.5"/>
+            <path d="m 70,-55 c 20,-1 30,-7 48,-13" stroke-width="2.5" opacity="0.8"/>
+            <path d="m 70,-18 c 20,0 30,-2 48,-2" stroke-width="2.5" opacity="0.8"/>
+            <path d="m 70,-18 c 20,-6 30,-38 48,-50" stroke-width="2" opacity="0.45"/>
+            <path d="m 70,18 c 20,0 30,2 48,2" stroke-width="2.5" opacity="0.8"/>
+            <path d="m 70,18 c 20,6 30,38 48,50" stroke-width="2" opacity="0.45"/>
+            <path d="m 70,55 c 20,1 30,7 48,13" stroke-width="2.5" opacity="0.8"/>
+          </g>
+          <g transform="translate(20,130)">
+            <circle cx="8" cy="-40" r="10" fill="var(--tannin)"/>
+            <circle cx="8" cy="0" r="10" fill="var(--tannin)"/>
+            <circle cx="8" cy="40" r="10" fill="var(--tannin)"/>
+            <circle cx="64" cy="-55" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="-18" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="18" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="55" r="8" fill="var(--moss)"/>
+            <circle cx="122" cy="-68" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="-20" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="20" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="68" r="11" fill="var(--tannin-deep)"/>
+          </g>
+          <text x="180" y="138" font-size="115" font-weight="700" letter-spacing="-3" fill="var(--ink)" style="font-family:var(--f-wordmark)">phyla</text>
+          <text x="184" y="202" font-size="34" font-weight="500" letter-spacing="10.5" fill="var(--ink-soft)" style="font-family:var(--f-wordmark)">TECHNOLOGIES</text>
+        </svg>
       </a>
       <nav class="primary" aria-label="Primary">
-        <a href="#capabilities">Capabilities</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Open source</a>
         <a href="impact.html">Impact</a>
         <a href="about.html">About</a>
         <a href="#contact" class="cta">Get in touch</a>
@@ -528,10 +574,10 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <span class="hero-eyebrow label">Est. 2024, Madison, WI</span>
-          <h1 class="display">MLOps for <em>life sciences.</em></h1>
+          <span class="hero-eyebrow label">Est. 2026</span>
+          <h1 class="display">MLOps for<br><em style="white-space: nowrap;">life sciences.</em></h1>
           <p class="hero-subhead">
-            We build and operate machine learning infrastructure for biotech: genomics pipelines, model training and deployment, bio- and cheminformatics, dashboards, the whole stack from data to production.
+            We build and operate the machine learning infrastructure behind life-sciences R&amp;D: data and model pipelines, training and deployment, bio- and cheminformatics, and the dashboards and tools that make the science usable, the whole stack from data to production.
           </p>
           <dl class="hero-meta">
             <div class="hero-meta-item">
@@ -544,7 +590,7 @@
             </div>
             <div class="hero-meta-item">
               <dt class="label">Roots</dt>
-              <dd class="value">Natural products and <em>pharmacognosy</em></dd>
+              <dd class="value">Natural-products <em>science</em></dd>
             </div>
           </dl>
         </div>
@@ -588,6 +634,14 @@
             <!-- Lower internal → leaf 4 (Bespoke Software) -->
             <path class="phylo-branch" d="M 200 310 C 250 310, 290 364, 340 364" style="--len: 168; --delay: 720ms;" />
 
+            <!-- Flowing signal pulse (root -> internal -> leaves) -->
+            <path class="phylo-flow" d="M 80 210 C 130 210, 150 110, 200 110" />
+            <path class="phylo-flow" d="M 80 210 C 130 210, 150 310, 200 310" />
+            <path class="phylo-flow" d="M 200 110 C 250 110, 290 56, 340 56" />
+            <path class="phylo-flow" d="M 200 110 C 250 110, 290 162, 340 162" />
+            <path class="phylo-flow" d="M 200 310 C 250 310, 290 256, 340 256" />
+            <path class="phylo-flow" d="M 200 310 C 250 310, 290 364, 340 364" />
+
             <!-- Leaf nodes (clickable links) -->
             <a href="#capabilities" class="phylo-leaf-link" aria-label="MLOps and Pipelines">
               <circle class="phylo-node leaf is-tannin" cx="340" cy="56" r="5" style="--delay: 1100ms;" />
@@ -627,14 +681,14 @@
               <div class="service-num">i.</div>
               <div>
                 <h3 class="service-name">MLOps &amp; Pipelines</h3>
-                <p class="service-desc">Train, evaluate, and deploy custom ML models. Reproducible pipelines from genomics ingestion through production model serving.</p>
+                <p class="service-desc">Train, evaluate, and deploy custom ML models. Reproducible pipelines from data ingestion through production model serving.</p>
               </div>
             </li>
             <li class="service">
               <div class="service-num">ii.</div>
               <div>
                 <h3 class="service-name">Bio &amp; Cheminformatics</h3>
-                <p class="service-desc">Metagenomics, molecular property prediction, sequence analysis, computational drug discovery. The foundational layer for natural-products-inspired ML.</p>
+                <p class="service-desc">Cheminformatics, molecular property prediction, sequence and structure analysis, protein engineering, computational drug discovery. The foundational layer for natural-products-inspired ML.</p>
               </div>
             </li>
             <li class="service">
@@ -703,7 +757,7 @@
           <span class="label">§ 02 &nbsp; Impact</span>
           <h2 class="headline" style="margin-top: 0.875rem;">The science travels.</h2>
           <p class="body" style="margin-top: 1.25rem;">
-            Work the Phyla team has shipped, in academia and at biotech companies, has been read and built on around the world. Live citation counts, fetched from OpenAlex.
+            Work the Phyla Tech team has shipped, in academia and at biotech companies, has been read and built on around the world. Live citation counts, fetched from OpenAlex.
           </p>
           <dl class="impact-numbers">
             <div class="impact-number">
@@ -727,49 +781,18 @@
       </div>
     </section>
 
-    <!-- TEAM -->
-    <section class="team" id="team">
+    <!-- TEAM (summary; full bios live on the About page) -->
+    <section class="team-brief" id="team">
       <div class="wrap">
         <div class="section-head">
           <span class="label">§ 03 &nbsp; Team</span>
           <h2 class="headline">Scientists who ship software.</h2>
-          <p class="body">The same people who scope the work do the work. No layered handoffs, no junior delivery, no offshore black-box. Between us we cover chemistry, biology, mathematics, and the software engineering that holds them together.</p>
+          <p class="body">The same people who scope the work do the work, no layered handoffs and no junior delivery. Between us we cover chemistry, biology, mathematics, and the software engineering that holds them together.</p>
         </div>
-
-        <div class="team-list">
-          <article class="team-row row-a">
-            <figure class="team-figure">
-              <img src="ian.jpg" alt="Portrait of Ian Miller">
-            </figure>
-            <div class="team-text">
-              <span class="team-eyebrow"><span class="label">i.</span></span>
-              <h3>Ian Miller</h3>
-              <p>Background in biochemistry and computational drug discovery. Builds the model training and deployment infrastructure at the spine of Phyla's engagements.</p>
-            </div>
-          </article>
-
-          <article class="team-row row-b">
-            <div class="team-text">
-              <span class="team-eyebrow"><span class="label">ii.</span></span>
-              <h3>Evan Rees</h3>
-              <p>Background in chemistry, bioinformatics, and computational drug discovery. Owns the bio- and cheminformatics side of the work, from molecule to genome.</p>
-            </div>
-            <figure class="team-figure">
-              <img src="evan.jpg" alt="Portrait of Evan Rees">
-            </figure>
-          </article>
-
-          <article class="team-row row-c">
-            <figure class="team-figure compact">
-              <img src="erik.jpg" alt="Portrait of Erik Miller-Galow">
-            </figure>
-            <div class="team-text">
-              <span class="team-eyebrow"><span class="label">iii.</span></span>
-              <h3>Erik Miller-Galow</h3>
-              <p>Background in mathematics and software engineering. Builds the applications, dashboards, and tooling that turn scientific systems into something teams can actually use.</p>
-            </div>
-          </article>
-        </div>
+        <a href="about.html" class="link-arrow">
+          <span>Meet the team</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </section>
 
