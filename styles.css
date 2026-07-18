@@ -211,34 +211,15 @@ header.site-header {
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
   text-decoration: none;
   color: var(--ink);
   line-height: 1;
 }
-/* Phylogenetic-network mark, injected so every page's existing lockup picks it up. */
-.wordmark::before {
-  content: "";
-  flex: none;
-  width: 30px;
-  height: 32px;
-  background: url(assets/phyla-mark.svg) center / contain no-repeat;
-}
-.wordmark-name {
-  font-family: var(--f-wordmark);
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: -0.035em;
-  text-transform: lowercase;
-}
-.wordmark-sub {
-  font-family: var(--f-wordmark);
-  font-weight: 500;
-  font-size: 0.625rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  align-self: center;
+/* Inline logo lockup (mark + wordmark), so the page's Familjen renders the wordmark. */
+.wordmark-svg {
+  display: block;
+  height: 40px;
+  width: auto;
 }
 nav.primary {
   display: flex;
