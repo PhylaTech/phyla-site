@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open source, Phyla Technologies</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Open-source software from the Phyla team: tools we maintain for the genomics and ML community, and upstream contributions to the projects our field relies on.">
+  <meta name="description" content="Open-source software from the Phyla Tech team: tools we maintain for the scientific-computing and ML community, and upstream contributions to the projects our field relies on.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Open source, Phyla Technologies">
@@ -116,8 +116,37 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
-        <span class="wordmark-name">Phyla</span>
-        <span class="wordmark-sub">Technologies</span>
+        <svg class="wordmark-svg" viewBox="0 0 590.41529 267.508" role="img" aria-label="Phyla Technologies">
+          <g transform="translate(20,130)" fill="none" stroke="var(--ink-soft)" stroke-linecap="round">
+            <path d="m 12,-40 c 23,0 28,-12 46,-15" stroke-width="2.2" opacity="0.7"/>
+            <path d="m 12,-40 c 23,2 28,18 46,22" stroke-width="2.2" opacity="0.5"/>
+            <path d="M 12,0 C 35,-2 40,-14 58,-18" stroke-width="2.2" opacity="0.7"/>
+            <path d="M 12,0 C 35,2 40,14 58,18" stroke-width="2.2" opacity="0.7"/>
+            <path d="m 12,40 c 23,0 28,12 46,15" stroke-width="2.2" opacity="0.7"/>
+            <path d="M 12,40 C 35,38 40,22 58,18" stroke-width="2.2" opacity="0.5"/>
+            <path d="m 70,-55 c 20,-1 30,-7 48,-13" stroke-width="2.5" opacity="0.8"/>
+            <path d="m 70,-18 c 20,0 30,-2 48,-2" stroke-width="2.5" opacity="0.8"/>
+            <path d="m 70,-18 c 20,-6 30,-38 48,-50" stroke-width="2" opacity="0.45"/>
+            <path d="m 70,18 c 20,0 30,2 48,2" stroke-width="2.5" opacity="0.8"/>
+            <path d="m 70,18 c 20,6 30,38 48,50" stroke-width="2" opacity="0.45"/>
+            <path d="m 70,55 c 20,1 30,7 48,13" stroke-width="2.5" opacity="0.8"/>
+          </g>
+          <g transform="translate(20,130)">
+            <circle cx="8" cy="-40" r="10" fill="var(--tannin)"/>
+            <circle cx="8" cy="0" r="10" fill="var(--tannin)"/>
+            <circle cx="8" cy="40" r="10" fill="var(--tannin)"/>
+            <circle cx="64" cy="-55" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="-18" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="18" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="55" r="8" fill="var(--moss)"/>
+            <circle cx="122" cy="-68" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="-20" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="20" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="68" r="11" fill="var(--tannin-deep)"/>
+          </g>
+          <text x="180" y="138" font-size="115" font-weight="700" letter-spacing="-3" fill="var(--ink)" style="font-family:var(--f-wordmark)">phyla</text>
+          <text x="184" y="202" font-size="34" font-weight="500" letter-spacing="10.5" fill="var(--ink-soft)" style="font-family:var(--f-wordmark)">TECHNOLOGIES</text>
+        </svg>
       </a>
       <nav class="primary" aria-label="Primary">
         <a href="services.html">Services</a>
@@ -136,7 +165,7 @@
       <div class="wrap">
         <span class="eyebrow label">Open source</span>
         <h1 class="display">Built in the open.</h1>
-        <p class="lead body-large">The tools we build for our own work, we tend to give away. Phyla maintains open-source software for the community we came up in, and contributes upstream to the projects our field relies on.</p>
+        <p class="lead body-large">We build in the open where we see an unmet need in the tools our field relies on. Phyla Tech maintains open-source software for the community we came up in and sends fixes and features upstream to the projects scientists depend on, contributing where we can add real value.</p>
       </div>
     </section>
 
@@ -150,7 +179,7 @@
           <a class="oss" href="https://github.com/Full-Spectrum-Analytics/nf-notion" target="_blank" rel="noopener noreferrer">
             <span class="oss-main">
               <span class="oss-name">nf-notion</span>
-              <span class="oss-desc">A Nextflow plugin that mirrors a pipeline run into Notion as a live-updating page, so an entire team can follow a genomics workflow in real time without anyone reading a log file.</span>
+              <span class="oss-desc">A Nextflow plugin that mirrors a pipeline run into Notion as a live-updating page, so an entire team can follow a workflow in real time without anyone reading a log file.</span>
               <span class="oss-tags"><span>Nextflow plugin</span><span>Groovy</span></span>
             </span>
             <span class="oss-link">GitHub &rarr;</span>
@@ -162,6 +191,14 @@
               <span class="oss-tags"><span>Dash component</span><span>Python &amp; JavaScript</span></span>
             </span>
             <span class="oss-link">GitHub &rarr;</span>
+          </a>
+          <a class="oss" href="https://phylatech.github.io/dash-upset/" target="_blank" rel="noopener noreferrer">
+            <span class="oss-main">
+              <span class="oss-name">dash-upset</span>
+              <span class="oss-desc">A Plotly Dash component for UpSet plots, the readable way to show intersections across many sets where a Venn diagram gives out. Set-intersection analysis dropped straight into the Python dashboards scientists already build in.</span>
+              <span class="oss-tags"><span>Dash component</span><span>Python &amp; JavaScript</span></span>
+            </span>
+            <span class="oss-link">Live demo &rarr;</span>
           </a>
           <a class="oss" href="https://github.com/PhylaTech/mlflow-autogluon" target="_blank" rel="noopener noreferrer">
             <span class="oss-main">
@@ -180,7 +217,7 @@
             <span class="oss-link">pymoo.org &rarr;</span>
           </a>
         </div>
-        <p class="oss-note">nf-notion and dash-seqviz are maintained under Full Spectrum Analytics, a co-founder's company, and are moving to Phyla. Peer-reviewed research from the team lives on the <a href="impact.html" style="color: var(--tannin); text-decoration: underline; text-decoration-color: var(--ink-hairline-strong); text-underline-offset: 3px;">impact map</a>.</p>
+        <p class="oss-note">nf-notion and dash-seqviz are maintained under Full Spectrum Analytics, a co-founder's company, and are moving to Phyla Tech. Peer-reviewed research from the team lives on the <a href="impact.html" style="color: var(--tannin); text-decoration: underline; text-decoration-color: var(--ink-hairline-strong); text-underline-offset: 3px;">impact map</a>.</p>
       </div>
     </section>
 
