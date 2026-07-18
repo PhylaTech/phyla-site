@@ -1,29 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396" role="img" aria-label="Phyla Technologies, MLOps for Life Sciences">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1120"/>
-      <stop offset="100%" stop-color="#0F1729"/>
-    </linearGradient>
-    <linearGradient id="tagline" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#5EEAD4"/>
-      <stop offset="50%" stop-color="#7DD3FC"/>
-      <stop offset="100%" stop-color="#A78BFA"/>
-    </linearGradient>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&amp;family=Schibsted+Grotesk:wght@400&amp;display=swap');
+      .wm { font-family:'Familjen Grotesk','Helvetica Neue',system-ui,sans-serif; }
+      .vo { font-family:'Schibsted Grotesk','Helvetica Neue',system-ui,sans-serif; }</style>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f4efe7" stroke-opacity="0.04" stroke-width="0.5"/>
     </pattern>
   </defs>
 
   <!-- Background -->
-  <rect width="1584" height="396" fill="url(#bg)"/>
+  <rect width="1584" height="396" fill="#211910"/>
   <rect width="1584" height="396" fill="url(#grid)"/>
 
-  <!-- Company name — centered -->
-  <text x="792" y="185" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="120" font-weight="700" letter-spacing="-3" fill="#ffffff">phyla</text>
+  <!-- Company name, centered (original positions/sizes; reversed color + Familjen) -->
+  <text class="wm" x="792" y="185" text-anchor="middle" font-size="120" font-weight="700" letter-spacing="-3" fill="#f4efe7">phyla</text>
 
   <!-- Subname -->
-  <text x="792" y="248" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="400" letter-spacing="12" fill="#64748B">TECHNOLOGIES</text>
+  <text class="wm" x="792" y="248" text-anchor="middle" font-size="32" font-weight="400" letter-spacing="12" fill="#c9bfae">TECHNOLOGIES</text>
 
   <!-- Tagline -->
-  <text x="792" y="300" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="400" letter-spacing="1" fill="url(#tagline)">MLOps for Life Sciences</text>
+  <text class="vo" x="792" y="300" text-anchor="middle" font-size="20" font-weight="400" letter-spacing="1" fill="#b47825">MLOps for Life Sciences</text>
 </svg>
