@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-17T08:22:37.225950+00:00",
+  "generated_at": "2026-07-18T08:05:18.189856+00:00",
   "summary": {
-    "total_citations": 2478,
+    "total_citations": 2481,
     "countries_reached": 76,
-    "citing_institutions": 3440,
+    "citing_institutions": 3446,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 403,
+      "cited_by_count": 406,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -388,15 +388,15 @@
       "lat": 56.1,
       "lon": -106.3,
       "citations": 143,
-      "institutions": 89
+      "institutions": 91
     },
     {
       "country": "India",
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 118,
-      "institutions": 144
+      "citations": 119,
+      "institutions": 145
     },
     {
       "country": "France",
@@ -404,7 +404,7 @@
       "lat": 46.2,
       "lon": 2.2,
       "citations": 117,
-      "institutions": 181
+      "institutions": 182
     },
     {
       "country": "Netherlands",
@@ -627,8 +627,8 @@
       "country_code": "GR",
       "lat": 39.1,
       "lon": 21.8,
-      "citations": 20,
-      "institutions": 21
+      "citations": 21,
+      "institutions": 22
     },
     {
       "country": "Taiwan",
@@ -2019,7 +2019,7 @@
     },
     {
       "name": "Medicine",
-      "count": 665,
+      "count": 667,
       "color": "#0891B2"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 186,
+      "count": 187,
       "color": "#3B82F6"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 403,
+        "citations": 406,
         "year": 2023
       },
       {
@@ -2311,20 +2311,20 @@
         "year": 2021
       },
       {
-        "id": "W3138817412",
-        "label": "Ultra-fast proteomics with Scanning SWATH",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 329,
-        "year": 2021
-      },
-      {
         "id": "W4280576708",
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 329,
+        "citations": 331,
         "year": 2022
+      },
+      {
+        "id": "W3138817412",
+        "label": "Ultra-fast proteomics with Scanning SWATH",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 330,
+        "year": 2021
       },
       {
         "id": "W4225586016",
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1069,
+        "citations": 1071,
         "year": 2024
       },
       {
@@ -2387,7 +2387,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 186,
+        "citations": 187,
         "year": 2024
       },
       {
@@ -2403,7 +2403,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2024
       },
       {
@@ -2443,7 +2443,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 328,
+        "citations": 329,
         "year": 2022
       },
       {
@@ -2467,7 +2467,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 189,
+        "citations": 190,
         "year": 2022
       },
       {
@@ -2667,7 +2667,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 501,
+        "citations": 502,
         "year": 2023
       },
       {
@@ -2675,7 +2675,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 462,
+        "citations": 464,
         "year": 2023
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 173,
+        "citations": 174,
         "year": 2024
       },
       {
@@ -2979,7 +2979,7 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2023
       },
       {
@@ -2995,7 +2995,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2023
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4890,
+        "citations": 4897,
         "year": 2017
       },
       {
@@ -3119,11 +3119,19 @@
         "year": 2018
       },
       {
+        "id": "W4327568911",
+        "label": "Hyperactive nanobacteria with host-dependent traits pervade Omnitrophota",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 50,
+        "year": 2023
+      },
+      {
         "id": "W2804765831",
         "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 222,
+        "citations": 223,
         "year": 2018
       },
       {
@@ -3219,7 +3227,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 34,
+        "citations": 36,
         "year": 2023
       },
       {
@@ -3339,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5084,
+        "citations": 5092,
         "year": 2021
       },
       {
@@ -3451,7 +3459,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 48,
+        "citations": 49,
         "year": 2025
       },
       {
@@ -3503,12 +3511,12 @@
       },
       {
         "source": "W3091839106",
-        "target": "W3138817412",
+        "target": "W4280576708",
         "strength": 0.5
       },
       {
         "source": "W3091839106",
-        "target": "W4280576708",
+        "target": "W3138817412",
         "strength": 0.5
       },
       {
@@ -4093,7 +4101,7 @@
       },
       {
         "source": "W2527369287",
-        "target": "W2769473564",
+        "target": "W4327568911",
         "strength": 0.5
       },
       {
