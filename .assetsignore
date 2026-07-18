@@ -8,6 +8,9 @@ scripts
 data/*.py
 *.py
 environment.yml
+pixi.toml
+pixi.lock
+.gitattributes
 wrangler.jsonc
 .assetsignore
 .gitignore
