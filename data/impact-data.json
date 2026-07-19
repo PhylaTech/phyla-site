@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-18T08:05:18.189856+00:00",
+  "generated_at": "2026-07-19T08:29:46.711055+00:00",
   "summary": {
-    "total_citations": 2481,
+    "total_citations": 2482,
     "countries_reached": 76,
-    "citing_institutions": 3446,
+    "citing_institutions": 3451,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 406,
+      "cited_by_count": 407,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -356,15 +356,15 @@
       "lat": 39.8,
       "lon": -98.5,
       "citations": 966,
-      "institutions": 683
+      "institutions": 684
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 522,
-      "institutions": 624
+      "citations": 523,
+      "institutions": 626
     },
     {
       "country": "Germany",
@@ -404,7 +404,7 @@
       "lat": 46.2,
       "lon": 2.2,
       "citations": 117,
-      "institutions": 182
+      "institutions": 184
     },
     {
       "country": "Netherlands",
@@ -1143,6 +1143,13 @@
       "citations": 27
     },
     {
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 27
+    },
+    {
       "name": "University of Utah",
       "lat": 40.76078,
       "lon": -111.89105,
@@ -1161,13 +1168,6 @@
       "lat": 47.99589920043945,
       "lon": 7.852220058441162,
       "country_code": "DE",
-      "citations": 26
-    },
-    {
-      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
       "citations": 26
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 921,
+      "count": 922,
       "color": "#14B8A6"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 406,
+        "citations": 407,
         "year": 2023
       },
       {
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 890,
+        "citations": 891,
         "year": 2021
       },
       {
@@ -2315,7 +2315,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 331,
+        "citations": 332,
         "year": 2022
       },
       {
@@ -2339,7 +2339,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 272,
+        "citations": 273,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1071,
+        "citations": 1074,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 384,
+        "citations": 385,
         "year": 2025
       },
       {
@@ -2387,7 +2387,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 187,
+        "citations": 189,
         "year": 2024
       },
       {
@@ -2419,23 +2419,23 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2025
       },
       {
-        "id": "W4402465580",
-        "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
-        "field": "Medicine",
+        "id": "W4406572846",
+        "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 75,
-        "year": 2024
+        "citations": 76,
+        "year": 2025
       },
       {
         "id": "W4283726298",
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 399,
+        "citations": 400,
         "year": 2022
       },
       {
@@ -2451,7 +2451,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 295,
+        "citations": 296,
         "year": 2023
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 425,
+        "citations": 427,
         "year": 2024
       },
       {
@@ -2571,7 +2571,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 120,
+        "citations": 121,
         "year": 2023
       },
       {
@@ -2579,7 +2579,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 113,
+        "citations": 114,
         "year": 2022
       },
       {
@@ -2587,7 +2587,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 77,
+        "citations": 78,
         "year": 2023
       },
       {
@@ -2667,7 +2667,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 502,
+        "citations": 504,
         "year": 2023
       },
       {
@@ -2827,7 +2827,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 174,
+        "citations": 175,
         "year": 2022
       },
       {
@@ -2843,7 +2843,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 126,
+        "citations": 127,
         "year": 2021
       },
       {
@@ -2863,6 +2863,14 @@
         "year": 2023
       },
       {
+        "id": "W4391431108",
+        "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 42,
+        "year": 2024
+      },
+      {
         "id": "W3133486136",
         "label": "Multi-Omic Single-Shot Technology for Integrated Proteome and Lipidome Analysis",
         "field": "Chemistry",
@@ -2871,19 +2879,11 @@
         "year": 2021
       },
       {
-        "id": "W4391431108",
-        "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 41,
-        "year": 2024
-      },
-      {
         "id": "W2913553075",
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 308,
+        "citations": 309,
         "year": 2019
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 174,
+        "citations": 175,
         "year": 2024
       },
       {
@@ -2987,7 +2987,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2024
       },
       {
@@ -3003,7 +3003,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 64,
+        "citations": 65,
         "year": 2024
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4897,
+        "citations": 4899,
         "year": 2017
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5092,
+        "citations": 5097,
         "year": 2021
       },
       {
@@ -3581,7 +3581,7 @@
       },
       {
         "source": "W4386607677",
-        "target": "W4402465580",
+        "target": "W4406572846",
         "strength": 0.5
       },
       {
@@ -3896,12 +3896,12 @@
       },
       {
         "source": "W3087677418",
-        "target": "W3133486136",
+        "target": "W4391431108",
         "strength": 0.5
       },
       {
         "source": "W3087677418",
-        "target": "W4391431108",
+        "target": "W3133486136",
         "strength": 0.5
       },
       {
