@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Arrive at an in-page anchor (e.g. #contact from another page) without an animated scroll,
+       so a cross-page link fades straight to the target instead of landing at top and scrolling. -->
+  <script>if(location.hash){var de=document.documentElement;de.style.scrollBehavior='auto';addEventListener('load',function(){requestAnimationFrame(function(){de.style.scrollBehavior='';});});}</script>
   <title>Phyla Technologies, MLOps for Life Sciences</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
@@ -559,10 +562,7 @@
         </svg>
       </a>
       <nav class="primary" aria-label="Primary">
-        <a href="services.html">Services</a>
-        <a href="work.html">Open source</a>
         <a href="impact.html">Impact</a>
-        <a href="about.html">About</a>
         <a href="#contact" class="cta">Get in touch</a>
       </nav>
     </div>
