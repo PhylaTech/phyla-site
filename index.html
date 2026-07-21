@@ -526,6 +526,17 @@
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
+  <!-- First-visit intro: draws the network into the logo, then fades to reveal the page.
+       Once per session, skipped under reduced-motion, and self-removing via a safety timer. -->
+  <style>
+    #intro { display: none; position: fixed; inset: 0; z-index: 9999; background: var(--parchment); place-items: center; }
+    #intro.run { display: grid; }
+    #intro #introLogo { width: clamp(300px, 62vw, 640px); height: auto; }
+    #introLogo circle { transform-box: fill-box; transform-origin: center; }
+    body.intro-lock { overflow: hidden; }
+  </style>
+  <div id="intro" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
@@ -1104,6 +1115,66 @@
         entries.forEach((en) => (en.isIntersecting ? start() : stop()));
       }, { threshold: 0.25 }).observe(svg);
       document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else start(); });
+    })();
+  </script>
+
+  <!-- Intro sequence: clone the header logo, grow the network left-to-right, fade the wordmark in, then dissolve. -->
+  <script>
+    (function () {
+      var intro = document.getElementById('intro');
+      if (!intro) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var seen = false;
+      try { seen = sessionStorage.getItem('phylaIntroSeen'); } catch (e) {}
+      var src = document.querySelector('.site-header .wordmark-svg');
+      if (reduce || seen || !src || !document.body.animate) { intro.remove(); return; }
+      try { sessionStorage.setItem('phylaIntroSeen', '1'); } catch (e) {}
+
+      var logo = src.cloneNode(true);
+      logo.removeAttribute('class');
+      logo.setAttribute('id', 'introLogo');
+      intro.appendChild(logo);
+      intro.classList.add('run');
+      document.body.classList.add('intro-lock');
+
+      var edges = [].slice.call(logo.querySelectorAll('path'));
+      var nodes = [].slice.call(logo.querySelectorAll('circle'));
+      var texts = [].slice.call(logo.querySelectorAll('text'));
+      var EASE = 'cubic-bezier(0.4, 0, 0.2, 1)';
+      var maxEnd = 0;
+
+      edges.forEach(function (p) {
+        var L = p.getTotalLength();
+        p.style.strokeDasharray = L;
+        p.style.strokeDashoffset = L;
+        var x = 0; try { x = p.getPointAtLength(0).x; } catch (e) {}
+        var delay = 240 + Math.max(0, x) / 135 * 620;
+        p.animate([{ strokeDashoffset: L }, { strokeDashoffset: 0 }],
+          { duration: 640, delay: delay, easing: EASE, fill: 'forwards' });
+        maxEnd = Math.max(maxEnd, delay + 640);
+      });
+      nodes.forEach(function (c) {
+        c.style.opacity = '0';
+        var cx = parseFloat(c.getAttribute('cx')) || 0;
+        var delay = 120 + (cx + 2) / 135 * 740;
+        c.animate([{ opacity: 0, transform: 'scale(0.1)' }, { opacity: 1, transform: 'scale(1)' }],
+          { duration: 420, delay: delay, easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)', fill: 'forwards' });
+        maxEnd = Math.max(maxEnd, delay + 420);
+      });
+      var wordDelay = maxEnd + 60;
+      texts.forEach(function (t, i) {
+        t.style.opacity = '0';
+        t.animate([{ opacity: 0, transform: 'translateX(-10px)' }, { opacity: 1, transform: 'translateX(0)' }],
+          { duration: 520, delay: wordDelay + i * 140, easing: 'ease', fill: 'forwards' });
+      });
+
+      var holdEnd = wordDelay + texts.length * 140 + 520 + 650;
+      function cleanup() { document.body.classList.remove('intro-lock'); if (intro.parentNode) intro.remove(); }
+      setTimeout(function () {
+        var f = intro.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, easing: 'ease', fill: 'forwards' });
+        if (f.finished) { f.finished.then(cleanup, cleanup); } else { setTimeout(cleanup, 620); }
+      }, holdEnd);
+      setTimeout(cleanup, holdEnd + 2500); // safety: never trap the page
     })();
   </script>
 </body>
