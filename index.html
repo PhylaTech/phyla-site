@@ -548,12 +548,10 @@
     #intro #introLogo { width: clamp(300px, 62vw, 640px); height: auto; }
     #introLogo circle { transform-box: fill-box; transform-origin: center; }
     body.intro-lock { overflow: hidden; }
-
-    /* Header condenses once the reader starts scrolling, so it stops eating the page. */
-    .site-header .wordmark-svg { transition: height 260ms cubic-bezier(0.16, 1, 0.3, 1); }
-    .site-header .header-inner { transition: padding-block 260ms cubic-bezier(0.16, 1, 0.3, 1); }
-    body.header-shrink .site-header .wordmark-svg { height: clamp(38px, 5vw, 60px); }
-    body.header-shrink .site-header .header-inner { padding-block: 0.35rem; }
+    /* Header shrink is driven by GSAP ScrollTrigger (see end of body). No CSS transition
+       here on purpose: GSAP writes height/padding inline each frame, and a competing CSS
+       transition on the same props is exactly what made it jitter. */
+    .site-header .wordmark-svg { will-change: height; }
   </style>
   <div id="intro" aria-hidden="true"></div>
 
@@ -1225,15 +1223,24 @@
     })();
   </script>
 
+  <!-- GSAP (vendored locally, no CDN dependency) drives the header shrink -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
   <script>
-    // Condense the sticky header once the reader scrolls past the fold's first nudge.
+    // Condense the sticky header as the reader scrolls in. ScrollTrigger scrubs the
+    // shrink continuously across the first 120px of scroll (progress = scrollY / 120),
+    // rAF-batched with a little smoothing lag, so it eases rather than snapping at a
+    // threshold. That threshold-toggle + layout feedback was the previous jitter.
     (function () {
-      var b = document.body, ticking = false;
-      function sync() { b.classList.toggle('header-shrink', window.scrollY > 40); ticking = false; }
-      addEventListener('scroll', function () {
-        if (!ticking) { ticking = true; requestAnimationFrame(sync); }
-      }, { passive: true });
-      sync();
+      if (!window.gsap || !window.ScrollTrigger) return;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var logo = document.querySelector('.site-header .wordmark-svg');
+      var inner = document.querySelector('.site-header .header-inner');
+      if (!logo || !inner) return;
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.timeline({ scrollTrigger: { start: 0, end: 120, scrub: 0.35 } })
+        .to(logo,  { height: 52, ease: 'none' }, 0)
+        .to(inner, { paddingTop: 6, paddingBottom: 6, ease: 'none' }, 0);
     })();
   </script>
 </body>
