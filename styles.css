@@ -203,10 +203,10 @@ header.site-header {
 }
 .header-inner {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding-block: 1.25rem;
+  padding-block: clamp(0.6rem, 1.2vw, 0.95rem);
 }
 .wordmark {
   display: inline-flex;
@@ -218,7 +218,7 @@ header.site-header {
 /* Inline logo lockup (mark + wordmark), so the page's Familjen renders the wordmark. */
 .wordmark-svg {
   display: block;
-  height: 40px;
+  height: clamp(52px, 9vw, 120px);
   width: auto;
 }
 nav.primary {
