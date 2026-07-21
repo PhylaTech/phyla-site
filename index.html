@@ -548,10 +548,9 @@
     #intro #introLogo { width: clamp(300px, 62vw, 640px); height: auto; }
     #introLogo circle { transform-box: fill-box; transform-origin: center; }
     body.intro-lock { overflow: hidden; }
-    /* Header shrink is driven by GSAP ScrollTrigger (see end of body). No CSS transition
-       here on purpose: GSAP writes height/padding inline each frame, and a competing CSS
-       transition on the same props is exactly what made it jitter. */
-    .site-header .wordmark-svg { will-change: height; }
+    /* Header shrink is driven by GSAP ScrollTrigger via header-scroll.js (end of body).
+       Deliberately no CSS transition on the header height/padding here: GSAP writes those
+       inline each frame, and a competing CSS transition on the same props is what jittered. */
   </style>
   <div id="intro" aria-hidden="true"></div>
 
@@ -1223,25 +1222,9 @@
     })();
   </script>
 
-  <!-- GSAP (vendored locally, no CDN dependency) drives the header shrink -->
+  <!-- GSAP (vendored locally, no CDN dependency) drives the shared header shrink -->
   <script src="vendor/gsap.min.js"></script>
   <script src="vendor/ScrollTrigger.min.js"></script>
-  <script>
-    // Condense the sticky header as the reader scrolls in. ScrollTrigger scrubs the
-    // shrink continuously across the first 120px of scroll (progress = scrollY / 120),
-    // rAF-batched with a little smoothing lag, so it eases rather than snapping at a
-    // threshold. That threshold-toggle + layout feedback was the previous jitter.
-    (function () {
-      if (!window.gsap || !window.ScrollTrigger) return;
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var logo = document.querySelector('.site-header .wordmark-svg');
-      var inner = document.querySelector('.site-header .header-inner');
-      if (!logo || !inner) return;
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.timeline({ scrollTrigger: { start: 0, end: 120, scrub: 0.35 } })
-        .to(logo,  { height: 52, ease: 'none' }, 0)
-        .to(inner, { paddingTop: 6, paddingBottom: 6, ease: 'none' }, 0);
-    })();
-  </script>
+  <script src="header-scroll.js"></script>
 </body>
 </html>
