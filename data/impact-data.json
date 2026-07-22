@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-21T08:41:10.098474+00:00",
+  "generated_at": "2026-07-22T08:40:27.693309+00:00",
   "summary": {
-    "total_citations": 2485,
+    "total_citations": 2486,
     "countries_reached": 76,
     "citing_institutions": 3453,
     "disciplines_impacted": 24,
@@ -105,7 +105,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 84,
+      "cited_by_count": 85,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -831,20 +831,20 @@
       "institutions": 2
     },
     {
-      "country": "Morocco",
-      "country_code": "MA",
-      "lat": 31.8,
-      "lon": -7.1,
-      "citations": 4,
-      "institutions": 10
-    },
-    {
       "country": "Bulgaria",
       "country_code": "BG",
       "lat": 42.7,
       "lon": 25.5,
       "citations": 4,
       "institutions": 6
+    },
+    {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 4,
+      "institutions": 10
     },
     {
       "country": "Uganda",
@@ -876,7 +876,7 @@
       "lat": 33.2,
       "lon": 43.7,
       "citations": 3,
-      "institutions": 8
+      "institutions": 7
     },
     {
       "country": "Nigeria",
@@ -1669,8 +1669,8 @@
     },
     {
       "name": "Center for Cancer Research",
-      "lat": 39.0040283203125,
-      "lon": -77.10096740722656,
+      "lat": 38.98067,
+      "lon": -77.10026,
       "country_code": "US",
       "citations": 13
     },
@@ -1900,8 +1900,8 @@
     },
     {
       "name": "Xiamen University",
-      "lat": 24.47978973388672,
-      "lon": 118.08187103271484,
+      "lat": 24.47979,
+      "lon": 118.08187,
       "country_code": "CN",
       "citations": 11
     },
@@ -1921,15 +1921,15 @@
     },
     {
       "name": "Guangxi Medical University",
-      "lat": 22.816669464111328,
-      "lon": 108.3166732788086,
+      "lat": 22.81667,
+      "lon": 108.31667,
       "country_code": "CN",
       "citations": 10
     },
     {
       "name": "Suez Canal University",
-      "lat": 30.622777938842773,
-      "lon": 32.275001525878906,
+      "lat": 30.60427,
+      "lon": 32.27225,
       "country_code": "EG",
       "citations": 10
     },
@@ -1991,8 +1991,8 @@
     },
     {
       "name": "The University of Tokyo",
-      "lat": 35.68949890136719,
-      "lon": 139.69171142578125,
+      "lat": 35.6895,
+      "lon": 139.69171,
       "country_code": "JP",
       "citations": 10
     },
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 923,
+      "count": 924,
       "color": "#14B8A6"
     },
     {
@@ -2155,7 +2155,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 84,
+        "citations": 85,
         "year": 2019
       },
       {
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 892,
+        "citations": 894,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1075,
+        "citations": 1077,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 386,
+        "citations": 389,
         "year": 2025
       },
       {
@@ -2387,7 +2387,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 189,
+        "citations": 190,
         "year": 2024
       },
       {
@@ -2419,7 +2419,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 87,
+        "citations": 88,
         "year": 2025
       },
       {
@@ -2451,7 +2451,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 298,
+        "citations": 300,
         "year": 2023
       },
       {
@@ -2467,7 +2467,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 191,
+        "citations": 192,
         "year": 2022
       },
       {
@@ -2491,7 +2491,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2024
       },
       {
@@ -2499,7 +2499,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 348,
+        "citations": 349,
         "year": 2019
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 428,
+        "citations": 432,
         "year": 2024
       },
       {
@@ -2563,7 +2563,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2022
       },
       {
@@ -2611,7 +2611,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 67,
+        "citations": 68,
         "year": 2023
       },
       {
@@ -2667,7 +2667,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 504,
+        "citations": 505,
         "year": 2023
       },
       {
@@ -2683,7 +2683,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 273,
+        "citations": 274,
         "year": 2022
       },
       {
@@ -2723,7 +2723,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 151,
+        "citations": 152,
         "year": 2023
       },
       {
@@ -2779,7 +2779,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 860,
+        "citations": 862,
         "year": 2021
       },
       {
@@ -2995,7 +2995,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 103,
+        "citations": 105,
         "year": 2023
       },
       {
@@ -3059,7 +3059,7 @@
         "label": "A Comprehensive State-of-the-Art Survey on Data Visualization Tools: Research Developments, Challenges and Future Domain Specific Visualization Framework",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 46,
+        "citations": 47,
         "year": 2022
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4899,
+        "citations": 4901,
         "year": 2017
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5112,
+        "citations": 5122,
         "year": 2021
       },
       {
