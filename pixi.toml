@@ -1,0 +1,27 @@
+[project]
+name = "phyla-site"
+version = "0.1.0"
+description = "phylatech.com — the static marketing site plus its data-fetching and asset tooling."
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+# fetch_impact_data.py is standard-library only; cairosvg + pillow back svg_to_png.py
+# (conda-forge pulls in a native cairo, so no Homebrew/DYLD shim is needed).
+python = ">=3.12"
+cairosvg = ">=2.7"
+pillow = ">=10"
+
+[tasks]
+# --- Impact data ---
+fetch-impact = { cmd = "python scripts/fetch_impact_data.py", description = "Fetch live citation data from OpenAlex into data/impact-data.json (~5 min)." }
+
+# --- SVG -> PNG ---
+svg2png = { cmd = "python svg_to_png.py", description = "Convert one SVG to PNG; args pass through, e.g. `pixi run svg2png favicon.svg -d 512`." }
+assets-png = { cmd = "python svg_to_png.py favicon.svg -o build/png/favicon.png -d 512 && python svg_to_png.py phyla_technologies_logo.svg -o build/png/phyla_technologies_logo.png -d 300 && python svg_to_png.py phyla_technologies_logo_dark.svg -o build/png/phyla_technologies_logo_dark.png -d 300 && python svg_to_png.py phyla_technologies_graphic.svg -o build/png/phyla_technologies_graphic.png -d 600 && python svg_to_png.py phyla_linkedin_cover.svg -o build/png/phyla_linkedin_cover.png -d 96", description = "Render every brand SVG to PNG under build/png/." }
+
+# --- Local preview ---
+serve = { cmd = "python -m http.server 4173", description = "Serve the static site locally at http://localhost:4173." }
+
+# --- Housekeeping ---
+clean = { cmd = "rm -rf build", description = "Remove generated build/ output." }

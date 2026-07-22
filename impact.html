@@ -295,7 +295,10 @@
         </svg>
       </a>
       <nav class="primary" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <a href="work.html">Open source</a>
         <a href="impact.html" aria-current="page" class="active">Impact</a>
+        <a href="about.html">About</a>
         <a href="index.html#contact" class="cta">Get in touch</a>
       </nav>
     </div>
@@ -486,6 +489,9 @@
           .attr('preserveAspectRatio', 'xMidYMid meet');
         const g = svg.append('g');
 
+        // Auto-cycle state (see layout section below)
+        let netDragging = false, netLocked = false, netTimer = null, layoutIdx = 0;
+
         svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', (e) => g.attr('transform', e.transform)));
 
         const simulation = d3.forceSimulation(data.nodes)
@@ -510,9 +516,9 @@
           .attr('stroke-width', d => d.type === 'core' ? 1.5 : 0.75)
           .style('cursor', 'pointer')
           .call(d3.drag()
-            .on('start', (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+            .on('start', (e, d) => { netDragging = true; if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
             .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
-            .on('end', (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+            .on('end', (e, d) => { netDragging = false; if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
 
         function fillTooltip(d) {
           tooltip.textContent = '';
@@ -565,31 +571,51 @@
           node.attr('cx', d => d.x).attr('cy', d => d.y);
         });
 
+        const LAYOUTS = ['force', 'radial', 'cluster'];
+        function applyLayout(layout) {
+          layoutIdx = Math.max(0, LAYOUTS.indexOf(layout));
+          document.querySelectorAll('.net-btn').forEach(b => b.classList.toggle('active', b.dataset.layout === layout));
+          simulation.alpha(0.8).restart();
+          if (layout === 'force') {
+            simulation.force('center', d3.forceCenter(width / 2, height / 2))
+              .force('radial', null).force('x', null).force('y', null);
+          } else if (layout === 'radial') {
+            simulation.force('center', null)
+              .force('radial', d3.forceRadial(d => d.type === 'core' ? 0 : 160, width / 2, height / 2).strength(0.8))
+              .force('x', null).force('y', null);
+          } else if (layout === 'cluster') {
+            const cols = Math.ceil(Math.sqrt(FIELD_NAMES.length));
+            const cellW = width / (cols + 1);
+            const cellH = height / (Math.ceil(FIELD_NAMES.length / cols) + 1);
+            const pos = {};
+            FIELD_NAMES.forEach((f, i) => { pos[f] = { x: (i % cols + 1) * cellW, y: (Math.floor(i / cols) + 1) * cellH }; });
+            simulation.force('center', null).force('radial', null)
+              .force('x', d3.forceX(d => (pos[d.field] || { x: width / 2 }).x).strength(0.6))
+              .force('y', d3.forceY(d => (pos[d.field] || { y: height / 2 }).y).strength(0.6));
+          }
+        }
+
+        // Manual control: clicking a layout takes over and stops the ambient cycle.
         document.querySelectorAll('.net-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            document.querySelectorAll('.net-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const layout = btn.dataset.layout;
-            simulation.alpha(0.8).restart();
-            if (layout === 'force') {
-              simulation.force('center', d3.forceCenter(width / 2, height / 2))
-                .force('radial', null).force('x', null).force('y', null);
-            } else if (layout === 'radial') {
-              simulation.force('center', null)
-                .force('radial', d3.forceRadial(d => d.type === 'core' ? 0 : 160, width / 2, height / 2).strength(0.8))
-                .force('x', null).force('y', null);
-            } else if (layout === 'cluster') {
-              const cols = Math.ceil(Math.sqrt(FIELD_NAMES.length));
-              const cellW = width / (cols + 1);
-              const cellH = height / (Math.ceil(FIELD_NAMES.length / cols) + 1);
-              const pos = {};
-              FIELD_NAMES.forEach((f, i) => { pos[f] = { x: (i % cols + 1) * cellW, y: (Math.floor(i / cols) + 1) * cellH }; });
-              simulation.force('center', null).force('radial', null)
-                .force('x', d3.forceX(d => (pos[d.field] || { x: width / 2 }).x).strength(0.6))
-                .force('y', d3.forceY(d => (pos[d.field] || { y: height / 2 }).y).strength(0.6));
-            }
-          });
+          btn.addEventListener('click', () => { netLocked = true; stopAuto(); applyLayout(btn.dataset.layout); });
         });
+
+        // Ambient auto-cycle: drift through the layouts while the figure is on screen.
+        function stopAuto() { if (netTimer) { clearInterval(netTimer); netTimer = null; } }
+        function startAuto() {
+          if (netTimer || netLocked || REDUCE) return;
+          netTimer = setInterval(() => {
+            if (netDragging || document.hidden) return; // skip a beat, don't fight the user
+            applyLayout(LAYOUTS[(layoutIdx + 1) % LAYOUTS.length]);
+          }, 6500);
+        }
+        if (!REDUCE) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => { e.isIntersecting ? startAuto() : stopAuto(); });
+          }, { threshold: 0.3 });
+          io.observe(container);
+          document.addEventListener('visibilitychange', () => { if (document.hidden) stopAuto(); else startAuto(); });
+        }
 
         const legend = document.getElementById('networkLegend');
         FIELD_NAMES.forEach(name => {

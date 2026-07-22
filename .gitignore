@@ -4,3 +4,9 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# pixi (the env dir is local; pixi.lock IS committed for reproducibility)
+.pixi/
+
+# generated assets
+build/
