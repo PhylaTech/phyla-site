@@ -48,10 +48,15 @@
       height: 1px;
       background: var(--tannin);
     }
-    .impact-hero h1 { max-width: 15ch; margin-bottom: 1.5rem; }
+    .impact-hero h1 { margin-bottom: 1.5rem; }
     .impact-hero .lead { max-width: 46ch; }
-    /* Section headers read as a one-line story beat; don't wrap them at the shared 22ch cap. */
-    .section-head h2 { max-width: none; }
+    /* The five headlines are one limerick: each holds a single line and scales down to fit
+       narrow viewports instead of wrapping (a wrapped line breaks the rhythm). Caps removed;
+       sizes tuned so even the longest line clears the container from mobile to desktop. */
+    .impact-hero h1,
+    .section-head h2 { max-width: none; white-space: nowrap; }
+    .impact-hero h1 { font-size: clamp(1.4rem, 4.8vw, 3.5rem); }
+    .section-head h2 { font-size: clamp(0.95rem, 3.9vw, 2.5rem); }
 
     /* === Metrics row (hairline-divided) === */
     .metrics {
