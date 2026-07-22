@@ -215,7 +215,8 @@ header.site-header {
   color: var(--ink);
   line-height: 1;
 }
-/* Inline logo lockup (mark + wordmark), so the page's Familjen renders the wordmark. */
+/* Inline logo lockup (mark + wordmark), so the page's Familjen renders the wordmark.
+   ~3x the original 40px on desktop for presence; scales down on narrow screens. */
 .wordmark-svg {
   display: block;
   height: clamp(52px, 9vw, 120px);

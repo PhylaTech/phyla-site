@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Arrive at an in-page anchor (e.g. #contact from another page) without an animated scroll,
+       so a cross-page link fades straight to the target instead of landing at top and scrolling. -->
+  <script>if(location.hash){var de=document.documentElement;de.style.scrollBehavior='auto';addEventListener('load',function(){requestAnimationFrame(function(){de.style.scrollBehavior='';});});}</script>
   <title>Phyla Technologies, MLOps for Life Sciences</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from genomics pipelines to production model deployment.">
+  <meta name="description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Phyla Technologies, MLOps for Life Sciences">
-  <meta property="og:description" content="Machine learning infrastructure for biotech, in the lineage of natural-products science.">
+  <meta property="og:description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
   <meta property="og:url" content="https://phylatech.com">
   <meta property="og:site_name" content="Phyla Technologies">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Phyla Technologies, MLOps for Life Sciences">
-  <meta name="twitter:description" content="Machine learning infrastructure for biotech, in the lineage of natural-products science.">
+  <meta name="twitter:description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
 
   <meta name="view-transition" content="same-origin">
 
@@ -157,21 +160,40 @@
       from { opacity: 0; transform: translateY(2px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    /* Continuous "signal flowing" pulse traveling root -> leaves, once the tree has drawn. */
-    .phylo-flow {
+    /* The live site's signal cascade, in the new palette: one soft bead per edge,
+       travelling root -> hidden -> leaves. Each pulse path carries pathLength="100"
+       so a single bead sweeps it regardless of the path's real length. */
+    .pulse {
       fill: none;
       stroke: var(--tannin);
-      stroke-width: 2.4;
+      stroke-width: 2.8;
       stroke-linecap: round;
-      stroke-dasharray: 2 22;
+      stroke-dasharray: 3.5 96.5;
+      stroke-dashoffset: 100;
       opacity: 0;
+      filter: url(#pulseBlur);
     }
-    .phylo-animate .phylo-flow {
-      opacity: 0.65;
-      animation: phylo-flow 2.6s linear infinite;
-      animation-delay: 1500ms;
+    .phylo-animate .pulse { animation: pulse-travel 3s ease-in-out infinite; }
+    @keyframes pulse-travel {
+      0%   { stroke-dashoffset: 100; opacity: 0; }
+      3%   { opacity: 0.8; }
+      55%  { opacity: 0.8; }
+      75%  { stroke-dashoffset: -4; opacity: 0; }
+      100% { stroke-dashoffset: -4; opacity: 0; }
     }
-    @keyframes phylo-flow { to { stroke-dashoffset: -120; } }
+    /* Scoped under .phylo-animate so the animation shorthand doesn't reset the delays.
+       Root pulses fire first (0 - 0.3s); leaf pulses follow once they arrive (~1.2 - 1.7s). */
+    .phylo-animate .pulse-r1  { animation-delay: 0s; }
+    .phylo-animate .pulse-r2  { animation-delay: 0.3s; }
+    .phylo-animate .pulse-r3  { animation-delay: 0.15s; }
+    .phylo-animate .pulse-h1a { animation-delay: 1.2s; }
+    .phylo-animate .pulse-h1b { animation-delay: 1.4s; }
+    .phylo-animate .pulse-h2a { animation-delay: 1.5s; }
+    .phylo-animate .pulse-h2b { animation-delay: 1.3s; }
+    .phylo-animate .pulse-h2c { animation-delay: 1.6s; }
+    .phylo-animate .pulse-h2d { animation-delay: 1.7s; }
+    .phylo-animate .pulse-h3a { animation-delay: 1.35s; }
+    .phylo-animate .pulse-h3b { animation-delay: 1.55s; }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -187,7 +209,7 @@
         opacity: 1;
         transform: none;
       }
-      .phylo-animate .phylo-flow { animation: none; opacity: 0; }
+      .phylo-animate .pulse { animation: none; opacity: 0; }
     }
 
     /* === Services === */
@@ -250,7 +272,8 @@
       max-width: 340px;
       height: auto;
       display: block;
-      cursor: crosshair;
+      /* Pipette tip over the agar plate (hotspot at the tip); crosshair fallback. */
+      cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDMyIj48cGF0aCBkPSJNNywzIEM3LDEuNiA4LDEgOSwxIEwxNSwxIEMxNiwxIDE3LDEuNiAxNywzIEwxMy4yLDI0IEMxMi44LDI4IDEyLjQsMzEgMTIsMzEgQzExLjYsMzEgMTEuMiwyOCAxMC44LDI0IFoiIGZpbGw9IiNmOWY1ZjAiIHN0cm9rZT0iIzIxMTkxMCIgc3Ryb2tlLXdpZHRoPSIxLjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNOC4zLDUgTDE1LjcsNSBMMTQuNCwxNiBMOS42LDE2IFoiIGZpbGw9IiM3NTNiMDciIG9wYWNpdHk9IjAuOSIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMzAiIHI9IjEuNSIgZmlsbD0iIzc1M2IwNyIvPjwvc3ZnPg==") 12 31, crosshair;
       touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
     }
@@ -523,6 +546,20 @@
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
+  <!-- First-visit intro: draws the network into the logo, then fades to reveal the page.
+       Once per session, skipped under reduced-motion, and self-removing via a safety timer. -->
+  <style>
+    #intro { display: none; position: fixed; inset: 0; z-index: 9999; background: var(--parchment); place-items: center; }
+    #intro.run { display: grid; }
+    #intro #introLogo { width: clamp(300px, 62vw, 640px); height: auto; }
+    #introLogo circle { transform-box: fill-box; transform-origin: center; }
+    body.intro-lock { overflow: hidden; }
+    /* Header shrink is driven by GSAP ScrollTrigger via header-scroll.js (end of body).
+       Deliberately no CSS transition on the header height/padding here: GSAP writes those
+       inline each frame, and a competing CSS transition on the same props is what jittered. */
+  </style>
+  <div id="intro" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
@@ -615,9 +652,21 @@
           <svg viewBox="0 0 540 420" role="img" aria-labelledby="phyloTitle phyloDesc">
             <title id="phyloTitle">Phyla capabilities, branched from a common root</title>
             <desc id="phyloDesc">A phylogenetic-style diagram with the Phyla root on the left and four service capabilities as leaves on the right: MLOps and Pipelines, Bio and Cheminformatics, Dashboards and Analytics, and Bespoke Software.</desc>
+            <defs>
+              <!-- Soft halo (blur 3) merged with a sharper core (blur 1 of the source),
+                   so each travelling signal reads with weight. Ported from the live site. -->
+              <filter id="pulseBlur" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="softBlur" />
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="sharpBlur" />
+                <feMerge>
+                  <feMergeNode in="softBlur" />
+                  <feMergeNode in="sharpBlur" />
+                </feMerge>
+              </filter>
+            </defs>
 
             <!-- Root tick -->
-            <line class="phylo-branch" x1="36" y1="210" x2="80" y2="210" style="--len: 44; --delay: 0ms;" />
+            <line class="phylo-branch" x1="36" y1="210" x2="80" y2="210" pathLength="1" style="--len: 1; --delay: 0ms;" />
 
             <!-- Root label, italic Phyla -->
             <text class="phylo-root-label" x="36" y="200" text-anchor="start" style="--delay: 0ms;">
@@ -625,38 +674,40 @@
             </text>
 
             <!-- Root node -->
-            <circle class="phylo-node" cx="80" cy="210" r="3.5" style="--delay: 0ms;" />
+            <circle class="phylo-node" cx="80" cy="210" r="4" style="--delay: 0ms;" />
 
-            <!-- Phyla → upper internal node (90, services 1+2) -->
-            <path class="phylo-branch" d="M 80 210 C 130 210, 150 110, 200 110" style="--len: 170; --delay: 220ms;" />
-            <!-- Phyla → lower internal node (310, services 3+4) -->
-            <path class="phylo-branch" d="M 80 210 C 130 210, 150 310, 200 310" style="--len: 170; --delay: 220ms;" />
+            <!-- Root → three hidden nodes -->
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 96, 210 96"   pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 210, 210 210" pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 324, 210 324" pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
 
-            <!-- Internal nodes -->
-            <circle class="phylo-node" cx="200" cy="110" r="3" style="--delay: 480ms;" />
-            <circle class="phylo-node" cx="200" cy="310" r="3" style="--delay: 480ms;" />
+            <!-- Hidden nodes -->
+            <circle class="phylo-node" cx="210" cy="96"  r="3.2" style="--delay: 360ms;" />
+            <circle class="phylo-node" cx="210" cy="210" r="3.2" style="--delay: 360ms;" />
+            <circle class="phylo-node" cx="210" cy="324" r="3.2" style="--delay: 360ms;" />
 
-            <!-- Internal label upper: "Computation" -->
-            <text class="phylo-label muted" x="200" y="92" text-anchor="middle" style="--delay: 480ms; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-variation-settings: 'wght' 500;">Computation</text>
-            <!-- Internal label lower: "Stewardship" -->
-            <text class="phylo-label muted" x="200" y="335" text-anchor="middle" style="--delay: 480ms; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-variation-settings: 'wght' 500;">Stewardship</text>
+            <!-- Hidden → leaves: each leaf is fed by two hidden nodes (the live partial network) -->
+            <path class="phylo-branch" d="M 210 96 C 260 96, 290 56, 340 56"     pathLength="1" style="--len: 1; --delay: 440ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 96 C 260 96, 290 162, 340 162"   pathLength="1" style="--len: 1; --delay: 480ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 56, 340 56"   pathLength="1" style="--len: 1; --delay: 480ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 162, 340 162" pathLength="1" style="--len: 1; --delay: 520ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 256, 340 256" pathLength="1" style="--len: 1; --delay: 520ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 364, 340 364" pathLength="1" style="--len: 1; --delay: 560ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 324 C 260 324, 290 256, 340 256" pathLength="1" style="--len: 1; --delay: 560ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 324 C 260 324, 290 364, 340 364" pathLength="1" style="--len: 1; --delay: 600ms; opacity: 0.32;" />
 
-            <!-- Upper internal → leaf 1 (MLOps, top) -->
-            <path class="phylo-branch" d="M 200 110 C 250 110, 290 56, 340 56" style="--len: 168; --delay: 540ms;" />
-            <!-- Upper internal → leaf 2 (Bio/Chem informatics) -->
-            <path class="phylo-branch" d="M 200 110 C 250 110, 290 162, 340 162" style="--len: 168; --delay: 600ms;" />
-            <!-- Lower internal → leaf 3 (Dashboards) -->
-            <path class="phylo-branch" d="M 200 310 C 250 310, 290 256, 340 256" style="--len: 168; --delay: 660ms;" />
-            <!-- Lower internal → leaf 4 (Bespoke Software) -->
-            <path class="phylo-branch" d="M 200 310 C 250 310, 290 364, 340 364" style="--len: 168; --delay: 720ms;" />
-
-            <!-- Flowing signal pulse (root -> internal -> leaves) -->
-            <path class="phylo-flow" d="M 80 210 C 130 210, 150 110, 200 110" />
-            <path class="phylo-flow" d="M 80 210 C 130 210, 150 310, 200 310" />
-            <path class="phylo-flow" d="M 200 110 C 250 110, 290 56, 340 56" />
-            <path class="phylo-flow" d="M 200 110 C 250 110, 290 162, 340 162" />
-            <path class="phylo-flow" d="M 200 310 C 250 310, 290 256, 340 256" />
-            <path class="phylo-flow" d="M 200 310 C 250 310, 290 364, 340 364" />
+            <!-- Pulses: the staged signal cascade (root pulses fire first, then leaf pulses). -->
+            <path class="pulse pulse-r1"  d="M 80 210 C 130 210, 165 96, 210 96"   pathLength="100" />
+            <path class="pulse pulse-r2"  d="M 80 210 C 130 210, 165 210, 210 210" pathLength="100" />
+            <path class="pulse pulse-r3"  d="M 80 210 C 130 210, 165 324, 210 324" pathLength="100" />
+            <path class="pulse pulse-h1a" d="M 210 96 C 260 96, 290 56, 340 56"     pathLength="100" />
+            <path class="pulse pulse-h1b" d="M 210 96 C 260 96, 290 162, 340 162"   pathLength="100" />
+            <path class="pulse pulse-h2a" d="M 210 210 C 260 210, 290 56, 340 56"   pathLength="100" />
+            <path class="pulse pulse-h2b" d="M 210 210 C 260 210, 290 162, 340 162" pathLength="100" />
+            <path class="pulse pulse-h2c" d="M 210 210 C 260 210, 290 256, 340 256" pathLength="100" />
+            <path class="pulse pulse-h2d" d="M 210 210 C 260 210, 290 364, 340 364" pathLength="100" />
+            <path class="pulse pulse-h3a" d="M 210 324 C 260 324, 290 256, 340 256" pathLength="100" />
+            <path class="pulse pulse-h3b" d="M 210 324 C 260 324, 290 364, 340 364" pathLength="100" />
 
             <!-- Leaf nodes (clickable links) -->
             <a href="#capabilities" class="phylo-leaf-link" aria-label="MLOps and Pipelines">
@@ -1120,6 +1171,66 @@
         entries.forEach((en) => (en.isIntersecting ? start() : stop()));
       }, { threshold: 0.25 }).observe(svg);
       document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else start(); });
+    })();
+  </script>
+
+  <!-- Intro sequence: clone the header logo, grow the network left-to-right, fade the wordmark in, then dissolve. -->
+  <script>
+    (function () {
+      var intro = document.getElementById('intro');
+      if (!intro) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var seen = false;
+      try { seen = sessionStorage.getItem('phylaIntroSeen'); } catch (e) {}
+      var src = document.querySelector('.site-header .wordmark-svg');
+      if (reduce || seen || !src || !document.body.animate) { intro.remove(); return; }
+      try { sessionStorage.setItem('phylaIntroSeen', '1'); } catch (e) {}
+
+      var logo = src.cloneNode(true);
+      logo.removeAttribute('class');
+      logo.setAttribute('id', 'introLogo');
+      intro.appendChild(logo);
+      intro.classList.add('run');
+      document.body.classList.add('intro-lock');
+
+      var edges = [].slice.call(logo.querySelectorAll('path'));
+      var nodes = [].slice.call(logo.querySelectorAll('circle'));
+      var texts = [].slice.call(logo.querySelectorAll('text'));
+      var EASE = 'cubic-bezier(0.4, 0, 0.2, 1)';
+      var maxEnd = 0;
+
+      edges.forEach(function (p) {
+        var L = p.getTotalLength();
+        p.style.strokeDasharray = L;
+        p.style.strokeDashoffset = L;
+        var x = 0; try { x = p.getPointAtLength(0).x; } catch (e) {}
+        var delay = 240 + Math.max(0, x) / 135 * 620;
+        p.animate([{ strokeDashoffset: L }, { strokeDashoffset: 0 }],
+          { duration: 640, delay: delay, easing: EASE, fill: 'forwards' });
+        maxEnd = Math.max(maxEnd, delay + 640);
+      });
+      nodes.forEach(function (c) {
+        c.style.opacity = '0';
+        var cx = parseFloat(c.getAttribute('cx')) || 0;
+        var delay = 120 + (cx + 2) / 135 * 740;
+        c.animate([{ opacity: 0, transform: 'scale(0.1)' }, { opacity: 1, transform: 'scale(1)' }],
+          { duration: 420, delay: delay, easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)', fill: 'forwards' });
+        maxEnd = Math.max(maxEnd, delay + 420);
+      });
+      var wordDelay = maxEnd + 60;
+      texts.forEach(function (t, i) {
+        t.style.opacity = '0';
+        t.animate([{ opacity: 0, transform: 'translateX(-10px)' }, { opacity: 1, transform: 'translateX(0)' }],
+          { duration: 520, delay: wordDelay + i * 140, easing: 'ease', fill: 'forwards' });
+      });
+
+      var holdEnd = wordDelay + texts.length * 140 + 520 + 650;
+      function cleanup() { document.body.classList.remove('intro-lock'); if (intro.parentNode) intro.remove(); }
+      setTimeout(function () {
+        var f = intro.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, easing: 'ease', fill: 'forwards' });
+        if (f.finished) { f.finished.then(cleanup, cleanup); } else { setTimeout(cleanup, 620); }
+      }, holdEnd);
+      setTimeout(cleanup, holdEnd + 2500); // safety: never trap the page
     })();
   </script>
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impact &amp; Influence, Phyla Technologies</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Where the Phyla team's published research travels: live citation data from OpenAlex, cited across 76 countries and 23 disciplines.">
+  <meta name="description" content="Where the Phyla Tech team's published research travels: live citation data from OpenAlex, cited across 76 countries and 23 disciplines.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Impact & Influence, Phyla Technologies">
@@ -48,8 +48,15 @@
       height: 1px;
       background: var(--tannin);
     }
-    .impact-hero h1 { max-width: 15ch; margin-bottom: 1.5rem; }
+    .impact-hero h1 { margin-bottom: 1.5rem; }
     .impact-hero .lead { max-width: 46ch; }
+    /* The five headlines are one limerick: each holds a single line and scales down to fit
+       narrow viewports instead of wrapping (a wrapped line breaks the rhythm). Caps removed;
+       sizes tuned so even the longest line clears the container from mobile to desktop. */
+    .impact-hero h1,
+    .section-head h2 { max-width: none; white-space: nowrap; }
+    .impact-hero h1 { font-size: clamp(1.4rem, 4.8vw, 3.5rem); }
+    .section-head h2 { font-size: clamp(0.95rem, 3.9vw, 2.5rem); }
 
     /* === Metrics row (hairline-divided) === */
     .metrics {
@@ -303,8 +310,8 @@
     <section class="impact-hero">
       <div class="wrap">
         <span class="eyebrow label">Impact &amp; Influence</span>
-        <h1 class="display">The work travels.</h1>
-        <p class="lead body-large">Research the Phyla team has published keeps getting read, cited, and built on, long after it went out. These aren't numbers we get to inflate: they come live from OpenAlex, the open record of the world's research.</p>
+        <h1 class="display">A result that is sound gets around,</h1>
+        <p class="lead body-large">Research the Phyla Tech team has published keeps getting read, cited, and built on, long after it went out. These aren't numbers we get to inflate: they come live from OpenAlex, the open record of the world's research.</p>
 
         <dl class="metrics">
           <div class="metric">
@@ -332,7 +339,7 @@
       <div class="wrap">
         <div class="section-head">
           <span class="label">&sect; 01 &nbsp; Global reach</span>
-          <h2 class="headline">Useful work doesn't stay home.</h2>
+          <h2 class="headline">it won't keep to the lab where it's bound,</h2>
           <p class="body">When a method holds up, other groups reach for it, wherever they are. Every thread on this map leads back to Madison, Wisconsin, where most of ours started.</p>
         </div>
         <figure class="viz-figure map-figure" id="mapViz">
@@ -346,7 +353,7 @@
       <div class="wrap">
         <div class="section-head">
           <span class="label">&sect; 02 &nbsp; Citation network</span>
-          <h2 class="headline">Foundations, not footnotes.</h2>
+          <h2 class="headline">each cite lays a brick,</h2>
           <p class="body">A citation is a small vote that a piece of work was worth building on. Each of our publications anchors its own cluster of the research it went on to make possible.</p>
         </div>
         <div class="network-controls" role="group" aria-label="Network layout">
@@ -367,7 +374,7 @@
       <div class="wrap">
         <div class="section-head">
           <span class="label">&sect; 03 &nbsp; Disciplines</span>
-          <h2 class="headline">It doesn't stay in one field.</h2>
+          <h2 class="headline">in new fields it will stick,</h2>
           <p class="body">The same methods that resolve a microbial genome turn up in chemistry, medicine, and computer science. That range is the difference between a specialist and a team you can hand an unfamiliar problem.</p>
         </div>
         <div class="disc-chart" id="discChart"></div>
@@ -379,7 +386,7 @@
       <div class="wrap">
         <div class="section-head">
           <span class="label">&sect; 04 &nbsp; Work with us</span>
-          <h2 class="headline">Work with the people behind it.</h2>
+          <h2 class="headline">and yours could be next to go round.</h2>
           <p class="body">The same people whose work is on this page are the ones who will scope and build yours. Same hands, from the first call to production.</p>
         </div>
         <a href="index.html#contact" class="link-arrow">
@@ -517,7 +524,7 @@
           title.textContent = (d.label || '').replace(/<[^>]+>/g, '');
           tooltip.appendChild(title);
           [['Field', d.field], ['Year', d.year], ['Citations', d.citations],
-           ['Type', d.type === 'core' ? 'Phyla publication' : 'Citing work']].forEach(([k, v]) => {
+           ['Type', d.type === 'core' ? 'Phyla Tech publication' : 'Citing work']].forEach(([k, v]) => {
             if (v == null || v === '') return;
             const row = document.createElement('div');
             row.className = 'tt-field';
