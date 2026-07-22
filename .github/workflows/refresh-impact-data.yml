@@ -15,12 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: prefix-dev/setup-pixi@v0.8.1
         with:
-          python-version: '3.12'
+          cache: true
 
       - name: Fetch latest citation data from OpenAlex
-        run: python3 scripts/fetch_impact_data.py
+        run: pixi run fetch-impact
 
       - name: Check for changes
         id: diff

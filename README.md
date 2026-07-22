@@ -1,6 +1,18 @@
 # Phyla Technologies
 Landing page and impact page for [phylatech.com](https://phylatech.com).
 
+## Development
+
+This repo uses [pixi](https://pixi.sh) to manage its Python toolchain and common tasks. Install pixi once, then run any task with `pixi run <task>` (the environment is created automatically on first run; `pixi task list` shows everything).
+
+| Task | Command | What it does |
+|------|---------|--------------|
+| Fetch impact data | `pixi run fetch-impact` | Query OpenAlex and write `data/impact-data.json` |
+| Serve locally | `pixi run serve` | Static preview at http://localhost:4173 |
+| One SVG → PNG | `pixi run svg2png <file.svg> [-d dpi]` | Convert a single SVG (args pass through) |
+| All brand SVGs → PNG | `pixi run assets-png` | Render the logos + favicon into `build/png/` |
+| Clean | `pixi run clean` | Remove `build/` |
+
 ## Impact Page — Citation Data
 
 The [Impact & Influence](https://phylatech.com/impact.html) page visualizes real citation data from [OpenAlex](https://openalex.org). The data pipeline fetches publications, citing works, institution coordinates, and disciplinary influence for each researcher.
@@ -18,7 +30,7 @@ data/impact-data.json       ← generated output consumed by impact.html
 ### Refreshing the data
 
 ```bash
-python3 scripts/fetch_impact_data.py
+pixi run fetch-impact
 ```
 
 This re-queries OpenAlex for the latest citation counts, citing institutions, geographic reach, and discipline data. Takes ~5 minutes due to API pagination. No dependencies beyond Python 3 standard library.
