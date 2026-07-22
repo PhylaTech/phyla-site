@@ -875,6 +875,8 @@
           </div>
 
           <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqeyrbbp" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New enquiry from phylatech.com">
+            <input type="hidden" name="_next" value="https://phylatech.com/?contact=sent#contact">
             <div class="field" id="field-name">
               <label for="cf-name">Name</label>
               <input type="text" name="name" id="cf-name" required autocomplete="name" placeholder="Your name">
@@ -954,12 +956,13 @@
       io.observe(phylo);
     })();
 
-    // === Contact form, async submit + inline states ===
+    // === Contact form: validate inline, then submit NATIVELY to Formspree ===
+    // The Formspree form has reCAPTCHA enabled, which rejects plain AJAX (fetch) with a
+    // 403. A native POST lets Formspree run its own reCAPTCHA and then redirect back via
+    // the _next field, which is how this form worked before the redesign.
     (function() {
       const form = document.getElementById('contactForm');
       if (!form) return;
-      const success = document.getElementById('formSuccess');
-      const errorBox = document.getElementById('formError');
       const submitBtn = document.getElementById('submitBtn');
       const submitLabel = submitBtn.querySelector('.submit-label');
       const fields = ['name', 'email', 'message'].map(k => ({
@@ -969,64 +972,42 @@
       }));
 
       const validateEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
-
-      function validate() {
-        let ok = true;
-        fields.forEach(f => {
-          const v = (f.input.value || '').trim();
-          let valid = v.length > 0;
-          if (f.key === 'email') valid = valid && validateEmail(v);
-          if (f.key === 'message') valid = valid && v.length >= 6;
-          f.wrap.classList.toggle('invalid', !valid);
-          if (!valid) ok = false;
-        });
-        return ok;
+      function fieldValid(f) {
+        const v = (f.input.value || '').trim();
+        let valid = v.length > 0;
+        if (f.key === 'email') valid = valid && validateEmail(v);
+        if (f.key === 'message') valid = valid && v.length >= 6;
+        return valid;
       }
 
       fields.forEach(f => {
         f.input.addEventListener('input', () => {
-          if (f.wrap.classList.contains('invalid')) {
-            const v = (f.input.value || '').trim();
-            let valid = v.length > 0;
-            if (f.key === 'email') valid = valid && validateEmail(v);
-            if (f.key === 'message') valid = valid && v.length >= 6;
-            if (valid) f.wrap.classList.remove('invalid');
-          }
+          if (f.wrap.classList.contains('invalid') && fieldValid(f)) f.wrap.classList.remove('invalid');
         });
       });
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        success.classList.remove('is-shown');
-        errorBox.classList.remove('is-shown');
-        if (!validate()) return;
-
+      form.addEventListener('submit', (e) => {
+        let ok = true;
+        fields.forEach(f => {
+          const valid = fieldValid(f);
+          f.wrap.classList.toggle('invalid', !valid);
+          if (!valid) ok = false;
+        });
+        if (!ok) { e.preventDefault(); return; }
+        // Valid: let the browser POST natively to Formspree (reCAPTCHA + _next redirect).
         submitBtn.disabled = true;
         submitLabel.textContent = 'Sending';
-
-        try {
-          const fd = new FormData(form);
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: fd,
-            headers: { 'Accept': 'application/json' },
-          });
-          if (res.ok) {
-            form.reset();
-            success.classList.add('is-shown');
-            submitLabel.textContent = 'Sent';
-            submitBtn.disabled = true;
-          } else {
-            errorBox.classList.add('is-shown');
-            submitLabel.textContent = 'Send a message';
-            submitBtn.disabled = false;
-          }
-        } catch (err) {
-          errorBox.classList.add('is-shown');
-          submitLabel.textContent = 'Send a message';
-          submitBtn.disabled = false;
-        }
       });
+
+      // Returning from Formspree (via _next, ?contact=sent): reveal the success note.
+      try {
+        if (new URLSearchParams(location.search).get('contact') === 'sent') {
+          const success = document.getElementById('formSuccess');
+          if (success) success.classList.add('is-shown');
+          submitLabel.textContent = 'Sent';
+          history.replaceState({}, '', location.pathname + '#contact');
+        }
+      } catch (err) {}
     })();
 
     // === Keep the impact teaser numbers live from the same OpenAlex data as /impact ===
