@@ -3,984 +3,1237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phyla Technologies — MLOps for Biotech</title>
+  <!-- Arrive at an in-page anchor (e.g. #contact from another page) without an animated scroll,
+       so a cross-page link fades straight to the target instead of landing at top and scrolling. -->
+  <script>if(location.hash){var de=document.documentElement;de.style.scrollBehavior='auto';addEventListener('load',function(){requestAnimationFrame(function(){de.style.scrollBehavior='';});});}</script>
+  <title>Phyla Technologies, MLOps for Life Sciences</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="description" content="Phyla Technologies builds and operates machine learning infrastructure for biotech — from genomics pipelines to production model deployment.">
+  <meta name="description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Phyla Technologies — MLOps for Life Sciences">
-  <meta property="og:description" content="We build and operate machine learning infrastructure for biotech companies — from genomics pipelines to production model deployment.">
+  <meta property="og:title" content="Phyla Technologies, MLOps for Life Sciences">
+  <meta property="og:description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
   <meta property="og:url" content="https://phylatech.com">
   <meta property="og:site_name" content="Phyla Technologies">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Phyla Technologies — MLOps for Life Sciences">
-  <meta name="twitter:description" content="We build and operate machine learning infrastructure for biotech companies — from genomics pipelines to production model deployment.">
+  <meta name="twitter:title" content="Phyla Technologies, MLOps for Life Sciences">
+  <meta name="twitter:description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
 
-  <!-- Page transitions -->
   <meta name="view-transition" content="same-origin">
-  <style>
-    @view-transition { navigation: auto; }
-    ::view-transition-old(root) { animation: fade-out 0.25s ease-in; }
-    ::view-transition-new(root) { animation: fade-in 0.3s ease-out; }
-    @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
-    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-  </style>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Page-specific styles. Shared design system lives in styles.css */
 
-    :root {
-      --teal-900: #0F766E;
-      --teal-700: #0D9488;
-      --teal-600: #0F9E94;
-      --teal-500: #14B8A6;
-      --teal-400: #2DD4BF;
-      --cyan-600: #0891B2;
-      --cyan-500: #06B6D4;
-      --sky-500: #0EA5E9;
-      --blue-600: #2563EB;
-      --blue-500: #3B82F6;
-      --violet-600: #7C3AED;
-      --violet-500: #8B5CF6;
-      --slate-950: #020617;
-      --slate-900: #0F172A;
-      --slate-800: #1E293B;
-      --slate-700: #334155;
-      --slate-600: #475569;
-      --slate-500: #64748B;
-      --slate-400: #94A3B8;
-      --slate-300: #CBD5E1;
-      --slate-200: #E2E8F0;
-      --slate-100: #F1F5F9;
-      --slate-50: #F8FAFC;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--slate-950);
-      color: var(--slate-300);
-      min-height: 100vh;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* ── HEADER ── */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(2, 6, 23, 0.7);
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-group {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-
-    .logo-text { display: flex; flex-direction: column; line-height: 1; }
-    .logo-text .name { font-size: 21px; font-weight: 700; letter-spacing: -0.5px; color: #fff; }
-    .logo-text .sub { font-size: 8.5px; font-weight: 500; letter-spacing: 3.8px; color: var(--slate-400); margin-top: 3px; }
-
-    nav { display: flex; align-items: center; gap: 8px; }
-
-    nav a {
-      color: var(--slate-400);
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all 0.2s;
-    }
-
-    nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
-
-    .nav-cta {
-      background: rgba(13, 148, 136, 0.15) !important;
-      color: var(--teal-400) !important;
-      border: 1px solid rgba(13, 148, 136, 0.25);
-    }
-
-    .nav-cta:hover {
-      background: rgba(13, 148, 136, 0.25) !important;
-      color: var(--teal-400) !important;
-    }
-
-    /* ── HERO ── */
+    /* === Hero === */
     .hero {
+      padding-block: clamp(3.5rem, 9vw, 7.5rem) clamp(4rem, 8vw, 7rem);
       position: relative;
-      min-height: 100vh;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .hero-text { max-width: 32rem; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 1.75rem;
+    }
+    .hero-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--tannin);
+    }
+    h1.display {
+      margin-bottom: 1.5rem;
+    }
+    .hero-subhead {
+      font-size: 1.1875rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 30rem;
+      margin-bottom: 2.25rem;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--ink-hairline);
+    }
+    .hero-meta-item { min-width: 0; }
+    .hero-meta-item .label { display: block; margin-bottom: 0.4rem; }
+    .hero-meta-item .value {
+      font-size: 0.9375rem;
+      color: var(--ink);
+      font-variation-settings: "wdth" 100, "wght" 500;
+    }
+    .hero-meta-item .value em {
+      font-style: italic;
+      color: var(--tannin);
+    }
+
+    /* === Phylogenetic tree (hero right column) === */
+    .phylo {
+      width: 100%;
+      max-width: 540px;
+      margin-inline: auto;
+      position: relative;
+    }
+    .phylo svg { width: 100%; height: auto; display: block; }
+
+    .phylo-branch {
+      stroke: var(--ink);
+      stroke-width: 1.4;
+      fill: none;
+      stroke-linecap: round;
+      opacity: 0.78;
+    }
+    .phylo-node {
+      fill: var(--ink);
+    }
+    .phylo-node.leaf {
+      fill: var(--parchment);
+      stroke: var(--ink);
+      stroke-width: 1.4;
+    }
+    .phylo-node.leaf.is-tannin {
+      fill: var(--tannin);
+      stroke: var(--tannin);
+    }
+    .phylo-label {
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      fill: var(--ink);
+    }
+    .phylo-label.muted { fill: var(--ink-soft); }
+    .phylo-root-label {
+      font-family: var(--sans);
+      font-style: italic;
+      font-size: 16px;
+      font-variation-settings: "wdth" 95, "wght" 500;
+      fill: var(--tannin);
+    }
+    .phylo-leaf-link {
+      cursor: pointer;
+      transition: opacity 180ms ease-out;
+    }
+    .phylo-leaf-link:hover .phylo-node.leaf { fill: var(--tannin); stroke: var(--tannin); }
+    .phylo-leaf-link:hover .phylo-label { fill: var(--ink); font-variation-settings: "wdth" 100, "wght" 600; }
+    .phylo-leaf-link:focus-visible { outline: none; }
+    .phylo-leaf-link:focus-visible .phylo-node.leaf {
+      fill: var(--tannin);
+      stroke: var(--tannin);
+    }
+
+    /* phylo animation */
+    .phylo-animate .phylo-branch {
+      stroke-dasharray: var(--len);
+      stroke-dashoffset: var(--len);
+      animation: branch-draw 1100ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: var(--delay, 0ms);
+    }
+    .phylo-animate .phylo-node,
+    .phylo-animate .phylo-label,
+    .phylo-animate .phylo-root-label {
+      opacity: 0;
+      animation: node-fade 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: calc(var(--delay, 0ms) + 700ms);
+    }
+    @keyframes branch-draw {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes node-fade {
+      from { opacity: 0; transform: translateY(2px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    /* The live site's signal cascade, in the new palette: one soft bead per edge,
+       travelling root -> hidden -> leaves. Each pulse path carries pathLength="100"
+       so a single bead sweeps it regardless of the path's real length. */
+    .pulse {
+      fill: none;
+      stroke: var(--tannin);
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      stroke-dasharray: 3.5 96.5;
+      stroke-dashoffset: 100;
+      opacity: 0;
+      filter: url(#pulseBlur);
+    }
+    .phylo-animate .pulse { animation: pulse-travel 3s ease-in-out infinite; }
+    @keyframes pulse-travel {
+      0%   { stroke-dashoffset: 100; opacity: 0; }
+      3%   { opacity: 0.8; }
+      55%  { opacity: 0.8; }
+      75%  { stroke-dashoffset: -4; opacity: 0; }
+      100% { stroke-dashoffset: -4; opacity: 0; }
+    }
+    /* Scoped under .phylo-animate so the animation shorthand doesn't reset the delays.
+       Root pulses fire first (0 - 0.3s); leaf pulses follow once they arrive (~1.2 - 1.7s). */
+    .phylo-animate .pulse-r1  { animation-delay: 0s; }
+    .phylo-animate .pulse-r2  { animation-delay: 0.3s; }
+    .phylo-animate .pulse-r3  { animation-delay: 0.15s; }
+    .phylo-animate .pulse-h1a { animation-delay: 1.2s; }
+    .phylo-animate .pulse-h1b { animation-delay: 1.4s; }
+    .phylo-animate .pulse-h2a { animation-delay: 1.5s; }
+    .phylo-animate .pulse-h2b { animation-delay: 1.3s; }
+    .phylo-animate .pulse-h2c { animation-delay: 1.6s; }
+    .phylo-animate .pulse-h2d { animation-delay: 1.7s; }
+    .phylo-animate .pulse-h3a { animation-delay: 1.35s; }
+    .phylo-animate .pulse-h3b { animation-delay: 1.55s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .phylo-animate .phylo-branch {
+        stroke-dasharray: none;
+        stroke-dashoffset: 0;
+        animation: none;
+      }
+      .phylo-animate .phylo-node,
+      .phylo-animate .phylo-label,
+      .phylo-animate .phylo-root-label {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+      .phylo-animate .pulse { animation: none; opacity: 0; }
+    }
+
+    /* === Services === */
+    .services {
+      border-top: 1px solid var(--ink-hairline);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: clamp(2.5rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .services-list .service {
+      display: grid;
+      grid-template-columns: 2.4rem 1fr;
+      column-gap: 1rem;
+      padding-block: 1.6rem;
+      border-bottom: 1px solid var(--ink-hairline);
+      align-items: baseline;
+    }
+    .services-list .service:first-child { border-top: 1px solid var(--ink-hairline); }
+    .services-list .service-num {
+      font-size: 0.75rem;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+      padding-top: 0.4rem;
+    }
+    .services-list .service-name {
+      font-size: 1.125rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .services-list .service-desc {
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 38ch;
+    }
+    .services-aside {
+      position: sticky;
+      top: 5.5rem;
+    }
+    .services-figure {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 140px 40px 80px;
-      text-align: center;
-      overflow: hidden;
+      gap: 1rem;
+      padding-top: 0.5rem;
     }
-
-    /* Animated gradient mesh background */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%; left: -50%;
-      width: 200%; height: 200%;
-      background:
-        radial-gradient(ellipse 600px 400px at 20% 50%, rgba(13,148,136,0.15) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 500px at 70% 30%, rgba(37,99,235,0.1) 0%, transparent 70%),
-        radial-gradient(ellipse 400px 300px at 80% 80%, rgba(139,92,246,0.08) 0%, transparent 70%);
-      animation: meshMove 20s ease-in-out infinite alternate;
-      z-index: 0;
-    }
-
-    @keyframes meshMove {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(-40px, 30px) rotate(3deg); }
-    }
-
-    /* Subtle grid pattern */
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 60px 60px;
-      z-index: 0;
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 80%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 80%);
-    }
-
-    .hero > * { position: relative; z-index: 1; }
-
-    .hero h1 {
-      font-size: 64px;
-      font-weight: 800;
-      letter-spacing: -2.5px;
-      line-height: 1.05;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    .hero h1 .gradient-text {
-      background: linear-gradient(135deg, var(--teal-400) 0%, var(--sky-500) 50%, var(--violet-500) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero .tagline {
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--slate-400);
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 56px;
-    }
-
-    /* ── INTERACTIVE TREE NAV ── */
-    .tree-wrapper {
+    .petri {
       width: 100%;
-      max-width: 680px;
-      margin: 0 auto;
-      overflow: hidden;
+      max-width: 340px;
+      height: auto;
+      display: block;
+      /* Pipette tip over the agar plate (hotspot at the tip); crosshair fallback. */
+      cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDMyIj48cGF0aCBkPSJNNywzIEM3LDEuNiA4LDEgOSwxIEwxNSwxIEMxNiwxIDE3LDEuNiAxNywzIEwxMy4yLDI0IEMxMi44LDI4IDEyLjQsMzEgMTIsMzEgQzExLjYsMzEgMTEuMiwyOCAxMC44LDI0IFoiIGZpbGw9IiNmOWY1ZjAiIHN0cm9rZT0iIzIxMTkxMCIgc3Ryb2tlLXdpZHRoPSIxLjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNOC4zLDUgTDE1LjcsNSBMMTQuNCwxNiBMOS42LDE2IFoiIGZpbGw9IiM3NTNiMDciIG9wYWNpdHk9IjAuOSIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMzAiIHI9IjEuNSIgZmlsbD0iIzc1M2IwNyIvPjwvc3ZnPg==") 12 31, crosshair;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
-
-    .tree-nav {
-      position: relative;
-      width: 680px;
-      height: 520px;
-      transform-origin: top left;
+    /* Each colony scales up from its inoculation point as it "grows in". */
+    .colony-grow {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: scale(0);
+      animation: colony-grow var(--grow, 9s) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: var(--delay, 0s);
     }
-
-    .tree-nav svg.connections {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
+    @keyframes colony-grow {
+      0%   { transform: scale(0); opacity: 0; }
+      10%  { opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
     }
-
-    .tree-nav svg.connections path { transition: opacity 0.5s, stroke-width 0.5s; }
-
-    .pulse {
-      stroke-dasharray: 10 520;
-      stroke-dashoffset: 530;
-      opacity: 0;
-      filter: url(#pulseBlur);
-      animation: pulse-travel 3s ease-in-out infinite;
-    }
-
-    @keyframes pulse-travel {
-      0% { stroke-dashoffset: 530; opacity: 0; }
-      3% { opacity: 0.8; }
-      55% { opacity: 0.8; }
-      75% { stroke-dashoffset: -10; opacity: 0; }
-      100% { stroke-dashoffset: -10; opacity: 0; }
-    }
-
-    /* Root to hidden: fire first */
-    .pulse-r1 { animation-delay: 0s; }
-    .pulse-r2 { animation-delay: 0.3s; }
-    .pulse-r3 { animation-delay: 0.15s; }
-
-    /* Hidden to leaves: fire after root pulses arrive (~1.2s) */
-    .pulse-h1a { animation-delay: 1.2s; }
-    .pulse-h1b { animation-delay: 1.4s; }
-    .pulse-h2a { animation-delay: 1.5s; }
-    .pulse-h2b { animation-delay: 1.3s; }
-    .pulse-h2c { animation-delay: 1.6s; }
-    .pulse-h2d { animation-delay: 1.7s; }
-    .pulse-h3a { animation-delay: 1.35s; }
-    .pulse-h3b { animation-delay: 1.55s; }
-
-    /* Root node */
-    .tree-root {
-      position: absolute;
-      top: 200px; left: 10px;
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, rgba(13,148,136,0.45), rgba(15,118,110,0.6));
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 2;
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 8px 32px rgba(13,148,136,0.25), inset 0 0 20px rgba(20,184,166,0.1);
-      animation: float 9s ease-in-out 0.5s infinite;
-    }
-
-    .tree-root::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 50%;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.0));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .tree-root::after {
-      content: '';
-      position: absolute;
-      top: 8%;
-      left: 20%;
-      width: 60%;
-      height: 35%;
-      border-radius: 50%;
-      background: radial-gradient(ellipse at center, rgba(255,255,255,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    /* Hidden layer */
-    .h-node {
-      position: absolute;
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      z-index: 2;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .h-node { animation: float 7s ease-in-out infinite; }
-    .h1 { animation-delay: 0.5s; }
-    .h2 { animation-delay: 1.5s; }
-    .h3 { animation-delay: 2.5s; }
-    .h-node:hover { transform: scale(1.3); }
-
-    .h1 { top: 100px; left: 235px; background: linear-gradient(135deg, var(--teal-600), var(--cyan-600)); }
-    .h2 { top: 230px; left: 255px; background: linear-gradient(135deg, var(--cyan-600), var(--blue-600)); }
-    .h3 { top: 360px; left: 235px; background: linear-gradient(135deg, var(--blue-600), var(--violet-600)); }
-
-    /* Leaf (output) nodes */
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0); }
-      25% { transform: translate(4px, -6px); }
-      50% { transform: translate(-3px, 4px); }
-      75% { transform: translate(5px, 2px); }
-    }
-
-    .leaf {
-      position: absolute;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      width: 110px; height: 110px;
-      border-radius: 50%;
-      text-decoration: none;
-      color: rgba(255,255,255,0.95);
-      font-size: 11.5px;
-      font-weight: 400;
+    .petri-caption {
       text-align: center;
-      line-height: 1.4;
-      letter-spacing: 0.04em;
-      z-index: 2;
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s, border-color 0.4s;
-      cursor: pointer;
-      border: 1px solid rgba(255,255,255,0.15);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      max-width: 32ch;
+    }
+    .petri-caption .latin {
+      font-size: 1rem;
+      color: var(--tannin);
+      display: block;
+      font-style: italic;
+      font-variation-settings: "wdth" 95, "wght" 500;
+    }
+    .petri-hint {
+      text-align: center;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      opacity: 0.7;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .colony-grow { animation: none; transform: scale(1); opacity: 1; }
+      .petri { cursor: default; }
+      .petri-hint { display: none; }
     }
 
-    .leaf::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 50%;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.0));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
+    /* === Impact === */
+    .impact {
+      background: var(--parchment-mid);
+      border-block: 1px solid var(--ink-hairline);
     }
-
-    .leaf::after {
-      content: '';
-      position: absolute;
-      top: 8%;
-      left: 20%;
-      width: 60%;
-      height: 35%;
-      border-radius: 50%;
-      background: radial-gradient(ellipse at center, rgba(255,255,255,0.15) 0%, transparent 70%);
-      pointer-events: none;
+    .impact-content {
+      max-width: 760px;
     }
-
-    .leaf:hover {
-      transform: scale(1.1);
-      border-color: rgba(255,255,255,0.3);
-    }
-
-    .leaf svg { margin-bottom: 8px; opacity: 0.85; }
-    .leaf span { letter-spacing: 0.05em; }
-
-    .leaf-1 {
-      top: 10px; left: 500px;
-      background: linear-gradient(145deg, rgba(20,184,166,0.45), rgba(15,118,110,0.6));
-      box-shadow: 0 8px 32px rgba(13,148,136,0.25), inset 0 0 20px rgba(20,184,166,0.1);
-      animation: float 8s ease-in-out infinite;
-    }
-    .leaf-1:hover { box-shadow: 0 12px 48px rgba(13,148,136,0.4), inset 0 0 30px rgba(20,184,166,0.15); }
-
-    .leaf-2 {
-      top: 140px; left: 540px;
-      background: linear-gradient(145deg, rgba(14,165,233,0.45), rgba(8,145,178,0.6));
-      box-shadow: 0 8px 32px rgba(14,165,233,0.25), inset 0 0 20px rgba(14,165,233,0.1);
-      animation: float 9s ease-in-out 1s infinite;
-    }
-    .leaf-2:hover { box-shadow: 0 12px 48px rgba(14,165,233,0.4), inset 0 0 30px rgba(14,165,233,0.15); }
-
-    .leaf-3 {
-      top: 270px; left: 540px;
-      background: linear-gradient(145deg, rgba(59,130,246,0.45), rgba(37,99,235,0.6));
-      box-shadow: 0 8px 32px rgba(37,99,235,0.25), inset 0 0 20px rgba(59,130,246,0.1);
-      animation: float 10s ease-in-out 2s infinite;
-    }
-    .leaf-3:hover { box-shadow: 0 12px 48px rgba(37,99,235,0.4), inset 0 0 30px rgba(59,130,246,0.15); }
-
-    .leaf-4 {
-      top: 400px; left: 500px;
-      background: linear-gradient(145deg, rgba(139,92,246,0.45), rgba(124,58,237,0.6));
-      box-shadow: 0 8px 32px rgba(139,92,246,0.25), inset 0 0 20px rgba(139,92,246,0.1);
-      animation: float 8.5s ease-in-out 3s infinite;
-    }
-    .leaf-4:hover { box-shadow: 0 12px 48px rgba(139,92,246,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
-
-    /* ── SECTION SHARED ── */
-    .section-title {
-      font-size: 40px; font-weight: 800; letter-spacing: -1.5px;
-      color: #fff; text-align: center; margin-bottom: 12px;
-    }
-    .section-sub {
-      text-align: center; color: var(--slate-400); font-size: 16px;
-      max-width: 480px; margin: 0 auto 60px; line-height: 1.7;
-    }
-
-    /* ── SERVICES ── */
-    .services {
-      position: relative;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 100px 40px 120px;
-    }
-
-    /* Divider glow line */
-    .services::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--teal-700), transparent);
-    }
-
-    .services-grid {
+    .impact-numbers {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, auto);
+      gap: 0;
+      margin-top: 2.75rem;
+      column-gap: clamp(1.5rem, 4vw, 3.5rem);
+      justify-content: start;
+    }
+    .impact-number {
+      padding-right: clamp(1.5rem, 4vw, 3.5rem);
+      border-right: 1px solid var(--ink-hairline-strong);
+    }
+    .impact-number:last-child { border-right: none; padding-right: 0; }
+    .impact-number .value {
+      display: block;
+      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+      font-variation-settings: "wdth" 92, "wght" 600;
+      color: var(--ink);
+      letter-spacing: -0.025em;
+      line-height: 1;
+    }
+    .impact-number .label {
+      display: block;
+      margin-top: 0.625rem;
+      font-size: 0.6875rem;
     }
 
-    .service-card {
-      background: rgba(255,255,255,0.03);
-      border-radius: 16px;
-      padding: 36px 28px;
-      border: 1px solid rgba(255,255,255,0.06);
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-      opacity: 0;
-      transition: opacity 0.35s;
-    }
-
-    .service-card:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.1);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px -20px rgba(0,0,0,0.5);
-    }
-
-    .service-card:hover::before { opacity: 1; }
-
-    .card-icon {
-      width: 44px; height: 44px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .icon-teal { background: rgba(13,148,136,0.12); }
-    .icon-cyan { background: rgba(14,165,233,0.12); }
-    .icon-blue { background: rgba(37,99,235,0.12); }
-    .icon-violet { background: rgba(139,92,246,0.12); }
-
-    .service-card h3 {
-      font-size: 16px; font-weight: 600; color: var(--slate-100);
-      margin-bottom: 10px; letter-spacing: -0.02em;
-    }
-
-    .service-card p {
-      font-size: 13.5px; color: var(--slate-400); line-height: 1.7;
-    }
-
-    /* ── IMPACT BANNER ── */
-    .impact-banner {
-      position: relative;
-      padding: 60px 40px;
-    }
-
-    .impact-banner::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--teal-700), transparent);
-    }
-
-    .impact-banner-inner {
-      max-width: 900px;
-      margin: 0 auto;
+    /* === Team === */
+    .team-list {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      padding: 32px 36px;
-      border-radius: 16px;
-      background: rgba(13,148,136,0.06);
-      border: 1px solid rgba(13,148,136,0.15);
+      flex-direction: column;
+      gap: clamp(3rem, 6vw, 5rem);
     }
-
-    .impact-banner-text h2 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.5px;
-      margin-bottom: 6px;
-    }
-
-    .impact-banner-text p {
-      font-size: 14px;
-      color: var(--slate-400);
-      line-height: 1.6;
-      max-width: 480px;
-    }
-
-    .impact-banner-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, var(--teal-700), var(--blue-600));
-      color: white;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: all 0.3s;
-      box-shadow: 0 4px 16px rgba(13,148,136,0.2);
-    }
-
-    .impact-banner-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(13,148,136,0.35);
-    }
-
-    @media (max-width: 768px) {
-      .impact-banner-inner { flex-direction: column; text-align: center; padding: 24px 20px; }
-      .impact-banner-text p { max-width: 100%; }
-    }
-
-    /* ── TEAM ── */
-    .team {
-      position: relative;
-      padding: 100px 40px 120px;
-    }
-
-    .team::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--blue-600), transparent);
-    }
-
-    .team-inner { max-width: 900px; margin: 0 auto; }
-
-    .team-grid {
+    .team-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      text-align: center;
+      align-items: start;
+      gap: clamp(1.5rem, 5vw, 3.5rem);
     }
+    /* Fixed 220px figure column on every row so all three portraits are the same size. */
+    .team-row.row-a { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
+    .team-row.row-b { grid-template-columns: minmax(0, 1fr) minmax(0, 220px); }
+    .team-row.row-b .team-figure { order: 2; }
+    .team-row.row-b .team-text { order: 1; }
+    .team-row.row-c { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
+    .team-row.row-c .team-text { padding-top: 0.5rem; }
 
-    .team-card {
-      padding: 40px 24px 32px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.05);
-      transition: all 0.3s;
-    }
-
-    .team-card:hover {
-      background: rgba(255,255,255,0.04);
-      border-color: rgba(255,255,255,0.08);
-    }
-
-    .avatar {
-      width: 120px; height: 120px;
-      border-radius: 50%;
-      margin: 0 auto 18px;
-      object-fit: cover;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-
-    .team-card h3 { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-
-    .team-card .role {
-      font-size: 12.5px; font-weight: 500; margin-bottom: 12px;
-      letter-spacing: 0.02em;
-    }
-
-    .role-teal { color: var(--teal-400); }
-    .role-cyan { color: var(--cyan-500); }
-    .role-blue { color: var(--blue-500); }
-
-    .team-card p { font-size: 13px; color: var(--slate-400); line-height: 1.65; }
-
-    /* ── CTA ── */
-    .cta {
+    .team-figure {
       position: relative;
-      padding: 100px 40px;
-      text-align: center;
+      max-width: 220px;
     }
-
-    .cta::before {
-      content: '';
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 200px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--violet-600), transparent);
-    }
-
-    .contact-form {
-      max-width: 480px;
-      margin: 0 auto;
-      display: flex; flex-direction: column; gap: 14px;
-      text-align: left;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
+    .team-figure img {
       width: 100%;
-      padding: 12px 16px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 8px;
-      color: #fff;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(0.18) sepia(0.12) contrast(0.96);
+      border: 1px solid var(--ink-hairline-strong);
+    }
+    .team-figure::after {
+      content: "";
+      position: absolute;
+      inset: -8px -8px 8px 8px;
+      border: 1px solid var(--ink-hairline);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .team-text .team-eyebrow {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.9rem;
+      color: var(--moss-deep);
+    }
+    .team-text .team-eyebrow .label { color: var(--moss-deep); }
+    .team-text .team-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 1px;
+      background: var(--moss-deep);
+      transform: translateY(-3px);
+    }
+    .team-text h3 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+    .team-text .team-discipline {
+      font-size: 0.9375rem;
+      font-variation-settings: "wdth" 100, "wght" 500;
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+    }
+    .team-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 50ch;
+    }
+    .team-text p + p { margin-top: 0.85rem; }
+
+    /* === Contact === */
+    .contact {
+      border-top: 1px solid var(--ink-hairline);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(2.5rem, 6vw, 5rem);
+      align-items: start;
+    }
+    .contact-text h2 { max-width: 14ch; }
+    .contact-text p { margin-top: 1.25rem; max-width: 32ch; }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .field label {
+      font-size: 0.75rem;
+      font-variation-settings: "wdth" 100, "wght" 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .field input,
+    .field textarea {
+      background: var(--parchment-pale);
+      border: 1px solid var(--ink-hairline-strong);
+      padding: 0.75rem 0.9rem;
+      font-size: 1rem;
+      color: var(--ink);
+      transition: border-color 180ms ease-out, background 180ms ease-out;
       font-family: inherit;
-      font-size: 14px;
+      border-radius: 0;
+    }
+    .field input::placeholder,
+    .field textarea::placeholder { color: oklch(55% 0.025 70 / 0.7); }
+    .field input:hover,
+    .field textarea:hover { border-color: var(--ink-soft); }
+    .field input:focus,
+    .field textarea:focus {
       outline: none;
-      transition: border-color 0.3s;
-      box-sizing: border-box;
+      border-color: var(--tannin);
+      background: var(--parchment-pale);
+      box-shadow: 0 0 0 3px oklch(42% 0.10 55 / 0.15);
+    }
+    .field textarea { min-height: 140px; resize: vertical; }
+    .field.invalid input,
+    .field.invalid textarea { border-color: var(--tannin); }
+    .field-error {
+      font-size: 0.8125rem;
+      color: var(--tannin);
+      display: none;
+    }
+    .field.invalid .field-error { display: block; }
+
+
+    .form-success,
+    .form-error {
+      padding: 1rem 1.1rem;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      border: 1px solid var(--ink-hairline-strong);
+      background: var(--parchment-pale);
+      display: none;
+    }
+    .form-success.is-shown,
+    .form-error.is-shown { display: block; }
+    .form-success {
+      border-color: var(--moss-deep);
+      color: var(--moss-deep);
+    }
+    .form-error {
+      border-color: var(--tannin);
+      color: var(--tannin);
     }
 
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--teal-500);
+    /* === Page-specific responsive === */
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .phylo { max-width: 480px; margin-top: 1rem; }
+      .services-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .services-aside { position: static; }
+      .impact-content { max-width: 100%; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .team-row,
+      .team-row.row-a,
+      .team-row.row-b,
+      .team-row.row-c { grid-template-columns: minmax(0, 200px) 1fr; }
+      .team-row.row-b .team-figure { order: 0; }
+      .team-row.row-b .team-text { order: 0; }
     }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: var(--slate-500);
+    @media (max-width: 640px) {
+      .hero-meta { gap: 1.25rem 2rem; }
+      .impact-numbers { grid-template-columns: 1fr 1fr; row-gap: 1.5rem; }
+      .impact-number:nth-child(2) { border-right: none; }
+      .team-row,
+      .team-row.row-a,
+      .team-row.row-b,
+      .team-row.row-c { grid-template-columns: minmax(0, 160px) 1fr; gap: 1.25rem; }
+      .team-figure::after { inset: -6px -6px 6px 6px; }
     }
-
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .cta-btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 15px 36px;
-      background: linear-gradient(135deg, var(--teal-700), var(--blue-600));
-      color: white;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      font-weight: 600; font-size: 15px;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(13,148,136,0.25);
-      font-family: inherit;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(13,148,136,0.4);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 32px 40px;
-      display: flex; align-items: center; justify-content: space-between;
-      max-width: 1200px; margin: 0 auto;
-      font-size: 12.5px; color: var(--slate-500);
-    }
-
-    footer a {
-      color: var(--slate-400); text-decoration: none;
-      margin-left: 24px; transition: color 0.2s;
-    }
-
-    footer a:hover { color: #fff; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .hero h1 { font-size: 48px; letter-spacing: -2px; }
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 38px; letter-spacing: -1.5px; }
-      .hero .tagline { font-size: 15px; max-width: 400px; }
-      .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-      .team-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
-      .header-inner { padding: 14px 20px; }
-      nav { flex-wrap: wrap; justify-content: center; }
-      nav a { padding: 6px 10px; font-size: 12px; }
-      .section-title { font-size: 30px; }
-      footer { flex-direction: column; gap: 12px; text-align: center; }
+    @media (max-width: 460px) {
+      .team-row,
+      .team-row.row-a,
+      .team-row.row-b,
+      .team-row.row-c { grid-template-columns: 1fr; }
+      .team-figure { max-width: 200px; }
     }
   </style>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-      <a href="#" class="logo-group">
-        <img src="phyla_technologies_logo_dark.svg" alt="Phyla Technologies" height="58">
+  <!-- First-visit intro: draws the network into the logo, then fades to reveal the page.
+       Once per session, skipped under reduced-motion, and self-removing via a safety timer. -->
+  <style>
+    #intro { display: none; position: fixed; inset: 0; z-index: 9999; background: var(--parchment); place-items: center; }
+    #intro.run { display: grid; }
+    #intro #introLogo { width: clamp(300px, 62vw, 640px); height: auto; }
+    #introLogo circle { transform-box: fill-box; transform-origin: center; }
+    body.intro-lock { overflow: hidden; }
+    /* Header shrink is driven by GSAP ScrollTrigger via header-scroll.js (end of body).
+       Deliberately no CSS transition on the header height/padding here: GSAP writes those
+       inline each frame, and a competing CSS transition on the same props is what jittered. */
+  </style>
+  <div id="intro" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="wordmark" aria-label="Phyla Technologies, home">
+        <svg class="wordmark-svg" viewBox="0 0 590.41529 267.508" role="img" aria-label="Phyla Technologies">
+          <g transform="translate(20,130)" fill="none" stroke="var(--ink-soft)" stroke-linecap="round">
+            <path d="M 12,-40 C 34,-40 44,-55 58,-55" stroke-width="2.2" opacity="0.67"/>
+            <path d="M 12,-40 C 34,-40 44,-18 58,-18" stroke-width="2.2" opacity="0.63"/>
+            <path d="M 12,-40 C 34,-40 44,18 58,18" stroke-width="1.8" opacity="0.44"/>
+            <path d="M 12,-40 C 34,-40 44,55 58,55" stroke-width="1.4" opacity="0.25"/>
+            <path d="M 12,0 C 34,0 44,-55 58,-55" stroke-width="1.8" opacity="0.46"/>
+            <path d="M 12,0 C 34,0 44,-18 58,-18" stroke-width="2.2" opacity="0.66"/>
+            <path d="M 12,0 C 34,0 44,18 58,18" stroke-width="2.2" opacity="0.66"/>
+            <path d="M 12,0 C 34,0 44,55 58,55" stroke-width="1.8" opacity="0.46"/>
+            <path d="M 12,40 C 34,40 44,-55 58,-55" stroke-width="1.4" opacity="0.25"/>
+            <path d="M 12,40 C 34,40 44,-18 58,-18" stroke-width="1.8" opacity="0.44"/>
+            <path d="M 12,40 C 34,40 44,18 58,18" stroke-width="2.2" opacity="0.63"/>
+            <path d="M 12,40 C 34,40 44,55 58,55" stroke-width="2.2" opacity="0.67"/>
+            <path d="M 70,-55 C 90,-55 102,-68 118,-68" stroke-width="2.4" opacity="0.74"/>
+            <path d="M 70,-55 C 90,-55 102,-20 118,-20" stroke-width="2.2" opacity="0.64"/>
+            <path d="M 70,-55 C 90,-55 102,20 118,20" stroke-width="1.8" opacity="0.46"/>
+            <path d="M 70,-55 C 90,-55 102,68 118,68" stroke-width="1.4" opacity="0.25"/>
+            <path d="M 70,-18 C 90,-18 102,-68 118,-68" stroke-width="2.1" opacity="0.58"/>
+            <path d="M 70,-18 C 90,-18 102,-20 118,-20" stroke-width="2.5" opacity="0.79"/>
+            <path d="M 70,-18 C 90,-18 102,20 118,20" stroke-width="2.2" opacity="0.63"/>
+            <path d="M 70,-18 C 90,-18 102,68 118,68" stroke-width="1.7" opacity="0.42"/>
+            <path d="M 70,18 C 90,18 102,-68 118,-68" stroke-width="1.7" opacity="0.42"/>
+            <path d="M 70,18 C 90,18 102,-20 118,-20" stroke-width="2.2" opacity="0.63"/>
+            <path d="M 70,18 C 90,18 102,20 118,20" stroke-width="2.5" opacity="0.79"/>
+            <path d="M 70,18 C 90,18 102,68 118,68" stroke-width="2.1" opacity="0.58"/>
+            <path d="M 70,55 C 90,55 102,-68 118,-68" stroke-width="1.4" opacity="0.25"/>
+            <path d="M 70,55 C 90,55 102,-20 118,-20" stroke-width="1.8" opacity="0.46"/>
+            <path d="M 70,55 C 90,55 102,20 118,20" stroke-width="2.2" opacity="0.64"/>
+            <path d="M 70,55 C 90,55 102,68 118,68" stroke-width="2.4" opacity="0.74"/>
+          </g>
+          <g transform="translate(20,130)">
+            <circle cx="8" cy="-40" r="10" fill="var(--tannin)"/>
+            <circle cx="8" cy="0" r="10" fill="var(--tannin)"/>
+            <circle cx="8" cy="40" r="10" fill="var(--tannin)"/>
+            <circle cx="64" cy="-55" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="-18" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="18" r="8" fill="var(--moss)"/>
+            <circle cx="64" cy="55" r="8" fill="var(--moss)"/>
+            <circle cx="122" cy="-68" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="-20" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="20" r="11" fill="var(--tannin-deep)"/>
+            <circle cx="122" cy="68" r="11" fill="var(--tannin-deep)"/>
+          </g>
+          <text x="180" y="138" font-size="115" font-weight="700" letter-spacing="-3" fill="var(--ink)" style="font-family:var(--f-wordmark)">phyla</text>
+          <text x="184" y="202" font-size="34" font-weight="500" letter-spacing="10.5" fill="var(--ink-soft)" style="font-family:var(--f-wordmark)">TECHNOLOGIES</text>
+        </svg>
       </a>
-      <nav>
-        <a href="#services">Services</a>
+      <nav class="primary" aria-label="Primary">
         <a href="impact.html">Impact</a>
-        <a href="#team">Team</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="#contact" class="cta">Get in touch</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>
-      <span class="gradient-text">MLOps</span> for<br>Life Sciences
-    </h1>
-    <p class="tagline">We build and operate machine learning infrastructure for biotech companies — from genomics pipelines to production model deployment.</p>
+  <main id="main">
 
-    <div class="tree-wrapper">
-    <div class="tree-nav" id="tree">
-      <svg class="connections" viewBox="0 0 680 520">
-        <!-- Root to hidden -->
-        <path d="M 50,240 C 120,200 170,140 249,114" stroke="url(#cg1)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
-        <path d="M 50,240 C 130,240 190,245 269,244" stroke="url(#cg2)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
-        <path d="M 50,240 C 120,270 170,345 249,374" stroke="url(#cg3)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
-        <!-- H1 to leaves -->
-        <path d="M 263,114 C 360,90 440,60 555,65" stroke="#14B8A6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 263,114 C 360,130 440,170 595,195" stroke="#0EA5E9" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.18"/>
-        <!-- H2 to leaves -->
-        <path d="M 269,244 C 360,190 440,100 555,65" stroke="#0D9488" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.15"/>
-        <path d="M 269,244 C 360,240 440,200 595,195" stroke="#0891B2" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 269,244 C 360,260 440,310 595,325" stroke="#3B82F6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <path d="M 269,244 C 360,280 440,410 555,455" stroke="#7C3AED" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.15"/>
-        <!-- H3 to leaves -->
-        <path d="M 249,374 C 360,360 440,330 595,325" stroke="#2563EB" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.18"/>
-        <path d="M 249,374 C 360,400 440,440 555,455" stroke="#8B5CF6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.3"/>
-        <!-- Pulse overlays: root to hidden -->
-        <path class="pulse pulse-r1" d="M 50,240 C 120,200 170,140 249,114" stroke="#5EEAD4" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-r2" d="M 50,240 C 130,240 190,245 269,244" stroke="#7DD3FC" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-r3" d="M 50,240 C 120,270 170,345 249,374" stroke="#A78BFA" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <!-- Pulse overlays: hidden to leaves -->
-        <path class="pulse pulse-h1a" d="M 263,114 C 360,90 440,60 555,65" stroke="#5EEAD4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h1b" d="M 263,114 C 360,130 440,170 595,195" stroke="#7DD3FC" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h2a" d="M 269,244 C 360,190 440,100 555,65" stroke="#5EEAD4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h2b" d="M 269,244 C 360,240 440,200 595,195" stroke="#7DD3FC" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h2c" d="M 269,244 C 360,260 440,310 595,325" stroke="#93C5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h2d" d="M 269,244 C 360,280 440,410 555,455" stroke="#C4B5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h3a" d="M 249,374 C 360,360 440,330 595,325" stroke="#93C5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <path class="pulse pulse-h3b" d="M 249,374 C 360,400 440,440 555,455" stroke="#C4B5FD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <defs>
-          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="4" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <filter id="pulseBlur" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="softBlur"/>
-            <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="sharpBlur"/>
-            <feMerge><feMergeNode in="softBlur"/><feMergeNode in="sharpBlur"/></feMerge>
-          </filter>
-          <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#0891B2"/></linearGradient>
-          <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#2563EB"/></linearGradient>
-          <linearGradient id="cg3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0D9488"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
-        </defs>
-      </svg>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <span class="hero-eyebrow label">Est. 2026</span>
+          <h1 class="display">MLOps for<br><em style="white-space: nowrap;">life sciences.</em></h1>
+          <p class="hero-subhead">
+            We build and operate the machine learning infrastructure behind life-sciences R&amp;D: data and model pipelines, training and deployment, bio- and cheminformatics, and the dashboards and tools that make the science usable, the whole stack from data to production.
+          </p>
+          <dl class="hero-meta">
+            <div class="hero-meta-item">
+              <dt class="label">Practice</dt>
+              <dd class="value">MLOps for <em>biotech</em></dd>
+            </div>
+            <div class="hero-meta-item">
+              <dt class="label">Cited</dt>
+              <dd class="value">In <em>76 countries</em>, 23 disciplines</dd>
+            </div>
+            <div class="hero-meta-item">
+              <dt class="label">Roots</dt>
+              <dd class="value">Natural-products <em>science</em></dd>
+            </div>
+          </dl>
+        </div>
 
-      <div class="tree-root">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
-      </div>
+        <div class="phylo" aria-hidden="false">
+          <svg viewBox="0 0 540 420" role="img" aria-labelledby="phyloTitle phyloDesc">
+            <title id="phyloTitle">Phyla capabilities, branched from a common root</title>
+            <desc id="phyloDesc">A phylogenetic-style diagram with the Phyla root on the left and four service capabilities as leaves on the right: MLOps and Pipelines, Bio and Cheminformatics, Dashboards and Analytics, and Bespoke Software.</desc>
+            <defs>
+              <!-- Soft halo (blur 3) merged with a sharper core (blur 1 of the source),
+                   so each travelling signal reads with weight. Ported from the live site. -->
+              <filter id="pulseBlur" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="3" result="softBlur" />
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="sharpBlur" />
+                <feMerge>
+                  <feMergeNode in="softBlur" />
+                  <feMergeNode in="sharpBlur" />
+                </feMerge>
+              </filter>
+            </defs>
 
-      <div class="h-node h1"></div>
-      <div class="h-node h2"></div>
-      <div class="h-node h3"></div>
+            <!-- Root tick -->
+            <line class="phylo-branch" x1="36" y1="210" x2="80" y2="210" pathLength="1" style="--len: 1; --delay: 0ms;" />
 
-      <a href="#mlops" class="leaf leaf-1">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        <span>MLOps &amp;<br>Pipelines</span>
-      </a>
-      <a href="#informatics" class="leaf leaf-2">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <span>Bio &amp; Chem<br>Informatics</span>
-      </a>
-      <a href="#dashboards" class="leaf leaf-3">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-        <span>Dashboards<br>&amp; Analytics</span>
-      </a>
-      <a href="#software" class="leaf leaf-4">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        <span>Bespoke<br>Software</span>
-      </a>
-    </div>
-    </div>
-  </section>
+            <!-- Root label, italic Phyla -->
+            <text class="phylo-root-label" x="36" y="200" text-anchor="start" style="--delay: 0ms;">
+              <tspan style="font-style: italic;">Phyla</tspan>
+            </text>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2 class="section-title">What We Build</h2>
-    <p class="section-sub">End-to-end data science and engineering for life sciences teams that need to move fast without breaking things.</p>
+            <!-- Root node -->
+            <circle class="phylo-node" cx="80" cy="210" r="4" style="--delay: 0ms;" />
 
-    <div class="services-grid">
-      <div class="service-card" id="mlops">
-        <div class="card-icon icon-teal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        </div>
-        <h3>MLOps &amp; Pipelines</h3>
-        <p>Train, evaluate, and deploy custom ML models. Reproducible pipelines from genomics data ingestion through production model serving.</p>
-      </div>
-      <div class="service-card" id="informatics">
-        <div class="card-icon icon-cyan">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3>Bio &amp; Cheminformatics</h3>
-        <p>Deep expertise in bioinformatics and cheminformatics data processing, visualization, and analysis. Metagenomics to molecular property prediction.</p>
-      </div>
-      <div class="service-card" id="dashboards">
-        <div class="card-icon icon-blue">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-        </div>
-        <h3>Dashboards &amp; Analytics</h3>
-        <p>Interactive dashboards to visualize, analyze, and share your data. Exploratory analysis and publication-quality visualizations.</p>
-      </div>
-      <div class="service-card" id="software">
-        <div class="card-icon icon-violet">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3>Bespoke Software</h3>
-        <p>Tailor-made solutions for your specific needs. From static sites to full-stack applications — development, deployment, and maintenance.</p>
-      </div>
-      <div class="service-card">
-        <div class="card-icon icon-teal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round"><path d="M12 8V4H8"/><path d="M2 12a10 10 0 0 1 10-10"/><path d="M12 16v4h4"/><path d="M22 12a10 10 0 0 1-10 10"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <h3>AI &amp; LLM Integration</h3>
-        <p>Applications powered by AI and large language models. RAG, fine-tuning, and custom agent workflows for scientific data.</p>
-      </div>
-      <div class="service-card">
-        <div class="card-icon icon-cyan">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <h3>Infrastructure &amp; DevOps</h3>
-        <p>Cloud infrastructure, CI/CD, containerization, and monitoring. Computational workloads running reliably at scale.</p>
-      </div>
-    </div>
-  </section>
+            <!-- Root → three hidden nodes -->
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 96, 210 96"   pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 210, 210 210" pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 324, 210 324" pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
 
-  <!-- IMPACT CTA -->
-  <section class="impact-banner">
-    <div class="impact-banner-inner">
-      <div class="impact-banner-text">
-        <h2>Research That Travels</h2>
-        <p>Our work is cited across 76 countries and 22 disciplines — from drug discovery to computational biology. See the network effect in action.</p>
-      </div>
-      <a href="impact.html" class="impact-banner-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Explore Impact
-      </a>
-    </div>
-  </section>
+            <!-- Hidden nodes -->
+            <circle class="phylo-node" cx="210" cy="96"  r="3.2" style="--delay: 360ms;" />
+            <circle class="phylo-node" cx="210" cy="210" r="3.2" style="--delay: 360ms;" />
+            <circle class="phylo-node" cx="210" cy="324" r="3.2" style="--delay: 360ms;" />
 
-  <!-- TEAM -->
-  <section class="team" id="team">
-    <div class="team-inner">
-      <h2 class="section-title">The Team</h2>
-      <p class="section-sub">Scientists and engineers who've shipped software across drug discovery, genomics, and production ML.</p>
-      <div class="team-grid">
-        <div class="team-card">
-          <img class="avatar" src="ian.jpg" alt="Ian Miller">
-          <h3>Ian Miller</h3>
-          <div class="role role-teal">ML Systems</div>
-          <p>Ph.D. from UW-Madison. Background in biochemistry and computational drug discovery.</p>
-        </div>
-        <div class="team-card">
-          <img class="avatar" src="evan.jpg" alt="Evan Rees">
-          <h3>Evan Rees</h3>
-          <div class="role role-cyan">[Bio|Chemo]informatics</div>
-          <p>Ph.D. from UW-Madison. Background in chemistry, bioinformatics, and computational drug discovery.</p>
-        </div>
-        <div class="team-card">
-          <img class="avatar" src="erik.jpg" alt="Erik Miller-Galow">
-          <h3>Erik Miller-Galow</h3>
-          <div class="role role-blue">Software Engineering</div>
-          <p>B.S. from Michigan State. Background in mathematics and computer science.</p>
+            <!-- Hidden → leaves: each leaf is fed by two hidden nodes (the live partial network) -->
+            <path class="phylo-branch" d="M 210 96 C 260 96, 290 56, 340 56"     pathLength="1" style="--len: 1; --delay: 440ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 96 C 260 96, 290 162, 340 162"   pathLength="1" style="--len: 1; --delay: 480ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 56, 340 56"   pathLength="1" style="--len: 1; --delay: 480ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 162, 340 162" pathLength="1" style="--len: 1; --delay: 520ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 256, 340 256" pathLength="1" style="--len: 1; --delay: 520ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 364, 340 364" pathLength="1" style="--len: 1; --delay: 560ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 324 C 260 324, 290 256, 340 256" pathLength="1" style="--len: 1; --delay: 560ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 324 C 260 324, 290 364, 340 364" pathLength="1" style="--len: 1; --delay: 600ms; opacity: 0.32;" />
+
+            <!-- Pulses: the staged signal cascade (root pulses fire first, then leaf pulses). -->
+            <path class="pulse pulse-r1"  d="M 80 210 C 130 210, 165 96, 210 96"   pathLength="100" />
+            <path class="pulse pulse-r2"  d="M 80 210 C 130 210, 165 210, 210 210" pathLength="100" />
+            <path class="pulse pulse-r3"  d="M 80 210 C 130 210, 165 324, 210 324" pathLength="100" />
+            <path class="pulse pulse-h1a" d="M 210 96 C 260 96, 290 56, 340 56"     pathLength="100" />
+            <path class="pulse pulse-h1b" d="M 210 96 C 260 96, 290 162, 340 162"   pathLength="100" />
+            <path class="pulse pulse-h2a" d="M 210 210 C 260 210, 290 56, 340 56"   pathLength="100" />
+            <path class="pulse pulse-h2b" d="M 210 210 C 260 210, 290 162, 340 162" pathLength="100" />
+            <path class="pulse pulse-h2c" d="M 210 210 C 260 210, 290 256, 340 256" pathLength="100" />
+            <path class="pulse pulse-h2d" d="M 210 210 C 260 210, 290 364, 340 364" pathLength="100" />
+            <path class="pulse pulse-h3a" d="M 210 324 C 260 324, 290 256, 340 256" pathLength="100" />
+            <path class="pulse pulse-h3b" d="M 210 324 C 260 324, 290 364, 340 364" pathLength="100" />
+
+            <!-- Leaf nodes (clickable links) -->
+            <a href="#capabilities" class="phylo-leaf-link" aria-label="MLOps and Pipelines">
+              <circle class="phylo-node leaf is-tannin" cx="340" cy="56" r="5" style="--delay: 1100ms;" />
+              <text class="phylo-label" x="354" y="60" text-anchor="start" style="--delay: 1100ms;">MLOps &amp; Pipelines</text>
+            </a>
+            <a href="#capabilities" class="phylo-leaf-link" aria-label="Bio and Cheminformatics">
+              <circle class="phylo-node leaf" cx="340" cy="162" r="5" style="--delay: 1180ms;" />
+              <text class="phylo-label" x="354" y="166" text-anchor="start" style="--delay: 1180ms;">Bio &amp; Cheminformatics</text>
+            </a>
+            <a href="#capabilities" class="phylo-leaf-link" aria-label="Dashboards and Analytics">
+              <circle class="phylo-node leaf" cx="340" cy="256" r="5" style="--delay: 1260ms;" />
+              <text class="phylo-label" x="354" y="260" text-anchor="start" style="--delay: 1260ms;">Dashboards &amp; Analytics</text>
+            </a>
+            <a href="#capabilities" class="phylo-leaf-link" aria-label="Bespoke Software">
+              <circle class="phylo-node leaf" cx="340" cy="364" r="5" style="--delay: 1340ms;" />
+              <text class="phylo-label" x="354" y="368" text-anchor="start" style="--delay: 1340ms;">Bespoke Software</text>
+            </a>
+          </svg>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta" id="contact">
-    <h2 class="section-title">Let's Build Something</h2>
-    <p class="section-sub">Have a genomics pipeline that needs ML? A dataset that needs a dashboard? We'd love to hear about it.</p>
-    <form class="contact-form" action="https://formspree.io/f/xqeyrbbp" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
-  </section>
+    <!-- SERVICES -->
+    <section class="services" id="capabilities">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">§ 01 &nbsp; Capabilities</span>
+          <h2 class="headline">What we build, end to end.</h2>
+          <p class="body">
+            Four practices, one team. We also ship AI and LLM integrations and the surrounding infrastructure when an engagement calls for them, but the spine of our work is the four below.
+          </p>
+        </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <span>&copy; 2026 Phyla Technologies</span>
-    <div>
-      <a href="https://www.linkedin.com/company/phylatech" target="_blank">LinkedIn</a>
-      <a href="https://github.com/orgs/phylatech" target="_blank">GitHub</a>
+        <div class="services-grid">
+          <ol class="services-list">
+            <li class="service">
+              <div class="service-num">i.</div>
+              <div>
+                <h3 class="service-name">MLOps &amp; Pipelines</h3>
+                <p class="service-desc">Train, evaluate, and deploy custom ML models. Reproducible pipelines from data ingestion through production model serving.</p>
+              </div>
+            </li>
+            <li class="service">
+              <div class="service-num">ii.</div>
+              <div>
+                <h3 class="service-name">Bio &amp; Cheminformatics</h3>
+                <p class="service-desc">Cheminformatics, molecular property prediction, sequence and structure analysis, protein engineering, computational drug discovery. The foundational layer for natural-products-inspired ML.</p>
+              </div>
+            </li>
+            <li class="service">
+              <div class="service-num">iii.</div>
+              <div>
+                <h3 class="service-name">Dashboards &amp; Analytics</h3>
+                <p class="service-desc">Interactive dashboards for exploration, decision-making, and publication. Visualization tuned to the shape of scientific data, not generic BI charts.</p>
+              </div>
+            </li>
+            <li class="service">
+              <div class="service-num">iv.</div>
+              <div>
+                <h3 class="service-name">Bespoke Software</h3>
+                <p class="service-desc">Internal tools, web applications, CLI utilities, and the connective tissue around them. Development, deployment, maintenance, by the same people.</p>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="services-aside">
+            <figure class="services-figure">
+              <svg class="petri" id="petri" viewBox="0 0 320 320" role="img" aria-labelledby="petriTitle petriDesc">
+                <title id="petriTitle">A culture plate, growing</title>
+                <desc id="petriDesc">A round petri dish of agar on which bacterial and fungal colonies grow in over time, then the plate is reseeded. Clicking the agar inoculates a new colony.</desc>
+
+                <defs>
+                  <radialGradient id="agarGrad" cx="50%" cy="45%" r="60%">
+                    <stop offset="0%" stop-color="oklch(96% 0.012 80)" />
+                    <stop offset="100%" stop-color="oklch(91% 0.018 78)" />
+                  </radialGradient>
+                  <clipPath id="agarClip"><circle cx="160" cy="160" r="140" /></clipPath>
+                </defs>
+
+                <!-- Dish rim and agar -->
+                <circle cx="160" cy="160" r="150" fill="var(--parchment-pale)" stroke="var(--ink)" stroke-width="1.2" />
+                <circle cx="160" cy="160" r="143" fill="url(#agarGrad)" stroke="var(--ink-hairline)" stroke-width="0.5" />
+                <circle cx="160" cy="160" r="138" fill="none" stroke="var(--ink-hairline)" stroke-width="0.4" opacity="0.5" />
+
+                <!-- Plate ID -->
+                <text x="160" y="30" text-anchor="middle" font-family="var(--sans)" font-size="9" letter-spacing="0.22em" fill="var(--ink-soft)" style="text-transform: uppercase; font-variation-settings: 'wght' 600;">Phyla &middot; iii</text>
+
+                <!-- Agar texture: faint scattered dust -->
+                <g fill="var(--ink-soft)" opacity="0.16" clip-path="url(#agarClip)">
+                  <circle cx="170" cy="82" r="0.6" /><circle cx="82" cy="162" r="0.6" /><circle cx="240" cy="182" r="0.6" />
+                  <circle cx="182" cy="242" r="0.6" /><circle cx="262" cy="140" r="0.6" /><circle cx="140" cy="262" r="0.6" />
+                  <circle cx="66" cy="200" r="0.6" /><circle cx="70" cy="118" r="0.6" /><circle cx="252" cy="86" r="0.6" />
+                </g>
+
+                <!-- Colonies grow here (populated by script) -->
+                <g id="petriColonies" clip-path="url(#agarClip)"></g>
+              </svg>
+
+              <figcaption class="petri-caption">
+                <span class="latin">In vitro.</span>
+              </figcaption>
+              <p class="petri-hint" aria-hidden="true">Click the agar to inoculate</p>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="impact" id="impact">
+      <div class="wrap">
+        <div class="impact-content">
+          <span class="label">§ 02 &nbsp; Impact</span>
+          <h2 class="headline" style="margin-top: 0.875rem;">The science travels.</h2>
+          <p class="body" style="margin-top: 1.25rem;">
+            Work the Phyla Tech team has shipped, in academia and at biotech companies, has been read and built on around the world. Live citation counts, fetched from OpenAlex.
+          </p>
+          <dl class="impact-numbers">
+            <div class="impact-number">
+              <dd class="value" data-impact="citations">2,460</dd>
+              <dt class="label">Citations</dt>
+            </div>
+            <div class="impact-number">
+              <dd class="value" data-impact="countries">76</dd>
+              <dt class="label">Countries</dt>
+            </div>
+            <div class="impact-number">
+              <dd class="value" data-impact="disciplines">23</dd>
+              <dt class="label">Disciplines</dt>
+            </div>
+          </dl>
+          <a href="impact.html" class="link-arrow">
+            <span>Read the impact map</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM (summary; full bios live on the About page) -->
+    <section class="team-brief" id="team">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">§ 03 &nbsp; Team</span>
+          <h2 class="headline">Scientists who ship software.</h2>
+          <p class="body">The same people who scope the work do the work, no layered handoffs and no junior delivery. Between us we cover chemistry, biology, mathematics, and the software engineering that holds them together.</p>
+        </div>
+        <a href="about.html" class="link-arrow">
+          <span>Meet the team</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="contact-text">
+            <span class="label">§ 04 &nbsp; Get in touch</span>
+            <h2 class="headline" style="margin-top: 0.875rem;">A pipeline that needs ML. A dataset that needs a dashboard. A model that needs to ship.</h2>
+            <p class="body">If any of those describe a project on your desk, write to us. Real engagements, scoped together, with the people who will do the work.</p>
+            <p class="body" style="margin-top: 1.5rem; font-size: 0.875rem;">Or by email: <a href="mailto:hello@phylatech.com" style="color: var(--tannin); text-decoration: underline; text-decoration-color: var(--ink-hairline-strong); text-underline-offset: 3px;">hello@phylatech.com</a></p>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqeyrbbp" method="POST" novalidate>
+            <div class="field" id="field-name">
+              <label for="cf-name">Name</label>
+              <input type="text" name="name" id="cf-name" required autocomplete="name" placeholder="Your name">
+              <span class="field-error">Please add a name.</span>
+            </div>
+            <div class="field" id="field-email">
+              <label for="cf-email">Email</label>
+              <input type="email" name="email" id="cf-email" required autocomplete="email" placeholder="you@biotech.com">
+              <span class="field-error">Please add a working email.</span>
+            </div>
+            <div class="field" id="field-message">
+              <label for="cf-message">Project</label>
+              <textarea name="message" id="cf-message" required placeholder="A pipeline, a dataset, a model, a tool. Tell us what you're working on and what's in the way."></textarea>
+              <span class="field-error">A few sentences would help.</span>
+            </div>
+            <button class="btn-primary" type="submit" id="submitBtn">
+              <span class="submit-label">Send a message</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              Got it. We will write back within a couple of working days.
+            </div>
+            <div class="form-error" id="formError" role="alert" aria-live="assertive">
+              Something went sideways. Please email us directly at <a href="mailto:hello@phylatech.com" style="color: var(--tannin);">hello@phylatech.com</a>.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-etymology">
+        <em>Phyla</em>, plural of <em>phylum</em>. Kingdom, phylum, class, order, family, genus, species: the Linnaean ladder for naming the living world. Every model we ship is, underneath, a way of sorting it.
+      </div>
+      <div>© 2026 Phyla Technologies</div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/company/phylatech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/orgs/phylatech" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    // Parallax on hidden nodes
-    const tree = document.getElementById('tree');
-    if (tree) {
-      tree.addEventListener('mousemove', (e) => {
-        const rect = tree.getBoundingClientRect();
-        const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
-        const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-        document.querySelectorAll('.h-node').forEach((n, i) => {
-          const f = (i + 1) * 4;
-          n.style.transform = `translate(${x * f}px, ${y * f}px)`;
+    // === Phylogenetic tree, set stroke-dasharray to actual path length and trigger animation on first visibility ===
+    (function() {
+      const phylo = document.querySelector('.phylo');
+      if (!phylo) return;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const branches = phylo.querySelectorAll('.phylo-branch');
+      // Compute path lengths for stroke-dash animation; line elements need approximation.
+      branches.forEach(b => {
+        let len = 0;
+        if (typeof b.getTotalLength === 'function') {
+          try { len = b.getTotalLength(); } catch (e) { len = 200; }
+        } else {
+          len = 200;
+        }
+        b.style.setProperty('--len', len);
+      });
+
+      if (reduceMotion) {
+        phylo.classList.add('phylo-animate');
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            phylo.classList.add('phylo-animate');
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(phylo);
+    })();
+
+    // === Contact form, async submit + inline states ===
+    (function() {
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+      const success = document.getElementById('formSuccess');
+      const errorBox = document.getElementById('formError');
+      const submitBtn = document.getElementById('submitBtn');
+      const submitLabel = submitBtn.querySelector('.submit-label');
+      const fields = ['name', 'email', 'message'].map(k => ({
+        key: k,
+        wrap: document.getElementById('field-' + k),
+        input: document.getElementById('cf-' + k),
+      }));
+
+      const validateEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+
+      function validate() {
+        let ok = true;
+        fields.forEach(f => {
+          const v = (f.input.value || '').trim();
+          let valid = v.length > 0;
+          if (f.key === 'email') valid = valid && validateEmail(v);
+          if (f.key === 'message') valid = valid && v.length >= 6;
+          f.wrap.classList.toggle('invalid', !valid);
+          if (!valid) ok = false;
+        });
+        return ok;
+      }
+
+      fields.forEach(f => {
+        f.input.addEventListener('input', () => {
+          if (f.wrap.classList.contains('invalid')) {
+            const v = (f.input.value || '').trim();
+            let valid = v.length > 0;
+            if (f.key === 'email') valid = valid && validateEmail(v);
+            if (f.key === 'message') valid = valid && v.length >= 6;
+            if (valid) f.wrap.classList.remove('invalid');
+          }
         });
       });
-    }
 
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        success.classList.remove('is-shown');
+        errorBox.classList.remove('is-shown');
+        if (!validate()) return;
+
+        submitBtn.disabled = true;
+        submitLabel.textContent = 'Sending';
+
+        try {
+          const fd = new FormData(form);
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: fd,
+            headers: { 'Accept': 'application/json' },
+          });
+          if (res.ok) {
+            form.reset();
+            success.classList.add('is-shown');
+            submitLabel.textContent = 'Sent';
+            submitBtn.disabled = true;
+          } else {
+            errorBox.classList.add('is-shown');
+            submitLabel.textContent = 'Send a message';
+            submitBtn.disabled = false;
+          }
+        } catch (err) {
+          errorBox.classList.add('is-shown');
+          submitLabel.textContent = 'Send a message';
+          submitBtn.disabled = false;
         }
       });
-    }, { threshold: 0.1 });
+    })();
 
-    // Dynamic tree scaling for responsive
-    function scaleTree() {
-      const wrapper = document.querySelector('.tree-wrapper');
-      const treeNav = document.querySelector('.tree-nav');
-      if (!wrapper || !treeNav) return;
-      const wrapperWidth = wrapper.clientWidth;
-      const treeWidth = 680;
-      const scale = Math.min(1, wrapperWidth / treeWidth);
-      treeNav.style.transform = `scale(${scale})`;
-      wrapper.style.height = (520 * scale) + 'px';
-    }
-    scaleTree();
-    window.addEventListener('resize', scaleTree);
+    // === Keep the impact teaser numbers live from the same OpenAlex data as /impact ===
+    (async function () {
+      try {
+        const resp = await fetch('data/impact-data.json', { cache: 'no-store' });
+        const s = (await resp.json()).summary || {};
+        const map = {
+          citations: s.total_citations,
+          countries: s.countries_reached,
+          disciplines: s.disciplines_impacted,
+        };
+        document.querySelectorAll('.impact-numbers .value[data-impact]').forEach(el => {
+          const v = map[el.dataset.impact];
+          if (v != null) el.textContent = v.toLocaleString();
+        });
+      } catch (e) { /* static fallbacks remain */ }
+    })();
 
-    document.querySelectorAll('.service-card, .team-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease, background 0.35s, border-color 0.35s, box-shadow 0.35s';
-      observer.observe(el);
-    });
+    // === Living petri dish: colonies grow in over time, and you can inoculate your own ===
+    (function () {
+      const svg = document.getElementById('petri');
+      const layer = document.getElementById('petriColonies');
+      if (!svg || !layer) return;
+
+      const NS = 'http://www.w3.org/2000/svg';
+      const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const css = getComputedStyle(document.documentElement);
+      const tok = (n, f) => (css.getPropertyValue(n).trim() || f);
+      const INK = tok('--ink', '#302a22');
+      const TANNIN = tok('--tannin', '#7c4e2b');
+      const MOSS = tok('--moss-deep', '#3f5a3a');
+      const OCHRE = tok('--ochre', '#b07c39');
+      const PALETTE = [INK, TANNIN, MOSS, OCHRE, TANNIN];
+
+      const CENTER = 160, AGAR_R = 132;
+      const rand = (a, b) => a + Math.random() * (b - a);
+      const pick = (arr) => arr[(Math.random() * arr.length) | 0];
+
+      function e(name, attrs) {
+        const node = document.createElementNS(NS, name);
+        for (const k in attrs) node.setAttribute(k, attrs[k]);
+        return node;
+      }
+
+      // Morphologies: return SVG children centered at (0,0), sized to radius R.
+      function filament(R, color) {
+        const out = [];
+        const n = 13 + ((Math.random() * 4) | 0);
+        for (let i = 0; i < n; i++) {
+          const a = (i / n) * Math.PI * 2 + rand(-0.12, 0.12);
+          const len = R * rand(0.85, 1.35);
+          out.push(e('line', { x1: 0, y1: 0, x2: (Math.cos(a) * len).toFixed(1), y2: (Math.sin(a) * len).toFixed(1), stroke: INK, 'stroke-width': 0.6, 'stroke-linecap': 'round', opacity: 0.5 }));
+        }
+        out.push(e('circle', { r: (R * 0.5).toFixed(1), fill: color, 'fill-opacity': 0.75 }));
+        out.push(e('circle', { r: (R * 0.22).toFixed(1), fill: TANNIN }));
+        return out;
+      }
+      function concentric(R, color) {
+        return [
+          e('circle', { r: R.toFixed(1), fill: 'none', stroke: color, 'stroke-width': 0.6, 'stroke-opacity': 0.4 }),
+          e('circle', { r: (R * 0.68).toFixed(1), fill: 'none', stroke: color, 'stroke-width': 0.8, 'stroke-opacity': 0.6 }),
+          e('circle', { r: (R * 0.42).toFixed(1), fill: color, 'fill-opacity': 0.35 }),
+          e('circle', { r: (R * 0.2).toFixed(1), fill: INK, 'fill-opacity': 0.8 }),
+        ];
+      }
+      function smooth(R, color) {
+        return [
+          e('circle', { r: R.toFixed(1), fill: color, 'fill-opacity': 0.5 }),
+          e('circle', { r: (R * 0.68).toFixed(1), fill: color, 'fill-opacity': 0.82 }),
+          e('circle', { r: (R * 0.36).toFixed(1), fill: color }),
+          e('circle', { cx: (-R * 0.16).toFixed(1), cy: (-R * 0.16).toFixed(1), r: (R * 0.12).toFixed(1), fill: 'var(--parchment-mid)', 'fill-opacity': 0.45 }),
+        ];
+      }
+      function stippled(R, color) {
+        const out = [];
+        const n = 12 + ((Math.random() * 6) | 0);
+        for (let i = 0; i < n; i++) {
+          const a = Math.random() * Math.PI * 2, rr = Math.sqrt(Math.random()) * R;
+          out.push(e('circle', { cx: (Math.cos(a) * rr).toFixed(1), cy: (Math.sin(a) * rr).toFixed(1), r: rand(1, 2.6).toFixed(1), fill: color, 'fill-opacity': rand(0.5, 0.9).toFixed(2) }));
+        }
+        return out;
+      }
+      const MORPHS = [filament, concentric, smooth, stippled];
+
+      function inoculate(cx, cy, opts) {
+        opts = opts || {};
+        const R = opts.R != null ? opts.R : rand(11, 22);
+        const color = opts.color || pick(PALETTE);
+        const morph = opts.morph || pick(MORPHS);
+        const pos = e('g', { transform: `translate(${cx.toFixed(1)} ${cy.toFixed(1)})` });
+        pos.style.transition = 'opacity 1.4s ease-out';
+        const grow = e('g', { class: 'colony-grow' });
+        grow.style.setProperty('--grow', (opts.grow != null ? opts.grow : rand(7, 11)).toFixed(2) + 's');
+        grow.style.setProperty('--delay', (opts.delay || 0).toFixed(2) + 's');
+        morph(R, color).forEach((c) => grow.appendChild(c));
+        pos.appendChild(grow);
+        layer.appendChild(pos);
+        return pos;
+      }
+
+      // Spaced-out random inoculation points within the agar.
+      function scatter(n) {
+        const pts = [];
+        let tries = 0;
+        while (pts.length < n && tries < n * 40) {
+          tries++;
+          const a = Math.random() * Math.PI * 2, r = Math.sqrt(Math.random()) * (AGAR_R - 30);
+          const x = CENTER + Math.cos(a) * r, y = CENTER + Math.sin(a) * r;
+          if (pts.every((p) => Math.hypot(p.x - x, p.y - y) > 48)) pts.push({ x, y });
+        }
+        return pts;
+      }
+
+      let generation = [];
+      function clearGeneration() {
+        generation.forEach((g) => { g.style.opacity = '0'; setTimeout(() => g.remove(), 1500); });
+        generation = [];
+      }
+      function seedGeneration() {
+        generation = scatter(5).map((p, i) => inoculate(p.x, p.y, { delay: i * 0.5 }));
+      }
+
+      // Click / tap the agar to add your own colony.
+      svg.addEventListener('click', (ev) => {
+        const p = new DOMPoint(ev.clientX, ev.clientY).matrixTransform(svg.getScreenCTM().inverse());
+        if (Math.hypot(p.x - CENTER, p.y - CENTER) > AGAR_R - 6) return;
+        generation.push(inoculate(p.x, p.y, { delay: 0, R: rand(12, 20) }));
+      });
+
+      if (REDUCE) { seedGeneration(); return; } // one static plate, no time-lapse loop
+
+      // Ambient time-lapse: reseed the plate on a cycle, only while it's on screen.
+      let timer = null;
+      function start() {
+        if (timer) return;
+        if (!generation.length) seedGeneration();
+        timer = setInterval(() => { clearGeneration(); seedGeneration(); }, 17000);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      new IntersectionObserver((entries) => {
+        entries.forEach((en) => (en.isIntersecting ? start() : stop()));
+      }, { threshold: 0.25 }).observe(svg);
+      document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); else start(); });
+    })();
   </script>
+
+  <!-- Intro sequence: clone the header logo, grow the network left-to-right, fade the wordmark in, then dissolve. -->
+  <script>
+    (function () {
+      var intro = document.getElementById('intro');
+      if (!intro) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var seen = false;
+      try { seen = sessionStorage.getItem('phylaIntroSeen'); } catch (e) {}
+      var src = document.querySelector('.site-header .wordmark-svg');
+      if (reduce || seen || !src || !document.body.animate) { intro.remove(); return; }
+      try { sessionStorage.setItem('phylaIntroSeen', '1'); } catch (e) {}
+
+      var logo = src.cloneNode(true);
+      logo.removeAttribute('class');
+      logo.setAttribute('id', 'introLogo');
+      intro.appendChild(logo);
+      intro.classList.add('run');
+      document.body.classList.add('intro-lock');
+
+      var edges = [].slice.call(logo.querySelectorAll('path'));
+      var nodes = [].slice.call(logo.querySelectorAll('circle'));
+      var texts = [].slice.call(logo.querySelectorAll('text'));
+      var EASE = 'cubic-bezier(0.4, 0, 0.2, 1)';
+      var maxEnd = 0;
+
+      edges.forEach(function (p) {
+        var L = p.getTotalLength();
+        p.style.strokeDasharray = L;
+        p.style.strokeDashoffset = L;
+        var x = 0; try { x = p.getPointAtLength(0).x; } catch (e) {}
+        var delay = 240 + Math.max(0, x) / 135 * 620;
+        p.animate([{ strokeDashoffset: L }, { strokeDashoffset: 0 }],
+          { duration: 640, delay: delay, easing: EASE, fill: 'forwards' });
+        maxEnd = Math.max(maxEnd, delay + 640);
+      });
+      nodes.forEach(function (c) {
+        c.style.opacity = '0';
+        var cx = parseFloat(c.getAttribute('cx')) || 0;
+        var delay = 120 + (cx + 2) / 135 * 740;
+        c.animate([{ opacity: 0, transform: 'scale(0.1)' }, { opacity: 1, transform: 'scale(1)' }],
+          { duration: 420, delay: delay, easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)', fill: 'forwards' });
+        maxEnd = Math.max(maxEnd, delay + 420);
+      });
+      var wordDelay = maxEnd + 60;
+      texts.forEach(function (t, i) {
+        t.style.opacity = '0';
+        t.animate([{ opacity: 0, transform: 'translateX(-10px)' }, { opacity: 1, transform: 'translateX(0)' }],
+          { duration: 520, delay: wordDelay + i * 140, easing: 'ease', fill: 'forwards' });
+      });
+
+      var holdEnd = wordDelay + texts.length * 140 + 520 + 650;
+      function cleanup() { document.body.classList.remove('intro-lock'); if (intro.parentNode) intro.remove(); }
+      setTimeout(function () {
+        var f = intro.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, easing: 'ease', fill: 'forwards' });
+        if (f.finished) { f.finished.then(cleanup, cleanup); } else { setTimeout(cleanup, 620); }
+      }, holdEnd);
+      setTimeout(cleanup, holdEnd + 2500); // safety: never trap the page
+    })();
+  </script>
+
+  <!-- GSAP (vendored locally, no CDN dependency) drives the shared header shrink -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="header-scroll.js"></script>
 </body>
 </html>
