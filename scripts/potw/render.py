@@ -671,6 +671,10 @@ def render_announcement(ann: dict) -> str:
   </footer>
 
 {TEASER_SCRIPT}
+  <!-- GSAP (vendored locally, no CDN dependency) drives the shared header shrink -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="header-scroll.js"></script>
 </body>
 </html>
 """
@@ -1639,6 +1643,10 @@ def render_catalogue(preview: bool = False) -> str:
 
 {CATALOGUE_SCRIPT}
 {CATALOGUE_TREE_SCRIPT}
+  <!-- GSAP (vendored locally, no CDN dependency) drives the shared header shrink -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="header-scroll.js"></script>
 </body>
 </html>
 """
@@ -1781,6 +1789,10 @@ def render_field_guide() -> str:
       </div>
     </div>
   </footer>
+  <!-- GSAP (vendored locally, no CDN dependency) drives the shared header shrink -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="header-scroll.js"></script>
 </body>
 </html>
 """
@@ -2011,6 +2023,10 @@ def render_page(issue: dict, issues: list[dict]) -> str:
 {TIMELINE_SCRIPT}
 {REVEAL_SCRIPT}
 {structure_script}
+  <!-- GSAP (vendored locally, no CDN dependency) drives the shared header shrink -->
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="header-scroll.js"></script>
 </body>
 </html>
 """
