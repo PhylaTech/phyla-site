@@ -12,13 +12,13 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Phyla Technologies, MLOps for Life Sciences">
-  <meta property="og:description" content="Machine learning infrastructure for biotech, in the lineage of natural-products science.">
+  <meta property="og:description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
   <meta property="og:url" content="https://phylatech.com">
   <meta property="og:site_name" content="Phyla Technologies">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Phyla Technologies, MLOps for Life Sciences">
-  <meta name="twitter:description" content="Machine learning infrastructure for biotech, in the lineage of natural-products science.">
+  <meta name="twitter:description" content="Phyla Technologies builds and operates machine learning infrastructure for life sciences companies, from data pipelines to production model deployment.">
 
   <meta name="view-transition" content="same-origin">
 
@@ -160,34 +160,40 @@
       from { opacity: 0; transform: translateY(2px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    /* One weighty signal per branch, travelling root -> leaves in a staged wave
-       (the live site's pulse, in the new palette). One bead per edge, not a dash train. */
+    /* The live site's signal cascade, in the new palette: one soft bead per edge,
+       travelling root -> hidden -> leaves. Each pulse path carries pathLength="100"
+       so a single bead sweeps it regardless of the path's real length. */
     .pulse {
       fill: none;
       stroke: var(--tannin);
-      stroke-width: 3;
+      stroke-width: 2.8;
       stroke-linecap: round;
-      stroke-dasharray: 10 800;
-      stroke-dashoffset: 220;
+      stroke-dasharray: 3.5 96.5;
+      stroke-dashoffset: 100;
       opacity: 0;
       filter: url(#pulseBlur);
     }
     .phylo-animate .pulse { animation: pulse-travel 3s ease-in-out infinite; }
     @keyframes pulse-travel {
-      0%   { stroke-dashoffset: 220; opacity: 0; }
-      4%   { opacity: 0.85; }
-      55%  { opacity: 0.85; }
-      75%  { stroke-dashoffset: -20; opacity: 0; }
-      100% { stroke-dashoffset: -20; opacity: 0; }
+      0%   { stroke-dashoffset: 100; opacity: 0; }
+      3%   { opacity: 0.8; }
+      55%  { opacity: 0.8; }
+      75%  { stroke-dashoffset: -4; opacity: 0; }
+      100% { stroke-dashoffset: -4; opacity: 0; }
     }
-    /* Scoped under .phylo-animate so they match the animation rule's specificity
-       and win by source order (otherwise its shorthand resets delay to 0 and the wave collapses). */
+    /* Scoped under .phylo-animate so the animation shorthand doesn't reset the delays.
+       Root pulses fire first (0 - 0.3s); leaf pulses follow once they arrive (~1.2 - 1.7s). */
     .phylo-animate .pulse-r1  { animation-delay: 0s; }
-    .phylo-animate .pulse-r2  { animation-delay: 0.2s; }
-    .phylo-animate .pulse-h1a { animation-delay: 1.1s; }
-    .phylo-animate .pulse-h1b { animation-delay: 1.25s; }
-    .phylo-animate .pulse-h2a { animation-delay: 1.4s; }
-    .phylo-animate .pulse-h2b { animation-delay: 1.55s; }
+    .phylo-animate .pulse-r2  { animation-delay: 0.3s; }
+    .phylo-animate .pulse-r3  { animation-delay: 0.15s; }
+    .phylo-animate .pulse-h1a { animation-delay: 1.2s; }
+    .phylo-animate .pulse-h1b { animation-delay: 1.4s; }
+    .phylo-animate .pulse-h2a { animation-delay: 1.5s; }
+    .phylo-animate .pulse-h2b { animation-delay: 1.3s; }
+    .phylo-animate .pulse-h2c { animation-delay: 1.6s; }
+    .phylo-animate .pulse-h2d { animation-delay: 1.7s; }
+    .phylo-animate .pulse-h3a { animation-delay: 1.35s; }
+    .phylo-animate .pulse-h3b { animation-delay: 1.55s; }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -644,19 +650,20 @@
             <title id="phyloTitle">Phyla capabilities, branched from a common root</title>
             <desc id="phyloDesc">A phylogenetic-style diagram with the Phyla root on the left and four service capabilities as leaves on the right: MLOps and Pipelines, Bio and Cheminformatics, Dashboards and Analytics, and Bespoke Software.</desc>
             <defs>
-              <!-- Soft halo + denser core, so each travelling signal reads with weight. -->
+              <!-- Soft halo (blur 3) merged with a sharper core (blur 1 of the source),
+                   so each travelling signal reads with weight. Ported from the live site. -->
               <filter id="pulseBlur" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="3" result="halo" />
-                <feGaussianBlur stdDeviation="1" result="core" />
+                <feGaussianBlur stdDeviation="3" result="softBlur" />
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="sharpBlur" />
                 <feMerge>
-                  <feMergeNode in="halo" />
-                  <feMergeNode in="core" />
+                  <feMergeNode in="softBlur" />
+                  <feMergeNode in="sharpBlur" />
                 </feMerge>
               </filter>
             </defs>
 
             <!-- Root tick -->
-            <line class="phylo-branch" x1="36" y1="210" x2="80" y2="210" style="--len: 44; --delay: 0ms;" />
+            <line class="phylo-branch" x1="36" y1="210" x2="80" y2="210" pathLength="1" style="--len: 1; --delay: 0ms;" />
 
             <!-- Root label, italic Phyla -->
             <text class="phylo-root-label" x="36" y="200" text-anchor="start" style="--delay: 0ms;">
@@ -664,38 +671,40 @@
             </text>
 
             <!-- Root node -->
-            <circle class="phylo-node" cx="80" cy="210" r="3.5" style="--delay: 0ms;" />
+            <circle class="phylo-node" cx="80" cy="210" r="4" style="--delay: 0ms;" />
 
-            <!-- Phyla → upper internal node (90, services 1+2) -->
-            <path class="phylo-branch" d="M 80 210 C 130 210, 150 110, 200 110" style="--len: 170; --delay: 220ms;" />
-            <!-- Phyla → lower internal node (310, services 3+4) -->
-            <path class="phylo-branch" d="M 80 210 C 130 210, 150 310, 200 310" style="--len: 170; --delay: 220ms;" />
+            <!-- Root → three hidden nodes -->
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 96, 210 96"   pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 210, 210 210" pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
+            <path class="phylo-branch" d="M 80 210 C 130 210, 165 324, 210 324" pathLength="1" style="--len: 1; --delay: 160ms; opacity: 0.5;" />
 
-            <!-- Internal nodes -->
-            <circle class="phylo-node" cx="200" cy="110" r="3" style="--delay: 480ms;" />
-            <circle class="phylo-node" cx="200" cy="310" r="3" style="--delay: 480ms;" />
+            <!-- Hidden nodes -->
+            <circle class="phylo-node" cx="210" cy="96"  r="3.2" style="--delay: 360ms;" />
+            <circle class="phylo-node" cx="210" cy="210" r="3.2" style="--delay: 360ms;" />
+            <circle class="phylo-node" cx="210" cy="324" r="3.2" style="--delay: 360ms;" />
 
-            <!-- Internal label upper: "Computation" -->
-            <text class="phylo-label muted" x="200" y="92" text-anchor="middle" style="--delay: 480ms; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-variation-settings: 'wght' 500;">Computation</text>
-            <!-- Internal label lower: "Stewardship" -->
-            <text class="phylo-label muted" x="200" y="335" text-anchor="middle" style="--delay: 480ms; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-variation-settings: 'wght' 500;">Stewardship</text>
+            <!-- Hidden → leaves: each leaf is fed by two hidden nodes (the live partial network) -->
+            <path class="phylo-branch" d="M 210 96 C 260 96, 290 56, 340 56"     pathLength="1" style="--len: 1; --delay: 440ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 96 C 260 96, 290 162, 340 162"   pathLength="1" style="--len: 1; --delay: 480ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 56, 340 56"   pathLength="1" style="--len: 1; --delay: 480ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 162, 340 162" pathLength="1" style="--len: 1; --delay: 520ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 256, 340 256" pathLength="1" style="--len: 1; --delay: 520ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 210 C 260 210, 290 364, 340 364" pathLength="1" style="--len: 1; --delay: 560ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 324 C 260 324, 290 256, 340 256" pathLength="1" style="--len: 1; --delay: 560ms; opacity: 0.32;" />
+            <path class="phylo-branch" d="M 210 324 C 260 324, 290 364, 340 364" pathLength="1" style="--len: 1; --delay: 600ms; opacity: 0.32;" />
 
-            <!-- Upper internal → leaf 1 (MLOps, top) -->
-            <path class="phylo-branch" d="M 200 110 C 250 110, 290 56, 340 56" style="--len: 168; --delay: 540ms;" />
-            <!-- Upper internal → leaf 2 (Bio/Chem informatics) -->
-            <path class="phylo-branch" d="M 200 110 C 250 110, 290 162, 340 162" style="--len: 168; --delay: 600ms;" />
-            <!-- Lower internal → leaf 3 (Dashboards) -->
-            <path class="phylo-branch" d="M 200 310 C 250 310, 290 256, 340 256" style="--len: 168; --delay: 660ms;" />
-            <!-- Lower internal → leaf 4 (Bespoke Software) -->
-            <path class="phylo-branch" d="M 200 310 C 250 310, 290 364, 340 364" style="--len: 168; --delay: 720ms;" />
-
-            <!-- One signal per branch, staged root -> internal -> leaves (starts at phyla, spans out) -->
-            <path class="pulse pulse-r1"  d="M 80 210 C 130 210, 150 110, 200 110" />
-            <path class="pulse pulse-r2"  d="M 80 210 C 130 210, 150 310, 200 310" />
-            <path class="pulse pulse-h1a" d="M 200 110 C 250 110, 290 56, 340 56" />
-            <path class="pulse pulse-h1b" d="M 200 110 C 250 110, 290 162, 340 162" />
-            <path class="pulse pulse-h2a" d="M 200 310 C 250 310, 290 256, 340 256" />
-            <path class="pulse pulse-h2b" d="M 200 310 C 250 310, 290 364, 340 364" />
+            <!-- Pulses: the staged signal cascade (root pulses fire first, then leaf pulses). -->
+            <path class="pulse pulse-r1"  d="M 80 210 C 130 210, 165 96, 210 96"   pathLength="100" />
+            <path class="pulse pulse-r2"  d="M 80 210 C 130 210, 165 210, 210 210" pathLength="100" />
+            <path class="pulse pulse-r3"  d="M 80 210 C 130 210, 165 324, 210 324" pathLength="100" />
+            <path class="pulse pulse-h1a" d="M 210 96 C 260 96, 290 56, 340 56"     pathLength="100" />
+            <path class="pulse pulse-h1b" d="M 210 96 C 260 96, 290 162, 340 162"   pathLength="100" />
+            <path class="pulse pulse-h2a" d="M 210 210 C 260 210, 290 56, 340 56"   pathLength="100" />
+            <path class="pulse pulse-h2b" d="M 210 210 C 260 210, 290 162, 340 162" pathLength="100" />
+            <path class="pulse pulse-h2c" d="M 210 210 C 260 210, 290 256, 340 256" pathLength="100" />
+            <path class="pulse pulse-h2d" d="M 210 210 C 260 210, 290 364, 340 364" pathLength="100" />
+            <path class="pulse pulse-h3a" d="M 210 324 C 260 324, 290 256, 340 256" pathLength="100" />
+            <path class="pulse pulse-h3b" d="M 210 324 C 260 324, 290 364, 340 364" pathLength="100" />
 
             <!-- Leaf nodes (clickable links) -->
             <a href="#capabilities" class="phylo-leaf-link" aria-label="MLOps and Pipelines">
