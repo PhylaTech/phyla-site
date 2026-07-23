@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-22T08:40:27.693309+00:00",
+  "generated_at": "2026-07-23T13:31:35.858689+00:00",
   "summary": {
-    "total_citations": 2486,
+    "total_citations": 2487,
     "countries_reached": 76,
-    "citing_institutions": 3453,
+    "citing_institutions": 3459,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -39,7 +39,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 401,
+      "cited_by_count": 402,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -355,16 +355,16 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 966,
-      "institutions": 685
+      "citations": 967,
+      "institutions": 686
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 523,
-      "institutions": 626
+      "citations": 522,
+      "institutions": 630
     },
     {
       "country": "Germany",
@@ -372,7 +372,7 @@
       "lat": 51.2,
       "lon": 10.4,
       "citations": 289,
-      "institutions": 175
+      "institutions": 176
     },
     {
       "country": "United Kingdom",
@@ -404,7 +404,7 @@
       "lat": 46.2,
       "lon": 2.2,
       "citations": 117,
-      "institutions": 184
+      "institutions": 186
     },
     {
       "country": "Netherlands",
@@ -420,7 +420,7 @@
       "lat": -25.3,
       "lon": 133.8,
       "citations": 95,
-      "institutions": 86
+      "institutions": 85
     },
     {
       "country": "Switzerland",
@@ -436,7 +436,7 @@
       "lat": -14.2,
       "lon": -51.9,
       "citations": 84,
-      "institutions": 66
+      "institutions": 67
     },
     {
       "country": "Spain",
@@ -467,8 +467,8 @@
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 63,
-      "institutions": 54
+      "citations": 64,
+      "institutions": 55
     },
     {
       "country": "Japan",
@@ -599,12 +599,20 @@
       "institutions": 15
     },
     {
+      "country": "Ireland",
+      "country_code": "IE",
+      "lat": 53.1,
+      "lon": -7.7,
+      "citations": 22,
+      "institutions": 21
+    },
+    {
       "country": "Egypt",
       "country_code": "EG",
       "lat": 26.8,
       "lon": 30.8,
       "citations": 22,
-      "institutions": 21
+      "institutions": 22
     },
     {
       "country": "Iran",
@@ -612,15 +620,7 @@
       "lat": 32.4,
       "lon": 53.7,
       "citations": 21,
-      "institutions": 31
-    },
-    {
-      "country": "Ireland",
-      "country_code": "IE",
-      "lat": 53.1,
-      "lon": -7.7,
-      "citations": 21,
-      "institutions": 20
+      "institutions": 32
     },
     {
       "country": "Greece",
@@ -635,7 +635,7 @@
       "country_code": "TW",
       "lat": 23.7,
       "lon": 121.0,
-      "citations": 19,
+      "citations": 20,
       "institutions": 33
     },
     {
@@ -671,20 +671,20 @@
       "institutions": 11
     },
     {
+      "country": "Hungary",
+      "country_code": "HU",
+      "lat": 47.2,
+      "lon": 19.5,
+      "citations": 13,
+      "institutions": 16
+    },
+    {
       "country": "Pakistan",
       "country_code": "PK",
       "lat": 30.4,
       "lon": 69.3,
       "citations": 13,
       "institutions": 13
-    },
-    {
-      "country": "Hungary",
-      "country_code": "HU",
-      "lat": 47.2,
-      "lon": 19.5,
-      "citations": 12,
-      "institutions": 15
     },
     {
       "country": "Malaysia",
@@ -868,7 +868,7 @@
       "lat": -1.8,
       "lon": -78.2,
       "citations": 3,
-      "institutions": 8
+      "institutions": 7
     },
     {
       "country": "Iraq",
@@ -989,18 +989,18 @@
       "citations": 50
     },
     {
+      "name": "University of California San Diego",
+      "lat": 32.71571,
+      "lon": -117.16472,
+      "country_code": "US",
+      "citations": 46
+    },
+    {
       "name": "Johannes Gutenberg University Mainz",
       "lat": 49.98419,
       "lon": 8.2791,
       "country_code": "DE",
       "citations": 46
-    },
-    {
-      "name": "University of California San Diego",
-      "lat": 32.71571,
-      "lon": -117.16472,
-      "country_code": "US",
-      "citations": 44
     },
     {
       "name": "Harvard University",
@@ -1276,6 +1276,13 @@
       "citations": 20
     },
     {
+      "name": "University of Michigan",
+      "lat": 42.27756,
+      "lon": -83.74088,
+      "country_code": "US",
+      "citations": 20
+    },
+    {
       "name": "University of Vienna",
       "lat": 48.20849,
       "lon": 16.37208,
@@ -1342,13 +1349,6 @@
       "name": "University of Illinois Chicago",
       "lat": 41.85003,
       "lon": -87.65005,
-      "country_code": "US",
-      "citations": 17
-    },
-    {
-      "name": "University of Michigan",
-      "lat": 42.27756,
-      "lon": -83.74088,
       "country_code": "US",
       "citations": 17
     },
@@ -1619,6 +1619,13 @@
       "citations": 13
     },
     {
+      "name": "The University of Queensland",
+      "lat": -27.46794,
+      "lon": 153.02809,
+      "country_code": "AU",
+      "citations": 13
+    },
+    {
       "name": "German Center for Infection Research",
       "lat": 52.26594,
       "lon": 10.52673,
@@ -1644,6 +1651,13 @@
       "lat": 52.37403,
       "lon": 4.88969,
       "country_code": "NL",
+      "citations": 13
+    },
+    {
+      "name": "Stanford Medicine",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
       "citations": 13
     },
     {
@@ -1724,13 +1738,6 @@
       "citations": 12
     },
     {
-      "name": "The University of Queensland",
-      "lat": -27.46794,
-      "lon": 153.02809,
-      "country_code": "AU",
-      "citations": 12
-    },
-    {
       "name": "Karolinska Institutet",
       "lat": 59.32938,
       "lon": 18.06871,
@@ -1777,13 +1784,6 @@
       "lat": 40.416500091552734,
       "lon": -3.7025599479675293,
       "country_code": "ES",
-      "citations": 12
-    },
-    {
-      "name": "Stanford Medicine",
-      "lat": 37.42411,
-      "lon": -122.16608,
-      "country_code": "US",
       "citations": 12
     },
     {
@@ -1934,13 +1934,6 @@
       "citations": 10
     },
     {
-      "name": "Wisconsin Institutes for Discovery",
-      "lat": 43.07303237915039,
-      "lon": -89.40760803222656,
-      "country_code": "US",
-      "citations": 10
-    },
-    {
       "name": "Union Hospital",
       "lat": 22.360681533813477,
       "lon": 114.17512512207031,
@@ -1966,6 +1959,13 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
+      "citations": 10
+    },
+    {
+      "name": "Wisconsin Institutes for Discovery",
+      "lat": 43.07303237915039,
+      "lon": -89.40760803222656,
+      "country_code": "US",
       "citations": 10
     },
     {
@@ -2014,63 +2014,63 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 924,
-      "color": "#14B8A6"
+      "count": 925,
+      "color": "#6E4B2A"
     },
     {
       "name": "Medicine",
       "count": 667,
-      "color": "#0891B2"
+      "color": "#5C6E4A"
     },
     {
       "name": "Agricultural and Biological Sciences",
       "count": 220,
-      "color": "#0EA5E9"
+      "color": "#B07C39"
     },
     {
       "name": "Computer Science",
       "count": 189,
-      "color": "#3B82F6"
+      "color": "#9A553B"
     },
     {
       "name": "Environmental Science",
       "count": 128,
-      "color": "#8B5CF6"
+      "color": "#7A6A3E"
     },
     {
       "name": "Chemistry",
       "count": 76,
-      "color": "#A78BFA"
+      "color": "#47603F"
     },
     {
       "name": "Immunology and Microbiology",
       "count": 68,
-      "color": "#2DD4BF"
+      "color": "#8E9A6E"
     },
     {
       "name": "Engineering",
       "count": 30,
-      "color": "#06B6D4"
+      "color": "#C39A5C"
     },
     {
       "name": "Materials Science",
       "count": 19,
-      "color": "#60A5FA"
+      "color": "#5A4632"
     },
     {
       "name": "Neuroscience",
       "count": 14,
-      "color": "#7C3AED"
+      "color": "#A06A3C"
     },
     {
       "name": "Nursing",
       "count": 11,
-      "color": "#34D399"
+      "color": "#6B7357"
     },
     {
       "name": "Pharmacology, Toxicology and Pharmaceutics",
       "count": 11,
-      "color": "#F59E0B"
+      "color": "#7E4A2E"
     },
     {
       "name": "Other Disciplines",
@@ -2115,7 +2115,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 401,
+        "citations": 402,
         "year": 2022
       },
       {
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 894,
+        "citations": 895,
         "year": 2021
       },
       {
@@ -2315,7 +2315,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 332,
+        "citations": 333,
         "year": 2022
       },
       {
@@ -2339,7 +2339,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 273,
+        "citations": 274,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1077,
+        "citations": 1081,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 389,
+        "citations": 391,
         "year": 2025
       },
       {
@@ -2387,7 +2387,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 190,
+        "citations": 191,
         "year": 2024
       },
       {
@@ -2403,7 +2403,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2024
       },
       {
@@ -2423,12 +2423,12 @@
         "year": 2025
       },
       {
-        "id": "W4406572846",
-        "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "id": "W4402465580",
+        "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
+        "field": "Medicine",
         "type": "citing",
         "citations": 76,
-        "year": 2025
+        "year": 2024
       },
       {
         "id": "W4283726298",
@@ -2467,7 +2467,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 192,
+        "citations": 193,
         "year": 2022
       },
       {
@@ -2483,7 +2483,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 120,
+        "citations": 121,
         "year": 2022
       },
       {
@@ -2547,7 +2547,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 90,
+        "citations": 91,
         "year": 2023
       },
       {
@@ -2595,7 +2595,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 76,
+        "citations": 77,
         "year": 2024
       },
       {
@@ -2643,7 +2643,7 @@
         "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 110,
+        "citations": 111,
         "year": 2020
       },
       {
@@ -2691,7 +2691,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 200,
+        "citations": 201,
         "year": 2021
       },
       {
@@ -2699,7 +2699,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 135,
+        "citations": 136,
         "year": 2022
       },
       {
@@ -2755,7 +2755,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 70,
+        "citations": 71,
         "year": 2024
       },
       {
@@ -2779,7 +2779,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 862,
+        "citations": 864,
         "year": 2021
       },
       {
@@ -2827,7 +2827,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 175,
+        "citations": 177,
         "year": 2022
       },
       {
@@ -2859,7 +2859,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 54,
+        "citations": 55,
         "year": 2023
       },
       {
@@ -2891,7 +2891,7 @@
         "label": "Natural Products as a Foundation for Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 136,
+        "citations": 137,
         "year": 2019
       },
       {
@@ -3083,7 +3083,7 @@
         "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 24,
+        "citations": 25,
         "year": 2024
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4901,
+        "citations": 4905,
         "year": 2017
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5122,
+        "citations": 5126,
         "year": 2021
       },
       {
@@ -3479,17 +3479,17 @@
         "year": 2026
       },
       {
-        "id": "W4414553450",
-        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
-        "field": "Medicine",
+        "id": "W4411012216",
+        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
+        "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 2,
         "year": 2025
       },
       {
-        "id": "W4411012216",
-        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
-        "field": "Agricultural and Biological Sciences",
+        "id": "W4414553450",
+        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
+        "field": "Medicine",
         "type": "citing",
         "citations": 2,
         "year": 2025
@@ -3581,7 +3581,7 @@
       },
       {
         "source": "W4386607677",
-        "target": "W4406572846",
+        "target": "W4402465580",
         "strength": 0.5
       },
       {
@@ -4351,12 +4351,12 @@
       },
       {
         "source": "W4386446289",
-        "target": "W4414553450",
+        "target": "W4411012216",
         "strength": 0.5
       },
       {
         "source": "W4386446289",
-        "target": "W4411012216",
+        "target": "W4414553450",
         "strength": 0.5
       },
       {
@@ -4372,14 +4372,14 @@
     ]
   },
   "field_colors": {
-    "Agricultural and Biological Sciences": "#14B8A6",
-    "Biochemistry, Genetics and Molecular Biology": "#0891B2",
-    "Chemistry": "#0EA5E9",
-    "Computer Science": "#3B82F6",
-    "Engineering": "#8B5CF6",
-    "Environmental Science": "#A78BFA",
-    "Immunology and Microbiology": "#2DD4BF",
-    "Materials Science": "#06B6D4",
-    "Medicine": "#60A5FA"
+    "Agricultural and Biological Sciences": "#6E4B2A",
+    "Biochemistry, Genetics and Molecular Biology": "#5C6E4A",
+    "Chemistry": "#B07C39",
+    "Computer Science": "#9A553B",
+    "Engineering": "#7A6A3E",
+    "Environmental Science": "#47603F",
+    "Immunology and Microbiology": "#8E9A6E",
+    "Materials Science": "#C39A5C",
+    "Medicine": "#5A4632"
   }
 }
