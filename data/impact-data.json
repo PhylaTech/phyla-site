@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-29T08:52:42.677747+00:00",
+  "generated_at": "2026-07-30T08:41:58.664693+00:00",
   "summary": {
     "total_citations": 2498,
     "countries_reached": 76,
-    "citing_institutions": 3467,
+    "citing_institutions": 3471,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 528,
-      "institutions": 634
+      "citations": 529,
+      "institutions": 635
     },
     {
       "country": "Germany",
@@ -379,7 +379,7 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 199,
+      "citations": 200,
       "institutions": 164
     },
     {
@@ -396,7 +396,7 @@
       "lat": 20.6,
       "lon": 78.9,
       "citations": 121,
-      "institutions": 146
+      "institutions": 147
     },
     {
       "country": "France",
@@ -567,20 +567,20 @@
       "institutions": 15
     },
     {
+      "country": "Mexico",
+      "country_code": "MX",
+      "lat": 23.6,
+      "lon": -102.6,
+      "citations": 25,
+      "institutions": 19
+    },
+    {
       "country": "Norway",
       "country_code": "NO",
       "lat": 60.5,
       "lon": 8.5,
       "citations": 24,
       "institutions": 19
-    },
-    {
-      "country": "Mexico",
-      "country_code": "MX",
-      "lat": 23.6,
-      "lon": -102.6,
-      "citations": 24,
-      "institutions": 18
     },
     {
       "country": "Singapore",
@@ -671,20 +671,20 @@
       "institutions": 11
     },
     {
+      "country": "Pakistan",
+      "country_code": "PK",
+      "lat": 30.4,
+      "lon": 69.3,
+      "citations": 14,
+      "institutions": 13
+    },
+    {
       "country": "Hungary",
       "country_code": "HU",
       "lat": 47.2,
       "lon": 19.5,
       "citations": 13,
       "institutions": 16
-    },
-    {
-      "country": "Pakistan",
-      "country_code": "PK",
-      "lat": 30.4,
-      "lon": 69.3,
-      "citations": 13,
-      "institutions": 13
     },
     {
       "country": "Malaysia",
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 900,
+        "citations": 902,
         "year": 2021
       },
       {
@@ -2339,7 +2339,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 274,
+        "citations": 275,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1087,
+        "citations": 1090,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 401,
+        "citations": 402,
         "year": 2025
       },
       {
@@ -2419,7 +2419,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 90,
+        "citations": 91,
         "year": 2025
       },
       {
@@ -2443,7 +2443,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 331,
+        "citations": 332,
         "year": 2022
       },
       {
@@ -2619,7 +2619,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 308,
+        "citations": 309,
         "year": 2020
       },
       {
@@ -2675,7 +2675,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 471,
+        "citations": 473,
         "year": 2023
       },
       {
@@ -2747,7 +2747,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 78,
+        "citations": 79,
         "year": 2023
       },
       {
@@ -2843,7 +2843,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 128,
+        "citations": 129,
         "year": 2021
       },
       {
@@ -2867,7 +2867,7 @@
         "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 43,
+        "citations": 44,
         "year": 2024
       },
       {
@@ -2875,7 +2875,7 @@
         "label": "Multi-Omic Single-Shot Technology for Integrated Proteome and Lipidome Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 41,
+        "citations": 42,
         "year": 2021
       },
       {
@@ -2883,7 +2883,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 309,
+        "citations": 310,
         "year": 2019
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 180,
+        "citations": 181,
         "year": 2024
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4918,
+        "citations": 4920,
         "year": 2017
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5150,
+        "citations": 5151,
         "year": 2021
       },
       {
@@ -3367,20 +3367,20 @@
         "year": 2022
       },
       {
+        "id": "W4411466233",
+        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 19,
+        "year": 2025
+      },
+      {
         "id": "W3214451869",
         "label": "Synthetic Biology Advanced Natural Product Discovery",
         "field": "Medicine",
         "type": "citing",
         "citations": 19,
         "year": 2021
-      },
-      {
-        "id": "W4411466233",
-        "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 18,
-        "year": 2025
       },
       {
         "id": "W3116478593",
@@ -4281,12 +4281,12 @@
       },
       {
         "source": "W2946278827",
-        "target": "W3214451869",
+        "target": "W4411466233",
         "strength": 0.5
       },
       {
         "source": "W2946278827",
-        "target": "W4411466233",
+        "target": "W3214451869",
         "strength": 0.5
       },
       {
