@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-31T09:12:55.193634+00:00",
+  "generated_at": "2026-08-01T08:31:47.498107+00:00",
   "summary": {
-    "total_citations": 2499,
+    "total_citations": 2501,
     "countries_reached": 76,
-    "citing_institutions": 3474,
+    "citing_institutions": 3472,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 416,
+      "cited_by_count": 418,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -356,7 +356,7 @@
       "lat": 39.8,
       "lon": -98.5,
       "citations": 968,
-      "institutions": 686
+      "institutions": 684
     },
     {
       "country": "China",
@@ -372,7 +372,7 @@
       "lat": 51.2,
       "lon": 10.4,
       "citations": 290,
-      "institutions": 176
+      "institutions": 175
     },
     {
       "country": "United Kingdom",
@@ -443,7 +443,7 @@
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 81,
+      "citations": 82,
       "institutions": 128
     },
     {
@@ -452,7 +452,7 @@
       "lat": 41.9,
       "lon": 12.6,
       "citations": 72,
-      "institutions": 86
+      "institutions": 87
     },
     {
       "country": "Denmark",
@@ -639,20 +639,20 @@
       "institutions": 33
     },
     {
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "lat": 23.4,
+      "lon": 53.8,
+      "citations": 17,
+      "institutions": 15
+    },
+    {
       "country": "Qatar",
       "country_code": "QA",
       "lat": 25.4,
       "lon": 51.2,
       "citations": 17,
       "institutions": 7
-    },
-    {
-      "country": "United Arab Emirates",
-      "country_code": "AE",
-      "lat": 23.4,
-      "lon": 53.8,
-      "citations": 16,
-      "institutions": 15
     },
     {
       "country": "Turkey",
@@ -1010,13 +1010,6 @@
       "citations": 41
     },
     {
-      "name": "Quantitative BioSciences",
-      "lat": 32.9898681640625,
-      "lon": -117.25956726074219,
-      "country_code": "US",
-      "citations": 40
-    },
-    {
       "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
       "lat": 39.9075,
       "lon": 116.39723,
@@ -1035,6 +1028,13 @@
       "lat": 55.67594,
       "lon": 12.56553,
       "country_code": "DK",
+      "citations": 39
+    },
+    {
+      "name": "Quantitative BioSciences",
+      "lat": 32.9898681640625,
+      "lon": -117.25956726074219,
+      "country_code": "US",
       "citations": 39
     },
     {
@@ -1654,17 +1654,17 @@
       "citations": 13
     },
     {
-      "name": "Utrecht University",
-      "lat": 52.09083,
-      "lon": 5.12222,
-      "country_code": "NL",
-      "citations": 13
-    },
-    {
       "name": "Stanford Medicine",
       "lat": 37.42411,
       "lon": -122.16608,
       "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "Utrecht University",
+      "lat": 52.09083,
+      "lon": 5.12222,
+      "country_code": "NL",
       "citations": 13
     },
     {
@@ -1815,13 +1815,6 @@
       "citations": 11
     },
     {
-      "name": "University of Wisconsin System",
-      "lat": 43.07305,
-      "lon": -89.40123,
-      "country_code": "US",
-      "citations": 11
-    },
-    {
       "name": "National University of Singapore",
       "lat": 1.28967,
       "lon": 103.85007,
@@ -1910,6 +1903,13 @@
       "lat": 51.50853,
       "lon": -0.12574,
       "country_code": "GB",
+      "citations": 10
+    },
+    {
+      "name": "University of Wisconsin System",
+      "lat": 43.07305,
+      "lon": -89.40123,
+      "country_code": "US",
       "citations": 10
     },
     {
@@ -2014,12 +2014,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 930,
+      "count": 931,
       "color": "#6E4B2A"
     },
     {
       "name": "Medicine",
-      "count": 670,
+      "count": 671,
       "color": "#5C6E4A"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 416,
+        "citations": 418,
         "year": 2023
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1092,
+        "citations": 1095,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 404,
+        "citations": 407,
         "year": 2025
       },
       {
@@ -2427,7 +2427,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 79,
+        "citations": 80,
         "year": 2025
       },
       {
@@ -2491,7 +2491,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 111,
+        "citations": 112,
         "year": 2024
       },
       {
@@ -2499,7 +2499,7 @@
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
         "type": "citing",
-        "citations": 349,
+        "citations": 350,
         "year": 2019
       },
       {
@@ -2531,7 +2531,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2019
       },
       {
@@ -2547,7 +2547,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2023
       },
       {
@@ -2571,7 +2571,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2023
       },
       {
@@ -2691,7 +2691,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 203,
+        "citations": 204,
         "year": 2021
       },
       {
@@ -2755,7 +2755,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 75,
+        "citations": 76,
         "year": 2024
       },
       {
@@ -2795,7 +2795,7 @@
         "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 217,
+        "citations": 218,
         "year": 2020
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 182,
+        "citations": 183,
         "year": 2024
       },
       {
@@ -2979,7 +2979,15 @@
         "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 134,
+        "citations": 135,
+        "year": 2023
+      },
+      {
+        "id": "W4382344666",
+        "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 111,
         "year": 2023
       },
       {
@@ -2991,19 +2999,11 @@
         "year": 2024
       },
       {
-        "id": "W4382344666",
-        "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 109,
-        "year": 2023
-      },
-      {
         "id": "W4402906567",
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 66,
+        "citations": 67,
         "year": 2024
       },
       {
@@ -3019,7 +3019,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 60,
+        "citations": 61,
         "year": 2023
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4922,
+        "citations": 4925,
         "year": 2017
       },
       {
@@ -3163,7 +3163,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 113,
+        "citations": 114,
         "year": 2022
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5159,
+        "citations": 5161,
         "year": 2021
       },
       {
@@ -3371,7 +3371,7 @@
         "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
         "field": "Medicine",
         "type": "citing",
-        "citations": 20,
+        "citations": 21,
         "year": 2025
       },
       {
@@ -3403,7 +3403,7 @@
         "label": "Bacterial Cellulose Production in Co-Culture Systems: Opportunities, Challenges, and Future Directions",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 8,
+        "citations": 9,
         "year": 2025
       },
       {
@@ -3996,12 +3996,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4390743444",
+        "target": "W4382344666",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4382344666",
+        "target": "W4390743444",
         "strength": 0.5
       },
       {
