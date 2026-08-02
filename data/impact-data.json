@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-01T08:31:47.498107+00:00",
+  "generated_at": "2026-08-02T08:33:50.500653+00:00",
   "summary": {
     "total_citations": 2501,
     "countries_reached": 76,
-    "citing_institutions": 3472,
+    "citing_institutions": 3473,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -571,8 +571,8 @@
       "country_code": "MX",
       "lat": 23.6,
       "lon": -102.6,
-      "citations": 25,
-      "institutions": 19
+      "citations": 26,
+      "institutions": 20
     },
     {
       "country": "Norway",
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 902,
+        "citations": 903,
         "year": 2021
       },
       {
@@ -2315,7 +2315,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 334,
+        "citations": 335,
         "year": 2022
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1095,
+        "citations": 1097,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 407,
+        "citations": 411,
         "year": 2025
       },
       {
@@ -2467,7 +2467,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 208,
+        "citations": 209,
         "year": 2022
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 438,
+        "citations": 439,
         "year": 2024
       },
       {
@@ -2619,7 +2619,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 309,
+        "citations": 310,
         "year": 2020
       },
       {
@@ -2883,7 +2883,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 311,
+        "citations": 313,
         "year": 2019
       },
       {
@@ -2899,7 +2899,7 @@
         "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
         "field": "Medicine",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2017
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4925,
+        "citations": 4926,
         "year": 2017
       },
       {
@@ -3107,7 +3107,7 @@
         "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 141,
+        "citations": 142,
         "year": 2022
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5161,
+        "citations": 5164,
         "year": 2021
       },
       {
@@ -3403,7 +3403,7 @@
         "label": "Bacterial Cellulose Production in Co-Culture Systems: Opportunities, Challenges, and Future Directions",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 9,
+        "citations": 10,
         "year": 2025
       },
       {
