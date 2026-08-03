@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-02T08:33:50.500653+00:00",
+  "generated_at": "2026-08-03T10:01:39.867911+00:00",
   "summary": {
-    "total_citations": 2501,
+    "total_citations": 2502,
     "countries_reached": 76,
-    "citing_institutions": 3473,
+    "citing_institutions": 3474,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 418,
+      "cited_by_count": 419,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -363,8 +363,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 530,
-      "institutions": 636
+      "citations": 531,
+      "institutions": 637
     },
     {
       "country": "Germany",
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 191,
+      "count": 192,
       "color": "#9A553B"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 418,
+        "citations": 419,
         "year": 2023
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1097,
+        "citations": 1100,
         "year": 2024
       },
       {
@@ -2435,7 +2435,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 404,
+        "citations": 405,
         "year": 2022
       },
       {
@@ -2675,7 +2675,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 474,
+        "citations": 475,
         "year": 2023
       },
       {
@@ -2851,7 +2851,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 59,
+        "citations": 60,
         "year": 2022
       },
       {
@@ -3051,7 +3051,7 @@
         "label": "Discovery of a Potent and Selective Targeted NSD2 Degrader for the Reduction of H3K36me2",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 65,
+        "citations": 66,
         "year": 2023
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5164,
+        "citations": 5165,
         "year": 2021
       },
       {
