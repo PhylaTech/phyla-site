@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-03T10:01:39.867911+00:00",
+  "generated_at": "2026-08-04T08:50:32.506662+00:00",
   "summary": {
-    "total_citations": 2502,
+    "total_citations": 2503,
     "countries_reached": 76,
     "citing_institutions": 3474,
     "disciplines_impacted": 24,
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 419,
+      "cited_by_count": 420,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -2059,7 +2059,7 @@
     },
     {
       "name": "Neuroscience",
-      "count": 14,
+      "count": 15,
       "color": "#A06A3C"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 419,
+        "citations": 420,
         "year": 2023
       },
       {
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 903,
+        "citations": 905,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1100,
+        "citations": 1101,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 411,
+        "citations": 412,
         "year": 2025
       },
       {
@@ -2395,7 +2395,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 182,
+        "citations": 183,
         "year": 2024
       },
       {
@@ -2419,7 +2419,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2025
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 439,
+        "citations": 441,
         "year": 2024
       },
       {
@@ -2699,7 +2699,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 137,
+        "citations": 139,
         "year": 2022
       },
       {
@@ -2779,7 +2779,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 868,
+        "citations": 869,
         "year": 2021
       },
       {
@@ -2883,7 +2883,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 313,
+        "citations": 314,
         "year": 2019
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 183,
+        "citations": 184,
         "year": 2024
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5165,
+        "citations": 5168,
         "year": 2021
       },
       {
@@ -3363,7 +3363,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2022
       },
       {
