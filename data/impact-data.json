@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-05T08:48:01.621851+00:00",
+  "generated_at": "2026-08-06T08:50:03.396621+00:00",
   "summary": {
-    "total_citations": 2504,
+    "total_citations": 2505,
     "countries_reached": 76,
     "citing_institutions": 3478,
     "disciplines_impacted": 24,
@@ -92,7 +92,7 @@
       "title": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
       "journal": "Journal of Chemical Information and Modeling",
       "year": 2019,
-      "cited_by_count": 93,
+      "cited_by_count": 94,
       "field": "Computer Science",
       "authors": [
         "Ian J. Miller"
@@ -355,7 +355,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 968,
+      "citations": 969,
       "institutions": 684
     },
     {
@@ -1346,7 +1346,7 @@
       "citations": 18
     },
     {
-      "name": "Helmholtz Zentrum M\u00fcnchen",
+      "name": "Helmholtz Munich",
       "lat": 48.13743,
       "lon": 11.57549,
       "country_code": "DE",
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 192,
+      "count": 193,
       "color": "#9A553B"
     },
     {
@@ -2147,7 +2147,7 @@
         "label": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
         "field": "Computer Science",
         "type": "core",
-        "citations": 93,
+        "citations": 94,
         "year": 2019
       },
       {
@@ -2315,7 +2315,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 335,
+        "citations": 336,
         "year": 2022
       },
       {
@@ -2323,7 +2323,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 332,
+        "citations": 333,
         "year": 2021
       },
       {
@@ -2363,7 +2363,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 219,
+        "citations": 220,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1103,
+        "citations": 1106,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 412,
+        "citations": 414,
         "year": 2025
       },
       {
@@ -2411,7 +2411,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 99,
+        "citations": 100,
         "year": 2024
       },
       {
@@ -2427,7 +2427,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 80,
+        "citations": 81,
         "year": 2025
       },
       {
@@ -2451,7 +2451,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 307,
+        "citations": 309,
         "year": 2023
       },
       {
@@ -2595,7 +2595,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 77,
+        "citations": 78,
         "year": 2024
       },
       {
@@ -2651,7 +2651,7 @@
         "label": "Ancient plant-like terpene biosynthesis in corals",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2022
       },
       {
@@ -2667,7 +2667,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 510,
+        "citations": 513,
         "year": 2023
       },
       {
@@ -2675,7 +2675,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 475,
+        "citations": 477,
         "year": 2023
       },
       {
@@ -2683,7 +2683,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 274,
+        "citations": 276,
         "year": 2022
       },
       {
@@ -2691,7 +2691,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 204,
+        "citations": 205,
         "year": 2021
       },
       {
@@ -2747,7 +2747,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 79,
+        "citations": 80,
         "year": 2023
       },
       {
@@ -2779,7 +2779,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 869,
+        "citations": 870,
         "year": 2021
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 184,
+        "citations": 185,
         "year": 2024
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4927,
+        "citations": 4930,
         "year": 2017
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5174,
+        "citations": 5179,
         "year": 2021
       },
       {
@@ -3355,7 +3355,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Medicine",
         "type": "citing",
-        "citations": 120,
+        "citations": 121,
         "year": 2022
       },
       {
