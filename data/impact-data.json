@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-07T07:36:23.227461+00:00",
+  "generated_at": "2026-08-08T07:05:48.028034+00:00",
   "summary": {
-    "total_citations": 2507,
+    "total_citations": 2509,
     "countries_reached": 76,
-    "citing_institutions": 3478,
+    "citing_institutions": 3480,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 421,
+      "cited_by_count": 422,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 406,
+      "cited_by_count": 407,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -363,15 +363,15 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 531,
-      "institutions": 637
+      "citations": 532,
+      "institutions": 638
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 290,
+      "citations": 291,
       "institutions": 175
     },
     {
@@ -379,7 +379,7 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 201,
+      "citations": 202,
       "institutions": 164
     },
     {
@@ -403,8 +403,8 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 118,
-      "institutions": 189
+      "citations": 119,
+      "institutions": 190
     },
     {
       "country": "Netherlands",
@@ -451,7 +451,7 @@
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 74,
+      "citations": 75,
       "institutions": 87
     },
     {
@@ -986,7 +986,7 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 50
+      "citations": 51
     },
     {
       "name": "University of California San Diego",
@@ -1094,6 +1094,13 @@
       "citations": 30
     },
     {
+      "name": "Inserm",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 30
+    },
+    {
       "name": "Lawrence Berkeley National Laboratory",
       "lat": 37.87158966064453,
       "lon": -122.27275085449219,
@@ -1108,17 +1115,17 @@
       "citations": 30
     },
     {
-      "name": "Inserm",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 29
-    },
-    {
       "name": "Fudan University",
       "lat": 31.22222,
       "lon": 121.45806,
       "country_code": "CN",
+      "citations": 28
+    },
+    {
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
       "citations": 28
     },
     {
@@ -1143,10 +1150,10 @@
       "citations": 27
     },
     {
-      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
+      "name": "University of Freiburg",
+      "lat": 47.99589920043945,
+      "lon": 7.852220058441162,
+      "country_code": "DE",
       "citations": 27
     },
     {
@@ -1157,6 +1164,13 @@
       "citations": 27
     },
     {
+      "name": "Zhejiang University",
+      "lat": 30.29365,
+      "lon": 120.16142,
+      "country_code": "CN",
+      "citations": 27
+    },
+    {
       "name": "University of T\u00fcbingen",
       "lat": 48.52265930175781,
       "lon": 9.052220344543457,
@@ -1164,23 +1178,9 @@
       "citations": 27
     },
     {
-      "name": "University of Freiburg",
-      "lat": 47.99589920043945,
-      "lon": 7.852220058441162,
-      "country_code": "DE",
-      "citations": 26
-    },
-    {
       "name": "Peking University",
       "lat": 39.9075,
       "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 26
-    },
-    {
-      "name": "Zhejiang University",
-      "lat": 30.29365,
-      "lon": 120.16142,
       "country_code": "CN",
       "citations": 26
     },
@@ -1241,6 +1241,13 @@
       "citations": 21
     },
     {
+      "name": "Shanghai Jiao Tong University",
+      "lat": 31.222219467163086,
+      "lon": 121.45806121826172,
+      "country_code": "CN",
+      "citations": 21
+    },
+    {
       "name": "University of North Carolina at Greensboro",
       "lat": 36.07263946533203,
       "lon": -79.79197692871094,
@@ -1280,13 +1287,6 @@
       "lat": 42.27756,
       "lon": -83.74088,
       "country_code": "US",
-      "citations": 20
-    },
-    {
-      "name": "Shanghai Jiao Tong University",
-      "lat": 31.222219467163086,
-      "lon": 121.45806121826172,
-      "country_code": "CN",
       "citations": 20
     },
     {
@@ -1654,13 +1654,6 @@
       "citations": 13
     },
     {
-      "name": "Stanford Medicine",
-      "lat": 37.42411,
-      "lon": -122.16608,
-      "country_code": "US",
-      "citations": 13
-    },
-    {
       "name": "Utrecht University",
       "lat": 52.09083,
       "lon": 5.12222,
@@ -1668,10 +1661,24 @@
       "citations": 13
     },
     {
+      "name": "Stanford Medicine",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
+      "citations": 13
+    },
+    {
       "name": "Baylor College of Medicine",
       "lat": 29.76328,
       "lon": -95.36327,
       "country_code": "US",
+      "citations": 13
+    },
+    {
+      "name": "European Bioinformatics Institute",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
       "citations": 13
     },
     {
@@ -1763,13 +1770,6 @@
       "lat": 43.70643,
       "lon": -79.39864,
       "country_code": "CA",
-      "citations": 12
-    },
-    {
-      "name": "European Bioinformatics Institute",
-      "lat": 52.2,
-      "lon": 0.11667,
-      "country_code": "GB",
       "citations": 12
     },
     {
@@ -1871,6 +1871,13 @@
       "citations": 11
     },
     {
+      "name": "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 11
+    },
+    {
       "name": "Seoul National University",
       "lat": 37.566,
       "lon": 126.9784,
@@ -1969,13 +1976,6 @@
       "citations": 10
     },
     {
-      "name": "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 10
-    },
-    {
       "name": "Second Affiliated Hospital of Zhejiang University",
       "lat": 30.25167465209961,
       "lon": 120.17648315429688,
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 933,
+      "count": 934,
       "color": "#6E4B2A"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 193,
+      "count": 194,
       "color": "#9A553B"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 421,
+        "citations": 422,
         "year": 2023
       },
       {
@@ -2115,7 +2115,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 406,
+        "citations": 407,
         "year": 2022
       },
       {
@@ -2331,7 +2331,7 @@
         "label": "Long-term perturbation of the peripheral immune system months after SARS-CoV-2 infection",
         "field": "Medicine",
         "type": "citing",
-        "citations": 280,
+        "citations": 281,
         "year": 2022
       },
       {
@@ -2347,7 +2347,7 @@
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 230,
+        "citations": 231,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1108,
+        "citations": 1109,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 416,
+        "citations": 420,
         "year": 2025
       },
       {
@@ -2387,7 +2387,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 192,
+        "citations": 193,
         "year": 2024
       },
       {
@@ -2395,7 +2395,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 183,
+        "citations": 185,
         "year": 2024
       },
       {
@@ -2427,7 +2427,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 81,
+        "citations": 82,
         "year": 2025
       },
       {
@@ -2435,7 +2435,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 406,
+        "citations": 407,
         "year": 2022
       },
       {
@@ -2443,7 +2443,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 333,
+        "citations": 336,
         "year": 2022
       },
       {
@@ -2643,7 +2643,7 @@
         "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 111,
+        "citations": 112,
         "year": 2020
       },
       {
@@ -2659,7 +2659,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 647,
+        "citations": 648,
         "year": 2020
       },
       {
@@ -2667,7 +2667,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 514,
+        "citations": 516,
         "year": 2023
       },
       {
@@ -2755,7 +2755,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 76,
+        "citations": 77,
         "year": 2024
       },
       {
@@ -2763,7 +2763,7 @@
         "label": "A scoping review of neurodegenerative manifestations in explainable digital phenotyping",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 51,
+        "citations": 52,
         "year": 2023
       },
       {
@@ -2779,7 +2779,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 870,
+        "citations": 872,
         "year": 2021
       },
       {
@@ -3035,7 +3035,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2022
       },
       {
@@ -3083,7 +3083,7 @@
         "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 27,
+        "citations": 28,
         "year": 2024
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4933,
+        "citations": 4937,
         "year": 2017
       },
       {
@@ -3155,7 +3155,7 @@
         "label": "Microbial interactions trigger the production of antibiotics",
         "field": "Medicine",
         "type": "citing",
-        "citations": 126,
+        "citations": 127,
         "year": 2018
       },
       {
@@ -3259,7 +3259,7 @@
         "label": "Cyanobacteriochromes from Gloeobacterales Provide New Insight into the Diversification of Cyanobacterial Photoreceptors",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 11,
+        "citations": 12,
         "year": 2023
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5183,
+        "citations": 5192,
         "year": 2021
       },
       {
@@ -3459,7 +3459,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 49,
+        "citations": 50,
         "year": 2025
       },
       {
