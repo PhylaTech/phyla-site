@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-08T07:05:48.028034+00:00",
+  "generated_at": "2026-08-09T07:08:37.322199+00:00",
   "summary": {
-    "total_citations": 2509,
+    "total_citations": 2511,
     "countries_reached": 76,
-    "citing_institutions": 3480,
+    "citing_institutions": 3482,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 654,
+      "cited_by_count": 655,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 422,
+      "cited_by_count": 423,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -435,8 +435,8 @@
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 84,
-      "institutions": 66
+      "citations": 85,
+      "institutions": 68
     },
     {
       "country": "Spain",
@@ -451,7 +451,7 @@
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 75,
+      "citations": 76,
       "institutions": 87
     },
     {
@@ -1416,17 +1416,17 @@
       "citations": 16
     },
     {
-      "name": "University of Pennsylvania",
-      "lat": 39.95238,
-      "lon": -75.16362,
-      "country_code": "US",
-      "citations": 16
-    },
-    {
       "name": "Sorbonne Universit\u00e9",
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
+      "citations": 16
+    },
+    {
+      "name": "University of Pennsylvania",
+      "lat": 39.95238,
+      "lon": -75.16362,
+      "country_code": "US",
       "citations": 16
     },
     {
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 934,
+      "count": 935,
       "color": "#6E4B2A"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 194,
+      "count": 195,
       "color": "#9A553B"
     },
     {
@@ -2099,7 +2099,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 654,
+        "citations": 655,
         "year": 2020
       },
       {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 422,
+        "citations": 423,
         "year": 2023
       },
       {
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 906,
+        "citations": 907,
         "year": 2021
       },
       {
@@ -2315,7 +2315,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 336,
+        "citations": 337,
         "year": 2022
       },
       {
@@ -2339,7 +2339,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 275,
+        "citations": 276,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1109,
+        "citations": 1114,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 420,
+        "citations": 422,
         "year": 2025
       },
       {
@@ -2467,7 +2467,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 209,
+        "citations": 210,
         "year": 2022
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 442,
+        "citations": 443,
         "year": 2024
       },
       {
@@ -2667,7 +2667,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 516,
+        "citations": 517,
         "year": 2023
       },
       {
@@ -2699,7 +2699,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 139,
+        "citations": 140,
         "year": 2022
       },
       {
@@ -2739,7 +2739,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 87,
+        "citations": 88,
         "year": 2020
       },
       {
@@ -2843,7 +2843,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 129,
+        "citations": 131,
         "year": 2021
       },
       {
@@ -2971,7 +2971,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 185,
+        "citations": 186,
         "year": 2024
       },
       {
@@ -2987,7 +2987,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 111,
+        "citations": 112,
         "year": 2023
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4937,
+        "citations": 4939,
         "year": 2017
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5192,
+        "citations": 5195,
         "year": 2021
       },
       {
@@ -3459,7 +3459,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2025
       },
       {
