@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-09T07:08:37.322199+00:00",
+  "generated_at": "2026-08-10T07:57:01.940440+00:00",
   "summary": {
-    "total_citations": 2511,
+    "total_citations": 2513,
     "countries_reached": 76,
     "citing_institutions": 3482,
     "disciplines_impacted": 24,
@@ -118,7 +118,7 @@
       "title": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
       "journal": "mBio",
       "year": 2020,
-      "cited_by_count": 76,
+      "cited_by_count": 77,
       "field": "Agricultural and Biological Sciences",
       "authors": [
         "Evan Roy Rees"
@@ -261,7 +261,7 @@
       "title": "Omics Technologies to Understand Activation of a Biosynthetic Gene Cluster in <i>Micromonospora</i> sp. WMMB235: Deciphering Keyicin Biosynthesis",
       "journal": "ACS Chemical Biology",
       "year": 2019,
-      "cited_by_count": 14,
+      "cited_by_count": 15,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -363,7 +363,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 532,
+      "citations": 533,
       "institutions": 638
     },
     {
@@ -395,7 +395,7 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 121,
+      "citations": 122,
       "institutions": 147
     },
     {
@@ -2019,12 +2019,12 @@
     },
     {
       "name": "Medicine",
-      "count": 672,
+      "count": 673,
       "color": "#5C6E4A"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 221,
+      "count": 222,
       "color": "#B07C39"
     },
     {
@@ -2163,7 +2163,7 @@
         "label": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
-        "citations": 76,
+        "citations": 77,
         "year": 2020
       },
       {
@@ -2251,7 +2251,7 @@
         "label": "Omics Technologies to Understand Activation of a Biosynthetic Gene Cluster in <i>Micromonospora</i> sp. WMMB235: Deciphering Keyicin Biosynthesis",
         "field": "Medicine",
         "type": "core",
-        "citations": 14,
+        "citations": 15,
         "year": 2019
       },
       {
@@ -2435,7 +2435,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 407,
+        "citations": 408,
         "year": 2022
       },
       {
@@ -2763,7 +2763,7 @@
         "label": "A scoping review of neurodegenerative manifestations in explainable digital phenotyping",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 52,
+        "citations": 53,
         "year": 2023
       },
       {
@@ -2779,7 +2779,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 872,
+        "citations": 873,
         "year": 2021
       },
       {
@@ -2907,7 +2907,7 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2019
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4939,
+        "citations": 4940,
         "year": 2017
       },
       {
@@ -3107,7 +3107,7 @@
         "label": "Coral holobiont cues prime <i>Endozoicomonas</i> for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 143,
+        "citations": 144,
         "year": 2022
       },
       {
@@ -3123,7 +3123,7 @@
         "label": "Hyperactive nanobacteria with host-dependent traits pervade Omnitrophota",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 50,
+        "citations": 51,
         "year": 2023
       },
       {
@@ -3163,7 +3163,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 114,
+        "citations": 115,
         "year": 2022
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5195,
+        "citations": 5197,
         "year": 2021
       },
       {
