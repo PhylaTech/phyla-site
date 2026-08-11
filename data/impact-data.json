@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-10T07:57:01.940440+00:00",
+  "generated_at": "2026-08-11T07:20:01.212624+00:00",
   "summary": {
-    "total_citations": 2513,
+    "total_citations": 2514,
     "countries_reached": 76,
     "citing_institutions": 3482,
     "disciplines_impacted": 24,
@@ -105,7 +105,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 85,
+      "cited_by_count": 86,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -2049,7 +2049,7 @@
     },
     {
       "name": "Engineering",
-      "count": 30,
+      "count": 31,
       "color": "#C39A5C"
     },
     {
@@ -2155,7 +2155,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 85,
+        "citations": 86,
         "year": 2019
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1114,
+        "citations": 1115,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 422,
+        "citations": 424,
         "year": 2025
       },
       {
@@ -2395,7 +2395,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 185,
+        "citations": 186,
         "year": 2024
       },
       {
@@ -2467,7 +2467,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 210,
+        "citations": 211,
         "year": 2022
       },
       {
@@ -2475,7 +2475,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 140,
+        "citations": 141,
         "year": 2022
       },
       {
@@ -2747,7 +2747,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 80,
+        "citations": 81,
         "year": 2023
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5197,
+        "citations": 5200,
         "year": 2021
       },
       {
