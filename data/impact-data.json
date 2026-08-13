@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-12T07:44:02.941013+00:00",
+  "generated_at": "2026-08-13T07:45:11.846670+00:00",
   "summary": {
-    "total_citations": 2516,
+    "total_citations": 2517,
     "countries_reached": 76,
-    "citing_institutions": 3482,
+    "citing_institutions": 3487,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -105,7 +105,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 86,
+      "cited_by_count": 87,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -475,8 +475,8 @@
       "country_code": "JP",
       "lat": 36.2,
       "lon": 138.3,
-      "citations": 61,
-      "institutions": 70
+      "citations": 63,
+      "institutions": 73
     },
     {
       "country": "Sweden",
@@ -735,6 +735,14 @@
       "institutions": 8
     },
     {
+      "country": "Slovenia",
+      "country_code": "SI",
+      "lat": 46.2,
+      "lon": 14.8,
+      "citations": 7,
+      "institutions": 4
+    },
+    {
       "country": "Vietnam",
       "country_code": "VN",
       "lat": 14.1,
@@ -757,14 +765,6 @@
       "lon": 121.8,
       "citations": 6,
       "institutions": 6
-    },
-    {
-      "country": "Slovenia",
-      "country_code": "SI",
-      "lat": 46.2,
-      "lon": 14.8,
-      "citations": 6,
-      "institutions": 2
     },
     {
       "country": "Kenya",
@@ -1745,13 +1745,6 @@
       "citations": 12
     },
     {
-      "name": "University of California, Irvine",
-      "lat": 33.66946,
-      "lon": -117.82311,
-      "country_code": "US",
-      "citations": 12
-    },
-    {
       "name": "Case Western Reserve University",
       "lat": 41.4995,
       "lon": -81.69541,
@@ -1811,6 +1804,13 @@
       "name": "Chan Zuckerberg Initiative (United States)",
       "lat": 37.48522,
       "lon": -122.23635,
+      "country_code": "US",
+      "citations": 11
+    },
+    {
+      "name": "University of California, Irvine",
+      "lat": 33.66946,
+      "lon": -117.82311,
       "country_code": "US",
       "citations": 11
     },
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 935,
+      "count": 936,
       "color": "#6E4B2A"
     },
     {
@@ -2155,7 +2155,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 86,
+        "citations": 87,
         "year": 2019
       },
       {
@@ -2307,7 +2307,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 908,
+        "citations": 910,
         "year": 2021
       },
       {
@@ -2347,7 +2347,7 @@
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 231,
+        "citations": 232,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1117,
+        "citations": 1119,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 425,
+        "citations": 426,
         "year": 2025
       },
       {
@@ -2403,7 +2403,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 106,
+        "citations": 107,
         "year": 2024
       },
       {
@@ -2435,7 +2435,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 408,
+        "citations": 410,
         "year": 2022
       },
       {
@@ -2451,7 +2451,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 311,
+        "citations": 312,
         "year": 2023
       },
       {
@@ -2475,7 +2475,7 @@
         "label": "Evaluation of taxonomic classification and profiling methods for long-read shotgun metagenomic sequencing datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 141,
+        "citations": 142,
         "year": 2022
       },
       {
@@ -2547,7 +2547,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 92,
+        "citations": 93,
         "year": 2023
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 443,
+        "citations": 444,
         "year": 2024
       },
       {
@@ -2619,7 +2619,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 310,
+        "citations": 311,
         "year": 2020
       },
       {
@@ -2987,7 +2987,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 113,
+        "citations": 114,
         "year": 2023
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4945,
+        "citations": 4948,
         "year": 2017
       },
       {
@@ -3187,7 +3187,7 @@
         "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 39,
+        "citations": 40,
         "year": 2020
       },
       {
@@ -3271,20 +3271,20 @@
         "year": 2022
       },
       {
+        "id": "W4224263373",
+        "label": "Discovery of Chlorophyll d: Isolation and Characterization of a Far-Red Cyanobacterium from the Original Site of Manning and Strain (1943) at Moss Beach, California",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 10,
+        "year": 2022
+      },
+      {
         "id": "W4399157511",
         "label": "Uncovering novel bacterial and archaeal diversity: genomic insights from metagenome-assembled genomes in Cuatro Cienegas, Coahuila",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 10,
         "year": 2024
-      },
-      {
-        "id": "W3209300026",
-        "label": "Genome-centric metagenomics reveals insights into the evolution and metabolism of a new free-living group in Rhizobiales",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 10,
-        "year": 2021
       },
       {
         "id": "W4281785935",
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5206,
+        "citations": 5211,
         "year": 2021
       },
       {
@@ -4216,12 +4216,12 @@
       },
       {
         "source": "W3116953854",
-        "target": "W4399157511",
+        "target": "W4224263373",
         "strength": 0.5
       },
       {
         "source": "W3116953854",
-        "target": "W3209300026",
+        "target": "W4399157511",
         "strength": 0.5
       },
       {
