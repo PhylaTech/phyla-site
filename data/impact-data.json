@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-13T07:45:11.846670+00:00",
+  "generated_at": "2026-08-14T07:43:02.351539+00:00",
   "summary": {
-    "total_citations": 2517,
+    "total_citations": 2523,
     "countries_reached": 76,
-    "citing_institutions": 3487,
+    "citing_institutions": 3490,
     "disciplines_impacted": 24,
     "total_publications": 26
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 424,
+      "cited_by_count": 428,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -39,7 +39,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 408,
+      "cited_by_count": 409,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -105,7 +105,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 87,
+      "cited_by_count": 88,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -363,15 +363,15 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 533,
-      "institutions": 638
+      "citations": 536,
+      "institutions": 639
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 291,
+      "citations": 292,
       "institutions": 175
     },
     {
@@ -379,7 +379,7 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 202,
+      "citations": 203,
       "institutions": 164
     },
     {
@@ -475,8 +475,8 @@
       "country_code": "JP",
       "lat": 36.2,
       "lon": 138.3,
-      "citations": 63,
-      "institutions": 73
+      "citations": 62,
+      "institutions": 72
     },
     {
       "country": "Sweden",
@@ -615,20 +615,20 @@
       "institutions": 22
     },
     {
+      "country": "Greece",
+      "country_code": "GR",
+      "lat": 39.1,
+      "lon": 21.8,
+      "citations": 22,
+      "institutions": 23
+    },
+    {
       "country": "Iran",
       "country_code": "IR",
       "lat": 32.4,
       "lon": 53.7,
       "citations": 21,
       "institutions": 32
-    },
-    {
-      "country": "Greece",
-      "country_code": "GR",
-      "lat": 39.1,
-      "lon": 21.8,
-      "citations": 21,
-      "institutions": 22
     },
     {
       "country": "Taiwan",
@@ -1010,17 +1010,17 @@
       "citations": 41
     },
     {
-      "name": "ETH Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 40
-    },
-    {
       "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
+      "citations": 41
+    },
+    {
+      "name": "ETH Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 40
     },
     {
@@ -1325,6 +1325,13 @@
       "citations": 19
     },
     {
+      "name": "China Pharmaceutical University",
+      "lat": 32.061668395996094,
+      "lon": 118.77777862548828,
+      "country_code": "CN",
+      "citations": 19
+    },
+    {
       "name": "The University of Sydney",
       "lat": -33.86785,
       "lon": 151.20732,
@@ -1335,13 +1342,6 @@
       "name": "Huazhong University of Science and Technology",
       "lat": 30.58333,
       "lon": 114.26667,
-      "country_code": "CN",
-      "citations": 18
-    },
-    {
-      "name": "China Pharmaceutical University",
-      "lat": 32.061668395996094,
-      "lon": 118.77777862548828,
       "country_code": "CN",
       "citations": 18
     },
@@ -1745,6 +1745,13 @@
       "citations": 12
     },
     {
+      "name": "University of California, Irvine",
+      "lat": 33.66946,
+      "lon": -117.82311,
+      "country_code": "US",
+      "citations": 12
+    },
+    {
       "name": "Case Western Reserve University",
       "lat": 41.4995,
       "lon": -81.69541,
@@ -1804,13 +1811,6 @@
       "name": "Chan Zuckerberg Initiative (United States)",
       "lat": 37.48522,
       "lon": -122.23635,
-      "country_code": "US",
-      "citations": 11
-    },
-    {
-      "name": "University of California, Irvine",
-      "lat": 33.66946,
-      "lon": -117.82311,
       "country_code": "US",
       "citations": 11
     },
@@ -2014,7 +2014,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 936,
+      "count": 937,
       "color": "#6E4B2A"
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 195,
+      "count": 199,
       "color": "#9A553B"
     },
     {
@@ -2049,7 +2049,7 @@
     },
     {
       "name": "Engineering",
-      "count": 31,
+      "count": 32,
       "color": "#C39A5C"
     },
     {
@@ -2107,7 +2107,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 424,
+        "citations": 428,
         "year": 2023
       },
       {
@@ -2115,7 +2115,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 408,
+        "citations": 409,
         "year": 2022
       },
       {
@@ -2155,7 +2155,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 87,
+        "citations": 88,
         "year": 2019
       },
       {
@@ -2315,7 +2315,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 337,
+        "citations": 338,
         "year": 2022
       },
       {
@@ -2339,7 +2339,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 276,
+        "citations": 278,
         "year": 2021
       },
       {
@@ -2363,7 +2363,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 220,
+        "citations": 222,
         "year": 2021
       },
       {
@@ -2371,7 +2371,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1119,
+        "citations": 1120,
         "year": 2024
       },
       {
@@ -2379,7 +2379,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 426,
+        "citations": 429,
         "year": 2025
       },
       {
@@ -2395,7 +2395,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 186,
+        "citations": 188,
         "year": 2024
       },
       {
@@ -2403,7 +2403,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 107,
+        "citations": 108,
         "year": 2024
       },
       {
@@ -2411,7 +2411,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 100,
+        "citations": 102,
         "year": 2024
       },
       {
@@ -2427,7 +2427,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 83,
+        "citations": 85,
         "year": 2025
       },
       {
@@ -2451,7 +2451,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 312,
+        "citations": 315,
         "year": 2023
       },
       {
@@ -2555,7 +2555,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 444,
+        "citations": 445,
         "year": 2024
       },
       {
@@ -2563,7 +2563,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2022
       },
       {
@@ -2583,20 +2583,20 @@
         "year": 2022
       },
       {
+        "id": "W4396858058",
+        "label": "Instrumentation at the Leading Edge of Proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 79,
+        "year": 2024
+      },
+      {
         "id": "W4386053919",
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 78,
         "year": 2023
-      },
-      {
-        "id": "W4396858058",
-        "label": "Instrumentation at the Leading Edge of Proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 78,
-        "year": 2024
       },
       {
         "id": "W4396578574",
@@ -2659,7 +2659,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 649,
+        "citations": 651,
         "year": 2020
       },
       {
@@ -2683,7 +2683,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 278,
+        "citations": 279,
         "year": 2022
       },
       {
@@ -2723,7 +2723,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 152,
+        "citations": 153,
         "year": 2023
       },
       {
@@ -2747,7 +2747,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 81,
+        "citations": 83,
         "year": 2023
       },
       {
@@ -2755,7 +2755,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 77,
+        "citations": 78,
         "year": 2024
       },
       {
@@ -2883,7 +2883,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 314,
+        "citations": 315,
         "year": 2019
       },
       {
@@ -2947,7 +2947,7 @@
         "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
         "field": "Medicine",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2019
       },
       {
@@ -2987,7 +2987,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 114,
+        "citations": 115,
         "year": 2023
       },
       {
@@ -3059,7 +3059,7 @@
         "label": "A Comprehensive State-of-the-Art Survey on Data Visualization Tools: Research Developments, Challenges and Future Domain Specific Visualization Framework",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 47,
+        "citations": 48,
         "year": 2022
       },
       {
@@ -3091,7 +3091,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4948,
+        "citations": 4952,
         "year": 2017
       },
       {
@@ -3195,7 +3195,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 359,
+        "citations": 361,
         "year": 2019
       },
       {
@@ -3347,7 +3347,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5211,
+        "citations": 5223,
         "year": 2021
       },
       {
@@ -3375,20 +3375,20 @@
         "year": 2025
       },
       {
+        "id": "W3214451869",
+        "label": "Synthetic Biology Advanced Natural Product Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 20,
+        "year": 2021
+      },
+      {
         "id": "W3116478593",
         "label": "Label\u2010free proteomic dissection on <i>dptP</i> \u2010deletion mutant uncovers <i>dptP</i> involvement in strain growth and daptomycin tolerance of <i>Streptomyces roseosporus</i>",
         "field": "Medicine",
         "type": "citing",
         "citations": 19,
         "year": 2020
-      },
-      {
-        "id": "W3214451869",
-        "label": "Synthetic Biology Advanced Natural Product Discovery",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 19,
-        "year": 2021
       },
       {
         "id": "W3087184317",
@@ -3686,12 +3686,12 @@
       },
       {
         "source": "W4281483346",
-        "target": "W4386053919",
+        "target": "W4396858058",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
-        "target": "W4396858058",
+        "target": "W4386053919",
         "strength": 0.5
       },
       {
@@ -3796,12 +3796,12 @@
       },
       {
         "source": "W2989537165",
-        "target": "W3114702865",
+        "target": "W2989537165",
         "strength": 0.5
       },
       {
         "source": "W2989537165",
-        "target": "W2989537165",
+        "target": "W3114702865",
         "strength": 0.5
       },
       {
@@ -4286,12 +4286,12 @@
       },
       {
         "source": "W2946278827",
-        "target": "W3116478593",
+        "target": "W3214451869",
         "strength": 0.5
       },
       {
         "source": "W2946278827",
-        "target": "W3214451869",
+        "target": "W3116478593",
         "strength": 0.5
       },
       {
