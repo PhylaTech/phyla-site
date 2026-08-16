@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-15T06:51:37.182093+00:00",
+  "generated_at": "2026-08-16T06:52:33.034605+00:00",
   "summary": {
-    "total_citations": 5675,
+    "total_citations": 5674,
     "countries_reached": 79,
     "citing_institutions": 4684,
     "disciplines_impacted": 26,
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 655,
+      "cited_by_count": 654,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 428,
+      "cited_by_count": 429,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -204,20 +204,6 @@
       "type": "core"
     },
     {
-      "id": "W2949629831",
-      "title": "Autometa: automated extraction of microbial genomes from individual shotgun metagenomes",
-      "journal": "Nucleic Acids Research",
-      "year": 2019,
-      "cited_by_count": 104,
-      "field": "Biochemistry, Genetics and Molecular Biology",
-      "authors": [
-        "Ian J. Miller",
-        "Evan Roy Rees"
-      ],
-      "doi": "https://doi.org/10.1093/nar/gkz148",
-      "type": "core"
-    },
-    {
       "id": "W2000391476",
       "title": "RNA\u2013protein analysis using a conditional CRISPR nuclease",
       "journal": "Proceedings of the National Academy of Sciences",
@@ -228,6 +214,20 @@
         "Craig Wenger"
       ],
       "doi": "https://doi.org/10.1073/pnas.1302807110",
+      "type": "core"
+    },
+    {
+      "id": "W2949629831",
+      "title": "Autometa: automated extraction of microbial genomes from individual shotgun metagenomes",
+      "journal": "Nucleic Acids Research",
+      "year": 2019,
+      "cited_by_count": 103,
+      "field": "Biochemistry, Genetics and Molecular Biology",
+      "authors": [
+        "Ian J. Miller",
+        "Evan Roy Rees"
+      ],
+      "doi": "https://doi.org/10.1093/nar/gkz148",
       "type": "core"
     },
     {
@@ -2402,7 +2402,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2027,
+      "count": 2028,
       "color": "#6E4B2A"
     },
     {
@@ -2489,7 +2489,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 655,
+        "citations": 654,
         "year": 2020
       },
       {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 428,
+        "citations": 429,
         "year": 2023
       },
       {
@@ -2605,20 +2605,20 @@
         "year": 2022
       },
       {
-        "id": "W2949629831",
-        "label": "Autometa: automated extraction of microbial genomes from individual shotgun metagenomes",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "core",
-        "citations": 104,
-        "year": 2019
-      },
-      {
         "id": "W2000391476",
         "label": "RNA\u2013protein analysis using a conditional CRISPR nuclease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
         "citations": 104,
         "year": 2013
+      },
+      {
+        "id": "W2949629831",
+        "label": "Autometa: automated extraction of microbial genomes from individual shotgun metagenomes",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "core",
+        "citations": 103,
+        "year": 2019
       },
       {
         "id": "W2972433884",
@@ -2961,7 +2961,7 @@
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 232,
+        "citations": 231,
         "year": 2021
       },
       {
@@ -2977,7 +2977,7 @@
         "label": "A time-resolved proteomic and prognostic map of COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 222,
+        "citations": 221,
         "year": 2021
       },
       {
@@ -3001,7 +3001,7 @@
         "label": "Comparative Proteomic Analysis of Eleven Common Cell Lines Reveals Ubiquitous but Varying Expression of Most Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 851,
+        "citations": 850,
         "year": 2012
       },
       {
@@ -3025,7 +3025,7 @@
         "label": "The One Hour Yeast Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 560,
+        "citations": 559,
         "year": 2013
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1126,
+        "citations": 1131,
         "year": 2024
       },
       {
@@ -3105,7 +3105,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2025
       },
       {
@@ -3137,7 +3137,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 228,
+        "citations": 230,
         "year": 2021
       },
       {
@@ -3193,7 +3193,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1365,
+        "citations": 1361,
         "year": 2012
       },
       {
@@ -3225,7 +3225,7 @@
         "label": "Dissecting DNA damage response pathways by analysing protein localization and abundance changes\u00a0during DNA replication stress",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 536,
+        "citations": 535,
         "year": 2012
       },
       {
@@ -3241,7 +3241,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1418,
+        "citations": 1417,
         "year": 2013
       },
       {
@@ -3249,7 +3249,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1306,
+        "citations": 1307,
         "year": 2014
       },
       {
@@ -3257,7 +3257,7 @@
         "label": "Next-generation proteomics: towards an integrative view of proteome dynamics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 806,
+        "citations": 805,
         "year": 2012
       },
       {
@@ -3281,7 +3281,7 @@
         "label": "A Scalable Approach for Protein False Discovery Rate Estimation in Large Proteomic Data Sets",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 489,
+        "citations": 488,
         "year": 2015
       },
       {
@@ -3297,7 +3297,7 @@
         "label": "MultiNotch MS3 Enables Accurate, Sensitive, and Multiplexed Detection of Differential Expression across Cancer Cell Line Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1397,
+        "citations": 1396,
         "year": 2014
       },
       {
@@ -3321,7 +3321,7 @@
         "label": "Reproducible workflow for multiplexed deep-scale proteome and phosphoproteome analysis of tumor tissues by liquid chromatography\u2013mass spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 536,
+        "citations": 535,
         "year": 2018
       },
       {
@@ -3393,7 +3393,7 @@
         "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
         "field": "Medicine",
         "type": "citing",
-        "citations": 610,
+        "citations": 609,
         "year": 2021
       },
       {
@@ -3457,7 +3457,7 @@
         "label": "HIV integration in the human brain is linked to microglial activation and 3D genome remodeling",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2022
       },
       {
@@ -3497,7 +3497,7 @@
         "label": "Meta- and Orthogonal Integration of Influenza \u201cOMICs\u201d Data Defines a Role for UBR4 in Virus Budding",
         "field": "Medicine",
         "type": "citing",
-        "citations": 925,
+        "citations": 924,
         "year": 2015
       },
       {
@@ -3513,7 +3513,7 @@
         "label": "Extended Multiplexing of Tandem Mass Tags (TMT) Labeling Reveals Age and High Fat Diet Specific Proteome Changes in Mouse Epididymal Adipose Tissue",
         "field": "Medicine",
         "type": "citing",
-        "citations": 396,
+        "citations": 395,
         "year": 2017
       },
       {
@@ -3617,7 +3617,7 @@
         "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2021
       },
       {
@@ -3625,7 +3625,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 99,
+        "citations": 100,
         "year": 2019
       },
       {
@@ -3665,7 +3665,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 574,
+        "citations": 575,
         "year": 2016
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 445,
+        "citations": 447,
         "year": 2024
       },
       {
@@ -3769,55 +3769,15 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn <sup>2+</sup> trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 73,
+        "citations": 74,
         "year": 2023
-      },
-      {
-        "id": "W3045315617",
-        "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 311,
-        "year": 2020
-      },
-      {
-        "id": "W2956967628",
-        "label": "Non-photosynthetic predators are sister to red algae",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 165,
-        "year": 2019
-      },
-      {
-        "id": "W3204900280",
-        "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
-        "field": "Environmental Science",
-        "type": "citing",
-        "citations": 148,
-        "year": 2021
-      },
-      {
-        "id": "W3046109898",
-        "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 112,
-        "year": 2020
-      },
-      {
-        "id": "W4281391087",
-        "label": "Ancient plant-like terpene biosynthesis in corals",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 110,
-        "year": 2022
       },
       {
         "id": "W2238012416",
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1049,
+        "citations": 1050,
         "year": 2016
       },
       {
@@ -3833,7 +3793,7 @@
         "label": "Methods to study RNA\u2013protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 406,
+        "citations": 405,
         "year": 2019
       },
       {
@@ -3841,7 +3801,7 @@
         "label": "CLIP and complementary methods",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 386,
+        "citations": 387,
         "year": 2021
       },
       {
@@ -3877,6 +3837,46 @@
         "year": 2014
       },
       {
+        "id": "W3045315617",
+        "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 313,
+        "year": 2020
+      },
+      {
+        "id": "W2956967628",
+        "label": "Non-photosynthetic predators are sister to red algae",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 165,
+        "year": 2019
+      },
+      {
+        "id": "W3204900280",
+        "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 147,
+        "year": 2021
+      },
+      {
+        "id": "W3046109898",
+        "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 112,
+        "year": 2020
+      },
+      {
+        "id": "W4281391087",
+        "label": "Ancient plant-like terpene biosynthesis in corals",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 110,
+        "year": 2022
+      },
+      {
         "id": "W3087156149",
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
@@ -3889,7 +3889,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 518,
+        "citations": 519,
         "year": 2023
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 480,
+        "citations": 481,
         "year": 2023
       },
       {
@@ -4009,7 +4009,7 @@
         "label": "Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 283,
+        "citations": 282,
         "year": 2020
       },
       {
@@ -4065,7 +4065,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 874,
+        "citations": 875,
         "year": 2021
       },
       {
@@ -4153,7 +4153,7 @@
         "label": "A survey of computational methods and error rate estimation procedures for peptide and protein identification in shotgun proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 565,
+        "citations": 562,
         "year": 2010
       },
       {
@@ -4161,7 +4161,7 @@
         "label": "Naturally Occurring Human Urinary Peptides for Use in Diagnosis of Chronic Kidney Disease",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 542,
+        "citations": 541,
         "year": 2010
       },
       {
@@ -4217,7 +4217,7 @@
         "label": "High-Resolution Enabled 12-Plex DiLeu Isobaric Tags for Quantitative Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 150,
+        "citations": 151,
         "year": 2014
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2687,
+        "citations": 2688,
         "year": 2017
       },
       {
@@ -4353,7 +4353,7 @@
         "label": "Comprehensive Overview of Bottom-Up Proteomics Using Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 178,
+        "citations": 179,
         "year": 2024
       },
       {
@@ -4497,7 +4497,7 @@
         "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
         "field": "Medicine",
         "type": "citing",
-        "citations": 123,
+        "citations": 122,
         "year": 2019
       },
       {
@@ -4521,7 +4521,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 187,
+        "citations": 190,
         "year": 2024
       },
       {
@@ -4865,7 +4865,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4953,
+        "citations": 4947,
         "year": 2017
       },
       {
@@ -4873,7 +4873,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 419,
+        "citations": 420,
         "year": 2020
       },
       {
@@ -4993,7 +4993,7 @@
         "label": "Metabolomics: Towards Understanding Traditional Chinese Medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 243,
+        "citations": 244,
         "year": 2010
       },
       {
@@ -5001,7 +5001,7 @@
         "label": "Urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 181,
+        "citations": 180,
         "year": 2012
       },
       {
@@ -5193,7 +5193,7 @@
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Medicine",
         "type": "citing",
-        "citations": 361,
+        "citations": 359,
         "year": 2019
       },
       {
@@ -5225,7 +5225,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 36,
+        "citations": 37,
         "year": 2023
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5226,
+        "citations": 5231,
         "year": 2021
       },
       {
@@ -6103,46 +6103,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2949629831",
-        "target": "W4386607677",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W3045315617",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W2956967628",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W3204900280",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W2808840038",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W3046109898",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W4281391087",
-        "strength": 0.5
-      },
-      {
-        "source": "W2949629831",
-        "target": "W3006681944",
-        "strength": 0.5
-      },
-      {
         "source": "W2000391476",
         "target": "W2238012416",
         "strength": 0.5
@@ -6180,6 +6140,46 @@
       {
         "source": "W2000391476",
         "target": "W2155831456",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W4386607677",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3045315617",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W2956967628",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3204900280",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W2808840038",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3046109898",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W4281391087",
+        "strength": 0.5
+      },
+      {
+        "source": "W2949629831",
+        "target": "W3006681944",
         "strength": 0.5
       },
       {
