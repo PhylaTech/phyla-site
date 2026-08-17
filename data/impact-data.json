@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-16T06:52:33.034605+00:00",
+  "generated_at": "2026-08-17T07:11:08.992379+00:00",
   "summary": {
     "total_citations": 5674,
     "countries_reached": 79,
-    "citing_institutions": 4684,
+    "citing_institutions": 4686,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -720,15 +720,15 @@
       "lat": 39.8,
       "lon": -98.5,
       "citations": 2608,
-      "institutions": 993
+      "institutions": 994
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 855,
-      "institutions": 764
+      "citations": 856,
+      "institutions": 765
     },
     {
       "country": "Germany",
@@ -1107,6 +1107,14 @@
       "institutions": 11
     },
     {
+      "country": "Philippines",
+      "country_code": "PH",
+      "lat": 12.9,
+      "lon": 121.8,
+      "citations": 9,
+      "institutions": 8
+    },
+    {
       "country": "Bangladesh",
       "country_code": "BD",
       "lat": 23.7,
@@ -1121,14 +1129,6 @@
       "lon": 108.3,
       "citations": 9,
       "institutions": 11
-    },
-    {
-      "country": "Philippines",
-      "country_code": "PH",
-      "lat": 12.9,
-      "lon": 121.8,
-      "citations": 8,
-      "institutions": 8
     },
     {
       "country": "Colombia",
@@ -1391,18 +1391,18 @@
       "citations": 93
     },
     {
+      "name": "University of Washington",
+      "lat": 47.60621,
+      "lon": -122.33207,
+      "country_code": "US",
+      "citations": 84
+    },
+    {
       "name": "Thermo Fisher Scientific (United States)",
       "lat": 42.37649154663086,
       "lon": -71.23561096191406,
       "country_code": "US",
       "citations": 84
-    },
-    {
-      "name": "University of Washington",
-      "lat": 47.60621,
-      "lon": -122.33207,
-      "country_code": "US",
-      "citations": 83
     },
     {
       "name": "University of California San Diego",
@@ -2028,6 +2028,13 @@
       "citations": 26
     },
     {
+      "name": "University of Maryland, College Park",
+      "lat": 38.98067,
+      "lon": -76.93692,
+      "country_code": "US",
+      "citations": 26
+    },
+    {
       "name": "Great Lakes Bioenergy Research Center",
       "lat": 43.07305145263672,
       "lon": -89.40122985839844,
@@ -2059,13 +2066,6 @@
       "name": "Michigan State University",
       "lat": 42.73698,
       "lon": -84.48387,
-      "country_code": "US",
-      "citations": 25
-    },
-    {
-      "name": "University of Maryland, College Park",
-      "lat": 38.98067,
-      "lon": -76.93692,
       "country_code": "US",
       "citations": 25
     },
@@ -3017,7 +3017,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 697,
+        "citations": 698,
         "year": 2012
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1131,
+        "citations": 1132,
         "year": 2024
       },
       {
@@ -3321,7 +3321,7 @@
         "label": "Reproducible workflow for multiplexed deep-scale proteome and phosphoproteome analysis of tumor tissues by liquid chromatography\u2013mass spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 535,
+        "citations": 536,
         "year": 2018
       },
       {
@@ -4030,7 +4030,7 @@
       },
       {
         "id": "W3046609539",
-        "label": "Interlaboratory Study for Characterizing Monoclonal Antibodies by Top-Down and Middle-Down Mass Spectrometry",
+        "label": "Interlaboratory Study for Characterizing MonoclonalAntibodies by Top-Down and Middle-Down Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
         "citations": 128,
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5231,
+        "citations": 5233,
         "year": 2021
       },
       {
