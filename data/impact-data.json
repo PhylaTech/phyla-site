@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-17T07:11:08.992379+00:00",
+  "generated_at": "2026-08-19T06:57:12.965158+00:00",
   "summary": {
-    "total_citations": 5674,
+    "total_citations": 5679,
     "countries_reached": 79,
-    "citing_institutions": 4686,
+    "citing_institutions": 4703,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 654,
+      "cited_by_count": 656,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 429,
+      "cited_by_count": 432,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -719,15 +719,15 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2608,
-      "institutions": 994
+      "citations": 2610,
+      "institutions": 995
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 856,
+      "citations": 858,
       "institutions": 765
     },
     {
@@ -743,8 +743,8 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 461,
-      "institutions": 226
+      "citations": 462,
+      "institutions": 227
     },
     {
       "country": "Canada",
@@ -759,15 +759,15 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 224,
-      "institutions": 201
+      "citations": 226,
+      "institutions": 202
     },
     {
       "country": "Netherlands",
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 221,
+      "citations": 220,
       "institutions": 62
     },
     {
@@ -775,7 +775,7 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 203,
+      "citations": 204,
       "institutions": 281
     },
     {
@@ -799,7 +799,7 @@
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
-      "citations": 169,
+      "citations": 170,
       "institutions": 24
     },
     {
@@ -815,8 +815,8 @@
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 143,
-      "institutions": 165
+      "citations": 144,
+      "institutions": 170
     },
     {
       "country": "Brazil",
@@ -824,7 +824,7 @@
       "lat": -14.2,
       "lon": -51.9,
       "citations": 125,
-      "institutions": 90
+      "institutions": 91
     },
     {
       "country": "Japan",
@@ -919,15 +919,15 @@
       "country_code": "SA",
       "lat": 23.9,
       "lon": 45.1,
-      "citations": 46,
-      "institutions": 20
+      "citations": 47,
+      "institutions": 22
     },
     {
       "country": "Singapore",
       "country_code": "SG",
       "lat": 1.4,
       "lon": 103.8,
-      "citations": 45,
+      "citations": 46,
       "institutions": 18
     },
     {
@@ -967,7 +967,7 @@
       "country_code": "MX",
       "lat": 23.6,
       "lon": -102.6,
-      "citations": 34,
+      "citations": 35,
       "institutions": 26
     },
     {
@@ -1099,6 +1099,22 @@
       "institutions": 4
     },
     {
+      "country": "Bangladesh",
+      "country_code": "BD",
+      "lat": 23.7,
+      "lon": 90.4,
+      "citations": 10,
+      "institutions": 9
+    },
+    {
+      "country": "Vietnam",
+      "country_code": "VN",
+      "lat": 14.1,
+      "lon": 108.3,
+      "citations": 10,
+      "institutions": 15
+    },
+    {
       "country": "Romania",
       "country_code": "RO",
       "lat": 45.9,
@@ -1113,22 +1129,6 @@
       "lon": 121.8,
       "citations": 9,
       "institutions": 8
-    },
-    {
-      "country": "Bangladesh",
-      "country_code": "BD",
-      "lat": 23.7,
-      "lon": 90.4,
-      "citations": 9,
-      "institutions": 9
-    },
-    {
-      "country": "Vietnam",
-      "country_code": "VN",
-      "lat": 14.1,
-      "lon": 108.3,
-      "citations": 9,
-      "institutions": 11
     },
     {
       "country": "Colombia",
@@ -1171,12 +1171,28 @@
       "institutions": 4
     },
     {
+      "country": "Sri Lanka",
+      "country_code": "LK",
+      "lat": 7.9,
+      "lon": 80.8,
+      "citations": 6,
+      "institutions": 5
+    },
+    {
       "country": "Bulgaria",
       "country_code": "BG",
       "lat": 42.7,
       "lon": 25.5,
       "citations": 6,
       "institutions": 8
+    },
+    {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 6,
+      "institutions": 10
     },
     {
       "country": "Slovakia",
@@ -1201,22 +1217,6 @@
       "lon": 15.2,
       "citations": 5,
       "institutions": 4
-    },
-    {
-      "country": "Sri Lanka",
-      "country_code": "LK",
-      "lat": 7.9,
-      "lon": 80.8,
-      "citations": 5,
-      "institutions": 4
-    },
-    {
-      "country": "Morocco",
-      "country_code": "MA",
-      "lat": 31.8,
-      "lon": -7.1,
-      "citations": 5,
-      "institutions": 10
     },
     {
       "country": "Cyprus",
@@ -1629,6 +1629,13 @@
       "citations": 40
     },
     {
+      "name": "Novo Nordisk Foundation",
+      "lat": 55.67594,
+      "lon": 12.56553,
+      "country_code": "DK",
+      "citations": 39
+    },
+    {
       "name": "University of British Columbia",
       "lat": 49.24966,
       "lon": -123.11934,
@@ -1669,13 +1676,6 @@
       "lon": 11.5899,
       "country_code": "DE",
       "citations": 39
-    },
-    {
-      "name": "Novo Nordisk Foundation",
-      "lat": 55.67594,
-      "lon": 12.56553,
-      "country_code": "DK",
-      "citations": 38
     },
     {
       "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
@@ -2402,7 +2402,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2028,
+      "count": 2029,
       "color": "#6E4B2A"
     },
     {
@@ -2412,7 +2412,7 @@
     },
     {
       "name": "Medicine",
-      "count": 900,
+      "count": 903,
       "color": "#B07C39"
     },
     {
@@ -2437,7 +2437,7 @@
     },
     {
       "name": "Engineering",
-      "count": 61,
+      "count": 62,
       "color": "#C39A5C"
     },
     {
@@ -2489,7 +2489,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 654,
+        "citations": 656,
         "year": 2020
       },
       {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 429,
+        "citations": 432,
         "year": 2023
       },
       {
@@ -2929,7 +2929,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 338,
+        "citations": 339,
         "year": 2022
       },
       {
@@ -2993,7 +2993,7 @@
         "label": "MS-GF+ makes progress towards a universal database search tool for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1204,
+        "citations": 1205,
         "year": 2014
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1132,
+        "citations": 1133,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 432,
+        "citations": 435,
         "year": 2025
       },
       {
@@ -3097,7 +3097,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 93,
+        "citations": 94,
         "year": 2025
       },
       {
@@ -3113,7 +3113,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 410,
+        "citations": 411,
         "year": 2022
       },
       {
@@ -3121,7 +3121,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 338,
+        "citations": 339,
         "year": 2022
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4268,
+        "citations": 4272,
         "year": 2012
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3423,
+        "citations": 3425,
         "year": 2016
       },
       {
@@ -3201,7 +3201,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 866,
+        "citations": 867,
         "year": 2015
       },
       {
@@ -3241,7 +3241,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1417,
+        "citations": 1418,
         "year": 2013
       },
       {
@@ -3249,7 +3249,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1307,
+        "citations": 1308,
         "year": 2014
       },
       {
@@ -3257,7 +3257,7 @@
         "label": "Next-generation proteomics: towards an integrative view of proteome dynamics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 805,
+        "citations": 806,
         "year": 2012
       },
       {
@@ -3385,7 +3385,7 @@
         "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 903,
+        "citations": 904,
         "year": 2017
       },
       {
@@ -3409,7 +3409,7 @@
         "label": "Serine ADP-Ribosylation Depends on HPF1",
         "field": "Medicine",
         "type": "citing",
-        "citations": 370,
+        "citations": 371,
         "year": 2017
       },
       {
@@ -3417,7 +3417,7 @@
         "label": "Identification of modified peptides using localization-aware open search",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 325,
+        "citations": 326,
         "year": 2020
       },
       {
@@ -3529,7 +3529,7 @@
         "label": "Comprehensive Single-Shot Proteomics with FAIMS on a Hybrid Orbitrap Mass Spectrometer",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 307,
+        "citations": 308,
         "year": 2018
       },
       {
@@ -3761,7 +3761,7 @@
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Medicine",
         "type": "citing",
-        "citations": 75,
+        "citations": 77,
         "year": 2024
       },
       {
@@ -3841,7 +3841,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 313,
+        "citations": 314,
         "year": 2020
       },
       {
@@ -3857,7 +3857,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 147,
+        "citations": 148,
         "year": 2021
       },
       {
@@ -3889,7 +3889,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 519,
+        "citations": 521,
         "year": 2023
       },
       {
@@ -3969,7 +3969,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 83,
+        "citations": 84,
         "year": 2023
       },
       {
@@ -4065,7 +4065,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 875,
+        "citations": 876,
         "year": 2021
       },
       {
@@ -4081,7 +4081,7 @@
         "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 218,
+        "citations": 219,
         "year": 2020
       },
       {
@@ -4177,7 +4177,7 @@
         "label": "Redox Proteomics: Chemical Principles, Methodological Approaches and Biological/Biomedical Promises",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 253,
+        "citations": 254,
         "year": 2012
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2688,
+        "citations": 2690,
         "year": 2017
       },
       {
@@ -4377,7 +4377,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 315,
+        "citations": 316,
         "year": 2019
       },
       {
@@ -4521,7 +4521,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 190,
+        "citations": 192,
         "year": 2024
       },
       {
@@ -4865,7 +4865,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4947,
+        "citations": 4949,
         "year": 2017
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5233,
+        "citations": 5236,
         "year": 2021
       },
       {
@@ -5465,7 +5465,7 @@
         "label": "Peptide Property Prediction for Mass Spectrometry Using AI: An Introduction to State of the Art Models",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 6,
+        "citations": 7,
         "year": 2025
       },
       {
