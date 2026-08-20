@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-19T06:57:12.965158+00:00",
+  "generated_at": "2026-08-20T06:59:05.724601+00:00",
   "summary": {
-    "total_citations": 5679,
+    "total_citations": 5684,
     "countries_reached": 79,
-    "citing_institutions": 4703,
+    "citing_institutions": 4711,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 432,
+      "cited_by_count": 436,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -52,7 +52,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 409,
+      "cited_by_count": 410,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -719,16 +719,16 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2610,
-      "institutions": 995
+      "citations": 2612,
+      "institutions": 999
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 858,
-      "institutions": 765
+      "citations": 859,
+      "institutions": 766
     },
     {
       "country": "Germany",
@@ -743,8 +743,8 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 462,
-      "institutions": 227
+      "citations": 463,
+      "institutions": 228
     },
     {
       "country": "Canada",
@@ -759,8 +759,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 226,
-      "institutions": 202
+      "citations": 227,
+      "institutions": 203
     },
     {
       "country": "Netherlands",
@@ -1007,8 +1007,8 @@
       "country_code": "EG",
       "lat": 26.8,
       "lon": 30.8,
-      "citations": 26,
-      "institutions": 24
+      "citations": 27,
+      "institutions": 25
     },
     {
       "country": "Malaysia",
@@ -2402,7 +2402,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2029,
+      "count": 2031,
       "color": "#6E4B2A"
     },
     {
@@ -2412,17 +2412,17 @@
     },
     {
       "name": "Medicine",
-      "count": 903,
+      "count": 904,
       "color": "#B07C39"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 378,
+      "count": 379,
       "color": "#9A553B"
     },
     {
       "name": "Computer Science",
-      "count": 206,
+      "count": 207,
       "color": "#7A6A3E"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 432,
+        "citations": 436,
         "year": 2023
       },
       {
@@ -2513,7 +2513,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 409,
+        "citations": 410,
         "year": 2022
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1133,
+        "citations": 1134,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 435,
+        "citations": 438,
         "year": 2025
       },
       {
@@ -3113,7 +3113,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 411,
+        "citations": 412,
         "year": 2022
       },
       {
@@ -3121,7 +3121,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 339,
+        "citations": 340,
         "year": 2022
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 315,
+        "citations": 317,
         "year": 2023
       },
       {
@@ -3137,7 +3137,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 230,
+        "citations": 231,
         "year": 2021
       },
       {
@@ -3161,7 +3161,7 @@
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2022
       },
       {
@@ -3169,7 +3169,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 114,
+        "citations": 116,
         "year": 2024
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4272,
+        "citations": 4273,
         "year": 2012
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3425,
+        "citations": 3428,
         "year": 2016
       },
       {
@@ -3289,7 +3289,7 @@
         "label": "Mechanisms and models of somatic cell reprogramming",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 459,
+        "citations": 460,
         "year": 2013
       },
       {
@@ -3305,7 +3305,7 @@
         "label": "Quantitative mass spectrometry in proteomics: critical review update from 2007 to the present",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 803,
+        "citations": 804,
         "year": 2012
       },
       {
@@ -3545,7 +3545,7 @@
         "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 252,
+        "citations": 253,
         "year": 2020
       },
       {
@@ -3622,7 +3622,7 @@
       },
       {
         "id": "W2980266162",
-        "label": "Versatile and Dynamic Symbioses Between Insects and<i>Burkholderia</i>Bacteria",
+        "label": "Versatile and Dynamic Symbioses Between Insects and Burkholderia Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 100,
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 447,
+        "citations": 449,
         "year": 2024
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 481,
+        "citations": 484,
         "year": 2023
       },
       {
@@ -3969,7 +3969,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 84,
+        "citations": 85,
         "year": 2023
       },
       {
@@ -3977,7 +3977,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 78,
+        "citations": 79,
         "year": 2024
       },
       {
@@ -4065,7 +4065,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 876,
+        "citations": 877,
         "year": 2021
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2690,
+        "citations": 2691,
         "year": 2017
       },
       {
@@ -4425,7 +4425,7 @@
         "label": "Genomic reconstruction of short-chain fatty acid production by the human gut microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2022
       },
       {
@@ -4521,7 +4521,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 192,
+        "citations": 193,
         "year": 2024
       },
       {
@@ -4537,7 +4537,7 @@
         "label": "<i>Akkermansia muciniphila</i> alleviates <scp>high\u2010fat\u2010diet</scp> \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 115,
+        "citations": 117,
         "year": 2023
       },
       {
@@ -4865,7 +4865,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4949,
+        "citations": 4950,
         "year": 2017
       },
       {
@@ -4889,7 +4889,7 @@
         "label": "Microbial-derived products as potential new antimicrobials",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 79,
+        "citations": 80,
         "year": 2018
       },
       {
@@ -4937,7 +4937,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 115,
+        "citations": 116,
         "year": 2022
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5236,
+        "citations": 5241,
         "year": 2021
       },
       {
@@ -5365,6 +5365,14 @@
         "year": 2022
       },
       {
+        "id": "W3214451869",
+        "label": "Synthetic Biology Advanced Natural Product Discovery",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 21,
+        "year": 2021
+      },
+      {
         "id": "W4411466233",
         "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
         "field": "Medicine",
@@ -5373,16 +5381,8 @@
         "year": 2025
       },
       {
-        "id": "W3214451869",
-        "label": "Synthetic Biology Advanced Natural Product Discovery",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 20,
-        "year": 2021
-      },
-      {
         "id": "W3116478593",
-        "label": "Label\u2010free proteomic dissection on <i>dptP</i> \u2010deletion mutant uncovers <i>dptP</i> involvement in strain growth and daptomycin tolerance of <i>Streptomyces roseosporus</i>",
+        "label": "Label\u2010free proteomic dissection on dptP \u2010deletion mutant uncovers dptP involvement in strain growth and daptomycin tolerance of Streptomyces roseosporus",
         "field": "Medicine",
         "type": "citing",
         "citations": 19,
@@ -5441,7 +5441,7 @@
         "label": "Discovery of Bioactive Natural Products from Bacillus Species: Chemistry, Biosynthesis and Biological Activities",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 5,
+        "citations": 6,
         "year": 2022
       },
       {
@@ -7359,12 +7359,12 @@
       },
       {
         "source": "W2946278827",
-        "target": "W4411466233",
+        "target": "W3214451869",
         "strength": 0.5
       },
       {
         "source": "W2946278827",
-        "target": "W3214451869",
+        "target": "W4411466233",
         "strength": 0.5
       },
       {
