@@ -106,14 +106,17 @@
        (Maister, "Managing the Professional Service Firm": internal hierarchy stays
        internal.) Every card is identical in weight and size. */
     .people {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: clamp(2.25rem, 4vw, 3.25rem) clamp(1.75rem, 3vw, 2.5rem);
+      --people-gap: clamp(1.75rem, 3vw, 2.5rem);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(2.25rem, 4vw, 3.25rem) var(--people-gap);
       border-top: 1px solid var(--ink-hairline);
       padding-top: clamp(2.5rem, 5vw, 3.5rem);
     }
-    @media (max-width: 760px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 460px) { .people { grid-template-columns: 1fr; } .person-figure { max-width: 148px; } }
+    .people .person { flex: 0 1 calc((100% - 2 * var(--people-gap)) / 3); }
+    @media (max-width: 760px) { .people .person { flex-basis: calc((100% - var(--people-gap)) / 2); } }
+    @media (max-width: 460px) { .people .person { flex-basis: 100%; } .person-figure { max-width: 148px; } }
     .person { display: flex; flex-direction: column; }
     /* Circular specimen-plate mount: parchment matte, hairline frame */
     .person-figure {
