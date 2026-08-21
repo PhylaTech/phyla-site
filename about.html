@@ -115,28 +115,33 @@
     @media (max-width: 760px) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 460px) { .people { grid-template-columns: 1fr; } .person-figure { max-width: 148px; } }
     .person { display: flex; flex-direction: column; }
-    /* Arched specimen-plate mount: domed top, parchment matte, hairline frame */
+    /* Circular specimen-plate mount: parchment matte, hairline frame */
     .person-figure {
       background: var(--parchment-pale);
       border: 1px solid var(--ink-hairline-strong);
-      border-radius: 50% 50% 4px 4px / 40% 40% 4px 4px;
+      border-radius: 50%;
       padding: 6px;
       width: 100%;
       max-width: 168px;
-      margin-bottom: 1.1rem;
+      margin: 0 auto 1.1rem;
     }
     .person-figure img {
       width: 100%;
       height: auto;
       display: block;
       filter: grayscale(0.18) sepia(0.12) contrast(0.96);
-      border-radius: 50% 50% 2px 2px / 40% 40% 2px 2px;
+      border-radius: 50%;
+    }
+    .person-figure svg.diatom-avatar {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     /* Initials plate, until a portrait arrives. Same footprint as a photo. */
     .person-figure.is-placeholder {
       display: grid;
       place-items: center;
-      aspect-ratio: 1 / 1.12;
+      aspect-ratio: 1 / 1;
     }
     .person-mono {
       font-variation-settings: "wdth" 95, "wght" 600;
@@ -351,8 +356,93 @@
             </div>
           </article>
           <article class="person">
-            <figure class="person-figure is-placeholder" aria-hidden="true">
-              <span class="person-mono">CW</span>
+            <figure class="person-figure">
+              <svg class="diatom-avatar" viewBox="0 0 240 240" role="img" aria-label="Centric diatom illustration standing in for a portrait of Craig Wenger">
+                <circle cx="120" cy="120" r="98" fill="var(--parchment-mid)"/>
+                <circle cx="120" cy="120" r="98" stroke="var(--tannin)" stroke-width="3.5" fill="none"/>
+                <circle cx="120" cy="120" r="84" stroke="var(--ink-hairline-strong)" stroke-width="1.4" fill="none"/>
+                <g stroke="var(--tannin)" stroke-width="1.6" stroke-linecap="round" opacity="0.45">
+                  <line x1="120.00" y1="68.00" x2="120.00" y2="38.00"/>
+                  <line x1="129.03" y1="68.79" x2="134.24" y2="39.25"/>
+                  <line x1="137.79" y1="71.14" x2="148.05" y2="42.95"/>
+                  <line x1="146.00" y1="74.97" x2="161.00" y2="48.99"/>
+                  <line x1="153.42" y1="80.17" x2="172.71" y2="57.18"/>
+                  <line x1="159.83" y1="86.58" x2="182.82" y2="67.29"/>
+                  <line x1="165.03" y1="94.00" x2="191.01" y2="79.00"/>
+                  <line x1="168.86" y1="102.21" x2="197.05" y2="91.95"/>
+                  <line x1="171.21" y1="110.97" x2="200.75" y2="105.76"/>
+                  <line x1="172.00" y1="120.00" x2="202.00" y2="120.00"/>
+                  <line x1="171.21" y1="129.03" x2="200.75" y2="134.24"/>
+                  <line x1="168.86" y1="137.79" x2="197.05" y2="148.05"/>
+                  <line x1="165.03" y1="146.00" x2="191.01" y2="161.00"/>
+                  <line x1="159.83" y1="153.42" x2="182.82" y2="172.71"/>
+                  <line x1="153.42" y1="159.83" x2="172.71" y2="182.82"/>
+                  <line x1="146.00" y1="165.03" x2="161.00" y2="191.01"/>
+                  <line x1="137.79" y1="168.86" x2="148.05" y2="197.05"/>
+                  <line x1="129.03" y1="171.21" x2="134.24" y2="200.75"/>
+                  <line x1="120.00" y1="172.00" x2="120.00" y2="202.00"/>
+                  <line x1="110.97" y1="171.21" x2="105.76" y2="200.75"/>
+                  <line x1="102.21" y1="168.86" x2="91.95" y2="197.05"/>
+                  <line x1="94.00" y1="165.03" x2="79.00" y2="191.01"/>
+                  <line x1="86.58" y1="159.83" x2="67.29" y2="182.82"/>
+                  <line x1="80.17" y1="153.42" x2="57.18" y2="172.71"/>
+                  <line x1="74.97" y1="146.00" x2="48.99" y2="161.00"/>
+                  <line x1="71.14" y1="137.79" x2="42.95" y2="148.05"/>
+                  <line x1="68.79" y1="129.03" x2="39.25" y2="134.24"/>
+                  <line x1="68.00" y1="120.00" x2="38.00" y2="120.00"/>
+                  <line x1="68.79" y1="110.97" x2="39.25" y2="105.76"/>
+                  <line x1="71.14" y1="102.21" x2="42.95" y2="91.95"/>
+                  <line x1="74.97" y1="94.00" x2="48.99" y2="79.00"/>
+                  <line x1="80.17" y1="86.58" x2="57.18" y2="67.29"/>
+                  <line x1="86.58" y1="80.17" x2="67.29" y2="57.18"/>
+                  <line x1="94.00" y1="74.97" x2="79.00" y2="48.99"/>
+                  <line x1="102.21" y1="71.14" x2="91.95" y2="42.95"/>
+                  <line x1="110.97" y1="68.79" x2="105.76" y2="39.25"/>
+                </g>
+                <g fill="var(--tannin-deep)" opacity="0.75">
+                  <circle cx="127.93" cy="29.35" r="2.8"/>
+                  <circle cx="143.55" cy="32.10" r="2.8"/>
+                  <circle cx="158.46" cy="37.53" r="2.8"/>
+                  <circle cx="172.20" cy="45.46" r="2.8"/>
+                  <circle cx="184.35" cy="55.65" r="2.8"/>
+                  <circle cx="194.54" cy="67.80" r="2.8"/>
+                  <circle cx="202.47" cy="81.54" r="2.8"/>
+                  <circle cx="207.90" cy="96.45" r="2.8"/>
+                  <circle cx="210.65" cy="112.07" r="2.8"/>
+                  <circle cx="210.65" cy="127.93" r="2.8"/>
+                  <circle cx="207.90" cy="143.55" r="2.8"/>
+                  <circle cx="202.47" cy="158.46" r="2.8"/>
+                  <circle cx="194.54" cy="172.20" r="2.8"/>
+                  <circle cx="184.35" cy="184.35" r="2.8"/>
+                  <circle cx="172.20" cy="194.54" r="2.8"/>
+                  <circle cx="158.46" cy="202.47" r="2.8"/>
+                  <circle cx="143.55" cy="207.90" r="2.8"/>
+                  <circle cx="127.93" cy="210.65" r="2.8"/>
+                  <circle cx="112.07" cy="210.65" r="2.8"/>
+                  <circle cx="96.45" cy="207.90" r="2.8"/>
+                  <circle cx="81.54" cy="202.47" r="2.8"/>
+                  <circle cx="67.80" cy="194.54" r="2.8"/>
+                  <circle cx="55.65" cy="184.35" r="2.8"/>
+                  <circle cx="45.46" cy="172.20" r="2.8"/>
+                  <circle cx="37.53" cy="158.46" r="2.8"/>
+                  <circle cx="32.10" cy="143.55" r="2.8"/>
+                  <circle cx="29.35" cy="127.93" r="2.8"/>
+                  <circle cx="29.35" cy="112.07" r="2.8"/>
+                  <circle cx="32.10" cy="96.45" r="2.8"/>
+                  <circle cx="37.53" cy="81.54" r="2.8"/>
+                  <circle cx="45.46" cy="67.80" r="2.8"/>
+                  <circle cx="55.65" cy="55.65" r="2.8"/>
+                  <circle cx="67.80" cy="45.46" r="2.8"/>
+                  <circle cx="81.54" cy="37.53" r="2.8"/>
+                  <circle cx="96.45" cy="32.10" r="2.8"/>
+                  <circle cx="112.07" cy="29.35" r="2.8"/>
+                </g>
+                <circle cx="120" cy="120" r="47" fill="var(--parchment-pale)"/>
+                <circle cx="120" cy="120" r="47" stroke="var(--tannin)" stroke-width="2.5" fill="none"/>
+                <circle cx="104" cy="112" r="6.5" fill="var(--ink)"/>
+                <circle cx="136" cy="112" r="6.5" fill="var(--ink)"/>
+                <path d="M105 131 Q120 144 135 131" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+              </svg>
             </figure>
             <div class="person-body">
               <h3>Craig Wenger</h3>
