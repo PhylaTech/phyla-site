@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-22T06:54:27.856930+00:00",
+  "generated_at": "2026-08-23T06:55:53.862099+00:00",
   "summary": {
-    "total_citations": 5686,
+    "total_citations": 5689,
     "countries_reached": 79,
-    "citing_institutions": 4713,
+    "citing_institutions": 4718,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 436,
+      "cited_by_count": 439,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -728,7 +728,7 @@
       "lat": 35.9,
       "lon": 104.2,
       "citations": 859,
-      "institutions": 766
+      "institutions": 765
     },
     {
       "country": "Germany",
@@ -736,7 +736,7 @@
       "lat": 51.2,
       "lon": 10.4,
       "citations": 576,
-      "institutions": 246
+      "institutions": 247
     },
     {
       "country": "United Kingdom",
@@ -759,8 +759,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 227,
-      "institutions": 204
+      "citations": 228,
+      "institutions": 207
     },
     {
       "country": "Netherlands",
@@ -831,8 +831,8 @@
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 122,
-      "institutions": 80
+      "citations": 123,
+      "institutions": 81
     },
     {
       "country": "Japan",
@@ -872,7 +872,7 @@
       "lat": 47.5,
       "lon": 14.6,
       "citations": 80,
-      "institutions": 34
+      "institutions": 35
     },
     {
       "country": "Israel",
@@ -2407,12 +2407,12 @@
     },
     {
       "name": "Chemistry",
-      "count": 1543,
+      "count": 1544,
       "color": "#5C6E4A"
     },
     {
       "name": "Medicine",
-      "count": 905,
+      "count": 907,
       "color": "#B07C39"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 436,
+        "citations": 439,
         "year": 2023
       },
       {
@@ -2993,7 +2993,7 @@
         "label": "MS-GF+ makes progress towards a universal database search tool for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1205,
+        "citations": 1206,
         "year": 2014
       },
       {
@@ -3009,7 +3009,7 @@
         "label": "Estimating the total number of phosphoproteins and phosphorylation sites in eukaryotic proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 748,
+        "citations": 749,
         "year": 2017
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1142,
+        "citations": 1144,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 439,
+        "citations": 440,
         "year": 2025
       },
       {
@@ -3065,7 +3065,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 193,
+        "citations": 195,
         "year": 2024
       },
       {
@@ -3073,7 +3073,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 189,
+        "citations": 190,
         "year": 2024
       },
       {
@@ -3105,7 +3105,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 88,
+        "citations": 89,
         "year": 2025
       },
       {
@@ -3113,7 +3113,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 412,
+        "citations": 413,
         "year": 2022
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 319,
+        "citations": 320,
         "year": 2023
       },
       {
@@ -3145,7 +3145,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 212,
+        "citations": 213,
         "year": 2022
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4276,
+        "citations": 4279,
         "year": 2012
       },
       {
@@ -3201,7 +3201,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 869,
+        "citations": 870,
         "year": 2015
       },
       {
@@ -3233,7 +3233,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1642,
+        "citations": 1643,
         "year": 2012
       },
       {
@@ -3321,7 +3321,7 @@
         "label": "Reproducible workflow for multiplexed deep-scale proteome and phosphoproteome analysis of tumor tissues by liquid chromatography\u2013mass spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 537,
+        "citations": 538,
         "year": 2018
       },
       {
@@ -3393,7 +3393,7 @@
         "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
         "field": "Medicine",
         "type": "citing",
-        "citations": 609,
+        "citations": 610,
         "year": 2021
       },
       {
@@ -3425,7 +3425,7 @@
         "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
         "field": "Medicine",
         "type": "citing",
-        "citations": 322,
+        "citations": 323,
         "year": 2016
       },
       {
@@ -3465,7 +3465,7 @@
         "label": "MYC reshapes CTCF-mediated chromatin architecture in prostate cancer",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2023
       },
       {
@@ -3633,7 +3633,7 @@
         "label": "Relevance of microbial symbiosis to insect behavior",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 94,
+        "citations": 95,
         "year": 2020
       },
       {
@@ -3889,7 +3889,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 521,
+        "citations": 523,
         "year": 2023
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 487,
+        "citations": 488,
         "year": 2023
       },
       {
@@ -4089,7 +4089,7 @@
         "label": "Genetic innovations in animal\u2013microbe symbioses",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 155,
+        "citations": 156,
         "year": 2021
       },
       {
@@ -4257,7 +4257,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 132,
+        "citations": 133,
         "year": 2021
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2692,
+        "citations": 2697,
         "year": 2017
       },
       {
@@ -4393,7 +4393,7 @@
         "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
         "field": "Medicine",
         "type": "citing",
-        "citations": 108,
+        "citations": 109,
         "year": 2017
       },
       {
@@ -4481,7 +4481,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 508,
+        "citations": 509,
         "year": 2019
       },
       {
@@ -4521,7 +4521,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 194,
+        "citations": 196,
         "year": 2024
       },
       {
@@ -4545,7 +4545,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 111,
+        "citations": 112,
         "year": 2024
       },
       {
@@ -4777,7 +4777,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 125,
+        "citations": 126,
         "year": 2022
       },
       {
@@ -4865,7 +4865,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4952,
+        "citations": 4954,
         "year": 2017
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5249,
+        "citations": 5252,
         "year": 2021
       },
       {
