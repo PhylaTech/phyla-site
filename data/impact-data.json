@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-23T06:55:53.862099+00:00",
+  "generated_at": "2026-08-25T07:01:43.429360+00:00",
   "summary": {
-    "total_citations": 5689,
+    "total_citations": 5690,
     "countries_reached": 79,
     "citing_institutions": 4718,
     "disciplines_impacted": 26,
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 439,
+      "cited_by_count": 440,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -719,7 +719,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2612,
+      "citations": 2613,
       "institutions": 999
     },
     {
@@ -727,7 +727,7 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 859,
+      "citations": 860,
       "institutions": 765
     },
     {
@@ -759,7 +759,7 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 228,
+      "citations": 229,
       "institutions": 207
     },
     {
@@ -2070,6 +2070,13 @@
       "citations": 25
     },
     {
+      "name": "Northeastern University",
+      "lat": 42.358428955078125,
+      "lon": -71.05976867675781,
+      "country_code": "US",
+      "citations": 25
+    },
+    {
       "name": "Thermo Fisher Scientific (Germany)",
       "lat": 50.02146911621094,
       "lon": 8.658126831054688,
@@ -2102,13 +2109,6 @@
       "lat": 30.58333,
       "lon": 114.26667,
       "country_code": "CN",
-      "citations": 24
-    },
-    {
-      "name": "Northeastern University",
-      "lat": 42.358428955078125,
-      "lon": -71.05976867675781,
-      "country_code": "US",
       "citations": 24
     },
     {
@@ -2402,7 +2402,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2031,
+      "count": 2032,
       "color": "#6E4B2A"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 439,
+        "citations": 440,
         "year": 2023
       },
       {
@@ -2985,7 +2985,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1498,
+        "citations": 1499,
         "year": 2013
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1144,
+        "citations": 1145,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 440,
+        "citations": 442,
         "year": 2025
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 320,
+        "citations": 321,
         "year": 2023
       },
       {
@@ -3193,7 +3193,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1362,
+        "citations": 1363,
         "year": 2012
       },
       {
@@ -3257,7 +3257,7 @@
         "label": "Next-generation proteomics: towards an integrative view of proteome dynamics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 806,
+        "citations": 807,
         "year": 2012
       },
       {
@@ -3385,7 +3385,7 @@
         "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 905,
+        "citations": 906,
         "year": 2017
       },
       {
@@ -3633,7 +3633,7 @@
         "label": "Relevance of microbial symbiosis to insect behavior",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2020
       },
       {
@@ -3657,7 +3657,7 @@
         "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 667,
+        "citations": 668,
         "year": 2011
       },
       {
@@ -3665,7 +3665,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 575,
+        "citations": 576,
         "year": 2016
       },
       {
@@ -3721,7 +3721,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 132,
+        "citations": 133,
         "year": 2022
       },
       {
@@ -3857,7 +3857,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 148,
+        "citations": 149,
         "year": 2021
       },
       {
@@ -4017,7 +4017,7 @@
         "label": "The Role of Post-Translational Modifications in the Phase Transitions of Intrinsically Disordered Proteins",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 230,
+        "citations": 231,
         "year": 2019
       },
       {
@@ -4025,7 +4025,7 @@
         "label": "Identification and Quantification of Proteoforms by Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 216,
+        "citations": 217,
         "year": 2019
       },
       {
@@ -4305,7 +4305,7 @@
         "label": "Novor: Real-Time Peptide de Novo Sequencing Software",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 274,
+        "citations": 275,
         "year": 2015
       },
       {
@@ -4321,7 +4321,7 @@
         "label": "Trapped Ion Mobility Spectrometry and Parallel Accumulation\u2013Serial Fragmentation in Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 208,
+        "citations": 209,
         "year": 2021
       },
       {
@@ -4329,7 +4329,7 @@
         "label": "The Role of Electron Transfer Dissociation in Modern Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 198,
+        "citations": 199,
         "year": 2017
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2697,
+        "citations": 2700,
         "year": 2017
       },
       {
@@ -4353,7 +4353,7 @@
         "label": "Comprehensive Overview of Bottom-Up Proteomics Using Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 179,
+        "citations": 180,
         "year": 2024
       },
       {
@@ -4369,7 +4369,7 @@
         "label": "Overview and considerations in bottom-up proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 87,
+        "citations": 88,
         "year": 2022
       },
       {
@@ -4489,7 +4489,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 171,
+        "citations": 172,
         "year": 2019
       },
       {
@@ -4865,7 +4865,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4954,
+        "citations": 4956,
         "year": 2017
       },
       {
@@ -4921,7 +4921,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 152,
+        "citations": 153,
         "year": 2018
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5252,
+        "citations": 5255,
         "year": 2021
       },
       {
