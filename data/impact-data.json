@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-30T11:47:08.124347+00:00",
+  "generated_at": "2026-08-31T13:28:19.865638+00:00",
   "summary": {
     "total_citations": 5702,
     "countries_reached": 79,
-    "citing_institutions": 4740,
+    "citing_institutions": 4739,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -1155,20 +1155,20 @@
       "institutions": 3
     },
     {
-      "country": "Peru",
-      "country_code": "PE",
-      "lat": -9.2,
-      "lon": -75.0,
-      "citations": 6,
-      "institutions": 4
-    },
-    {
       "country": "Sri Lanka",
       "country_code": "LK",
       "lat": 7.9,
       "lon": 80.8,
       "citations": 6,
       "institutions": 5
+    },
+    {
+      "country": "Peru",
+      "country_code": "PE",
+      "lat": -9.2,
+      "lon": -75.0,
+      "citations": 6,
+      "institutions": 4
     },
     {
       "country": "Bulgaria",
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1156,
+        "citations": 1157,
         "year": 2024
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4295,
+        "citations": 4297,
         "year": 2012
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3440,
+        "citations": 3441,
         "year": 2016
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 459,
+        "citations": 460,
         "year": 2024
       },
       {
@@ -4345,7 +4345,7 @@
         "label": "Evaluation of post-translational modifications in histone proteins: A review on histone modification defects in developmental and neurological disorders",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 223,
+        "citations": 224,
         "year": 2020
       },
       {
@@ -4521,7 +4521,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 197,
+        "citations": 198,
         "year": 2024
       },
       {
