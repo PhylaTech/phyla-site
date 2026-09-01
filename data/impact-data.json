@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-31T13:28:19.865638+00:00",
+  "generated_at": "2026-09-01T11:32:33.481195+00:00",
   "summary": {
-    "total_citations": 5702,
+    "total_citations": 5705,
     "countries_reached": 79,
-    "citing_institutions": 4739,
+    "citing_institutions": 4740,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 445,
+      "cited_by_count": 447,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -235,7 +235,7 @@
       "title": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
       "journal": "Journal of Chemical Information and Modeling",
       "year": 2019,
-      "cited_by_count": 94,
+      "cited_by_count": 95,
       "field": "Computer Science",
       "authors": [
         "Ian J. Miller"
@@ -727,8 +727,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 863,
-      "institutions": 766
+      "citations": 865,
+      "institutions": 767
     },
     {
       "country": "Germany",
@@ -779,20 +779,20 @@
       "institutions": 284
     },
     {
+      "country": "Australia",
+      "country_code": "AU",
+      "lat": -25.3,
+      "lon": 133.8,
+      "citations": 189,
+      "institutions": 112
+    },
+    {
       "country": "Switzerland",
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
       "citations": 189,
       "institutions": 58
-    },
-    {
-      "country": "Australia",
-      "country_code": "AU",
-      "lat": -25.3,
-      "lon": 133.8,
-      "citations": 188,
-      "institutions": 112
     },
     {
       "country": "Denmark",
@@ -987,20 +987,20 @@
       "institutions": 41
     },
     {
+      "country": "Turkey",
+      "country_code": "TR",
+      "lat": 39.0,
+      "lon": 35.2,
+      "citations": 31,
+      "institutions": 33
+    },
+    {
       "country": "Greece",
       "country_code": "GR",
       "lat": 39.1,
       "lon": 21.8,
       "citations": 31,
       "institutions": 27
-    },
-    {
-      "country": "Turkey",
-      "country_code": "TR",
-      "lat": 39.0,
-      "lon": 35.2,
-      "citations": 30,
-      "institutions": 33
     },
     {
       "country": "Egypt",
@@ -1381,7 +1381,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 123
+      "citations": 124
     },
     {
       "name": "Centre National de la Recherche Scientifique",
@@ -2412,17 +2412,17 @@
     },
     {
       "name": "Medicine",
-      "count": 909,
+      "count": 910,
       "color": "#B07C39"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 381,
+      "count": 382,
       "color": "#9A553B"
     },
     {
       "name": "Computer Science",
-      "count": 208,
+      "count": 209,
       "color": "#7A6A3E"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 445,
+        "citations": 447,
         "year": 2023
       },
       {
@@ -2625,7 +2625,7 @@
         "label": "Learning Drug Functions from Chemical Structures with Convolutional Neural Networks and Random Forests",
         "field": "Computer Science",
         "type": "core",
-        "citations": 94,
+        "citations": 95,
         "year": 2019
       },
       {
@@ -2921,7 +2921,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 918,
+        "citations": 919,
         "year": 2021
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1157,
+        "citations": 1162,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 450,
+        "citations": 451,
         "year": 2025
       },
       {
@@ -3065,7 +3065,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 198,
+        "citations": 199,
         "year": 2024
       },
       {
@@ -3105,7 +3105,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 94,
+        "citations": 95,
         "year": 2025
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3441,
+        "citations": 3442,
         "year": 2016
       },
       {
@@ -3233,7 +3233,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1647,
+        "citations": 1648,
         "year": 2012
       },
       {
@@ -3249,7 +3249,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1310,
+        "citations": 1311,
         "year": 2014
       },
       {
@@ -3401,7 +3401,7 @@
         "label": "MS Amanda, a Universal Identification Algorithm Optimized for High Accuracy Tandem Mass Spectra",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 537,
+        "citations": 538,
         "year": 2014
       },
       {
@@ -3513,7 +3513,7 @@
         "label": "Extended Multiplexing of Tandem Mass Tags (TMT) Labeling Reveals Age and High Fat Diet Specific Proteome Changes in Mouse Epididymal Adipose Tissue",
         "field": "Medicine",
         "type": "citing",
-        "citations": 396,
+        "citations": 397,
         "year": 2017
       },
       {
@@ -3545,7 +3545,7 @@
         "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 254,
+        "citations": 255,
         "year": 2020
       },
       {
@@ -3617,7 +3617,7 @@
         "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2021
       },
       {
@@ -3625,7 +3625,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and Burkholderia Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2019
       },
       {
@@ -3657,7 +3657,7 @@
         "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 672,
+        "citations": 673,
         "year": 2011
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 460,
+        "citations": 461,
         "year": 2024
       },
       {
@@ -3737,7 +3737,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 117,
+        "citations": 118,
         "year": 2022
       },
       {
@@ -3777,7 +3777,7 @@
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1054,
+        "citations": 1055,
         "year": 2016
       },
       {
@@ -3977,7 +3977,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 80,
+        "citations": 81,
         "year": 2024
       },
       {
@@ -4065,7 +4065,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 884,
+        "citations": 885,
         "year": 2021
       },
       {
@@ -4097,7 +4097,7 @@
         "label": "Insects\u2019 potential: Understanding the functional role of their gut microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 83,
+        "citations": 84,
         "year": 2020
       },
       {
@@ -4201,7 +4201,7 @@
         "label": "Phosphoproteomics in the Age of Rapid and Deep Proteome Profiling",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 279,
+        "citations": 280,
         "year": 2015
       },
       {
@@ -4249,7 +4249,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 178,
+        "citations": 179,
         "year": 2022
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2703,
+        "citations": 2704,
         "year": 2017
       },
       {
@@ -4345,7 +4345,7 @@
         "label": "Evaluation of post-translational modifications in histone proteins: A review on histone modification defects in developmental and neurological disorders",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 224,
+        "citations": 225,
         "year": 2020
       },
       {
@@ -4913,7 +4913,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 190,
+        "citations": 191,
         "year": 2022
       },
       {
@@ -5049,7 +5049,7 @@
         "label": "A robust two-dimensional separation for top-down tandem mass spectrometry of the low-mass proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2009
       },
       {
@@ -5225,7 +5225,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 37,
+        "citations": 39,
         "year": 2023
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5279,
+        "citations": 5285,
         "year": 2021
       },
       {
