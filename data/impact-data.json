@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-03T11:05:03.819302+00:00",
+  "generated_at": "2026-09-04T11:05:37.386058+00:00",
   "summary": {
-    "total_citations": 5709,
+    "total_citations": 5710,
     "countries_reached": 79,
-    "citing_institutions": 4743,
+    "citing_institutions": 4753,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -52,7 +52,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 411,
+      "cited_by_count": 412,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -719,7 +719,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2620,
+      "citations": 2621,
       "institutions": 1005
     },
     {
@@ -727,16 +727,16 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 865,
-      "institutions": 767
+      "citations": 866,
+      "institutions": 768
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 577,
-      "institutions": 248
+      "citations": 578,
+      "institutions": 247
     },
     {
       "country": "United Kingdom",
@@ -768,15 +768,15 @@
       "lat": 52.1,
       "lon": 5.3,
       "citations": 221,
-      "institutions": 62
+      "institutions": 63
     },
     {
       "country": "France",
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 204,
-      "institutions": 285
+      "citations": 205,
+      "institutions": 292
     },
     {
       "country": "Australia",
@@ -975,7 +975,7 @@
       "country_code": "NZ",
       "lat": -40.9,
       "lon": 174.9,
-      "citations": 32,
+      "citations": 33,
       "institutions": 12
     },
     {
@@ -1099,6 +1099,14 @@
       "institutions": 4
     },
     {
+      "country": "Philippines",
+      "country_code": "PH",
+      "lat": 12.9,
+      "lon": 121.8,
+      "citations": 10,
+      "institutions": 8
+    },
+    {
       "country": "Bangladesh",
       "country_code": "BD",
       "lat": 23.7,
@@ -1123,12 +1131,12 @@
       "institutions": 11
     },
     {
-      "country": "Philippines",
-      "country_code": "PH",
-      "lat": 12.9,
-      "lon": 121.8,
-      "citations": 9,
-      "institutions": 8
+      "country": "Ukraine",
+      "country_code": "UA",
+      "lat": 48.4,
+      "lon": 31.2,
+      "citations": 7,
+      "institutions": 7
     },
     {
       "country": "Colombia",
@@ -1137,14 +1145,6 @@
       "lon": -74.1,
       "citations": 6,
       "institutions": 7
-    },
-    {
-      "country": "Ukraine",
-      "country_code": "UA",
-      "lat": 48.4,
-      "lon": 31.2,
-      "citations": 6,
-      "institutions": 6
     },
     {
       "country": "Serbia",
@@ -1177,6 +1177,14 @@
       "lon": 25.5,
       "citations": 6,
       "institutions": 8
+    },
+    {
+      "country": "Nigeria",
+      "country_code": "NG",
+      "lat": 9.1,
+      "lon": 8.7,
+      "citations": 6,
+      "institutions": 7
     },
     {
       "country": "Slovakia",
@@ -1249,14 +1257,6 @@
       "lon": 32.3,
       "citations": 4,
       "institutions": 3
-    },
-    {
-      "country": "Nigeria",
-      "country_code": "NG",
-      "lat": 9.1,
-      "lon": 8.7,
-      "citations": 4,
-      "institutions": 6
     },
     {
       "country": "Iceland",
@@ -1388,7 +1388,7 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 93
+      "citations": 94
     },
     {
       "name": "University of Washington",
@@ -1454,6 +1454,13 @@
       "citations": 62
     },
     {
+      "name": "University of Wisconsin System",
+      "lat": 43.07305,
+      "lon": -89.40123,
+      "country_code": "US",
+      "citations": 60
+    },
+    {
       "name": "University of North Carolina at Chapel Hill",
       "lat": 35.9132,
       "lon": -79.05584,
@@ -1471,13 +1478,6 @@
       "name": "Washington University in St. Louis",
       "lat": 38.62727,
       "lon": -90.19789,
-      "country_code": "US",
-      "citations": 58
-    },
-    {
-      "name": "University of Wisconsin System",
-      "lat": 43.07305,
-      "lon": -89.40123,
       "country_code": "US",
       "citations": 58
     },
@@ -1570,7 +1570,7 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 45
+      "citations": 46
     },
     {
       "name": "University of California, San Francisco",
@@ -2182,6 +2182,13 @@
       "citations": 22
     },
     {
+      "name": "University of Missouri",
+      "lat": 38.95171,
+      "lon": -92.33407,
+      "country_code": "US",
+      "citations": 22
+    },
+    {
       "name": "Pennsylvania State University",
       "lat": 40.79339,
       "lon": -77.86,
@@ -2228,13 +2235,6 @@
       "lat": 42.05159,
       "lon": 12.61969,
       "country_code": "IT",
-      "citations": 21
-    },
-    {
-      "name": "University of Missouri",
-      "lat": 38.95171,
-      "lon": -92.33407,
-      "country_code": "US",
       "citations": 21
     },
     {
@@ -2402,7 +2402,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2037,
+      "count": 2038,
       "color": "#6E4B2A"
     },
     {
@@ -2513,7 +2513,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 411,
+        "citations": 412,
         "year": 2022
       },
       {
@@ -2921,7 +2921,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 920,
+        "citations": 922,
         "year": 2021
       },
       {
@@ -3017,7 +3017,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 703,
+        "citations": 704,
         "year": 2012
       },
       {
@@ -3025,7 +3025,7 @@
         "label": "The One Hour Yeast Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 559,
+        "citations": 560,
         "year": 2013
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1164,
+        "citations": 1165,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 454,
+        "citations": 455,
         "year": 2025
       },
       {
@@ -3065,7 +3065,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 201,
+        "citations": 202,
         "year": 2024
       },
       {
@@ -3073,7 +3073,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 191,
+        "citations": 192,
         "year": 2024
       },
       {
@@ -3081,7 +3081,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 112,
+        "citations": 113,
         "year": 2024
       },
       {
@@ -3093,6 +3093,14 @@
         "year": 2024
       },
       {
+        "id": "W4406533301",
+        "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 96,
+        "year": 2025
+      },
+      {
         "id": "W4406572846",
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -3101,19 +3109,11 @@
         "year": 2025
       },
       {
-        "id": "W4406533301",
-        "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 95,
-        "year": 2025
-      },
-      {
         "id": "W4283726298",
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 415,
+        "citations": 416,
         "year": 2022
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 327,
+        "citations": 329,
         "year": 2023
       },
       {
@@ -3169,7 +3169,7 @@
         "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 119,
+        "citations": 120,
         "year": 2024
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4297,
+        "citations": 4298,
         "year": 2012
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3443,
+        "citations": 3444,
         "year": 2016
       },
       {
@@ -3337,7 +3337,7 @@
         "label": "Integrated Analysis of Transcriptomic and Proteomic Data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 460,
+        "citations": 461,
         "year": 2013
       },
       {
@@ -3385,7 +3385,7 @@
         "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 906,
+        "citations": 908,
         "year": 2017
       },
       {
@@ -3393,7 +3393,7 @@
         "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
         "field": "Medicine",
         "type": "citing",
-        "citations": 613,
+        "citations": 614,
         "year": 2021
       },
       {
@@ -3417,7 +3417,7 @@
         "label": "Identification of modified peptides using localization-aware open search",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 327,
+        "citations": 329,
         "year": 2020
       },
       {
@@ -3513,7 +3513,7 @@
         "label": "Extended Multiplexing of Tandem Mass Tags (TMT) Labeling Reveals Age and High Fat Diet Specific Proteome Changes in Mouse Epididymal Adipose Tissue",
         "field": "Medicine",
         "type": "citing",
-        "citations": 398,
+        "citations": 399,
         "year": 2017
       },
       {
@@ -3545,7 +3545,7 @@
         "label": "Burkholderia as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 141,
+        "citations": 142,
         "year": 2019
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 462,
+        "citations": 463,
         "year": 2024
       },
       {
@@ -3729,7 +3729,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2023
       },
       {
@@ -3785,7 +3785,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 165,
+        "citations": 166,
         "year": 2019
       },
       {
@@ -3881,7 +3881,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 653,
+        "citations": 655,
         "year": 2020
       },
       {
@@ -3889,7 +3889,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 528,
+        "citations": 529,
         "year": 2023
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 492,
+        "citations": 493,
         "year": 2023
       },
       {
@@ -3913,7 +3913,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 212,
+        "citations": 213,
         "year": 2021
       },
       {
@@ -3929,7 +3929,7 @@
         "label": "Virtual screening web servers: designing chemical probes and drug candidates in the cyberspace",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2020
       },
       {
@@ -4281,7 +4281,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 55,
+        "citations": 56,
         "year": 2023
       },
       {
@@ -4289,7 +4289,7 @@
         "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 47,
+        "citations": 48,
         "year": 2024
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2705,
+        "citations": 2707,
         "year": 2017
       },
       {
@@ -4353,7 +4353,7 @@
         "label": "Comprehensive Overview of Bottom-Up Proteomics Using Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 181,
+        "citations": 182,
         "year": 2024
       },
       {
@@ -4793,7 +4793,7 @@
         "label": "Coral holobiont cues prime Endozoicomonas for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 145,
+        "citations": 146,
         "year": 2022
       },
       {
@@ -5089,7 +5089,7 @@
         "label": "Interactive Peptide Spectral Annotator: A Versatile Web-based Tool for Proteomic Applications",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 187,
+        "citations": 188,
         "year": 2019
       },
       {
@@ -5257,7 +5257,7 @@
         "label": "Cyanobacteriochromes from Gloeobacterales Provide New Insight into the Diversification of Cyanobacterial Photoreceptors",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 12,
+        "citations": 13,
         "year": 2023
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5306,
+        "citations": 5308,
         "year": 2021
       },
       {
@@ -5614,12 +5614,12 @@
       },
       {
         "source": "W4386607677",
-        "target": "W4406572846",
+        "target": "W4406533301",
         "strength": 0.5
       },
       {
         "source": "W4386607677",
-        "target": "W4406533301",
+        "target": "W4406572846",
         "strength": 0.5
       },
       {
