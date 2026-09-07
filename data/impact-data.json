@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-06T10:47:54.094427+00:00",
+  "generated_at": "2026-09-07T12:17:57.686635+00:00",
   "summary": {
     "total_citations": 5715,
     "countries_reached": 79,
-    "citing_institutions": 4760,
+    "citing_institutions": 4765,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -719,7 +719,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2621,
+      "citations": 2622,
       "institutions": 1005
     },
     {
@@ -735,8 +735,8 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 580,
-      "institutions": 248
+      "citations": 581,
+      "institutions": 249
     },
     {
       "country": "United Kingdom",
@@ -759,8 +759,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 231,
-      "institutions": 209
+      "citations": 232,
+      "institutions": 213
     },
     {
       "country": "Netherlands",
@@ -907,6 +907,14 @@
       "institutions": 27
     },
     {
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "lat": 23.9,
+      "lon": 45.1,
+      "citations": 48,
+      "institutions": 22
+    },
+    {
       "country": "Taiwan",
       "country_code": "TW",
       "lat": 23.7,
@@ -915,19 +923,11 @@
       "institutions": 52
     },
     {
-      "country": "Saudi Arabia",
-      "country_code": "SA",
-      "lat": 23.9,
-      "lon": 45.1,
-      "citations": 47,
-      "institutions": 22
-    },
-    {
       "country": "Singapore",
       "country_code": "SG",
       "lat": 1.4,
       "lon": 103.8,
-      "citations": 46,
+      "citations": 47,
       "institutions": 18
     },
     {
@@ -2371,6 +2371,13 @@
       "citations": 19
     },
     {
+      "name": "Stanford Medicine",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
+      "citations": 19
+    },
+    {
       "name": "Memorial Sloan Kettering Cancer Center",
       "lat": 40.71427,
       "lon": -74.00597,
@@ -2389,13 +2396,6 @@
       "lat": 40.416500091552734,
       "lon": -3.7025599479675293,
       "country_code": "ES",
-      "citations": 19
-    },
-    {
-      "name": "University of California, Santa Barbara",
-      "lat": 34.42083,
-      "lon": -119.69819,
-      "country_code": "US",
       "citations": 19
     }
   ],
@@ -3009,7 +3009,7 @@
         "label": "Estimating the total number of phosphoproteins and phosphorylation sites in eukaryotic proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 750,
+        "citations": 751,
         "year": 2017
       },
       {
@@ -3073,7 +3073,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 193,
+        "citations": 194,
         "year": 2024
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 330,
+        "citations": 332,
         "year": 2023
       },
       {
@@ -3201,7 +3201,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 872,
+        "citations": 873,
         "year": 2015
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 468,
+        "citations": 470,
         "year": 2024
       },
       {
@@ -3905,7 +3905,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 284,
+        "citations": 285,
         "year": 2022
       },
       {
@@ -3945,7 +3945,7 @@
         "label": "The convergence of traditional and digital biomarkers through AI-assisted biosensing: A new era in translational diagnostics?",
         "field": "Engineering",
         "type": "citing",
-        "citations": 154,
+        "citations": 155,
         "year": 2023
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2710,
+        "citations": 2712,
         "year": 2017
       },
       {
@@ -4777,7 +4777,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4976,
+        "citations": 4977,
         "year": 2017
       },
       {
