@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-09T11:10:36.484271+00:00",
+  "generated_at": "2026-09-10T11:08:08.151490+00:00",
   "summary": {
-    "total_citations": 5719,
+    "total_citations": 5727,
     "countries_reached": 79,
-    "citing_institutions": 4777,
+    "citing_institutions": 4780,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 452,
+      "cited_by_count": 455,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -52,7 +52,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 412,
+      "cited_by_count": 413,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -130,7 +130,7 @@
       "title": "Plotgardener: cultivating precise multi-panel figures in R",
       "journal": "Bioinformatics",
       "year": 2022,
-      "cited_by_count": 167,
+      "cited_by_count": 169,
       "field": "Computer Science",
       "authors": [
         "Craig Wenger"
@@ -195,7 +195,7 @@
       "title": "Defining mitochondrial protein functions through deep multiomic profiling",
       "journal": "Nature",
       "year": 2022,
-      "cited_by_count": 120,
+      "cited_by_count": 121,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -378,7 +378,7 @@
       "title": "Bedtoolsr: An R package for genomic data analysis and manipulation",
       "journal": "The Journal of Open Source Software",
       "year": 2019,
-      "cited_by_count": 55,
+      "cited_by_count": 56,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Craig Wenger"
@@ -719,15 +719,15 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2625,
-      "institutions": 1010
+      "citations": 2628,
+      "institutions": 1011
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 869,
+      "citations": 870,
       "institutions": 771
     },
     {
@@ -735,7 +735,7 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 581,
+      "citations": 582,
       "institutions": 249
     },
     {
@@ -776,7 +776,7 @@
       "lat": 46.2,
       "lon": 2.2,
       "citations": 208,
-      "institutions": 293
+      "institutions": 294
     },
     {
       "country": "Australia",
@@ -855,8 +855,8 @@
       "country_code": "RU",
       "lat": 61.5,
       "lon": 105.3,
-      "citations": 96,
-      "institutions": 61
+      "citations": 97,
+      "institutions": 62
     },
     {
       "country": "Belgium",
@@ -879,7 +879,7 @@
       "country_code": "IL",
       "lat": 31.0,
       "lon": 34.8,
-      "citations": 76,
+      "citations": 77,
       "institutions": 20
     },
     {
@@ -1430,7 +1430,7 @@
       "lat": 37.42411,
       "lon": -122.16608,
       "country_code": "US",
-      "citations": 72
+      "citations": 73
     },
     {
       "name": "ETH Zurich",
@@ -1699,6 +1699,13 @@
       "citations": 38
     },
     {
+      "name": "University of California, Berkeley",
+      "lat": 37.87159,
+      "lon": -122.27275,
+      "country_code": "US",
+      "citations": 38
+    },
+    {
       "name": "Peking University",
       "lat": 39.9075,
       "lon": 116.39723,
@@ -1710,13 +1717,6 @@
       "lat": 22.26861,
       "lon": 114.12924,
       "country_code": "HK",
-      "citations": 37
-    },
-    {
-      "name": "University of California, Berkeley",
-      "lat": 37.87159,
-      "lon": -122.27275,
-      "country_code": "US",
       "citations": 37
     },
     {
@@ -2402,7 +2402,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2044,
+      "count": 2047,
       "color": "#6E4B2A"
     },
     {
@@ -2412,7 +2412,7 @@
     },
     {
       "name": "Medicine",
-      "count": 912,
+      "count": 914,
       "color": "#B07C39"
     },
     {
@@ -2427,7 +2427,7 @@
     },
     {
       "name": "Environmental Science",
-      "count": 147,
+      "count": 148,
       "color": "#47603F"
     },
     {
@@ -2437,12 +2437,12 @@
     },
     {
       "name": "Engineering",
-      "count": 62,
+      "count": 63,
       "color": "#C39A5C"
     },
     {
       "name": "Materials Science",
-      "count": 41,
+      "count": 42,
       "color": "#5A4632"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 452,
+        "citations": 455,
         "year": 2023
       },
       {
@@ -2513,7 +2513,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 412,
+        "citations": 413,
         "year": 2022
       },
       {
@@ -2561,7 +2561,7 @@
         "label": "Plotgardener: cultivating precise multi-panel figures in R",
         "field": "Computer Science",
         "type": "core",
-        "citations": 167,
+        "citations": 169,
         "year": 2022
       },
       {
@@ -2601,7 +2601,7 @@
         "label": "Defining mitochondrial protein functions through deep multiomic profiling",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 120,
+        "citations": 121,
         "year": 2022
       },
       {
@@ -2713,7 +2713,7 @@
         "label": "Bedtoolsr: An R package for genomic data analysis and manipulation",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 55,
+        "citations": 56,
         "year": 2019
       },
       {
@@ -2937,7 +2937,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 335,
+        "citations": 336,
         "year": 2021
       },
       {
@@ -3017,7 +3017,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 705,
+        "citations": 706,
         "year": 2012
       },
       {
@@ -3033,7 +3033,7 @@
         "label": "An Optimized Shotgun Strategy for the Rapid Generation of Comprehensive Human Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 555,
+        "citations": 556,
         "year": 2017
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1173,
+        "citations": 1175,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 459,
+        "citations": 461,
         "year": 2025
       },
       {
@@ -3065,7 +3065,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 202,
+        "citations": 204,
         "year": 2024
       },
       {
@@ -3089,7 +3089,7 @@
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 104,
         "year": 2024
       },
       {
@@ -3097,7 +3097,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2025
       },
       {
@@ -3121,7 +3121,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 347,
+        "citations": 349,
         "year": 2022
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 333,
+        "citations": 334,
         "year": 2023
       },
       {
@@ -3157,6 +3157,14 @@
         "year": 2022
       },
       {
+        "id": "W4400220867",
+        "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 123,
+        "year": 2024
+      },
+      {
         "id": "W4308792295",
         "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -3165,19 +3173,11 @@
         "year": 2022
       },
       {
-        "id": "W4400220867",
-        "label": "Genome-resolved metagenomics: a game changer for microbiome medicine",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 121,
-        "year": 2024
-      },
-      {
         "id": "W1973268693",
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4308,
+        "citations": 4312,
         "year": 2012
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3452,
+        "citations": 3456,
         "year": 2016
       },
       {
@@ -3201,7 +3201,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 873,
+        "citations": 874,
         "year": 2015
       },
       {
@@ -3225,7 +3225,7 @@
         "label": "Dissecting DNA damage response pathways by analysing protein localization and abundance changes during DNA replication stress",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 536,
+        "citations": 537,
         "year": 2012
       },
       {
@@ -3233,7 +3233,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1650,
+        "citations": 1651,
         "year": 2012
       },
       {
@@ -3241,7 +3241,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1421,
+        "citations": 1422,
         "year": 2013
       },
       {
@@ -3313,7 +3313,7 @@
         "label": "Isobaric Labeling-Based Relative Quantification in Shotgun Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 621,
+        "citations": 622,
         "year": 2014
       },
       {
@@ -3353,7 +3353,7 @@
         "label": "Toward a Comprehensive Characterization of a Human Cancer Cell Phosphoproteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 444,
+        "citations": 445,
         "year": 2012
       },
       {
@@ -3385,7 +3385,7 @@
         "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 910,
+        "citations": 911,
         "year": 2017
       },
       {
@@ -3497,7 +3497,7 @@
         "label": "Meta- and Orthogonal Integration of Influenza \u201cOMICs\u201d Data Defines a Role for UBR4 in Virus Budding",
         "field": "Medicine",
         "type": "citing",
-        "citations": 924,
+        "citations": 923,
         "year": 2015
       },
       {
@@ -3593,7 +3593,7 @@
         "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 890,
+        "citations": 891,
         "year": 2013
       },
       {
@@ -3617,7 +3617,7 @@
         "label": "Systems biology-based approaches toward understanding drought tolerance in food crops",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 206,
+        "citations": 207,
         "year": 2012
       },
       {
@@ -3729,7 +3729,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 125,
+        "citations": 126,
         "year": 2023
       },
       {
@@ -3737,7 +3737,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 118,
+        "citations": 120,
         "year": 2022
       },
       {
@@ -3777,7 +3777,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 315,
+        "citations": 316,
         "year": 2020
       },
       {
@@ -3809,7 +3809,7 @@
         "label": "Ancient plant-like terpene biosynthesis in corals",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 111,
+        "citations": 112,
         "year": 2022
       },
       {
@@ -3817,7 +3817,7 @@
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1058,
+        "citations": 1059,
         "year": 2016
       },
       {
@@ -3889,7 +3889,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 531,
+        "citations": 534,
         "year": 2023
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 496,
+        "citations": 497,
         "year": 2023
       },
       {
@@ -3953,7 +3953,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 113,
+        "citations": 114,
         "year": 2023
       },
       {
@@ -4057,7 +4057,7 @@
         "label": "Mapping Extracellular Matrix Proteins in Formalin-Fixed, Paraffin-Embedded Tissues by MALDI Imaging Mass Spectrometry",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2017
       },
       {
@@ -4065,7 +4065,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 889,
+        "citations": 890,
         "year": 2021
       },
       {
@@ -4113,7 +4113,7 @@
         "label": "Isotopic labeling of terminal amines in complex samples identifies protein N-termini and protease cleavage products",
         "field": "Medicine",
         "type": "citing",
-        "citations": 568,
+        "citations": 569,
         "year": 2010
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2711,
+        "citations": 2715,
         "year": 2017
       },
       {
@@ -4369,7 +4369,7 @@
         "label": "Overview and considerations in bottom-up proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 90,
+        "citations": 91,
         "year": 2022
       },
       {
@@ -4521,7 +4521,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 200,
+        "citations": 202,
         "year": 2024
       },
       {
@@ -4537,7 +4537,7 @@
         "label": "Akkermansia muciniphila alleviates high\u2010fat\u2010diet \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 121,
+        "citations": 122,
         "year": 2023
       },
       {
@@ -4553,7 +4553,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 68,
+        "citations": 69,
         "year": 2024
       },
       {
@@ -4633,7 +4633,7 @@
         "label": "Feasibility of Large-Scale Phosphoproteomics with Higher Energy Collisional Dissociation Fragmentation",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 162,
+        "citations": 163,
         "year": 2010
       },
       {
@@ -4777,7 +4777,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4979,
+        "citations": 4981,
         "year": 2017
       },
       {
@@ -4785,7 +4785,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 422,
+        "citations": 423,
         "year": 2020
       },
       {
@@ -4937,7 +4937,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 117,
+        "citations": 119,
         "year": 2022
       },
       {
@@ -4961,7 +4961,7 @@
         "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 40,
+        "citations": 41,
         "year": 2020
       },
       {
@@ -5089,7 +5089,7 @@
         "label": "Interactive Peptide Spectral Annotator: A Versatile Web-based Tool for Proteomic Applications",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 189,
+        "citations": 190,
         "year": 2019
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5326,
+        "citations": 5334,
         "year": 2021
       },
       {
@@ -5457,7 +5457,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 52,
+        "citations": 53,
         "year": 2025
       },
       {
@@ -5477,17 +5477,17 @@
         "year": 2026
       },
       {
-        "id": "W4411012216",
-        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
-        "field": "Agricultural and Biological Sciences",
+        "id": "W4414553450",
+        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
+        "field": "Medicine",
         "type": "citing",
         "citations": 2,
         "year": 2025
       },
       {
-        "id": "W4414553450",
-        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
-        "field": "Medicine",
+        "id": "W4411012216",
+        "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
+        "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 2,
         "year": 2025
@@ -5654,12 +5654,12 @@
       },
       {
         "source": "W4225258284",
-        "target": "W4308792295",
+        "target": "W4400220867",
         "strength": 0.5
       },
       {
         "source": "W4225258284",
-        "target": "W4400220867",
+        "target": "W4308792295",
         "strength": 0.5
       },
       {
@@ -7429,12 +7429,12 @@
       },
       {
         "source": "W4386446289",
-        "target": "W4411012216",
+        "target": "W4414553450",
         "strength": 0.5
       },
       {
         "source": "W4386446289",
-        "target": "W4414553450",
+        "target": "W4411012216",
         "strength": 0.5
       },
       {
