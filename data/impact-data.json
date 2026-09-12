@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-11T11:07:14.005562+00:00",
+  "generated_at": "2026-09-12T10:35:04.201808+00:00",
   "summary": {
-    "total_citations": 5727,
+    "total_citations": 5728,
     "countries_reached": 79,
-    "citing_institutions": 4780,
+    "citing_institutions": 4781,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 455,
+      "cited_by_count": 456,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -719,15 +719,15 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2628,
-      "institutions": 1011
+      "citations": 2630,
+      "institutions": 1012
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 870,
+      "citations": 871,
       "institutions": 771
     },
     {
@@ -743,7 +743,7 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 465,
+      "citations": 466,
       "institutions": 231
     },
     {
@@ -783,7 +783,7 @@
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
-      "citations": 189,
+      "citations": 190,
       "institutions": 112
     },
     {
@@ -847,7 +847,7 @@
       "country_code": "SE",
       "lat": 60.1,
       "lon": 18.6,
-      "citations": 112,
+      "citations": 113,
       "institutions": 29
     },
     {
@@ -1510,18 +1510,18 @@
       "citations": 52
     },
     {
+      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 51
+    },
+    {
       "name": "University of California, Los Angeles",
       "lat": 34.05223,
       "lon": -118.24368,
       "country_code": "US",
       "citations": 51
-    },
-    {
-      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 50
     },
     {
       "name": "Pacific Northwest National Laboratory",
@@ -1629,6 +1629,13 @@
       "citations": 41
     },
     {
+      "name": "National Cancer Institute",
+      "lat": 38.98067092895508,
+      "lon": -77.10025787353516,
+      "country_code": "US",
+      "citations": 40
+    },
+    {
       "name": "University of Illinois Urbana-Champaign",
       "lat": 40.11059,
       "lon": -88.20727,
@@ -1647,13 +1654,6 @@
       "lat": 49.24966,
       "lon": -123.11934,
       "country_code": "CA",
-      "citations": 39
-    },
-    {
-      "name": "National Cancer Institute",
-      "lat": 38.98067092895508,
-      "lon": -77.10025787353516,
-      "country_code": "US",
       "citations": 39
     },
     {
@@ -2378,6 +2378,13 @@
       "citations": 19
     },
     {
+      "name": "Harvard Stem Cell Institute",
+      "lat": 42.375099182128906,
+      "lon": -71.1056137084961,
+      "country_code": "US",
+      "citations": 19
+    },
+    {
       "name": "Memorial Sloan Kettering Cancer Center",
       "lat": 40.71427,
       "lon": -74.00597,
@@ -2389,13 +2396,6 @@
       "lat": 49.23262,
       "lon": 7.00982,
       "country_code": "DE",
-      "citations": 19
-    },
-    {
-      "name": "Instituto de Salud Carlos III",
-      "lat": 40.416500091552734,
-      "lon": -3.7025599479675293,
-      "country_code": "ES",
       "citations": 19
     }
   ],
@@ -2457,7 +2457,7 @@
     },
     {
       "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 13,
+      "count": 14,
       "color": "#7E4A2E"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 455,
+        "citations": 456,
         "year": 2023
       },
       {
@@ -2921,7 +2921,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 924,
+        "citations": 925,
         "year": 2021
       },
       {
@@ -3017,7 +3017,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 706,
+        "citations": 707,
         "year": 2012
       },
       {
@@ -3041,7 +3041,7 @@
         "label": "Six alternative proteases for mass spectrometry\u2013based proteomics beyond trypsin",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 477,
+        "citations": 478,
         "year": 2016
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1175,
+        "citations": 1176,
         "year": 2024
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 461,
+        "citations": 462,
         "year": 2025
       },
       {
@@ -3097,7 +3097,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Medicine",
         "type": "citing",
-        "citations": 98,
+        "citations": 100,
         "year": 2025
       },
       {
@@ -3121,7 +3121,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Medicine",
         "type": "citing",
-        "citations": 349,
+        "citations": 350,
         "year": 2022
       },
       {
@@ -3137,7 +3137,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 233,
+        "citations": 234,
         "year": 2021
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4312,
+        "citations": 4314,
         "year": 2012
       },
       {
@@ -3241,7 +3241,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1422,
+        "citations": 1423,
         "year": 2013
       },
       {
@@ -3257,7 +3257,7 @@
         "label": "Next-generation proteomics: towards an integrative view of proteome dynamics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 807,
+        "citations": 808,
         "year": 2012
       },
       {
@@ -3481,7 +3481,7 @@
         "label": "Protein-intrinsic properties and context-dependent effects regulate pioneer factor binding and function",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 35,
+        "citations": 36,
         "year": 2024
       },
       {
@@ -3505,7 +3505,7 @@
         "label": "Multidimensional proteomics for cell biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 421,
+        "citations": 422,
         "year": 2015
       },
       {
@@ -3513,7 +3513,7 @@
         "label": "Extended Multiplexing of Tandem Mass Tags (TMT) Labeling Reveals Age and High Fat Diet Specific Proteome Changes in Mouse Epididymal Adipose Tissue",
         "field": "Medicine",
         "type": "citing",
-        "citations": 399,
+        "citations": 400,
         "year": 2017
       },
       {
@@ -3665,7 +3665,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 583,
+        "citations": 582,
         "year": 2016
       },
       {
@@ -3777,7 +3777,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 316,
+        "citations": 317,
         "year": 2020
       },
       {
@@ -3841,7 +3841,7 @@
         "label": "CLIP and complementary methods",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 392,
+        "citations": 394,
         "year": 2021
       },
       {
@@ -4113,7 +4113,7 @@
         "label": "Isotopic labeling of terminal amines in complex samples identifies protein N-termini and protease cleavage products",
         "field": "Medicine",
         "type": "citing",
-        "citations": 569,
+        "citations": 570,
         "year": 2010
       },
       {
@@ -4257,7 +4257,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 133,
+        "citations": 134,
         "year": 2021
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2715,
+        "citations": 2717,
         "year": 2017
       },
       {
@@ -4353,7 +4353,7 @@
         "label": "Comprehensive Overview of Bottom-Up Proteomics Using Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 182,
+        "citations": 183,
         "year": 2024
       },
       {
@@ -4425,7 +4425,7 @@
         "label": "Genomic reconstruction of short-chain fatty acid production by the human gut microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 113,
+        "citations": 115,
         "year": 2022
       },
       {
@@ -4777,7 +4777,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4981,
+        "citations": 4983,
         "year": 2017
       },
       {
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5334,
+        "citations": 5340,
         "year": 2021
       },
       {
@@ -5477,17 +5477,17 @@
         "year": 2026
       },
       {
-        "id": "W4414553450",
-        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 2,
-        "year": 2025
-      },
-      {
         "id": "W4411012216",
         "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
         "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 3,
+        "year": 2025
+      },
+      {
+        "id": "W4414553450",
+        "label": "The Role of Nucleotide Sequencing in Natural Product Drug Discovery",
+        "field": "Medicine",
         "type": "citing",
         "citations": 2,
         "year": 2025
@@ -7429,12 +7429,12 @@
       },
       {
         "source": "W4386446289",
-        "target": "W4414553450",
+        "target": "W4411012216",
         "strength": 0.5
       },
       {
         "source": "W4386446289",
-        "target": "W4411012216",
+        "target": "W4414553450",
         "strength": 0.5
       },
       {
