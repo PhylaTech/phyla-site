@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-14T12:33:30.721779+00:00",
+  "generated_at": "2026-09-15T11:36:35.827480+00:00",
   "summary": {
-    "total_citations": 5730,
+    "total_citations": 5731,
     "countries_reached": 79,
-    "citing_institutions": 4781,
+    "citing_institutions": 4784,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -130,7 +130,7 @@
       "title": "Plotgardener: cultivating precise multi-panel figures in R",
       "journal": "Bioinformatics",
       "year": 2022,
-      "cited_by_count": 169,
+      "cited_by_count": 170,
       "field": "Computer Science",
       "authors": [
         "Craig Wenger"
@@ -847,8 +847,8 @@
       "country_code": "SE",
       "lat": 60.1,
       "lon": 18.6,
-      "citations": 113,
-      "institutions": 29
+      "citations": 114,
+      "institutions": 30
     },
     {
       "country": "Russia",
@@ -1538,6 +1538,13 @@
       "citations": 49
     },
     {
+      "name": "Science for Life Laboratory",
+      "lat": 59.32938,
+      "lon": 18.06871,
+      "country_code": "SE",
+      "citations": 49
+    },
+    {
       "name": "National Institutes of Health",
       "lat": 38.98067,
       "lon": -77.10026,
@@ -1549,13 +1556,6 @@
       "lat": 52.2,
       "lon": 0.11667,
       "country_code": "GB",
-      "citations": 48
-    },
-    {
-      "name": "Science for Life Laboratory",
-      "lat": 59.32938,
-      "lon": 18.06871,
-      "country_code": "SE",
       "citations": 48
     },
     {
@@ -2007,18 +2007,18 @@
       "citations": 27
     },
     {
+      "name": "KTH Royal Institute of Technology",
+      "lat": 59.32938,
+      "lon": 18.06871,
+      "country_code": "SE",
+      "citations": 27
+    },
+    {
       "name": "University of Pittsburgh",
       "lat": 40.44062,
       "lon": -79.99589,
       "country_code": "US",
       "citations": 27
-    },
-    {
-      "name": "KTH Royal Institute of Technology",
-      "lat": 59.32938,
-      "lon": 18.06871,
-      "country_code": "SE",
-      "citations": 26
     },
     {
       "name": "Helmholtz Centre for Infection Research",
@@ -2417,7 +2417,7 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 382,
+      "count": 383,
       "color": "#9A553B"
     },
     {
@@ -2561,7 +2561,7 @@
         "label": "Plotgardener: cultivating precise multi-panel figures in R",
         "field": "Computer Science",
         "type": "core",
-        "citations": 169,
+        "citations": 170,
         "year": 2022
       },
       {
@@ -2985,7 +2985,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1504,
+        "citations": 1505,
         "year": 2013
       },
       {
@@ -3001,7 +3001,7 @@
         "label": "Comparative Proteomic Analysis of Eleven Common Cell Lines Reveals Ubiquitous but Varying Expression of Most Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 851,
+        "citations": 852,
         "year": 2012
       },
       {
@@ -3017,7 +3017,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 707,
+        "citations": 709,
         "year": 2012
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1177,
+        "citations": 1179,
         "year": 2024
       },
       {
@@ -3129,7 +3129,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 336,
+        "citations": 338,
         "year": 2023
       },
       {
@@ -3177,7 +3177,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4315,
+        "citations": 4317,
         "year": 2012
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3457,
+        "citations": 3458,
         "year": 2016
       },
       {
@@ -3233,7 +3233,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1646,
+        "citations": 1647,
         "year": 2012
       },
       {
@@ -3241,7 +3241,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1421,
+        "citations": 1422,
         "year": 2013
       },
       {
@@ -3521,7 +3521,7 @@
         "label": "A Single Kinase Generates the Majority of the Secreted Phosphoproteome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 360,
+        "citations": 362,
         "year": 2015
       },
       {
@@ -3577,7 +3577,7 @@
         "label": "Relevance of microbial symbiosis to insect behavior",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2020
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 474,
+        "citations": 476,
         "year": 2024
       },
       {
@@ -3737,7 +3737,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 120,
+        "citations": 121,
         "year": 2022
       },
       {
@@ -3749,19 +3749,19 @@
         "year": 2023
       },
       {
-        "id": "W4396858058",
-        "label": "Instrumentation at the Leading Edge of Proteomics",
-        "field": "Chemistry",
+        "id": "W4396578574",
+        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
+        "field": "Medicine",
         "type": "citing",
         "citations": 79,
         "year": 2024
       },
       {
-        "id": "W4396578574",
-        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
-        "field": "Medicine",
+        "id": "W4396858058",
+        "label": "Instrumentation at the Leading Edge of Proteomics",
+        "field": "Chemistry",
         "type": "citing",
-        "citations": 78,
+        "citations": 79,
         "year": 2024
       },
       {
@@ -3777,7 +3777,7 @@
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1058,
+        "citations": 1059,
         "year": 2016
       },
       {
@@ -3889,7 +3889,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 534,
+        "citations": 535,
         "year": 2023
       },
       {
@@ -4065,7 +4065,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 893,
+        "citations": 894,
         "year": 2021
       },
       {
@@ -4153,7 +4153,7 @@
         "label": "A survey of computational methods and error rate estimation procedures for peptide and protein identification in shotgun proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 562,
+        "citations": 563,
         "year": 2010
       },
       {
@@ -4297,7 +4297,7 @@
         "label": "Multi-Omic Single-Shot Technology for Integrated Proteome and Lipidome Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 42,
+        "citations": 43,
         "year": 2021
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2719,
+        "citations": 2720,
         "year": 2017
       },
       {
@@ -4433,7 +4433,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 324,
+        "citations": 325,
         "year": 2019
       },
       {
@@ -4777,7 +4777,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4977,
+        "citations": 4978,
         "year": 2017
       },
       {
@@ -4849,7 +4849,7 @@
         "label": "Rapid Multi-Omics Sample Preparation for Mass Spectrometry",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 42,
+        "citations": 43,
         "year": 2023
       },
       {
@@ -4913,7 +4913,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 193,
+        "citations": 194,
         "year": 2022
       },
       {
@@ -4921,7 +4921,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 155,
+        "citations": 156,
         "year": 2018
       },
       {
@@ -5021,12 +5021,12 @@
         "year": 2009
       },
       {
-        "id": "W2049934862",
-        "label": "Proteomics in Nutrition: Status Quo and Outlook for Biomarkers and Bioactives",
+        "id": "W1975508633",
+        "label": "The Extended Nutrigenomics \u2013 Understanding the Interplay between the Genomes of Food, Gut Microbes, and Human Host",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 73,
-        "year": 2010
+        "year": 2011
       },
       {
         "id": "W2037325627",
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5348,
+        "citations": 5355,
         "year": 2021
       },
       {
@@ -6089,12 +6089,12 @@
       },
       {
         "source": "W4281483346",
-        "target": "W4396858058",
+        "target": "W4396578574",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
-        "target": "W4396578574",
+        "target": "W4396858058",
         "strength": 0.5
       },
       {
@@ -7099,7 +7099,7 @@
       },
       {
         "source": "W2150952942",
-        "target": "W2049934862",
+        "target": "W1975508633",
         "strength": 0.5
       },
       {
