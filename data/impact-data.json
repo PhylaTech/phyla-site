@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-19T10:46:18.858384+00:00",
+  "generated_at": "2026-09-20T11:09:42.893687+00:00",
   "summary": {
-    "total_citations": 5739,
+    "total_citations": 5740,
     "countries_reached": 80,
-    "citing_institutions": 4790,
+    "citing_institutions": 4791,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 457,
+      "cited_by_count": 458,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -1007,8 +1007,8 @@
       "country_code": "EG",
       "lat": 26.8,
       "lon": 30.8,
-      "citations": 27,
-      "institutions": 25
+      "citations": 28,
+      "institutions": 26
     },
     {
       "country": "Malaysia",
@@ -1163,20 +1163,20 @@
       "institutions": 3
     },
     {
-      "country": "Sri Lanka",
-      "country_code": "LK",
-      "lat": 7.9,
-      "lon": 80.8,
-      "citations": 6,
-      "institutions": 5
-    },
-    {
       "country": "Peru",
       "country_code": "PE",
       "lat": -9.2,
       "lon": -75.0,
       "citations": 6,
       "institutions": 4
+    },
+    {
+      "country": "Sri Lanka",
+      "country_code": "LK",
+      "lat": 7.9,
+      "lon": 80.8,
+      "citations": 6,
+      "institutions": 5
     },
     {
       "country": "Bulgaria",
@@ -2430,7 +2430,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 212,
+      "count": 213,
       "color": "#7A6A3E"
     },
     {
@@ -2513,7 +2513,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 457,
+        "citations": 458,
         "year": 2023
       },
       {
@@ -2993,7 +2993,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1509,
+        "citations": 1512,
         "year": 2013
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Six alternative proteases for mass spectrometry\u2013based proteomics beyond trypsin",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 480,
+        "citations": 482,
         "year": 2016
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1187,
+        "citations": 1188,
         "year": 2024
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4339,
+        "citations": 4342,
         "year": 2012
       },
       {
@@ -3193,7 +3193,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3470,
+        "citations": 3473,
         "year": 2016
       },
       {
@@ -3201,7 +3201,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1369,
+        "citations": 1370,
         "year": 2012
       },
       {
@@ -3297,7 +3297,7 @@
         "label": "Mechanisms and models of somatic cell reprogramming",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 462,
+        "citations": 463,
         "year": 2013
       },
       {
@@ -3369,7 +3369,7 @@
         "label": "Protein post-translational modifications and regulation of pluripotency in human stem cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 422,
+        "citations": 424,
         "year": 2013
       },
       {
@@ -3385,7 +3385,7 @@
         "label": "Robust phosphoproteome enrichment using monodisperse microsphere\u2013based immobilized titanium (IV) ion affinity chromatography",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 388,
+        "citations": 389,
         "year": 2013
       },
       {
@@ -3433,7 +3433,7 @@
         "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
         "field": "Medicine",
         "type": "citing",
-        "citations": 323,
+        "citations": 324,
         "year": 2016
       },
       {
@@ -3513,7 +3513,7 @@
         "label": "Multidimensional proteomics for cell biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 423,
+        "citations": 424,
         "year": 2015
       },
       {
@@ -3601,7 +3601,7 @@
         "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 897,
+        "citations": 898,
         "year": 2013
       },
       {
@@ -3673,7 +3673,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 583,
+        "citations": 585,
         "year": 2016
       },
       {
@@ -3681,7 +3681,7 @@
         "label": "Top Down proteomics: Facts and perspectives",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 512,
+        "citations": 514,
         "year": 2014
       },
       {
@@ -3697,7 +3697,7 @@
         "label": "High-Resolution Mass Spectrometers",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 387,
+        "citations": 388,
         "year": 2008
       },
       {
@@ -3705,7 +3705,7 @@
         "label": "Ultra High Resolution Linear Ion Trap Orbitrap Mass Spectrometer (Orbitrap Elite) Facilitates Top Down LC MS/MS and Versatile Peptide Fragmentation Modes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 380,
+        "citations": 381,
         "year": 2011
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "High-Throughput Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 331,
+        "citations": 332,
         "year": 2014
       },
       {
@@ -3801,7 +3801,7 @@
         "label": "Methods to study RNA\u2013protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 408,
+        "citations": 409,
         "year": 2019
       },
       {
@@ -3833,7 +3833,7 @@
         "label": "Methods for comprehensive experimental identification of RNA-protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 168,
+        "citations": 169,
         "year": 2014
       },
       {
@@ -3841,7 +3841,7 @@
         "label": "An optimized streptavidin-binding RNA aptamer for purification of ribonucleoprotein complexes identifies novel ARE-binding proteins",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 166,
+        "citations": 167,
         "year": 2013
       },
       {
@@ -3969,7 +3969,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 89,
+        "citations": 90,
         "year": 2020
       },
       {
@@ -3985,7 +3985,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 84,
+        "citations": 85,
         "year": 2024
       },
       {
@@ -4073,7 +4073,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 900,
+        "citations": 901,
         "year": 2021
       },
       {
@@ -4081,7 +4081,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 364,
+        "citations": 365,
         "year": 2021
       },
       {
@@ -4281,7 +4281,7 @@
         "label": "Spatial snapshots of amyloid precursor protein intramembrane processing via early endosome proteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 60,
+        "citations": 61,
         "year": 2022
       },
       {
@@ -4337,7 +4337,7 @@
         "label": "The Role of Electron Transfer Dissociation in Modern Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 198,
+        "citations": 199,
         "year": 2017
       },
       {
@@ -4345,7 +4345,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2733,
+        "citations": 2734,
         "year": 2017
       },
       {
@@ -4489,7 +4489,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 511,
+        "citations": 512,
         "year": 2019
       },
       {
@@ -4617,7 +4617,7 @@
         "label": "Evaluation of HCD- and CID-type Fragmentation Within Their Respective Detection Platforms For Murine Phosphoproteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 188,
+        "citations": 189,
         "year": 2011
       },
       {
@@ -4633,7 +4633,7 @@
         "label": "Novel Parallelized Quadrupole/Linear Ion Trap/Orbitrap Tribrid Mass Spectrometer Improving Proteome Coverage and Peptide Identification Rates",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 265,
+        "citations": 266,
         "year": 2013
       },
       {
@@ -4785,7 +4785,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4994,
+        "citations": 4996,
         "year": 2017
       },
       {
@@ -5041,7 +5041,7 @@
         "label": "Performance evaluation of a high-field orbitrap mass analyzer",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 184,
+        "citations": 186,
         "year": 2009
       },
       {
@@ -5273,7 +5273,7 @@
         "label": "Niche formation and metabolic interactions contribute to stable diversity in a spatially structured cyanobacterial community",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 11,
+        "citations": 12,
         "year": 2025
       },
       {
@@ -5353,7 +5353,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5380,
+        "citations": 5382,
         "year": 2021
       },
       {
@@ -5377,7 +5377,7 @@
         "label": "Multi-omics approaches: transforming the landscape of natural product isolation",
         "field": "Medicine",
         "type": "citing",
-        "citations": 23,
+        "citations": 24,
         "year": 2025
       },
       {
@@ -5441,7 +5441,7 @@
         "label": "Antibiotic Activity Altered by Competitive Interactions Between Two Coral Reef\u2013Associated Bacteria",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 10,
+        "citations": 11,
         "year": 2022
       },
       {
