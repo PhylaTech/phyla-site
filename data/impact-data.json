@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-22T11:25:42.650634+00:00",
+  "generated_at": "2026-09-23T11:23:26.549838+00:00",
   "summary": {
-    "total_citations": 5744,
+    "total_citations": 5751,
     "countries_reached": 80,
-    "citing_institutions": 4827,
+    "citing_institutions": 4688,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -26,7 +26,7 @@
       "title": "Value of Using Multiple Proteases for Large-Scale Mass Spectrometry-Based Proteomics",
       "journal": "Journal of Proteome Research",
       "year": 2010,
-      "cited_by_count": 500,
+      "cited_by_count": 502,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -39,7 +39,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 458,
+      "cited_by_count": 460,
       "field": "Computer Science",
       "authors": [
         "Evan Roy Rees"
@@ -52,7 +52,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 417,
+      "cited_by_count": 419,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -152,6 +152,19 @@
       "type": "core"
     },
     {
+      "id": "W2097239551",
+      "title": "Large-Scale Phosphoprotein Analysis inMedicago truncatulaRoots Provides Insight into in Vivo Kinase Activity in Legumes",
+      "journal": "PLANT PHYSIOLOGY",
+      "year": 2009,
+      "cited_by_count": 138,
+      "field": "Agricultural and Biological Sciences",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1104/pp.109.149625",
+      "type": "core"
+    },
+    {
       "id": "W2808840038",
       "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
       "journal": "Nature Communications",
@@ -162,19 +175,6 @@
         "Ian J. Miller"
       ],
       "doi": "https://doi.org/10.1038/s41467-018-04955-6",
-      "type": "core"
-    },
-    {
-      "id": "W2097239551",
-      "title": "Large-Scale Phosphoprotein Analysis inMedicago truncatulaRoots Provides Insight into in Vivo Kinase Activity in Legumes",
-      "journal": "PLANT PHYSIOLOGY",
-      "year": 2009,
-      "cited_by_count": 137,
-      "field": "Agricultural and Biological Sciences",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1104/pp.109.149625",
       "type": "core"
     },
     {
@@ -719,95 +719,95 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2635,
-      "institutions": 1024
+      "citations": 2599,
+      "institutions": 958
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 874,
-      "institutions": 778
+      "citations": 869,
+      "institutions": 750
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 583,
-      "institutions": 249
+      "citations": 578,
+      "institutions": 248
     },
     {
       "country": "United Kingdom",
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 466,
-      "institutions": 234
+      "citations": 460,
+      "institutions": 229
     },
     {
       "country": "Canada",
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 301,
-      "institutions": 128
+      "citations": 289,
+      "institutions": 124
     },
     {
       "country": "India",
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 232,
-      "institutions": 216
+      "citations": 226,
+      "institutions": 208
     },
     {
       "country": "Netherlands",
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 222,
-      "institutions": 65
+      "citations": 220,
+      "institutions": 64
     },
     {
       "country": "France",
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 211,
-      "institutions": 297
+      "citations": 208,
+      "institutions": 301
     },
     {
       "country": "Australia",
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
-      "citations": 194,
-      "institutions": 114
+      "citations": 192,
+      "institutions": 113
     },
     {
       "country": "Switzerland",
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
-      "citations": 190,
-      "institutions": 57
+      "citations": 186,
+      "institutions": 63
     },
     {
       "country": "Denmark",
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
-      "citations": 169,
-      "institutions": 24
+      "citations": 168,
+      "institutions": 26
     },
     {
       "country": "Italy",
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 164,
+      "citations": 163,
       "institutions": 116
     },
     {
@@ -815,16 +815,16 @@
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 146,
-      "institutions": 174
+      "citations": 144,
+      "institutions": 173
     },
     {
       "country": "Brazil",
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 126,
-      "institutions": 93
+      "citations": 125,
+      "institutions": 90
     },
     {
       "country": "South Korea",
@@ -832,15 +832,15 @@
       "lat": 35.9,
       "lon": 127.8,
       "citations": 123,
-      "institutions": 81
+      "institutions": 80
     },
     {
       "country": "Japan",
       "country_code": "JP",
       "lat": 36.2,
       "lon": 138.3,
-      "citations": 122,
-      "institutions": 109
+      "citations": 119,
+      "institutions": 107
     },
     {
       "country": "Sweden",
@@ -848,23 +848,23 @@
       "lat": 60.1,
       "lon": 18.6,
       "citations": 114,
-      "institutions": 30
+      "institutions": 32
     },
     {
       "country": "Russia",
       "country_code": "RU",
       "lat": 61.5,
       "lon": 105.3,
-      "citations": 97,
-      "institutions": 62
+      "citations": 95,
+      "institutions": 61
     },
     {
       "country": "Belgium",
       "country_code": "BE",
       "lat": 50.5,
       "lon": 4.5,
-      "citations": 94,
-      "institutions": 39
+      "citations": 93,
+      "institutions": 38
     },
     {
       "country": "Austria",
@@ -879,8 +879,8 @@
       "country_code": "IL",
       "lat": 31.0,
       "lon": 34.8,
-      "citations": 78,
-      "institutions": 20
+      "citations": 77,
+      "institutions": 19
     },
     {
       "country": "Norway",
@@ -888,55 +888,47 @@
       "lat": 60.5,
       "lon": 8.5,
       "citations": 52,
-      "institutions": 28
+      "institutions": 29
     },
     {
       "country": "Poland",
       "country_code": "PL",
       "lat": 51.9,
       "lon": 19.1,
-      "citations": 51,
-      "institutions": 39
-    },
-    {
-      "country": "Czech Republic",
-      "country_code": "CZ",
-      "lat": 49.8,
-      "lon": 15.5,
-      "citations": 50,
-      "institutions": 27
+      "citations": 49,
+      "institutions": 36
     },
     {
       "country": "Singapore",
       "country_code": "SG",
       "lat": 1.4,
       "lon": 103.8,
-      "citations": 49,
-      "institutions": 19
+      "citations": 48,
+      "institutions": 21
     },
     {
       "country": "Taiwan",
       "country_code": "TW",
       "lat": 23.7,
       "lon": 121.0,
-      "citations": 49,
-      "institutions": 52
+      "citations": 48,
+      "institutions": 50
     },
     {
       "country": "Saudi Arabia",
       "country_code": "SA",
       "lat": 23.9,
       "lon": 45.1,
-      "citations": 48,
-      "institutions": 22
+      "citations": 47,
+      "institutions": 21
     },
     {
-      "country": "Ireland",
-      "country_code": "IE",
-      "lat": 53.1,
-      "lon": -7.7,
-      "citations": 42,
-      "institutions": 25
+      "country": "Czech Republic",
+      "country_code": "CZ",
+      "lat": 49.8,
+      "lon": 15.5,
+      "citations": 47,
+      "institutions": 24
     },
     {
       "country": "Finland",
@@ -955,28 +947,28 @@
       "institutions": 27
     },
     {
+      "country": "Ireland",
+      "country_code": "IE",
+      "lat": 53.1,
+      "lon": -7.7,
+      "citations": 39,
+      "institutions": 23
+    },
+    {
       "country": "Portugal",
       "country_code": "PT",
       "lat": 39.4,
       "lon": -8.2,
-      "citations": 40,
-      "institutions": 21
+      "citations": 39,
+      "institutions": 22
     },
     {
       "country": "Mexico",
       "country_code": "MX",
       "lat": 23.6,
       "lon": -102.6,
-      "citations": 35,
-      "institutions": 27
-    },
-    {
-      "country": "New Zealand",
-      "country_code": "NZ",
-      "lat": -40.9,
-      "lon": 174.9,
       "citations": 33,
-      "institutions": 12
+      "institutions": 26
     },
     {
       "country": "Iran",
@@ -992,22 +984,30 @@
       "lat": 39.0,
       "lon": 35.2,
       "citations": 32,
-      "institutions": 34
+      "institutions": 33
+    },
+    {
+      "country": "New Zealand",
+      "country_code": "NZ",
+      "lat": -40.9,
+      "lon": 174.9,
+      "citations": 32,
+      "institutions": 11
     },
     {
       "country": "Greece",
       "country_code": "GR",
       "lat": 39.1,
       "lon": 21.8,
-      "citations": 31,
-      "institutions": 27
+      "citations": 30,
+      "institutions": 25
     },
     {
       "country": "Egypt",
       "country_code": "EG",
       "lat": 26.8,
       "lon": 30.8,
-      "citations": 28,
+      "citations": 27,
       "institutions": 26
     },
     {
@@ -1024,7 +1024,7 @@
       "lat": 30.4,
       "lon": 69.3,
       "citations": 22,
-      "institutions": 20
+      "institutions": 21
     },
     {
       "country": "Qatar",
@@ -1035,22 +1035,6 @@
       "institutions": 7
     },
     {
-      "country": "Thailand",
-      "country_code": "TH",
-      "lat": 15.9,
-      "lon": 100.9,
-      "citations": 21,
-      "institutions": 12
-    },
-    {
-      "country": "Hungary",
-      "country_code": "HU",
-      "lat": 47.2,
-      "lon": 19.5,
-      "citations": 20,
-      "institutions": 19
-    },
-    {
       "country": "United Arab Emirates",
       "country_code": "AE",
       "lat": 23.4,
@@ -1059,12 +1043,28 @@
       "institutions": 15
     },
     {
+      "country": "Thailand",
+      "country_code": "TH",
+      "lat": 15.9,
+      "lon": 100.9,
+      "citations": 20,
+      "institutions": 11
+    },
+    {
       "country": "Luxembourg",
       "country_code": "LU",
       "lat": 49.8,
       "lon": 6.1,
+      "citations": 19,
+      "institutions": 7
+    },
+    {
+      "country": "Hungary",
+      "country_code": "HU",
+      "lat": 47.2,
+      "lon": 19.5,
       "citations": 18,
-      "institutions": 6
+      "institutions": 16
     },
     {
       "country": "Chile",
@@ -1072,7 +1072,7 @@
       "lat": -35.7,
       "lon": -71.5,
       "citations": 16,
-      "institutions": 13
+      "institutions": 12
     },
     {
       "country": "Argentina",
@@ -1080,15 +1080,15 @@
       "lat": -38.4,
       "lon": -63.6,
       "citations": 15,
-      "institutions": 17
+      "institutions": 16
     },
     {
       "country": "Indonesia",
       "country_code": "ID",
       "lat": -0.8,
       "lon": 113.9,
-      "citations": 13,
-      "institutions": 13
+      "citations": 11,
+      "institutions": 12
     },
     {
       "country": "Slovenia",
@@ -1119,16 +1119,16 @@
       "country_code": "RO",
       "lat": 45.9,
       "lon": 24.9,
-      "citations": 10,
-      "institutions": 11
+      "citations": 9,
+      "institutions": 10
     },
     {
       "country": "Philippines",
       "country_code": "PH",
       "lat": 12.9,
       "lon": 121.8,
-      "citations": 9,
-      "institutions": 8
+      "citations": 8,
+      "institutions": 7
     },
     {
       "country": "Ukraine",
@@ -1155,44 +1155,12 @@
       "institutions": 3
     },
     {
-      "country": "Serbia",
-      "country_code": "RS",
-      "lat": 44.0,
-      "lon": 21.0,
-      "citations": 6,
-      "institutions": 3
-    },
-    {
-      "country": "Peru",
-      "country_code": "PE",
-      "lat": -9.2,
-      "lon": -75.0,
-      "citations": 6,
-      "institutions": 4
-    },
-    {
       "country": "Sri Lanka",
       "country_code": "LK",
       "lat": 7.9,
       "lon": 80.8,
       "citations": 6,
       "institutions": 5
-    },
-    {
-      "country": "Bulgaria",
-      "country_code": "BG",
-      "lat": 42.7,
-      "lon": 25.5,
-      "citations": 6,
-      "institutions": 8
-    },
-    {
-      "country": "Nigeria",
-      "country_code": "NG",
-      "lat": 9.1,
-      "lon": 8.7,
-      "citations": 6,
-      "institutions": 7
     },
     {
       "country": "Slovakia",
@@ -1211,12 +1179,12 @@
       "institutions": 4
     },
     {
-      "country": "Kenya",
-      "country_code": "KE",
-      "lat": -0.0,
-      "lon": 37.9,
+      "country": "Peru",
+      "country_code": "PE",
+      "lat": -9.2,
+      "lon": -75.0,
       "citations": 5,
-      "institutions": 4
+      "institutions": 3
     },
     {
       "country": "Belarus",
@@ -1243,6 +1211,22 @@
       "institutions": 4
     },
     {
+      "country": "Kenya",
+      "country_code": "KE",
+      "lat": -0.0,
+      "lon": 37.9,
+      "citations": 4,
+      "institutions": 4
+    },
+    {
+      "country": "Bulgaria",
+      "country_code": "BG",
+      "lat": 42.7,
+      "lon": 25.5,
+      "citations": 4,
+      "institutions": 6
+    },
+    {
       "country": "Cameroon",
       "country_code": "CM",
       "lat": 7.4,
@@ -1257,6 +1241,14 @@
       "lon": 32.3,
       "citations": 4,
       "institutions": 3
+    },
+    {
+      "country": "Nigeria",
+      "country_code": "NG",
+      "lat": 9.1,
+      "lon": 8.7,
+      "citations": 4,
+      "institutions": 6
     },
     {
       "country": "Iceland",
@@ -1307,18 +1299,18 @@
       "institutions": 4
     },
     {
-      "country": "Malta",
-      "country_code": "MT",
-      "lat": 35.9,
-      "lon": 14.4,
-      "citations": 2,
-      "institutions": 3
-    },
-    {
       "country": "Lithuania",
       "country_code": "LT",
       "lat": 55.2,
       "lon": 23.9,
+      "citations": 2,
+      "institutions": 1
+    },
+    {
+      "country": "Serbia",
+      "country_code": "RS",
+      "lat": 44.0,
+      "lon": 21.0,
       "citations": 2,
       "institutions": 1
     },
@@ -1329,6 +1321,14 @@
       "lon": -66.6,
       "citations": 1,
       "institutions": 1
+    },
+    {
+      "country": "Malta",
+      "country_code": "MT",
+      "lat": 35.9,
+      "lon": 14.4,
+      "citations": 1,
+      "institutions": 2
     },
     {
       "country": "Myanmar",
@@ -1389,7 +1389,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 123
+      "citations": 122
     },
     {
       "name": "Centre National de la Recherche Scientifique",
@@ -1403,7 +1403,7 @@
       "lat": 47.60621,
       "lon": -122.33207,
       "country_code": "US",
-      "citations": 84
+      "citations": 85
     },
     {
       "name": "Thermo Fisher Scientific (United States)",
@@ -1452,7 +1452,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 67
+      "citations": 68
     },
     {
       "name": "Cornell University",
@@ -1462,18 +1462,18 @@
       "citations": 63
     },
     {
-      "name": "University of Wisconsin System",
-      "lat": 43.07305,
-      "lon": -89.40123,
-      "country_code": "US",
-      "citations": 61
-    },
-    {
       "name": "University of North Carolina at Chapel Hill",
       "lat": 35.9132,
       "lon": -79.05584,
       "country_code": "US",
       "citations": 61
+    },
+    {
+      "name": "University of Wisconsin System",
+      "lat": 43.07305,
+      "lon": -89.40123,
+      "country_code": "US",
+      "citations": 60
     },
     {
       "name": "Washington University in St. Louis",
@@ -1486,13 +1486,6 @@
       "name": "Northwestern University",
       "lat": 42.04114,
       "lon": -87.69006,
-      "country_code": "US",
-      "citations": 58
-    },
-    {
-      "name": "Quantitative BioSciences",
-      "lat": 32.99115,
-      "lon": -117.27115,
       "country_code": "US",
       "citations": 58
     },
@@ -1511,17 +1504,17 @@
       "citations": 53
     },
     {
-      "name": "Broad Institute",
-      "lat": 42.3751,
-      "lon": -71.10561,
+      "name": "Quantitative BioSciences",
+      "lat": 32.99115,
+      "lon": -117.27115,
       "country_code": "US",
       "citations": 52
     },
     {
-      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
+      "name": "Broad Institute",
+      "lat": 42.3751,
+      "lon": -71.10561,
+      "country_code": "US",
       "citations": 51
     },
     {
@@ -1539,6 +1532,13 @@
       "citations": 51
     },
     {
+      "name": "National Institutes of Health",
+      "lat": 38.98067,
+      "lon": -77.10026,
+      "country_code": "US",
+      "citations": 50
+    },
+    {
       "name": "Howard Hughes Medical Institute",
       "lat": 39.00287,
       "lon": -77.07115,
@@ -1546,10 +1546,10 @@
       "citations": 49
     },
     {
-      "name": "National Institutes of Health",
-      "lat": 38.98067,
-      "lon": -77.10026,
-      "country_code": "US",
+      "name": "Science for Life Laboratory",
+      "lat": 59.32938,
+      "lon": 18.06871,
+      "country_code": "SE",
       "citations": 49
     },
     {
@@ -1560,11 +1560,11 @@
       "citations": 48
     },
     {
-      "name": "Science for Life Laboratory",
-      "lat": 59.32938,
-      "lon": 18.06871,
-      "country_code": "SE",
-      "citations": 48
+      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 47
     },
     {
       "name": "Johannes Gutenberg University Mainz",
@@ -1602,17 +1602,24 @@
       "citations": 44
     },
     {
+      "name": "Universidade de S\u00e3o Paulo",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
+      "citations": 43
+    },
+    {
+      "name": "National Cancer Institute",
+      "lat": 38.98067092895508,
+      "lon": -77.10025787353516,
+      "country_code": "US",
+      "citations": 43
+    },
+    {
       "name": "University of Oxford",
       "lat": 51.75222,
       "lon": -1.25596,
       "country_code": "GB",
-      "citations": 42
-    },
-    {
-      "name": "The University of Melbourne",
-      "lat": -37.814,
-      "lon": 144.96332,
-      "country_code": "AU",
       "citations": 42
     },
     {
@@ -1623,17 +1630,10 @@
       "citations": 42
     },
     {
-      "name": "Universidade de S\u00e3o Paulo",
-      "lat": -23.5475,
-      "lon": -46.63611,
-      "country_code": "BR",
-      "citations": 42
-    },
-    {
-      "name": "National Cancer Institute",
-      "lat": 38.98067092895508,
-      "lon": -77.10025787353516,
-      "country_code": "US",
+      "name": "The University of Melbourne",
+      "lat": -37.814,
+      "lon": 144.96332,
+      "country_code": "AU",
       "citations": 41
     },
     {
@@ -1665,13 +1665,6 @@
       "citations": 39
     },
     {
-      "name": "University of British Columbia",
-      "lat": 49.24966,
-      "lon": -123.11934,
-      "country_code": "CA",
-      "citations": 39
-    },
-    {
       "name": "University of Freiburg",
       "lat": 47.9959,
       "lon": 7.85222,
@@ -1691,6 +1684,13 @@
       "lon": 11.5899,
       "country_code": "DE",
       "citations": 39
+    },
+    {
+      "name": "University of British Columbia",
+      "lat": 49.24966,
+      "lon": -123.11934,
+      "country_code": "CA",
+      "citations": 38
     },
     {
       "name": "University of Florida",
@@ -1742,17 +1742,17 @@
       "citations": 36
     },
     {
-      "name": "The University of Sydney",
-      "lat": -33.86785,
-      "lon": 151.20732,
-      "country_code": "AU",
-      "citations": 36
-    },
-    {
       "name": "Karolinska Institutet",
       "lat": 59.32938,
       "lon": 18.06871,
       "country_code": "SE",
+      "citations": 36
+    },
+    {
+      "name": "The University of Sydney",
+      "lat": -33.86785,
+      "lon": 151.20732,
+      "country_code": "AU",
       "citations": 36
     },
     {
@@ -1768,13 +1768,6 @@
       "lon": 11.451959609985352,
       "country_code": "DE",
       "citations": 36
-    },
-    {
-      "name": "University of Toronto",
-      "lat": 43.70643,
-      "lon": -79.39864,
-      "country_code": "CA",
-      "citations": 35
     },
     {
       "name": "Princeton University",
@@ -1840,10 +1833,10 @@
       "citations": 34
     },
     {
-      "name": "University of Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
+      "name": "University of Toronto",
+      "lat": 43.70643,
+      "lon": -79.39864,
+      "country_code": "CA",
       "citations": 33
     },
     {
@@ -1858,6 +1851,13 @@
       "lat": 36.16589,
       "lon": -86.78444,
       "country_code": "US",
+      "citations": 32
+    },
+    {
+      "name": "University of Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 32
     },
     {
@@ -2001,6 +2001,13 @@
       "citations": 28
     },
     {
+      "name": "Institute of Microbiology",
+      "lat": 53.927696228027344,
+      "lon": 27.68490982055664,
+      "country_code": "BY",
+      "citations": 28
+    },
+    {
       "name": "Imperial College London",
       "lat": 51.50853,
       "lon": -0.12574,
@@ -2141,6 +2148,13 @@
       "citations": 23
     },
     {
+      "name": "Universit\u00e9 Paris-Saclay",
+      "lat": 48.68333,
+      "lon": 2.13333,
+      "country_code": "FR",
+      "citations": 23
+    },
+    {
       "name": "China Pharmaceutical University",
       "lat": 32.061668395996094,
       "lon": 118.77777862548828,
@@ -2204,13 +2218,6 @@
       "citations": 22
     },
     {
-      "name": "Universit\u00e9 Paris-Saclay",
-      "lat": 48.68333,
-      "lon": 2.13333,
-      "country_code": "FR",
-      "citations": 22
-    },
-    {
       "name": "Pennsylvania State University",
       "lat": 40.79339,
       "lon": -77.86,
@@ -2243,13 +2250,6 @@
       "lat": 48.13743,
       "lon": 11.57549,
       "country_code": "DE",
-      "citations": 21
-    },
-    {
-      "name": "European Molecular Biology Laboratory",
-      "lat": 42.05159,
-      "lon": 12.61969,
-      "country_code": "IT",
       "citations": 21
     },
     {
@@ -2309,10 +2309,10 @@
       "citations": 20
     },
     {
-      "name": "Shenzhen University",
-      "lat": 22.54553985595703,
-      "lon": 114.06829833984375,
-      "country_code": "CN",
+      "name": "European Molecular Biology Laboratory",
+      "lat": 42.05159,
+      "lon": 12.61969,
+      "country_code": "IT",
       "citations": 20
     },
     {
@@ -2415,17 +2415,17 @@
     },
     {
       "name": "Chemistry",
-      "count": 1546,
+      "count": 1547,
       "color": "#5C6E4A"
     },
     {
       "name": "Medicine",
-      "count": 919,
+      "count": 921,
       "color": "#B07C39"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 383,
+      "count": 385,
       "color": "#9A553B"
     },
     {
@@ -2505,7 +2505,7 @@
         "label": "Value of Using Multiple Proteases for Large-Scale Mass Spectrometry-Based Proteomics",
         "field": "Chemistry",
         "type": "core",
-        "citations": 500,
+        "citations": 502,
         "year": 2010
       },
       {
@@ -2513,7 +2513,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Computer Science",
         "type": "core",
-        "citations": 458,
+        "citations": 460,
         "year": 2023
       },
       {
@@ -2521,7 +2521,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 417,
+        "citations": 419,
         "year": 2022
       },
       {
@@ -2581,20 +2581,20 @@
         "year": 2011
       },
       {
+        "id": "W2097239551",
+        "label": "Large-Scale Phosphoprotein Analysis inMedicago truncatulaRoots Provides Insight into in Vivo Kinase Activity in Legumes",
+        "field": "Agricultural and Biological Sciences",
+        "type": "core",
+        "citations": 138,
+        "year": 2009
+      },
+      {
         "id": "W2808840038",
         "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
         "citations": 137,
         "year": 2018
-      },
-      {
-        "id": "W2097239551",
-        "label": "Large-Scale Phosphoprotein Analysis inMedicago truncatulaRoots Provides Insight into in Vivo Kinase Activity in Legumes",
-        "field": "Agricultural and Biological Sciences",
-        "type": "core",
-        "citations": 137,
-        "year": 2009
       },
       {
         "id": "W2023959652",
@@ -2929,7 +2929,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 928,
+        "citations": 931,
         "year": 2021
       },
       {
@@ -2937,7 +2937,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 342,
+        "citations": 348,
         "year": 2022
       },
       {
@@ -2945,7 +2945,7 @@
         "label": "Ultra-fast proteomics with Scanning SWATH",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 337,
+        "citations": 338,
         "year": 2021
       },
       {
@@ -2953,7 +2953,7 @@
         "label": "Long-term perturbation of the peripheral immune system months after SARS-CoV-2 infection",
         "field": "Medicine",
         "type": "citing",
-        "citations": 283,
+        "citations": 284,
         "year": 2022
       },
       {
@@ -2969,7 +2969,7 @@
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 231,
+        "citations": 232,
         "year": 2021
       },
       {
@@ -2977,7 +2977,7 @@
         "label": "Functional landscape of SARS-CoV-2 cellular restriction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 230,
+        "citations": 231,
         "year": 2021
       },
       {
@@ -2993,7 +2993,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1515,
+        "citations": 1521,
         "year": 2013
       },
       {
@@ -3001,7 +3001,7 @@
         "label": "MS-GF+ makes progress towards a universal database search tool for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1211,
+        "citations": 1213,
         "year": 2014
       },
       {
@@ -3009,7 +3009,7 @@
         "label": "Comparative Proteomic Analysis of Eleven Common Cell Lines Reveals Ubiquitous but Varying Expression of Most Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 852,
+        "citations": 853,
         "year": 2012
       },
       {
@@ -3017,7 +3017,7 @@
         "label": "Estimating the total number of phosphoproteins and phosphorylation sites in eukaryotic proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 751,
+        "citations": 752,
         "year": 2017
       },
       {
@@ -3033,7 +3033,7 @@
         "label": "The One Hour Yeast Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 560,
+        "citations": 561,
         "year": 2013
       },
       {
@@ -3041,7 +3041,7 @@
         "label": "An Optimized Shotgun Strategy for the Rapid Generation of Comprehensive Human Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 559,
+        "citations": 560,
         "year": 2017
       },
       {
@@ -3049,7 +3049,7 @@
         "label": "Six alternative proteases for mass spectrometry\u2013based proteomics beyond trypsin",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 484,
+        "citations": 486,
         "year": 2016
       },
       {
@@ -3057,7 +3057,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1191,
+        "citations": 1193,
         "year": 2024
       },
       {
@@ -3065,7 +3065,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 475,
+        "citations": 477,
         "year": 2025
       },
       {
@@ -3113,7 +3113,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2025
       },
       {
@@ -3121,7 +3121,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 416,
+        "citations": 420,
         "year": 2022
       },
       {
@@ -3137,7 +3137,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 339,
+        "citations": 340,
         "year": 2023
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4347,
+        "citations": 4352,
         "year": 2012
       },
       {
@@ -3193,7 +3193,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3479,
+        "citations": 3486,
         "year": 2016
       },
       {
@@ -3201,7 +3201,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1375,
+        "citations": 1379,
         "year": 2012
       },
       {
@@ -3209,7 +3209,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 875,
+        "citations": 876,
         "year": 2015
       },
       {
@@ -3225,7 +3225,7 @@
         "label": "Unification of Protein Abundance Datasets Yields a Quantitative Saccharomyces cerevisiae Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 567,
+        "citations": 571,
         "year": 2018
       },
       {
@@ -3241,7 +3241,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1650,
+        "citations": 1652,
         "year": 2012
       },
       {
@@ -3257,7 +3257,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1316,
+        "citations": 1330,
         "year": 2014
       },
       {
@@ -3273,7 +3273,7 @@
         "label": "Calorie Restriction and SIRT3 Trigger Global Reprogramming of the Mitochondrial Protein Acetylome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 648,
+        "citations": 650,
         "year": 2012
       },
       {
@@ -3281,7 +3281,7 @@
         "label": "Increasing the Multiplexing Capacity of TMTs Using Reporter Ion Isotopologues with Isobaric Masses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 647,
+        "citations": 648,
         "year": 2012
       },
       {
@@ -3289,7 +3289,7 @@
         "label": "A Scalable Approach for Protein False Discovery Rate Estimation in Large Proteomic Data Sets",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 491,
+        "citations": 493,
         "year": 2015
       },
       {
@@ -3297,7 +3297,7 @@
         "label": "Mechanisms and models of somatic cell reprogramming",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 465,
+        "citations": 466,
         "year": 2013
       },
       {
@@ -3305,7 +3305,7 @@
         "label": "MultiNotch MS3 Enables Accurate, Sensitive, and Multiplexed Detection of Differential Expression across Cancer Cell Line Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1396,
+        "citations": 1400,
         "year": 2014
       },
       {
@@ -3313,7 +3313,7 @@
         "label": "Quantitative mass spectrometry in proteomics: critical review update from 2007 to the present",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 804,
+        "citations": 811,
         "year": 2012
       },
       {
@@ -3321,7 +3321,7 @@
         "label": "Isobaric Labeling-Based Relative Quantification in Shotgun Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 621,
+        "citations": 622,
         "year": 2014
       },
       {
@@ -3345,7 +3345,7 @@
         "label": "Integrated Analysis of Transcriptomic and Proteomic Data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 466,
+        "citations": 468,
         "year": 2013
       },
       {
@@ -3353,7 +3353,7 @@
         "label": "System-Wide Temporal Characterization of the Proteome and Phosphoproteome of Human Embryonic Stem Cell Differentiation",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 454,
+        "citations": 457,
         "year": 2011
       },
       {
@@ -3361,7 +3361,7 @@
         "label": "Toward a Comprehensive Characterization of a Human Cancer Cell Phosphoproteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 448,
+        "citations": 450,
         "year": 2012
       },
       {
@@ -3369,7 +3369,7 @@
         "label": "Protein post-translational modifications and regulation of pluripotency in human stem cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 424,
+        "citations": 425,
         "year": 2013
       },
       {
@@ -3377,7 +3377,7 @@
         "label": "Large-Scale Comparative Phosphoproteomics Identifies Conserved Phosphorylation Sites in Plants",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 395,
+        "citations": 396,
         "year": 2010
       },
       {
@@ -3393,7 +3393,7 @@
         "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 914,
+        "citations": 915,
         "year": 2017
       },
       {
@@ -3401,7 +3401,7 @@
         "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
         "field": "Medicine",
         "type": "citing",
-        "citations": 618,
+        "citations": 619,
         "year": 2021
       },
       {
@@ -3409,7 +3409,7 @@
         "label": "MS Amanda, a Universal Identification Algorithm Optimized for High Accuracy Tandem Mass Spectra",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 537,
+        "citations": 538,
         "year": 2014
       },
       {
@@ -3417,7 +3417,7 @@
         "label": "Serine ADP-Ribosylation Depends on HPF1",
         "field": "Medicine",
         "type": "citing",
-        "citations": 372,
+        "citations": 376,
         "year": 2017
       },
       {
@@ -3433,7 +3433,7 @@
         "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
         "field": "Medicine",
         "type": "citing",
-        "citations": 324,
+        "citations": 325,
         "year": 2016
       },
       {
@@ -3441,8 +3441,16 @@
         "label": "Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 47,
+        "citations": 48,
         "year": 2023
+      },
+      {
+        "id": "W4311540145",
+        "label": "HIV integration in the human brain is linked to microglial activation and 3D genome remodeling",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 43,
+        "year": 2022
       },
       {
         "id": "W4286586853",
@@ -3467,14 +3475,6 @@
         "type": "citing",
         "citations": 42,
         "year": 2023
-      },
-      {
-        "id": "W4311540145",
-        "label": "HIV integration in the human brain is linked to microglial activation and 3D genome remodeling",
-        "field": "Immunology and Microbiology",
-        "type": "citing",
-        "citations": 41,
-        "year": 2022
       },
       {
         "id": "W4362507076",
@@ -3529,7 +3529,7 @@
         "label": "A Single Kinase Generates the Majority of the Secreted Phosphoproteome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 362,
+        "citations": 363,
         "year": 2015
       },
       {
@@ -3537,8 +3537,64 @@
         "label": "Comprehensive Single-Shot Proteomics with FAIMS on a Hybrid Orbitrap Mass Spectrometer",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 312,
+        "citations": 313,
         "year": 2018
+      },
+      {
+        "id": "W2144163963",
+        "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 908,
+        "year": 2013
+      },
+      {
+        "id": "W3117558011",
+        "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 259,
+        "year": 2020
+      },
+      {
+        "id": "W2160807805",
+        "label": "Advances in Omics and Bioinformatics Tools for Systems Analyses of Plant Functions",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 234,
+        "year": 2011
+      },
+      {
+        "id": "W2048666003",
+        "label": "Systems biology-based approaches toward understanding drought tolerance in food crops",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 207,
+        "year": 2012
+      },
+      {
+        "id": "W2127804268",
+        "label": "Deep Sequencing of the Medicago truncatula Root Transcriptome Reveals a Massive and Early Interaction between Nodulation Factor and Ethylene Signals",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 164,
+        "year": 2015
+      },
+      {
+        "id": "W2169544369",
+        "label": "Phosphoproteomics for the Masses",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 164,
+        "year": 2010
+      },
+      {
+        "id": "W2197643762",
+        "label": "Proteomics and Metabolomics: Two Emerging Areas for Legume Improvement",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 161,
+        "year": 2015
       },
       {
         "id": "W2994786999",
@@ -3565,20 +3621,20 @@
         "year": 2021
       },
       {
+        "id": "W2980266162",
+        "label": "Versatile and Dynamic Symbioses Between Insects and Burkholderia Bacteria",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 102,
+        "year": 2019
+      },
+      {
         "id": "W3204202235",
         "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 102,
         "year": 2021
-      },
-      {
-        "id": "W2980266162",
-        "label": "Versatile and Dynamic Symbioses Between Insects and Burkholderia Bacteria",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 101,
-        "year": 2019
       },
       {
         "id": "W3011843199",
@@ -3597,67 +3653,11 @@
         "year": 2023
       },
       {
-        "id": "W2144163963",
-        "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 903,
-        "year": 2013
-      },
-      {
-        "id": "W3117558011",
-        "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 257,
-        "year": 2020
-      },
-      {
-        "id": "W2160807805",
-        "label": "Advances in Omics and Bioinformatics Tools for Systems Analyses of Plant Functions",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 234,
-        "year": 2011
-      },
-      {
-        "id": "W2048666003",
-        "label": "Systems biology-based approaches toward understanding drought tolerance in food crops",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 207,
-        "year": 2012
-      },
-      {
-        "id": "W2169544369",
-        "label": "Phosphoproteomics for the Masses",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 164,
-        "year": 2010
-      },
-      {
-        "id": "W2197643762",
-        "label": "Proteomics and Metabolomics: Two Emerging Areas for Legume Improvement",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 161,
-        "year": 2015
-      },
-      {
-        "id": "W2127804268",
-        "label": "Deep Sequencing of the Medicago truncatula Root Transcriptome Reveals a Massive and Early Interaction between Nodulation Factor and Ethylene Signals",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 159,
-        "year": 2015
-      },
-      {
         "id": "W2003261719",
         "label": "Mass spectrometry for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 742,
+        "citations": 744,
         "year": 2008
       },
       {
@@ -3665,7 +3665,7 @@
         "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 675,
+        "citations": 677,
         "year": 2011
       },
       {
@@ -3673,7 +3673,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 588,
+        "citations": 592,
         "year": 2016
       },
       {
@@ -3681,7 +3681,7 @@
         "label": "Top Down proteomics: Facts and perspectives",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 515,
+        "citations": 518,
         "year": 2014
       },
       {
@@ -3689,7 +3689,7 @@
         "label": "Precision proteomics: The case for high resolution and high mass accuracy",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 451,
+        "citations": 452,
         "year": 2008
       },
       {
@@ -3697,7 +3697,7 @@
         "label": "High-Resolution Mass Spectrometers",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 390,
+        "citations": 391,
         "year": 2008
       },
       {
@@ -3705,7 +3705,7 @@
         "label": "Ultra High Resolution Linear Ion Trap Orbitrap Mass Spectrometer (Orbitrap Elite) Facilitates Top Down LC MS/MS and Versatile Peptide Fragmentation Modes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 382,
+        "citations": 383,
         "year": 2011
       },
       {
@@ -3713,7 +3713,7 @@
         "label": "High-Throughput Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 332,
+        "citations": 335,
         "year": 2014
       },
       {
@@ -3737,7 +3737,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 126,
+        "citations": 127,
         "year": 2023
       },
       {
@@ -3757,19 +3757,19 @@
         "year": 2023
       },
       {
-        "id": "W4396858058",
-        "label": "Instrumentation at the Leading Edge of Proteomics",
-        "field": "Chemistry",
+        "id": "W4396578574",
+        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
+        "field": "Medicine",
         "type": "citing",
         "citations": 80,
         "year": 2024
       },
       {
-        "id": "W4396578574",
-        "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
-        "field": "Medicine",
+        "id": "W4396858058",
+        "label": "Instrumentation at the Leading Edge of Proteomics",
+        "field": "Chemistry",
         "type": "citing",
-        "citations": 79,
+        "citations": 80,
         "year": 2024
       },
       {
@@ -3785,7 +3785,7 @@
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1059,
+        "citations": 1061,
         "year": 2016
       },
       {
@@ -3793,7 +3793,7 @@
         "label": "Programmable RNA recognition and cleavage by CRISPR/Cas9",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 648,
+        "citations": 650,
         "year": 2014
       },
       {
@@ -3801,7 +3801,7 @@
         "label": "Methods to study RNA\u2013protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 409,
+        "citations": 410,
         "year": 2019
       },
       {
@@ -3825,7 +3825,7 @@
         "label": "CRISPR/Cas9 and Genome Editing in Drosophila",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 218,
+        "citations": 221,
         "year": 2013
       },
       {
@@ -3849,7 +3849,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 321,
+        "citations": 322,
         "year": 2020
       },
       {
@@ -3857,7 +3857,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 166,
+        "citations": 168,
         "year": 2019
       },
       {
@@ -3889,7 +3889,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 657,
+        "citations": 662,
         "year": 2020
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 535,
+        "citations": 536,
         "year": 2023
       },
       {
@@ -3921,7 +3921,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 217,
+        "citations": 218,
         "year": 2021
       },
       {
@@ -3945,7 +3945,7 @@
         "label": "Toxic Colors: The Use of Deep Learning for Predicting Toxicity of Compounds Merely from Their Graphic Images",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 127,
+        "citations": 128,
         "year": 2018
       },
       {
@@ -4025,7 +4025,7 @@
         "label": "The Role of Post-Translational Modifications in the Phase Transitions of Intrinsically Disordered Proteins",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 234,
+        "citations": 236,
         "year": 2019
       },
       {
@@ -4073,7 +4073,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 901,
+        "citations": 903,
         "year": 2021
       },
       {
@@ -4129,7 +4129,7 @@
         "label": "A mass-tolerant database search identifies a large proportion of unassigned spectra in shotgun proteomics as modified peptides",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 474,
+        "citations": 476,
         "year": 2015
       },
       {
@@ -4153,7 +4153,7 @@
         "label": "Protein Digestion: An Overview of the Available Techniques and Recent Developments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 245,
+        "citations": 246,
         "year": 2013
       },
       {
@@ -4161,7 +4161,7 @@
         "label": "A survey of computational methods and error rate estimation procedures for peptide and protein identification in shotgun proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 565,
+        "citations": 567,
         "year": 2010
       },
       {
@@ -4209,7 +4209,7 @@
         "label": "Ion Coalescence of Neutron Encoded TMT 10-Plex Reporter Ions",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 280,
+        "citations": 281,
         "year": 2014
       },
       {
@@ -4225,7 +4225,7 @@
         "label": "High-Resolution Enabled 12-Plex DiLeu Isobaric Tags for Quantitative Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 150,
+        "citations": 151,
         "year": 2014
       },
       {
@@ -4241,7 +4241,7 @@
         "label": "Biomarker discovery in mass spectrometry\u2010based urinary proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 144,
+        "citations": 145,
         "year": 2015
       },
       {
@@ -4265,7 +4265,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 134,
+        "citations": 135,
         "year": 2021
       },
       {
@@ -4377,7 +4377,7 @@
         "label": "The Role of Electron Transfer Dissociation in Modern Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 200,
+        "citations": 201,
         "year": 2017
       },
       {
@@ -4441,7 +4441,7 @@
         "label": "Engineering microbial consortia by division of labor",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 327,
+        "citations": 330,
         "year": 2019
       },
       {
@@ -4453,20 +4453,20 @@
         "year": 2019
       },
       {
+        "id": "W2762475403",
+        "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 111,
+        "year": 2017
+      },
+      {
         "id": "W2910293385",
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 111,
         "year": 2019
-      },
-      {
-        "id": "W2762475403",
-        "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 109,
-        "year": 2017
       },
       {
         "id": "W2782169385",
@@ -4489,7 +4489,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 514,
+        "citations": 518,
         "year": 2019
       },
       {
@@ -4497,7 +4497,7 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 172,
+        "citations": 173,
         "year": 2019
       },
       {
@@ -4529,7 +4529,7 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 207,
+        "citations": 210,
         "year": 2024
       },
       {
@@ -4553,7 +4553,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 113,
+        "citations": 114,
         "year": 2024
       },
       {
@@ -4617,7 +4617,7 @@
         "label": "Evaluation of HCD- and CID-type Fragmentation Within Their Respective Detection Platforms For Murine Phosphoproteomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 189,
+        "citations": 190,
         "year": 2011
       },
       {
@@ -4633,7 +4633,7 @@
         "label": "Novel Parallelized Quadrupole/Linear Ion Trap/Orbitrap Tribrid Mass Spectrometer Improving Proteome Coverage and Peptide Identification Rates",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 266,
+        "citations": 267,
         "year": 2013
       },
       {
@@ -4697,7 +4697,7 @@
         "label": "Protein Identification Using Top-Down Spectra",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 153,
+        "citations": 154,
         "year": 2011
       },
       {
@@ -4729,7 +4729,7 @@
         "label": "mMass as a Software Tool for the Annotation of Cyclic Peptide Tandem Mass Spectra",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 309,
+        "citations": 312,
         "year": 2012
       },
       {
@@ -4737,7 +4737,7 @@
         "label": "Peptide Radicals and Cation Radicals in the Gas Phase",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 211,
+        "citations": 212,
         "year": 2013
       },
       {
@@ -4745,7 +4745,7 @@
         "label": "Electron transfer dissociation mass spectrometry in proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 121,
+        "citations": 123,
         "year": 2012
       },
       {
@@ -4785,7 +4785,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 5005,
+        "citations": 5016,
         "year": 2017
       },
       {
@@ -4809,7 +4809,7 @@
         "label": "Microbial-derived products as potential new antimicrobials",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 80,
+        "citations": 81,
         "year": 2018
       },
       {
@@ -4825,7 +4825,7 @@
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
         "field": "Medicine",
         "type": "citing",
-        "citations": 126,
+        "citations": 127,
         "year": 2022
       },
       {
@@ -4841,7 +4841,7 @@
         "label": "Discovery of a Potent and Selective Targeted NSD2 Degrader for the Reduction of H3K36me2",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 66,
+        "citations": 68,
         "year": 2023
       },
       {
@@ -4873,7 +4873,7 @@
         "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 30,
+        "citations": 31,
         "year": 2024
       },
       {
@@ -4929,7 +4929,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Medicine",
         "type": "citing",
-        "citations": 157,
+        "citations": 158,
         "year": 2018
       },
       {
@@ -4937,7 +4937,7 @@
         "label": "Microbial interactions trigger the production of antibiotics",
         "field": "Medicine",
         "type": "citing",
-        "citations": 127,
+        "citations": 128,
         "year": 2018
       },
       {
@@ -4993,7 +4993,7 @@
         "label": "Recent and potential developments of biofluid analyses in metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 277,
+        "citations": 278,
         "year": 2011
       },
       {
@@ -5017,7 +5017,7 @@
         "label": "Ultra\u2010performance liquid chromatography coupled to mass spectrometry as a sensitive and powerful technology for metabolomic studies",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 146,
+        "citations": 147,
         "year": 2011
       },
       {
@@ -5065,7 +5065,7 @@
         "label": "Size-Sorting Combined with Improved Nanocapillary Liquid Chromatography\u2212Mass Spectrometry for Identification of Intact Proteins up to 80 kDa",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2010
       },
       {
@@ -5081,7 +5081,7 @@
         "label": "Intact protein separation by chromatographic and/or electrophoretic techniques for top-down proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2011
       },
       {
@@ -5089,7 +5089,7 @@
         "label": "Ion Activation Methods for Peptides and Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 261,
+        "citations": 262,
         "year": 2015
       },
       {
@@ -5105,7 +5105,7 @@
         "label": "pHisphorylation: the emergence of histidine phosphorylation as a reversible regulatory modification",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 175,
+        "citations": 177,
         "year": 2017
       },
       {
@@ -5113,7 +5113,7 @@
         "label": "Radical solutions: Principles and application of electron\u2010based dissociation in mass spectrometry\u2010based analysis of protein structure",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 108,
+        "citations": 109,
         "year": 2018
       },
       {
@@ -5353,7 +5353,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5386,
+        "citations": 5395,
         "year": 2021
       },
       {
@@ -5369,7 +5369,7 @@
         "label": "Upcycling the anthracyclines: New mechanisms of action, toxicology, and pharmacology",
         "field": "Medicine",
         "type": "citing",
-        "citations": 41,
+        "citations": 42,
         "year": 2022
       },
       {
@@ -5465,7 +5465,7 @@
         "label": "Recent Advances in Mass Spectrometry-Based Bottom-Up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 53,
+        "citations": 54,
         "year": 2025
       },
       {
@@ -5762,12 +5762,12 @@
       },
       {
         "source": "W2050199432",
-        "target": "W2122805769",
+        "target": "W2043896568",
         "strength": 0.5
       },
       {
         "source": "W2050199432",
-        "target": "W2043896568",
+        "target": "W2122805769",
         "strength": 0.5
       },
       {
@@ -5877,6 +5877,11 @@
       },
       {
         "source": "W4210458810",
+        "target": "W4311540145",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
         "target": "W4286586853",
         "strength": 0.5
       },
@@ -5888,11 +5893,6 @@
       {
         "source": "W4210458810",
         "target": "W4387372690",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4311540145",
         "strength": 0.5
       },
       {
@@ -5951,46 +5951,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2808840038",
-        "target": "W2994786999",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W2958017797",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W3168295480",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W2949629831",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W3204202235",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W2980266162",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W3011843199",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W4386391260",
-        "strength": 0.5
-      },
-      {
         "source": "W2097239551",
         "target": "W2144163963",
         "strength": 0.5
@@ -6017,6 +5977,11 @@
       },
       {
         "source": "W2097239551",
+        "target": "W2127804268",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
         "target": "W2169544369",
         "strength": 0.5
       },
@@ -6026,8 +5991,43 @@
         "strength": 0.5
       },
       {
-        "source": "W2097239551",
-        "target": "W2127804268",
+        "source": "W2808840038",
+        "target": "W2994786999",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2958017797",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3168295480",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2980266162",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3204202235",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3011843199",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W4386391260",
         "strength": 0.5
       },
       {
@@ -6097,12 +6097,12 @@
       },
       {
         "source": "W4281483346",
-        "target": "W4396858058",
+        "target": "W4396578574",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
-        "target": "W4396578574",
+        "target": "W4396858058",
         "strength": 0.5
       },
       {
@@ -6642,12 +6642,12 @@
       },
       {
         "source": "W2513652105",
-        "target": "W2910293385",
+        "target": "W2762475403",
         "strength": 0.5
       },
       {
         "source": "W2513652105",
-        "target": "W2762475403",
+        "target": "W2910293385",
         "strength": 0.5
       },
       {
