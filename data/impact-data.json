@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-23T11:23:26.549838+00:00",
+  "generated_at": "2026-09-24T11:34:36.341526+00:00",
   "summary": {
     "total_citations": 5751,
     "countries_reached": 80,
-    "citing_institutions": 4688,
+    "citing_institutions": 4686,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -720,7 +720,7 @@
       "lat": 39.8,
       "lon": -98.5,
       "citations": 2599,
-      "institutions": 958
+      "institutions": 956
     },
     {
       "country": "China",
@@ -735,8 +735,8 @@
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 578,
-      "institutions": 248
+      "citations": 579,
+      "institutions": 249
     },
     {
       "country": "United Kingdom",
@@ -776,7 +776,7 @@
       "lat": 46.2,
       "lon": 2.2,
       "citations": 208,
-      "institutions": 301
+      "institutions": 303
     },
     {
       "country": "Australia",
@@ -1407,8 +1407,8 @@
     },
     {
       "name": "Thermo Fisher Scientific (United States)",
-      "lat": 42.37649154663086,
-      "lon": -71.23561096191406,
+      "lat": 42.37649,
+      "lon": -71.23561,
       "country_code": "US",
       "citations": 84
     },
@@ -1728,13 +1728,6 @@
       "citations": 37
     },
     {
-      "name": "University of Hong Kong",
-      "lat": 22.26861,
-      "lon": 114.12924,
-      "country_code": "HK",
-      "citations": 37
-    },
-    {
       "name": "University College London",
       "lat": 51.50853,
       "lon": -0.12574,
@@ -1768,6 +1761,13 @@
       "lon": 11.451959609985352,
       "country_code": "DE",
       "citations": 36
+    },
+    {
+      "name": "University of Hong Kong",
+      "lat": 22.26861,
+      "lon": 114.12924,
+      "country_code": "HK",
+      "citations": 35
     },
     {
       "name": "Princeton University",
@@ -1841,8 +1841,8 @@
     },
     {
       "name": "Technical University of Denmark",
-      "lat": 55.77043914794922,
-      "lon": 12.503780364990234,
+      "lat": 55.77044,
+      "lon": 12.50378,
       "country_code": "DK",
       "citations": 33
     },
@@ -2359,8 +2359,8 @@
     },
     {
       "name": "Institute for Systems Biology",
-      "lat": 47.62245178222656,
-      "lon": -122.33670806884766,
+      "lat": 47.60621,
+      "lon": -122.33207,
       "country_code": "US",
       "citations": 19
     },
@@ -2410,7 +2410,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2054,
+      "count": 2055,
       "color": "#6E4B2A"
     },
     {
@@ -3065,7 +3065,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 477,
+        "citations": 478,
         "year": 2025
       },
       {
@@ -3137,7 +3137,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 340,
+        "citations": 342,
         "year": 2023
       },
       {
@@ -3185,7 +3185,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4352,
+        "citations": 4354,
         "year": 2012
       },
       {
@@ -3193,7 +3193,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3486,
+        "citations": 3488,
         "year": 2016
       },
       {
@@ -3225,7 +3225,7 @@
         "label": "Unification of Protein Abundance Datasets Yields a Quantitative Saccharomyces cerevisiae Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 571,
+        "citations": 572,
         "year": 2018
       },
       {
@@ -3281,7 +3281,7 @@
         "label": "Increasing the Multiplexing Capacity of TMTs Using Reporter Ion Isotopologues with Isobaric Masses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 648,
+        "citations": 649,
         "year": 2012
       },
       {
@@ -3297,7 +3297,7 @@
         "label": "Mechanisms and models of somatic cell reprogramming",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 466,
+        "citations": 467,
         "year": 2013
       },
       {
@@ -3361,7 +3361,7 @@
         "label": "Toward a Comprehensive Characterization of a Human Cancer Cell Phosphoproteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 450,
+        "citations": 451,
         "year": 2012
       },
       {
@@ -3409,7 +3409,7 @@
         "label": "MS Amanda, a Universal Identification Algorithm Optimized for High Accuracy Tandem Mass Spectra",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 538,
+        "citations": 540,
         "year": 2014
       },
       {
@@ -3441,7 +3441,7 @@
         "label": "Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 48,
+        "citations": 49,
         "year": 2023
       },
       {
@@ -3609,7 +3609,7 @@
         "label": "Burkholderia as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 143,
+        "citations": 144,
         "year": 2019
       },
       {
@@ -3621,20 +3621,20 @@
         "year": 2021
       },
       {
+        "id": "W3204202235",
+        "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 103,
+        "year": 2021
+      },
+      {
         "id": "W2980266162",
         "label": "Versatile and Dynamic Symbioses Between Insects and Burkholderia Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 102,
         "year": 2019
-      },
-      {
-        "id": "W3204202235",
-        "label": "Beetle\u2013Bacterial Symbioses: Endless Forms Most Functional",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 102,
-        "year": 2021
       },
       {
         "id": "W3011843199",
@@ -3673,7 +3673,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 592,
+        "citations": 593,
         "year": 2016
       },
       {
@@ -3729,7 +3729,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 138,
+        "citations": 139,
         "year": 2022
       },
       {
@@ -3737,7 +3737,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 127,
+        "citations": 128,
         "year": 2023
       },
       {
@@ -3757,6 +3757,14 @@
         "year": 2023
       },
       {
+        "id": "W4387930856",
+        "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn 2+ trafficking",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 80,
+        "year": 2023
+      },
+      {
         "id": "W4396578574",
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Medicine",
@@ -3773,14 +3781,6 @@
         "year": 2024
       },
       {
-        "id": "W4387930856",
-        "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn 2+ trafficking",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 78,
-        "year": 2023
-      },
-      {
         "id": "W2238012416",
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -3793,7 +3793,7 @@
         "label": "Programmable RNA recognition and cleavage by CRISPR/Cas9",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 650,
+        "citations": 651,
         "year": 2014
       },
       {
@@ -3865,7 +3865,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 152,
+        "citations": 153,
         "year": 2021
       },
       {
@@ -3897,7 +3897,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 536,
+        "citations": 537,
         "year": 2023
       },
       {
@@ -4017,7 +4017,7 @@
         "label": "Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 282,
+        "citations": 283,
         "year": 2020
       },
       {
@@ -4169,7 +4169,7 @@
         "label": "Naturally Occurring Human Urinary Peptides for Use in Diagnosis of Chronic Kidney Disease",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 544,
+        "citations": 545,
         "year": 2010
       },
       {
@@ -4217,7 +4217,7 @@
         "label": "Current strategies and findings in clinically relevant post-translational modification-specific proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 166,
+        "citations": 167,
         "year": 2015
       },
       {
@@ -4273,7 +4273,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2021
       },
       {
@@ -4289,7 +4289,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Medicine",
         "type": "citing",
-        "citations": 57,
+        "citations": 58,
         "year": 2023
       },
       {
@@ -4313,7 +4313,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2735,
+        "citations": 2738,
         "year": 2017
       },
       {
@@ -4345,7 +4345,15 @@
         "label": "Overview and considerations in bottom-up proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
+        "year": 2022
+      },
+      {
+        "id": "W4220983209",
+        "label": "Thiol-based Oxidative Posttranslational Modifications (OxiPTMs) of Plant Proteins",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 87,
         "year": 2022
       },
       {
@@ -4545,7 +4553,7 @@
         "label": "Akkermansia muciniphila alleviates high\u2010fat\u2010diet \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2023
       },
       {
@@ -4561,7 +4569,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 71,
+        "citations": 73,
         "year": 2024
       },
       {
@@ -4569,7 +4577,7 @@
         "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 67,
+        "citations": 69,
         "year": 2024
       },
       {
@@ -4609,7 +4617,7 @@
         "label": "Human Pumilio Proteins Recruit Multiple Deadenylases to Efficiently Repress Messenger RNAs",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 217,
+        "citations": 218,
         "year": 2012
       },
       {
@@ -4785,7 +4793,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 5016,
+        "citations": 5017,
         "year": 2017
       },
       {
@@ -4921,7 +4929,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Medicine",
         "type": "citing",
-        "citations": 194,
+        "citations": 195,
         "year": 2022
       },
       {
@@ -4969,7 +4977,7 @@
         "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 41,
+        "citations": 42,
         "year": 2020
       },
       {
@@ -5353,7 +5361,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5395,
+        "citations": 5398,
         "year": 2021
       },
       {
@@ -5401,7 +5409,7 @@
         "label": "Pathway Engineering of Anthracyclines: Blazing Trails in Natural Product Glycodiversification",
         "field": "Medicine",
         "type": "citing",
-        "citations": 14,
+        "citations": 16,
         "year": 2020
       },
       {
@@ -6012,12 +6020,12 @@
       },
       {
         "source": "W2808840038",
-        "target": "W2980266162",
+        "target": "W3204202235",
         "strength": 0.5
       },
       {
         "source": "W2808840038",
-        "target": "W3204202235",
+        "target": "W2980266162",
         "strength": 0.5
       },
       {
@@ -6097,17 +6105,17 @@
       },
       {
         "source": "W4281483346",
+        "target": "W4387930856",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
         "target": "W4396578574",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
         "target": "W4396858058",
-        "strength": 0.5
-      },
-      {
-        "source": "W4281483346",
-        "target": "W4387930856",
         "strength": 0.5
       },
       {
@@ -6547,7 +6555,7 @@
       },
       {
         "source": "W2201786733",
-        "target": "W2555875659",
+        "target": "W4220983209",
         "strength": 0.5
       },
       {
