@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-27T11:53:48.982723+00:00",
+  "generated_at": "2026-09-28T13:40:46.373215+00:00",
   "summary": {
-    "total_citations": 5755,
-    "countries_reached": 80,
-    "citing_institutions": 4690,
+    "total_citations": 5756,
+    "countries_reached": 78,
+    "citing_institutions": 4138,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -248,7 +248,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 90,
+      "cited_by_count": 91,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -719,152 +719,152 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2598,
-      "institutions": 956
+      "citations": 2526,
+      "institutions": 688
     },
     {
       "country": "China",
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 871,
-      "institutions": 751
+      "citations": 869,
+      "institutions": 645
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 579,
-      "institutions": 249
+      "citations": 572,
+      "institutions": 218
     },
     {
       "country": "United Kingdom",
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 462,
-      "institutions": 230
+      "citations": 441,
+      "institutions": 197
     },
     {
       "country": "Canada",
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 289,
-      "institutions": 124
-    },
-    {
-      "country": "India",
-      "country_code": "IN",
-      "lat": 20.6,
-      "lon": 78.9,
-      "citations": 226,
-      "institutions": 208
+      "citations": 263,
+      "institutions": 103
     },
     {
       "country": "Netherlands",
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 221,
-      "institutions": 64
+      "citations": 219,
+      "institutions": 62
     },
     {
-      "country": "France",
-      "country_code": "FR",
-      "lat": 46.2,
-      "lon": 2.2,
+      "country": "India",
+      "country_code": "IN",
+      "lat": 20.6,
+      "lon": 78.9,
       "citations": 210,
-      "institutions": 305
+      "institutions": 192
     },
     {
       "country": "Australia",
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
+      "citations": 193,
+      "institutions": 99
+    },
+    {
+      "country": "France",
+      "country_code": "FR",
+      "lat": 46.2,
+      "lon": 2.2,
       "citations": 192,
-      "institutions": 113
+      "institutions": 288
     },
     {
       "country": "Switzerland",
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
-      "citations": 187,
-      "institutions": 63
+      "citations": 182,
+      "institutions": 48
     },
     {
       "country": "Denmark",
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
-      "citations": 167,
-      "institutions": 26
+      "citations": 164,
+      "institutions": 24
     },
     {
       "country": "Italy",
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 163,
-      "institutions": 116
+      "citations": 149,
+      "institutions": 102
     },
     {
       "country": "Spain",
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 144,
-      "institutions": 173
+      "citations": 137,
+      "institutions": 176
     },
     {
       "country": "Brazil",
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 125,
-      "institutions": 90
+      "citations": 123,
+      "institutions": 75
     },
     {
       "country": "South Korea",
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 123,
-      "institutions": 80
+      "citations": 119,
+      "institutions": 76
     },
     {
       "country": "Japan",
       "country_code": "JP",
       "lat": 36.2,
       "lon": 138.3,
-      "citations": 119,
-      "institutions": 107
+      "citations": 112,
+      "institutions": 93
     },
     {
       "country": "Sweden",
       "country_code": "SE",
       "lat": 60.1,
       "lon": 18.6,
-      "citations": 114,
-      "institutions": 32
-    },
-    {
-      "country": "Russia",
-      "country_code": "RU",
-      "lat": 61.5,
-      "lon": 105.3,
-      "citations": 95,
-      "institutions": 61
+      "citations": 111,
+      "institutions": 31
     },
     {
       "country": "Belgium",
       "country_code": "BE",
       "lat": 50.5,
       "lon": 4.5,
-      "citations": 93,
-      "institutions": 38
+      "citations": 91,
+      "institutions": 33
+    },
+    {
+      "country": "Russia",
+      "country_code": "RU",
+      "lat": 61.5,
+      "lon": 105.3,
+      "citations": 81,
+      "institutions": 52
     },
     {
       "country": "Austria",
@@ -872,39 +872,23 @@
       "lat": 47.5,
       "lon": 14.6,
       "citations": 80,
-      "institutions": 36
+      "institutions": 33
     },
     {
       "country": "Israel",
       "country_code": "IL",
       "lat": 31.0,
       "lon": 34.8,
-      "citations": 77,
-      "institutions": 19
+      "citations": 62,
+      "institutions": 16
     },
     {
       "country": "Norway",
       "country_code": "NO",
       "lat": 60.5,
       "lon": 8.5,
-      "citations": 52,
-      "institutions": 29
-    },
-    {
-      "country": "Poland",
-      "country_code": "PL",
-      "lat": 51.9,
-      "lon": 19.1,
       "citations": 49,
-      "institutions": 36
-    },
-    {
-      "country": "Singapore",
-      "country_code": "SG",
-      "lat": 1.4,
-      "lon": 103.8,
-      "citations": 48,
-      "institutions": 21
+      "institutions": 27
     },
     {
       "country": "Taiwan",
@@ -912,87 +896,103 @@
       "lat": 23.7,
       "lon": 121.0,
       "citations": 48,
-      "institutions": 50
+      "institutions": 47
+    },
+    {
+      "country": "Poland",
+      "country_code": "PL",
+      "lat": 51.9,
+      "lon": 19.1,
+      "citations": 47,
+      "institutions": 32
+    },
+    {
+      "country": "Singapore",
+      "country_code": "SG",
+      "lat": 1.4,
+      "lon": 103.8,
+      "citations": 47,
+      "institutions": 19
     },
     {
       "country": "Saudi Arabia",
       "country_code": "SA",
       "lat": 23.9,
       "lon": 45.1,
-      "citations": 47,
-      "institutions": 21
-    },
-    {
-      "country": "Czech Republic",
-      "country_code": "CZ",
-      "lat": 49.8,
-      "lon": 15.5,
-      "citations": 47,
-      "institutions": 24
-    },
-    {
-      "country": "Finland",
-      "country_code": "FI",
-      "lat": 61.9,
-      "lon": 25.7,
-      "citations": 42,
+      "citations": 46,
       "institutions": 20
-    },
-    {
-      "country": "South Africa",
-      "country_code": "ZA",
-      "lat": -30.6,
-      "lon": 22.9,
-      "citations": 41,
-      "institutions": 27
     },
     {
       "country": "Ireland",
       "country_code": "IE",
       "lat": 53.1,
       "lon": -7.7,
+      "citations": 40,
+      "institutions": 25
+    },
+    {
+      "country": "South Africa",
+      "country_code": "ZA",
+      "lat": -30.6,
+      "lon": 22.9,
       "citations": 39,
-      "institutions": 23
+      "institutions": 25
+    },
+    {
+      "country": "Finland",
+      "country_code": "FI",
+      "lat": 61.9,
+      "lon": 25.7,
+      "citations": 38,
+      "institutions": 16
     },
     {
       "country": "Portugal",
       "country_code": "PT",
       "lat": 39.4,
       "lon": -8.2,
-      "citations": 39,
-      "institutions": 22
+      "citations": 37,
+      "institutions": 25
     },
     {
-      "country": "Mexico",
-      "country_code": "MX",
-      "lat": 23.6,
-      "lon": -102.6,
-      "citations": 33,
-      "institutions": 26
+      "country": "Czech Republic",
+      "country_code": "CZ",
+      "lat": 49.8,
+      "lon": 15.5,
+      "citations": 36,
+      "institutions": 24
     },
     {
       "country": "Iran",
       "country_code": "IR",
       "lat": 32.4,
       "lon": 53.7,
-      "citations": 32,
-      "institutions": 43
-    },
-    {
-      "country": "Turkey",
-      "country_code": "TR",
-      "lat": 39.0,
-      "lon": 35.2,
-      "citations": 32,
-      "institutions": 33
+      "citations": 33,
+      "institutions": 39
     },
     {
       "country": "New Zealand",
       "country_code": "NZ",
       "lat": -40.9,
       "lon": 174.9,
-      "citations": 32,
-      "institutions": 11
+      "citations": 33,
+      "institutions": 13
+    },
+    {
+      "country": "Mexico",
+      "country_code": "MX",
+      "lat": 23.6,
+      "lon": -102.6,
+      "citations": 31,
+      "institutions": 22
+    },
+    {
+      "country": "Turkey",
+      "country_code": "TR",
+      "lat": 39.0,
+      "lon": 35.2,
+      "citations": 30,
+      "institutions": 28
     },
     {
       "country": "Greece",
@@ -1000,7 +1000,15 @@
       "lat": 39.1,
       "lon": 21.8,
       "citations": 30,
-      "institutions": 25
+      "institutions": 27
+    },
+    {
+      "country": "Malaysia",
+      "country_code": "MY",
+      "lat": 4.2,
+      "lon": 101.9,
+      "citations": 27,
+      "institutions": 19
     },
     {
       "country": "Egypt",
@@ -1008,23 +1016,7 @@
       "lat": 26.8,
       "lon": 30.8,
       "citations": 27,
-      "institutions": 26
-    },
-    {
-      "country": "Malaysia",
-      "country_code": "MY",
-      "lat": 4.2,
-      "lon": 101.9,
-      "citations": 24,
-      "institutions": 17
-    },
-    {
-      "country": "Pakistan",
-      "country_code": "PK",
-      "lat": 30.4,
-      "lon": 69.3,
-      "citations": 22,
-      "institutions": 21
+      "institutions": 24
     },
     {
       "country": "Qatar",
@@ -1032,7 +1024,7 @@
       "lat": 25.4,
       "lon": 51.2,
       "citations": 21,
-      "institutions": 7
+      "institutions": 8
     },
     {
       "country": "United Arab Emirates",
@@ -1040,7 +1032,7 @@
       "lat": 23.4,
       "lon": 53.8,
       "citations": 20,
-      "institutions": 15
+      "institutions": 14
     },
     {
       "country": "Thailand",
@@ -1048,7 +1040,7 @@
       "lat": 15.9,
       "lon": 100.9,
       "citations": 20,
-      "institutions": 11
+      "institutions": 12
     },
     {
       "country": "Luxembourg",
@@ -1059,52 +1051,52 @@
       "institutions": 7
     },
     {
+      "country": "Pakistan",
+      "country_code": "PK",
+      "lat": 30.4,
+      "lon": 69.3,
+      "citations": 18,
+      "institutions": 17
+    },
+    {
       "country": "Hungary",
       "country_code": "HU",
       "lat": 47.2,
       "lon": 19.5,
-      "citations": 18,
-      "institutions": 16
+      "citations": 15,
+      "institutions": 15
     },
     {
       "country": "Chile",
       "country_code": "CL",
       "lat": -35.7,
       "lon": -71.5,
-      "citations": 16,
-      "institutions": 12
+      "citations": 15,
+      "institutions": 11
     },
     {
       "country": "Argentina",
       "country_code": "AR",
       "lat": -38.4,
       "lon": -63.6,
-      "citations": 15,
-      "institutions": 16
-    },
-    {
-      "country": "Indonesia",
-      "country_code": "ID",
-      "lat": -0.8,
-      "lon": 113.9,
-      "citations": 11,
-      "institutions": 12
+      "citations": 12,
+      "institutions": 10
     },
     {
       "country": "Slovenia",
       "country_code": "SI",
       "lat": 46.2,
       "lon": 14.8,
-      "citations": 11,
-      "institutions": 4
+      "citations": 12,
+      "institutions": 5
     },
     {
-      "country": "Bangladesh",
-      "country_code": "BD",
-      "lat": 23.7,
-      "lon": 90.4,
+      "country": "Indonesia",
+      "country_code": "ID",
+      "lat": -0.8,
+      "lon": 113.9,
       "citations": 10,
-      "institutions": 9
+      "institutions": 10
     },
     {
       "country": "Vietnam",
@@ -1112,7 +1104,15 @@
       "lat": 14.1,
       "lon": 108.3,
       "citations": 10,
-      "institutions": 15
+      "institutions": 16
+    },
+    {
+      "country": "Philippines",
+      "country_code": "PH",
+      "lat": 12.9,
+      "lon": 121.8,
+      "citations": 9,
+      "institutions": 8
     },
     {
       "country": "Romania",
@@ -1120,14 +1120,14 @@
       "lat": 45.9,
       "lon": 24.9,
       "citations": 9,
-      "institutions": 10
+      "institutions": 9
     },
     {
-      "country": "Philippines",
-      "country_code": "PH",
-      "lat": 12.9,
-      "lon": 121.8,
-      "citations": 8,
+      "country": "Bangladesh",
+      "country_code": "BD",
+      "lat": 23.7,
+      "lon": 90.4,
+      "citations": 7,
       "institutions": 7
     },
     {
@@ -1135,7 +1135,7 @@
       "country_code": "UA",
       "lat": 48.4,
       "lon": 31.2,
-      "citations": 7,
+      "citations": 6,
       "institutions": 7
     },
     {
@@ -1143,24 +1143,8 @@
       "country_code": "CO",
       "lat": 4.6,
       "lon": -74.1,
-      "citations": 6,
-      "institutions": 7
-    },
-    {
-      "country": "Ethiopia",
-      "country_code": "ET",
-      "lat": 9.1,
-      "lon": 40.5,
-      "citations": 6,
-      "institutions": 3
-    },
-    {
-      "country": "Slovakia",
-      "country_code": "SK",
-      "lat": 48.7,
-      "lon": 19.7,
       "citations": 5,
-      "institutions": 7
+      "institutions": 6
     },
     {
       "country": "Croatia",
@@ -1171,14 +1155,6 @@
       "institutions": 4
     },
     {
-      "country": "Peru",
-      "country_code": "PE",
-      "lat": -9.2,
-      "lon": -75.0,
-      "citations": 5,
-      "institutions": 3
-    },
-    {
       "country": "Sri Lanka",
       "country_code": "LK",
       "lat": 7.9,
@@ -1187,20 +1163,12 @@
       "institutions": 4
     },
     {
-      "country": "Belarus",
-      "country_code": "BY",
-      "lat": 53.7,
-      "lon": 27.9,
-      "citations": 5,
-      "institutions": 4
-    },
-    {
-      "country": "Morocco",
-      "country_code": "MA",
-      "lat": 31.8,
-      "lon": -7.1,
-      "citations": 5,
-      "institutions": 10
+      "country": "Slovakia",
+      "country_code": "SK",
+      "lat": 48.7,
+      "lon": 19.7,
+      "citations": 4,
+      "institutions": 7
     },
     {
       "country": "Cyprus",
@@ -1211,20 +1179,12 @@
       "institutions": 4
     },
     {
-      "country": "Kenya",
-      "country_code": "KE",
-      "lat": -0.0,
-      "lon": 37.9,
+      "country": "Peru",
+      "country_code": "PE",
+      "lat": -9.2,
+      "lon": -75.0,
       "citations": 4,
-      "institutions": 4
-    },
-    {
-      "country": "Bulgaria",
-      "country_code": "BG",
-      "lat": 42.7,
-      "lon": 25.5,
-      "citations": 4,
-      "institutions": 6
+      "institutions": 2
     },
     {
       "country": "Cameroon",
@@ -1248,7 +1208,7 @@
       "lat": 9.1,
       "lon": 8.7,
       "citations": 4,
-      "institutions": 6
+      "institutions": 5
     },
     {
       "country": "Iceland",
@@ -1267,20 +1227,12 @@
       "institutions": 2
     },
     {
-      "country": "Tunisia",
-      "country_code": "TN",
-      "lat": 34.0,
-      "lon": 9.5,
-      "citations": 4,
-      "institutions": 5
-    },
-    {
       "country": "Ecuador",
       "country_code": "EC",
       "lat": -1.8,
       "lon": -78.2,
       "citations": 3,
-      "institutions": 7
+      "institutions": 4
     },
     {
       "country": "Iraq",
@@ -1288,7 +1240,15 @@
       "lat": 33.2,
       "lon": 43.7,
       "citations": 3,
-      "institutions": 8
+      "institutions": 6
+    },
+    {
+      "country": "Kenya",
+      "country_code": "KE",
+      "lat": -0.0,
+      "lon": 37.9,
+      "citations": 3,
+      "institutions": 3
     },
     {
       "country": "Estonia",
@@ -1296,7 +1256,31 @@
       "lat": 58.6,
       "lon": 25.0,
       "citations": 3,
-      "institutions": 2
+      "institutions": 1
+    },
+    {
+      "country": "Tunisia",
+      "country_code": "TN",
+      "lat": 34.0,
+      "lon": 9.5,
+      "citations": 3,
+      "institutions": 4
+    },
+    {
+      "country": "Bulgaria",
+      "country_code": "BG",
+      "lat": 42.7,
+      "lon": 25.5,
+      "citations": 2,
+      "institutions": 5
+    },
+    {
+      "country": "Morocco",
+      "country_code": "MA",
+      "lat": 31.8,
+      "lon": -7.1,
+      "citations": 2,
+      "institutions": 9
     },
     {
       "country": "Lithuania",
@@ -1331,14 +1315,6 @@
       "institutions": 2
     },
     {
-      "country": "Myanmar",
-      "country_code": "MM",
-      "lat": 21.9,
-      "lon": 95.9,
-      "citations": 1,
-      "institutions": 1
-    },
-    {
       "country": "Ghana",
       "country_code": "GH",
       "lat": 7.9,
@@ -1353,6 +1329,14 @@
       "lon": -55.8,
       "citations": 1,
       "institutions": 1
+    },
+    {
+      "country": "Ethiopia",
+      "country_code": "ET",
+      "lat": 9.1,
+      "lon": 40.5,
+      "citations": 1,
+      "institutions": 1
     }
   ],
   "institutions_geo": [
@@ -1361,69 +1345,62 @@
       "lat": 43.07305,
       "lon": -89.40123,
       "country_code": "US",
-      "citations": 675
-    },
-    {
-      "name": "Energy Center of Wisconsin",
-      "lat": 43.07656478881836,
-      "lon": -89.46861267089844,
-      "country_code": "US",
-      "citations": 199
-    },
-    {
-      "name": "Morgridge Institute for Research",
-      "lat": 43.073360443115234,
-      "lon": -89.40813446044922,
-      "country_code": "US",
-      "citations": 149
-    },
-    {
-      "name": "Harvard University",
-      "lat": 42.3751,
-      "lon": -71.10561,
-      "country_code": "US",
-      "citations": 141
+      "citations": 677
     },
     {
       "name": "Chinese Academy of Sciences",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 123
+      "citations": 161
+    },
+    {
+      "name": "Harvard University",
+      "lat": 42.3751,
+      "lon": -71.10561,
+      "country_code": "US",
+      "citations": 159
+    },
+    {
+      "name": "Morgridge Institute for Research",
+      "lat": 43.073360443115234,
+      "lon": -89.40813446044922,
+      "country_code": "US",
+      "citations": 150
     },
     {
       "name": "Centre National de la Recherche Scientifique",
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 96
+      "citations": 97
     },
     {
       "name": "University of Washington",
       "lat": 47.60621,
       "lon": -122.33207,
       "country_code": "US",
-      "citations": 85
-    },
-    {
-      "name": "Thermo Fisher Scientific (United States)",
-      "lat": 42.37649,
-      "lon": -71.23561,
-      "country_code": "US",
-      "citations": 84
+      "citations": 86
     },
     {
       "name": "University of California San Diego",
       "lat": 32.71571,
       "lon": -117.16472,
       "country_code": "US",
-      "citations": 82
+      "citations": 83
     },
     {
       "name": "Utrecht University",
       "lat": 52.09083,
       "lon": 5.12222,
       "country_code": "NL",
+      "citations": 77
+    },
+    {
+      "name": "ETH Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 76
     },
     {
@@ -1431,14 +1408,7 @@
       "lat": 37.42411,
       "lon": -122.16608,
       "country_code": "US",
-      "citations": 74
-    },
-    {
-      "name": "ETH Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 74
+      "citations": 75
     },
     {
       "name": "University of Copenhagen",
@@ -1452,12 +1422,19 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 69
+      "citations": 72
     },
     {
-      "name": "Cornell University",
-      "lat": 42.44063,
-      "lon": -76.49661,
+      "name": "Thermo Fisher Scientific (United States)",
+      "lat": 42.37649,
+      "lon": -71.23561,
+      "country_code": "US",
+      "citations": 66
+    },
+    {
+      "name": "National Institutes of Health",
+      "lat": 38.98067,
+      "lon": -77.10026,
       "country_code": "US",
       "citations": 63
     },
@@ -1466,21 +1443,14 @@
       "lat": 35.9132,
       "lon": -79.05584,
       "country_code": "US",
-      "citations": 61
-    },
-    {
-      "name": "University of Wisconsin System",
-      "lat": 43.07305,
-      "lon": -89.40123,
-      "country_code": "US",
-      "citations": 60
+      "citations": 63
     },
     {
       "name": "Washington University in St. Louis",
       "lat": 38.62727,
       "lon": -90.19789,
       "country_code": "US",
-      "citations": 59
+      "citations": 60
     },
     {
       "name": "Northwestern University",
@@ -1490,6 +1460,27 @@
       "citations": 58
     },
     {
+      "name": "Technical University of Munich",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
+      "citations": 55
+    },
+    {
+      "name": "University of Michigan",
+      "lat": 42.27756,
+      "lon": -83.74088,
+      "country_code": "US",
+      "citations": 55
+    },
+    {
+      "name": "Fudan University",
+      "lat": 31.22222,
+      "lon": 121.45806,
+      "country_code": "CN",
+      "citations": 55
+    },
+    {
       "name": "University of California, Los Angeles",
       "lat": 34.05223,
       "lon": -118.24368,
@@ -1497,37 +1488,16 @@
       "citations": 54
     },
     {
-      "name": "Technical University of Munich",
-      "lat": 48.13743,
-      "lon": 11.57549,
-      "country_code": "DE",
-      "citations": 54
+      "name": "Broad Institute",
+      "lat": 42.3751,
+      "lon": -71.10561,
+      "country_code": "US",
+      "citations": 52
     },
     {
       "name": "Howard Hughes Medical Institute",
       "lat": 39.00287,
       "lon": -77.07115,
-      "country_code": "US",
-      "citations": 53
-    },
-    {
-      "name": "University of Michigan",
-      "lat": 42.27756,
-      "lon": -83.74088,
-      "country_code": "US",
-      "citations": 53
-    },
-    {
-      "name": "Quantitative BioSciences",
-      "lat": 32.99115,
-      "lon": -117.27115,
-      "country_code": "US",
-      "citations": 52
-    },
-    {
-      "name": "Broad Institute",
-      "lat": 42.3751,
-      "lon": -71.10561,
       "country_code": "US",
       "citations": 51
     },
@@ -1546,10 +1516,10 @@
       "citations": 50
     },
     {
-      "name": "National Institutes of Health",
-      "lat": 38.98067,
-      "lon": -77.10026,
-      "country_code": "US",
+      "name": "Universidade de S\u00e3o Paulo",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
       "citations": 50
     },
     {
@@ -1560,10 +1530,17 @@
       "citations": 49
     },
     {
-      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
+      "name": "Johns Hopkins University",
+      "lat": 39.29038,
+      "lon": -76.61219,
+      "country_code": "US",
+      "citations": 47
+    },
+    {
+      "name": "Netherlands Proteomics Centre",
+      "lat": 52.09083,
+      "lon": 5.12222,
+      "country_code": "NL",
       "citations": 47
     },
     {
@@ -1571,14 +1548,14 @@
       "lat": 48.85341,
       "lon": 2.3488,
       "country_code": "FR",
-      "citations": 47
+      "citations": 46
     },
     {
       "name": "Johannes Gutenberg University Mainz",
       "lat": 49.98185,
       "lon": 8.28008,
       "country_code": "DE",
-      "citations": 47
+      "citations": 46
     },
     {
       "name": "University of California, San Francisco",
@@ -1588,66 +1565,66 @@
       "citations": 45
     },
     {
-      "name": "Fudan University",
-      "lat": 31.22222,
-      "lon": 121.45806,
-      "country_code": "CN",
-      "citations": 45
-    },
-    {
-      "name": "Johns Hopkins University",
-      "lat": 39.29038,
-      "lon": -76.61219,
-      "country_code": "US",
-      "citations": 45
-    },
-    {
-      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 45
-    },
-    {
       "name": "Massachusetts Institute of Technology",
       "lat": 42.3751,
       "lon": -71.10561,
       "country_code": "US",
-      "citations": 44
-    },
-    {
-      "name": "Universidade de S\u00e3o Paulo",
-      "lat": -23.5475,
-      "lon": -46.63611,
-      "country_code": "BR",
-      "citations": 43
-    },
-    {
-      "name": "National Cancer Institute",
-      "lat": 38.98067092895508,
-      "lon": -77.10025787353516,
-      "country_code": "US",
-      "citations": 43
+      "citations": 45
     },
     {
       "name": "University of Oxford",
       "lat": 51.75222,
       "lon": -1.25596,
       "country_code": "GB",
-      "citations": 42
+      "citations": 44
     },
     {
-      "name": "Sun Yat-sen University",
-      "lat": 23.11667,
-      "lon": 113.25,
-      "country_code": "CN",
-      "citations": 42
+      "name": "National Cancer Institute",
+      "lat": 2.93527,
+      "lon": 101.69112,
+      "country_code": "MY",
+      "citations": 44
+    },
+    {
+      "name": "Russian Academy of Sciences",
+      "lat": 55.75204,
+      "lon": 37.61781,
+      "country_code": "RU",
+      "citations": 44
+    },
+    {
+      "name": "Stanford Medicine",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
+      "citations": 43
     },
     {
       "name": "The University of Melbourne",
       "lat": -37.814,
       "lon": 144.96332,
       "country_code": "AU",
+      "citations": 43
+    },
+    {
+      "name": "Zhejiang University",
+      "lat": 30.29365,
+      "lon": 120.16142,
+      "country_code": "CN",
+      "citations": 43
+    },
+    {
+      "name": "University of Wisconsin System",
+      "lat": 43.07305,
+      "lon": -89.40123,
+      "country_code": "US",
+      "citations": 42
+    },
+    {
+      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 41
     },
     {
@@ -1658,9 +1635,30 @@
       "citations": 41
     },
     {
-      "name": "University of Illinois Urbana-Champaign",
-      "lat": 40.11059,
-      "lon": -88.20727,
+      "name": "Cornell University",
+      "lat": 42.44063,
+      "lon": -76.49661,
+      "country_code": "US",
+      "citations": 40
+    },
+    {
+      "name": "Weill Cornell Medicine",
+      "lat": 40.71427,
+      "lon": -74.00597,
+      "country_code": "US",
+      "citations": 40
+    },
+    {
+      "name": "University of British Columbia",
+      "lat": 49.24966,
+      "lon": -123.11934,
+      "country_code": "CA",
+      "citations": 40
+    },
+    {
+      "name": "University of Florida",
+      "lat": 29.65163,
+      "lon": -82.32483,
       "country_code": "US",
       "citations": 40
     },
@@ -1672,10 +1670,17 @@
       "citations": 39
     },
     {
-      "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
-      "lat": 46.516,
-      "lon": 6.63282,
-      "country_code": "CH",
+      "name": "Dana-Farber Cancer Institute",
+      "lat": 42.358428955078125,
+      "lon": -71.05976867675781,
+      "country_code": "US",
+      "citations": 39
+    },
+    {
+      "name": "University of Illinois Urbana-Champaign",
+      "lat": 40.11059,
+      "lon": -88.20727,
+      "country_code": "US",
       "citations": 39
     },
     {
@@ -1686,31 +1691,17 @@
       "citations": 39
     },
     {
-      "name": "Novo Nordisk Foundation",
-      "lat": 55.67594,
-      "lon": 12.56553,
-      "country_code": "DK",
+      "name": "Karolinska Institutet",
+      "lat": 59.32938,
+      "lon": 18.06871,
+      "country_code": "SE",
       "citations": 38
     },
     {
-      "name": "University of British Columbia",
-      "lat": 49.24966,
-      "lon": -123.11934,
-      "country_code": "CA",
-      "citations": 38
-    },
-    {
-      "name": "University of Florida",
-      "lat": 29.65163,
-      "lon": -82.32483,
-      "country_code": "US",
-      "citations": 38
-    },
-    {
-      "name": "Scripps Research Institute",
-      "lat": 32.71571,
-      "lon": -117.16472,
-      "country_code": "US",
+      "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
+      "lat": 46.516,
+      "lon": 6.63282,
+      "country_code": "CH",
       "citations": 38
     },
     {
@@ -1728,24 +1719,31 @@
       "citations": 38
     },
     {
-      "name": "Karolinska Institutet",
-      "lat": 59.32938,
-      "lon": 18.06871,
-      "country_code": "SE",
-      "citations": 37
-    },
-    {
-      "name": "Peking University",
-      "lat": 39.9075,
-      "lon": 116.39723,
+      "name": "Sun Yat-sen University",
+      "lat": 23.11667,
+      "lon": 113.25,
       "country_code": "CN",
       "citations": 37
     },
     {
-      "name": "University College London",
-      "lat": 51.50853,
-      "lon": -0.12574,
-      "country_code": "GB",
+      "name": "Max Planck Institute of Biochemistry",
+      "lat": 48.10731887817383,
+      "lon": 11.451959609985352,
+      "country_code": "DE",
+      "citations": 37
+    },
+    {
+      "name": "Scripps Research Institute",
+      "lat": 32.71571,
+      "lon": -117.16472,
+      "country_code": "US",
+      "citations": 37
+    },
+    {
+      "name": "Vanderbilt University",
+      "lat": 36.16589,
+      "lon": -86.78444,
+      "country_code": "US",
       "citations": 36
     },
     {
@@ -1756,24 +1754,38 @@
       "citations": 36
     },
     {
-      "name": "Dana-Farber Cancer Institute",
-      "lat": 42.358428955078125,
-      "lon": -71.05976867675781,
-      "country_code": "US",
+      "name": "University of Toronto",
+      "lat": 43.70643,
+      "lon": -79.39864,
+      "country_code": "CA",
       "citations": 36
     },
     {
-      "name": "Max Planck Institute of Biochemistry",
-      "lat": 48.10731887817383,
-      "lon": 11.451959609985352,
-      "country_code": "DE",
+      "name": "Consejo Superior de Investigaciones Cient\u00edficas",
+      "lat": 40.4165,
+      "lon": -3.70256,
+      "country_code": "ES",
       "citations": 36
     },
     {
-      "name": "University of Hong Kong",
-      "lat": 22.26861,
-      "lon": 114.12924,
-      "country_code": "HK",
+      "name": "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 36
+    },
+    {
+      "name": "University College London",
+      "lat": 51.50853,
+      "lon": -0.12574,
+      "country_code": "GB",
+      "citations": 35
+    },
+    {
+      "name": "Novo Nordisk Foundation",
+      "lat": 55.67594,
+      "lon": 12.56553,
+      "country_code": "DK",
       "citations": 35
     },
     {
@@ -1791,10 +1803,10 @@
       "citations": 35
     },
     {
-      "name": "University of Chicago",
-      "lat": 41.85003,
-      "lon": -87.65005,
-      "country_code": "US",
+      "name": "Technical University of Denmark",
+      "lat": 55.77044,
+      "lon": 12.50378,
+      "country_code": "DK",
       "citations": 34
     },
     {
@@ -1802,13 +1814,6 @@
       "lat": 30.26715,
       "lon": -97.74306,
       "country_code": "US",
-      "citations": 34
-    },
-    {
-      "name": "Zhejiang University",
-      "lat": 30.29365,
-      "lon": 120.16142,
-      "country_code": "CN",
       "citations": 34
     },
     {
@@ -1833,38 +1838,73 @@
       "citations": 34
     },
     {
-      "name": "University of Toronto",
-      "lat": 43.70643,
-      "lon": -79.39864,
-      "country_code": "CA",
-      "citations": 33
-    },
-    {
-      "name": "Technical University of Denmark",
-      "lat": 55.77044,
-      "lon": 12.50378,
-      "country_code": "DK",
-      "citations": 33
-    },
-    {
-      "name": "Vanderbilt University",
-      "lat": 36.16589,
-      "lon": -86.78444,
+      "name": "University of Chicago",
+      "lat": 41.85003,
+      "lon": -87.65005,
       "country_code": "US",
-      "citations": 32
+      "citations": 33
     },
     {
       "name": "University of Zurich",
       "lat": 47.36667,
       "lon": 8.55,
       "country_code": "CH",
-      "citations": 32
+      "citations": 33
+    },
+    {
+      "name": "New York University",
+      "lat": 40.71427,
+      "lon": -74.00597,
+      "country_code": "US",
+      "citations": 33
     },
     {
       "name": "Ghent University",
       "lat": 51.05,
       "lon": 3.71667,
       "country_code": "BE",
+      "citations": 33
+    },
+    {
+      "name": "UNC Lineberger Comprehensive Cancer Center",
+      "lat": 35.91320037841797,
+      "lon": -79.05583953857422,
+      "country_code": null,
+      "citations": 33
+    },
+    {
+      "name": "University of Minnesota",
+      "lat": 44.97997,
+      "lon": -93.26384,
+      "country_code": "US",
+      "citations": 32
+    },
+    {
+      "name": "Duke University",
+      "lat": 35.99403,
+      "lon": -78.89862,
+      "country_code": "US",
+      "citations": 32
+    },
+    {
+      "name": "Shanghai Jiao Tong University",
+      "lat": 31.22222,
+      "lon": 121.45806,
+      "country_code": "CN",
+      "citations": 32
+    },
+    {
+      "name": "University of Pennsylvania",
+      "lat": 39.95238,
+      "lon": -75.16362,
+      "country_code": "US",
+      "citations": 32
+    },
+    {
+      "name": "Chinese Academy of Agricultural Sciences",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 32
     },
     {
@@ -1875,25 +1915,11 @@
       "citations": 32
     },
     {
-      "name": "University of Minnesota",
-      "lat": 44.97997,
-      "lon": -93.26384,
-      "country_code": "US",
-      "citations": 31
-    },
-    {
-      "name": "Duke University",
-      "lat": 35.99403,
-      "lon": -78.89862,
-      "country_code": "US",
-      "citations": 31
-    },
-    {
-      "name": "University of Pennsylvania",
-      "lat": 39.95238,
-      "lon": -75.16362,
-      "country_code": "US",
-      "citations": 31
+      "name": "Charit\u00e9 - Universit\u00e4tsmedizin Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 30
     },
     {
       "name": "University of Edinburgh",
@@ -1903,24 +1929,17 @@
       "citations": 30
     },
     {
-      "name": "Johns Hopkins Medicine",
-      "lat": 39.29038,
-      "lon": -76.61219,
-      "country_code": "US",
-      "citations": 30
-    },
-    {
-      "name": "Wisconsin Institutes for Discovery",
-      "lat": 43.07303237915039,
-      "lon": -89.40760803222656,
-      "country_code": "US",
-      "citations": 30
-    },
-    {
       "name": "University of Utah",
       "lat": 40.76078,
       "lon": -111.89105,
       "country_code": "US",
+      "citations": 30
+    },
+    {
+      "name": "Peking University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 30
     },
     {
@@ -1945,38 +1964,38 @@
       "citations": 29
     },
     {
-      "name": "Charit\u00e9 - Universit\u00e4tsmedizin Berlin",
-      "lat": 52.52437,
-      "lon": 13.41053,
-      "country_code": "DE",
+      "name": "National University of Singapore",
+      "lat": 1.28967,
+      "lon": 103.85007,
+      "country_code": "SG",
       "citations": 29
     },
     {
-      "name": "Heidelberg University",
-      "lat": 49.40768,
-      "lon": 8.69079,
-      "country_code": "DE",
-      "citations": 29
-    },
-    {
-      "name": "New York University",
-      "lat": 40.71427,
-      "lon": -74.00597,
+      "name": "University of Southern California",
+      "lat": 34.05223,
+      "lon": -118.24368,
       "country_code": "US",
       "citations": 29
     },
     {
-      "name": "Chinese Academy of Agricultural Sciences",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
+      "name": "University of Pittsburgh",
+      "lat": 40.44062,
+      "lon": -79.99589,
+      "country_code": "US",
       "citations": 29
     },
     {
-      "name": "Netherlands Proteomics Centre",
-      "lat": 52.09083,
-      "lon": 5.12222,
-      "country_code": "NL",
+      "name": "European Molecular Biology Laboratory",
+      "lat": 42.05159,
+      "lon": 12.61969,
+      "country_code": "IT",
+      "citations": 29
+    },
+    {
+      "name": "Institute of Microbiology",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 29
     },
     {
@@ -2001,31 +2020,24 @@
       "citations": 28
     },
     {
-      "name": "Shanghai Jiao Tong University",
-      "lat": 31.22222,
-      "lon": 121.45806,
-      "country_code": "CN",
+      "name": "University of Hong Kong",
+      "lat": 22.26861,
+      "lon": 114.12924,
+      "country_code": "HK",
       "citations": 28
     },
     {
-      "name": "Institute of Microbiology",
-      "lat": 53.927696228027344,
-      "lon": 27.68490982055664,
-      "country_code": "BY",
-      "citations": 28
+      "name": "Yale University",
+      "lat": 41.30815,
+      "lon": -72.92816,
+      "country_code": "US",
+      "citations": 27
     },
     {
       "name": "The University of Queensland",
       "lat": -27.46794,
       "lon": 153.02809,
       "country_code": "AU",
-      "citations": 27
-    },
-    {
-      "name": "University of Southern California",
-      "lat": 34.05223,
-      "lon": -118.24368,
-      "country_code": "US",
       "citations": 27
     },
     {
@@ -2036,16 +2048,16 @@
       "citations": 27
     },
     {
-      "name": "University of Pittsburgh",
-      "lat": 40.44062,
-      "lon": -79.99589,
-      "country_code": "US",
-      "citations": 27
+      "name": "Institute for Molecular Systems Biology",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
+      "citations": 26
     },
     {
-      "name": "Yale University",
-      "lat": 41.30815,
-      "lon": -72.92816,
+      "name": "Brigham and Women's Hospital",
+      "lat": 42.35843,
+      "lon": -71.05977,
       "country_code": "US",
       "citations": 26
     },
@@ -2057,30 +2069,9 @@
       "citations": 26
     },
     {
-      "name": "Helmholtz Centre for Infection Research",
-      "lat": 52.26594,
-      "lon": 10.52673,
-      "country_code": "DE",
-      "citations": 26
-    },
-    {
-      "name": "Universit\u00e9 Paris Cit\u00e9",
-      "lat": 48.85341,
-      "lon": 2.3488,
-      "country_code": "FR",
-      "citations": 26
-    },
-    {
       "name": "Michigan State University",
       "lat": 42.73698,
       "lon": -84.48387,
-      "country_code": "US",
-      "citations": 26
-    },
-    {
-      "name": "University of Maryland, College Park",
-      "lat": 38.98067,
-      "lon": -76.93692,
       "country_code": "US",
       "citations": 26
     },
@@ -2092,17 +2083,24 @@
       "citations": 26
     },
     {
-      "name": "University of Illinois Chicago",
-      "lat": 41.85003,
-      "lon": -87.65005,
-      "country_code": "US",
+      "name": "Helmholtz Centre for Infection Research",
+      "lat": 52.26594,
+      "lon": 10.52673,
+      "country_code": "DE",
       "citations": 25
     },
     {
-      "name": "Universit\u00e9 Paris-Saclay",
-      "lat": 48.68333,
-      "lon": 2.13333,
-      "country_code": "FR",
+      "name": "Tsinghua University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 25
+    },
+    {
+      "name": "University of Maryland, College Park",
+      "lat": 38.98067,
+      "lon": -76.93692,
+      "country_code": "US",
       "citations": 25
     },
     {
@@ -2111,13 +2109,6 @@
       "lon": 8.658126831054688,
       "country_code": "DE",
       "citations": 25
-    },
-    {
-      "name": "National University of Singapore",
-      "lat": 1.28967,
-      "lon": 103.85007,
-      "country_code": "SG",
-      "citations": 24
     },
     {
       "name": "European Bioinformatics Institute",
@@ -2134,10 +2125,17 @@
       "citations": 24
     },
     {
-      "name": "Tsinghua University",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
+      "name": "Johns Hopkins Medicine",
+      "lat": 39.29038,
+      "lon": -76.61219,
+      "country_code": "US",
+      "citations": 24
+    },
+    {
+      "name": "Universit\u00e9 Paris-Saclay",
+      "lat": 48.68333,
+      "lon": 2.13333,
+      "country_code": "FR",
       "citations": 24
     },
     {
@@ -2148,6 +2146,13 @@
       "citations": 24
     },
     {
+      "name": "KU Leuven",
+      "lat": 50.87959,
+      "lon": 4.70093,
+      "country_code": "BE",
+      "citations": 24
+    },
+    {
       "name": "University of Calgary",
       "lat": 51.05011,
       "lon": -114.08529,
@@ -2155,38 +2160,38 @@
       "citations": 23
     },
     {
-      "name": "Brigham and Women's Hospital",
-      "lat": 42.35843,
-      "lon": -71.05977,
-      "country_code": "US",
-      "citations": 23
-    },
-    {
-      "name": "China Pharmaceutical University",
-      "lat": 32.061668395996094,
-      "lon": 118.77777862548828,
-      "country_code": "CN",
-      "citations": 23
-    },
-    {
-      "name": "Center for Cancer Research",
-      "lat": 38.98067,
-      "lon": -77.10026,
-      "country_code": "US",
-      "citations": 23
-    },
-    {
-      "name": "KU Leuven",
-      "lat": 50.87959,
-      "lon": 4.70093,
-      "country_code": "BE",
-      "citations": 23
-    },
-    {
-      "name": "Berlin Institute of Health at Charit\u00e9 - Universit\u00e4tsmedizin Berlin",
-      "lat": 52.52437,
-      "lon": 13.41053,
+      "name": "Helmholtz Munich",
+      "lat": 48.13743,
+      "lon": 11.57549,
       "country_code": "DE",
+      "citations": 23
+    },
+    {
+      "name": "Genentech",
+      "lat": 37.77492904663086,
+      "lon": -122.41941833496094,
+      "country_code": null,
+      "citations": 23
+    },
+    {
+      "name": "University of Helsinki",
+      "lat": 60.16952,
+      "lon": 24.93545,
+      "country_code": "FI",
+      "citations": 23
+    },
+    {
+      "name": "Universit\u00e9 Paris Cit\u00e9",
+      "lat": 48.85341,
+      "lon": 2.3488,
+      "country_code": "FR",
+      "citations": 23
+    },
+    {
+      "name": "Icahn School of Medicine at Mount Sinai",
+      "lat": 40.71427,
+      "lon": -74.00597,
+      "country_code": "US",
       "citations": 22
     },
     {
@@ -2194,13 +2199,6 @@
       "lat": 53.41058,
       "lon": -2.97794,
       "country_code": "GB",
-      "citations": 22
-    },
-    {
-      "name": "University of Helsinki",
-      "lat": 60.16952,
-      "lon": 24.93545,
-      "country_code": "FI",
       "citations": 22
     },
     {
@@ -2225,6 +2223,13 @@
       "citations": 22
     },
     {
+      "name": "Academia Sinica",
+      "lat": 25.05306,
+      "lon": 121.52639,
+      "country_code": "TW",
+      "citations": 22
+    },
+    {
       "name": "The University of Texas Southwestern Medical Center",
       "lat": 32.78306,
       "lon": -96.80667,
@@ -2232,30 +2237,16 @@
       "citations": 22
     },
     {
-      "name": "Freie Universit\u00e4t Berlin",
-      "lat": 52.52437,
-      "lon": 13.41053,
-      "country_code": "DE",
+      "name": "McGill University",
+      "lat": 45.50884,
+      "lon": -73.58781,
+      "country_code": "CA",
       "citations": 21
     },
     {
-      "name": "Icahn School of Medicine at Mount Sinai",
-      "lat": 40.71427,
-      "lon": -74.00597,
-      "country_code": "US",
-      "citations": 21
-    },
-    {
-      "name": "Helmholtz Munich",
-      "lat": 48.13743,
-      "lon": 11.57549,
-      "country_code": "DE",
-      "citations": 21
-    },
-    {
-      "name": "Guangzhou Medical University",
-      "lat": 23.11667,
-      "lon": 113.25,
+      "name": "China Pharmaceutical University",
+      "lat": 32.061668395996094,
+      "lon": 118.77777862548828,
       "country_code": "CN",
       "citations": 21
     },
@@ -2267,6 +2258,13 @@
       "citations": 21
     },
     {
+      "name": "University of G\u00f6ttingen",
+      "lat": 51.53443,
+      "lon": 9.93228,
+      "country_code": "DE",
+      "citations": 21
+    },
+    {
       "name": "SIB Swiss Institute of Bioinformatics",
       "lat": 46.516,
       "lon": 6.63282,
@@ -2274,17 +2272,17 @@
       "citations": 21
     },
     {
-      "name": "Environmental Molecular Sciences Laboratory",
-      "lat": 46.28569030761719,
-      "lon": -119.28446197509766,
+      "name": "Purdue University West Lafayette",
+      "lat": 40.42587,
+      "lon": -86.90807,
       "country_code": "US",
       "citations": 21
     },
     {
-      "name": "Max Planck Institute for Evolutionary Biology",
-      "lat": 54.16202,
-      "lon": 10.42765,
-      "country_code": "DE",
+      "name": "Environmental Molecular Sciences Laboratory",
+      "lat": 46.28569030761719,
+      "lon": -119.28446197509766,
+      "country_code": "US",
       "citations": 21
     },
     {
@@ -2309,6 +2307,13 @@
       "citations": 21
     },
     {
+      "name": "Berlin Institute of Health at Charit\u00e9 - Universit\u00e4tsmedizin Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 20
+    },
+    {
       "name": "University of Birmingham",
       "lat": 52.48142,
       "lon": -1.89983,
@@ -2316,17 +2321,10 @@
       "citations": 20
     },
     {
-      "name": "UNSW Sydney",
-      "lat": -33.86785,
-      "lon": 151.20732,
-      "country_code": "AU",
-      "citations": 20
-    },
-    {
-      "name": "European Molecular Biology Laboratory",
-      "lat": 42.05159,
-      "lon": 12.61969,
-      "country_code": "IT",
+      "name": "University of Illinois Chicago",
+      "lat": 41.85003,
+      "lon": -87.65005,
+      "country_code": "US",
       "citations": 20
     },
     {
@@ -2334,13 +2332,6 @@
       "lat": 54.32133,
       "lon": 10.13489,
       "country_code": "DE",
-      "citations": 20
-    },
-    {
-      "name": "University of Montana",
-      "lat": 46.87215,
-      "lon": -113.994,
-      "country_code": "US",
       "citations": 20
     },
     {
@@ -2358,17 +2349,38 @@
       "citations": 20
     },
     {
-      "name": "Purdue University West Lafayette",
-      "lat": 40.42587,
-      "lon": -86.90807,
+      "name": "Indiana University",
+      "lat": 39.16533,
+      "lon": -86.52639,
       "country_code": "US",
       "citations": 20
     },
     {
-      "name": "Chan Zuckerberg Initiative (United States)",
-      "lat": 37.48522,
-      "lon": -122.23635,
+      "name": "Max Planck Institute for Evolutionary Biology",
+      "lat": 54.16202,
+      "lon": 10.42765,
+      "country_code": "DE",
+      "citations": 20
+    },
+    {
+      "name": "Chan Zuckerberg Biohub San Francisco",
+      "lat": 37.77492904663086,
+      "lon": -122.41941833496094,
       "country_code": "US",
+      "citations": 19
+    },
+    {
+      "name": "Cleveland Clinic",
+      "lat": 41.4995,
+      "lon": -81.69541,
+      "country_code": "US",
+      "citations": 19
+    },
+    {
+      "name": "Shandong University",
+      "lat": 36.66833,
+      "lon": 116.99722,
+      "country_code": "CN",
       "citations": 19
     },
     {
@@ -2376,34 +2388,6 @@
       "lat": 49.8844,
       "lon": -97.14704,
       "country_code": "CA",
-      "citations": 19
-    },
-    {
-      "name": "Institute for Systems Biology",
-      "lat": 47.60621,
-      "lon": -122.33207,
-      "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "University of Amsterdam",
-      "lat": 52.37403,
-      "lon": 4.88969,
-      "country_code": "NL",
-      "citations": 19
-    },
-    {
-      "name": "Stanford Medicine",
-      "lat": 37.42411,
-      "lon": -122.16608,
-      "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "Harvard Stem Cell Institute",
-      "lat": 42.375099182128906,
-      "lon": -71.1056137084961,
-      "country_code": "US",
       "citations": 19
     }
   ],
@@ -2415,7 +2399,7 @@
     },
     {
       "name": "Chemistry",
-      "count": 1547,
+      "count": 1545,
       "color": "#5C6E4A"
     },
     {
@@ -2425,7 +2409,7 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 385,
+      "count": 386,
       "color": "#9A553B"
     },
     {
@@ -2641,7 +2625,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 90,
+        "citations": 91,
         "year": 2019
       },
       {
@@ -2969,7 +2953,7 @@
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 233,
+        "citations": 234,
         "year": 2021
       },
       {
@@ -2993,7 +2977,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1527,
+        "citations": 1529,
         "year": 2013
       },
       {
@@ -3049,7 +3033,7 @@
         "label": "Six alternative proteases for mass spectrometry\u2013based proteomics beyond trypsin",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 488,
+        "citations": 489,
         "year": 2016
       },
       {
@@ -3065,7 +3049,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 481,
+        "citations": 482,
         "year": 2025
       },
       {
@@ -3193,7 +3177,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 3499,
+        "citations": 3497,
         "year": 2016
       },
       {
@@ -3297,7 +3281,7 @@
         "label": "Mechanisms and models of somatic cell reprogramming",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 467,
+        "citations": 468,
         "year": 2013
       },
       {
@@ -3305,7 +3289,7 @@
         "label": "MultiNotch MS3 Enables Accurate, Sensitive, and Multiplexed Detection of Differential Expression across Cancer Cell Line Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1400,
+        "citations": 1399,
         "year": 2014
       },
       {
@@ -3345,7 +3329,7 @@
         "label": "Integrated Analysis of Transcriptomic and Proteomic Data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 468,
+        "citations": 467,
         "year": 2013
       },
       {
@@ -3353,7 +3337,7 @@
         "label": "System-Wide Temporal Characterization of the Proteome and Phosphoproteome of Human Embryonic Stem Cell Differentiation",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 459,
+        "citations": 458,
         "year": 2011
       },
       {
@@ -3417,7 +3401,7 @@
         "label": "Serine ADP-Ribosylation Depends on HPF1",
         "field": "Medicine",
         "type": "citing",
-        "citations": 373,
+        "citations": 374,
         "year": 2017
       },
       {
@@ -3425,7 +3409,7 @@
         "label": "Identification of modified peptides using localization-aware open search",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 329,
+        "citations": 330,
         "year": 2020
       },
       {
@@ -3433,7 +3417,7 @@
         "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
         "field": "Medicine",
         "type": "citing",
-        "citations": 324,
+        "citations": 325,
         "year": 2016
       },
       {
@@ -3609,7 +3593,7 @@
         "label": "Burkholderia as a Source of Natural Products",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 144,
+        "citations": 145,
         "year": 2019
       },
       {
@@ -3657,7 +3641,7 @@
         "label": "Mass spectrometry for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 745,
+        "citations": 744,
         "year": 2008
       },
       {
@@ -3721,7 +3705,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 482,
+        "citations": 483,
         "year": 2024
       },
       {
@@ -3801,7 +3785,7 @@
         "label": "Methods to study RNA\u2013protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 412,
+        "citations": 413,
         "year": 2019
       },
       {
@@ -3857,7 +3841,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 168,
+        "citations": 169,
         "year": 2019
       },
       {
@@ -3889,7 +3873,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 662,
+        "citations": 663,
         "year": 2020
       },
       {
@@ -3897,7 +3881,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 538,
+        "citations": 539,
         "year": 2023
       },
       {
@@ -3969,7 +3953,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2020
       },
       {
@@ -4017,7 +4001,7 @@
         "label": "Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 284,
+        "citations": 285,
         "year": 2020
       },
       {
@@ -4081,7 +4065,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 366,
+        "citations": 367,
         "year": 2021
       },
       {
@@ -4177,7 +4161,7 @@
         "label": "Simultaneous Glycan-Peptide Characterization Using Hydrophilic Interaction Chromatography and Parallel Fragmentation by CID, Higher Energy Collisional Dissociation, and Electron Transfer Dissociation MS Applied to the N-Linked Glycoproteome of Campylobacter jejuni",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 345,
+        "citations": 344,
         "year": 2010
       },
       {
@@ -4313,7 +4297,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2742,
+        "citations": 2744,
         "year": 2017
       },
       {
@@ -4465,7 +4449,7 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 112,
+        "citations": 113,
         "year": 2019
       },
       {
@@ -4497,7 +4481,7 @@
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 521,
+        "citations": 522,
         "year": 2019
       },
       {
@@ -4553,7 +4537,7 @@
         "label": "Akkermansia muciniphila alleviates high\u2010fat\u2010diet \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Medicine",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2023
       },
       {
@@ -4577,7 +4561,7 @@
         "label": "Diet-driven differential response of Akkermansia muciniphila modulates pathogen susceptibility",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 70,
+        "citations": 71,
         "year": 2024
       },
       {
@@ -4585,7 +4569,7 @@
         "label": "Mode of action of Akkermansia muciniphila in the intestinal dialogue: role of extracellular proteins, metabolites and cell envelope components",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2023
       },
       {
@@ -4617,7 +4601,7 @@
         "label": "Human Pumilio Proteins Recruit Multiple Deadenylases to Efficiently Repress Messenger RNAs",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 218,
+        "citations": 219,
         "year": 2012
       },
       {
@@ -4633,7 +4617,7 @@
         "label": "Towards Higher Sensitivity of Mass Spectrometry: A Perspective From the Mass Analyzers",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 152,
+        "citations": 153,
         "year": 2021
       },
       {
@@ -4793,7 +4777,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 5027,
+        "citations": 5030,
         "year": 2017
       },
       {
@@ -4801,7 +4785,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 427,
+        "citations": 429,
         "year": 2020
       },
       {
@@ -4809,7 +4793,7 @@
         "label": "Coral holobiont cues prime Endozoicomonas for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 146,
+        "citations": 147,
         "year": 2022
       },
       {
@@ -4905,7 +4889,7 @@
         "label": "A common pathway for O \u2010linked protein\u2010glycosylation and synthesis of capsule in A cinetobacter baumannii",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 171,
+        "citations": 170,
         "year": 2013
       },
       {
@@ -5097,7 +5081,7 @@
         "label": "Ion Activation Methods for Peptides and Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 263,
+        "citations": 264,
         "year": 2015
       },
       {
@@ -5241,7 +5225,7 @@
         "label": "Trait biases in microbial reference genomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 39,
+        "citations": 40,
         "year": 2023
       },
       {
@@ -5361,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5409,
+        "citations": 5411,
         "year": 2021
       },
       {
@@ -6250,12 +6234,12 @@
       },
       {
         "source": "W2989537165",
-        "target": "W2989537165",
+        "target": "W3114702865",
         "strength": 0.5
       },
       {
         "source": "W2989537165",
-        "target": "W3114702865",
+        "target": "W2989537165",
         "strength": 0.5
       },
       {
