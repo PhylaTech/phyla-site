@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-28T13:40:46.373215+00:00",
+  "generated_at": "2026-09-29T12:41:09.938643+00:00",
   "summary": {
-    "total_citations": 5756,
+    "total_citations": 5755,
     "countries_reached": 78,
     "citing_institutions": 4138,
     "disciplines_impacted": 26,
@@ -152,6 +152,19 @@
       "type": "core"
     },
     {
+      "id": "W2808840038",
+      "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
+      "journal": "Nature Communications",
+      "year": 2018,
+      "cited_by_count": 138,
+      "field": "Agricultural and Biological Sciences",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s41467-018-04955-6",
+      "type": "core"
+    },
+    {
       "id": "W2097239551",
       "title": "Large-Scale Phosphoprotein Analysis inMedicago truncatulaRoots Provides Insight into in Vivo Kinase Activity in Legumes",
       "journal": "PLANT PHYSIOLOGY",
@@ -162,19 +175,6 @@
         "Craig Wenger"
       ],
       "doi": "https://doi.org/10.1104/pp.109.149625",
-      "type": "core"
-    },
-    {
-      "id": "W2808840038",
-      "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
-      "journal": "Nature Communications",
-      "year": 2018,
-      "cited_by_count": 137,
-      "field": "Agricultural and Biological Sciences",
-      "authors": [
-        "Ian J. Miller"
-      ],
-      "doi": "https://doi.org/10.1038/s41467-018-04955-6",
       "type": "core"
     },
     {
@@ -452,19 +452,6 @@
       "type": "core"
     },
     {
-      "id": "W2027281030",
-      "title": "Characterization and Diagnostic Value of Amino Acid Side Chain Neutral Losses Following Electron-Transfer Dissociation",
-      "journal": "Journal of the American Society for Mass Spectrometry",
-      "year": 2011,
-      "cited_by_count": 39,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1007/s13361-010-0029-0",
-      "type": "core"
-    },
-    {
       "id": "W2527369287",
       "title": "Single sample resolution of rare microbial dark matter in a marine invertebrate metagenome",
       "journal": "Scientific Reports",
@@ -491,11 +478,24 @@
       "type": "core"
     },
     {
+      "id": "W2027281030",
+      "title": "Characterization and Diagnostic Value of Amino Acid Side Chain Neutral Losses Following Electron-Transfer Dissociation",
+      "journal": "Journal of the American Society for Mass Spectrometry",
+      "year": 2011,
+      "cited_by_count": 38,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1007/s13361-010-0029-0",
+      "type": "core"
+    },
+    {
       "id": "W2007207485",
       "title": "The effect of interfering ions on search algorithm performance for electron\u2010transfer dissociation data",
       "journal": "PROTEOMICS",
       "year": 2009,
-      "cited_by_count": 38,
+      "cited_by_count": 37,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -2565,20 +2565,20 @@
         "year": 2011
       },
       {
+        "id": "W2808840038",
+        "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
+        "field": "Agricultural and Biological Sciences",
+        "type": "core",
+        "citations": 138,
+        "year": 2018
+      },
+      {
         "id": "W2097239551",
         "label": "Large-Scale Phosphoprotein Analysis inMedicago truncatulaRoots Provides Insight into in Vivo Kinase Activity in Legumes",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
         "citations": 138,
         "year": 2009
-      },
-      {
-        "id": "W2808840038",
-        "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
-        "field": "Agricultural and Biological Sciences",
-        "type": "core",
-        "citations": 137,
-        "year": 2018
       },
       {
         "id": "W2023959652",
@@ -2749,14 +2749,6 @@
         "year": 2009
       },
       {
-        "id": "W2027281030",
-        "label": "Characterization and Diagnostic Value of Amino Acid Side Chain Neutral Losses Following Electron-Transfer Dissociation",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 39,
-        "year": 2011
-      },
-      {
         "id": "W2527369287",
         "label": "Single sample resolution of rare microbial dark matter in a marine invertebrate metagenome",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -2773,11 +2765,19 @@
         "year": 2020
       },
       {
+        "id": "W2027281030",
+        "label": "Characterization and Diagnostic Value of Amino Acid Side Chain Neutral Losses Following Electron-Transfer Dissociation",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 38,
+        "year": 2011
+      },
+      {
         "id": "W2007207485",
         "label": "The effect of interfering ions on search algorithm performance for electron\u2010transfer dissociation data",
         "field": "Chemistry",
         "type": "core",
-        "citations": 38,
+        "citations": 37,
         "year": 2009
       },
       {
@@ -3525,62 +3525,6 @@
         "year": 2018
       },
       {
-        "id": "W2144163963",
-        "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 915,
-        "year": 2013
-      },
-      {
-        "id": "W3117558011",
-        "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 259,
-        "year": 2020
-      },
-      {
-        "id": "W2160807805",
-        "label": "Advances in Omics and Bioinformatics Tools for Systems Analyses of Plant Functions",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 234,
-        "year": 2011
-      },
-      {
-        "id": "W2048666003",
-        "label": "Systems biology-based approaches toward understanding drought tolerance in food crops",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 207,
-        "year": 2012
-      },
-      {
-        "id": "W2127804268",
-        "label": "Deep Sequencing of the Medicago truncatula Root Transcriptome Reveals a Massive and Early Interaction between Nodulation Factor and Ethylene Signals",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 166,
-        "year": 2015
-      },
-      {
-        "id": "W2169544369",
-        "label": "Phosphoproteomics for the Masses",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 164,
-        "year": 2010
-      },
-      {
-        "id": "W2197643762",
-        "label": "Proteomics and Metabolomics: Two Emerging Areas for Legume Improvement",
-        "field": "Agricultural and Biological Sciences",
-        "type": "citing",
-        "citations": 161,
-        "year": 2015
-      },
-      {
         "id": "W2994786999",
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Medicine",
@@ -3635,6 +3579,62 @@
         "type": "citing",
         "citations": 97,
         "year": 2020
+      },
+      {
+        "id": "W2144163963",
+        "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 915,
+        "year": 2013
+      },
+      {
+        "id": "W3117558011",
+        "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 259,
+        "year": 2020
+      },
+      {
+        "id": "W2160807805",
+        "label": "Advances in Omics and Bioinformatics Tools for Systems Analyses of Plant Functions",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 234,
+        "year": 2011
+      },
+      {
+        "id": "W2048666003",
+        "label": "Systems biology-based approaches toward understanding drought tolerance in food crops",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 207,
+        "year": 2012
+      },
+      {
+        "id": "W2127804268",
+        "label": "Deep Sequencing of the Medicago truncatula Root Transcriptome Reveals a Massive and Early Interaction between Nodulation Factor and Ethylene Signals",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 166,
+        "year": 2015
+      },
+      {
+        "id": "W2169544369",
+        "label": "Phosphoproteomics for the Masses",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 164,
+        "year": 2010
+      },
+      {
+        "id": "W2197643762",
+        "label": "Proteomics and Metabolomics: Two Emerging Areas for Legume Improvement",
+        "field": "Agricultural and Biological Sciences",
+        "type": "citing",
+        "citations": 161,
+        "year": 2015
       },
       {
         "id": "W2003261719",
@@ -4717,62 +4717,6 @@
         "year": 2011
       },
       {
-        "id": "W1974794668",
-        "label": "mMass as a Software Tool for the Annotation of Cyclic Peptide Tandem Mass Spectra",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 312,
-        "year": 2012
-      },
-      {
-        "id": "W2949320474",
-        "label": "Peptide Radicals and Cation Radicals in the Gas Phase",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 212,
-        "year": 2013
-      },
-      {
-        "id": "W2137285891",
-        "label": "Electron transfer dissociation mass spectrometry in proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 123,
-        "year": 2012
-      },
-      {
-        "id": "W2020743949",
-        "label": "Electron transfer dissociation: Effects of cation charge state on product partitioning in ion/ion electron transfer to multiply protonated polypeptides",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 69,
-        "year": 2012
-      },
-      {
-        "id": "W913777339",
-        "label": "A Calibration Routine for Efficient ETD in Large-Scale Proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 67,
-        "year": 2015
-      },
-      {
-        "id": "W2997033072",
-        "label": "How Peptides Dissociate in Plasmonic Hot Spots",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 44,
-        "year": 2020
-      },
-      {
-        "id": "W2002506527",
-        "label": "Statistical Analysis of Electron Transfer Dissociation Pairwise Fragmentation Patterns",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 34,
-        "year": 2011
-      },
-      {
         "id": "W2599417231",
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -4867,6 +4811,62 @@
         "type": "citing",
         "citations": 31,
         "year": 2024
+      },
+      {
+        "id": "W1974794668",
+        "label": "mMass as a Software Tool for the Annotation of Cyclic Peptide Tandem Mass Spectra",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 312,
+        "year": 2012
+      },
+      {
+        "id": "W2949320474",
+        "label": "Peptide Radicals and Cation Radicals in the Gas Phase",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 212,
+        "year": 2013
+      },
+      {
+        "id": "W2137285891",
+        "label": "Electron transfer dissociation mass spectrometry in proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 123,
+        "year": 2012
+      },
+      {
+        "id": "W2020743949",
+        "label": "Electron transfer dissociation: Effects of cation charge state on product partitioning in ion/ion electron transfer to multiply protonated polypeptides",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 69,
+        "year": 2012
+      },
+      {
+        "id": "W913777339",
+        "label": "A Calibration Routine for Efficient ETD in Large-Scale Proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 67,
+        "year": 2015
+      },
+      {
+        "id": "W2997033072",
+        "label": "How Peptides Dissociate in Plasmonic Hot Spots",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 44,
+        "year": 2020
+      },
+      {
+        "id": "W2002506527",
+        "label": "Statistical Analysis of Electron Transfer Dissociation Pairwise Fragmentation Patterns",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 34,
+        "year": 2011
       },
       {
         "id": "W2072281124",
@@ -5943,46 +5943,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2097239551",
-        "target": "W2144163963",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W2006595529",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W3117558011",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W2160807805",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W2048666003",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W2127804268",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W2169544369",
-        "strength": 0.5
-      },
-      {
-        "source": "W2097239551",
-        "target": "W2197643762",
-        "strength": 0.5
-      },
-      {
         "source": "W2808840038",
         "target": "W2994786999",
         "strength": 0.5
@@ -6020,6 +5980,46 @@
       {
         "source": "W2808840038",
         "target": "W3011843199",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2144163963",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2006595529",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W3117558011",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2160807805",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2048666003",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2127804268",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2169544369",
+        "strength": 0.5
+      },
+      {
+        "source": "W2097239551",
+        "target": "W2197643762",
         "strength": 0.5
       },
       {
@@ -6863,46 +6863,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2027281030",
-        "target": "W1974794668",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W2949320474",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W2770809689",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W2137285891",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W2020743949",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W913777339",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W2997033072",
-        "strength": 0.5
-      },
-      {
-        "source": "W2027281030",
-        "target": "W2002506527",
-        "strength": 0.5
-      },
-      {
         "source": "W2527369287",
         "target": "W2599417231",
         "strength": 0.5
@@ -6980,6 +6940,46 @@
       {
         "source": "W3092255275",
         "target": "W4404125075",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W1974794668",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W2949320474",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W2770809689",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W2137285891",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W2020743949",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W913777339",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W2997033072",
+        "strength": 0.5
+      },
+      {
+        "source": "W2027281030",
+        "target": "W2002506527",
         "strength": 0.5
       },
       {
