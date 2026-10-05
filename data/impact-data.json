@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-04T12:13:05.880032+00:00",
+  "generated_at": "2026-10-05T14:23:59.987517+00:00",
   "summary": {
     "total_citations": 5771,
     "countries_reached": 78,
-    "citing_institutions": 4149,
+    "citing_institutions": 4148,
     "disciplines_impacted": 26,
     "total_publications": 54
   },
@@ -444,7 +444,7 @@
       "journal": "Journal of the American Society for Mass Spectrometry",
       "year": 2009,
       "cited_by_count": 41,
-      "field": "Biochemistry, Genetics and Molecular Biology",
+      "field": "Chemistry",
       "authors": [
         "Craig Wenger"
       ],
@@ -752,7 +752,7 @@
       "lat": 56.1,
       "lon": -106.3,
       "citations": 263,
-      "institutions": 104
+      "institutions": 103
     },
     {
       "country": "Netherlands",
@@ -2394,67 +2394,67 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2060,
+      "count": 2050,
       "color": "#6E4B2A"
     },
     {
       "name": "Chemistry",
-      "count": 1551,
+      "count": 1560,
       "color": "#5C6E4A"
     },
     {
       "name": "Medicine",
-      "count": 928,
+      "count": 934,
       "color": "#B07C39"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 386,
+      "count": 385,
       "color": "#9A553B"
     },
     {
       "name": "Computer Science",
-      "count": 213,
+      "count": 216,
       "color": "#7A6A3E"
     },
     {
       "name": "Environmental Science",
-      "count": 150,
+      "count": 148,
       "color": "#47603F"
     },
     {
       "name": "Immunology and Microbiology",
-      "count": 106,
+      "count": 103,
       "color": "#8E9A6E"
     },
     {
       "name": "Engineering",
-      "count": 63,
+      "count": 62,
       "color": "#C39A5C"
     },
     {
       "name": "Materials Science",
-      "count": 42,
+      "count": 43,
       "color": "#5A4632"
     },
     {
       "name": "Neuroscience",
-      "count": 36,
+      "count": 35,
       "color": "#A06A3C"
     },
     {
       "name": "Nursing",
-      "count": 18,
+      "count": 20,
       "color": "#6B7357"
     },
     {
       "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 15,
+      "count": 13,
       "color": "#7E4A2E"
     },
     {
       "name": "Other Disciplines",
-      "count": 66,
+      "count": 67,
       "includes": [
         "Earth and Planetary Sciences (9)",
         "Arts and Humanities (8)",
@@ -2466,8 +2466,8 @@
         "Energy (5)",
         "Veterinary (4)",
         "Chemical Engineering (3)",
+        "Health Professions (2)",
         "Physics and Astronomy (2)",
-        "Health Professions (1)",
         "Business, Management and Accounting (1)",
         "Economics, Econometrics and Finance (1)"
       ],
@@ -2743,7 +2743,7 @@
       {
         "id": "W2050184779",
         "label": "Top-down proteomics reveals novel protein forms expressed in methanosarcina acetivorans",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "core",
         "citations": 41,
         "year": 2009
@@ -3751,7 +3751,7 @@
       {
         "id": "W4396578574",
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 81,
         "year": 2024
@@ -3887,7 +3887,7 @@
       {
         "id": "W4382516982",
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
-        "field": "Computer Science",
+        "field": "Materials Science",
         "type": "citing",
         "citations": 505,
         "year": 2023
@@ -5345,7 +5345,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5444,
+        "citations": 5445,
         "year": 2021
       },
       {
