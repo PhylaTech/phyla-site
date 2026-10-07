@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-06T13:12:42.443397+00:00",
+  "generated_at": "2026-10-07T13:10:21.708841+00:00",
   "summary": {
     "total_citations": 5780,
     "countries_reached": 78,
     "citing_institutions": 4149,
-    "disciplines_impacted": 26,
+    "disciplines_impacted": 23,
     "total_publications": 54
   },
   "publications": [
@@ -2394,12 +2394,12 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 2047,
+      "count": 1852,
       "color": "#6E4B2A"
     },
     {
       "name": "Chemistry",
-      "count": 1565,
+      "count": 1848,
       "color": "#5C6E4A"
     },
     {
@@ -2409,67 +2409,64 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 383,
+      "count": 323,
       "color": "#9A553B"
     },
     {
       "name": "Computer Science",
-      "count": 222,
+      "count": 275,
       "color": "#7A6A3E"
     },
     {
       "name": "Environmental Science",
-      "count": 142,
+      "count": 110,
       "color": "#47603F"
     },
     {
       "name": "Immunology and Microbiology",
-      "count": 103,
+      "count": 82,
       "color": "#8E9A6E"
     },
     {
       "name": "Engineering",
-      "count": 60,
+      "count": 53,
       "color": "#C39A5C"
     },
     {
       "name": "Materials Science",
-      "count": 42,
+      "count": 43,
       "color": "#5A4632"
     },
     {
       "name": "Neuroscience",
-      "count": 35,
+      "count": 28,
       "color": "#A06A3C"
     },
     {
       "name": "Nursing",
-      "count": 20,
+      "count": 15,
       "color": "#6B7357"
     },
     {
-      "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 12,
+      "name": "Earth and Planetary Sciences",
+      "count": 14,
       "color": "#7E4A2E"
     },
     {
       "name": "Other Disciplines",
-      "count": 66,
+      "count": 45,
       "includes": [
-        "Earth and Planetary Sciences (9)",
-        "Arts and Humanities (8)",
-        "Mathematics (7)",
-        "Social Sciences (7)",
-        "Dentistry (7)",
-        "Psychology (5)",
-        "Energy (5)",
-        "Decision Sciences (5)",
-        "Veterinary (4)",
-        "Chemical Engineering (3)",
-        "Health Professions (2)",
-        "Physics and Astronomy (2)",
-        "Business, Management and Accounting (1)",
-        "Economics, Econometrics and Finance (1)"
+        "Pharmacology, Toxicology and Pharmaceutics (8)",
+        "Decision Sciences (6)",
+        "Arts and Humanities (5)",
+        "Dentistry (5)",
+        "Health Professions (4)",
+        "Social Sciences (4)",
+        "Physics and Astronomy (4)",
+        "Mathematics (3)",
+        "Veterinary (3)",
+        "Chemical Engineering (2)",
+        "Business, Management and Accounting (1)"
       ],
       "color": "#94A3B8"
     }
@@ -2943,7 +2940,7 @@
       {
         "id": "W3213276455",
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
-        "field": "Immunology and Microbiology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 283,
         "year": 2021
@@ -2959,7 +2956,7 @@
       {
         "id": "W3156257761",
         "label": "Functional landscape of SARS-CoV-2 cellular restriction",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 232,
         "year": 2021
@@ -3007,7 +3004,7 @@
       {
         "id": "W2100424218",
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 720,
         "year": 2012
@@ -3071,7 +3068,7 @@
       {
         "id": "W4391116946",
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Computer Science",
         "type": "citing",
         "citations": 115,
         "year": 2024
@@ -3079,7 +3076,7 @@
       {
         "id": "W4392948486",
         "label": "AI in analytical chemistry: Advancements, challenges, and future directions",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 107,
         "year": 2024
@@ -3111,7 +3108,7 @@
       {
         "id": "W4309109636",
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 353,
         "year": 2022
@@ -3479,7 +3476,7 @@
       {
         "id": "W2559315320",
         "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 325,
         "year": 2016
@@ -3511,7 +3508,7 @@
       {
         "id": "W1866421377",
         "label": "A Single Kinase Generates the Majority of the Secreted Phosphoproteome",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 365,
         "year": 2015
@@ -3543,7 +3540,7 @@
       {
         "id": "W2160807805",
         "label": "Advances in Omics and Bioinformatics Tools for Systems Analyses of Plant Functions",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 234,
         "year": 2011
@@ -3575,7 +3572,7 @@
       {
         "id": "W2197643762",
         "label": "Proteomics and Metabolomics: Two Emerging Areas for Legume Improvement",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 161,
         "year": 2015
@@ -3591,7 +3588,7 @@
       {
         "id": "W2958017797",
         "label": "Burkholderia as a Source of Natural Products",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Medicine",
         "type": "citing",
         "citations": 146,
         "year": 2019
@@ -3855,7 +3852,7 @@
       {
         "id": "W4281391087",
         "label": "Ancient plant-like terpene biosynthesis in corals",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 113,
         "year": 2022
@@ -3975,7 +3972,7 @@
       {
         "id": "W4361279451",
         "label": "A scoping review of neurodegenerative manifestations in explainable digital phenotyping",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 55,
         "year": 2023
@@ -4039,7 +4036,7 @@
       {
         "id": "W3178863352",
         "label": "Comprehensive Analysis of Lysine Lactylation in Rice (Oryza sativa) Grains",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 109,
         "year": 2021
@@ -4047,7 +4044,7 @@
       {
         "id": "W2769384705",
         "label": "Mapping Extracellular Matrix Proteins in Formalin-Fixed, Paraffin-Embedded Tissues by MALDI Imaging Mass Spectrometry",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 104,
         "year": 2017
@@ -4103,7 +4100,7 @@
       {
         "id": "W2164118220",
         "label": "Isotopic labeling of terminal amines in complex samples identifies protein N-termini and protease cleavage products",
-        "field": "Medicine",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 574,
         "year": 2010
@@ -4135,7 +4132,7 @@
       {
         "id": "W2091746443",
         "label": "Protein Digestion: An Overview of the Available Techniques and Recent Developments",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 248,
         "year": 2013
@@ -4167,7 +4164,7 @@
       {
         "id": "W1980729801",
         "label": "Redox Proteomics: Chemical Principles, Methodological Approaches and Biological/Biomedical Promises",
-        "field": "Chemistry",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 256,
         "year": 2012
@@ -4271,7 +4268,7 @@
       {
         "id": "W4323977918",
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 59,
         "year": 2023
@@ -4383,7 +4380,7 @@
       {
         "id": "W4386379020",
         "label": "Transposable elements as tissue-specific enhancers in cancers of endodermal lineage",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 83,
         "year": 2023
@@ -4423,7 +4420,7 @@
       {
         "id": "W4402301828",
         "label": "Upstream regulator of genomic imprinting in rice endosperm is a small RNA-associated chromatin remodeler",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 18,
         "year": 2024
@@ -4455,7 +4452,7 @@
       {
         "id": "W2762475403",
         "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
-        "field": "Medicine",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 111,
         "year": 2017
@@ -4487,7 +4484,7 @@
       {
         "id": "W2994671073",
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 173,
         "year": 2019
@@ -4535,7 +4532,7 @@
       {
         "id": "W4382344666",
         "label": "Akkermansia muciniphila alleviates high\u2010fat\u2010diet \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 126,
         "year": 2023
@@ -4607,7 +4604,7 @@
       {
         "id": "W2117903500",
         "label": "Evaluation of HCD- and CID-type Fragmentation Within Their Respective Detection Platforms For Murine Phosphoproteomics",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 192,
         "year": 2011
@@ -4655,7 +4652,7 @@
       {
         "id": "W2048888574",
         "label": "Mass Accuracy and Isotopic Abundance Measurements for HR-MS Instrumentation: Capabilities for Non-Targeted Analyses",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 73,
         "year": 2014
@@ -4743,7 +4740,7 @@
       {
         "id": "W2883293209",
         "label": "Microbial-derived products as potential new antimicrobials",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 81,
         "year": 2018
@@ -4759,7 +4756,7 @@
       {
         "id": "W4223918790",
         "label": "High-fat diet disrupts REG3\u03b3 and gut microbial rhythms promoting metabolic dysfunction",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 128,
         "year": 2022
@@ -4799,7 +4796,7 @@
       {
         "id": "W4401758043",
         "label": "RNA sequestration in P-bodies sustains myeloid leukaemia",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 37,
         "year": 2024
@@ -4807,7 +4804,7 @@
       {
         "id": "W4404125075",
         "label": "Regulated N-glycosylation controls chaperone function and receptor trafficking",
-        "field": "Immunology and Microbiology",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 31,
         "year": 2024
@@ -4855,7 +4852,7 @@
       {
         "id": "W2997033072",
         "label": "How Peptides Dissociate in Plasmonic Hot Spots",
-        "field": "Chemistry",
+        "field": "Materials Science",
         "type": "citing",
         "citations": 44,
         "year": 2020
@@ -4895,7 +4892,7 @@
       {
         "id": "W2151619278",
         "label": "Multicentric Validation of Proteomic Biomarkers in Urine Specific for Diabetic Nephropathy",
-        "field": "Chemistry",
+        "field": "Medicine",
         "type": "citing",
         "citations": 134,
         "year": 2010
@@ -4903,7 +4900,7 @@
       {
         "id": "W2804765831",
         "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 225,
         "year": 2018
@@ -4943,7 +4940,7 @@
       {
         "id": "W2557793660",
         "label": "Secondary metabolites of endophytic Xylaria species with potential applications in medicine and agriculture",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 91,
         "year": 2016
@@ -4959,7 +4956,7 @@
       {
         "id": "W3010680088",
         "label": "Metabolomic-guided discovery of cyclic nonribosomal peptides from Xylaria ellisii sp. nov., a leaf and stem endophyte of Vaccinium angustifolium",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 42,
         "year": 2020
@@ -4975,7 +4972,7 @@
       {
         "id": "W2033320345",
         "label": "Potential role of metabolomics apporoaches in the area of traditional Chinese medicine: As pillars of the bridge between Chinese and Western medicine",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 285,
         "year": 2011
@@ -4991,7 +4988,7 @@
       {
         "id": "W2055447253",
         "label": "Metabolomics: Towards Understanding Traditional Chinese Medicine",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 244,
         "year": 2010
@@ -5095,7 +5092,7 @@
       {
         "id": "W2580484588",
         "label": "pHisphorylation: the emergence of histidine phosphorylation as a reversible regulatory modification",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 177,
         "year": 2017
@@ -5143,7 +5140,7 @@
       {
         "id": "W1994658800",
         "label": "Simultaneous determination of plasma epinephrine and norepinephrine using an integrated strategy of a fully automated protein precipitation technique, reductive ethylation labeling and UPLC\u2013MS/MS",
-        "field": "Chemistry",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 91,
         "year": 2010
@@ -5159,7 +5156,7 @@
       {
         "id": "W1999217268",
         "label": "A Universal Strategy for Development of a Method for Absolute Quantification of Therapeutic Monoclonal Antibodies in Biological Matrices Using Differential Dimethyl Labeling Coupled with Ultra Performance Liquid Chromatography-Tandem Mass Spectrometry",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 64,
         "year": 2009
@@ -5183,7 +5180,7 @@
       {
         "id": "W2891754422",
         "label": "Chemical Derivatization Strategy for Extending the Identification of MHC Class I Immunopeptides",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 33,
         "year": 2018
@@ -5271,7 +5268,7 @@
       {
         "id": "W3209300026",
         "label": "Genome-centric metagenomics reveals insights into the evolution and metabolism of a new free-living group in Rhizobiales",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 11,
         "year": 2021
@@ -5287,7 +5284,7 @@
       {
         "id": "W4281785935",
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 56,
         "year": 2022
@@ -5295,7 +5292,7 @@
       {
         "id": "W3195523593",
         "label": "Fungal Guttation, a Source of Bioactive Compounds, and Its Ecological Role\u2014A Review",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Medicine",
         "type": "citing",
         "citations": 35,
         "year": 2021
@@ -5311,7 +5308,7 @@
       {
         "id": "W2757788011",
         "label": "Prealamethicin F50 and related peptaibols from Trichoderma arundinaceum: validation of their authenticity via in situ chemical analysis",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 33,
         "year": 2017
@@ -5391,7 +5388,7 @@
       {
         "id": "W3087184317",
         "label": "Pathway Engineering of Anthracyclines: Blazing Trails in Natural Product Glycodiversification",
-        "field": "Medicine",
+        "field": "Chemistry",
         "type": "citing",
         "citations": 16,
         "year": 2020
@@ -5431,7 +5428,7 @@
       {
         "id": "W4224314801",
         "label": "Antibiotic Activity Altered by Competitive Interactions Between Two Coral Reef\u2013Associated Bacteria",
-        "field": "Environmental Science",
+        "field": "Medicine",
         "type": "citing",
         "citations": 11,
         "year": 2022
@@ -5439,7 +5436,7 @@
       {
         "id": "W4211011356",
         "label": "Discovery of Bioactive Natural Products from Bacillus Species: Chemistry, Biosynthesis and Biological Activities",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Medicine",
         "type": "citing",
         "citations": 6,
         "year": 2022
@@ -5447,7 +5444,7 @@
       {
         "id": "W4414309246",
         "label": "Metabolomics of Trichoderma spirale by Mass Spectrometry Data Dereplication",
-        "field": "Biochemistry, Genetics and Molecular Biology",
+        "field": "Medicine",
         "type": "citing",
         "citations": 0,
         "year": 2025
@@ -5471,7 +5468,7 @@
       {
         "id": "W7128630417",
         "label": "Qualitative and quantitative analysis of multiple biomarkers in simulated human exhalation using DC-DCGAN and MKT-MTC",
-        "field": "Medicine",
+        "field": "Engineering",
         "type": "citing",
         "citations": 0,
         "year": 2026
@@ -5479,7 +5476,7 @@
       {
         "id": "W4411012216",
         "label": "A Biosynthetic and Taxonomic Atlas of the Global Lichen Holobiont",
-        "field": "Agricultural and Biological Sciences",
+        "field": "Medicine",
         "type": "citing",
         "citations": 3,
         "year": 2025
@@ -5495,7 +5492,7 @@
       {
         "id": "W4416437326",
         "label": "Advancement in rhizospheric microbial diversity analysis: an updated perspective",
-        "field": "Environmental Science",
+        "field": "Agricultural and Biological Sciences",
         "type": "citing",
         "citations": 1,
         "year": 2025
