@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-07T13:10:21.708841+00:00",
+  "generated_at": "2026-10-08T13:16:56.068310+00:00",
   "summary": {
-    "total_citations": 5780,
+    "total_citations": 5781,
     "countries_reached": 78,
-    "citing_institutions": 4149,
+    "citing_institutions": 4150,
     "disciplines_impacted": 23,
     "total_publications": 54
   },
@@ -78,7 +78,7 @@
       "title": "Proteomic and phosphoproteomic comparison of human ES and iPS cells",
       "journal": "Nature Methods",
       "year": 2011,
-      "cited_by_count": 266,
+      "cited_by_count": 267,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -719,7 +719,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2531,
+      "citations": 2532,
       "institutions": 690
     },
     {
@@ -775,7 +775,7 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 195,
+      "citations": 196,
       "institutions": 288
     },
     {
@@ -823,8 +823,8 @@
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 124,
-      "institutions": 75
+      "citations": 125,
+      "institutions": 76
     },
     {
       "country": "South Korea",
@@ -951,7 +951,7 @@
       "country_code": "PT",
       "lat": 39.4,
       "lon": -8.2,
-      "citations": 37,
+      "citations": 38,
       "institutions": 25
     },
     {
@@ -1502,6 +1502,13 @@
       "citations": 52
     },
     {
+      "name": "Universidade de S\u00e3o Paulo",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
+      "citations": 51
+    },
+    {
       "name": "Pacific Northwest National Laboratory",
       "lat": 46.28569,
       "lon": -119.28446,
@@ -1513,13 +1520,6 @@
       "lat": 52.2,
       "lon": 0.11667,
       "country_code": "GB",
-      "citations": 50
-    },
-    {
-      "name": "Universidade de S\u00e3o Paulo",
-      "lat": -23.5475,
-      "lon": -46.63611,
-      "country_code": "BR",
       "citations": 50
     },
     {
@@ -1621,17 +1621,17 @@
       "citations": 42
     },
     {
-      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 41
-    },
-    {
       "name": "Lawrence Berkeley National Laboratory",
       "lat": 37.87158966064453,
       "lon": -122.27275085449219,
       "country_code": "US",
+      "citations": 42
+    },
+    {
+      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 41
     },
     {
@@ -1873,6 +1873,13 @@
       "citations": 33
     },
     {
+      "name": "Joint Genome Institute",
+      "lat": 37.87158966064453,
+      "lon": -122.27275085449219,
+      "country_code": "US",
+      "citations": 33
+    },
+    {
       "name": "University of Minnesota",
       "lat": 44.97997,
       "lon": -93.26384,
@@ -1905,13 +1912,6 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 32
-    },
-    {
-      "name": "Joint Genome Institute",
-      "lat": 37.87158966064453,
-      "lon": -122.27275085449219,
-      "country_code": "US",
       "citations": 32
     },
     {
@@ -2394,7 +2394,7 @@
   "disciplines": [
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 1852,
+      "count": 1853,
       "color": "#6E4B2A"
     },
     {
@@ -2518,7 +2518,7 @@
         "label": "Proteomic and phosphoproteomic comparison of human ES and iPS cells",
         "field": "Chemistry",
         "type": "core",
-        "citations": 266,
+        "citations": 267,
         "year": 2011
       },
       {
@@ -2974,7 +2974,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1533,
+        "citations": 1535,
         "year": 2013
       },
       {
@@ -2990,7 +2990,7 @@
         "label": "Comparative Proteomic Analysis of Eleven Common Cell Lines Reveals Ubiquitous but Varying Expression of Most Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 856,
+        "citations": 857,
         "year": 2012
       },
       {
@@ -3006,7 +3006,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 720,
+        "citations": 721,
         "year": 2012
       },
       {
@@ -3038,7 +3038,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 1208,
+        "citations": 1213,
         "year": 2024
       },
       {
@@ -3054,7 +3054,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 210,
+        "citations": 211,
         "year": 2024
       },
       {
@@ -3094,7 +3094,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2025
       },
       {
@@ -3102,7 +3102,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 424,
+        "citations": 385,
         "year": 2022
       },
       {
@@ -3154,19 +3154,19 @@
         "year": 2024
       },
       {
-        "id": "W4382994367",
-        "label": "Integrated multi-omics analyses of microbial communities: a review of the current state and future directions",
+        "id": "W4308792295",
+        "label": "Benchmarking second and third-generation sequencing platforms for microbial metagenomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 124,
-        "year": 2023
+        "citations": 126,
+        "year": 2022
       },
       {
         "id": "W1973268693",
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4376,
+        "citations": 4378,
         "year": 2012
       },
       {
@@ -3174,7 +3174,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 3514,
+        "citations": 3518,
         "year": 2016
       },
       {
@@ -3182,7 +3182,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1383,
+        "citations": 1385,
         "year": 2012
       },
       {
@@ -3214,7 +3214,7 @@
         "label": "Dissecting DNA damage response pathways by analysing protein localization and abundance changes during DNA replication stress",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 540,
+        "citations": 541,
         "year": 2012
       },
       {
@@ -3230,7 +3230,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1431,
+        "citations": 1432,
         "year": 2013
       },
       {
@@ -3238,7 +3238,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1338,
+        "citations": 1341,
         "year": 2014
       },
       {
@@ -3246,7 +3246,7 @@
         "label": "Next-generation proteomics: towards an integrative view of proteome dynamics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 812,
+        "citations": 815,
         "year": 2012
       },
       {
@@ -3286,7 +3286,7 @@
         "label": "MultiNotch MS3 Enables Accurate, Sensitive, and Multiplexed Detection of Differential Expression across Cancer Cell Line Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1404,
+        "citations": 1405,
         "year": 2014
       },
       {
@@ -3294,7 +3294,7 @@
         "label": "Quantitative mass spectrometry in proteomics: critical review update from 2007 to the present",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 817,
+        "citations": 819,
         "year": 2012
       },
       {
@@ -3326,7 +3326,7 @@
         "label": "Integrated Analysis of Transcriptomic and Proteomic Data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 471,
+        "citations": 472,
         "year": 2013
       },
       {
@@ -3334,7 +3334,7 @@
         "label": "System-Wide Temporal Characterization of the Proteome and Phosphoproteome of Human Embryonic Stem Cell Differentiation",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 462,
+        "citations": 463,
         "year": 2011
       },
       {
@@ -3342,7 +3342,7 @@
         "label": "Toward a Comprehensive Characterization of a Human Cancer Cell Phosphoproteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 454,
+        "citations": 455,
         "year": 2012
       },
       {
@@ -3366,7 +3366,7 @@
         "label": "Robust phosphoproteome enrichment using monodisperse microsphere\u2013based immobilized titanium (IV) ion affinity chromatography",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 391,
+        "citations": 392,
         "year": 2013
       },
       {
@@ -3446,7 +3446,7 @@
         "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
         "field": "Medicine",
         "type": "citing",
-        "citations": 620,
+        "citations": 621,
         "year": 2021
       },
       {
@@ -3462,7 +3462,7 @@
         "label": "Serine ADP-Ribosylation Depends on HPF1",
         "field": "Medicine",
         "type": "citing",
-        "citations": 375,
+        "citations": 376,
         "year": 2017
       },
       {
@@ -3526,7 +3526,7 @@
         "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 927,
+        "citations": 929,
         "year": 2013
       },
       {
@@ -3558,7 +3558,7 @@
         "label": "Deep Sequencing of the Medicago truncatula Root Transcriptome Reveals a Massive and Early Interaction between Nodulation Factor and Ethylene Signals",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 166,
+        "citations": 167,
         "year": 2015
       },
       {
@@ -3606,7 +3606,7 @@
         "label": "Versatile and Dynamic Symbioses Between Insects and Burkholderia Bacteria",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 104,
+        "citations": 105,
         "year": 2019
       },
       {
@@ -3638,7 +3638,7 @@
         "label": "Mass spectrometry for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 747,
+        "citations": 748,
         "year": 2008
       },
       {
@@ -3646,7 +3646,7 @@
         "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 679,
+        "citations": 680,
         "year": 2011
       },
       {
@@ -3662,7 +3662,7 @@
         "label": "Top Down proteomics: Facts and perspectives",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 523,
+        "citations": 524,
         "year": 2014
       },
       {
@@ -3678,7 +3678,7 @@
         "label": "High-Resolution Mass Spectrometers",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 397,
+        "citations": 398,
         "year": 2008
       },
       {
@@ -3766,7 +3766,7 @@
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1062,
+        "citations": 1063,
         "year": 2016
       },
       {
@@ -3846,7 +3846,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 155,
+        "citations": 156,
         "year": 2021
       },
       {
@@ -3870,7 +3870,7 @@
         "label": "Artificial intelligence in COVID-19 drug repurposing",
         "field": "Computer Science",
         "type": "citing",
-        "citations": 664,
+        "citations": 665,
         "year": 2020
       },
       {
@@ -3958,7 +3958,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 91,
+        "citations": 92,
         "year": 2023
       },
       {
@@ -3966,7 +3966,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2024
       },
       {
@@ -4102,7 +4102,7 @@
         "label": "Isotopic labeling of terminal amines in complex samples identifies protein N-termini and protease cleavage products",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 574,
+        "citations": 575,
         "year": 2010
       },
       {
@@ -4178,20 +4178,20 @@
         "year": 2010
       },
       {
+        "id": "W2315534050",
+        "label": "Ion Coalescence of Neutron Encoded TMT 10-Plex Reporter Ions",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 285,
+        "year": 2014
+      },
+      {
         "id": "W1934555946",
         "label": "Phosphoproteomics in the Age of Rapid and Deep Proteome Profiling",
         "field": "Chemistry",
         "type": "citing",
         "citations": 284,
         "year": 2015
-      },
-      {
-        "id": "W2315534050",
-        "label": "Ion Coalescence of Neutron Encoded TMT 10-Plex Reporter Ions",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 284,
-        "year": 2014
       },
       {
         "id": "W1830980872",
@@ -4206,7 +4206,7 @@
         "label": "High-Resolution Enabled 12-Plex DiLeu Isobaric Tags for Quantitative Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 151,
+        "citations": 152,
         "year": 2014
       },
       {
@@ -4222,7 +4222,7 @@
         "label": "Biomarker discovery in mass spectrometry\u2010based urinary proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 145,
+        "citations": 146,
         "year": 2015
       },
       {
@@ -4254,7 +4254,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 132,
+        "citations": 133,
         "year": 2021
       },
       {
@@ -4294,7 +4294,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2756,
+        "citations": 2758,
         "year": 2017
       },
       {
@@ -4310,7 +4310,7 @@
         "label": "Comprehensive Overview of Bottom-Up Proteomics Using Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 194,
+        "citations": 195,
         "year": 2024
       },
       {
@@ -4350,7 +4350,7 @@
         "label": "Large-Scale Targeted Proteomics Using Internal Standard Triggered-Parallel Reaction Monitoring (IS-PRM)*",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 226,
+        "citations": 227,
         "year": 2015
       },
       {
@@ -4574,7 +4574,7 @@
         "label": "A lipidome landscape of aging in mice",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 61,
+        "citations": 62,
         "year": 2024
       },
       {
@@ -4694,7 +4694,7 @@
         "label": "Structural Analysis of Intact Monoclonal Antibodies by Electron Transfer Dissociation Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 142,
+        "citations": 143,
         "year": 2011
       },
       {
@@ -4718,7 +4718,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 5046,
+        "citations": 5048,
         "year": 2017
       },
       {
@@ -4822,7 +4822,7 @@
         "label": "Peptide Radicals and Cation Radicals in the Gas Phase",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 212,
+        "citations": 213,
         "year": 2013
       },
       {
@@ -4926,7 +4926,7 @@
         "label": "Microbial interactions trigger the production of antibiotics",
         "field": "Medicine",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2018
       },
       {
@@ -5030,7 +5030,7 @@
         "label": "Performance evaluation of a high-field orbitrap mass analyzer",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 190,
+        "citations": 191,
         "year": 2009
       },
       {
@@ -5246,7 +5246,7 @@
         "label": "Bacterial community structure and metabolic potential in microbialite\u2010forming mats from South Australian saline lakes",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 13,
+        "citations": 14,
         "year": 2022
       },
       {
@@ -5342,7 +5342,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Medicine",
         "type": "citing",
-        "citations": 5470,
+        "citations": 5478,
         "year": 2021
       },
       {
@@ -5656,7 +5656,7 @@
       },
       {
         "source": "W4225258284",
-        "target": "W4382994367",
+        "target": "W4308792295",
         "strength": 0.5
       },
       {
@@ -6236,12 +6236,12 @@
       },
       {
         "source": "W2989537165",
-        "target": "W2989537165",
+        "target": "W4361297378",
         "strength": 0.5
       },
       {
         "source": "W2989537165",
-        "target": "W4361297378",
+        "target": "W2989537165",
         "strength": 0.5
       },
       {
@@ -6426,12 +6426,12 @@
       },
       {
         "source": "W2143749662",
-        "target": "W1934555946",
+        "target": "W2315534050",
         "strength": 0.5
       },
       {
         "source": "W2143749662",
-        "target": "W2315534050",
+        "target": "W1934555946",
         "strength": 0.5
       },
       {
