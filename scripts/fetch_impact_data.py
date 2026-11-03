@@ -99,8 +99,11 @@ COUNTRY_NAMES = {
 
 def api_get(path, params=None):
     """Make a GET request to OpenAlex API with rate limiting."""
-    if params is None:
-        params = {}
+    params = dict(params or {})
+    # OpenAlex rejects keyless requests from shared CI IPs; unset locally is fine.
+    api_key = os.environ.get("OPENALEX_API_KEY")
+    if api_key:
+        params["api_key"] = api_key
     url = f"{BASE_URL}{path}"
     if params:
         url += "?" + urllib.parse.urlencode(params)

@@ -21,6 +21,8 @@ jobs:
 
       - name: Fetch latest citation data from OpenAlex
         run: pixi run fetch-impact
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
 
       - name: Check for changes
         id: diff
