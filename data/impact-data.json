@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-05T14:32:24.986522+00:00",
+  "generated_at": "2026-11-06T14:08:24.403314+00:00",
   "summary": {
-    "total_citations": 5385,
+    "total_citations": 5388,
     "countries_reached": 78,
-    "citing_institutions": 4255,
+    "citing_institutions": 4258,
     "disciplines_impacted": 25,
     "total_publications": 54
   },
@@ -26,8 +26,8 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 504,
-      "field": "Computer Science",
+      "cited_by_count": 507,
+      "field": "Pharmacology, Toxicology and Pharmaceutics",
       "authors": [
         "Evan Roy Rees"
       ],
@@ -157,7 +157,7 @@
       "journal": "Bioinformatics",
       "year": 2022,
       "cited_by_count": 135,
-      "field": "Computer Science",
+      "field": "Mathematics",
       "authors": [
         "Craig Wenger"
       ],
@@ -587,7 +587,7 @@
       "journal": "Marine Drugs",
       "year": 2017,
       "cited_by_count": 22,
-      "field": "Medicine",
+      "field": "Immunology and Microbiology",
       "authors": [
         "Ian J. Miller"
       ],
@@ -600,7 +600,7 @@
       "journal": "Phytochemistry",
       "year": 2017,
       "cited_by_count": 17,
-      "field": "Medicine",
+      "field": "Immunology and Microbiology",
       "authors": [
         "Evan Roy Rees"
       ],
@@ -955,6 +955,14 @@
       "institutions": 17
     },
     {
+      "country": "Iran",
+      "country_code": "IR",
+      "lat": 32.4,
+      "lon": 53.7,
+      "citations": 34,
+      "institutions": 42
+    },
+    {
       "country": "Czech Republic",
       "country_code": "CZ",
       "lat": 49.8,
@@ -963,12 +971,12 @@
       "institutions": 24
     },
     {
-      "country": "Iran",
-      "country_code": "IR",
-      "lat": 32.4,
-      "lon": 53.7,
-      "citations": 33,
-      "institutions": 41
+      "country": "Turkey",
+      "country_code": "TR",
+      "lat": 39.0,
+      "lon": 35.2,
+      "citations": 32,
+      "institutions": 35
     },
     {
       "country": "Egypt",
@@ -977,14 +985,6 @@
       "lon": 30.8,
       "citations": 31,
       "institutions": 30
-    },
-    {
-      "country": "Turkey",
-      "country_code": "TR",
-      "lat": 39.0,
-      "lon": 35.2,
-      "citations": 31,
-      "institutions": 34
     },
     {
       "country": "Greece",
@@ -1079,8 +1079,8 @@
       "country_code": "ID",
       "lat": -0.8,
       "lon": 113.9,
-      "citations": 12,
-      "institutions": 13
+      "citations": 13,
+      "institutions": 14
     },
     {
       "country": "Slovenia",
@@ -2394,80 +2394,84 @@
   "disciplines": [
     {
       "name": "Chemistry",
-      "count": 1772,
+      "count": 1774,
       "color": "#6E4B2A"
     },
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 1682,
+      "count": 1679,
       "color": "#5C6E4A"
     },
     {
       "name": "Medicine",
-      "count": 894,
+      "count": 851,
       "color": "#B07C39"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 308,
+      "count": 311,
       "color": "#9A553B"
     },
     {
       "name": "Computer Science",
-      "count": 274,
+      "count": 246,
       "color": "#7A6A3E"
     },
     {
-      "name": "Environmental Science",
-      "count": 98,
+      "name": "Immunology and Microbiology",
+      "count": 113,
       "color": "#47603F"
     },
     {
-      "name": "Immunology and Microbiology",
-      "count": 71,
+      "name": "Environmental Science",
+      "count": 95,
       "color": "#8E9A6E"
     },
     {
       "name": "Engineering",
-      "count": 55,
+      "count": 54,
       "color": "#C39A5C"
     },
     {
       "name": "Materials Science",
-      "count": 43,
+      "count": 42,
       "color": "#5A4632"
+    },
+    {
+      "name": "Pharmacology, Toxicology and Pharmaceutics",
+      "count": 40,
+      "color": "#A06A3C"
     },
     {
       "name": "Neuroscience",
       "count": 26,
-      "color": "#A06A3C"
+      "color": "#6B7357"
     },
     {
       "name": "Earth and Planetary Sciences",
       "count": 17,
-      "color": "#6B7357"
-    },
-    {
-      "name": "Nursing",
-      "count": 15,
       "color": "#7E4A2E"
     },
     {
+      "name": "Nursing",
+      "count": 16,
+      "color": "#8A6D3B"
+    },
+    {
       "name": "Other Disciplines",
-      "count": 54,
+      "count": 48,
       "includes": [
-        "Pharmacology, Toxicology and Pharmaceutics (9)",
         "Decision Sciences (9)",
+        "Arts and Humanities (6)",
         "Health Professions (5)",
+        "Mathematics (5)",
         "Social Sciences (5)",
-        "Arts and Humanities (5)",
-        "Mathematics (4)",
         "Physics and Astronomy (4)",
         "Dentistry (4)",
         "Veterinary (3)",
         "Chemical Engineering (2)",
         "Business, Management and Accounting (2)",
-        "Energy (1)",
+        "Energy (2)",
         "Economics, Econometrics and Finance (1)"
       ],
       "color": "#94A3B8"
@@ -2486,9 +2490,9 @@
       {
         "id": "W4386607677",
         "label": "Artificial intelligence for natural product drug discovery",
-        "field": "Computer Science",
+        "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "core",
-        "citations": 504,
+        "citations": 507,
         "year": 2023
       },
       {
@@ -2566,7 +2570,7 @@
       {
         "id": "W4210458810",
         "label": "Plotgardener: cultivating precise multi-panel figures in R",
-        "field": "Computer Science",
+        "field": "Mathematics",
         "type": "core",
         "citations": 135,
         "year": 2022
@@ -2830,7 +2834,7 @@
       {
         "id": "W2621511283",
         "label": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "core",
         "citations": 22,
         "year": 2017
@@ -2838,7 +2842,7 @@
       {
         "id": "W2741464576",
         "label": "In situ mass spectrometry monitoring of fungal cultures led to the identification of four peptaibols with a rare threonine residue",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "core",
         "citations": 17,
         "year": 2017
@@ -2912,7 +2916,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 913,
+        "citations": 914,
         "year": 2021
       },
       {
@@ -2920,7 +2924,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 347,
+        "citations": 348,
         "year": 2022
       },
       {
@@ -2974,17 +2978,17 @@
       {
         "id": "W4392349824",
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
-        "field": "Immunology and Microbiology",
+        "field": "Medicine",
         "type": "citing",
-        "citations": 1379,
+        "citations": 1381,
         "year": 2024
       },
       {
         "id": "W4406633314",
         "label": "Artificial intelligence in drug development",
-        "field": "Computer Science",
+        "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 537,
+        "citations": 538,
         "year": 2025
       },
       {
@@ -3048,7 +3052,7 @@
         "label": "MS-GF+ makes progress towards a universal database search tool for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1064,
+        "citations": 1065,
         "year": 2014
       },
       {
@@ -3088,7 +3092,7 @@
         "label": "An Optimized Shotgun Strategy for the Rapid Generation of Comprehensive Human Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 467,
+        "citations": 468,
         "year": 2017
       },
       {
@@ -3104,13 +3108,13 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 396,
+        "citations": 398,
         "year": 2022
       },
       {
         "id": "W4283262943",
         "label": "Biosynthetic potential of the global ocean microbiome",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 383,
         "year": 2022
@@ -3168,7 +3172,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4179,
+        "citations": 4181,
         "year": 2012
       },
       {
@@ -3176,7 +3180,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 3201,
+        "citations": 3203,
         "year": 2016
       },
       {
@@ -3184,7 +3188,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1271,
+        "citations": 1272,
         "year": 2012
       },
       {
@@ -3192,7 +3196,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 736,
+        "citations": 737,
         "year": 2015
       },
       {
@@ -3224,7 +3228,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1424,
+        "citations": 1425,
         "year": 2012
       },
       {
@@ -3232,7 +3236,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1294,
+        "citations": 1295,
         "year": 2014
       },
       {
@@ -3438,7 +3442,7 @@
       {
         "id": "W1866421377",
         "label": "A Single Kinase Generates the Majority of the Secreted Phosphoproteome",
-        "field": "Medicine",
+        "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
         "citations": 339,
         "year": 2015
@@ -3536,7 +3540,7 @@
         "label": "MYC reshapes CTCF-mediated chromatin architecture in prostate cancer",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 43,
+        "citations": 44,
         "year": 2023
       },
       {
@@ -3680,7 +3684,7 @@
         "label": "Origin and function of beneficial bacterial symbioses in insects",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2025
       },
       {
@@ -3760,7 +3764,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 85,
+        "citations": 86,
         "year": 2023
       },
       {
@@ -3822,9 +3826,9 @@
       {
         "id": "W4296162381",
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
-        "field": "Computer Science",
+        "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 139,
+        "citations": 140,
         "year": 2022
       },
       {
@@ -3872,7 +3876,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 90,
+        "citations": 91,
         "year": 2024
       },
       {
@@ -3912,7 +3916,7 @@
         "label": "Programmable RNA recognition and cleavage by CRISPR/Cas9",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 630,
+        "citations": 631,
         "year": 2014
       },
       {
@@ -3998,7 +4002,7 @@
       {
         "id": "W4281391087",
         "label": "Ancient plant-like terpene biosynthesis in corals",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 105,
         "year": 2022
@@ -4024,7 +4028,7 @@
         "label": "The Role of Post-Translational Modifications in the Phase Transitions of Intrinsically Disordered Proteins",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 213,
+        "citations": 214,
         "year": 2019
       },
       {
@@ -4136,7 +4140,7 @@
         "label": "A mass-tolerant database search identifies a large proportion of unassigned spectra in shotgun proteomics as modified peptides",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 419,
+        "citations": 420,
         "year": 2015
       },
       {
@@ -4304,7 +4308,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 172,
+        "citations": 173,
         "year": 2022
       },
       {
@@ -4328,7 +4332,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 63,
+        "citations": 64,
         "year": 2023
       },
       {
@@ -4360,7 +4364,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2346,
+        "citations": 2349,
         "year": 2017
       },
       {
@@ -4568,7 +4572,7 @@
         "label": "Akkermansia muciniphila alleviates high\u2010fat\u2010diet \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 136,
+        "citations": 138,
         "year": 2023
       },
       {
@@ -4672,7 +4676,7 @@
         "label": "Genomic reconstruction of short-chain fatty acid production by the human gut microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 116,
+        "citations": 117,
         "year": 2022
       },
       {
@@ -4862,9 +4866,9 @@
       {
         "id": "W4210666862",
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 207,
+        "citations": 208,
         "year": 2022
       },
       {
@@ -4878,7 +4882,7 @@
       {
         "id": "W4210938022",
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 125,
         "year": 2022
@@ -5032,7 +5036,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4384,
+        "citations": 4387,
         "year": 2017
       },
       {
@@ -5072,7 +5076,7 @@
         "label": "Synthesizing Systems Biology Knowledge from Omics Using Genome\u2010Scale Models",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 53,
+        "citations": 54,
         "year": 2020
       },
       {
@@ -5318,7 +5322,7 @@
       {
         "id": "W2768056310",
         "label": "Coculture of Marine Invertebrate-Associated Bacteria and Interdisciplinary Technologies Enable Biosynthesis and Discovery of a New Antibiotic, Keyicin",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 124,
         "year": 2017
@@ -5366,7 +5370,7 @@
       {
         "id": "W2757788011",
         "label": "Prealamethicin F50 and related peptaibols from Trichoderma arundinaceum: validation of their authenticity via in situ chemical analysis",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 32,
         "year": 2017
@@ -5374,7 +5378,7 @@
       {
         "id": "W2894151357",
         "label": "Media studies to enhance the production of verticillins facilitated by in situ chemical analysis",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
         "citations": 25,
         "year": 2018
@@ -5398,9 +5402,9 @@
       {
         "id": "W3119952098",
         "label": "Natural products in drug discovery: advances and opportunities",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 5741,
+        "citations": 5749,
         "year": 2021
       },
       {
@@ -5430,9 +5434,9 @@
       {
         "id": "W3214451869",
         "label": "Synthetic Biology Advanced Natural Product Discovery",
-        "field": "Medicine",
+        "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 23,
+        "citations": 24,
         "year": 2021
       },
       {
@@ -5520,7 +5524,7 @@
         "label": "Biological control of Fusarium wilt caused by Fusarium equiseti in Vicia faba with broad spectrum antifungal plant-associated Bacillus spp.",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 44,
+        "citations": 45,
         "year": 2021
       },
       {
@@ -7552,7 +7556,9 @@
     "Environmental Science": "#47603F",
     "Immunology and Microbiology": "#8E9A6E",
     "Materials Science": "#C39A5C",
-    "Medicine": "#5A4632",
-    "Veterinary": "#A06A3C"
+    "Mathematics": "#5A4632",
+    "Medicine": "#A06A3C",
+    "Pharmacology, Toxicology and Pharmaceutics": "#6B7357",
+    "Veterinary": "#7E4A2E"
   }
 }
