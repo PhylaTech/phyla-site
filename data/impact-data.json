@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-09T15:59:27.804538+00:00",
+  "generated_at": "2026-11-10T14:45:09.049767+00:00",
   "summary": {
     "total_citations": 5509,
     "countries_reached": 78,
-    "citing_institutions": 4289,
+    "citing_institutions": 4302,
     "disciplines_impacted": 25,
     "total_publications": 54
   },
@@ -719,7 +719,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2304,
+      "citations": 2307,
       "institutions": 739
     },
     {
@@ -727,8 +727,8 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 866,
-      "institutions": 709
+      "citations": 869,
+      "institutions": 712
     },
     {
       "country": "Germany",
@@ -744,14 +744,14 @@
       "lat": 55.4,
       "lon": -3.4,
       "citations": 395,
-      "institutions": 205
+      "institutions": 204
     },
     {
       "country": "Canada",
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 246,
+      "citations": 247,
       "institutions": 123
     },
     {
@@ -759,8 +759,8 @@
       "country_code": "IN",
       "lat": 20.6,
       "lon": 78.9,
-      "citations": 219,
-      "institutions": 212
+      "citations": 220,
+      "institutions": 213
     },
     {
       "country": "France",
@@ -775,7 +775,7 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 202,
+      "citations": 203,
       "institutions": 61
     },
     {
@@ -823,8 +823,8 @@
       "country_code": "BR",
       "lat": -14.2,
       "lon": -51.9,
-      "citations": 121,
-      "institutions": 85
+      "citations": 123,
+      "institutions": 87
     },
     {
       "country": "South Korea",
@@ -951,7 +951,7 @@
       "country_code": "FI",
       "lat": 61.9,
       "lon": 25.7,
-      "citations": 36,
+      "citations": 37,
       "institutions": 17
     },
     {
@@ -1011,20 +1011,20 @@
       "institutions": 13
     },
     {
+      "country": "Pakistan",
+      "country_code": "PK",
+      "lat": 30.4,
+      "lon": 69.3,
+      "citations": 24,
+      "institutions": 32
+    },
+    {
       "country": "Malaysia",
       "country_code": "MY",
       "lat": 4.2,
       "lon": 101.9,
       "citations": 23,
       "institutions": 18
-    },
-    {
-      "country": "Pakistan",
-      "country_code": "PK",
-      "lat": 30.4,
-      "lon": 69.3,
-      "citations": 23,
-      "institutions": 32
     },
     {
       "country": "Thailand",
@@ -1071,8 +1071,8 @@
       "country_code": "CL",
       "lat": -35.7,
       "lon": -71.5,
-      "citations": 15,
-      "institutions": 11
+      "citations": 16,
+      "institutions": 19
     },
     {
       "country": "Indonesia",
@@ -1352,7 +1352,7 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 155
+      "citations": 156
     },
     {
       "name": "Harvard University",
@@ -1401,14 +1401,14 @@
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
-      "citations": 70
+      "citations": 71
     },
     {
       "name": "University of Washington",
       "lat": 47.60621,
       "lon": -122.33207,
       "country_code": "US",
-      "citations": 67
+      "citations": 68
     },
     {
       "name": "Stanford University",
@@ -1488,6 +1488,13 @@
       "citations": 47
     },
     {
+      "name": "Pacific Northwest National Laboratory",
+      "lat": 46.28569,
+      "lon": -119.28446,
+      "country_code": "US",
+      "citations": 47
+    },
+    {
       "name": "Netherlands Proteomics Centre",
       "lat": 52.09083,
       "lon": 5.12222,
@@ -1509,11 +1516,11 @@
       "citations": 46
     },
     {
-      "name": "Pacific Northwest National Laboratory",
-      "lat": 46.28569,
-      "lon": -119.28446,
+      "name": "Broad Institute",
+      "lat": 42.3751,
+      "lon": -71.10561,
       "country_code": "US",
-      "citations": 46
+      "citations": 44
     },
     {
       "name": "Technical University of Munich",
@@ -1521,13 +1528,6 @@
       "lon": 11.57549,
       "country_code": "DE",
       "citations": 44
-    },
-    {
-      "name": "Broad Institute",
-      "lat": 42.3751,
-      "lon": -71.10561,
-      "country_code": "US",
-      "citations": 43
     },
     {
       "name": "Johns Hopkins University",
@@ -1544,13 +1544,6 @@
       "citations": 42
     },
     {
-      "name": "University of Cambridge",
-      "lat": 52.2,
-      "lon": 0.11667,
-      "country_code": "GB",
-      "citations": 41
-    },
-    {
       "name": "Massachusetts Institute of Technology",
       "lat": 42.3751,
       "lon": -71.10561,
@@ -1558,10 +1551,24 @@
       "citations": 41
     },
     {
+      "name": "University of Cambridge",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
+      "citations": 40
+    },
+    {
       "name": "University of Wisconsin System",
       "lat": 43.07305,
       "lon": -89.40123,
       "country_code": "US",
+      "citations": 40
+    },
+    {
+      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
       "citations": 40
     },
     {
@@ -1579,13 +1586,6 @@
       "citations": 40
     },
     {
-      "name": "University of Oxford",
-      "lat": 51.75222,
-      "lon": -1.25596,
-      "country_code": "GB",
-      "citations": 39
-    },
-    {
       "name": "The University of Melbourne",
       "lat": -37.814,
       "lon": 144.96332,
@@ -1593,10 +1593,10 @@
       "citations": 39
     },
     {
-      "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
+      "name": "University of British Columbia",
+      "lat": 49.24966,
+      "lon": -123.11934,
+      "country_code": "CA",
       "citations": 39
     },
     {
@@ -1621,10 +1621,10 @@
       "citations": 38
     },
     {
-      "name": "University of British Columbia",
-      "lat": 49.24966,
-      "lon": -123.11934,
-      "country_code": "CA",
+      "name": "University of Oxford",
+      "lat": 51.75222,
+      "lon": -1.25596,
+      "country_code": "GB",
       "citations": 38
     },
     {
@@ -1873,6 +1873,13 @@
       "citations": 30
     },
     {
+      "name": "Peking University",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 30
+    },
+    {
       "name": "Chinese Academy of Agricultural Sciences",
       "lat": 39.9075,
       "lon": 116.39723,
@@ -1891,13 +1898,6 @@
       "lat": 47.36667,
       "lon": 8.55,
       "country_code": "CH",
-      "citations": 29
-    },
-    {
-      "name": "Peking University",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
       "citations": 29
     },
     {
@@ -2076,13 +2076,6 @@
       "citations": 24
     },
     {
-      "name": "University of Edinburgh",
-      "lat": 55.95206,
-      "lon": -3.19648,
-      "country_code": "GB",
-      "citations": 23
-    },
-    {
       "name": "Baylor College of Medicine",
       "lat": 29.76328,
       "lon": -95.36327,
@@ -2129,6 +2122,20 @@
       "lat": 51.50853,
       "lon": -0.12574,
       "country_code": "GB",
+      "citations": 22
+    },
+    {
+      "name": "University of Edinburgh",
+      "lat": 55.95206,
+      "lon": -3.19648,
+      "country_code": "GB",
+      "citations": 22
+    },
+    {
+      "name": "University of Helsinki",
+      "lat": 60.16952,
+      "lon": 24.93545,
+      "country_code": "FI",
       "citations": 22
     },
     {
@@ -2181,10 +2188,10 @@
       "citations": 21
     },
     {
-      "name": "University of Helsinki",
-      "lat": 60.16952,
-      "lon": 24.93545,
-      "country_code": "FI",
+      "name": "University of California, Santa Barbara",
+      "lat": 34.42083,
+      "lon": -119.69819,
+      "country_code": "US",
       "citations": 21
     },
     {
@@ -2265,13 +2272,6 @@
       "citations": 20
     },
     {
-      "name": "University of California, Santa Barbara",
-      "lat": 34.42083,
-      "lon": -119.69819,
-      "country_code": "US",
-      "citations": 20
-    },
-    {
       "name": "University of California, Davis",
       "lat": 38.54491,
       "lon": -121.74052,
@@ -2297,6 +2297,13 @@
       "lat": 53.41058,
       "lon": -2.97794,
       "country_code": "GB",
+      "citations": 19
+    },
+    {
+      "name": "Memorial Sloan Kettering Cancer Center",
+      "lat": 40.71427,
+      "lon": -74.00597,
+      "country_code": "US",
       "citations": 19
     },
     {
@@ -2328,17 +2335,17 @@
       "citations": 19
     },
     {
+      "name": "Massachusetts General Hospital",
+      "lat": 42.35843,
+      "lon": -71.05977,
+      "country_code": "US",
+      "citations": 18
+    },
+    {
       "name": "University of Birmingham",
       "lat": 52.48142,
       "lon": -1.89983,
       "country_code": "GB",
-      "citations": 18
-    },
-    {
-      "name": "Memorial Sloan Kettering Cancer Center",
-      "lat": 40.71427,
-      "lon": -74.00597,
-      "country_code": "US",
       "citations": 18
     },
     {
@@ -2382,29 +2389,22 @@
       "lon": -73.58781,
       "country_code": "CA",
       "citations": 18
-    },
-    {
-      "name": "Kyoto University",
-      "lat": 35.02107,
-      "lon": 135.75385,
-      "country_code": "JP",
-      "citations": 18
     }
   ],
   "disciplines": [
     {
       "name": "Chemistry",
-      "count": 1801,
+      "count": 1802,
       "color": "#6E4B2A"
     },
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 1648,
+      "count": 1651,
       "color": "#5C6E4A"
     },
     {
       "name": "Medicine",
-      "count": 637,
+      "count": 638,
       "color": "#B07C39"
     },
     {
@@ -2414,12 +2414,12 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 346,
+      "count": 347,
       "color": "#7A6A3E"
     },
     {
       "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 277,
+      "count": 280,
       "color": "#47603F"
     },
     {
@@ -2444,7 +2444,7 @@
     },
     {
       "name": "Computer Science",
-      "count": 38,
+      "count": 39,
       "color": "#6B7357"
     },
     {
@@ -3016,7 +3016,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 136,
+        "citations": 138,
         "year": 2024
       },
       {
@@ -3120,7 +3120,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Medicine",
         "type": "citing",
-        "citations": 388,
+        "citations": 396,
         "year": 2023
       },
       {
@@ -3528,7 +3528,7 @@
         "label": "K27M in canonical and noncanonical H3 variants occurs in distinct oligodendroglial cell lineages in brain midline gliomas",
         "field": "Medicine",
         "type": "citing",
-        "citations": 149,
+        "citations": 150,
         "year": 2022
       },
       {
@@ -3616,7 +3616,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 117,
+        "citations": 115,
         "year": 2023
       },
       {
@@ -3740,25 +3740,25 @@
         "year": 2023
       },
       {
+        "id": "W4387930856",
+        "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn 2+ trafficking",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 93,
+        "year": 2023
+      },
+      {
         "id": "W4396578574",
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 89,
+        "citations": 92,
         "year": 2024
       },
       {
         "id": "W4386053919",
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 88,
-        "year": 2023
-      },
-      {
-        "id": "W4387930856",
-        "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn 2+ trafficking",
-        "field": "Medicine",
         "type": "citing",
         "citations": 88,
         "year": 2023
@@ -3784,7 +3784,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 120,
+        "citations": 126,
         "year": 2023
       },
       {
@@ -3800,7 +3800,7 @@
         "label": "Urinary Biomarkers and Point-of-Care Urinalysis Devices for Early Diagnosis and Management of Disease: A Review",
         "field": "Engineering",
         "type": "citing",
-        "citations": 100,
+        "citations": 101,
         "year": 2023
       },
       {
@@ -3856,7 +3856,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 544,
+        "citations": 548,
         "year": 2023
       },
       {
@@ -3968,7 +3968,7 @@
         "label": "Oxford Nanopore R10.4 long-read sequencing enables the generation of near-finished bacterial genomes from pure cultures and metagenomes without short-read or reference polishing",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 499,
+        "citations": 514,
         "year": 2022
       },
       {
@@ -4352,7 +4352,7 @@
         "label": "Metabolic analysis as a driver for discovery, diagnosis, and therapy",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 177,
+        "citations": 181,
         "year": 2022
       },
       {
@@ -4376,7 +4376,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 65,
+        "citations": 66,
         "year": 2023
       },
       {
@@ -4384,7 +4384,7 @@
         "label": "Ceramides are fuel gauges on the drive to cardiometabolic disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 61,
+        "citations": 65,
         "year": 2024
       },
       {
@@ -4672,7 +4672,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Neuroscience",
         "type": "citing",
-        "citations": 122,
+        "citations": 123,
         "year": 2024
       },
       {
@@ -4704,7 +4704,7 @@
         "label": "A lipidome landscape of aging in mice",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 61,
+        "citations": 64,
         "year": 2024
       },
       {
@@ -4736,7 +4736,7 @@
         "label": "Genomics-Based Reconstruction and Predictive Profiling of Amino Acid Biosynthesis in the Human Gut Microbiome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 40,
+        "citations": 42,
         "year": 2022
       },
       {
@@ -4744,7 +4744,7 @@
         "label": "Distinct roles for canonical and variant histone H3 lysine-36 in Polycomb silencing",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 24,
+        "citations": 25,
         "year": 2023
       },
       {
@@ -5048,7 +5048,7 @@
         "label": "Coral holobiont cues prime Endozoicomonas for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 136,
+        "citations": 140,
         "year": 2022
       },
       {
@@ -5292,20 +5292,20 @@
         "year": 2023
       },
       {
-        "id": "W4220719728",
-        "label": "Genomic and Functional Variation of the Chlorophyll d-Producing Cyanobacterium Acaryochloris marina",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 15,
-        "year": 2022
-      },
-      {
         "id": "W3093190737",
         "label": "Living phosphatic stromatolites in a low\u2010phosphorus environment: Implications for the use of phosphorus as a proxy for phosphate levels in paleo\u2010systems",
         "field": "Earth and Planetary Sciences",
         "type": "citing",
         "citations": 14,
         "year": 2020
+      },
+      {
+        "id": "W4220719728",
+        "label": "Genomic and Functional Variation of the Chlorophyll d-Producing Cyanobacterium Acaryochloris marina",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 14,
+        "year": 2022
       },
       {
         "id": "W2911831763",
@@ -5408,7 +5408,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 121,
+        "citations": 122,
         "year": 2022
       },
       {
@@ -6163,17 +6163,17 @@
       },
       {
         "source": "W4281483346",
+        "target": "W4387930856",
+        "strength": 0.5
+      },
+      {
+        "source": "W4281483346",
         "target": "W4396578574",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
         "target": "W4386053919",
-        "strength": 0.5
-      },
-      {
-        "source": "W4281483346",
-        "target": "W4387930856",
         "strength": 0.5
       },
       {
@@ -7333,12 +7333,12 @@
       },
       {
         "source": "W3116953854",
-        "target": "W4220719728",
+        "target": "W3093190737",
         "strength": 0.5
       },
       {
         "source": "W3116953854",
-        "target": "W3093190737",
+        "target": "W4220719728",
         "strength": 0.5
       },
       {
