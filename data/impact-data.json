@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-13T14:28:10.999948+00:00",
+  "generated_at": "2026-11-14T13:24:11.243074+00:00",
   "summary": {
-    "total_citations": 5627,
+    "total_citations": 5629,
     "countries_reached": 79,
-    "citing_institutions": 4363,
+    "citing_institutions": 4366,
     "disciplines_impacted": 25,
     "total_publications": 54
   },
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 559,
+      "cited_by_count": 561,
       "field": "Pharmacology, Toxicology and Pharmaceutics",
       "authors": [
         "Evan Roy Rees"
@@ -720,7 +720,7 @@
       "lat": 39.8,
       "lon": -98.5,
       "citations": 2339,
-      "institutions": 744
+      "institutions": 743
     },
     {
       "country": "China",
@@ -775,8 +775,8 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 205,
-      "institutions": 61
+      "citations": 206,
+      "institutions": 62
     },
     {
       "country": "Australia",
@@ -951,8 +951,8 @@
       "country_code": "IE",
       "lat": 53.1,
       "lon": -7.7,
-      "citations": 37,
-      "institutions": 24
+      "citations": 38,
+      "institutions": 25
     },
     {
       "country": "Iran",
@@ -1107,20 +1107,20 @@
       "institutions": 16
     },
     {
+      "country": "Romania",
+      "country_code": "RO",
+      "lat": 45.9,
+      "lon": 24.9,
+      "citations": 10,
+      "institutions": 11
+    },
+    {
       "country": "Bangladesh",
       "country_code": "BD",
       "lat": 23.7,
       "lon": 90.4,
       "citations": 9,
       "institutions": 10
-    },
-    {
-      "country": "Romania",
-      "country_code": "RO",
-      "lat": 45.9,
-      "lon": 24.9,
-      "citations": 9,
-      "institutions": 9
     },
     {
       "country": "Ukraine",
@@ -1895,14 +1895,14 @@
       "citations": 30
     },
     {
-      "name": "Peking University",
+      "name": "Chinese Academy of Agricultural Sciences",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
       "citations": 30
     },
     {
-      "name": "Chinese Academy of Agricultural Sciences",
+      "name": "Peking University",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
@@ -2407,7 +2407,7 @@
     },
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 1696,
+      "count": 1695,
       "color": "#5C6E4A"
     },
     {
@@ -2422,12 +2422,12 @@
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 355,
+      "count": 356,
       "color": "#7A6A3E"
     },
     {
       "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 283,
+      "count": 285,
       "color": "#47603F"
     },
     {
@@ -2447,12 +2447,12 @@
     },
     {
       "name": "Engineering",
-      "count": 44,
+      "count": 45,
       "color": "#A06A3C"
     },
     {
       "name": "Computer Science",
-      "count": 39,
+      "count": 38,
       "color": "#6B7357"
     },
     {
@@ -2504,7 +2504,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "core",
-        "citations": 559,
+        "citations": 561,
         "year": 2023
       },
       {
@@ -2928,7 +2928,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 960,
+        "citations": 961,
         "year": 2021
       },
       {
@@ -2960,7 +2960,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 256,
+        "citations": 257,
         "year": 2021
       },
       {
@@ -2992,7 +2992,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1499,
+        "citations": 1500,
         "year": 2024
       },
       {
@@ -3008,7 +3008,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 233,
+        "citations": 234,
         "year": 2024
       },
       {
@@ -3024,7 +3024,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 151,
+        "citations": 152,
         "year": 2024
       },
       {
@@ -3032,7 +3032,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2024
       },
       {
@@ -3040,7 +3040,7 @@
         "label": "Microbial secondary metabolites: advancements to accelerate discovery towards application",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 130,
+        "citations": 131,
         "year": 2025
       },
       {
@@ -3056,7 +3056,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1561,
+        "citations": 1562,
         "year": 2013
       },
       {
@@ -3080,7 +3080,7 @@
         "label": "Estimating the total number of phosphoproteins and phosphorylation sites in eukaryotic proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 765,
+        "citations": 766,
         "year": 2017
       },
       {
@@ -3088,7 +3088,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 703,
+        "citations": 704,
         "year": 2012
       },
       {
@@ -3136,7 +3136,7 @@
         "label": "Biosynthetic potential of the global ocean microbiome",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 396,
+        "citations": 397,
         "year": 2022
       },
       {
@@ -3160,7 +3160,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 233,
+        "citations": 234,
         "year": 2022
       },
       {
@@ -3168,7 +3168,7 @@
         "label": "Comprehensive taxonomic identification of microbial species in metagenomic data using SingleM and Sandpiper",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 225,
+        "citations": 227,
         "year": 2025
       },
       {
@@ -3184,7 +3184,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4385,
+        "citations": 4390,
         "year": 2012
       },
       {
@@ -3192,7 +3192,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 3372,
+        "citations": 3374,
         "year": 2016
       },
       {
@@ -3208,7 +3208,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 768,
+        "citations": 769,
         "year": 2015
       },
       {
@@ -3248,7 +3248,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1337,
+        "citations": 1339,
         "year": 2014
       },
       {
@@ -3416,7 +3416,7 @@
         "label": "Serine ADP-Ribosylation Depends on HPF1",
         "field": "Medicine",
         "type": "citing",
-        "citations": 370,
+        "citations": 372,
         "year": 2017
       },
       {
@@ -3448,7 +3448,7 @@
         "label": "Multidimensional proteomics for cell biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 420,
+        "citations": 421,
         "year": 2015
       },
       {
@@ -3456,7 +3456,7 @@
         "label": "A Single Kinase Generates the Majority of the Secreted Phosphoproteome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 350,
+        "citations": 351,
         "year": 2015
       },
       {
@@ -3488,7 +3488,7 @@
         "label": "Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2023
       },
       {
@@ -3504,7 +3504,7 @@
         "label": "locuszoomr: an R package for visualizing publication-ready regional gene locus plots",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 46,
+        "citations": 47,
         "year": 2024
       },
       {
@@ -3672,7 +3672,7 @@
         "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 617,
+        "citations": 618,
         "year": 2016
       },
       {
@@ -3720,7 +3720,7 @@
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 558,
+        "citations": 561,
         "year": 2024
       },
       {
@@ -3732,27 +3732,27 @@
         "year": 2022
       },
       {
-        "id": "W4317903160",
-        "label": "Coenzyme Q biochemistry and biosynthesis",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 130,
-        "year": 2023
-      },
-      {
         "id": "W4293804759",
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 129,
+        "citations": 131,
         "year": 2022
+      },
+      {
+        "id": "W4317903160",
+        "label": "Coenzyme Q biochemistry and biosynthesis",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 131,
+        "year": 2023
       },
       {
         "id": "W4396578574",
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 96,
+        "citations": 97,
         "year": 2024
       },
       {
@@ -3792,7 +3792,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2023
       },
       {
@@ -3928,7 +3928,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 160,
+        "citations": 161,
         "year": 2021
       },
       {
@@ -3960,7 +3960,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 590,
+        "citations": 593,
         "year": 2023
       },
       {
@@ -3968,7 +3968,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 553,
+        "citations": 554,
         "year": 2023
       },
       {
@@ -3992,7 +3992,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 246,
+        "citations": 247,
         "year": 2021
       },
       {
@@ -4000,7 +4000,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 149,
+        "citations": 150,
         "year": 2022
       },
       {
@@ -4040,7 +4040,7 @@
         "label": "Identification and Quantification of Proteoforms by Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 220,
+        "citations": 221,
         "year": 2019
       },
       {
@@ -4080,7 +4080,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 935,
+        "citations": 940,
         "year": 2021
       },
       {
@@ -4088,7 +4088,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 374,
+        "citations": 376,
         "year": 2021
       },
       {
@@ -4128,7 +4128,7 @@
         "label": "Burkholderia in the genomic era: from taxonomy to the discovery of new antimicrobial secondary metabolites",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2021
       },
       {
@@ -4152,7 +4152,7 @@
         "label": "High Resolution Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 301,
+        "citations": 302,
         "year": 2012
       },
       {
@@ -4240,7 +4240,7 @@
         "label": "Current strategies and findings in clinically relevant post-translational modification-specific proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 164,
+        "citations": 165,
         "year": 2015
       },
       {
@@ -4268,12 +4268,12 @@
         "year": 2016
       },
       {
-        "id": "W4205886009",
-        "label": "Identification and characterization of post-translational modifications: Clinical implications",
-        "field": "Chemistry",
+        "id": "W1979888290",
+        "label": "What Can Proteomics Tell Us About Platelets?",
+        "field": "Medicine",
         "type": "citing",
         "citations": 129,
-        "year": 2022
+        "year": 2014
       },
       {
         "id": "W752259472",
@@ -4312,7 +4312,7 @@
         "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 2495,
+        "citations": 2497,
         "year": 2017
       },
       {
@@ -4520,7 +4520,7 @@
         "label": "Natural product-derived compounds in clinical trials and drug approvals",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 90,
+        "citations": 92,
         "year": 2025
       },
       {
@@ -4664,7 +4664,7 @@
         "label": "Ancestral genome reconstruction enhances transposable element annotation by identifying degenerate integrants",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 23,
+        "citations": 24,
         "year": 2024
       },
       {
@@ -4768,7 +4768,7 @@
         "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 227,
+        "citations": 228,
         "year": 2018
       },
       {
@@ -4904,7 +4904,7 @@
         "label": "A common pathway for O \u2010linked protein\u2010glycosylation and synthesis of capsule in A cinetobacter baumannii",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 173,
+        "citations": 174,
         "year": 2013
       },
       {
@@ -4920,7 +4920,7 @@
         "label": "Assessment of herbal medicinal products: Challenges, and opportunities to increase the knowledge base for safety assessment",
         "field": "Medicine",
         "type": "citing",
-        "citations": 427,
+        "citations": 428,
         "year": 2009
       },
       {
@@ -5040,7 +5040,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4564,
+        "citations": 4568,
         "year": 2017
       },
       {
@@ -5072,7 +5072,7 @@
         "label": "Hyperactive nanobacteria with host-dependent traits pervade Omnitrophota",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 57,
+        "citations": 58,
         "year": 2023
       },
       {
@@ -5208,7 +5208,7 @@
         "label": "Simultaneous determination of plasma epinephrine and norepinephrine using an integrated strategy of a fully automated protein precipitation technique, reductive ethylation labeling and UPLC\u2013MS/MS",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2010
       },
       {
@@ -5352,7 +5352,7 @@
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 58,
+        "citations": 59,
         "year": 2022
       },
       {
@@ -5364,20 +5364,20 @@
         "year": 2021
       },
       {
+        "id": "W2757788011",
+        "label": "Prealamethicin F50 and related peptaibols from Trichoderma arundinaceum: validation of their authenticity via in situ chemical analysis",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 33,
+        "year": 2017
+      },
+      {
         "id": "W2945132149",
         "label": "Droplet probe: coupling chromatography to the in situ evaluation of the chemistry of nature",
         "field": "Chemistry",
         "type": "citing",
         "citations": 33,
         "year": 2019
-      },
-      {
-        "id": "W2757788011",
-        "label": "Prealamethicin F50 and related peptaibols from Trichoderma arundinaceum: validation of their authenticity via in situ chemical analysis",
-        "field": "Immunology and Microbiology",
-        "type": "citing",
-        "citations": 32,
-        "year": 2017
       },
       {
         "id": "W2894151357",
@@ -5408,7 +5408,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 6046,
+        "citations": 6067,
         "year": 2021
       },
       {
@@ -6161,12 +6161,12 @@
       },
       {
         "source": "W4281483346",
-        "target": "W4317903160",
+        "target": "W4293804759",
         "strength": 0.5
       },
       {
         "source": "W4281483346",
-        "target": "W4293804759",
+        "target": "W4317903160",
         "strength": 0.5
       },
       {
@@ -6546,7 +6546,7 @@
       },
       {
         "source": "W2143749662",
-        "target": "W4205886009",
+        "target": "W1979888290",
         "strength": 0.5
       },
       {
@@ -7406,12 +7406,12 @@
       },
       {
         "source": "W2741464576",
-        "target": "W2945132149",
+        "target": "W2757788011",
         "strength": 0.5
       },
       {
         "source": "W2741464576",
-        "target": "W2757788011",
+        "target": "W2945132149",
         "strength": 0.5
       },
       {
