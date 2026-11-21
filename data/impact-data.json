@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-20T15:18:07.717020+00:00",
+  "generated_at": "2026-11-21T14:33:08.231988+00:00",
   "summary": {
-    "total_citations": 6089,
+    "total_citations": 6135,
     "countries_reached": 79,
-    "citing_institutions": 4415,
+    "citing_institutions": 4420,
     "disciplines_impacted": 25,
     "total_publications": 54
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 678,
+      "cited_by_count": 679,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -39,7 +39,7 @@
       "title": "Value of Using Multiple Proteases for Large-Scale Mass Spectrometry-Based Proteomics",
       "journal": "Journal of Proteome Research",
       "year": 2010,
-      "cited_by_count": 551,
+      "cited_by_count": 563,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -52,7 +52,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 422,
+      "cited_by_count": 425,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -65,7 +65,7 @@
       "title": "A dynamic model of proteome changes reveals new roles for transcript alteration in yeast",
       "journal": "Molecular Systems Biology",
       "year": 2011,
-      "cited_by_count": 323,
+      "cited_by_count": 324,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -78,7 +78,7 @@
       "title": "Proteomic and phosphoproteomic comparison of human ES and iPS cells",
       "journal": "Nature Methods",
       "year": 2011,
-      "cited_by_count": 281,
+      "cited_by_count": 285,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -91,7 +91,7 @@
       "title": "Gas-phase purification enables accurate, multiplexed proteome quantification with isobaric tagging",
       "journal": "Nature Methods",
       "year": 2011,
-      "cited_by_count": 263,
+      "cited_by_count": 266,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -104,12 +104,25 @@
       "title": "Human embryonic stem cell phosphoproteome revealed by electron transfer dissociation tandem mass spectrometry",
       "journal": "Proceedings of the National Academy of Sciences",
       "year": 2009,
-      "cited_by_count": 206,
+      "cited_by_count": 207,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
       ],
       "doi": "https://doi.org/10.1073/pnas.0811964106",
+      "type": "core"
+    },
+    {
+      "id": "W2090402744",
+      "title": "A Proteomics Search Algorithm Specifically Designed for High-Resolution Tandem Mass Spectra",
+      "journal": "Journal of Proteome Research",
+      "year": 2013,
+      "cited_by_count": 173,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1021/pr301024c",
       "type": "core"
     },
     {
@@ -126,24 +139,11 @@
       "type": "core"
     },
     {
-      "id": "W2090402744",
-      "title": "A Proteomics Search Algorithm Specifically Designed for High-Resolution Tandem Mass Spectra",
-      "journal": "Journal of Proteome Research",
-      "year": 2013,
-      "cited_by_count": 171,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1021/pr301024c",
-      "type": "core"
-    },
-    {
       "id": "W2050357198",
       "title": "COMPASS: A suite of pre\u2010 and post\u2010search proteomics software tools for OMSSA",
       "journal": "PROTEOMICS",
       "year": 2011,
-      "cited_by_count": 159,
+      "cited_by_count": 161,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -165,6 +165,19 @@
       "type": "core"
     },
     {
+      "id": "W2023959652",
+      "title": "Top-Down Proteomics on a Chromatographic Time Scale Using Linear Ion Trap Fourier Transform Hybrid Mass Spectrometers",
+      "journal": "Analytical Chemistry",
+      "year": 2007,
+      "cited_by_count": 142,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1021/ac070553t",
+      "type": "core"
+    },
+    {
       "id": "W2808840038",
       "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
       "journal": "Nature Communications",
@@ -178,24 +191,11 @@
       "type": "core"
     },
     {
-      "id": "W2023959652",
-      "title": "Top-Down Proteomics on a Chromatographic Time Scale Using Linear Ion Trap Fourier Transform Hybrid Mass Spectrometers",
-      "journal": "Analytical Chemistry",
-      "year": 2007,
-      "cited_by_count": 138,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1021/ac070553t",
-      "type": "core"
-    },
-    {
       "id": "W4281483346",
       "title": "Defining mitochondrial protein functions through deep multiomic profiling",
       "journal": "Nature",
       "year": 2022,
-      "cited_by_count": 117,
+      "cited_by_count": 118,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -208,7 +208,7 @@
       "title": "RNA\u2013protein analysis using a conditional CRISPR nuclease",
       "journal": "Proceedings of the National Academy of Sciences",
       "year": 2013,
-      "cited_by_count": 100,
+      "cited_by_count": 103,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Craig Wenger"
@@ -287,7 +287,7 @@
       "title": "Tandem Mass Spectrometry with Ultrahigh Mass Accuracy Clarifies Peptide Identification by Database Retrieval",
       "journal": "Journal of Proteome Research",
       "year": 2008,
-      "cited_by_count": 78,
+      "cited_by_count": 79,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -313,7 +313,7 @@
       "title": "Post-acquisition ETD spectral processing for increased peptide identifications",
       "journal": "Journal of the American Society for Mass Spectrometry",
       "year": 2009,
-      "cited_by_count": 67,
+      "cited_by_count": 68,
       "field": "Chemistry",
       "authors": [
         "Craig Wenger"
@@ -335,6 +335,19 @@
       "type": "core"
     },
     {
+      "id": "W2201786733",
+      "title": "Global Identification of Protein Post-translational Modifications in a Single-Pass Database Search",
+      "journal": "Journal of Proteome Research",
+      "year": 2015,
+      "cited_by_count": 61,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1021/acs.jproteome.5b00599",
+      "type": "core"
+    },
+    {
       "id": "W2038769454",
       "title": "Instant spectral assignment for advanced decision tree-driven mass spectrometry",
       "journal": "Proceedings of the National Academy of Sciences",
@@ -345,19 +358,6 @@
         "Craig Wenger"
       ],
       "doi": "https://doi.org/10.1073/pnas.1205292109",
-      "type": "core"
-    },
-    {
-      "id": "W2201786733",
-      "title": "Global Identification of Protein Post-translational Modifications in a Single-Pass Database Search",
-      "journal": "Journal of Proteome Research",
-      "year": 2015,
-      "cited_by_count": 60,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1021/acs.jproteome.5b00599",
       "type": "core"
     },
     {
@@ -374,6 +374,19 @@
       "type": "core"
     },
     {
+      "id": "W2085801821",
+      "title": "Analysis of Tandem Mass Spectra by FTMS for Improved Large-Scale Proteomics with Superior Protein Quantification",
+      "journal": "Analytical Chemistry",
+      "year": 2009,
+      "cited_by_count": 50,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1021/ac902005s",
+      "type": "core"
+    },
+    {
       "id": "W2991684904",
       "title": "Bedtoolsr: An R package for genomic data analysis and manipulation",
       "journal": "The Journal of Open Source Software",
@@ -387,6 +400,19 @@
       "type": "core"
     },
     {
+      "id": "W2050184779",
+      "title": "Top-down proteomics reveals novel protein forms expressed in methanosarcina acetivorans",
+      "journal": "Journal of the American Society for Mass Spectrometry",
+      "year": 2009,
+      "cited_by_count": 49,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1016/j.jasms.2009.05.014",
+      "type": "core"
+    },
+    {
       "id": "W2513652105",
       "title": "Lack of Overt Genome Reduction in the Bryostatin-Producing Bryozoan Symbiont \u201cCandidatus Endobugula sertula\u201d",
       "journal": "Applied and Environmental Microbiology",
@@ -397,32 +423,6 @@
         "Ian J. Miller"
       ],
       "doi": "https://doi.org/10.1128/aem.01800-16",
-      "type": "core"
-    },
-    {
-      "id": "W2085801821",
-      "title": "Analysis of Tandem Mass Spectra by FTMS for Improved Large-Scale Proteomics with Superior Protein Quantification",
-      "journal": "Analytical Chemistry",
-      "year": 2009,
-      "cited_by_count": 48,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1021/ac902005s",
-      "type": "core"
-    },
-    {
-      "id": "W2050184779",
-      "title": "Top-down proteomics reveals novel protein forms expressed in methanosarcina acetivorans",
-      "journal": "Journal of the American Society for Mass Spectrometry",
-      "year": 2009,
-      "cited_by_count": 48,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1016/j.jasms.2009.05.014",
       "type": "core"
     },
     {
@@ -530,6 +530,19 @@
       "type": "core"
     },
     {
+      "id": "W2085971372",
+      "title": "Characterizing Peptide Neutral Losses Induced by Negative Electron-Transfer Dissociation (NETD)",
+      "journal": "Journal of the American Society for Mass Spectrometry",
+      "year": 2012,
+      "cited_by_count": 34,
+      "field": "Chemistry",
+      "authors": [
+        "Craig Wenger"
+      ],
+      "doi": "https://doi.org/10.1007/s13361-011-0331-5",
+      "type": "core"
+    },
+    {
       "id": "W2044343668",
       "title": "Versatile Online\u2212Offline Engine for Automated Acquisition of High-Resolution Tandem Mass Spectra",
       "journal": "Analytical Chemistry",
@@ -540,19 +553,6 @@
         "Craig Wenger"
       ],
       "doi": "https://doi.org/10.1021/ac8010704",
-      "type": "core"
-    },
-    {
-      "id": "W2085971372",
-      "title": "Characterizing Peptide Neutral Losses Induced by Negative Electron-Transfer Dissociation (NETD)",
-      "journal": "Journal of the American Society for Mass Spectrometry",
-      "year": 2012,
-      "cited_by_count": 32,
-      "field": "Chemistry",
-      "authors": [
-        "Craig Wenger"
-      ],
-      "doi": "https://doi.org/10.1007/s13361-011-0331-5",
       "type": "core"
     },
     {
@@ -569,6 +569,19 @@
       "type": "core"
     },
     {
+      "id": "W2621511283",
+      "title": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
+      "journal": "Marine Drugs",
+      "year": 2017,
+      "cited_by_count": 25,
+      "field": "Immunology and Microbiology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.3390/md15060165",
+      "type": "core"
+    },
+    {
       "id": "W3116953854",
       "title": "Conserved bacterial genomes from two geographically isolated peritidal stromatolite formations shed light on potential functional guilds",
       "journal": "Environmental Microbiology Reports",
@@ -579,19 +592,6 @@
         "Evan Roy Rees"
       ],
       "doi": "https://doi.org/10.1111/1758-2229.12916",
-      "type": "core"
-    },
-    {
-      "id": "W2621511283",
-      "title": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
-      "journal": "Marine Drugs",
-      "year": 2017,
-      "cited_by_count": 24,
-      "field": "Immunology and Microbiology",
-      "authors": [
-        "Ian J. Miller"
-      ],
-      "doi": "https://doi.org/10.3390/md15060165",
       "type": "core"
     },
     {
@@ -719,7 +719,7 @@
       "country_code": "US",
       "lat": 39.8,
       "lon": -98.5,
-      "citations": 2364,
+      "citations": 2435,
       "institutions": 748
     },
     {
@@ -727,15 +727,15 @@
       "country_code": "CN",
       "lat": 35.9,
       "lon": 104.2,
-      "citations": 894,
-      "institutions": 722
+      "citations": 904,
+      "institutions": 723
     },
     {
       "country": "Germany",
       "country_code": "DE",
       "lat": 51.2,
       "lon": 10.4,
-      "citations": 514,
+      "citations": 540,
       "institutions": 225
     },
     {
@@ -743,16 +743,16 @@
       "country_code": "GB",
       "lat": 55.4,
       "lon": -3.4,
-      "citations": 414,
-      "institutions": 208
+      "citations": 434,
+      "institutions": 209
     },
     {
       "country": "Canada",
       "country_code": "CA",
       "lat": 56.1,
       "lon": -106.3,
-      "citations": 262,
-      "institutions": 128
+      "citations": 276,
+      "institutions": 126
     },
     {
       "country": "India",
@@ -767,7 +767,7 @@
       "country_code": "FR",
       "lat": 46.2,
       "lon": 2.2,
-      "citations": 216,
+      "citations": 219,
       "institutions": 309
     },
     {
@@ -775,7 +775,7 @@
       "country_code": "NL",
       "lat": 52.1,
       "lon": 5.3,
-      "citations": 209,
+      "citations": 217,
       "institutions": 65
     },
     {
@@ -783,7 +783,7 @@
       "country_code": "CH",
       "lat": 46.8,
       "lon": 8.2,
-      "citations": 182,
+      "citations": 190,
       "institutions": 51
     },
     {
@@ -791,15 +791,23 @@
       "country_code": "AU",
       "lat": -25.3,
       "lon": 133.8,
-      "citations": 181,
-      "institutions": 101
+      "citations": 186,
+      "institutions": 102
+    },
+    {
+      "country": "Brazil",
+      "country_code": "BR",
+      "lat": -14.2,
+      "lon": -51.9,
+      "citations": 150,
+      "institutions": 94
     },
     {
       "country": "Italy",
       "country_code": "IT",
       "lat": 41.9,
       "lon": 12.6,
-      "citations": 146,
+      "citations": 148,
       "institutions": 102
     },
     {
@@ -807,31 +815,23 @@
       "country_code": "DK",
       "lat": 56.3,
       "lon": 9.5,
-      "citations": 144,
+      "citations": 145,
       "institutions": 24
-    },
-    {
-      "country": "Brazil",
-      "country_code": "BR",
-      "lat": -14.2,
-      "lon": -51.9,
-      "citations": 142,
-      "institutions": 93
     },
     {
       "country": "Spain",
       "country_code": "ES",
       "lat": 40.5,
       "lon": -3.7,
-      "citations": 132,
-      "institutions": 179
+      "citations": 135,
+      "institutions": 180
     },
     {
       "country": "South Korea",
       "country_code": "KR",
       "lat": 35.9,
       "lon": 127.8,
-      "citations": 120,
+      "citations": 122,
       "institutions": 81
     },
     {
@@ -839,7 +839,7 @@
       "country_code": "JP",
       "lat": 36.2,
       "lon": 138.3,
-      "citations": 106,
+      "citations": 110,
       "institutions": 120
     },
     {
@@ -847,7 +847,7 @@
       "country_code": "SE",
       "lat": 60.1,
       "lon": 18.6,
-      "citations": 100,
+      "citations": 103,
       "institutions": 33
     },
     {
@@ -855,7 +855,7 @@
       "country_code": "BE",
       "lat": 50.5,
       "lon": 4.5,
-      "citations": 91,
+      "citations": 97,
       "institutions": 35
     },
     {
@@ -863,7 +863,7 @@
       "country_code": "AT",
       "lat": 47.5,
       "lon": 14.6,
-      "citations": 75,
+      "citations": 76,
       "institutions": 35
     },
     {
@@ -879,8 +879,8 @@
       "country_code": "IL",
       "lat": 31.0,
       "lon": 34.8,
-      "citations": 60,
-      "institutions": 17
+      "citations": 61,
+      "institutions": 18
     },
     {
       "country": "Saudi Arabia",
@@ -899,20 +899,28 @@
       "institutions": 36
     },
     {
-      "country": "Singapore",
-      "country_code": "SG",
-      "lat": 1.4,
-      "lon": 103.8,
-      "citations": 45,
-      "institutions": 20
+      "country": "Finland",
+      "country_code": "FI",
+      "lat": 61.9,
+      "lon": 25.7,
+      "citations": 47,
+      "institutions": 18
     },
     {
       "country": "Norway",
       "country_code": "NO",
       "lat": 60.5,
       "lon": 8.5,
-      "citations": 45,
+      "citations": 47,
       "institutions": 28
+    },
+    {
+      "country": "Singapore",
+      "country_code": "SG",
+      "lat": 1.4,
+      "lon": 103.8,
+      "citations": 45,
+      "institutions": 20
     },
     {
       "country": "Taiwan",
@@ -931,19 +939,11 @@
       "institutions": 28
     },
     {
-      "country": "Finland",
-      "country_code": "FI",
-      "lat": 61.9,
-      "lon": 25.7,
-      "citations": 43,
-      "institutions": 18
-    },
-    {
       "country": "Portugal",
       "country_code": "PT",
       "lat": 39.4,
       "lon": -8.2,
-      "citations": 41,
+      "citations": 43,
       "institutions": 33
     },
     {
@@ -951,7 +951,7 @@
       "country_code": "IE",
       "lat": 53.1,
       "lon": -7.7,
-      "citations": 38,
+      "citations": 40,
       "institutions": 24
     },
     {
@@ -963,20 +963,20 @@
       "institutions": 44
     },
     {
+      "country": "Turkey",
+      "country_code": "TR",
+      "lat": 39.0,
+      "lon": 35.2,
+      "citations": 35,
+      "institutions": 36
+    },
+    {
       "country": "Egypt",
       "country_code": "EG",
       "lat": 26.8,
       "lon": 30.8,
       "citations": 34,
       "institutions": 33
-    },
-    {
-      "country": "Turkey",
-      "country_code": "TR",
-      "lat": 39.0,
-      "lon": 35.2,
-      "citations": 34,
-      "institutions": 35
     },
     {
       "country": "Czech Republic",
@@ -1007,7 +1007,7 @@
       "country_code": "NZ",
       "lat": -40.9,
       "lon": 174.9,
-      "citations": 27,
+      "citations": 30,
       "institutions": 13
     },
     {
@@ -1087,7 +1087,7 @@
       "country_code": "SI",
       "lat": 46.2,
       "lon": 14.8,
-      "citations": 12,
+      "citations": 13,
       "institutions": 6
     },
     {
@@ -1267,6 +1267,14 @@
       "institutions": 3
     },
     {
+      "country": "Estonia",
+      "country_code": "EE",
+      "lat": 58.6,
+      "lon": 25.0,
+      "citations": 3,
+      "institutions": 1
+    },
+    {
       "country": "Ghana",
       "country_code": "GH",
       "lat": 7.9,
@@ -1297,14 +1305,6 @@
       "lon": -19.0,
       "citations": 2,
       "institutions": 2
-    },
-    {
-      "country": "Estonia",
-      "country_code": "EE",
-      "lat": 58.6,
-      "lon": 25.0,
-      "citations": 2,
-      "institutions": 1
     },
     {
       "country": "Ethiopia",
@@ -1356,18 +1356,18 @@
       "citations": 606
     },
     {
-      "name": "Chinese Academy of Sciences",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 154
-    },
-    {
       "name": "Harvard University",
       "lat": 42.3751,
       "lon": -71.10561,
       "country_code": "US",
-      "citations": 148
+      "citations": 156
+    },
+    {
+      "name": "Chinese Academy of Sciences",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 155
     },
     {
       "name": "Morgridge Institute for Research",
@@ -1388,6 +1388,13 @@
       "lat": 32.71571,
       "lon": -117.16472,
       "country_code": "US",
+      "citations": 89
+    },
+    {
+      "name": "Utrecht University",
+      "lat": 52.09083,
+      "lon": 5.12222,
+      "country_code": "NL",
       "citations": 81
     },
     {
@@ -1395,42 +1402,35 @@
       "lat": 47.36667,
       "lon": 8.55,
       "country_code": "CH",
-      "citations": 77
-    },
-    {
-      "name": "Utrecht University",
-      "lat": 52.09083,
-      "lon": 5.12222,
-      "country_code": "NL",
-      "citations": 75
-    },
-    {
-      "name": "University of Chinese Academy of Sciences",
-      "lat": 39.9075,
-      "lon": 116.39723,
-      "country_code": "CN",
-      "citations": 69
+      "citations": 80
     },
     {
       "name": "University of Washington",
       "lat": 47.60621,
       "lon": -122.33207,
       "country_code": "US",
-      "citations": 67
+      "citations": 73
+    },
+    {
+      "name": "University of Chinese Academy of Sciences",
+      "lat": 39.9075,
+      "lon": 116.39723,
+      "country_code": "CN",
+      "citations": 70
     },
     {
       "name": "University of Copenhagen",
       "lat": 55.67594,
       "lon": 12.56553,
       "country_code": "DK",
-      "citations": 63
+      "citations": 64
     },
     {
       "name": "Stanford University",
       "lat": 37.42411,
       "lon": -122.16608,
       "country_code": "US",
-      "citations": 62
+      "citations": 63
     },
     {
       "name": "Thermo Fisher Scientific (United States)",
@@ -1454,6 +1454,13 @@
       "citations": 60
     },
     {
+      "name": "University of Michigan",
+      "lat": 42.27756,
+      "lon": -83.74088,
+      "country_code": "US",
+      "citations": 58
+    },
+    {
       "name": "Northwestern University",
       "lat": 42.04114,
       "lon": -87.69006,
@@ -1461,23 +1468,30 @@
       "citations": 56
     },
     {
+      "name": "Technical University of Munich",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
+      "citations": 55
+    },
+    {
       "name": "Fudan University",
       "lat": 31.22222,
       "lon": 121.45806,
       "country_code": "CN",
+      "citations": 54
+    },
+    {
+      "name": "Universidade de S\u00e3o Paulo",
+      "lat": -23.5475,
+      "lon": -46.63611,
+      "country_code": "BR",
       "citations": 53
     },
     {
       "name": "Washington University in St. Louis",
       "lat": 38.62727,
       "lon": -90.19789,
-      "country_code": "US",
-      "citations": 52
-    },
-    {
-      "name": "University of Michigan",
-      "lat": 42.27756,
-      "lon": -83.74088,
       "country_code": "US",
       "citations": 52
     },
@@ -1489,11 +1503,11 @@
       "citations": 49
     },
     {
-      "name": "Universidade de S\u00e3o Paulo",
-      "lat": -23.5475,
-      "lon": -46.63611,
-      "country_code": "BR",
-      "citations": 49
+      "name": "University of Cambridge",
+      "lat": 52.2,
+      "lon": 0.11667,
+      "country_code": "GB",
+      "citations": 48
     },
     {
       "name": "University of California, Los Angeles",
@@ -1508,13 +1522,6 @@
       "lon": -76.61219,
       "country_code": "US",
       "citations": 48
-    },
-    {
-      "name": "University of Cambridge",
-      "lat": 52.2,
-      "lon": 0.11667,
-      "country_code": "GB",
-      "citations": 47
     },
     {
       "name": "Inserm",
@@ -1559,18 +1566,18 @@
       "citations": 46
     },
     {
-      "name": "Technical University of Munich",
-      "lat": 48.13743,
-      "lon": 11.57549,
-      "country_code": "DE",
-      "citations": 46
-    },
-    {
       "name": "Chinese Academy of Medical Sciences & Peking Union Medical College",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
       "citations": 44
+    },
+    {
+      "name": "University of California, Berkeley",
+      "lat": 37.87159,
+      "lon": -122.27275,
+      "country_code": "US",
+      "citations": 43
     },
     {
       "name": "University of California, San Francisco",
@@ -1585,6 +1592,13 @@
       "lon": -123.11934,
       "country_code": "CA",
       "citations": 42
+    },
+    {
+      "name": "University of Oxford",
+      "lat": 51.75222,
+      "lon": -1.25596,
+      "country_code": "GB",
+      "citations": 41
     },
     {
       "name": "The University of Melbourne",
@@ -1608,17 +1622,24 @@
       "citations": 41
     },
     {
-      "name": "University of Oxford",
-      "lat": 51.75222,
-      "lon": -1.25596,
-      "country_code": "GB",
-      "citations": 40
+      "name": "Stanford Medicine",
+      "lat": 37.42411,
+      "lon": -122.16608,
+      "country_code": "US",
+      "citations": 39
     },
     {
       "name": "Karolinska Institutet",
       "lat": 59.32938,
       "lon": 18.06871,
       "country_code": "SE",
+      "citations": 39
+    },
+    {
+      "name": "University of Toronto",
+      "lat": 43.70643,
+      "lon": -79.39864,
+      "country_code": "CA",
       "citations": 39
     },
     {
@@ -1636,20 +1657,6 @@
       "citations": 39
     },
     {
-      "name": "Stanford Medicine",
-      "lat": 37.42411,
-      "lon": -122.16608,
-      "country_code": "US",
-      "citations": 38
-    },
-    {
-      "name": "University of Toronto",
-      "lat": 43.70643,
-      "lon": -79.39864,
-      "country_code": "CA",
-      "citations": 38
-    },
-    {
       "name": "Shanghai Jiao Tong University",
       "lat": 31.22222,
       "lon": 121.45806,
@@ -1657,10 +1664,10 @@
       "citations": 38
     },
     {
-      "name": "University of California, Berkeley",
-      "lat": 37.87159,
-      "lon": -122.27275,
-      "country_code": "US",
+      "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
+      "lat": 46.516,
+      "lon": 6.63282,
+      "country_code": "CH",
       "citations": 38
     },
     {
@@ -1685,6 +1692,13 @@
       "citations": 37
     },
     {
+      "name": "Ghent University",
+      "lat": 51.05,
+      "lon": 3.71667,
+      "country_code": "BE",
+      "citations": 37
+    },
+    {
       "name": "University of Wisconsin System",
       "lat": 43.07305,
       "lon": -89.40123,
@@ -1696,13 +1710,6 @@
       "lat": 38.98067092895508,
       "lon": -77.10025787353516,
       "country_code": "US",
-      "citations": 36
-    },
-    {
-      "name": "\u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne",
-      "lat": 46.516,
-      "lon": 6.63282,
-      "country_code": "CH",
       "citations": 36
     },
     {
@@ -1720,10 +1727,24 @@
       "citations": 35
     },
     {
+      "name": "Friedrich Schiller University Jena",
+      "lat": 50.92878,
+      "lon": 11.5899,
+      "country_code": "DE",
+      "citations": 35
+    },
+    {
       "name": "University of Chicago",
       "lat": 41.85003,
       "lon": -87.65005,
       "country_code": "US",
+      "citations": 34
+    },
+    {
+      "name": "University of Zurich",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 34
     },
     {
@@ -1755,17 +1776,31 @@
       "citations": 33
     },
     {
-      "name": "University of Zurich",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 33
-    },
-    {
       "name": "Sun Yat-sen University",
       "lat": 23.11667,
       "lon": 113.25,
       "country_code": "CN",
+      "citations": 33
+    },
+    {
+      "name": "The University of Sydney",
+      "lat": -33.86785,
+      "lon": 151.20732,
+      "country_code": "AU",
+      "citations": 33
+    },
+    {
+      "name": "Duke University",
+      "lat": 35.99403,
+      "lon": -78.89862,
+      "country_code": "US",
+      "citations": 33
+    },
+    {
+      "name": "The University of Texas at Austin",
+      "lat": 30.26715,
+      "lon": -97.74306,
+      "country_code": "US",
       "citations": 33
     },
     {
@@ -1776,18 +1811,18 @@
       "citations": 33
     },
     {
-      "name": "Friedrich Schiller University Jena",
-      "lat": 50.92878,
-      "lon": 11.5899,
-      "country_code": "DE",
-      "citations": 33
-    },
-    {
       "name": "University of Southern Denmark",
       "lat": 55.39594,
       "lon": 10.38831,
       "country_code": "DK",
       "citations": 33
+    },
+    {
+      "name": "University of Minnesota",
+      "lat": 44.97997,
+      "lon": -93.26384,
+      "country_code": "US",
+      "citations": 32
     },
     {
       "name": "Cornell University",
@@ -1797,17 +1832,17 @@
       "citations": 32
     },
     {
-      "name": "The University of Sydney",
-      "lat": -33.86785,
-      "lon": 151.20732,
-      "country_code": "AU",
+      "name": "Technical University of Denmark",
+      "lat": 55.77044,
+      "lon": 12.50378,
+      "country_code": "DK",
       "citations": 32
     },
     {
-      "name": "Duke University",
-      "lat": 35.99403,
-      "lon": -78.89862,
-      "country_code": "US",
+      "name": "Institute of Microbiology",
+      "lat": 47.36667,
+      "lon": 8.55,
+      "country_code": "CH",
       "citations": 32
     },
     {
@@ -1816,20 +1851,6 @@
       "lon": 11.451959609985352,
       "country_code": "DE",
       "citations": 32
-    },
-    {
-      "name": "Ghent University",
-      "lat": 51.05,
-      "lon": 3.71667,
-      "country_code": "BE",
-      "citations": 32
-    },
-    {
-      "name": "University of Minnesota",
-      "lat": 44.97997,
-      "lon": -93.26384,
-      "country_code": "US",
-      "citations": 31
     },
     {
       "name": "University College London",
@@ -1846,24 +1867,17 @@
       "citations": 31
     },
     {
-      "name": "Technical University of Denmark",
-      "lat": 55.77044,
-      "lon": 12.50378,
-      "country_code": "DK",
-      "citations": 31
-    },
-    {
-      "name": "Institute of Microbiology",
-      "lat": 47.36667,
-      "lon": 8.55,
-      "country_code": "CH",
-      "citations": 31
-    },
-    {
       "name": "Peking University",
       "lat": 39.9075,
       "lon": 116.39723,
       "country_code": "CN",
+      "citations": 31
+    },
+    {
+      "name": "Northeastern University",
+      "lat": 42.35843,
+      "lon": -71.05977,
+      "country_code": "US",
       "citations": 31
     },
     {
@@ -1888,18 +1902,25 @@
       "citations": 30
     },
     {
-      "name": "The University of Texas at Austin",
-      "lat": 30.26715,
-      "lon": -97.74306,
-      "country_code": "US",
-      "citations": 29
-    },
-    {
       "name": "University of Southern California",
       "lat": 34.05223,
       "lon": -118.24368,
       "country_code": "US",
       "citations": 29
+    },
+    {
+      "name": "University of Maryland, College Park",
+      "lat": 38.98067,
+      "lon": -76.93692,
+      "country_code": "US",
+      "citations": 29
+    },
+    {
+      "name": "University of Manchester",
+      "lat": 53.48095,
+      "lon": -2.23743,
+      "country_code": "GB",
+      "citations": 28
     },
     {
       "name": "Leibniz-Institut f\u00fcr Naturstoff-Forschung und Infektionsbiologie e. V. - Hans-Kn\u00f6ll-Institut (HKI)",
@@ -1930,6 +1951,20 @@
       "citations": 27
     },
     {
+      "name": "University of Pittsburgh",
+      "lat": 40.44062,
+      "lon": -79.99589,
+      "country_code": "US",
+      "citations": 27
+    },
+    {
+      "name": "University of Helsinki",
+      "lat": 60.16952,
+      "lon": 24.93545,
+      "country_code": "FI",
+      "citations": 27
+    },
+    {
       "name": "University of Virginia",
       "lat": 38.02931,
       "lon": -78.47668,
@@ -1948,6 +1983,13 @@
       "lat": 48.68333,
       "lon": 2.13333,
       "country_code": "FR",
+      "citations": 27
+    },
+    {
+      "name": "Universit\u00e9 de Montr\u00e9al",
+      "lat": 45.50884,
+      "lon": -73.58781,
+      "country_code": "CA",
       "citations": 27
     },
     {
@@ -1979,16 +2021,16 @@
       "citations": 26
     },
     {
-      "name": "Baylor College of Medicine",
-      "lat": 29.76328,
-      "lon": -95.36327,
-      "country_code": "US",
+      "name": "Imperial College London",
+      "lat": 51.50853,
+      "lon": -0.12574,
+      "country_code": "GB",
       "citations": 26
     },
     {
-      "name": "University of Pittsburgh",
-      "lat": 40.44062,
-      "lon": -79.99589,
+      "name": "Baylor College of Medicine",
+      "lat": 29.76328,
+      "lon": -95.36327,
       "country_code": "US",
       "citations": 26
     },
@@ -2014,34 +2056,6 @@
       "citations": 25
     },
     {
-      "name": "Imperial College London",
-      "lat": 51.50853,
-      "lon": -0.12574,
-      "country_code": "GB",
-      "citations": 25
-    },
-    {
-      "name": "University of Helsinki",
-      "lat": 60.16952,
-      "lon": 24.93545,
-      "country_code": "FI",
-      "citations": 25
-    },
-    {
-      "name": "University of Manchester",
-      "lat": 53.48095,
-      "lon": -2.23743,
-      "country_code": "GB",
-      "citations": 25
-    },
-    {
-      "name": "University of Maryland, College Park",
-      "lat": 38.98067,
-      "lon": -76.93692,
-      "country_code": "US",
-      "citations": 25
-    },
-    {
       "name": "Wageningen University & Research",
       "lat": 51.97,
       "lon": 5.66667,
@@ -2054,6 +2068,20 @@
       "lon": 11.589900016784668,
       "country_code": "DE",
       "citations": 25
+    },
+    {
+      "name": "University of Calgary",
+      "lat": 51.05011,
+      "lon": -114.08529,
+      "country_code": "CA",
+      "citations": 24
+    },
+    {
+      "name": "University of Edinburgh",
+      "lat": 55.95206,
+      "lon": -3.19648,
+      "country_code": "GB",
+      "citations": 24
     },
     {
       "name": "KTH Royal Institute of Technology",
@@ -2084,25 +2112,11 @@
       "citations": 24
     },
     {
-      "name": "Northeastern University",
-      "lat": 42.35843,
-      "lon": -71.05977,
-      "country_code": "US",
-      "citations": 24
-    },
-    {
       "name": "University of Hong Kong",
       "lat": 22.26861,
       "lon": 114.12924,
       "country_code": "HK",
       "citations": 24
-    },
-    {
-      "name": "University of Edinburgh",
-      "lat": 55.95206,
-      "lon": -3.19648,
-      "country_code": "GB",
-      "citations": 23
     },
     {
       "name": "The University of Queensland",
@@ -2133,6 +2147,13 @@
       "citations": 23
     },
     {
+      "name": "SIB Swiss Institute of Bioinformatics",
+      "lat": 46.516,
+      "lon": 6.63282,
+      "country_code": "CH",
+      "citations": 23
+    },
+    {
       "name": "Institute for Molecular Systems Biology",
       "lat": 47.36667,
       "lon": 8.55,
@@ -2154,13 +2175,6 @@
       "citations": 22
     },
     {
-      "name": "SIB Swiss Institute of Bioinformatics",
-      "lat": 46.516,
-      "lon": 6.63282,
-      "country_code": "CH",
-      "citations": 22
-    },
-    {
       "name": "Thermo Fisher Scientific (Germany)",
       "lat": 50.02146911621094,
       "lon": 8.658126831054688,
@@ -2175,17 +2189,17 @@
       "citations": 21
     },
     {
-      "name": "University of Calgary",
-      "lat": 51.05011,
-      "lon": -114.08529,
-      "country_code": "CA",
-      "citations": 21
-    },
-    {
       "name": "Icahn School of Medicine at Mount Sinai",
       "lat": 40.71427,
       "lon": -74.00597,
       "country_code": "US",
+      "citations": 21
+    },
+    {
+      "name": "Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen",
+      "lat": 48.13743,
+      "lon": 11.57549,
+      "country_code": "DE",
       "citations": 21
     },
     {
@@ -2266,17 +2280,17 @@
       "citations": 20
     },
     {
-      "name": "McGill University",
-      "lat": 45.50884,
-      "lon": -73.58781,
-      "country_code": "CA",
+      "name": "University of Birmingham",
+      "lat": 52.48142,
+      "lon": -1.89983,
+      "country_code": "GB",
       "citations": 20
     },
     {
-      "name": "Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen",
-      "lat": 48.13743,
-      "lon": 11.57549,
-      "country_code": "DE",
+      "name": "University of Arizona",
+      "lat": 32.22174,
+      "lon": -110.92648,
+      "country_code": "US",
       "citations": 20
     },
     {
@@ -2294,10 +2308,24 @@
       "citations": 20
     },
     {
+      "name": "Freie Universit\u00e4t Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 20
+    },
+    {
       "name": "Instituto de Salud Carlos III",
       "lat": 40.4165,
       "lon": -3.70256,
       "country_code": "ES",
+      "citations": 20
+    },
+    {
+      "name": "University of Ottawa",
+      "lat": 45.41117,
+      "lon": -75.69812,
+      "country_code": "CA",
       "citations": 20
     },
     {
@@ -2308,18 +2336,25 @@
       "citations": 20
     },
     {
-      "name": "Universit\u00e9 de Montr\u00e9al",
-      "lat": 45.50884,
-      "lon": -73.58781,
-      "country_code": "CA",
-      "citations": 20
-    },
-    {
       "name": "Academia Sinica",
       "lat": 25.05306,
       "lon": 121.52639,
       "country_code": "TW",
       "citations": 20
+    },
+    {
+      "name": "Humboldt-Universit\u00e4t zu Berlin",
+      "lat": 52.52437,
+      "lon": 13.41053,
+      "country_code": "DE",
+      "citations": 19
+    },
+    {
+      "name": "Shandong University",
+      "lat": 36.66833,
+      "lon": 116.99722,
+      "country_code": "CN",
+      "citations": 19
     },
     {
       "name": "Massachusetts General Hospital",
@@ -2336,6 +2371,20 @@
       "citations": 19
     },
     {
+      "name": "McGill University",
+      "lat": 45.50884,
+      "lon": -73.58781,
+      "country_code": "CA",
+      "citations": 19
+    },
+    {
+      "name": "University of Geneva",
+      "lat": 46.20222,
+      "lon": 6.14569,
+      "country_code": "CH",
+      "citations": 19
+    },
+    {
       "name": "Memorial Sloan Kettering Cancer Center",
       "lat": 40.71427,
       "lon": -74.00597,
@@ -2348,91 +2397,42 @@
       "lon": -87.65005,
       "country_code": "US",
       "citations": 19
-    },
-    {
-      "name": "University of Freiburg",
-      "lat": 47.9959,
-      "lon": 7.85222,
-      "country_code": "DE",
-      "citations": 19
-    },
-    {
-      "name": "University of Missouri",
-      "lat": 38.95171,
-      "lon": -92.33407,
-      "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "Wisconsin Institutes for Discovery",
-      "lat": 43.07303237915039,
-      "lon": -89.40760803222656,
-      "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "Goethe University Frankfurt",
-      "lat": 50.11552,
-      "lon": 8.68417,
-      "country_code": "DE",
-      "citations": 19
-    },
-    {
-      "name": "Purdue University West Lafayette",
-      "lat": 40.42587,
-      "lon": -86.90807,
-      "country_code": "US",
-      "citations": 19
-    },
-    {
-      "name": "Shandong University",
-      "lat": 36.66833,
-      "lon": 116.99722,
-      "country_code": "CN",
-      "citations": 18
-    },
-    {
-      "name": "UNSW Sydney",
-      "lat": -33.86785,
-      "lon": 151.20732,
-      "country_code": "AU",
-      "citations": 18
     }
   ],
   "disciplines": [
     {
       "name": "Chemistry",
-      "count": 1890,
+      "count": 1911,
       "color": "#6E4B2A"
     },
     {
       "name": "Biochemistry, Genetics and Molecular Biology",
-      "count": 1772,
+      "count": 1785,
       "color": "#5C6E4A"
     },
     {
       "name": "Medicine",
-      "count": 683,
+      "count": 684,
       "color": "#B07C39"
     },
     {
       "name": "Immunology and Microbiology",
-      "count": 371,
+      "count": 373,
       "color": "#9A553B"
     },
     {
       "name": "Agricultural and Biological Sciences",
-      "count": 354,
+      "count": 355,
       "color": "#7A6A3E"
     },
     {
       "name": "Pharmacology, Toxicology and Pharmaceutics",
-      "count": 302,
+      "count": 304,
       "color": "#47603F"
     },
     {
       "name": "Environmental Science",
-      "count": 93,
+      "count": 92,
       "color": "#8E9A6E"
     },
     {
@@ -2457,7 +2457,7 @@
     },
     {
       "name": "Nursing",
-      "count": 21,
+      "count": 22,
       "color": "#7E4A2E"
     },
     {
@@ -2477,7 +2477,7 @@
     },
     {
       "name": "Other Disciplines",
-      "count": 54,
+      "count": 55,
       "includes": [
         "Arts and Humanities (9)",
         "Decision Sciences (7)",
@@ -2485,7 +2485,7 @@
         "Business, Management and Accounting (7)",
         "Physics and Astronomy (6)",
         "Health Professions (5)",
-        "Energy (4)",
+        "Energy (5)",
         "Dentistry (4)",
         "Veterinary (3)",
         "Economics, Econometrics and Finance (2)"
@@ -2500,7 +2500,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 678,
+        "citations": 679,
         "year": 2020
       },
       {
@@ -2516,7 +2516,7 @@
         "label": "Value of Using Multiple Proteases for Large-Scale Mass Spectrometry-Based Proteomics",
         "field": "Chemistry",
         "type": "core",
-        "citations": 551,
+        "citations": 563,
         "year": 2010
       },
       {
@@ -2524,7 +2524,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 422,
+        "citations": 425,
         "year": 2022
       },
       {
@@ -2532,7 +2532,7 @@
         "label": "A dynamic model of proteome changes reveals new roles for transcript alteration in yeast",
         "field": "Chemistry",
         "type": "core",
-        "citations": 323,
+        "citations": 324,
         "year": 2011
       },
       {
@@ -2540,7 +2540,7 @@
         "label": "Proteomic and phosphoproteomic comparison of human ES and iPS cells",
         "field": "Chemistry",
         "type": "core",
-        "citations": 281,
+        "citations": 285,
         "year": 2011
       },
       {
@@ -2548,7 +2548,7 @@
         "label": "Gas-phase purification enables accurate, multiplexed proteome quantification with isobaric tagging",
         "field": "Chemistry",
         "type": "core",
-        "citations": 263,
+        "citations": 266,
         "year": 2011
       },
       {
@@ -2556,8 +2556,16 @@
         "label": "Human embryonic stem cell phosphoproteome revealed by electron transfer dissociation tandem mass spectrometry",
         "field": "Chemistry",
         "type": "core",
-        "citations": 206,
+        "citations": 207,
         "year": 2009
+      },
+      {
+        "id": "W2090402744",
+        "label": "A Proteomics Search Algorithm Specifically Designed for High-Resolution Tandem Mass Spectra",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 173,
+        "year": 2013
       },
       {
         "id": "W4210458810",
@@ -2568,19 +2576,11 @@
         "year": 2022
       },
       {
-        "id": "W2090402744",
-        "label": "A Proteomics Search Algorithm Specifically Designed for High-Resolution Tandem Mass Spectra",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 171,
-        "year": 2013
-      },
-      {
         "id": "W2050357198",
         "label": "COMPASS: A suite of pre\u2010 and post\u2010search proteomics software tools for OMSSA",
         "field": "Chemistry",
         "type": "core",
-        "citations": 159,
+        "citations": 161,
         "year": 2011
       },
       {
@@ -2592,6 +2592,14 @@
         "year": 2009
       },
       {
+        "id": "W2023959652",
+        "label": "Top-Down Proteomics on a Chromatographic Time Scale Using Linear Ion Trap Fourier Transform Hybrid Mass Spectrometers",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 142,
+        "year": 2007
+      },
+      {
         "id": "W2808840038",
         "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
         "field": "Immunology and Microbiology",
@@ -2600,19 +2608,11 @@
         "year": 2018
       },
       {
-        "id": "W2023959652",
-        "label": "Top-Down Proteomics on a Chromatographic Time Scale Using Linear Ion Trap Fourier Transform Hybrid Mass Spectrometers",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 138,
-        "year": 2007
-      },
-      {
         "id": "W4281483346",
         "label": "Defining mitochondrial protein functions through deep multiomic profiling",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 117,
+        "citations": 118,
         "year": 2022
       },
       {
@@ -2620,7 +2620,7 @@
         "label": "RNA\u2013protein analysis using a conditional CRISPR nuclease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 100,
+        "citations": 103,
         "year": 2013
       },
       {
@@ -2668,7 +2668,7 @@
         "label": "Tandem Mass Spectrometry with Ultrahigh Mass Accuracy Clarifies Peptide Identification by Database Retrieval",
         "field": "Chemistry",
         "type": "core",
-        "citations": 78,
+        "citations": 79,
         "year": 2008
       },
       {
@@ -2684,7 +2684,7 @@
         "label": "Post-acquisition ETD spectral processing for increased peptide identifications",
         "field": "Chemistry",
         "type": "core",
-        "citations": 67,
+        "citations": 68,
         "year": 2009
       },
       {
@@ -2696,20 +2696,20 @@
         "year": 2013
       },
       {
+        "id": "W2201786733",
+        "label": "Global Identification of Protein Post-translational Modifications in a Single-Pass Database Search",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 61,
+        "year": 2015
+      },
+      {
         "id": "W2038769454",
         "label": "Instant spectral assignment for advanced decision tree-driven mass spectrometry",
         "field": "Chemistry",
         "type": "core",
         "citations": 60,
         "year": 2012
-      },
-      {
-        "id": "W2201786733",
-        "label": "Global Identification of Protein Post-translational Modifications in a Single-Pass Database Search",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 60,
-        "year": 2015
       },
       {
         "id": "W3087677418",
@@ -2720,6 +2720,14 @@
         "year": 2020
       },
       {
+        "id": "W2085801821",
+        "label": "Analysis of Tandem Mass Spectra by FTMS for Improved Large-Scale Proteomics with Superior Protein Quantification",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 50,
+        "year": 2009
+      },
+      {
         "id": "W2991684904",
         "label": "Bedtoolsr: An R package for genomic data analysis and manipulation",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -2728,28 +2736,20 @@
         "year": 2019
       },
       {
+        "id": "W2050184779",
+        "label": "Top-down proteomics reveals novel protein forms expressed in methanosarcina acetivorans",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 49,
+        "year": 2009
+      },
+      {
         "id": "W2513652105",
         "label": "Lack of Overt Genome Reduction in the Bryostatin-Producing Bryozoan Symbiont \u201cCandidatus Endobugula sertula\u201d",
         "field": "Immunology and Microbiology",
         "type": "core",
         "citations": 48,
         "year": 2016
-      },
-      {
-        "id": "W2085801821",
-        "label": "Analysis of Tandem Mass Spectra by FTMS for Improved Large-Scale Proteomics with Superior Protein Quantification",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 48,
-        "year": 2009
-      },
-      {
-        "id": "W2050184779",
-        "label": "Top-down proteomics reveals novel protein forms expressed in methanosarcina acetivorans",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 48,
-        "year": 2009
       },
       {
         "id": "W2769473564",
@@ -2816,20 +2816,20 @@
         "year": 2016
       },
       {
+        "id": "W2085971372",
+        "label": "Characterizing Peptide Neutral Losses Induced by Negative Electron-Transfer Dissociation (NETD)",
+        "field": "Chemistry",
+        "type": "core",
+        "citations": 34,
+        "year": 2012
+      },
+      {
         "id": "W2044343668",
         "label": "Versatile Online\u2212Offline Engine for Automated Acquisition of High-Resolution Tandem Mass Spectra",
         "field": "Chemistry",
         "type": "core",
         "citations": 33,
         "year": 2008
-      },
-      {
-        "id": "W2085971372",
-        "label": "Characterizing Peptide Neutral Losses Induced by Negative Electron-Transfer Dissociation (NETD)",
-        "field": "Chemistry",
-        "type": "core",
-        "citations": 32,
-        "year": 2012
       },
       {
         "id": "W1973819072",
@@ -2840,20 +2840,20 @@
         "year": 2008
       },
       {
+        "id": "W2621511283",
+        "label": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
+        "field": "Immunology and Microbiology",
+        "type": "core",
+        "citations": 25,
+        "year": 2017
+      },
+      {
         "id": "W3116953854",
         "label": "Conserved bacterial genomes from two geographically isolated peritidal stromatolite formations shed light on potential functional guilds",
         "field": "Environmental Science",
         "type": "core",
         "citations": 25,
         "year": 2020
-      },
-      {
-        "id": "W2621511283",
-        "label": "Interpreting Microbial Biosynthesis in the Genomic Age: Biological and Practical Considerations",
-        "field": "Immunology and Microbiology",
-        "type": "core",
-        "citations": 24,
-        "year": 2017
       },
       {
         "id": "W2741464576",
@@ -2932,7 +2932,7 @@
         "label": "Using machine learning approaches for multi-omics data analysis: A review",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1039,
+        "citations": 1042,
         "year": 2021
       },
       {
@@ -2940,7 +2940,7 @@
         "label": "ZBP1-dependent inflammatory cell death, PANoptosis, and cytokine storm disrupt IFN therapeutic efficacy during coronavirus infection",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 367,
+        "citations": 370,
         "year": 2022
       },
       {
@@ -2956,7 +2956,7 @@
         "label": "Long-term perturbation of the peripheral immune system months after SARS-CoV-2 infection",
         "field": "Medicine",
         "type": "citing",
-        "citations": 322,
+        "citations": 324,
         "year": 2022
       },
       {
@@ -2964,15 +2964,7 @@
         "label": "Dexamethasone modulates immature neutrophils and interferon programming in severe COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 275,
-        "year": 2021
-      },
-      {
-        "id": "W3156257761",
-        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
-        "field": "Immunology and Microbiology",
-        "type": "citing",
-        "citations": 238,
+        "citations": 278,
         "year": 2021
       },
       {
@@ -2980,15 +2972,23 @@
         "label": "Comprehensive Overview of Bottom-Up Proteomics Using Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 238,
+        "citations": 244,
         "year": 2024
+      },
+      {
+        "id": "W3156257761",
+        "label": "Functional landscape of SARS-CoV-2 cellular restriction",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 239,
+        "year": 2021
       },
       {
         "id": "W3173003579",
         "label": "Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19",
         "field": "Medicine",
         "type": "citing",
-        "citations": 226,
+        "citations": 227,
         "year": 2021
       },
       {
@@ -2996,7 +2996,7 @@
         "label": "Antimicrobial resistance: Impacts, challenges, and future prospects",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1700,
+        "citations": 1714,
         "year": 2024
       },
       {
@@ -3004,7 +3004,7 @@
         "label": "Artificial intelligence in drug development",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 656,
+        "citations": 663,
         "year": 2025
       },
       {
@@ -3012,7 +3012,7 @@
         "label": "Machine learning in preclinical drug discovery",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 255,
+        "citations": 258,
         "year": 2024
       },
       {
@@ -3020,7 +3020,7 @@
         "label": "A guide to artificial intelligence for cancer researchers",
         "field": "Medicine",
         "type": "citing",
-        "citations": 251,
+        "citations": 253,
         "year": 2024
       },
       {
@@ -3028,7 +3028,7 @@
         "label": "Antimicrobial resistance crisis: could artificial intelligence be the solution?",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 204,
+        "citations": 207,
         "year": 2024
       },
       {
@@ -3044,7 +3044,7 @@
         "label": "Emerging and reemerging infectious diseases: global trends and new strategies for their prevention and control",
         "field": "Medicine",
         "type": "citing",
-        "citations": 142,
+        "citations": 143,
         "year": 2024
       },
       {
@@ -3052,7 +3052,7 @@
         "label": "The role of artificial intelligence and machine learning in predicting and combating antimicrobial resistance",
         "field": "Medicine",
         "type": "citing",
-        "citations": 139,
+        "citations": 141,
         "year": 2025
       },
       {
@@ -3060,7 +3060,7 @@
         "label": "Protein Analysis by Shotgun/Bottom-up Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1759,
+        "citations": 1790,
         "year": 2013
       },
       {
@@ -3068,7 +3068,7 @@
         "label": "MS-GF+ makes progress towards a universal database search tool for proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1179,
+        "citations": 1196,
         "year": 2014
       },
       {
@@ -3076,7 +3076,7 @@
         "label": "Comparative Proteomic Analysis of Eleven Common Cell Lines Reveals Ubiquitous but Varying Expression of Most Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 884,
+        "citations": 893,
         "year": 2012
       },
       {
@@ -3084,7 +3084,7 @@
         "label": "Estimating the total number of phosphoproteins and phosphorylation sites in eukaryotic proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 787,
+        "citations": 793,
         "year": 2017
       },
       {
@@ -3092,7 +3092,7 @@
         "label": "Peptidomic discovery of short open reading frame\u2013encoded peptides in human cells",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 736,
+        "citations": 741,
         "year": 2012
       },
       {
@@ -3100,7 +3100,7 @@
         "label": "The One Hour Yeast Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 586,
+        "citations": 595,
         "year": 2013
       },
       {
@@ -3108,7 +3108,7 @@
         "label": "Six alternative proteases for mass spectrometry\u2013based proteomics beyond trypsin",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 539,
+        "citations": 546,
         "year": 2016
       },
       {
@@ -3116,7 +3116,7 @@
         "label": "Proteomics: a pragmatic perspective",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 506,
+        "citations": 514,
         "year": 2010
       },
       {
@@ -3124,7 +3124,7 @@
         "label": "Emu: species-level microbial community profiling of full-length 16S rRNA Oxford Nanopore sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 463,
+        "citations": 470,
         "year": 2022
       },
       {
@@ -3132,7 +3132,7 @@
         "label": "Biosynthetic potential of the global ocean microbiome",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 441,
+        "citations": 443,
         "year": 2022
       },
       {
@@ -3140,7 +3140,7 @@
         "label": "Genomic surveillance for antimicrobial resistance \u2014 a One Health perspective",
         "field": "Medicine",
         "type": "citing",
-        "citations": 430,
+        "citations": 433,
         "year": 2023
       },
       {
@@ -3148,7 +3148,7 @@
         "label": "Metagenomics of Parkinson\u2019s disease implicates the gut microbiome in multiple disease mechanisms",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 387,
+        "citations": 389,
         "year": 2022
       },
       {
@@ -3156,7 +3156,7 @@
         "label": "A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 265,
+        "citations": 267,
         "year": 2021
       },
       {
@@ -3164,7 +3164,7 @@
         "label": "Standardized multi-omics of Earth\u2019s microbiomes reveals microbial and metabolite diversity",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 250,
+        "citations": 252,
         "year": 2022
       },
       {
@@ -3172,7 +3172,7 @@
         "label": "A deep siamese neural network improves metagenome-assembled genomes in microbiome datasets across different environments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 243,
+        "citations": 244,
         "year": 2022
       },
       {
@@ -3180,7 +3180,7 @@
         "label": "Comprehensive taxonomic identification of microbial species in metagenomic data using SingleM and Sandpiper",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 235,
+        "citations": 238,
         "year": 2025
       },
       {
@@ -3188,7 +3188,7 @@
         "label": "Insights into the regulation of protein abundance from proteomic and transcriptomic analyses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 4892,
+        "citations": 4959,
         "year": 2012
       },
       {
@@ -3196,7 +3196,7 @@
         "label": "On the Dependency of Cellular Protein Levels on mRNA Abundance",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 3706,
+        "citations": 3746,
         "year": 2016
       },
       {
@@ -3204,7 +3204,7 @@
         "label": "Parallel Reaction Monitoring for High Resolution and High Mass Accuracy Quantitative, Targeted Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1417,
+        "citations": 1436,
         "year": 2012
       },
       {
@@ -3212,7 +3212,7 @@
         "label": "The quantitative and condition-dependent Escherichia coli proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 822,
+        "citations": 836,
         "year": 2016
       },
       {
@@ -3220,7 +3220,7 @@
         "label": "Relationship between differentially expressed mRNA and mRNA-protein correlations in a xenograft model system",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 753,
+        "citations": 769,
         "year": 2015
       },
       {
@@ -3228,7 +3228,7 @@
         "label": "Unification of Protein Abundance Datasets Yields a Quantitative Saccharomyces cerevisiae Proteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 561,
+        "citations": 574,
         "year": 2018
       },
       {
@@ -3236,7 +3236,7 @@
         "label": "Dissecting DNA damage response pathways by analysing protein localization and abundance changes during DNA replication stress",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 557,
+        "citations": 570,
         "year": 2012
       },
       {
@@ -3244,7 +3244,7 @@
         "label": "Comet: An open\u2010source MS / MS sequence database search tool",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1609,
+        "citations": 1625,
         "year": 2012
       },
       {
@@ -3252,7 +3252,7 @@
         "label": "EBSeq: an empirical Bayes hierarchical model for inference in RNA-seq experiments",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1451,
+        "citations": 1465,
         "year": 2013
       },
       {
@@ -3260,7 +3260,7 @@
         "label": "PINK1 phosphorylates ubiquitin to activate Parkin E3 ubiquitin ligase activity",
         "field": "Medicine",
         "type": "citing",
-        "citations": 1409,
+        "citations": 1419,
         "year": 2014
       },
       {
@@ -3268,7 +3268,7 @@
         "label": "Next-generation proteomics: towards an integrative view of proteome dynamics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 881,
+        "citations": 900,
         "year": 2012
       },
       {
@@ -3276,7 +3276,7 @@
         "label": "Calorie Restriction and SIRT3 Trigger Global Reprogramming of the Mitochondrial Protein Acetylome",
         "field": "Medicine",
         "type": "citing",
-        "citations": 687,
+        "citations": 695,
         "year": 2012
       },
       {
@@ -3284,7 +3284,7 @@
         "label": "Increasing the Multiplexing Capacity of TMTs Using Reporter Ion Isotopologues with Isobaric Masses",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 637,
+        "citations": 646,
         "year": 2012
       },
       {
@@ -3292,7 +3292,7 @@
         "label": "Mechanisms and models of somatic cell reprogramming",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 497,
+        "citations": 499,
         "year": 2013
       },
       {
@@ -3300,7 +3300,7 @@
         "label": "Toward a Comprehensive Characterization of a Human Cancer Cell Phosphoproteome",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 487,
+        "citations": 497,
         "year": 2012
       },
       {
@@ -3308,7 +3308,7 @@
         "label": "MultiNotch MS3 Enables Accurate, Sensitive, and Multiplexed Detection of Differential Expression across Cancer Cell Line Proteomes",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 1291,
+        "citations": 1295,
         "year": 2014
       },
       {
@@ -3316,7 +3316,7 @@
         "label": "Quantitative mass spectrometry in proteomics: critical review update from 2007 to the present",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 941,
+        "citations": 963,
         "year": 2012
       },
       {
@@ -3324,7 +3324,7 @@
         "label": "Isobaric Labeling-Based Relative Quantification in Shotgun Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 663,
+        "citations": 678,
         "year": 2014
       },
       {
@@ -3332,7 +3332,7 @@
         "label": "Reproducible workflow for multiplexed deep-scale proteome and phosphoproteome analysis of tumor tissues by liquid chromatography\u2013mass spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 503,
+        "citations": 508,
         "year": 2018
       },
       {
@@ -3340,7 +3340,7 @@
         "label": "Decoding signalling networks by mass spectrometry-based proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 646,
+        "citations": 662,
         "year": 2010
       },
       {
@@ -3348,7 +3348,7 @@
         "label": "System-Wide Temporal Characterization of the Proteome and Phosphoproteome of Human Embryonic Stem Cell Differentiation",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 505,
+        "citations": 514,
         "year": 2011
       },
       {
@@ -3356,7 +3356,7 @@
         "label": "Integrated Analysis of Transcriptomic and Proteomic Data",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 503,
+        "citations": 510,
         "year": 2013
       },
       {
@@ -3364,7 +3364,7 @@
         "label": "Protein post-translational modifications and regulation of pluripotency in human stem cells",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 479,
+        "citations": 489,
         "year": 2013
       },
       {
@@ -3372,7 +3372,7 @@
         "label": "Modification\u2010specific proteomics: Strategies for characterization of post\u2010translational modifications using enrichment techniques",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 436,
+        "citations": 443,
         "year": 2009
       },
       {
@@ -3380,15 +3380,63 @@
         "label": "Large-Scale Comparative Phosphoproteomics Identifies Conserved Phosphorylation Sites in Plants",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 414,
+        "citations": 419,
         "year": 2010
+      },
+      {
+        "id": "W2730255373",
+        "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 873,
+        "year": 2017
+      },
+      {
+        "id": "W3199725740",
+        "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 657,
+        "year": 2021
+      },
+      {
+        "id": "W2087934409",
+        "label": "MS Amanda, a Universal Identification Algorithm Optimized for High Accuracy Tandem Mass Spectra",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 537,
+        "year": 2014
+      },
+      {
+        "id": "W2587003776",
+        "label": "Serine ADP-Ribosylation Depends on HPF1",
+        "field": "Medicine",
+        "type": "citing",
+        "citations": 389,
+        "year": 2017
+      },
+      {
+        "id": "W2559315320",
+        "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 329,
+        "year": 2016
+      },
+      {
+        "id": "W3048655151",
+        "label": "Identification of modified peptides using localization-aware open search",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 320,
+        "year": 2020
       },
       {
         "id": "W4311086202",
         "label": "K27M in canonical and noncanonical H3 variants occurs in distinct oligodendroglial cell lineages in brain midline gliomas",
         "field": "Medicine",
         "type": "citing",
-        "citations": 162,
+        "citations": 163,
         "year": 2022
       },
       {
@@ -3432,6 +3480,14 @@
         "year": 2024
       },
       {
+        "id": "W4401393004",
+        "label": "Disparate Pathways for Extrachromosomal DNA Biogenesis and Genomic DNA Repair",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 45,
+        "year": 2024
+      },
+      {
         "id": "W4410309258",
         "label": "Three-dimensional genome landscape of primary human cancers",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -3440,67 +3496,11 @@
         "year": 2025
       },
       {
-        "id": "W4401393004",
-        "label": "Disparate Pathways for Extrachromosomal DNA Biogenesis and Genomic DNA Repair",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 44,
-        "year": 2024
-      },
-      {
-        "id": "W2730255373",
-        "label": "The Skyline ecosystem: Informatics for quantitative mass spectrometry proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 866,
-        "year": 2017
-      },
-      {
-        "id": "W3199725740",
-        "label": "Proteogenomic characterization of pancreatic ductal adenocarcinoma",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 657,
-        "year": 2021
-      },
-      {
-        "id": "W2087934409",
-        "label": "MS Amanda, a Universal Identification Algorithm Optimized for High Accuracy Tandem Mass Spectra",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 525,
-        "year": 2014
-      },
-      {
-        "id": "W2587003776",
-        "label": "Serine ADP-Ribosylation Depends on HPF1",
-        "field": "Medicine",
-        "type": "citing",
-        "citations": 386,
-        "year": 2017
-      },
-      {
-        "id": "W2559315320",
-        "label": "Phosphoribosylation of Ubiquitin Promotes Serine Ubiquitination and Impairs Conventional Ubiquitination",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 322,
-        "year": 2016
-      },
-      {
-        "id": "W3048655151",
-        "label": "Identification of modified peptides using localization-aware open search",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 317,
-        "year": 2020
-      },
-      {
         "id": "W2191641478",
         "label": "Meta- and Orthogonal Integration of Influenza \u201cOMICs\u201d Data Defines a Role for UBR4 in Virus Budding",
         "field": "Medicine",
         "type": "citing",
-        "citations": 912,
+        "citations": 919,
         "year": 2015
       },
       {
@@ -3508,7 +3508,7 @@
         "label": "Multidimensional proteomics for cell biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 465,
+        "citations": 471,
         "year": 2015
       },
       {
@@ -3516,7 +3516,7 @@
         "label": "A Single Kinase Generates the Majority of the Secreted Phosphoproteome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 378,
+        "citations": 385,
         "year": 2015
       },
       {
@@ -3524,7 +3524,7 @@
         "label": "Extended Multiplexing of Tandem Mass Tags (TMT) Labeling Reveals Age and High Fat Diet Specific Proteome Changes in Mouse Epididymal Adipose Tissue",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 370,
+        "citations": 373,
         "year": 2017
       },
       {
@@ -3540,7 +3540,7 @@
         "label": "Transport and Metabolism in Legume-Rhizobia Symbioses",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 1039,
+        "citations": 1048,
         "year": 2013
       },
       {
@@ -3548,7 +3548,7 @@
         "label": "Advances in Omics and Bioinformatics Tools for Systems Analyses of Plant Functions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 264,
+        "citations": 267,
         "year": 2011
       },
       {
@@ -3556,7 +3556,7 @@
         "label": "Recent Advances in Carbon and Nitrogen Metabolism in C3 Plants",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 257,
+        "citations": 259,
         "year": 2020
       },
       {
@@ -3564,7 +3564,7 @@
         "label": "Systems biology-based approaches toward understanding drought tolerance in food crops",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 225,
+        "citations": 227,
         "year": 2012
       },
       {
@@ -3572,7 +3572,7 @@
         "label": "IPD3 Controls the Formation of Nitrogen-Fixing Symbiosomes in Pea and Medicago Spp.",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 195,
+        "citations": 196,
         "year": 2011
       },
       {
@@ -3580,7 +3580,7 @@
         "label": "Proteomics and Metabolomics: Two Emerging Areas for Legume Improvement",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 191,
+        "citations": 192,
         "year": 2015
       },
       {
@@ -3588,15 +3588,79 @@
         "label": "Deep Sequencing of the Medicago truncatula Root Transcriptome Reveals a Massive and Early Interaction between Nodulation Factor and Ethylene Signals",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 188,
+        "citations": 190,
         "year": 2015
+      },
+      {
+        "id": "W2003261719",
+        "label": "Mass spectrometry for proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 985,
+        "year": 2008
+      },
+      {
+        "id": "W2012671659",
+        "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 742,
+        "year": 2011
+      },
+      {
+        "id": "W2429591244",
+        "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 655,
+        "year": 2016
+      },
+      {
+        "id": "W2070948666",
+        "label": "Top Down proteomics: Facts and perspectives",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 615,
+        "year": 2014
+      },
+      {
+        "id": "W2105889769",
+        "label": "Precision proteomics: The case for high resolution and high mass accuracy",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 510,
+        "year": 2008
+      },
+      {
+        "id": "W2085010866",
+        "label": "High-Resolution Mass Spectrometers",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 477,
+        "year": 2008
+      },
+      {
+        "id": "W2066928228",
+        "label": "Ultra High Resolution Linear Ion Trap Orbitrap Mass Spectrometer (Orbitrap Elite) Facilitates Top Down LC MS/MS and Versatile Peptide Fragmentation Modes",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 447,
+        "year": 2011
+      },
+      {
+        "id": "W2170892735",
+        "label": "High-Throughput Proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 373,
+        "year": 2014
       },
       {
         "id": "W2994786999",
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 361,
+        "citations": 362,
         "year": 2019
       },
       {
@@ -3604,7 +3668,7 @@
         "label": "Burkholderia as a Source of Natural Products",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 163,
+        "citations": 164,
         "year": 2019
       },
       {
@@ -3612,7 +3676,7 @@
         "label": "A Bacterial Symbiont Protects Honey Bees from Fungal Disease",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 147,
+        "citations": 148,
         "year": 2021
       },
       {
@@ -3620,7 +3684,7 @@
         "label": "Impact of intraspecific variation in insect microbiomes on host phenotype and evolution",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 124,
+        "citations": 125,
         "year": 2023
       },
       {
@@ -3652,79 +3716,15 @@
         "label": "Relevance of microbial symbiosis to insect behavior",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2020
-      },
-      {
-        "id": "W2003261719",
-        "label": "Mass spectrometry for proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 961,
-        "year": 2008
-      },
-      {
-        "id": "W2012671659",
-        "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 733,
-        "year": 2011
-      },
-      {
-        "id": "W2429591244",
-        "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 649,
-        "year": 2016
-      },
-      {
-        "id": "W2070948666",
-        "label": "Top Down proteomics: Facts and perspectives",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 601,
-        "year": 2014
-      },
-      {
-        "id": "W2105889769",
-        "label": "Precision proteomics: The case for high resolution and high mass accuracy",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 505,
-        "year": 2008
-      },
-      {
-        "id": "W2085010866",
-        "label": "High-Resolution Mass Spectrometers",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 472,
-        "year": 2008
-      },
-      {
-        "id": "W2066928228",
-        "label": "Ultra High Resolution Linear Ion Trap Orbitrap Mass Spectrometer (Orbitrap Elite) Facilitates Top Down LC MS/MS and Versatile Peptide Fragmentation Modes",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 438,
-        "year": 2011
-      },
-      {
-        "id": "W2170892735",
-        "label": "High-Throughput Proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 368,
-        "year": 2014
       },
       {
         "id": "W4398231688",
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 583,
+        "citations": 585,
         "year": 2024
       },
       {
@@ -3732,7 +3732,7 @@
         "label": "Mass spectrometry\u2010based high\u2010throughput proteomics and its role in biomedical studies and systems biology",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 152,
+        "citations": 154,
         "year": 2022
       },
       {
@@ -3740,7 +3740,7 @@
         "label": "Determinants, maintenance, and function of organellar pH",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 139,
+        "citations": 140,
         "year": 2022
       },
       {
@@ -3748,7 +3748,7 @@
         "label": "Coenzyme Q biochemistry and biosynthesis",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 139,
+        "citations": 140,
         "year": 2023
       },
       {
@@ -3756,7 +3756,7 @@
         "label": "The mitochondrial multi-omic response to exercise training across rat tissues",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2024
       },
       {
@@ -3764,7 +3764,7 @@
         "label": "The NLRX1-SLC39A7 complex orchestrates mitochondrial dynamics and mitophagy to rejuvenate intervertebral disc by modulating mitochondrial Zn 2+ trafficking",
         "field": "Medicine",
         "type": "citing",
-        "citations": 95,
+        "citations": 97,
         "year": 2023
       },
       {
@@ -3772,7 +3772,7 @@
         "label": "Instrumentation at the Leading Edge of Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 95,
+        "citations": 96,
         "year": 2024
       },
       {
@@ -3788,7 +3788,7 @@
         "label": "Biology and Applications of CRISPR Systems: Harnessing Nature\u2019s Toolbox for Genome Engineering",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1110,
+        "citations": 1124,
         "year": 2016
       },
       {
@@ -3796,7 +3796,7 @@
         "label": "Programmable RNA recognition and cleavage by CRISPR/Cas9",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 683,
+        "citations": 689,
         "year": 2014
       },
       {
@@ -3812,7 +3812,7 @@
         "label": "Methods to study RNA\u2013protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 421,
+        "citations": 424,
         "year": 2019
       },
       {
@@ -3820,7 +3820,7 @@
         "label": "Non-coding RNA: a new frontier in regulatory biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 283,
+        "citations": 285,
         "year": 2014
       },
       {
@@ -3828,7 +3828,7 @@
         "label": "CRISPR/Cas9 and Genome Editing in Drosophila",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 251,
+        "citations": 255,
         "year": 2013
       },
       {
@@ -3836,7 +3836,7 @@
         "label": "Methods for comprehensive experimental identification of RNA-protein interactions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 191,
+        "citations": 193,
         "year": 2014
       },
       {
@@ -3844,7 +3844,7 @@
         "label": "An optimized streptavidin-binding RNA aptamer for purification of ribonucleoprotein complexes identifies novel ARE-binding proteins",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 171,
+        "citations": 173,
         "year": 2013
       },
       {
@@ -3860,7 +3860,7 @@
         "label": "Multi-omics microsampling for the profiling of lifestyle-associated changes in health",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 137,
+        "citations": 138,
         "year": 2023
       },
       {
@@ -3876,7 +3876,7 @@
         "label": "Reviewing the metabolome coverage provided by LC-MS: Focus on sample preparation and chromatography-A tutorial",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 105,
+        "citations": 107,
         "year": 2020
       },
       {
@@ -3884,7 +3884,7 @@
         "label": "Decoding aging clocks: New insights from metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2024
       },
       {
@@ -3892,7 +3892,7 @@
         "label": "Toilet-based continuous health monitoring using urine",
         "field": "Engineering",
         "type": "citing",
-        "citations": 86,
+        "citations": 87,
         "year": 2022
       },
       {
@@ -3900,7 +3900,7 @@
         "label": "Psychobiotics and the Microbiota\u2013Gut\u2013Brain Axis: Where Do We Go from Here?",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 68,
+        "citations": 72,
         "year": 2024
       },
       {
@@ -3916,7 +3916,7 @@
         "label": "Oxford Nanopore R10.4 long-read sequencing enables the generation of near-finished bacterial genomes from pure cultures and metagenomes without short-read or reference polishing",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 564,
+        "citations": 569,
         "year": 2022
       },
       {
@@ -3924,7 +3924,7 @@
         "label": "Metagenomic approaches in microbial ecology: an update on whole-genome and marker gene sequencing analyses",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 451,
+        "citations": 455,
         "year": 2020
       },
       {
@@ -3932,7 +3932,7 @@
         "label": "Hydrodynamic disturbance controls microbial community assembly and biogeochemical processes in coastal sediments",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 170,
+        "citations": 171,
         "year": 2021
       },
       {
@@ -3940,7 +3940,7 @@
         "label": "Non-photosynthetic predators are sister to red algae",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 160,
+        "citations": 161,
         "year": 2019
       },
       {
@@ -3948,7 +3948,7 @@
         "label": "Evaluating metagenomics tools for genome binning with real metagenomic datasets and CAMI datasets",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 117,
+        "citations": 119,
         "year": 2020
       },
       {
@@ -3964,7 +3964,7 @@
         "label": "ChatGPT Chemistry Assistant for Text Mining and the Prediction of MOF Synthesis",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 652,
+        "citations": 657,
         "year": 2023
       },
       {
@@ -3972,7 +3972,7 @@
         "label": "Machine Learning Methods for Small Data Challenges in Molecular Science",
         "field": "Materials Science",
         "type": "citing",
-        "citations": 611,
+        "citations": 613,
         "year": 2023
       },
       {
@@ -3980,7 +3980,7 @@
         "label": "Pre-training Molecular Graph Representation with 3D Geometry",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 405,
+        "citations": 436,
         "year": 2021
       },
       {
@@ -3988,7 +3988,7 @@
         "label": "Deep learning methods for molecular representation and property prediction",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 330,
+        "citations": 331,
         "year": 2022
       },
       {
@@ -3996,7 +3996,7 @@
         "label": "DeepDDS: deep graph neural network with attention mechanism to predict synergistic drug combinations",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 312,
+        "citations": 315,
         "year": 2021
       },
       {
@@ -4004,7 +4004,7 @@
         "label": "Artificial intelligence in drug discovery: applications and techniques",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 279,
+        "citations": 282,
         "year": 2021
       },
       {
@@ -4012,7 +4012,7 @@
         "label": "Concepts and applications of chemical fingerprint for hit and lead screening",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "citing",
-        "citations": 167,
+        "citations": 171,
         "year": 2022
       },
       {
@@ -4020,7 +4020,7 @@
         "label": "Horizontal gene transfer and adaptive evolution in bacteria",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 1008,
+        "citations": 1021,
         "year": 2021
       },
       {
@@ -4028,7 +4028,7 @@
         "label": "Microbial evolution and transitions along the parasite\u2013mutualist continuum",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 407,
+        "citations": 411,
         "year": 2021
       },
       {
@@ -4036,7 +4036,7 @@
         "label": "Dynamics of Insect\u2013Microbiome Interaction Influence Host and Microbial Symbiont",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 248,
+        "citations": 251,
         "year": 2020
       },
       {
@@ -4060,7 +4060,7 @@
         "label": "Commensal inter-bacterial interactions shaping the microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 89,
+        "citations": 90,
         "year": 2021
       },
       {
@@ -4076,7 +4076,7 @@
         "label": "Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 338,
+        "citations": 343,
         "year": 2020
       },
       {
@@ -4084,7 +4084,7 @@
         "label": "Enhanced Global Post-translational Modification Discovery with MetaMorpheus",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 279,
+        "citations": 281,
         "year": 2018
       },
       {
@@ -4092,7 +4092,7 @@
         "label": "The Role of Post-Translational Modifications in the Phase Transitions of Intrinsically Disordered Proteins",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 241,
+        "citations": 243,
         "year": 2019
       },
       {
@@ -4100,7 +4100,7 @@
         "label": "Identification and Quantification of Proteoforms by Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 233,
+        "citations": 235,
         "year": 2019
       },
       {
@@ -4108,7 +4108,7 @@
         "label": "Spatiotemporal dissection of the cell cycle with single-cell proteogenomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 224,
+        "citations": 226,
         "year": 2021
       },
       {
@@ -4116,7 +4116,7 @@
         "label": "Interlaboratory Study for Characterizing Monoclonal Antibodies by Top-Down and Middle-Down Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 131,
+        "citations": 132,
         "year": 2020
       },
       {
@@ -4132,7 +4132,7 @@
         "label": "Mapping Extracellular Matrix Proteins in Formalin-Fixed, Paraffin-Embedded Tissues by MALDI Imaging Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 109,
+        "citations": 110,
         "year": 2017
       },
       {
@@ -4140,7 +4140,7 @@
         "label": "Isotopic labeling of terminal amines in complex samples identifies protein N-termini and protease cleavage products",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 607,
+        "citations": 614,
         "year": 2010
       },
       {
@@ -4148,7 +4148,7 @@
         "label": "A mass-tolerant database search identifies a large proportion of unassigned spectra in shotgun proteomics as modified peptides",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 477,
+        "citations": 484,
         "year": 2015
       },
       {
@@ -4156,7 +4156,7 @@
         "label": "High Resolution Mass Spectrometry",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 336,
+        "citations": 340,
         "year": 2012
       },
       {
@@ -4164,7 +4164,7 @@
         "label": "Protein Digestion: An Overview of the Available Techniques and Recent Developments",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 312,
+        "citations": 318,
         "year": 2013
       },
       {
@@ -4172,7 +4172,7 @@
         "label": "In Vivo Residue-specific Histone Methylation Dynamics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 288,
+        "citations": 296,
         "year": 2009
       },
       {
@@ -4180,7 +4180,7 @@
         "label": "The top\u2010down, middle\u2010down, and bottom\u2010up mass spectrometry approaches for characterization of histone variants and their post\u2010translational modifications",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 192,
+        "citations": 195,
         "year": 2013
       },
       {
@@ -4188,23 +4188,23 @@
         "label": "Akkermansia muciniphila: biology, microbial ecology, host interactions and therapeutic potential",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 271,
+        "citations": 276,
         "year": 2024
-      },
-      {
-        "id": "W4381189797",
-        "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 154,
-        "year": 2023
       },
       {
         "id": "W4382344666",
         "label": "Akkermansia muciniphila alleviates high\u2010fat\u2010diet \u2010related metabolic\u2010associated fatty liver disease by modulating gut microbiota and bile acids",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 154,
+        "citations": 156,
+        "year": 2023
+      },
+      {
+        "id": "W4381189797",
+        "label": "A genetic system for Akkermansia muciniphila reveals a role for mucin foraging in gut colonization and host sterol biosynthesis gene expression",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 155,
         "year": 2023
       },
       {
@@ -4212,7 +4212,7 @@
         "label": "A Gpr35-tuned gut microbe-brain metabolic axis regulates depressive-like behavior",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 127,
+        "citations": 128,
         "year": 2024
       },
       {
@@ -4228,7 +4228,7 @@
         "label": "The lipooligosaccharide of the gut symbiont Akkermansia muciniphila exhibits a remarkable structure and TLR signaling capacity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 83,
+        "citations": 84,
         "year": 2024
       },
       {
@@ -4236,7 +4236,7 @@
         "label": "Microbiome mismatches from microbiota transplants lead to persistent off-target metabolic and immunomodulatory effects",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 73,
+        "citations": 75,
         "year": 2025
       },
       {
@@ -4252,7 +4252,7 @@
         "label": "A survey of computational methods and error rate estimation procedures for peptide and protein identification in shotgun proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 625,
+        "citations": 637,
         "year": 2010
       },
       {
@@ -4260,7 +4260,7 @@
         "label": "Naturally Occurring Human Urinary Peptides for Use in Diagnosis of Chronic Kidney Disease",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 569,
+        "citations": 575,
         "year": 2010
       },
       {
@@ -4268,7 +4268,7 @@
         "label": "Simultaneous Glycan-Peptide Characterization Using Hydrophilic Interaction Chromatography and Parallel Fragmentation by CID, Higher Energy Collisional Dissociation, and Electron Transfer Dissociation MS Applied to the N-Linked Glycoproteome of Campylobacter jejuni",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 341,
+        "citations": 342,
         "year": 2010
       },
       {
@@ -4276,7 +4276,7 @@
         "label": "Redox Proteomics: Chemical Principles, Methodological Approaches and Biological/Biomedical Promises",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 287,
+        "citations": 292,
         "year": 2012
       },
       {
@@ -4284,7 +4284,7 @@
         "label": "The Generating Function of CID, ETD, and CID/ETD Pairs of Tandem Mass Spectra: Applications to Database Search",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 251,
+        "citations": 254,
         "year": 2010
       },
       {
@@ -4292,7 +4292,7 @@
         "label": "Phosphoproteomics in the Age of Rapid and Deep Proteome Profiling",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 285,
+        "citations": 293,
         "year": 2015
       },
       {
@@ -4300,7 +4300,7 @@
         "label": "Ion Coalescence of Neutron Encoded TMT 10-Plex Reporter Ions",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 282,
+        "citations": 285,
         "year": 2014
       },
       {
@@ -4308,7 +4308,7 @@
         "label": "Current strategies and findings in clinically relevant post-translational modification-specific proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 179,
+        "citations": 182,
         "year": 2015
       },
       {
@@ -4324,15 +4324,15 @@
         "label": "Biomarker discovery in mass spectrometry\u2010based urinary proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 151,
-        "year": 2015
+        "citations": 153,
+        "year": 2016
       },
       {
         "id": "W1979888290",
         "label": "What Can Proteomics Tell Us About Platelets?",
         "field": "Medicine",
         "type": "citing",
-        "citations": 140,
+        "citations": 142,
         "year": 2014
       },
       {
@@ -4344,11 +4344,51 @@
         "year": 2016
       },
       {
+        "id": "W2607310450",
+        "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 2667,
+        "year": 2017
+      },
+      {
+        "id": "W3093927794",
+        "label": "Evaluation of post-translational modifications in histone proteins: A review on histone modification defects in developmental and neurological disorders",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 249,
+        "year": 2020
+      },
+      {
+        "id": "W2469992557",
+        "label": "Metaproteomic data analysis at a glance: advances in computational microbial community proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 109,
+        "year": 2016
+      },
+      {
+        "id": "W4309164523",
+        "label": "Overview and considerations in bottom-up proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 102,
+        "year": 2023
+      },
+      {
+        "id": "W4220983209",
+        "label": "Thiol-based Oxidative Posttranslational Modifications (OxiPTMs) of Plant Proteins",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 96,
+        "year": 2022
+      },
+      {
         "id": "W752259472",
         "label": "Novor: Real-Time Peptide de Novo Sequencing Software",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 304,
+        "citations": 310,
         "year": 2015
       },
       {
@@ -4356,7 +4396,7 @@
         "label": "Large-Scale Targeted Proteomics Using Internal Standard Triggered-Parallel Reaction Monitoring (IS-PRM)*",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 222,
+        "citations": 224,
         "year": 2015
       },
       {
@@ -4372,48 +4412,8 @@
         "label": "The Role of Electron Transfer Dissociation in Modern Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 190,
+        "citations": 191,
         "year": 2017
-      },
-      {
-        "id": "W2607310450",
-        "label": "MSFragger: ultrafast and comprehensive peptide identification in mass spectrometry\u2013based proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 2637,
-        "year": 2017
-      },
-      {
-        "id": "W3093927794",
-        "label": "Evaluation of post-translational modifications in histone proteins: A review on histone modification defects in developmental and neurological disorders",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 247,
-        "year": 2020
-      },
-      {
-        "id": "W2469992557",
-        "label": "Metaproteomic data analysis at a glance: advances in computational microbial community proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 107,
-        "year": 2016
-      },
-      {
-        "id": "W4309164523",
-        "label": "Overview and considerations in bottom-up proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 101,
-        "year": 2022
-      },
-      {
-        "id": "W4220983209",
-        "label": "Thiol-based Oxidative Posttranslational Modifications (OxiPTMs) of Plant Proteins",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 96,
-        "year": 2022
       },
       {
         "id": "W4285404902",
@@ -4428,7 +4428,7 @@
         "label": "AdipoAtlas: A reference lipidome for human white adipose tissue",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 168,
+        "citations": 170,
         "year": 2021
       },
       {
@@ -4436,7 +4436,7 @@
         "label": "Metabolomics and Lipidomics: Expanding the Molecular Landscape of Exercise Biology",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 157,
+        "citations": 160,
         "year": 2021
       },
       {
@@ -4444,7 +4444,7 @@
         "label": "The phospholipase A2 superfamily as a central hub of bioactive lipids and beyond",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 69,
+        "citations": 70,
         "year": 2023
       },
       {
@@ -4472,11 +4472,51 @@
         "year": 2023
       },
       {
+        "id": "W2026507477",
+        "label": "Probing Native Protein Structures by Chemical Cross-linking, Mass Spectrometry, and Bioinformatics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 527,
+        "year": 2010
+      },
+      {
+        "id": "W2011503307",
+        "label": "Improved Peptide Identification by Targeted Fragmentation Using CID, HCD and ETD on an LTQ-Orbitrap Velos",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 356,
+        "year": 2011
+      },
+      {
+        "id": "W2117903500",
+        "label": "Evaluation of HCD- and CID-type Fragmentation Within Their Respective Detection Platforms For Murine Phosphoproteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 241,
+        "year": 2011
+      },
+      {
+        "id": "W2153368605",
+        "label": "Human Pumilio Proteins Recruit Multiple Deadenylases to Efficiently Repress Messenger RNAs",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 239,
+        "year": 2012
+      },
+      {
+        "id": "W4200122233",
+        "label": "Towards Higher Sensitivity of Mass Spectrometry: A Perspective From the Mass Analyzers",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 198,
+        "year": 2021
+      },
+      {
         "id": "W4291001769",
         "label": "Genomic reconstruction of short-chain fatty acid production by the human gut microbiota",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 139,
+        "citations": 142,
         "year": 2022
       },
       {
@@ -4500,7 +4540,7 @@
         "label": "Genomics-Based Reconstruction and Predictive Profiling of Amino Acid Biosynthesis in the Human Gut Microbiome",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 47,
+        "citations": 48,
         "year": 2022
       },
       {
@@ -4508,7 +4548,7 @@
         "label": "Persistent Genomic Erosion in Whooping Cranes Despite Demographic Recovery",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 28,
+        "citations": 29,
         "year": 2025
       },
       {
@@ -4526,6 +4566,46 @@
         "type": "citing",
         "citations": 24,
         "year": 2024
+      },
+      {
+        "id": "W1992392890",
+        "label": "Multi-dimensional liquid chromatography in proteomics\u2014A review",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 222,
+        "year": 2010
+      },
+      {
+        "id": "W2146482199",
+        "label": "Protein Identification Using Top-Down Spectra",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 167,
+        "year": 2011
+      },
+      {
+        "id": "W2007167393",
+        "label": "Structural Analysis of Intact Monoclonal Antibodies by Electron Transfer Dissociation Mass Spectrometry",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 153,
+        "year": 2011
+      },
+      {
+        "id": "W1554789346",
+        "label": "Chapter 40 Identification and Quantification of Protein Posttranslational Modifications",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 136,
+        "year": 2009
+      },
+      {
+        "id": "W2073051414",
+        "label": "Analysis of Intact Protein Isoforms by Mass Spectrometry",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 123,
+        "year": 2011
       },
       {
         "id": "W2913553075",
@@ -4548,7 +4628,7 @@
         "label": "Scalable synthesis of bryostatin 1 and analogs, adjuvant leads against latent HIV",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 122,
+        "citations": 124,
         "year": 2017
       },
       {
@@ -4556,7 +4636,15 @@
         "label": "Transmission mode is associated with environment type and taxa across bacteria-eukaryote symbioses: a systematic review and meta-analysis",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 110,
+        "citations": 113,
+        "year": 2019
+      },
+      {
+        "id": "W2893448478",
+        "label": "Emerging evolutionary paradigms in antibiotic discovery",
+        "field": "Immunology and Microbiology",
+        "type": "citing",
+        "citations": 100,
         "year": 2019
       },
       {
@@ -4564,111 +4652,23 @@
         "label": "Natural product-derived compounds in clinical trials and drug approvals",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 98,
+        "citations": 99,
         "year": 2026
-      },
-      {
-        "id": "W2893448478",
-        "label": "Emerging evolutionary paradigms in antibiotic discovery",
-        "field": "Immunology and Microbiology",
-        "type": "citing",
-        "citations": 97,
-        "year": 2018
       },
       {
         "id": "W2782169385",
         "label": "Accessing chemical diversity from the uncultivated symbionts of small marine animals",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 97,
+        "citations": 98,
         "year": 2018
-      },
-      {
-        "id": "W2026507477",
-        "label": "Probing Native Protein Structures by Chemical Cross-linking, Mass Spectrometry, and Bioinformatics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 521,
-        "year": 2010
-      },
-      {
-        "id": "W2011503307",
-        "label": "Improved Peptide Identification by Targeted Fragmentation Using CID, HCD and ETD on an LTQ-Orbitrap Velos",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 345,
-        "year": 2011
-      },
-      {
-        "id": "W2117903500",
-        "label": "Evaluation of HCD- and CID-type Fragmentation Within Their Respective Detection Platforms For Murine Phosphoproteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 239,
-        "year": 2011
-      },
-      {
-        "id": "W2153368605",
-        "label": "Human Pumilio Proteins Recruit Multiple Deadenylases to Efficiently Repress Messenger RNAs",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 237,
-        "year": 2012
-      },
-      {
-        "id": "W4200122233",
-        "label": "Towards Higher Sensitivity of Mass Spectrometry: A Perspective From the Mass Analyzers",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 197,
-        "year": 2021
-      },
-      {
-        "id": "W1992392890",
-        "label": "Multi-dimensional liquid chromatography in proteomics\u2014A review",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 219,
-        "year": 2010
-      },
-      {
-        "id": "W2146482199",
-        "label": "Protein Identification Using Top-Down Spectra",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 165,
-        "year": 2011
-      },
-      {
-        "id": "W2007167393",
-        "label": "Structural Analysis of Intact Monoclonal Antibodies by Electron Transfer Dissociation Mass Spectrometry",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 150,
-        "year": 2011
-      },
-      {
-        "id": "W1554789346",
-        "label": "Chapter 40 Identification and Quantification of Protein Posttranslational Modifications",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 134,
-        "year": 2009
-      },
-      {
-        "id": "W2073051414",
-        "label": "Analysis of Intact Protein Isoforms by Mass Spectrometry",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 120,
-        "year": 2011
       },
       {
         "id": "W4210987854",
         "label": "Marine natural products",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 595,
+        "citations": 601,
         "year": 2019
       },
       {
@@ -4676,15 +4676,15 @@
         "label": "Evolutionary dynamics of natural product biosynthesis in bacteria",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 171,
-        "year": 2019
+        "citations": 175,
+        "year": 2020
       },
       {
         "id": "W2950608592",
         "label": "A microbial factory for defensive kahalalides in a tripartite marine symbiosis",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 112,
+        "citations": 115,
         "year": 2019
       },
       {
@@ -4692,7 +4692,7 @@
         "label": "A multiproducer microbiome generates chemical diversity in the marine sponge Mycale hentscheli",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 102,
+        "citations": 103,
         "year": 2020
       },
       {
@@ -4700,7 +4700,7 @@
         "label": "Localized production of defence chemicals by intracellular symbionts of Haliclona sponges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 92,
+        "citations": 95,
         "year": 2019
       },
       {
@@ -4708,7 +4708,7 @@
         "label": "Novel Parallelized Quadrupole/Linear Ion Trap/Orbitrap Tribrid Mass Spectrometer Improving Proteome Coverage and Peptide Identification Rates",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 272,
+        "citations": 277,
         "year": 2013
       },
       {
@@ -4716,7 +4716,7 @@
         "label": "Feasibility of Large-Scale Phosphoproteomics with Higher Energy Collisional Dissociation Fragmentation",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 176,
+        "citations": 184,
         "year": 2010
       },
       {
@@ -4756,7 +4756,7 @@
         "label": "A review on recent developments in mass spectrometry instrumentation and quantitative tools advancing bacterial proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 73,
+        "citations": 74,
         "year": 2013
       },
       {
@@ -4764,7 +4764,7 @@
         "label": "Diversity of biologically active secondary metabolites from endophytic and saprotrophic fungi of the ascomycete order Xylariales",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 243,
+        "citations": 246,
         "year": 2018
       },
       {
@@ -4772,7 +4772,7 @@
         "label": "Endophytic Fungi: Key Insights, Emerging Prospects, and Challenges in Natural Product Drug Discovery",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 239,
+        "citations": 240,
         "year": 2022
       },
       {
@@ -4780,7 +4780,7 @@
         "label": "Endophytic Fungi: A Source of Potential Antifungal Compounds",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 190,
+        "citations": 191,
         "year": 2018
       },
       {
@@ -4788,7 +4788,7 @@
         "label": "Fungal\u2013fungal co-culture: a primer for generating chemical diversity",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 142,
+        "citations": 144,
         "year": 2022
       },
       {
@@ -4796,7 +4796,7 @@
         "label": "Microbial interactions trigger the production of antibiotics",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 134,
+        "citations": 135,
         "year": 2018
       },
       {
@@ -4828,7 +4828,7 @@
         "label": "mMass as a Software Tool for the Annotation of Cyclic Peptide Tandem Mass Spectra",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 338,
+        "citations": 341,
         "year": 2012
       },
       {
@@ -4836,7 +4836,7 @@
         "label": "Peptide Radicals and Cation Radicals in the Gas Phase",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 236,
+        "citations": 238,
         "year": 2013
       },
       {
@@ -4844,7 +4844,7 @@
         "label": "Electron transfer dissociation mass spectrometry in proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 157,
+        "citations": 159,
         "year": 2012
       },
       {
@@ -4852,7 +4852,7 @@
         "label": "Electron transfer dissociation: Effects of cation charge state on product partitioning in ion/ion electron transfer to multiply protonated polypeptides",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 70,
+        "citations": 72,
         "year": 2012
       },
       {
@@ -4860,7 +4860,7 @@
         "label": "A Calibration Routine for Efficient ETD in Large-Scale Proteomics",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 54,
+        "citations": 56,
         "year": 2015
       },
       {
@@ -4876,7 +4876,7 @@
         "label": "Statistical Analysis of Electron Transfer Dissociation Pairwise Fragmentation Patterns",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 37,
+        "citations": 39,
         "year": 2011
       },
       {
@@ -4884,7 +4884,7 @@
         "label": "Identification of a General O-linked Protein Glycosylation System in Acinetobacter baumannii and Its Role in Virulence and Biofilm Formation",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 240,
+        "citations": 241,
         "year": 2012
       },
       {
@@ -4892,7 +4892,7 @@
         "label": "A Face in the Crowd: Recognizing Peptides Through Database Search",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 219,
+        "citations": 222,
         "year": 2011
       },
       {
@@ -4900,7 +4900,7 @@
         "label": "A common pathway for O \u2010linked protein\u2010glycosylation and synthesis of capsule in A cinetobacter baumannii",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 189,
+        "citations": 190,
         "year": 2013
       },
       {
@@ -4908,7 +4908,7 @@
         "label": "Multicentric Validation of Proteomic Biomarkers in Urine Specific for Diabetic Nephropathy",
         "field": "Medicine",
         "type": "citing",
-        "citations": 175,
+        "citations": 178,
         "year": 2010
       },
       {
@@ -4916,7 +4916,7 @@
         "label": "Assessment of herbal medicinal products: Challenges, and opportunities to increase the knowledge base for safety assessment",
         "field": "Medicine",
         "type": "citing",
-        "citations": 469,
+        "citations": 474,
         "year": 2009
       },
       {
@@ -4924,7 +4924,7 @@
         "label": "Recent and potential developments of biofluid analyses in metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 314,
+        "citations": 319,
         "year": 2011
       },
       {
@@ -4940,7 +4940,7 @@
         "label": "Metabolomics: Towards Understanding Traditional Chinese Medicine",
         "field": "Medicine",
         "type": "citing",
-        "citations": 255,
+        "citations": 257,
         "year": 2010
       },
       {
@@ -4948,7 +4948,7 @@
         "label": "Urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 211,
+        "citations": 212,
         "year": 2012
       },
       {
@@ -4956,7 +4956,7 @@
         "label": "Ultra\u2010performance liquid chromatography coupled to mass spectrometry as a sensitive and powerful technology for metabolomic studies",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 160,
+        "citations": 162,
         "year": 2011
       },
       {
@@ -4964,7 +4964,7 @@
         "label": "Advances in Nutrigenomics research: Novel and future analytical approaches to investigate the biological activity of natural compounds and food functions",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 135,
+        "citations": 139,
         "year": 2009
       },
       {
@@ -5020,7 +5020,7 @@
         "label": "Rapid Multi-Omics Sample Preparation for Mass Spectrometry",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 45,
+        "citations": 46,
         "year": 2023
       },
       {
@@ -5036,7 +5036,7 @@
         "label": "metaSPAdes: a new versatile metagenomic assembler",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 4919,
+        "citations": 4993,
         "year": 2017
       },
       {
@@ -5044,7 +5044,7 @@
         "label": "Accurate and complete genomes from metagenomes",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 453,
+        "citations": 455,
         "year": 2020
       },
       {
@@ -5052,7 +5052,7 @@
         "label": "Coral holobiont cues prime Endozoicomonas for a symbiotic lifestyle",
         "field": "Environmental Science",
         "type": "citing",
-        "citations": 146,
+        "citations": 147,
         "year": 2022
       },
       {
@@ -5060,7 +5060,7 @@
         "label": "Microbial-derived products as potential new antimicrobials",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 90,
+        "citations": 91,
         "year": 2018
       },
       {
@@ -5080,59 +5080,11 @@
         "year": 2020
       },
       {
-        "id": "W2037325627",
-        "label": "Performance evaluation of a high-field orbitrap mass analyzer",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 218,
-        "year": 2009
-      },
-      {
-        "id": "W2058043200",
-        "label": "Multiplexed Size Separation of Intact Proteins in Solution Phase for Mass Spectrometry",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 128,
-        "year": 2009
-      },
-      {
-        "id": "W2078929751",
-        "label": "A robust two-dimensional separation for top-down tandem mass spectrometry of the low-mass proteome",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 114,
-        "year": 2009
-      },
-      {
-        "id": "W1978935165",
-        "label": "Intact protein separation by chromatographic and/or electrophoretic techniques for top-down proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 111,
-        "year": 2011
-      },
-      {
-        "id": "W148173047",
-        "label": "Size-Sorting Combined with Improved Nanocapillary Liquid Chromatography\u2212Mass Spectrometry for Identification of Intact Proteins up to 80 kDa",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 108,
-        "year": 2010
-      },
-      {
-        "id": "W1807758003",
-        "label": "An online nano\u2010LC\u2010ESI\u2010FTICR\u2010MS method for comprehensive characterization of endogenous fragments from amyloid \u03b2 and amyloid precursor protein in human and cat cerebrospinal fluid",
-        "field": "Neuroscience",
-        "type": "citing",
-        "citations": 100,
-        "year": 2012
-      },
-      {
         "id": "W2338828725",
         "label": "Ion Activation Methods for Peptides and Proteins",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 283,
+        "citations": 290,
         "year": 2015
       },
       {
@@ -5140,7 +5092,7 @@
         "label": "pHisphorylation: the emergence of histidine phosphorylation as a reversible regulatory modification",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 179,
+        "citations": 187,
         "year": 2017
       },
       {
@@ -5148,7 +5100,7 @@
         "label": "Interactive Peptide Spectral Annotator: A Versatile Web-based Tool for Proteomic Applications",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 176,
+        "citations": 178,
         "year": 2019
       },
       {
@@ -5172,23 +5124,71 @@
         "label": "The Negative Mode Proteome with Activated Ion Negative Electron Transfer Dissociation (AI-NETD)",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 62,
+        "citations": 63,
         "year": 2015
+      },
+      {
+        "id": "W2037325627",
+        "label": "Performance evaluation of a high-field orbitrap mass analyzer",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 221,
+        "year": 2009
+      },
+      {
+        "id": "W2058043200",
+        "label": "Multiplexed Size Separation of Intact Proteins in Solution Phase for Mass Spectrometry",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 130,
+        "year": 2009
+      },
+      {
+        "id": "W2078929751",
+        "label": "A robust two-dimensional separation for top-down tandem mass spectrometry of the low-mass proteome",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 115,
+        "year": 2009
+      },
+      {
+        "id": "W1978935165",
+        "label": "Intact protein separation by chromatographic and/or electrophoretic techniques for top-down proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 113,
+        "year": 2011
+      },
+      {
+        "id": "W148173047",
+        "label": "Size-Sorting Combined with Improved Nanocapillary Liquid Chromatography\u2212Mass Spectrometry for Identification of Intact Proteins up to 80 kDa",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 109,
+        "year": 2010
+      },
+      {
+        "id": "W2908452155",
+        "label": "Middle-down approach: a choice to sequence and characterize proteins/proteomes by mass spectrometry",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 101,
+        "year": 2019
       },
       {
         "id": "W1981132421",
         "label": "What does the future hold for top down mass spectrometry?",
         "field": "Chemistry",
         "type": "citing",
-        "citations": 149,
-        "year": 2009
+        "citations": 152,
+        "year": 2010
       },
       {
         "id": "W2321794224",
         "label": "Methylamidation for Sialoglycomics by MALDI-MS: A Facile Derivatization Strategy for Both \u03b12,3- and \u03b12,6-Linked Sialic Acids",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 112,
+        "citations": 115,
         "year": 2010
       },
       {
@@ -5196,7 +5196,7 @@
         "label": "Simultaneous determination of plasma epinephrine and norepinephrine using an integrated strategy of a fully automated protein precipitation technique, reductive ethylation labeling and UPLC\u2013MS/MS",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 101,
+        "citations": 102,
         "year": 2010
       },
       {
@@ -5240,75 +5240,11 @@
         "year": 2018
       },
       {
-        "id": "W4319814567",
-        "label": "Trait biases in microbial reference genomes",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 50,
-        "year": 2023
-      },
-      {
-        "id": "W3087398378",
-        "label": "Modern supratidal microbialites fed by groundwater: functional drivers, value and trajectories",
-        "field": "Environmental Science",
-        "type": "citing",
-        "citations": 46,
-        "year": 2020
-      },
-      {
-        "id": "W3195130779",
-        "label": "The Chloroflexi supergroup is metabolically diverse and representatives have novel genes for non-photosynthesis based CO 2 fixation",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 34,
-        "year": 2021
-      },
-      {
-        "id": "W4411717233",
-        "label": "Niche formation and metabolic interactions contribute to stable diversity in a spatially structured cyanobacterial community",
-        "field": "Environmental Science",
-        "type": "citing",
-        "citations": 27,
-        "year": 2025
-      },
-      {
-        "id": "W3127213567",
-        "label": "Carbon fixation and rhodopsin systems in microbial mats from hypersaline lakes Brava and Tebenquiche, Salar de Atacama, Chile",
-        "field": "Environmental Science",
-        "type": "citing",
-        "citations": 24,
-        "year": 2021
-      },
-      {
-        "id": "W4383821487",
-        "label": "Expanding Antarctic biogeography: microbial ecology of Antarctic island soils",
-        "field": "Environmental Science",
-        "type": "citing",
-        "citations": 17,
-        "year": 2023
-      },
-      {
-        "id": "W3093190737",
-        "label": "Living phosphatic stromatolites in a low\u2010phosphorus environment: Implications for the use of phosphorus as a proxy for phosphate levels in paleo\u2010systems",
-        "field": "Earth and Planetary Sciences",
-        "type": "citing",
-        "citations": 15,
-        "year": 2020
-      },
-      {
-        "id": "W4220719728",
-        "label": "Genomic and Functional Variation of the Chlorophyll d-Producing Cyanobacterium Acaryochloris marina",
-        "field": "Biochemistry, Genetics and Molecular Biology",
-        "type": "citing",
-        "citations": 15,
-        "year": 2022
-      },
-      {
         "id": "W2911831763",
         "label": "The antimicrobial potential of Streptomyces from insect microbiomes",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 383,
+        "citations": 385,
         "year": 2019
       },
       {
@@ -5336,6 +5272,70 @@
         "year": 2021
       },
       {
+        "id": "W4319814567",
+        "label": "Trait biases in microbial reference genomes",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 52,
+        "year": 2023
+      },
+      {
+        "id": "W3087398378",
+        "label": "Modern supratidal microbialites fed by groundwater: functional drivers, value and trajectories",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 46,
+        "year": 2020
+      },
+      {
+        "id": "W3195130779",
+        "label": "The Chloroflexi supergroup is metabolically diverse and representatives have novel genes for non-photosynthesis based CO 2 fixation",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 35,
+        "year": 2021
+      },
+      {
+        "id": "W4411717233",
+        "label": "Niche formation and metabolic interactions contribute to stable diversity in a spatially structured cyanobacterial community",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 28,
+        "year": 2025
+      },
+      {
+        "id": "W3127213567",
+        "label": "Carbon fixation and rhodopsin systems in microbial mats from hypersaline lakes Brava and Tebenquiche, Salar de Atacama, Chile",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 26,
+        "year": 2021
+      },
+      {
+        "id": "W4383821487",
+        "label": "Expanding Antarctic biogeography: microbial ecology of Antarctic island soils",
+        "field": "Environmental Science",
+        "type": "citing",
+        "citations": 17,
+        "year": 2023
+      },
+      {
+        "id": "W3093190737",
+        "label": "Living phosphatic stromatolites in a low\u2010phosphorus environment: Implications for the use of phosphorus as a proxy for phosphate levels in paleo\u2010systems",
+        "field": "Earth and Planetary Sciences",
+        "type": "citing",
+        "citations": 15,
+        "year": 2020
+      },
+      {
+        "id": "W4220719728",
+        "label": "Genomic and Functional Variation of the Chlorophyll d-Producing Cyanobacterium Acaryochloris marina",
+        "field": "Biochemistry, Genetics and Molecular Biology",
+        "type": "citing",
+        "citations": 15,
+        "year": 2022
+      },
+      {
         "id": "W4281785935",
         "label": "Peptaibols: Diversity, bioactivity, and biosynthesis",
         "field": "Immunology and Microbiology",
@@ -5348,7 +5348,7 @@
         "label": "Fungal Guttation, a Source of Bioactive Compounds, and Its Ecological Role\u2014A Review",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 44,
+        "citations": 45,
         "year": 2021
       },
       {
@@ -5396,7 +5396,7 @@
         "label": "Natural products in drug discovery: advances and opportunities",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 6594,
+        "citations": 6635,
         "year": 2021
       },
       {
@@ -5404,7 +5404,7 @@
         "label": "Microbiome composition modulates secondary metabolism in a multispecies bacterial community",
         "field": "Immunology and Microbiology",
         "type": "citing",
-        "citations": 129,
+        "citations": 130,
         "year": 2022
       },
       {
@@ -5460,7 +5460,7 @@
         "label": "Identification of Soil Bacterial Isolates Suppressing Different Phytophthora spp. and Promoting Plant Growth",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 123,
+        "citations": 124,
         "year": 2018
       },
       {
@@ -5476,7 +5476,7 @@
         "label": "Antifungal Metabolites as Food Bio-Preservative: Innovation, Outlook, and Challenges",
         "field": "Agricultural and Biological Sciences",
         "type": "citing",
-        "citations": 38,
+        "citations": 39,
         "year": 2021
       },
       {
@@ -5620,12 +5620,12 @@
       },
       {
         "source": "W3091839106",
-        "target": "W3156257761",
+        "target": "W4399330665",
         "strength": 0.5
       },
       {
         "source": "W3091839106",
-        "target": "W4399330665",
+        "target": "W3156257761",
         "strength": 0.5
       },
       {
@@ -5914,46 +5914,6 @@
         "strength": 0.5
       },
       {
-        "source": "W4210458810",
-        "target": "W4311086202",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4386775918",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4362507076",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4406436980",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4311540145",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4392505571",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4410309258",
-        "strength": 0.5
-      },
-      {
-        "source": "W4210458810",
-        "target": "W4401393004",
-        "strength": 0.5
-      },
-      {
         "source": "W2090402744",
         "target": "W2087481305",
         "strength": 0.5
@@ -5991,6 +5951,46 @@
       {
         "source": "W2090402744",
         "target": "W3048655151",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4311086202",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4386775918",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4362507076",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4406436980",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4311540145",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4392505571",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4401393004",
+        "strength": 0.5
+      },
+      {
+        "source": "W4210458810",
+        "target": "W4410309258",
         "strength": 0.5
       },
       {
@@ -6074,46 +6074,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2808840038",
-        "target": "W2994786999",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W2958017797",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W3168295480",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W4386391260",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W4408908761",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W2980266162",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W3204202235",
-        "strength": 0.5
-      },
-      {
-        "source": "W2808840038",
-        "target": "W3011843199",
-        "strength": 0.5
-      },
-      {
         "source": "W2023959652",
         "target": "W2003261719",
         "strength": 0.5
@@ -6151,6 +6111,46 @@
       {
         "source": "W2023959652",
         "target": "W2170892735",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2994786999",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2958017797",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3168295480",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W4386391260",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W4408908761",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W2980266162",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3204202235",
+        "strength": 0.5
+      },
+      {
+        "source": "W2808840038",
+        "target": "W3011843199",
         "strength": 0.5
       },
       {
@@ -6480,12 +6480,12 @@
       },
       {
         "source": "W4319825888",
-        "target": "W4381189797",
+        "target": "W4382344666",
         "strength": 0.5
       },
       {
         "source": "W4319825888",
-        "target": "W4382344666",
+        "target": "W4381189797",
         "strength": 0.5
       },
       {
@@ -6594,46 +6594,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2038769454",
-        "target": "W2087481305",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W2105167594",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W2122805769",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W752259472",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W1934555946",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W2116206670",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W3195015580",
-        "strength": 0.5
-      },
-      {
-        "source": "W2038769454",
-        "target": "W2770809689",
-        "strength": 0.5
-      },
-      {
         "source": "W2201786733",
         "target": "W2607310450",
         "strength": 0.5
@@ -6671,6 +6631,46 @@
       {
         "source": "W2201786733",
         "target": "W4220983209",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W2087481305",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W2105167594",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W2122805769",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W752259472",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W1934555946",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W2116206670",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W3195015580",
+        "strength": 0.5
+      },
+      {
+        "source": "W2038769454",
+        "target": "W2770809689",
         "strength": 0.5
       },
       {
@@ -6714,86 +6714,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2991684904",
-        "target": "W4210458810",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W4291001769",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W4386379020",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W3137209807",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W4220749289",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W4413703064",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W4391351643",
-        "strength": 0.5
-      },
-      {
-        "source": "W2991684904",
-        "target": "W4403616626",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W2913553075",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W4245579397",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W2762475403",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W2910293385",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W2949629831",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W4414082838",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W2893448478",
-        "strength": 0.5
-      },
-      {
-        "source": "W2513652105",
-        "target": "W2782169385",
-        "strength": 0.5
-      },
-      {
         "source": "W2085801821",
         "target": "W2087481305",
         "strength": 0.5
@@ -6834,6 +6754,46 @@
         "strength": 0.5
       },
       {
+        "source": "W2991684904",
+        "target": "W4210458810",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W4291001769",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W4386379020",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W3137209807",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W4220749289",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W4413703064",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W4391351643",
+        "strength": 0.5
+      },
+      {
+        "source": "W2991684904",
+        "target": "W4403616626",
+        "strength": 0.5
+      },
+      {
         "source": "W2050184779",
         "target": "W2429591244",
         "strength": 0.5
@@ -6871,6 +6831,46 @@
       {
         "source": "W2050184779",
         "target": "W2073051414",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2913553075",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W4245579397",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2762475403",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2910293385",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2893448478",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W4414082838",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2513652105",
+        "target": "W2782169385",
         "strength": 0.5
       },
       {
@@ -7194,46 +7194,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2044343668",
-        "target": "W2070948666",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W2037325627",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W2058043200",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W2073051414",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W2078929751",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W1978935165",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W148173047",
-        "strength": 0.5
-      },
-      {
-        "source": "W2044343668",
-        "target": "W1807758003",
-        "strength": 0.5
-      },
-      {
         "source": "W2085971372",
         "target": "W2338828725",
         "strength": 0.5
@@ -7271,6 +7231,46 @@
       {
         "source": "W2085971372",
         "target": "W1892358288",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W2070948666",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W2037325627",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W2058043200",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W2073051414",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W2078929751",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W1978935165",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W148173047",
+        "strength": 0.5
+      },
+      {
+        "source": "W2044343668",
+        "target": "W2908452155",
         "strength": 0.5
       },
       {
@@ -7314,6 +7314,46 @@
         "strength": 0.5
       },
       {
+        "source": "W2621511283",
+        "target": "W2911831763",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2808840038",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2768056310",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2893448478",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W2949629831",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W3006681944",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W3195990715",
+        "strength": 0.5
+      },
+      {
+        "source": "W2621511283",
+        "target": "W3136636438",
+        "strength": 0.5
+      },
+      {
         "source": "W3116953854",
         "target": "W4319814567",
         "strength": 0.5
@@ -7351,46 +7391,6 @@
       {
         "source": "W3116953854",
         "target": "W4220719728",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W2911831763",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W2808840038",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W2768056310",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W2949629831",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W2893448478",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W3006681944",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W3195990715",
-        "strength": 0.5
-      },
-      {
-        "source": "W2621511283",
-        "target": "W3136636438",
         "strength": 0.5
       },
       {
@@ -7577,8 +7577,7 @@
     "Materials Science": "#5A4632",
     "Mathematics": "#A06A3C",
     "Medicine": "#6B7357",
-    "Neuroscience": "#7E4A2E",
-    "Pharmacology, Toxicology and Pharmaceutics": "#8A6D3B",
-    "Veterinary": "#4E5B3A"
+    "Pharmacology, Toxicology and Pharmaceutics": "#7E4A2E",
+    "Veterinary": "#8A6D3B"
   }
 }
