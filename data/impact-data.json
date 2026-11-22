@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-21T14:33:08.231988+00:00",
+  "generated_at": "2026-11-22T14:28:10.406011+00:00",
   "summary": {
-    "total_citations": 6135,
+    "total_citations": 6146,
     "countries_reached": 79,
-    "citing_institutions": 4420,
+    "citing_institutions": 4421,
     "disciplines_impacted": 25,
     "total_publications": 54
   },
@@ -13,7 +13,7 @@
       "title": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
       "journal": "Cell Systems",
       "year": 2020,
-      "cited_by_count": 679,
+      "cited_by_count": 680,
       "field": "Medicine",
       "authors": [
         "Ian J. Miller"
@@ -26,7 +26,7 @@
       "title": "Artificial intelligence for natural product drug discovery",
       "journal": "Nature Reviews Drug Discovery",
       "year": 2023,
-      "cited_by_count": 601,
+      "cited_by_count": 603,
       "field": "Pharmacology, Toxicology and Pharmaceutics",
       "authors": [
         "Evan Roy Rees"
@@ -52,7 +52,7 @@
       "title": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
       "journal": "Nature Methods",
       "year": 2022,
-      "cited_by_count": 425,
+      "cited_by_count": 427,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Evan Roy Rees"
@@ -165,6 +165,19 @@
       "type": "core"
     },
     {
+      "id": "W2808840038",
+      "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
+      "journal": "Nature Communications",
+      "year": 2018,
+      "cited_by_count": 144,
+      "field": "Immunology and Microbiology",
+      "authors": [
+        "Ian J. Miller"
+      ],
+      "doi": "https://doi.org/10.1038/s41467-018-04955-6",
+      "type": "core"
+    },
+    {
       "id": "W2023959652",
       "title": "Top-Down Proteomics on a Chromatographic Time Scale Using Linear Ion Trap Fourier Transform Hybrid Mass Spectrometers",
       "journal": "Analytical Chemistry",
@@ -175,19 +188,6 @@
         "Craig Wenger"
       ],
       "doi": "https://doi.org/10.1021/ac070553t",
-      "type": "core"
-    },
-    {
-      "id": "W2808840038",
-      "title": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
-      "journal": "Nature Communications",
-      "year": 2018,
-      "cited_by_count": 141,
-      "field": "Immunology and Microbiology",
-      "authors": [
-        "Ian J. Miller"
-      ],
-      "doi": "https://doi.org/10.1038/s41467-018-04955-6",
       "type": "core"
     },
     {
@@ -221,7 +221,7 @@
       "title": "Real-time health monitoring through urine metabolomics",
       "journal": "npj Digital Medicine",
       "year": 2019,
-      "cited_by_count": 99,
+      "cited_by_count": 100,
       "field": "Biochemistry, Genetics and Molecular Biology",
       "authors": [
         "Ian J. Miller"
@@ -261,7 +261,7 @@
       "title": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
       "journal": "mBio",
       "year": 2020,
-      "cited_by_count": 83,
+      "cited_by_count": 85,
       "field": "Agricultural and Biological Sciences",
       "authors": [
         "Evan Roy Rees"
@@ -1056,7 +1056,7 @@
       "lat": -35.7,
       "lon": -71.5,
       "citations": 18,
-      "institutions": 20
+      "institutions": 21
     },
     {
       "country": "Qatar",
@@ -1644,8 +1644,8 @@
     },
     {
       "name": "Lawrence Berkeley National Laboratory",
-      "lat": 37.87158966064453,
-      "lon": -122.27275085449219,
+      "lat": 37.87159,
+      "lon": -122.27275,
       "country_code": "US",
       "citations": 39
     },
@@ -2267,8 +2267,8 @@
     },
     {
       "name": "Helmholtz Munich",
-      "lat": 48.13743,
-      "lon": 11.57549,
+      "lat": 48.25,
+      "lon": 11.56667,
       "country_code": "DE",
       "citations": 20
     },
@@ -2500,7 +2500,7 @@
         "label": "Large-Scale Multi-omic Analysis of COVID-19 Severity",
         "field": "Medicine",
         "type": "core",
-        "citations": 679,
+        "citations": 680,
         "year": 2020
       },
       {
@@ -2508,7 +2508,7 @@
         "label": "Artificial intelligence for natural product drug discovery",
         "field": "Pharmacology, Toxicology and Pharmaceutics",
         "type": "core",
-        "citations": 601,
+        "citations": 603,
         "year": 2023
       },
       {
@@ -2524,7 +2524,7 @@
         "label": "Critical Assessment of Metagenome Interpretation: the second round of challenges",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 425,
+        "citations": 427,
         "year": 2022
       },
       {
@@ -2592,20 +2592,20 @@
         "year": 2009
       },
       {
+        "id": "W2808840038",
+        "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
+        "field": "Immunology and Microbiology",
+        "type": "core",
+        "citations": 144,
+        "year": 2018
+      },
+      {
         "id": "W2023959652",
         "label": "Top-Down Proteomics on a Chromatographic Time Scale Using Linear Ion Trap Fourier Transform Hybrid Mass Spectrometers",
         "field": "Chemistry",
         "type": "core",
         "citations": 142,
         "year": 2007
-      },
-      {
-        "id": "W2808840038",
-        "label": "An antifungal polyketide associated with horizontally acquired genes supports symbiont-mediated defense in Lagria villosa beetles",
-        "field": "Immunology and Microbiology",
-        "type": "core",
-        "citations": 141,
-        "year": 2018
       },
       {
         "id": "W4281483346",
@@ -2628,7 +2628,7 @@
         "label": "Real-time health monitoring through urine metabolomics",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "core",
-        "citations": 99,
+        "citations": 100,
         "year": 2019
       },
       {
@@ -2652,7 +2652,7 @@
         "label": "Horizontal Gene Transfer to a Defensive Symbiont with a Reduced Genome in a Multipartite Beetle Microbiome",
         "field": "Agricultural and Biological Sciences",
         "type": "core",
-        "citations": 83,
+        "citations": 85,
         "year": 2020
       },
       {
@@ -3592,70 +3592,6 @@
         "year": 2015
       },
       {
-        "id": "W2003261719",
-        "label": "Mass spectrometry for proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 985,
-        "year": 2008
-      },
-      {
-        "id": "W2012671659",
-        "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 742,
-        "year": 2011
-      },
-      {
-        "id": "W2429591244",
-        "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 655,
-        "year": 2016
-      },
-      {
-        "id": "W2070948666",
-        "label": "Top Down proteomics: Facts and perspectives",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 615,
-        "year": 2014
-      },
-      {
-        "id": "W2105889769",
-        "label": "Precision proteomics: The case for high resolution and high mass accuracy",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 510,
-        "year": 2008
-      },
-      {
-        "id": "W2085010866",
-        "label": "High-Resolution Mass Spectrometers",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 477,
-        "year": 2008
-      },
-      {
-        "id": "W2066928228",
-        "label": "Ultra High Resolution Linear Ion Trap Orbitrap Mass Spectrometer (Orbitrap Elite) Facilitates Top Down LC MS/MS and Versatile Peptide Fragmentation Modes",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 447,
-        "year": 2011
-      },
-      {
-        "id": "W2170892735",
-        "label": "High-Throughput Proteomics",
-        "field": "Chemistry",
-        "type": "citing",
-        "citations": 373,
-        "year": 2014
-      },
-      {
         "id": "W2994786999",
         "label": "Evolution and Diversity of Assembly-Line Polyketide Synthases",
         "field": "Immunology and Microbiology",
@@ -3720,6 +3656,70 @@
         "year": 2020
       },
       {
+        "id": "W2003261719",
+        "label": "Mass spectrometry for proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 985,
+        "year": 2008
+      },
+      {
+        "id": "W2012671659",
+        "label": "Mapping intact protein isoforms in discovery mode using top-down proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 742,
+        "year": 2011
+      },
+      {
+        "id": "W2429591244",
+        "label": "Progress in Top-Down Proteomics and the Analysis of Proteoforms",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 655,
+        "year": 2016
+      },
+      {
+        "id": "W2070948666",
+        "label": "Top Down proteomics: Facts and perspectives",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 615,
+        "year": 2014
+      },
+      {
+        "id": "W2105889769",
+        "label": "Precision proteomics: The case for high resolution and high mass accuracy",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 510,
+        "year": 2008
+      },
+      {
+        "id": "W2085010866",
+        "label": "High-Resolution Mass Spectrometers",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 477,
+        "year": 2008
+      },
+      {
+        "id": "W2066928228",
+        "label": "Ultra High Resolution Linear Ion Trap Orbitrap Mass Spectrometer (Orbitrap Elite) Facilitates Top Down LC MS/MS and Versatile Peptide Fragmentation Modes",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 447,
+        "year": 2011
+      },
+      {
+        "id": "W2170892735",
+        "label": "High-Throughput Proteomics",
+        "field": "Chemistry",
+        "type": "citing",
+        "citations": 373,
+        "year": 2014
+      },
+      {
         "id": "W4398231688",
         "label": "Mitochondria at the crossroads of health and disease",
         "field": "Biochemistry, Genetics and Molecular Biology",
@@ -3780,7 +3780,7 @@
         "label": "Mitochondrial heterogeneity in diseases",
         "field": "Biochemistry, Genetics and Molecular Biology",
         "type": "citing",
-        "citations": 93,
+        "citations": 94,
         "year": 2023
       },
       {
@@ -6074,46 +6074,6 @@
         "strength": 0.5
       },
       {
-        "source": "W2023959652",
-        "target": "W2003261719",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2012671659",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2429591244",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2070948666",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2105889769",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2085010866",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2066928228",
-        "strength": 0.5
-      },
-      {
-        "source": "W2023959652",
-        "target": "W2170892735",
-        "strength": 0.5
-      },
-      {
         "source": "W2808840038",
         "target": "W2994786999",
         "strength": 0.5
@@ -6151,6 +6111,46 @@
       {
         "source": "W2808840038",
         "target": "W3011843199",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2003261719",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2012671659",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2429591244",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2070948666",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2105889769",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2085010866",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2066928228",
+        "strength": 0.5
+      },
+      {
+        "source": "W2023959652",
+        "target": "W2170892735",
         "strength": 0.5
       },
       {
